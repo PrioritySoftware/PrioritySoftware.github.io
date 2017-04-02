@@ -25,7 +25,7 @@ Run : `npm install priority-web-sdk --save`
 
 Include the following script in your index.html:
 
-https://PrioritySoftware.github.io/api/priorityapp/priorityapp.nocache.js
+[https://PrioritySoftware.github.io/api/priorityapp/priorityapp.nocache.js](https://PrioritySoftware.github.io/api/priorityapp/priorityapp.nocache.js)
 
 ## Important stuff
 
