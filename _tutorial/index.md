@@ -6,7 +6,7 @@ methods:
     - Installing Priority into your page
     - Running Server-Side Triggers
     - Opening Choose Lists
-    - Handling Server Warnings and Errors
+    - Handling Server Messages
     - Direct Activations
     - Input Synchronization
 layout: tutorial
@@ -211,13 +211,13 @@ function chooseHandler(targetField, someObj) {
 ```
 The result is an object which is structured as follows:
 - The *ChooseLine* object contains the list of possible values for the list.
- - Each value has a retval field which is the text that should be inserted into the input field when the user chooses this value.
-  - *string1* and *string2* fields are the code and description of each value. Some fields have only descriptions.
+    - Each value has a retval field which is the text that should be inserted into the input field when the user chooses this value.
+    - *string1* and *string2* fields are the code and description of each value. Some fields have only descriptions.
 - *title1* and *title2* are the headers of code and description columns.
 - *multi* has value of 1 in case of a multi-choose, or 0 otherwise.
 
-<a name="Handling_Server_Warnings_and_Errors"></a>
-### Handling Server Warnings and Errors
+<a name="Handling_Server_Messages"></a>
+### Handling Server Messages
 As mentioned prevously, the `formStart` function receives a function as parameter for handling error and warning messages: `showMessage`.
 
 The API calls this function whenever form errors or warning messages need to be presented.
