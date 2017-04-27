@@ -103,7 +103,7 @@ body
     }
     p:last-of-type
     {
-      margin-bottom: 50px;
+      margin-top: 50px;
     }
     a 
     {
@@ -191,6 +191,16 @@ a code
      {
        color: #007edf;
      }
+.muut
+{
+    position: absolute;
+    width: 100%;
+    margin-left: -316px !important;
+    #m-mainlinks,#moot-logo a
+   {
+     display: none !important;
+   }
+}
 /************************* scroll bar *********************/
 /* ::-webkit-scrollbar 
 { 

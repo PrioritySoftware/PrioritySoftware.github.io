@@ -1,5 +1,5 @@
 ---
-layout: app
+layout: default
 ---
 # Priority Application
 
