@@ -2,20 +2,18 @@
 layout: api
 ---
 
-# Priority Javascript API
+# Priority Web SDK
 
-Priority web API is outtt!!
+Welcome to **Priority**'s Web SDK.
 
-Check out all the cool and amazing stuff this API offers.
+Use this SDK to develop apps that allow users to perform a variety of actions. A few examples:
 
-You can start a Form, retrieve some rows and display them as you like.
-
-You can open a search list and update a field according to the user's choice.
-
-Also we have Direct Activations, Sub Forms, Files and so much more.
+* Open a Form, retrieve rows and display them however you like.
+* Open a search list and update a field based on the user's choice.
+* Run Direct Activations, open sub-level Forms, attach files, and much, much more.
 
 ## Usage
-You can use the API in two ways: through npm or just include a script in your index.html.
+You can enable access to the SDK in one of two ways - using npm or as a script in your index.html file.
 #### NPM
 [https://www.npmjs.com/package/priority-web-sdk](https://www.npmjs.com/package/priority-web-sdk){:target="_blank"}
 
@@ -23,14 +21,13 @@ Run : `npm install priority-web-sdk --save`
 
 #### JAVASCRIPT
 
-Include the following script in your index.html:
+Include the following script in your index.html file:
 
 [https://PrioritySoftware.github.io/api/priorityapp/priorityapp.nocache.js](https://PrioritySoftware.github.io/api/priorityapp/priorityapp.nocache.js)
 
-## Important stuff
+## Keep in Mind
 
-- Server responses can be handled in callbacks or in [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"}. Both of them are supported.
-
+- Server responses can be handled as either callbacks or [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"}. Both are supported.
 - Some methods **must** be called in a certain order for them to work.
 
 That's it!! Go ahead and start using this awesome tool.
