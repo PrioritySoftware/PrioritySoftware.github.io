@@ -40,7 +40,7 @@ body
   {
     padding-left: 10px;
     font-size: 14px;
-    color: #B3B0B0;
+    color: #949494;
   }
 }
 #main_content_wrap 
@@ -61,10 +61,10 @@ body
     {
       background: none;
     }
-    > h1
-    {
-      color:#1d67b7;
-    }
+    // > h1
+    // {
+    //   color: darken(#00b0ec,5%);
+    // }
     pre
     {
       background-color:transparent;
@@ -87,6 +87,11 @@ body
   }
   &.main_page section
   {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 100%;
     margin-left: 0;
     text-align: center;
     h1
@@ -101,29 +106,44 @@ body
     {
       font-size:21px;
     }
-    p:last-of-type
-    {
-      margin-top: 50px;
-    }
     a 
     {
-      
-    padding: 50px;
+
+    padding: 16px;
+    margin: 40px;
     font-size: 34px;
-    margin-top: 63px;
-    /* top: 30px; */
-    /* position: absolute; */
-    text-shadow: 0 1px 2px #ADA7A7;
-    color: #DE4461;
+    margin-top: 50px;
+   
+    display: inline-block;
+    width: 170px;
+    color: white;
+    border-radius: 7px;
+    background-color: #00a9ec;
+    
+
+    &:first-child {
+      background: #47d7c6;
+    }
+    &:last-child {
+      background: #9773ba
     }
   }
-  
+  }
 }
 #header_wrap
 {
   position:relative;
   z-index: 5001;
-  border-top: 8px solid #0090FF;
+  border-top: 8px solid #00b0ec;
+  img.logo-image {
+    height: 25px;
+    margin: 0;
+    top: 5px;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    // margin-top: 10px;
+  }
   >header
   {
       > nav
@@ -131,6 +151,7 @@ body
        float: right;
        vertical-align: middle;
        margin-right: -10px;
+       // margin-top: 5px;
        a:not(#forkme_banner)
        {
          text-align: center;
@@ -145,7 +166,7 @@ body
          position: relative;
          padding: 15px 15px;
          background: url("../images/blacktocat.png") transparent no-repeat 0%;
-         margin-top: px;
+         // top: 5px;
          margin-left: 19px;
          box-shadow:none;
        }
@@ -189,7 +210,10 @@ body
 }
 a code 
      {
-       color: #007edf;
+       color: #00b0ec;
+     }
+     a {
+      color: #00b0ec;
      }
 .muut
 {

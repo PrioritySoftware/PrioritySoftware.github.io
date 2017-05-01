@@ -1,5 +1,6 @@
 ---
 class: main_page
+layout: default
 ---
 # Welcome to Priority Web SDK
 
@@ -9,6 +10,6 @@ In addition to the SDK reference, we've also included a tutorial to help you get
 
 We also offer source code for a template application that uses Typescript, Angular2 and Ionic2.
   
-[API](./api)
+[Web SDK](./api)
 [Tutorial](./tutorial)
 [Ionic2 app](./app)
