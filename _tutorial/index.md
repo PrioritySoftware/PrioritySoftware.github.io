@@ -16,13 +16,13 @@ layout: tutorial
 ### Introduction
 In this tutorial we will write a simple web or mobile application that runs a form in **Priority**.
 
-We will learn how to add a new row, update fields, open choose list, and run a direct activation.
+We will learn how to add a new row, update fields, open a choose list, and run a direct activation.
 
 Our demo application will be based on the **Customers** form and contain the following fields: **Customer Number**, **Customer Name**, **Status**, **Assigned to**, and **Date Opened**. It will also contain the **Convert Potential Cust to Cust** direct activation.
 
 <a name="Create_the_HTML_Application"></a>
 ### Create the HTML Application
-Here is the basic HTML and styling needed in order to create a basic form the mirrors the Priority CUSTOMERS form. At this point it does nothing. Note that the element IDs are identical to the form column names in Priority. This is because we will later use these IDs in order to implement 2-way synch between the app and the server.
+Here is the basic HTML and styling needed in order to create a basic form that mirrors the Priority CUSTOMERS form. At this point it does nothing. Note that the element IDs are identical to the form column names in Priority. We will later use these IDs in order to implement a 2-way sync between the app and the server.
 ```html
 <!doctype html>
 <html lang="">
@@ -81,9 +81,9 @@ function fieldChangeHandler(event) {
   </body>
 </html>
 ```
-Before we continue, take some time in order to understand what's going on in this page.
+Before we continue, let's take some time in order to understand what's going on in this page.
 The **fieldChangeHandler** function is triggered by the browser whenever a field is changed. We'll be updating it later.
-> Note: The form fields are hard-coded. Although not covered in this tutorial, it’s also possible to dynamically generate the form based on the field data. The column Object col has properties that describe its type, length, title, precision, whether it has a choose or a search drop-down and so on (See API for full specification).
+> Note: The form fields are hard-coded. Although not covered in this tutorial, it’s also possible to dynamically generate the form based on the field data. The column Object col has properties that describe its type, length, title, precision, whether it has a choose or a search drop-down and so on (See SDK for full specification).
 
 <a name="Installing_Priority_into_your_page"></a>
 ### Installing Priority into your page
@@ -143,7 +143,7 @@ This is all you need in order to synchronize between this HTML form and the Prio
 
 Here's how it works:
 #### The `priorityReady` function
-This function is called by Priority when the SDK  has finished loading. Use it as the entry point for your client side logic.
+This function is called by Priority when the SDK has finished loading. Use it as the entry point for your client side logic.
 
 #### The `login` function
 Logs in to Priority.
@@ -187,7 +187,7 @@ That’s it! Enter a value in the Customer Name field and hit save. You can veri
 
 `saveRow` accepts a single parameter which applies only to sub-forms. It indicates whether to exit the sub-form automatically after saving and should be used when your application always closes the form after saving.
 
-> Note: The API also includes an `undo` function for when you need to tell Priority (before saving a row) to revert all changes that was made to the row.
+> Note: The API also includes an `undo` function for when you need to tell Priority (before saving a row) to revert all changes that were made to the row.
 
 <a name="Opening_Choose_Lists"></a>
 ### Opening Choose Lists
@@ -212,8 +212,8 @@ function chooseHandler(targetField, someObj) {
 The result is an object which is structured as follows:
 - The *ChooseLine* object contains the list of possible values for the list.
     - Each value has a retval field which is the text that should be inserted into the input field when the user chooses this value.
-    - *string1* and *string2* fields are the code and description of each value. Some fields have only descriptions.
-- *title1* and *title2* are the headers of code and description columns.
+    - *string1* and *string2* fields are the code and description of each value. Some fields only have descriptions.
+- *title1* and *title2* are the headers of the code and description columns.
 - *multi* has value of 1 in case of a multi-choose, or 0 otherwise.
 
 <a name="Handling_Server_Messages"></a>
@@ -262,6 +262,6 @@ The input in our example may come simultaneously from the user and the server.
 
 For example, the user fills field X and then quickly fills field Y. At the time the user fills field X it also notifies the server about changing the field. The server then activates a trigger that puts value in field Y.
 
-In this case the value the user typed in field Y may be overrun by the value received from the server, or the other way around, the user may overrun the value came from the server by mistake.
+In this case the value the user typed in field Y may be overrun by the value received from the server, or the other way around, the user may overrun the value from the server by mistake.
 
-One approach for avoiding such scenarios may be to wait after field change, and not allow the focus to move to the next field. The disadvantage of this approach is that the user may not notice that the field hasn't receive focus yet, and type anyway, in which case the input will be ignored.
+One approach for avoiding such scenarios may be to wait after field change, and not allow the focus to move to the next field. The disadvantage of this approach is that the user may not notice that the field hasn't received focus yet, and type anyway, in which case the input will be ignored.

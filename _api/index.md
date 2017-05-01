@@ -30,7 +30,7 @@ Include the following script in your index.html file:
 - Server responses can be handled as either callbacks or [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"}. Both are supported.
 - Some methods **must** be called in a certain order for them to work.
 
-That's it!! Go ahead and start using this awesome tool.
+That's it! Go ahead and get started with this awesome tool. We are eagerly awaiting your feedback.
 
 
 

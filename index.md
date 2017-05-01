@@ -1,13 +1,13 @@
 ---
 class: main_page
 ---
-# Welcome to Priority Mobile
+# Welcome to Priority Web SDK
 
-Priority presents a javascript based API that comunicates with : Forms,Procedures and more.
+Priority Software is proud to present a javascript based Web SDK that communicates with **Priority** Forms, Procedures and more.
 
-We also offer a source code of a template application that uses Typescript,Angular2 and Ionic2.
+In addition to the SDK reference, we've also included a tutorial to help you get started and demonstrate how it all meshes together.
 
-And of course, a tutorial to explain how it all works together :)
+We also offer source code for a template application that uses Typescript, Angular2 and Ionic2.
   
 [API](./api)
 [Tutorial](./tutorial)
