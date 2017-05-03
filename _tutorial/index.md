@@ -163,7 +163,22 @@ This function is also asynchronous. Once it is resolved, we assign the return va
 As noted before, the `fieldChangeHandler` listens for changes to the form data. In our example we update it to notify Priority whenever a value was changed. This is done using the `fieldUpdate` function.  Call this function in order to tell Priority to change the value of one of the form’s fields. The function receives the field name and the new value as parameters.
 
 Inserting or updating a field causes the POSTINSERT trigger for that field to run on the server. As a result, other fields may receive values. In order to inform you which fields were updated, the callback you specified in formStart is invoked with a *result* object as a parameter. This object contains the names and values of fields whose values have changed. In our example, if we enter a value into the Customer Name field, the *result* object looks like this:
-
+```JSON
+{
+   CUSTOMERS:{
+      1:{
+         CUSTNAME:"T000032",
+         CUSTDES:"Acme Inc.",
+         STATDES:"Draft",
+         OWNERLOGIN:"ng",
+         CREATEDDATE:"2017-05-03T00:00:00.000Z",
+         CODE: "USD",
+         TAXCODE:"001",
+         TAXDES:"Sales Tax"
+      }
+   }
+}
+```
 As you can see, some fields in row #1 of the CUSTOMERS form were updated.
 
 The code in the example reads the new values from the *result* object and updates the relevant fields using the `updateFields` function.
