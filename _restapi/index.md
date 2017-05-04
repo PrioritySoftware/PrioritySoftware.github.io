@@ -189,7 +189,7 @@ Response Payload
 
 <a name="Navigating to Related Entities"></a>
 
-###Navigating to Related Entities
+### Navigating to Related Entities
 
 To access related entities, keep appending segments that represent valid property names as defined in $metadata or in a full metadata response. For example, the request below starts at the service root and navigates to the entity set FAMILY_LOG, then to the resource keyed '001', and finally to the FAMILY_LOGPART_SUBFORM property. Note that the @odata.context URL self-describes the payload.
 
@@ -229,7 +229,7 @@ Response Payload
 
 <a name="Requesting Full Metadata"></a>
 
-###Requesting Full Metadata
+### Requesting Full Metadata
 
 By default, the OData service returns an extremely compact JSON format, by stripping out all the metadata that should be calculable by "smart" OData clients. For generic hypermedia clients, you can request additional metadata by using the Accept header, or <code>$format</code> system query option to request <code>application/json;odata.metadata=full</code>. The request below yields additional annotations in the payload, indicating type information and relationships to other resources.
 
@@ -264,7 +264,7 @@ Response Payload
 
 
 <a name="Querying Data"></a>
-##Querying Data
+### Querying Data
 
 OData supports various kinds of query options for querying data. This section will help you go through the common scenarios for these query options.
 
@@ -306,7 +306,7 @@ Response Payload
 
 
 <a name="Filtering a Collection with Logic Operators"></a>
-###Filtering a Collection with Logic Operators
+### Filtering a Collection with Logic Operators
 
 You can use <code>and</code>, <code>or</code>, and <code>not</code> to create more complex filter clauses.
 ```
@@ -334,7 +334,7 @@ Response Payload
 ```
 
 <a name="Sorting a Collection"></a>
-###Sorting a Collection
+### Sorting a Collection
 
 Use the <code>$orderby</code> system query option to specify ordering criteria. Qualify the sort direction by using the <code>asc</code> or <code>desc</code> keywords.
 
@@ -367,7 +367,7 @@ Response Payload
 ```
 
 <a name="Limiting the Number of Entities"></a>
-###Limiting the Number of Entities
+### Limiting the Number of Entities
 
 Use <code>$top</code> to limit the number of requested entities from a collection. 
 
@@ -397,12 +397,12 @@ Response Payload
 ```
 
 <a name="Modifying Data"></a>
-##Modifying Data
+### Modifying Data
 
 The OData service supports Create, Update and Delete operations for some or all exposed entities. Please note that data modification via the API is only available in **Priority** version 17.2 and above.
 
 <a name="Creating an Entity"></a>
-###Creating an Entity
+### Creating an Entity
 
 To create an entity in a collection, the client sends a POST request to that collection's URL. The POST body MUST contain a single valid entity's information. The request below creates a new part family in the **Part Families** form.
 ```HTML
@@ -480,7 +480,7 @@ Response Payload
 
 
 <a name="Updating an Entity"></a>
-###Updating an Entity
+### Updating an Entity
 
 To update an existing entity, send a PATCH request with the values you wish to modify. You can also use PUT, but the semantics for PUT require all properties to be either sent on the wire or reverted to their default values.
 
@@ -512,7 +512,7 @@ Response Payload
 ```
 
 <a name="Deleting an Entity"></a>
-###Deleting an Entity
+### Deleting an Entity
 
 To remove a resource, send an HTTP Delete to the resource URL.
 

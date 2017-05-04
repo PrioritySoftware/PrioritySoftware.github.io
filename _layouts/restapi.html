@@ -27,11 +27,16 @@
        {% for doc in site.restapi %}
 	<ul>
            <li><strong><a href="{{'/tutorial/' | relative_url}}">{{doc.title}}</a></strong></li>
-		{% for method in doc.methods %}
-                 <li>
-	          <a href="{{'/tutorial/#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
-	         </li>
-	       {% endfor %} 
+	{% for subject in doc.subjects %}
+       <li class="nav-subject">
+          {{subject.name}}
+        </li>
+      {% for method in subject.methods %}
+              <li>
+          <a href="{{'/restapi/'| slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
+        </li>
+      {% endfor %} 
+     {% endfor %} 
 	  </ul>
 	 {% endfor %} 
         </nav> 
