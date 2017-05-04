@@ -18,13 +18,13 @@
 
   <body>
     <!-- HEADER -->
-   {% include header.html %}
+    {% include header.html %}
 	  
     <!-- Navigation -->
      <nav id="primary-navigation"> 
-	<h3>Tutorial</h3>
+	<h3>REST api</h3>
 <!-- 	{% assign docsContent=""%} -->
-       {% for doc in site.tutorial %}
+       {% for doc in site.restapi %}
 	<ul>
            <li><strong><a href="{{'/tutorial/' | relative_url}}">{{doc.title}}</a></strong></li>
 		{% for method in doc.methods %}
