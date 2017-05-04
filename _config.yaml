@@ -5,6 +5,8 @@ collections:
                 output: true
         app:
                 output: true
+        restapi:
+                output: true
 
 theme: jekyll-theme-slate
 title: "Priority Mobile"

@@ -13,3 +13,4 @@ We also offer source code for a template application that uses Typescript, Angul
 [Web SDK](./api)
 [Tutorial](./tutorial)
 [Ionic2 app](./app)
+[REST API](./restapi)
