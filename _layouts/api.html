@@ -17,43 +17,21 @@
      </head>
 
   <body>
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="">
-          <nav>
-	     <a href="{{'/api'| relative_url}}">SDK</a>
-	     <a href="{{'/tutorial'| relative_url}}">Tutorial</a>
-	     <a href="{{'/app'| relative_url}}">App</a>
-        <a href="{{'/forum'| relative_url}}">Forum</a>
-             <a id="forkme_banner" href="{{ site.github.repository_url }}"></a>
-	   </nav>
 
-          <h1 id="project_title">
-		  <a href="{{'/'| relative_url}}">
-		 <!--  {{ site.title | default: site.github.repository_name }} -->
-     <img src="https://www.eshbelsaas.co.il/eshbel/primail/library/Priority_Logo_White.png" class="logo-image"/>
-		  </a>
-		</h1>
-          <!--<h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>-->
+  <!-- HEADER -->
+  {% include header.html %}
 
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
-	    <!-- Navigation -->
-     <nav id="primary-navigation"> 
+	<!-- Navigation -->
+  <nav id="primary-navigation"> 
 	<h3>Priority Web SDK</h3>
 	<ul>
 		<li><strong><a href="{{'/api'| relative_url}}">Introduction</a></strong></li>
-	 </ul>
-<!-- 	{% assign docsContent=""%} -->
-       {% for doc in site.api %}
-	 {%if doc.entityName%}
-	<ul>
-           <li><strong><a href="{{'/api/' | append: doc.entityName | slugify: 'none' | append: '/#' | append: doc.entityName | relative_url }}">{{doc.entityName}}</a></strong></li>
+	</ul>
+  {% for doc in site.api %}
+	  {%if doc.entityName%}
+	       <ul>
+          <li><strong><a href="{{'/api/' | append: doc.entityName | slugify: 'none' | append: '/#' | append: doc.entityName | relative_url }}">{{doc.entityName}}</a></strong></li>
+          
 <!-- 	  {% assign docsContent= docsContent | append : '<br>'| append: doc.content%} -->
 	  {% if doc.subjects%}
 	   {% for subject in doc.subjects %}
@@ -77,18 +55,16 @@
 	  {%endif%}
 	 {% endfor %} 
         </nav>  
-    </div>
 	  
-   
-	  
-    <!-- MAIN CONTENT -->
-    <main id="main_content_wrap" class="outer">
-	<!-- Content -->
-	<section  class="markdown-body">
-        {{ content }}
-        </section>
+  
+  <!-- MAIN CONTENT -->
+  <main id="main_content_wrap" class="outer">
+  	<!-- Content -->
+  	<section  class="markdown-body">
+          {{ content }}
+    </section>
 	
-    </main>
+  </main>
 
     <!-- FOOTER  
     <div id="footer_wrap" class="outer">
@@ -124,12 +100,12 @@
           var iframe=document.getElementById('try-it-frame');
           if(iframe.style.width!='0px'&& iframe.style.width!="")
           {
-             iframe.style.width='0';
-             btn.innerText="Try It Yourself";
-             btn.style.right='2%';
-             btn.style.backgroundColor="#108a1e";
-             btn.style.color="white";
-              btn.style.marginRight="auto";
+            iframe.style.width='0';
+            btn.innerText="Try It Yourself";
+            btn.style.right='2%';
+            btn.style.backgroundColor="#108a1e";
+            btn.style.color="white";
+            btn.style.marginRight="auto";
           }
           else
           {
