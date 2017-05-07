@@ -32,11 +32,11 @@ permalink: /restapi/
 
 <a name="Introduction"></a>
 
-# Priority OData API Usage Examples
+# Priority REST API Usage Examples
 
 ## Introduction
 
-The Priority OData API is based on the Open Data Protocol (OData), a data access protocol built on HTTP and REST. This documentation provides basic examples of the various requests and responses you can make using the Priority OData API. For a more detailed understanding of OData, please refer to ['OData Documentation'](http://www.odata.org/documentation/odata-version-4-0/).
+The Priority REST API is based on the Open Data Protocol (OData), a data access protocol built on HTTP and REST. This documentation provides basic examples of the various requests and responses you can make using the Priority REST API. For a more detailed understanding of OData, please refer to [OData Documentation](http://www.odata.org/documentation/odata-version-4-0/).
 
 <a name="Service Root URL"></a>
 ### Service Root URL
@@ -188,8 +188,7 @@ Response Payload
 
 
 <a name="Navigating to Related Entities"></a>
-
-###Navigating to Related Entities
+### Navigating to Related Entities
 
 To access related entities, keep appending segments that represent valid property names as defined in $metadata or in a full metadata response. For example, the request below starts at the service root and navigates to the entity set FAMILY_LOG, then to the resource keyed '001', and finally to the FAMILY_LOGPART_SUBFORM property. Note that the @odata.context URL self-describes the payload.
 
@@ -228,8 +227,7 @@ Response Payload
 
 
 <a name="Requesting Full Metadata"></a>
-
-###Requesting Full Metadata
+### Requesting Full Metadata
 
 By default, the OData service returns an extremely compact JSON format, by stripping out all the metadata that should be calculable by "smart" OData clients. For generic hypermedia clients, you can request additional metadata by using the Accept header, or <code>$format</code> system query option to request <code>application/json;odata.metadata=full</code>. The request below yields additional annotations in the payload, indicating type information and relationships to other resources.
 
@@ -259,29 +257,28 @@ Response Payload
       "FAMILYREQLABANALYSES_SUBFORM@odata.associationLink": "serviceRoot/FAMILY_LOG('0')/FAMILYREQLABANALYSES_SUBFORM/$ref",
       "FAMILYREQLABANALYSES_SUBFORM@odata.navigationLink": "serviceRoot/FAMILY_LOG('0')/FAMILYREQLABANALYSES_SUBFORM"
     },
+    ......
 ```
 
 
 
 <a name="Querying Data"></a>
-##Querying Data
+## Querying Data
 
 OData supports various kinds of query options for querying data. This section will help you go through the common scenarios for these query options.
 
 <a name="Filtering a Collection"></a>
-###Filtering a Collection
+### Filtering a Collection
 
 Use the <code>$filter</code> system query option to filter a collection of resources. The expression specified with <code>$filter</code> is evaluated for each resource in the collection, and only items where the expression evaluates to be true are included in the response.  Note that the response to a filtered collection is a collection of the same type, regardless of the number of matched resources.
 
-For a detailed list of the available logical operators, see the [`OData V4 URL Conventions Document`](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
+For a detailed list of the available logical operators, see the [OData V4 URL Conventions Document](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html).
 
-```
-GET serviceRoot/LOGPART?$filter=FAMILYNAME eq '001'
-```
+<code>GET serviceRoot/LOGPART?$filter=FAMILYNAME eq '001'</code>
 
 Response Payload
 
-```JSON
+```json
 {
   "@odata.context": "serviceRoot/$metadata#LOGPART",
   "value": [
@@ -304,17 +301,15 @@ Response Payload
 }
 ```
 
-
 <a name="Filtering a Collection with Logic Operators"></a>
-###Filtering a Collection with Logic Operators
+### Filtering a Collection with Logic Operators
 
 You can use <code>and</code>, <code>or</code>, and <code>not</code> to create more complex filter clauses.
-```
-GET serviceRoot/LOGPART?$filter=TYPE eq 'P' and LASTPRICE gt 200
-```
+
+<code>GET serviceRoot/LOGPART?$filter=TYPE eq 'P' and LASTPRICE gt 200</code>
 
 Response Payload
-```
+```json
 {
   "@odata.context": "serviceRoot/$metadata#LOGPART",
   "value": [
@@ -334,16 +329,14 @@ Response Payload
 ```
 
 <a name="Sorting a Collection"></a>
-###Sorting a Collection
+### Sorting a Collection
 
 Use the <code>$orderby</code> system query option to specify ordering criteria. Qualify the sort direction by using the <code>asc</code> or <code>desc</code> keywords.
 
-```
-GET serviceRoot/FAMILY_LOG?$orderby=FAMILYDESC desc
-```
+<code>GET serviceRoot/FAMILY_LOG?$orderby=FAMILYDESC desc</code>
 
 Response Payload
-```JSON
+```json
 {
   "@odata.context": "serviceRoot/$metadata#FAMILY_LOG",
   "value": [
@@ -367,16 +360,14 @@ Response Payload
 ```
 
 <a name="Limiting the Number of Entities"></a>
-###Limiting the Number of Entities
+### Limiting the Number of Entities
 
 Use <code>$top</code> to limit the number of requested entities from a collection. 
 
-```
-GET serviceRoot/FAMILY_LOG?$top=2
-```
+<code>GET serviceRoot/FAMILY_LOG?$top=2</code>
 
 Response Payload
-```JSON
+```json
 {
   "@odata.context": "serviceRoot/$metadata#FAMILY_LOG",
   "value": [
@@ -397,15 +388,16 @@ Response Payload
 ```
 
 <a name="Modifying Data"></a>
-##Modifying Data
+## Modifying Data
 
 The OData service supports Create, Update and Delete operations for some or all exposed entities. Please note that data modification via the API is only available in **Priority** version 17.2 and above.
 
 <a name="Creating an Entity"></a>
-###Creating an Entity
+### Creating an Entity
 
 To create an entity in a collection, the client sends a POST request to that collection's URL. The POST body MUST contain a single valid entity's information. The request below creates a new part family in the **Part Families** form.
-```HTML
+
+```html
 POST serviceRoot/FAMILY_LOG 
 OData-Version: 4.0
 Content-Type: application/json;odata.metadata=minimal
@@ -418,7 +410,7 @@ Accept: application/json
 ```
 
 Response Payload
-```JSON
+```json
 {
   "@odata.context": "serviceRoot/$metadata#FAMILY_LOG/$entity",
   "FAMILYNAME": "765",
@@ -437,7 +429,7 @@ Response Payload
 
 To create an entity that includes related entities (for example, an ORDER with the relevant ORDERITEMS), specify the values for the related resources as part of the request.
 
-```HTML
+```html
 POST serviceRoot/ORDERS 
 OData-Version: 4.0
 Content-Type: application/json;odata.metadata=minimal
@@ -458,11 +450,11 @@ Accept: application/json
 ```
 
 Response Payload
-```JSON
+```json
 {
   "@odata.context": "serviceRoot/$metadata#ORDERS/$entity",
   "CUSTNAME": "007",
-  "CDES": "יוסי",
+  "CDES": "ACME Inc.",
   "NAME": null,
   "POSITIONDES": null,
   "CURDATE": "2016-08-07T00:00:00+03:00",
@@ -470,7 +462,7 @@ Response Payload
   "BOOKNUM": null,
   "DOCNO": null,
   "PROJDES": null,
-  "ORDSTATUSDES": "טיוטא",
+  "ORDSTATUSDES": "Draft",
   "BOOLCLOSED": null,
   ...
   "PIKORDER": 0,
@@ -480,11 +472,11 @@ Response Payload
 
 
 <a name="Updating an Entity"></a>
-###Updating an Entity
+### Updating an Entity
 
 To update an existing entity, send a PATCH request with the values you wish to modify. You can also use PUT, but the semantics for PUT require all properties to be either sent on the wire or reverted to their default values.
 
-```HTML
+```html
 PATCH serviceRoot/FAMILY_LOG('765')
 OData-Version: 4.0
 Content-Type: application/json;odata.metadata=minimal
@@ -497,7 +489,7 @@ Accept: application/json
 
 Response Payload
 
-```JSON
+```json
 {
   "@odata.context": "serviceRoot/$metadata#FAMILY_LOG/$entity",
   "FAMILYNAME": "765",
@@ -512,20 +504,18 @@ Response Payload
 ```
 
 <a name="Deleting an Entity"></a>
-###Deleting an Entity
+### Deleting an Entity
 
 To remove a resource, send an HTTP Delete to the resource URL.
 
-```
-DELETE serviceRoot/FAMILY_LOG('765')
-```
+<code>DELETE serviceRoot/FAMILY_LOG('765')</code>
 
 <a name="Error Handling"></a>
 ###Error Handling
 
 Since the API is essentially a wrapper around the **Priority** screens, any errors generated by the screens are included in the response. The example below demonstrates an attempt to create a new FAMILY_LOG entity with an invalid value for the DEBITFLAG field.
 
-```HTML
+```html
 POST serviceRoot/FAMILY_LOG 
 OData-Version: 4.0
 Content-Type: application/json;odata.metadata=minimal
@@ -540,7 +530,7 @@ Accept: application/json
 
 Response Payload
 
-```XML
+```xml
 <FORM
   TYPE="FAMILY_LOG">
     <FAMILY_LOG>
