@@ -188,6 +188,8 @@ Response Payload
 
 
 <a name="Navigating to Related Entities"></a>
+=======
+
 ### Navigating to Related Entities
 
 To access related entities, keep appending segments that represent valid property names as defined in $metadata or in a full metadata response. For example, the request below starts at the service root and navigates to the entity set FAMILY_LOG, then to the resource keyed '001', and finally to the FAMILY_LOGPART_SUBFORM property. Note that the @odata.context URL self-describes the payload.
@@ -227,6 +229,8 @@ Response Payload
 
 
 <a name="Requesting Full Metadata"></a>
+=======
+
 ### Requesting Full Metadata
 
 By default, the OData service returns an extremely compact JSON format, by stripping out all the metadata that should be calculable by "smart" OData clients. For generic hypermedia clients, you can request additional metadata by using the Accept header, or <code>$format</code> system query option to request <code>application/json;odata.metadata=full</code>. The request below yields additional annotations in the payload, indicating type information and relationships to other resources.
@@ -263,7 +267,8 @@ Response Payload
 
 
 <a name="Querying Data"></a>
-## Querying Data
+=======
+### Querying Data
 
 OData supports various kinds of query options for querying data. This section will help you go through the common scenarios for these query options.
 
@@ -389,6 +394,7 @@ Response Payload
 
 <a name="Modifying Data"></a>
 ## Modifying Data
+=======
 
 The OData service supports Create, Update and Delete operations for some or all exposed entities. Please note that data modification via the API is only available in **Priority** version 17.2 and above.
 

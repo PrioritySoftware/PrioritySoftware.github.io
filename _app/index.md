@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-# Priority Application
+# Priority Mobile App
 
-### A mobile app that uses Angular2,Ionic2 and [Priority API](../api).
+### A sample mobile app that uses Angular, Ionic2 and [Priority Web SDK](../api).
+### Ready for you to customize :)
 ### Coming soon...

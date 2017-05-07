@@ -1,20 +1,72 @@
 <div id="header_wrap" class="outer">
-  <header class="">
-    <nav>
-	    <a href="{{'/api'| relative_url}}">Web SDK</a>
-      <a href="{{'/tutorial'| relative_url}}">SDK Tutorial</a>
-      <a href="{{'/restapi'| relative_url}}">REST API</a>
-	    <a href="{{'/app'| relative_url}}">App</a>
-      <a href="{{'/forum'| relative_url}}">Forum</a>
-      <a id="forkme_banner" href="{{ site.github.repository_url }}"></a>
-	  </nav>
+  <header>
 
-    <h1 id="project_title">
-		  <a href="{{'/'| relative_url}}">
-		 <!--  {{ site.title | default: site.github.repository_name }} -->
-        <img src="https://www.eshbelsaas.co.il/eshbel/primail/library/Priority_Logo_White.png" class="logo-image"/>
-		  </a>
-		</h1>
+    <nav class="left-nav">
+
+      <div>
+        <a class="logo" href="{{'/'| relative_url}}">
+          <img src="https://www.eshbelsaas.co.il/eshbel/primail/library/Priority_Logo_White.png" class="logo-image"/>
+        </a>
+      </div>
+
+      <div class="dropdown">
+        <a class="btn dropdown-toggle" role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onclick="openDropdown(event,this)">
+        Web SDK
+        <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" dropdown="dropdownMenu1">
+          <!-- <li><a href="{{'/'| relative_url}}">Welcome</a></li> -->
+          <li><a href="{{'/api'| relative_url}}">Documentation</a></li>
+          <li><a href="{{'/tutorial'| relative_url}}">Tutorial</a></li>
+          <li><a href="{{'/app'| relative_url}}">Mobile App</a></li>
+        </ul>
+      </div>
+      <!--  <a href="{{'/api'| relative_url}}">Web SDK</a> -->
+      <!-- <a href="{{'/tutorial'| relative_url}}">SDK Tutorial</a> -->
+      <div>
+        <a href="{{'/restapi'| relative_url}}" role="button" class="btn">REST API</a>
+      </div>
+      <!-- <a href="{{'/app'| relative_url}}">App</a> -->
+      <!-- <a id="forkme_banner" href="{{ site.github.repository_url }}"></a> -->
+    </nav>
+
+    <nav class="right-nav">
+      <div>
+        <a href="{{'/forum'| relative_url}}" role="button" class="btn">Forum</a>
+      </div>
+    </nav>
           
   </header>
 </div>
+
+<script>
+
+     $('body').click(function(event){
+
+        var dropdowns = $('[dropdown]');
+        if(dropdowns.hasClass('open'))
+        {
+          dropdowns.removeClass('open');
+        }
+     });
+  
+
+    //dropdown
+        
+    var openDropdown = function(event,btn)
+    {
+      event.stopPropagation();
+      console.log(btn.id);
+      var dropdown = $('[dropdown*=' + btn.id + ']');
+      console.log(dropdown);
+      if(dropdown.hasClass('open'))
+      {
+        dropdown.removeClass('open');
+      }
+      else
+      {
+        dropdown.addClass('open');
+      }
+      
+    };
+</script>
