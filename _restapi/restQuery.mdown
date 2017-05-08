@@ -8,6 +8,7 @@ subjects:
            - Sorting a Collection
            - Limiting the Number of Entities        
 layout: restapi
+permalink: /restapi/query/
 ---
 
 <a name="Querying Data"></a>
