@@ -12,7 +12,7 @@ methods:
 layout: tutorial
 ---
 # Priority Web SDK Tutorial
-<a name="Introduction"></a>
+<a class="anchor-link" name="Introduction"></a>
 ### Introduction
 In this tutorial we will write a simple web or mobile application that runs a form in **Priority**.
 
@@ -20,7 +20,7 @@ We will learn how to add a new row, update fields, open a choose list, and run a
 
 Our demo application will be based on the **Customers** form and contain the following fields: **Customer Number**, **Customer Name**, **Status**, **Assigned to**, and **Date Opened**. It will also contain the **Convert Potential Cust to Cust** direct activation.
 
-<a name="Create_the_HTML_Application"></a>
+<a class="anchor-link" name="Create_the_HTML_Application"></a>
 ### Create the HTML Application
 Here is the basic HTML and styling needed in order to create a basic form that mirrors the Priority CUSTOMERS form. At this point it does nothing. Note that the element IDs are identical to the form column names in Priority. We will later use these IDs in order to implement a 2-way sync between the app and the server.
 ```html
@@ -85,7 +85,7 @@ Before we continue, let's take some time in order to understand what's going on 
 The **fieldChangeHandler** function is triggered by the browser whenever a field is changed. We'll be updating it later.
 > Note: The form fields are hard-coded. Although not covered in this tutorial, it’s also possible to dynamically generate the form based on the field data. The column Object col has properties that describe its type, length, title, precision, whether it has a choose or a search drop-down and so on (See SDK for full specification).
 
-<a name="Installing_Priority_into_your_page"></a>
+<a class="anchor-link" name="Installing_Priority_into_your_page"></a>
 ### Installing Priority into your page
 Include the Priority Web SDK library by adding another `<script>` tag above the existing one:
 ```
@@ -93,7 +93,7 @@ Include the Priority Web SDK library by adding another `<script>` tag above the 
 ```
 Priority is now installed in your page and ready to use!
 
-<a name="Running_Server-Side_Triggers"></a>
+<a class="anchor-link" name="Running_Server-Side_Triggers"></a>
 ### Running Server-Side Triggers
 Now, replace the contents of the second `<script>` tag with this:
 ```javascript
@@ -204,7 +204,7 @@ That’s it! Enter a value in the Customer Name field and hit save. You can veri
 
 > Note: The API also includes an `undo` function for when you need to tell Priority (before saving a row) to revert all changes that were made to the row.
 
-<a name="Opening_Choose_Lists"></a>
+<a class="anchor-link" name="Opening_Choose_Lists"></a>
 ### Opening Choose Lists
 In Priority, Choose fields are special fields that contain a list of possible values. In this step, we’ll retrieve the list of values possible for the STATDES field.
 > Note: Since the list might depend on the value of the current field, or any other field, it’s a good idea to get this list from Priority whenever the user indicates that he might want to change its value.
@@ -231,7 +231,7 @@ The result is an object which is structured as follows:
 - *title1* and *title2* are the headers of the code and description columns.
 - *multi* has value of 1 in case of a multi-choose, or 0 otherwise.
 
-<a name="Handling_Server_Messages"></a>
+<a class="anchor-link" name="Handling_Server_Messages"></a>
 ### Handling Server Messages
 As mentioned prevously, the `formStart` function receives a function as parameter for handling error and warning messages: `showMessage`.
 
@@ -245,7 +245,7 @@ You can see how this is done in the `showMessage` function.
 
 So if, for example, the warning is received while executing the `fieldUpdate` API function, then after calling `warningConfirm`, the `fieldUpdate` onSuccess will be called.
 
-<a name="Direct_Activations"></a>
+<a class="anchor-link" name="Direct_Activations"></a>
 ### Direct Activations
 In Priority, a direct activation is a procedure that runs in the context of the current row in a form.
 
@@ -270,7 +270,7 @@ The `activateStart` function returns a Promise object which is resolved whenever
 
 In our example, the Customer number which was a temporary code starting with **T**, is replaced by a permanent code.
 
-<a name="Input_Synchronization"></a>
+<a class="anchor-link" name="Input_Synchronization"></a>
 ### Input Synchronization
 
 The input in our example may come simultaneously from the user and the server.

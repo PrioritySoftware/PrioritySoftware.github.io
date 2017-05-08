@@ -29,7 +29,7 @@
            <li><strong><a href="{{'/tutorial/' | relative_url}}">{{doc.title}}</a></strong></li>
 		{% for method in doc.methods %}
                  <li>
-	          <a href="{{'/tutorial/#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
+	          <a  class="nav-link" href="{{'/tutorial/#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
 	         </li>
 	       {% endfor %} 
 	  </ul>

@@ -41,7 +41,7 @@ body
   {
     padding-left: 10px;
     font-size: 14px;
-    color: #f98197;
+    color: #949494;
   }
 }
 #main_content_wrap 
@@ -262,8 +262,24 @@ list-style-type: none;
  height: initial;
 }
 
-#primary-navigation ul {
+#primary-navigation ul li {
     padding-right: 10px;
+    a {
+      color: #404d5b;
+      display: block;
+      font-size: 15px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      height: 100%;
+    }
+    a.active {
+      color:  #00b0ec;
+      border-right: 2px solid;
+    }
+}
+
+#primary-navigation::-webkit-scrollbar { 
+    display: none; 
 }
 /************************* scroll bar *********************/
 /* ::-webkit-scrollbar 
@@ -365,4 +381,12 @@ a.btn {
     border-top: 4px solid\9;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
+}
+
+.arrow {
+  margin-right: 8px;
+  font-size: 20px;
+  &:before {
+    content: '\21D2'
+  }
 }

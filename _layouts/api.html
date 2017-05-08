@@ -40,14 +40,14 @@
 	      </li>
 	    {% for method in subject.methods %}
               <li>
-	        <a href="{{'/api/'| append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
+	        <a class="nav-link" href="{{'/api/'| append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
 	      </li>
 	    {% endfor %} 
 	   {% endfor %} 
            {% else %}
 		{% for method in doc.methods %}
                  <li>
-	          <a href="{{'/api/' | append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
+	          <a class="nav-link" href="{{'/api/' | append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
 	         </li>
 	       {% endfor %} 
            {%endif%}
