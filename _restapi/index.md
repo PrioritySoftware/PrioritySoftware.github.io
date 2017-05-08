@@ -13,19 +13,6 @@ subjects:
            - Requesting an Individual Entity by ID
            - Navigating to Related Entities
            - Requesting Full Metadata
-      - name: Querying Data
-        methods:
-           - Filtering a Collection
-           - Filtering a Collection with Logic Operators
-           - Sorting a Collection
-           - Limiting the Number of Entities        
-      - name: Modifying Data
-        methods:
-           - Creating an Entity
-           - Creating an Entity Including Deep Inserts
-           - Updating an Entity
-           - Deleting an Entity
-           - Error Handling
 layout: restapi
 permalink: /restapi/
 ---
@@ -36,13 +23,13 @@ permalink: /restapi/
 
 The Priority REST API is based on the Open Data Protocol (OData), a data access protocol built on HTTP and REST. This documentation provides basic examples of the various requests and responses you can make using the Priority REST API. For a more detailed understanding of OData, please refer to [OData Documentation](http://www.odata.org/documentation/).
 
-<a name="Service Root URL"></a>
+<a class="anchor-link" name="Service Root URL"></a>
 ### Service Root URL
 
 All the examples below are based on sample requests made to a Priority OData service. Please replace the <code>serviceRoot</code> below with a service root URL appropriate to your installation of **Priority**. Note that all other URLs in the OData service use this URL as a basis.
 Consult with your System Administrator if you are not sure what the service root for your installation is.
 
-<a name="Authentication"></a>
+<a class="anchor-link" name="Authentication"></a>
 ### Authentication
 
 The Priority OData service requires that every HTTP request contain an authentication header according to the Basic-Authentication standard, in order to apply any relevant permission restrictions. HTTP requests that lack such a header will be denied.
@@ -53,7 +40,7 @@ Consult with your System Administrator if you do not have a valid user or passwo
 
 OData services support requests for data via HTTP <code>GET</code> requests.
 
-<a name="Requesting the Service Root"></a>
+<a class="anchor-link" name="Requesting the Service Root"></a>
 ### Requesting the Service Root
 
 The request below returns a basic list of the resources available through the service. The response includes two types of links:
@@ -91,7 +78,7 @@ Response Payload
 }
 ```
 
-<a name="Requesting the Service Metadata"></a>
+<a class="anchor-link" name="Requesting the Service Metadata"></a>
 
 ### Requesting the Service Metadata
 
@@ -131,7 +118,7 @@ Response Payload
 </edmx:Edmx>
 ```
 
-<a name="Requesting Entity Collections"></a>
+<a class="anchor-link" name="Requesting Entity Collections"></a>
 ### Requesting Entity Collections
 
 The request below returns the entity sets in the **Part Families** form, FAMILY_LOG.
@@ -161,7 +148,7 @@ Response Payload
 }
 ```
 
-<a name="Requesting an Individual Entity by ID"></a>
+<a class="anchor-link" name="Requesting an Individual Entity by ID"></a>
 
 ### Requesting an Individual Entity by ID
 
@@ -185,7 +172,7 @@ Response Payload
 ```
 
 
-<a name="Navigating to Related Entities"></a>
+<a class="anchor-link" name="Navigating to Related Entities"></a>
 =======
 
 ### Navigating to Related Entities
@@ -226,7 +213,7 @@ Response Payload
 ```
 
 
-<a name="Requesting Full Metadata"></a>
+<a class="anchor-link" name="Requesting Full Metadata"></a>
 =======
 
 ### Requesting Full Metadata
@@ -261,3 +248,7 @@ Response Payload
     },
     ......
 ```
+
+
+
+
