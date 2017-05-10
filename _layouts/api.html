@@ -23,14 +23,14 @@
 
 	<!-- Navigation -->
   <nav id="primary-navigation"> 
-	<h3 onclick="location.href=''">Priority Web SDK</h3>
+	<h3 onclick="location.href=''">{{page.collection-title}}</h3>
 	<ul>
-		<li><strong><a href="{{'/api'| relative_url}}">Introduction</a></strong></li>
+		<li><strong><a href="{{'/' | append: page.collection | relative_url}}">Introduction</a></strong></li>
 	</ul>
-  {% for doc in site.api %}
+  {% for doc in site[page.collection] %}
 	  {%if doc.entityName%}
 	       <ul>
-          <li><strong><a href="{{'/api/' | append: doc.entityName | slugify: 'none' | append: '/#' | append: doc.entityName | relative_url }}">{{doc.entityName}}</a></strong></li>
+          <li><strong><a href="{{'/' | append: page.collection | append: '/' | append: doc.entityName | slugify: 'none' | append: '/#' | append: doc.entityName | relative_url }}">{{doc.entityName}}</a></strong></li>
           
 <!-- 	  {% assign docsContent= docsContent | append : '<br>'| append: doc.content%} -->
 	  {% if doc.subjects%}
@@ -40,14 +40,14 @@
 	      </li>
 	    {% for method in subject.methods %}
               <li>
-	        <a class="nav-link" href="{{'/api/'| append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
+	        <a class="nav-link" href="{{'/' | append: page.collection | append: '/'| append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
 	      </li>
 	    {% endfor %} 
 	   {% endfor %} 
            {% else %}
 		{% for method in doc.methods %}
                  <li>
-	          <a class="nav-link" href="{{'/api/' | append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
+	          <a class="nav-link" href="{{'/' | append: page.collection | append: '/' | append: doc.entityName | slugify: 'none' | append: '/#'| append: method | relative_url }}">{{method}}</a>
 	         </li>
 	       {% endfor %} 
            {%endif%}
@@ -118,7 +118,9 @@
           }
         };
      </script>
-     <button id="try-it-button" onclick="showTryIt(this)">Try It Yourself</button>
-     <iframe id="try-it-frame" src="https://www.eshbelsaas.com/ui/api/tryIt/"></iframe>
+      {% if page.collection-title =="Web SDK" %}
+        <button id="try-it-button" onclick="showTryIt(this)">Try It Yourself</button>
+        <iframe id="try-it-frame" src="https://www.eshbelsaas.com/ui/api/tryIt/"></iframe>
+      {% endif %}
   </body>
 </html>

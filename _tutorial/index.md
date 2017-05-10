@@ -1,5 +1,6 @@
 ---
 title: Tutorial
+collection-title: Web SDK
 methods:
     - Introduction
     - Create the HTML Application
@@ -10,6 +11,7 @@ methods:
     - Direct Activations
     - Input Synchronization
 layout: tutorial
+collection: tutorial
 ---
 # Priority Web SDK Tutorial
 <a class="anchor-link" name="Introduction"></a>
