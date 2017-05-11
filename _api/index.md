@@ -9,9 +9,9 @@ Welcome to **Priority**'s Web SDK.
 
 Use this SDK to develop apps that allow users to perform a variety of actions. A few examples:
 
-* Open a Form, retrieve rows and display them however you like.
+* Open a form, retrieve rows and display them however you like.
 * Open a search list and update a field based on the user's choice.
-* Run Direct Activations, open sub-level Forms, attach files, and much, much more.
+* Run Direct Activations, open sub-level forms, attach files, and much, much more.
 
 ## Usage
 You can enable access to the SDK in one of two ways - using npm or as a script in your index.html file.
@@ -32,6 +32,8 @@ Include the following script in your index.html file:
 - Some methods **must** be called in a certain order for them to work.
 
 That's it! Go ahead and get started with this awesome tool. We are eagerly awaiting your feedback.
+
+
 
 
 
