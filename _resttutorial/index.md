@@ -17,6 +17,7 @@ Start a new instance of Visual Studio and create a new console application proje
 
 ![RESTClient Project Creation](https://www.eshbelsaas.co.il/eshbel/primail/201705/18j7j/restclient%20new%20project.png)
 
+
 <a class="anchor-link" name="Install_the_OData_Client_Code_Generator"></a>
 ## Install the OData Client Code Generator
 
@@ -25,6 +26,7 @@ From the **Tools** menu, select **Extensions and Updates**. Select **Online** > 
 ![Install Code Generator](https://www.eshbelsaas.co.il/eshbel/primail/201705/ae94t/install%20code%20generator.png)
 
 <a class="anchor-link" name="Generate_the_Service_Proxy"></a>
+
 ## Generate the Service Proxy
 
 The service proxy is a .NET class that defines methods for accessing the OData service. The proxy translates method calls into HTTP requests. You will create the proxy class by running a [`T4 template`](https://msdn.microsoft.com/en-us/library/bb126445.aspx).
@@ -55,7 +57,9 @@ The result is a code file named RESTProxy.cs that defines the proxy.
 
 ![RESTProxy.cs](https://www.eshbelsaas.co.il/eshbel/primail/201705/6e4yx/rest%20proxy_cs.png)
 
+
 <a class="anchor-link" name="Use_the_Service_Proxy_to_Call_the_OData_Service"></a>
+
 ## Use the Service Proxy to Call the OData Service
 
 Open the file Program.cs and replace the boilerplate code with the following.

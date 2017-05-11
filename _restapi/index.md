@@ -1,5 +1,6 @@
 ---
 title: Introduction
+
 layout: restapi
 permalink: /restapi/
 collection-title: REST API
@@ -8,11 +9,9 @@ collection: resttutorial
 
 <a name="Introduction"></a>
 
-# Priority REST API Usage Examples
-
 ## Introduction
 
-The Priority REST API is based on the Open Data Protocol (OData), a data access protocol built on HTTP and REST. This documentation provides basic examples of the various requests and responses you can make using the Priority REST API. For a more detailed understanding of OData, please refer to [OData Documentation](http://www.odata.org/documentation/odata-version-4-0/).
+The Priority REST API is based on the Open Data Protocol (OData), a data access protocol built on HTTP and REST. This documentation provides basic examples of the various requests and responses you can make using the Priority REST API. For a more detailed understanding of OData, please refer to [OData Documentation](http://www.odata.org/documentation/).
 
 <a class="anchor-link" name="Service_Root_URL"></a>
 ### Service Root URL
@@ -25,4 +24,5 @@ Consult with your System Administrator if you are not sure what the service root
 
 The Priority OData service requires that every HTTP request contain an authentication header according to the Basic-Authentication standard, in order to apply any relevant permission restrictions. HTTP requests that lack such a header will be denied.
 Consult with your System Administrator if you do not have a valid user or password.
+
 
