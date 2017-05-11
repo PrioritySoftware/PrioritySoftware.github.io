@@ -21,30 +21,32 @@
     {% include header.html %}
 	  
     <!-- Navigation -->
-     <nav id="primary-navigation"> 
-	<h3 onclick="location.href=''">{{page.collection-title}}</h3>
-<!-- 	{% assign docsContent=""%} -->
-	<ul>
-		<li><strong><a href="{{'/' | append: page.collection | relative_url}}">Introduction</a></strong></li>
-	</ul>
-       {% for doc in site.restapi %}
-       {%if doc.entityName%}
-	<ul>
-           <li><strong><a href="{{'/' | append: page.collection | append: '/' | append: doc.entityName | slugify: 'none' | append: '/#' | append: doc.entityName | relative_url }}">{{doc.title}}</a></strong></li>
-	{% for subject in doc.subjects %}
-       <li class="nav-subject">
-          {{subject.name}}
-        </li>
-      {% for method in subject.methods %}
-              <li>
-          <a class="nav-link" href="{{'/' | append: page.collection | append: '/' | append: doc.entityName | slugify: 'none' | append: '#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
-        </li>
-      {% endfor %} 
-     {% endfor %} 
-	  </ul>
-    {%endif%}
-	 {% endfor %} 
-        </nav> 
+    <nav id="primary-navigation"> 
+	  <h3 onclick="location.href=''">{{page.collection-title}}</h3>
+    	<ul>
+    		<li><strong><a href="{{'/' | append: page.collection | relative_url}}">Introduction</a></strong></li>
+    	</ul>
+
+        {% for doc in site.restapi %}
+            {%if doc.entityName%}
+	           <ul>
+                    <li><strong><a href="{{'/' | append: page.collection | append: '/' | append: doc.entityName | slugify: 'none' | append: '/#' | append: doc.entityName | relative_url }}">{{doc.title}}</a></strong></li>
+	                {% for subject in doc.subjects %}
+                        {%if subject.name%}
+                            <li class="nav-subject">
+                                {{subject.name}}
+                            </li>
+                        {%endif%}
+                        {% for method in subject.methods %}
+                            <li>
+                                <a class="nav-link" href="{{'/' | append: page.collection | append: '/' | append: doc.entityName | slugify: 'none' | append: '/#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
+                            </li>
+                        {% endfor %} 
+                    {% endfor %} 
+	           </ul>
+            {%endif%}
+	   {% endfor %} 
+    </nav> 
 	  
     <!-- MAIN CONTENT -->
     <main id="main_content_wrap" class="outer">
