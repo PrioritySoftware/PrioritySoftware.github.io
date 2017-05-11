@@ -7,6 +7,8 @@ collections:
                 output: true
         restapi:
                 output: true
+        resttutorial:
+                output: true
 
 theme: jekyll-theme-slate
 title: "Priority Mobile"

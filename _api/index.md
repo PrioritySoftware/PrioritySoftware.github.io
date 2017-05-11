@@ -1,5 +1,6 @@
 ---
 layout: api
+collection-title: Web SDK
 ---
 
 # Priority Web SDK

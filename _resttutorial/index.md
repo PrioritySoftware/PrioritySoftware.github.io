@@ -5,6 +5,8 @@ methods:
     - Generate the Service Proxy
     - Use the Service Proxy to Call the OData Service
 layout: tutorial
+collection-title: REST API
+collection: resttutorial
 ---
 
 Based on [`this post`](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app) by Mike Wasson
@@ -15,11 +17,15 @@ Start a new instance of Visual Studio and create a new console application proje
 
 ![RESTClient Project Creation](https://www.eshbelsaas.co.il/eshbel/primail/201705/18j7j/restclient%20new%20project.png)
 
+
+<a class="anchor-link" name="Install_the_OData_Client_Code_Generator"></a>
 ## Install the OData Client Code Generator
 
 From the **Tools** menu, select **Extensions and Updates**. Select **Online** > **Visual Studio Gallery**. In the search box, search for "OData Client Code Generator". Click **Download** to install the VSIX. You might be prompted to restart Visual Studio.
 
 ![Install Code Generator](https://www.eshbelsaas.co.il/eshbel/primail/201705/ae94t/install%20code%20generator.png)
+
+<a class="anchor-link" name="Generate_the_Service_Proxy"></a>
 
 ## Generate the Service Proxy
 
@@ -51,6 +57,8 @@ The result is a code file named RESTProxy.cs that defines the proxy.
 
 ![RESTProxy.cs](https://www.eshbelsaas.co.il/eshbel/primail/201705/6e4yx/rest%20proxy_cs.png)
 
+
+<a class="anchor-link" name="Use_the_Service_Proxy_to_Call_the_OData_Service"></a>
 
 ## Use the Service Proxy to Call the OData Service
 

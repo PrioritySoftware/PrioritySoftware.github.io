@@ -22,14 +22,14 @@
 	  
     <!-- Navigation -->
      <nav id="primary-navigation"> 
-	<h3 onclick="location.href=''">Tutorial</h3>
+	<h3 onclick="location.href=''">{{page.collection-title}}</h3>
 <!-- 	{% assign docsContent=""%} -->
-       {% for doc in site.tutorial %}
+       {% for doc in site[page.collection] %}
 	<ul>
-           <li><strong><a href="{{'/tutorial/' | relative_url}}">{{doc.title}}</a></strong></li>
+           <li><strong><a href="{{'/' | append: page.collection | append: '/' | relative_url}}">{{doc.title}}</a></strong></li>
 		{% for method in doc.methods %}
                  <li>
-	          <a  class="nav-link" href="{{'/tutorial/#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
+	          <a  class="nav-link" href="{{'/' | append: page.collection | append: '/#'| append: method | replace:' ','_' | relative_url }}">{{method}}</a>
 	         </li>
 	       {% endfor %} 
 	  </ul>

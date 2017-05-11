@@ -23,8 +23,16 @@
       </div>
       <!--  <a href="{{'/api'| relative_url}}">Web SDK</a> -->
       <!-- <a href="{{'/tutorial'| relative_url}}">SDK Tutorial</a> -->
-      <div>
-        <a href="{{'/restapi'| relative_url}}" role="button" class="btn">REST API</a>
+      <div class="dropdown">
+        <a role="button" class="btn dropdown-toggle" id="dropdownMenu2"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onclick="openDropdown(event,this)">
+        REST API
+         <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" dropdown="dropdownMenu2">
+          <!-- <li><a href="{{'/'| relative_url}}">Welcome</a></li> -->
+          <li><a href="{{'/restapi'| relative_url}}">Documentation</a></li>
+          <li><a href="{{'/resttutorial'| relative_url}}">Tutorial</a></li>
+        </ul>
       </div>
       <!-- <a href="{{'/app'| relative_url}}">App</a> -->
       <!-- <a id="forkme_banner" href="{{ site.github.repository_url }}"></a> -->
@@ -41,20 +49,24 @@
 
 <script>
 
-     $('body').click(function(event){
+     var closeFunc=function()
+     {
 
         var dropdowns = $('[dropdown]');
         if(dropdowns.hasClass('open'))
         {
           dropdowns.removeClass('open');
         }
-     });
+     };
+
+     $('body').click(closeFunc);
   
 
     //dropdown
         
     var openDropdown = function(event,btn)
     {
+      closeFunc();
       event.stopPropagation();
       console.log(btn.id);
       var dropdown = $('[dropdown*=' + btn.id + ']');
