@@ -24,7 +24,7 @@ Run : `npm install priority-web-sdk --save`
 
 Include the following script in your index.html file:
 
-[https://cdn.priority-software.com/upgrades/var/api/v1.5/priorityapp.nocache.js](https://cdn.priority-software.com/upgrades/var/api/v1.5/priorityapp.nocache.js)
+[https://cdn.priority-software.com/upgrades/var/api/head/priorityapp.nocache.js](https://cdn.priority-software.com/upgrades/var/api/v1.5/priorityapp.nocache.js)
 
 ## Keep in Mind
 
