@@ -4,10 +4,12 @@ methods:
     - Install the OData Client Code Generator
     - Generate the Service Proxy
     - Use the Service Proxy to Call the OData Service
-layout: tutorial
-collection-title: REST API
-collection: resttutorial
+layout: docs_nav
+permalink: /resttutorial/
+collection-title: REST Tutorial
 ---
+
+<a name="REST_Client_App_Tutorial"></a>
 
 Based on [`this post`](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app) by Mike Wasson
 

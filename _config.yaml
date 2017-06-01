@@ -3,17 +3,17 @@ collections:
                 output: true
         tutorial:
                 output: true
-        app:
-                output: true
         restapi:
                 output: true
         resttutorial:
                 output: true
 
 theme: jekyll-theme-slate
-title: "Priority Mobile"
+title: "Priority Developers"
 permalinks: pretty
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "no_intra_emphasis", "fenced_code_blocks", "lax_spacing", "smart"]
 repository: mobile/neomib.github.io
+layouts_dir:  /resources/_layouts
+includes_dir: /resources/_includes
