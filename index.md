@@ -17,7 +17,6 @@ Priority Software's REST API leverages the OData protocol to easily enable acces
 
 The documentation provides examples of how to request, query, and modify data using the API.
 
-In addition, we provide a short tutorial on how to create a client app using C#.
   
 [Web SDK](./api)
 [REST API](./restapi)
