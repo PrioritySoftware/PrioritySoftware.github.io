@@ -20,4 +20,6 @@ The documentation provides examples of how to request, query, and modify data us
   
 [Web SDK](./api)
 [REST API](./restapi)
-[Forum](./forum)
+
+
+For questions please visit [Stackoverflow](https://stackoverflow.com/questions/ask) and share the link with <a href="mailto:devadmin@priority-software.com">devadmin@priority-software.com</a>.
