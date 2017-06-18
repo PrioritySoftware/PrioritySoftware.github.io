@@ -17,9 +17,9 @@ Priority Software's REST API leverages the OData protocol to easily enable acces
 
 The documentation provides examples of how to request, query, and modify data using the API.
 
-  
-[Web SDK](./api)
-[REST API](./restapi)
+
+<a class="inline-link" href="./api">Web SDK</a>
+<a  class="inline-link" href="./restapi">REST API</a>
 
 
 For questions please visit [Stackoverflow](https://stackoverflow.com/questions/ask) and share the link with <a href="mailto:devadmin@priority-software.com">devadmin@priority-software.com</a>.
