@@ -5,6 +5,8 @@ collections:
                 output: true
         restapi:
                 output: true
+        general:
+                output: true
         resttutorial:
                 output: true
 
