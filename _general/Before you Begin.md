@@ -13,7 +13,6 @@ permalink: /general
     #main_content_wrap {
         font-size: 120%;
         width: 60%;
-        margin: auto;
     }
 
 </style>
