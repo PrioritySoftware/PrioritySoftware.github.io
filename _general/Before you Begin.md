@@ -43,6 +43,7 @@ The differences between the tools are outlined in the following table:
 | Access to the values returned by Choose/Search triggers | Not supported | Supported |
 | Activation of procedures and reports | Not supported | Supported |
 | Triggers | At a row level | At a field level |
+| Uploading attachments | Not supported | Supported |
 | Programming language | Any programming language that provides a HTTP client | JavaScript only| 
 | Standards compliance | OData [specification](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
 | Released in Priority version | Read only v. 17.1, read and write v. 17.2 | v 18.0 |
