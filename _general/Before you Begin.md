@@ -52,9 +52,17 @@ The differences between the tools are outlined in the following table:
 ### Make sure you have the relevant skills
 Both tools require basic programming skills in order to use them correctly. In addition:
 
-For REST API: Web services, HTTP, REST, using testing tools such as [PostMan](https://www.getpostman.com/).
+For REST API: 
+* RESTful Web services and HTTP
+* Tools such as [PostMan](https://www.getpostman.com/).
+* The programming interfaces exposed by the external system
+* An understanding of the entities in the external system and how they map to the relevant Priority entities.
+* Evaluate the various implementation possibilities for the integration, and choose the optimal one based on business requirements.
 
-For SDK: Javascript, web development frameworks such as Angular or React.
+For SDK:
+* Javascript
+* Web development frameworks such as Angular or React.
+* Ability to map the entities in the system being built to the matching Priority entities.
 
 For both tools, if your target platform is a web browser make sure you understand the challenges caused by the [Same Origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy).
 
