@@ -4,8 +4,8 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
-    concurrent-ruby (1.1.4)
-    ffi (1.10.0-x64-mingw32)
+    concurrent-ruby (1.1.5)
+    ffi (1.11.0-x64-mingw32)
     forwardable-extended (2.6.0)
     jekyll (3.4.2)
       addressable (~> 2.4)
@@ -18,7 +18,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-feed (0.10.0)
+    jekyll-feed (0.11.0)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -42,15 +42,15 @@ GEM
     redcarpet (3.4.0)
     rouge (1.11.1)
     ruby_dep (1.5.0)
-    safe_yaml (1.0.4)
-    sass (3.7.3)
+    safe_yaml (1.0.5)
+    sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     tzinfo (2.0.0)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2018.9)
+    tzinfo-data (1.2019.1)
       tzinfo (>= 1.0.0)
     wdm (0.1.1)
 
@@ -66,7 +66,7 @@ DEPENDENCIES
   wdm (>= 0.1.0)
 
 RUBY VERSION
-   ruby 2.2.6p396
+   ruby 2.5.5p157
 
 BUNDLED WITH
    1.14.6
