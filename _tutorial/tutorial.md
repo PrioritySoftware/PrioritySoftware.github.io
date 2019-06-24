@@ -8,7 +8,7 @@ methods:
     - Running Server-Side Triggers
     - Opening Choose Lists
     - Handling Server Messages
-    - Direct Activations
+    - Actions
     - Input Synchronization
 layout: docs_nav
 permalink: /tutorial/
@@ -247,11 +247,11 @@ You can see how this is done in the `showMessage` function.
 
 So if, for example, the warning is received while executing the `fieldUpdate` API function, then after calling `warningConfirm`, the `fieldUpdate` onSuccess will be called.
 
-<a class="anchor-link" name="Direct_Activations"></a>
-### Direct Activations
-In Priority, a direct activation is a procedure that runs in the context of the current row in a form.
+<a class="anchor-link" name="Actions"></a>
+### Actions
+In Priority, an *action* is a procedure that runs in the context of the current row in a form.
 
-In this step, we’ll add a simple direct activation of the Customers form - the **Convert Potential Cust to Cust** procedure.
+In this step, we’ll add a simple action for the Customers form - the **Convert Potential Cust to Cust** procedure.
 
 ```html5
         <button onClick="convertPotentialCustToCust()">Save Customer</button>
