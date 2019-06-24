@@ -18,9 +18,9 @@ permalink: /tutorial/
 ### Introduction
 In this tutorial we will write a simple web or mobile application that runs a form in **Priority**.
 
-We will learn how to add a new row, update fields, open a choose list, and run a direct activation.
+We will learn how to add a new row, update fields, open a choose list, and run an action.
 
-Our demo application will be based on the **Customers** form and contain the following fields: **Customer Number**, **Customer Name**, **Status**, **Assigned to**, and **Date Opened**. It will also contain the **Convert Potential Cust to Cust** direct activation.
+Our demo application will be based on the **Customers** form and contain the following fields: **Customer Number**, **Customer Name**, **Status**, **Assigned to**, and **Date Opened**. It will also contain the **Convert Potential Cust to Cust** action.
 
 <a class="anchor-link" name="Create_the_HTML_Application"></a>
 ### Create the HTML Application
