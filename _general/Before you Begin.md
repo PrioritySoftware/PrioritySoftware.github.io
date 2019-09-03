@@ -42,7 +42,7 @@ The differences between the tools are outlined in the following table:
 | Primary use | Integration - App 2 App | Specialized UI/UX for Business Logic |
 | Access to the values returned by Choose/Search triggers | Not supported | Supported |
 | Activation of procedures and reports | Not supported | Supported |
-| Triggers | At a row level | At a field level |
+| Triggers | Full row inputted at once, so both field and row triggers fire at the same time | Apply at field level, and then row level |
 | Uploading attachments | Not supported | Supported |
 | Programming language | Any programming language that provides a HTTP client | JavaScript only| 
 | Standards compliance | OData [specification](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
