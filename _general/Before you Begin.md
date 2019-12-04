@@ -45,7 +45,7 @@ The differences between the tools are outlined in the following table:
 | Triggers | Full row inputted at once, so both field and row triggers fire at the same time | Apply at field level, and then row level |
 | Uploading attachments | Not supported | Supported |
 | Programming language | Any programming language that provides a HTTP client | JavaScript only| 
-| Standards compliance | OData [specification](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
+| Standards compliance | OData [specification](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
 | Released in Priority version | Read only v. 17.1, read and write v. 17.2 | v 18.0 |
 
 
