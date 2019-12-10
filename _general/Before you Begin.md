@@ -95,9 +95,7 @@ Consult with security experts!
 
 ### Ask questions
 
-We love answering questions related to these tools on [StackOverflow](https://stackoverflow.com/). Go ahead and post your questions there, and share the link with <a href="mailto:devadmin@priority-software.com">devadmin@priority-software.com</a>. If the question is related to the Web SDK, you can also use the dedicated tag [priority-web-sdk](https://stackoverflow.com/questions/tagged/priority-web-sdk).
-
-Even better – improve your StackOverflow reputation by posting answers to questions asked by other developers! Although we try to make sure that no question goes unanswered, you might be able to beat us to it.
+We love answering questions related to these tools on [StackOverflow](https://stackoverflow.com/). Go ahead and post your questions there, and tag them with the dedicated tag [priority-web-sdk](https://stackoverflow.com/questions/tagged/priority-web-sdk).
 
 ### Priority on Github
 
