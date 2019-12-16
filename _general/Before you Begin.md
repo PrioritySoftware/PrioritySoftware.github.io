@@ -45,7 +45,7 @@ The differences between the tools are outlined in the following table:
 | Triggers | Full row inputted at once, so both field and row triggers fire at the same time | Apply at field level, and then row level |
 | Uploading attachments | Not supported | Supported |
 | Programming language | Any programming language that provides a HTTP client | JavaScript only| 
-| Standards compliance | OData [specification](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
+| Standards compliance | OData [specification](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
 | Released in Priority version | Read only v. 17.1, read and write v. 17.2 | v 18.0 |
 
 
@@ -95,9 +95,7 @@ Consult with security experts!
 
 ### Ask questions
 
-We love answering questions related to these tools on [StackOverflow](https://stackoverflow.com/). Go ahead and post your questions there, and share the link with <a href="mailto:devadmin@priority-software.com">devadmin@priority-software.com</a>. If the question is related to the Web SDK, you can also use the dedicated tag [priority-web-sdk](https://stackoverflow.com/questions/tagged/priority-web-sdk).
-
-Even better – improve your StackOverflow reputation by posting answers to questions asked by other developers! Although we try to make sure that no question goes unanswered, you might be able to beat us to it.
+We love answering questions related to these tools on [StackOverflow](https://stackoverflow.com/). Go ahead and post your questions there, and tag them with the dedicated tag [priority-web-sdk](https://stackoverflow.com/questions/tagged/priority-web-sdk).
 
 ### Priority on Github
 
