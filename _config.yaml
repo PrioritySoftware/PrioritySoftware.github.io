@@ -19,3 +19,6 @@ redcarpet:
 repository: mobile/neomib.github.io
 layouts_dir:  /resources/_layouts
 includes_dir: /resources/_includes
+
+# Google Analytics
+google_analytics: UA-12315884-16
