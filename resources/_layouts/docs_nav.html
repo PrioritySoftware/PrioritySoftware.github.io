@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="{{'/resources/assets/sideNav/jquery.ma.infinitypush.css' | relative_url}}">
+    <script src="{{'/resources/assets/sideNav/jquery.ma.infinitypush.min.js'| relative_url}}"></script>
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/resources/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+   {% include head.html %}
+
+  </head>
+
+  <body>
+
+  <!-- HEADER -->
+  {% include header.html %}
+
+  <!-- NAVIGATION -->
+  <nav id="primary-navigation"> 
+  <h3 onclick="location.href=''">{{page.collection-title}}</h3>
+
+  {% for doc in site[page.collection] %}
+    <ul>
+      <li>
+        <strong>
+          <a href="{{ doc.permalink | relative_url }}">{{doc.title}}</a>
+        </strong>
+      </li>
+          
+    {% if doc.subjects %}
+      {% for subject in doc.subjects %}
+        {%if subject.name%}
+          <li class="nav-subject">
+              {{subject.name}}
+          </li>
+        {%endif%}
+        {% for method in subject.methods %}
+          <li>
+             <a class="nav-link" href="{{ doc.permalink | append: '#' | append: method | replace:' ','_' | relative_url }}">{{method}}</a>
+          </li>
+        {% endfor %} 
+      {% endfor %} 
+    {% else %}
+      {% for method in doc.methods %}
+          <li>
+            <a class="nav-link" href="{{ doc.permalink | append: '#' | append: method | replace:' ','_' | relative_url }}">{{method}}</a>
+          </li>
+      {% endfor %} 
+    {%endif%}
+    </ul>
+  {% endfor %} 
+  </nav>  
+    
+  
+  <!-- MAIN CONTENT -->
+  <main id="main_content_wrap" class="outer">
+    <!-- Content -->
+    <section  class="markdown-body">
+          {{ content }}
+    </section>
+  
+  </main>
+
+  <script>
+    $(document).ready(function()
+    {
+      if(screen.width<=640)
+      {
+        $("body").addClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:true,spacing:40});   
+      }
+      else
+      {
+        $("body").removeClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
+      }
+    });
+
+        //try it frame
+        var showTryIt=function(btn)
+        {
+          var iframe=document.getElementById('try-it-frame');
+          if(iframe.style.width!='0px'&& iframe.style.width!="")
+          {
+            iframe.style.width='0';
+            btn.innerText="Try It Yourself";
+            btn.style.right='2%';
+            btn.style.backgroundColor="#108a1e";
+            btn.style.color="white";
+            btn.style.marginRight="auto";
+          }
+          else
+          {
+            iframe.style.width='35%';
+            btn.innerText="X";
+            btn.style.right='35%';
+            btn.style.backgroundColor="white";
+            btn.style.color="crimson";
+            btn.style.marginRight="-25px";
+          }
+        };
+    </script>
+    {% if page.collection-title == "Web SDK" %}
+      <a id="try-it-button" href="{{'/tryit' | relative_url'}}" target="_blank">Try It Yourself</a>
+    {% endif %}
+  </body>
+</html>

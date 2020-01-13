@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="{{'/resources/assets/sideNav/jquery.ma.infinitypush.css' | relative_url}}">
+    <script src="{{'/resources/assets/sideNav/jquery.ma.infinitypush.min.js'| relative_url}}"></script>
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/resources/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+    {% include head.html %}
+ 
+  </head>
+
+  <body>
+
+  <!-- HEADER -->
+  {% include header.html %}
+
+  <!-- NAVIGATION -->
+  <nav id="primary-navigation"> 
+  <h3 onclick="location.href=''">{{page.collection-title}}</h3>
+  {% assign groups = site[page.collection] | group_by: "group" %}
+
+  {% for group in groups %}
+      {% if group.name != 'none' %}
+      <ul>
+        <li>
+          <strong>
+            <a href="{{ '/' | append: group.name | append: '/' | append: group.items[0].title | relative_url }}">{{group.name}}</a>
+          </strong>
+        </li>
+        {% for item in group.items %}
+            <li>
+                <a class="nav-link" href="{{ item.permalink | relative_url }}">{{item.title}}</a>
+            </li>
+        {%endfor%}
+        </ul>
+      {% else %}
+      {% for item in group.items %}
+      <ul>
+          <li>
+            <strong>
+              <a href="{{ item.permalink | relative_url }}">{{item.title}}</a>
+            </strong>
+          </li>
+          {% for subject in item.subjects %}
+            <li>
+              <a class="nav-link" href="{{ item.permalink | append: '#' | append: subject | replace:' ','_' | relative_url }}">{{subject}}</a>
+            </li>
+        {% endfor %}
+        </ul> 
+      {%endfor%}
+    {% endif %}
+{%endfor%}
+
+
+  </nav>  
+    
+  
+  <!-- MAIN CONTENT -->
+  <main id="main_content_wrap" class="outer">
+    <!-- Content -->
+    <section  class="markdown-body">
+          {{ content }}
+    </section>
+  
+  </main>
+
+   <script>
+    $(document).ready(function()
+    {
+      if(screen.width<=640)
+      {
+        $("body").addClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:true,spacing:40});   
+      }
+      else
+      {
+        $("body").removeClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
+      }
+    });
+    </script>
+  </body>
+</html>
