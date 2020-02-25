@@ -64,7 +64,17 @@ For SDK:
 * Web development frameworks such as Angular or React.
 * Ability to map the entities in the system being built to the matching Priority entities.
 
-For both tools, if your target platform is a web browser make sure you understand the challenges caused by the [Same Origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy).
+#### Help! I'm trying to use the SDK/REST API but my browser is giving me an error about CORS. What should I do?
+
+Browsers block cross origin requests, that is how the Internet is designed. See [here](https://en.wikipedia.org/wiki/Same-origin_policy) for more information.
+If this is a problem for you, you can do one of the following: 
+1.  Host your code in the same domain as the Priority server.
+2.  Configure CORS on the server.
+3.  Host your application logic in your own server running with node.js.
+
+Options 1 or 2 are relevant only if you control all of the Priority servers that your application will access - now and in the future.
+If this is not the case, #3 is your best bet.
+
 
 ### Configure your Priority environment correctly
 *   Both tools require a working Priority Application server.
