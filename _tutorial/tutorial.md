@@ -91,7 +91,7 @@ The **fieldChangeHandler** function is triggered by the browser whenever a field
 ### Installing Priority into your page
 Include the Priority Web SDK library by adding another `<script>` tag above the existing one:
 ```
-<script src="https://cdn.priority-software.com/upgrades/var/api/v1.5/priorityapp.nocache.js"></script>
+<script src="https://cdn.priority-software.com/upgrades/var/api/v2.2.2/priorityapp.nocache.js"></script>
 ```
 Priority is now installed in your page and ready to use!
 
