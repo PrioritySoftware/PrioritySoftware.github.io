@@ -1,7 +1,7 @@
 ---
-title: Before you Begin
+title: Working with Webhooks
 layout: default
-permalink: /general/webhooks
+permalink: /webhooks
 ---
 
 <style type="text/css">
@@ -17,12 +17,13 @@ permalink: /general/webhooks
 
 </style>
 
-#Webhooks
-[20.1]
+# Webhooks
+
+[20.1]()
 
 Priority now supports webhooks!
 
-Priority administrators can now fire webhooks from standard business prcoess management (BPM) rules and business rules. Use them to trigger operations in other apps based on events in Priority.
+Priority administrators can now fire webhooks from standard business prcoess management (BPM) rules and business rules. Use them to trigger functions in other apps based on events in Priority.
 
 ## Setting Up Webhooks in Priority
 
@@ -30,5 +31,30 @@ Before you can begin working with webhooks, you'll have to define **Webhook Endp
 
 For each webhook, give it a name, and the URL of the endpoint. You can also create an authentication token to secure the webhook. Note that the authentication token is obscured as soon as you leave the line, so you should copy it immediately after generating it, and configure it in your app's webhook endpoint.
 
-## Adding a Webhook to a Rule
+## Adding a Webhook to a Business Rule
 
+Working with webhooks is identical to creating other business rules in Priority. In this example, we'll use the **Customer Shipments** form, adding a rule that fires a webhook to our app when the delivery is on its way to the customer.
+
+1.  Open the BPM chart in Priority via **Inventory > Inventory Transactions > Sales Inventory Transactions > Statuses for Sales Inv Transacts > BPM Flow Chart-Shipping Docs**.
+2.  Add a new rule for the status used for en route goods.
+3.  Under **Do the Following:**, select **Webhook**.
+4.  Choose the webhook to fire from the adjacent choose list. This list is populated based on the webhooks defined in the **Webhook Definitions** form.
+5.  Optional: In the message body, you can specify fields to include in the webhook payload. These will delivered in a JSON key:value format. For example:
+    ```json
+    {
+      "DOCUMENTS_P": {
+        "PDOCNO": "SH2000000880",
+        "CDES": "David Smith",
+        "CURDATE": "2020-07-28T00:00:00"
+      },
+      "DOCTODOLIST": {
+        "OWNERLOGIN": "SteveD"
+      }
+    }
+    ```
+6. As in other business rules in Priority, you can also set conditions. In this case the webhook only fires for VIP customers.
+
+
+![Defining a Webhook Rule](https://prapp.priority-software.com/primail/202008/y5tyxfi/webhook%20bpm%20definition.png)
+
+That's it! Now you just have to code the desired functionality in the endpoint app.
