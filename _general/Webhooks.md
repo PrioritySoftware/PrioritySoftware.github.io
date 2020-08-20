@@ -25,11 +25,21 @@ Priority now supports webhooks!
 
 Priority administrators can now fire webhooks from standard business prcoess management (BPM) rules and business rules. Use them to trigger functions in other apps based on events in Priority.
 
+Working with Webhooks you must own the Webhooks module.
+
+## Set Up a Webhook Handler/Catcher
+
+Before you can set up the webhook in Priority, you'll need to set up your hook handler or catcher in your target app. The hook catcher will be set to a specific URL.
+
+For example, in Zapier, you'd add a Zap of type **Catch Hook**. This will include the Hook Catcher URL:
+![Zapier Hook Catcher](https://prapp.priority-software.com/primail/202008/vymq4h0/zapier%20hook.png)
+
+
 ## Setting Up Webhooks in Priority
 
 Before you can begin working with webhooks, you'll have to define **Webhook Endpoints**. This can be done in **System Management > System Maintenance > Periodic Maintenance > BPM Maintenance > Webhook Definitions**.
 
-For each webhook, give it a name, and the URL of the endpoint. You can also create an authentication token to secure the webhook. Note that the authentication token is obscured as soon as you leave the line, so you should copy it immediately after generating it, and configure it in your app's webhook endpoint.
+For each webhook, give it a name, and the URL of the hook catcher. You can also create an authentication token to secure the webhook. Note that the authentication token is obscured as soon as you leave the line, so you should copy it immediately after generating it, and configure it in your app's webhook endpoint.
 
 ## Adding a Webhook to a Business Rule
 
@@ -57,4 +67,29 @@ Working with webhooks is identical to creating other business rules in Priority.
 
 ![Defining a Webhook Rule](https://prapp.priority-software.com/primail/202008/y5tyxfi/webhook%20bpm%20definition.png)
 
-That's it! Now you just have to code the desired functionality in the endpoint app.
+## Full Webhook Payload
+
+Other than the fields included in the message, the Webhook payload will always include the following data in the call headers:
+
+| Header name | Example | Description |
+|----|---|---|
+|priority-form-name| DOCUMENTS_P | The internal form name in Priority |
+|priority-bpm-subject | Your order is on its way | The subject of the rule message in Priority |
+|priority-bpm-id | 245988 | ID number of the rule in Priority |
+|priority-bpm-name | Shipment Webhook | The business rule description in Priority|
+|priority-bpm-token| D6D4545CE5AB4827BB51CA3C03005D1D | authentication token for this webhook as recorded in **Webhook Definitions** form |
+
+As previously mentioned, the body will contains a json of field values added to the business rule message.
+
+```json
+    {
+      "DOCUMENTS_P": {
+        "PDOCNO": "SH2000000880",
+        "CDES": "David Smith",
+        "CURDATE": "2020-07-28T00:00:00"
+      },
+      "DOCTODOLIST": {
+        "OWNERLOGIN": "SteveD"
+      }
+    }
+```
