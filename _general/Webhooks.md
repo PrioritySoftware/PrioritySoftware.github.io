@@ -25,7 +25,7 @@ Priority now supports webhooks!
 
 Priority administrators can now fire webhooks from standard business prcoess management (BPM) rules and business rules. Use them to trigger functions in other apps based on events in Priority.
 
-Working with Webhooks you must own the Webhooks module.
+Working with Webhooks requires the Webhooks module.
 
 ## Set Up a Webhook Handler/Catcher
 
