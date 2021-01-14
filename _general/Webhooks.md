@@ -23,7 +23,7 @@ permalink: /webhooks
 
 Priority now supports webhooks!
 
-Priority administrators can now fire webhooks from standard business prcoess management (BPM) rules and business rules. Use them to trigger functions in other apps based on events in Priority.
+Priority administrators can now fire webhooks from standard business process management (BPM) rules and business rules. Use them to trigger functions in other apps based on events in Priority.
 
 Working with Webhooks requires the Webhooks module.
 
@@ -49,7 +49,7 @@ Working with webhooks is identical to creating other business rules in Priority.
 2.  Add a new rule for the status used for en route goods.
 3.  Under **Do the Following:**, select **Webhook**.
 4.  Choose the webhook to fire from the adjacent choose list. This list is populated based on the webhooks defined in the **Webhook Definitions** form.
-5.  Optional: In the message body, you can specify fields to include in the webhook payload. These will delivered in a JSON key:value format. For example:
+5.  Optional: In the message body, you can specify fields to include in the webhook payload. These will be delivered in a JSON key:value format. For example:
     ```json
     {
       "DOCUMENTS_P": {
