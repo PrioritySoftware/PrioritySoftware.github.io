@@ -32,7 +32,7 @@ Working with Webhooks requires the Webhooks module.
 Before you can set up the webhook in Priority, you'll need to set up your hook handler or catcher in your target app. The hook catcher will be set to a specific URL.
 
 For example, in Zapier, you'd add a Zap of type **Catch Hook**. This will include the Hook Catcher URL:
-![Zapier Hook Catcher](https://prapp.priority-software.com/primail/202008/vymq4h0/zapier%20hook.png)
+![Zapier Hook Catcher](https://cdn.priority-software.com/docs/images/zapier_hook.png)
 
 
 ## Setting Up Webhooks in Priority
@@ -65,7 +65,7 @@ Working with webhooks is identical to creating other business rules in Priority.
 6. As in other business rules in Priority, you can also set conditions. In this case the webhook only fires for VIP customers.
 
 
-![Defining a Webhook Rule](https://prapp.priority-software.com/primail/202008/y5tyxfi/webhook%20bpm%20definition.png)
+![Defining a Webhook Rule](https://cdn.priority-software.com/docs/images/webhook_bpm_definition.png)
 
 ## Full Webhook Payload
 
@@ -79,7 +79,7 @@ Other than the fields included in the message, the Webhook payload will always i
 |priority-bpm-name | Shipment Webhook | The business rule description in Priority|
 |priority-bpm-token| D6D4545CE5AB4827BB51CA3C03005D1D | authentication token for this webhook as recorded in **Webhook Definitions** form |
 
-As previously mentioned, the body will contains a json of field values added to the business rule message.
+As previously mentioned, the body will contain a json of field values added to the business rule message.
 
 ```json
     {
