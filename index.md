@@ -4,6 +4,8 @@ layout: default
 ---
 # Welcome to Priority's Developer Portal
 
+{% include info.html content="<h3>Version 21.0 API Changes</h3><p> Version 21.0 of Priority contains changes to both the REST API and the Web SDK that might affect your integrations.</p> <p> Please review the release notes for each for more information.</p>" %}
+
 ## Web SDK
 Priority Software is proud to present a javascript based Web SDK that communicates with **Priority** forms, procedures and more.
 
