@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="{{'/resources/assets/sideNav/jquery.ma.infinitypush.css' | relative_url}}">
+    <script src="{{'/resources/assets/sideNav/jquery.ma.infinitypush.min.js'| relative_url}}"></script>
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/resources/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+   {% include head.html %}
+
+  </head>
+
+  <body>
+
+  <!-- HEADER -->
+  {% include header.html %}
+
+  <!-- NAVIGATION -->
+    <nav>
+        {% if site.data.sdktopics.chapters[0] %}
+          {% for chapter in site.data.sdktopics.chapters %}
+            <h3><a href="{{ chapter.url }}">{{chapter.title }}</a></h3>
+              {% if chapter.topics[0] %}
+                <ul>
+                  {% for topic in chapter.topics %}
+                      <li><a href="{{ topic.url }}">{{ topic.page }}</a>
+                        {% if topic.subtopics[0] %}
+                          <ul>
+                          {% for subtopic in topic.subtopics %}
+                              <li><a href="{{ subtopic.url }}">{{ subtopic.page }}</a></li>
+                          {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endfor %}
+        {% endif %}
+    
+    </nav>
+    
+  
+  <!-- MAIN CONTENT -->
+  <main id="main_content_wrap" class="outer">
+    <!-- Content -->
+    <section  class="markdown-body">
+          {{ content }}
+    </section>
+  
+  </main>
+
+  <script>
+    $(document).ready(function()
+    {
+      if(screen.width<=640)
+      {
+        $("body").addClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:true,spacing:40});   
+      }
+      else
+      {
+        $("body").removeClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
+      }
+    });
+  </body>
+</html>

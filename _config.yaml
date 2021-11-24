@@ -9,6 +9,8 @@ collections:
                 output: true
         resttutorial:
                 output: true
+        sdk:
+                output: true
 
 theme: jekyll-theme-slate
 title: "Priority Developer Portal"
