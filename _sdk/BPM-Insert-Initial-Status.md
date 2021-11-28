@@ -1,0 +1,14 @@
+The final step in [creating a BPM flow
+chart](Creating_BPM_Flow_Charts "wikilink") is to write a query that
+will insert the initial status into the **XXXX_MYDOCSTATS** table:
+
+``` tsql
+:INITSTAT = 'Initial Stat';
+:STATUSTYPE = 'PRIV_MYBPM'
+INSERT INTO XXXX_MYDOCSTATS
+(MYDOCSTAT,STATDES,INITSTATFLAG,CHANGEFLAG)
+VALUES(-1,:INITSTAT,'Y','Y');
+
+INSERT INTO DOCSTATUSES (ORIGSTATUSID,TYPE,STATDES, NEWDOCFLAG)
+VALUES(-1, :STATUSTYPE, :INITSTAT,'Y');
+```
