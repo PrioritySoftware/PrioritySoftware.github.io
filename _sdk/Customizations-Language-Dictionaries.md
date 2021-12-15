@@ -1,3 +1,8 @@
+---
+title: Customization - Language Dictionaries
+layout: sdk_nav
+---
+
 ## Introduction
 
 When [installing

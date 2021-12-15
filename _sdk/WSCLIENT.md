@@ -1,3 +1,8 @@
+---
+title: Interacting with Webservices via WSCLIENT
+layout: sdk_nav
+---
+
 Using the WSCLIENT program you can make requests to an external web
 service. The WSCLIENT program is generic and can make requests to most
 web services. Use the following syntax to interface with a web service

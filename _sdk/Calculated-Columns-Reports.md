@@ -1,3 +1,8 @@
+---
+title: Calculated Report Columns
+layout: sdk_nav
+---
+
 ## Introduction
 
 In addition to report columns derived from tables, you can also create

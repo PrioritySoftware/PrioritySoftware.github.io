@@ -1,3 +1,8 @@
+---
+title: Tables
+layout: sdk_nav
+---
+
 ## Table Names {#table_names}
 
 The following rules apply to table names:

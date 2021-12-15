@@ -1,3 +1,8 @@
+---
+title: User Identification for Priority Lite/Dashboards
+layout: sdk_nav
+---
+
 ## Introduction
 
 Often, there is a need to identify the user who runs the procedure -- as

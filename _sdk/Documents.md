@@ -1,3 +1,8 @@
+---
+title: Documents
+layout: sdk_nav
+---
+
 ## Introduction
 
 You can use a [procedure](Procedures "wikilink") to generate a document.

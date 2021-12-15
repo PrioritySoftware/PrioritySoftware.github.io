@@ -1,3 +1,9 @@
+---
+title: Actions
+layout: sdk_nav
+---
+
+
 While ***Priority*** entities are generally accessed from the menus,
 they may also be activated from within a specific record in a given
 form. The form's Direct Activations may include:

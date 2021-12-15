@@ -1,5 +1,38 @@
 chapters:
 
+  - title: Introduction
+    url: Introduction.html
+  - title: Customization Rules
+    url: Customization-Rules.html
+  - title: Database Tables
+    url: Tables.html
+    topics: 
+      - page: Table Columns
+        url: Table-Columns.html
+      - page: Table Keys
+        url: Keys.html
+      - page: Creating and Modifying Tables 
+        url: Create-Modify-Tables.html
+      - page: Viewing Tables
+        url: View-Tables.html
+      - page: DBI Syntax
+        url: DBI-Syntax.html
+  - title: SQL Syntax
+    url: SQL-Syntax.html
+    topics:
+      - page: SQL Functions and Variables
+        url: SQL-Functions-Variables.html
+      - page: Flow Control
+        url: Flow-Control.html
+      - page: Additions and Revisions to Standard SQL Commands
+        url: Additions-to-SQL-Commands.html
+      - page: Execution Statements
+        url: Execution-Statements.html
+      - page: Non-standard Scalar Expressions
+        url: Scalar-Expressions.html
+        subtopics:
+          - page: ATOD and DTOA Expressions
+            url: ATOD-and-DTOA.html
   - title: Forms
     url: Forms.html
     topics:
@@ -7,9 +40,193 @@ chapters:
         url: Form-Columns.html
       - page: Sublevel Forms
         url: Sub-level-Forms.html
+      - page: Conditions of Record Display and Insertion
+        url: Conditions-Record-Display.html
+      - page: Actions
+        url: Actions.html
+      - page: Form Refresh
+        url: Form-Refresh.html
+      - page: Accessing a Related Form
+        url: Accessing-Related-Form.html
       - page: Form Triggers
         url: Form-Triggers.html
         subtopics:
           - page: SQL Variables
             url: SQL-Variables.html
+          - page: Built-in Triggers
+            url: Built-in-Triggers.html
+          - page: Creating Your Own Triggers
+            url: Creating-your-triggers.html
+          - page: Error and Warning Messages
+            url: Errors-and-Warnings.html
+          - page: Sending a Mail Message
+            url: Send-Mail.html
+          - page: Changing Column Titles Dynamically
+            url: Dynamic-Column-Titles.html
+          - page: Including One Trigger in Another
+            url: Include-Triggers.html
+      - page: Form Preparation
+        url: Form-Preparation.html
+      - page: Help Messages
+        url: Help-Messages.html
+  - title: Reports
+    url: Reports.html
+    topics:
+      - page: Report Columns
+        url: Report-Columns.html
+      - page: Organizing Report Data
+        url: organize-report-data.html
+      - page: Refining Report Data Display
+        url: Refine-Report-Display.html
+      - page: Calculated Columns in Reports
+        url: Calculated-Columns-Reports.md
+      - page: Types of Reports
+        url: Report-Types.html
+      - page: Running a Report
+        url: Run-Report.html
+  - title: Procedures
+    url: Procedures.html
+    topics:
+      - page: Procedure Steps 
+        url: Procedure-Steps.html
+      - page: Procedure Parameters
+        url: Procedure-Parameters.html
+      - page: User Input in Procedures
+        url: Procedure-Input.html
+      - page: Procedure Step Queries
+        url: Procedure-Step-Queries.html
+      - page: Procedure Flow Control
+        url: Procedure-Flow-Control.html
+      - page: Procedure Message Display
+        url: Procedure-Messages.html
+      - page: Processed Reports
+        url: Processed-Report.html
+      - page: Running a Procedure
+        url: Run-Procedure.html
+  - title: Documents
+    url: Documents.html
+    topics:
+      - page: Special Document Features
+        url: Special-Document-Features.html
+      - page: Outputting the Document
+        url: Document-Printout.html
+      - page: The Letter Generator
+        url: Letter-Generator.html
+  - title: Interfaces 
+    url: Interfaces.html
+    topics:
+      - page: Form Loads
+        url: Form-Loads.html
+        subtopics:
+          - page: Loading from/to a Load Table
+            url: Loading-from-Load-Table.html
+          - page: Loading from/to a File
+            url: Loading-from-File.html
+          - page: Executing the Form Load
+            url: Execute-FormLoads.html
+          - page: Deleting Records from a Form
+            url: Interfaces-Deleting-Records.html
+          - page: Dynamic Interfaces
+            url: Dynamic-Interfaces.html
+      - page: Combining Table Loads with Form Loads
+        url: Table-and-Form-Loads.html
+      - page: Tips for Finding Existing Interfaces
+        url: Existing-Interfaces.html
+  - title: Debug Tools
+    url: Debug-Tools.html
+  - title: Installing Your Customizations
+    url: Installing-Customizations
+    topics:
+      - page: Installing the Language Dictionaries
+        url: Customizations-Language-Dictionaries
+  - title: User Report Generators
+    url: Modifying-Report-Generator.html
+  - title: BI-Reports
+    url: BI-Reports.html
+  - title: Priority Lite and Dashboards
+    url: Lite-Dashboards.html
+    topics:
+      - page: User Identifaction for Priority Lite/Dashboards
+        url: Lite-Identifcation.html
+      - page: Designing HTML Reports for Priority Lite/Dashboards
+        url: Lite-Dashboards-Reports.html
+      - page: Additional Input Options (Priority Lite/Dashboards)
+        url: Additional-Input-PriorityLite-Dashboards.html
+      - page: Defining a Base Page for HTML Pages (Priority Lite/Dashboards)
+        url: Base-Page-HTML.html
+      - page: Writing Dashboard Procedures
+        url: Dashboard-Procedures.html
+  - title: BPM Flow Charts
+    url: Create-BPM.html
+    topics:
+      - page: The Statuses Table
+        url: Create-BPM-Statuses-Table.html
+      - page: The Statuses Form
+        url: BPM-Statuses-Form.html
+      - page: Modify the New Document
+        url: BPM-Modify-Document-Form.html
+      - page: Enable Tracking (Optional)
+        url: BPM-Tracking.html
+      - page: Update the STATUSTYPES Table
+        url: BPM-Statustypes.html
+      - page: Add Interfaces
+        url: BPM-CreateInterfaces.html
+      - page: Add BPM Chart Procedure
+        url: BPM-Create-Procedure.html
+      - page: Debug the BPM
+        url: BPM-Debugging.html
+      - page: Insert Initial Status
+        url: BPM-Insert-Initial-Status.html
+  - title: Creating Charts
+    url: Creating-Charts.html
+    topics:
+      - page: Parameters for New Charts
+        url: Chart-Parameters.html
+  - title: Advanced Programming Tools
+    url: Advanced-Programming-Tools.html
+    topics: 
+      - page: Working with the Priority Web Interface
+        url: Priority-Web.html
+      - page: Running a Procedure/Report from an SQLI Step or Form Trigger
+        url: Run-Procedure-SQLI.html
+      - page: Initial Procedure and Follow-up Procedure for Financial Documents
+        url: Financial-Document-Initial-Follow-up-Procedure.html
+      - page: Open Form Records from Program
+        url: Procedure-Open-Form.html
+      - page: Creating a Printout of a Document (---)
+        url: Document-Printout.html
+      - page: Printing Files from a Procedure Step
+        url: Print-Attachments.html
+      - page: Adding Click2Sign Support to a Document Printout
+        url: Click2Sign.html
+      - page: Encrypting Data
+        url: Encyrpting-Data.html
+      - page: Using a Form Interface to Duplicate Documents
+        url: Interfaces-Duplicate-Docs.html
+      - page: Using the STACK_ERR Table to Store Interface Messages
+        url: STACKERR.html
+      - page: Priority and SQL
+        url: Dynamic-SQL.html
+      - page: Retrieving Data from the Client .ini File
+        url: Get-Data-from-INI-File.html
+      - page: Using Semaphores
+        url: Semaphores.html
+      - page: Activating Priority Entities from an External Application
+        url: Activating-From-External-Applications.html
+      - page: Programs Interfacing Priority with External Systems
+        url: Interact-with-External-Systems.html
+      - page: Using WSCLIENT to Interface with Web Services
+        url: WSCLIENT.html
+      - page: Parsing XML/JSON Files
+        url: XMLPARSE.html
+      - page: Defining Word Templates for Specific Form Records
+        url: Defining-Word-Templates.html
+      - page: Using Custom Form Columns in the Business Rules Generator
+        url: Rules-Generator-Custom-Columns.html
+  - title: ODBC for SQL Server
+    url: ODBC-SQLServer.html
+  - title: ODBC for Oracle
+    url: ODBC-Oracle.html   
+      
+
 

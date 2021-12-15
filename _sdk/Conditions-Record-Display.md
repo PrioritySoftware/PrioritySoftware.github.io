@@ -1,3 +1,8 @@
+---
+title: Conditions of Record Display and Insertion
+layout: sdk_nav
+---
+
 ## Introduction
 
 ***Priority*** allows for two types of condition:

@@ -1,3 +1,8 @@
+---
+title: Interfaces
+layout: sdk_nav
+---
+
 **\'\'Priority***offers two special interface tools. The [form
 load](Form_Loads "wikilink") utility (**INTERFACE** program) serves both
 to import data directly into a ***Priority**\'\' form (from an external

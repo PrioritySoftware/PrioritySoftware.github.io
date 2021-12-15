@@ -1,3 +1,9 @@
+---
+title:  Enable Document Tracking
+layout: sdk_nav
+---
+
+
 If you want to allow users to add documents from this form to their
 Tracking List, add the following hidden columns to the **MYDOC** form
 (listed are the *Form Column Name*, *Table Name* and *Column Name*,

@@ -1,3 +1,8 @@
+---
+title: Processed Reports
+layout: sdk_nav
+---
+
 ## Introduction
 
 One of the most common uses of a procedure is to generate a *processed

@@ -1,3 +1,8 @@
+---
+title: Table Keys
+layout: sdk_nav
+---
+
 ## Introduction
 
 The last step in table construction is to specify the keys attached to

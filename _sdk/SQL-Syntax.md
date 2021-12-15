@@ -1,3 +1,8 @@
+---
+title: Syntax Conventions
+layout: sdk_nav
+---
+
 ## Syntax Conventions {#syntax_conventions}
 
 Syntax for SQL statements in ***Priority***is based on ANSI standard

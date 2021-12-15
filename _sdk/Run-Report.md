@@ -1,3 +1,8 @@
+---
+title: Running the Report
+layout: sdk_nav
+---
+
 ## Introduction
 
 A simple [report](Reports "wikilink") (one which is not part of a

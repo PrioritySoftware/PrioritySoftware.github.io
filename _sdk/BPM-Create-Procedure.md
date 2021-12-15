@@ -1,3 +1,9 @@
+---
+title: Add BPM Chart Procedure
+layout: sdk_nav
+---
+
+
 The sixth step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to create a procedure
 called **XXXX_VISMYDOCSTATS** in the *Procedure Generator*.

@@ -1,3 +1,8 @@
+---
+title: Print Documents from Within a Procedure
+layout: sdk_nav
+---
+
 ## Introduction
 
 You can create a [procedure](Procedures "wikilink") that opens a

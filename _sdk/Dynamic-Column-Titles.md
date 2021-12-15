@@ -1,3 +1,8 @@
+---
+title: Changing Column Titles Dynamically
+layout: sdk_nav
+---
+
 Column titles can be set dynamically, so that they are assigned when the
 user enters the form. This option is available for forms that are not
 [screen-painted](Designing_a_Screen-Painted_Form "wikilink") and which

@@ -1,3 +1,8 @@
+---
+title: Create BPM
+layout: sdk_nav
+---
+
 This section explains how to create a BPM status system for a new
 document. Assuming the new document is called **XXXX_MYDOC**, the
 following explains how to:

@@ -1,3 +1,8 @@
+---
+title: Using Custom Form Columns in the Business Rules Generator
+layout: sdk_nav
+---
+
 The Business Rules Generator enables users to set up error, warning,
 e-mail or text messages (SMS) that are triggered automatically when
 certain conditions are met. When the action selected is *Send e-mail* or

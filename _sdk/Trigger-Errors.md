@@ -1,3 +1,8 @@
+---
+title: Trigger Errors
+layout: sdk_nav
+---
+
 [Form preparation](Form_Preparation "wikilink") will fail if any major
 trigger errors are encountered. The main trigger errors are:
 

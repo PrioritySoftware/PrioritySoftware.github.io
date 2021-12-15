@@ -1,3 +1,8 @@
+---
+title: Defining Word Templates for Specific Records
+layout: sdk_nav
+---
+
 Suppose you have defined several Word templates in a given
 [form](Forms "wikilink"), and you want to use a particular one when
 sending specific form records to Word. This can be achieved by adding a

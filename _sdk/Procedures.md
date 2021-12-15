@@ -1,3 +1,8 @@
+---
+title: Procedures
+layout: sdk_nav
+---
+
 ## Introduction
 
 Procedures are a set of executable steps carried out in a predefined

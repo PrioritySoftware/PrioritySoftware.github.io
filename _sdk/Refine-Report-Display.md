@@ -1,3 +1,8 @@
+---
+title:  Refining Report Data Display
+layout: sdk_nav
+---
+
 ## Spacing Between Report Rows {#spacing_between_report_rows}
 
 In a [report](Reports "wikilink") with fixed positions, you can use a

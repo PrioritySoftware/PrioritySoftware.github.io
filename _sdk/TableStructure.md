@@ -1,3 +1,8 @@
+---
+title: View Table Structure
+layout: sdk_nav
+---
+
 ## The SQL Development Program {#the_sql_development_program}
 
 The *SQL Development* (**WINDBI**) program (*System Management* →

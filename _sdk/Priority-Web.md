@@ -1,3 +1,8 @@
+---
+title: Programming for Priority Web
+layout: sdk_nav
+---
+
 Advanced programming for the ***Priority***web interface is basically
 the same as programming for the Windows interface. However, when working
 with the web interface you must keep in mind the different method used

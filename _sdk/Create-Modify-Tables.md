@@ -1,3 +1,8 @@
+---
+title: Creating and Modifying Tables
+layout: sdk_nav
+---
+
 ## Introduction
 
 The following options are available from the *Table Generator* menu

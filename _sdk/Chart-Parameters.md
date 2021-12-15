@@ -1,3 +1,9 @@
+---
+title: Parameters for Charts
+layout: sdk_nav
+---
+
+
 ## Introduction
 
 The following explains in detail the various parameters that can be used

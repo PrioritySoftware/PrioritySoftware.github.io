@@ -1,3 +1,8 @@
+---
+title: Encrypting Data
+layout: sdk_nav
+---
+
 ------------------------------------------------------------------------
 
 **Note:** To use the encryption feature, make sure to update your BIN.95

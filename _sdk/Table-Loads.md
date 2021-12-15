@@ -1,3 +1,8 @@
+---
+title: Table Loads
+layout: sdk_nav
+---
+
 ## Introduction
 
 You can import data from text files into an interim table in

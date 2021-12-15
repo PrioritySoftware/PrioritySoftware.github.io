@@ -1,3 +1,8 @@
+---
+title: Report Display
+layout: sdk_nav
+---
+
 ## Report Column Attributes {#report_column_attributes}
 
 Report columns inherit the name, title, type, width and decimal

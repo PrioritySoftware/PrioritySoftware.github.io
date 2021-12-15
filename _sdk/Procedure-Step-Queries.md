@@ -1,3 +1,8 @@
+---
+title: Procedure Step Queries
+layout: sdk_nav
+---
+
 ## Introduction
 
 To record SQL statements, use the *Step Query* form, a sub-level of the

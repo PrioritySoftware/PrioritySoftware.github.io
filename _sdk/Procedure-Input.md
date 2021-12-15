@@ -1,3 +1,8 @@
+---
+title: Procedure Input
+layout: sdk_nav
+---
+
 ## Introduction
 
 When the values of [parameters](Procedure_Parameters "wikilink") are

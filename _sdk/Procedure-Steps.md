@@ -1,3 +1,8 @@
+---
+title: Procedure Steps
+layout: sdk_nav
+---
+
 ## Introduction
 
 To define the entities/commands in a [procedure](Procedures "wikilink"),

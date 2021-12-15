@@ -1,6 +1,9 @@
-```{=mediawiki}
-{{DISPLAYTITLE:Creating and Modifying User Report Generators}}
-```
+---
+title: Creating and Modifying User Report Generators
+layout: sdk_nav
+---
+
+
 ## Introduction
 
 The purpose of a user report generator is to enable users to build their

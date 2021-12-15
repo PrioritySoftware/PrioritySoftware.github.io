@@ -1,3 +1,8 @@
+---
+title: Additions and Revisions to Standard SQL Commands
+layout: sdk_nav
+---
+
 ## Additions and Revisions to Standard SQL Commands {#additions_and_revisions_to_standard_sql_commands}
 
 ***Priority***offers some additional features to several standard SQL

@@ -1,3 +1,8 @@
+---
+title: Procedure Flow Control
+layout: sdk_nav
+---
+
 ## Introduction
 
 The CONTINUE, GOTO and END commands (usually together with some type of

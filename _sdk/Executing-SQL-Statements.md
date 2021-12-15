@@ -1,3 +1,8 @@
+---
+title: Executing SQL
+layout: sdk_nav
+---
+
 ## The SQL Interpreter {#the_sql_interpreter}
 
 The *SQL Development* (**WINDBI**) program (*System Management* →

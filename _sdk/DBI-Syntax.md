@@ -1,3 +1,8 @@
+---
+title: DBI Syntax
+layout: sdk_nav
+---
+
 ## Introduction
 
 The *Database Interpreter* (**DBI**) program comprises a database

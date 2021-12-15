@@ -1,3 +1,8 @@
+---
+title: Error and Warning Messages
+layout: sdk_nav
+---
+
 ## Introduction
 
 Triggers which perform verification checks should include error message

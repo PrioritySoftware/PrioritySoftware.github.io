@@ -1,6 +1,8 @@
-```{=mediawiki}
-{{DISPLAYTITLE:Built-in ODBC Functions for SQL Database}}
-```
+---
+title: ODBC for SQL Server
+layout: sdk_nav
+---
+
 ## Introduction
 
 Several ODBC functions have been written for ***Priority*** when using

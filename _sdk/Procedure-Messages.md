@@ -1,3 +1,8 @@
+---
+title: Procedure Messages
+layout: sdk_nav
+---
+
 ## PRINT, PRINTCONT and PRINTERR {#print_printcont_and_printerr}
 
 The PRINT, PRINTCONT, and PRINTERR commands are very similar. However,

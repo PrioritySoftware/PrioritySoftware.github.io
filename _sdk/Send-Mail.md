@@ -1,3 +1,8 @@
+---
+title: Sending an Email from a Program
+layout: sdk_nav
+---
+
 ## Introduction
 
 Mail messages are similar to error and warning messages, except that

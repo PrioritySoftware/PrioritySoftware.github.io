@@ -1,6 +1,8 @@
-```{=mediawiki}
-{{DISPLAYTITLE:Built-in ODBC Functions for Oracle Database}}
-```
+---
+title: ODBC for Oracle
+layout: sdk_nav
+---
+
 ## Introduction
 
 Several ODBC functions have been written for ***Priority*** when using

@@ -1,3 +1,9 @@
+---
+title: Insert Initial BPM Status
+layout: sdk_nav
+---
+
+
 The final step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to write a query that
 will insert the initial status into the **XXXX_MYDOCSTATS** table:

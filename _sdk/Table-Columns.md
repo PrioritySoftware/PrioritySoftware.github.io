@@ -1,3 +1,8 @@
+---
+title: Table Columns
+layout: sdk_nav
+---
+
 ## Column Names and Titles {#column_names_and_titles}
 
 The column name is unique to its table, and is used in SQL statements.

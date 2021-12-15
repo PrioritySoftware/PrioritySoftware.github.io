@@ -23,18 +23,24 @@
   {% include header.html %}
 
   <!-- NAVIGATION -->
-    <nav>
+  <div>
+    <nav id="sdk-navigation" >
+      <ul>
         {% if site.data.sdktopics.chapters[0] %}
           {% for chapter in site.data.sdktopics.chapters %}
-            <h3><a href="{{ chapter.url }}">{{chapter.title }}</a></h3>
+            <li>
+              <strong>
+                <a href="{{ chapter.url }}">{{chapter.title }}</a>
+              </strong>  
+            </li>  
               {% if chapter.topics[0] %}
                 <ul>
                   {% for topic in chapter.topics %}
-                      <li><a href="{{ topic.url }}">{{ topic.page }}</a>
+                      <li class="nav-topic"><a  href="{{ topic.url }}">{{ topic.page }}</a>
                         {% if topic.subtopics[0] %}
                           <ul>
                           {% for subtopic in topic.subtopics %}
-                              <li><a href="{{ subtopic.url }}">{{ subtopic.page }}</a></li>
+                              <li class="nav-subtopic"><a href="{{ subtopic.url }}">{{ subtopic.page }}</a></li>
                           {% endfor %}
                           </ul>
                         {% endif %}
@@ -46,11 +52,12 @@
         {% endif %}
     
     </nav>
-    
+  </div>  
   
   <!-- MAIN CONTENT -->
   <main id="main_content_wrap" class="outer">
     <!-- Content -->
+    <h1>{{ page.title }}</h1>
     <section  class="markdown-body">
           {{ content }}
     </section>

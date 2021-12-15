@@ -1,3 +1,8 @@
+---
+title: Creating your Own Triggers
+layout: sdk_nav
+---
+
 ## Introduction
 
 Triggers are specified in the *Form Column Triggers* form (a sub-level

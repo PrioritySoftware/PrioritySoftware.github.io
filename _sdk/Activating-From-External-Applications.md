@@ -1,3 +1,8 @@
+---
+title: Activating Priority Entities from an External Application
+layout: sdk_nav
+---
+
 To activate a ***Priority***entity from a hyperlink that is embedded in
 an HTML file, the hyperlink should point to the following location
 (parameters are explained below):

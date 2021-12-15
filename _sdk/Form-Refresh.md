@@ -1,3 +1,8 @@
+---
+title:  Form Refresh
+layout: sdk_nav
+---
+
 Generally, the data retrieved in any given form are relatively static.
 That is, changes are usually made by one user at a time. Sometimes,
 however, the data displayed in a form are highly dynamic --- updated

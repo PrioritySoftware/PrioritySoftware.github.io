@@ -1,3 +1,8 @@
+---
+title: The Letter Generator
+layout: sdk_nav
+---
+
 ## Introduction
 
 The *Letter Generator* allows users to design letters that can be sent

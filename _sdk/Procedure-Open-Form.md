@@ -1,3 +1,8 @@
+---
+title: Open Form Record from within a Procedure
+layout: sdk_nav
+---
+
 You can use SQL commands to open a given form and retrieve a given
 record. This is useful, for instance, when you want to create a new
 Direct Activation from the *Sales Orders* form that will open a customer

@@ -1,3 +1,8 @@
+---
+title: Additional Input Options (Priority Lite/Dashboards)
+layout: sdk_nav
+---
+
 ## Procedures That Work Like Forms (Input Screens) {#procedures_that_work_like_forms_input_screens}
 
 In addition to procedures that display reports, you can create

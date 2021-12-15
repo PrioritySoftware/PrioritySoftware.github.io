@@ -1,3 +1,8 @@
+---
+title: Organizing Report Data
+layout: sdk_nav
+---
+
 ## Introduction
 
 ***Priority***enables you to organize the data displayed in

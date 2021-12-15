@@ -1,3 +1,8 @@
+---
+title: Running a Procedure/Report from an SQLI Step or Form Trigger
+layout: sdk_nav
+---
+
 You can execute a
 [procedure](Running_a_Procedure#Running_a_Sub-Procedure "wikilink") from
 an SQLI step of another procedure by executing any of the following

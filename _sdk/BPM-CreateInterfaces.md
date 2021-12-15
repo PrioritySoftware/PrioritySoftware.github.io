@@ -1,3 +1,9 @@
+---
+title: Add BPM Interfaces
+layout: sdk_nav
+---
+
+
 The fifth step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to create the necessary
 interfaces.

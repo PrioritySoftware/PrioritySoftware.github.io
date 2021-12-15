@@ -1,3 +1,8 @@
+---
+title: Flow Control
+layout: sdk_nav
+---
+
 ## Flow Control Commands {#flow_control_commands}
 
 Several ***Priority***commands may be used in SQL statements to affect

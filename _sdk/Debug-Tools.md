@@ -1,3 +1,8 @@
+---
+title: Debug Tools
+layout: sdk_nav
+---
+
 ## Introduction
 
 ***Priority*** gives you the option of executing entities (forms,

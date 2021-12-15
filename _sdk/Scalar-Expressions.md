@@ -1,3 +1,8 @@
+---
+title: Non-standard SQL Expressions
+layout: sdk_nav
+---
+
 ## Introduction
 
 In addition to standard SQL scalar expressions, ***Priority***also

@@ -1,3 +1,8 @@
+---
+title: Dynamic SQL
+layout: sdk_nav
+---
+
 ## Executing SQL Queries Dynamically {#executing_sql_queries_dynamically}
 
 SQL queries can be created and executed dynamically in forms or

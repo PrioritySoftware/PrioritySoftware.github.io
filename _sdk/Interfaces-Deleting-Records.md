@@ -1,3 +1,8 @@
+---
+title: Deleting Records via an Interface
+layout: sdk_nav
+---
+
 The [form load](Form_Loads "wikilink") can also be used to delete
 records from a form. In fact, the very same interface definition can be
 used both to insert/update form records and to delete them, the sole

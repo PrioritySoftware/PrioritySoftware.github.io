@@ -1,3 +1,8 @@
+---
+title: Creating Text Forms
+layout: sdk_nav
+---
+
 ## Introduction
 
 A text form is a one-column form of **CHAR** type which allows the user

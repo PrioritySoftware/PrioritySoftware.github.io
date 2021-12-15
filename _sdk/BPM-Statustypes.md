@@ -1,3 +1,9 @@
+---
+title: Update the STATUSTYPES Table
+layout: sdk_nav
+---
+
+
 The fourth step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to update the
 **STATUSTYPES** table.

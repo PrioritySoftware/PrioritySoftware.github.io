@@ -1,3 +1,8 @@
+---
+title: Table Dictionaries and Reports
+layout: sdk_nav
+---
+
 ## Dictionaries and Reports {#dictionaries_and_reports}
 
 In addition to enabling the construction and modification of tables, the

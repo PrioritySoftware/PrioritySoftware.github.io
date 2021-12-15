@@ -1,3 +1,8 @@
+---
+title: The STACKERR Table
+layout: sdk_nav
+---
+
 When running the interface program using [the \'-m\'
 option](Executing_the_Form_Load#Form_Load_Parameters "wikilink"), each
 error message is broken up into several lines. Thus, for example,

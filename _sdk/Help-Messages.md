@@ -1,3 +1,8 @@
+---
+title: Help Messages
+layout: sdk_nav
+---
+
 ## Introduction
 
 ### Forms

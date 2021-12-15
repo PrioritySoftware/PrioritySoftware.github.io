@@ -1,3 +1,8 @@
+---
+title: Dashboard Procedures
+layout: sdk_nav
+---
+
 ## Introduction
 
 The [procedures](Procedures "wikilink") used to display

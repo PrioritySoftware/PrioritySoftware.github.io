@@ -1,3 +1,8 @@
+---
+title: Running the Procedure
+layout: sdk_nav
+---
+
 ## Using a Program to Run the Procedure {#using_a_program_to_run_the_procedure}
 
 You can use the *Run Procedure*program (accessed from the *Procedures*

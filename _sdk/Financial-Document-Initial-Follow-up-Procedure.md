@@ -1,3 +1,8 @@
+---
+title: Financial Documents - Initial and Follow-up Procedures
+layout: sdk_nav
+---
+
 In the IVTYPES (Financial Documents) form you can set initial procedures
 and follow-up procedures to help ensure that financial documents meet
 your requirements and that additional actions are taken once a document

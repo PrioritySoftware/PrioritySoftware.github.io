@@ -1,3 +1,8 @@
+---
+title: Default Designs for Forms
+layout: sdk_nav
+---
+
 # What is a Default Design for a Form? {#what_is_a_default_design_for_a_form}
 
 Most of the frequently used upper-level forms are pre-designed. That is,

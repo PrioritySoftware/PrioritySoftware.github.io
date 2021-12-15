@@ -1,3 +1,8 @@
+---
+title: Reports
+layout: sdk_nav
+---
+
 ## Introduction
 
 Reports are constructed and modified in the *Report Generator* form and

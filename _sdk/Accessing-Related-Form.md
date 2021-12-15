@@ -1,3 +1,9 @@
+---
+title: Accessing Related Forms
+layout: sdk_nav
+---
+
+
 ## Introduction
 
 When an imported column appears in a given form, the user can move from

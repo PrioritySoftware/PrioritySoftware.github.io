@@ -1,3 +1,8 @@
+---
+title: Designing HTML Reports
+layout: sdk_nav
+---
+
 ## Introduction
 
 Any ***Priority***report can be displayed on the Internet or

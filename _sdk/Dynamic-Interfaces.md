@@ -1,3 +1,8 @@
+---
+title: Dynamic Interfaces
+layout: sdk_nav
+---
+
 Starting with version 21.0, you can create dynamic interfaces from
 within the code itself, without having to predefine them in the
 interface generator. These interfaces use the file structure in XML or

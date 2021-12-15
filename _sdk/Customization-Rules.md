@@ -1,3 +1,9 @@
+---
+title: Customization Rules
+layout: sdk_nav
+---
+
+
 ## Forms
 
 -   ***Never*** use a standard base table to create your own form.

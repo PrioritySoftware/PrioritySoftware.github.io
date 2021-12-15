@@ -1,3 +1,8 @@
+---
+title: Installing your Customizations
+layout: sdk_nav
+---
+
 ## Working with Version Revisions {#working_with_version_revisions}
 
 In order to properly handle your customizations, you should work with

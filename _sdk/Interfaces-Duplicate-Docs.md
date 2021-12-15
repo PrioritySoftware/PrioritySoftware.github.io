@@ -1,3 +1,8 @@
+---
+title: Duplicating Documents with an Interface
+layout: sdk_nav
+---
+
 Suppose you want to copy an entire sales order in order to create the
 same one for another customer. You can use the [form
 interface](Form_Loads "wikilink") to do this. In the following example,

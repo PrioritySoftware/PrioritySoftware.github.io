@@ -1,3 +1,8 @@
+---
+title: LINK and UNLINK
+layout: sdk_nav
+---
+
 ## The Commands {#the_commands}
 
 The LINK mechanism creates a temporary copy of a given database table.

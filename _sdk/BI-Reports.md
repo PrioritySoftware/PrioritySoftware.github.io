@@ -1,6 +1,8 @@
-```{=mediawiki}
-{{DISPLAYTITLE:Creating and Modifying BI Reports}}
-```
+---
+title: Creating and Modifying BI Reports
+layout: sdk_nav
+---
+
 ## Introduction
 
 To create a new BI report or modify an existing one, you have to copy

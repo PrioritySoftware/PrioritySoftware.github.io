@@ -1,3 +1,9 @@
+---
+title: Create BPM Statuses Form
+layout: sdk_nav
+---
+
+
 The second step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to create the statuses
 form.

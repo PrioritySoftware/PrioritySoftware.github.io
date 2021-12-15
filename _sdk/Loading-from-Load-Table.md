@@ -1,3 +1,8 @@
+---
+title: Loading from/to a Load Table
+layout: sdk_nav
+---
+
 ## Introduction
 
 When using a load table to import or export data in a [form

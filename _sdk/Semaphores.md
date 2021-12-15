@@ -1,3 +1,8 @@
+---
+title: Using Semaphores
+layout: sdk_nav
+---
+
 If you want to prevent two users from running a given
 [procedure](Procedures "wikilink") or section of code concurrently, you
 can use a semaphore -- a variable that can have one of two values (e.g.,

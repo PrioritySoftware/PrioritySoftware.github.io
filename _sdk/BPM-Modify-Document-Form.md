@@ -1,3 +1,8 @@
+---
+title: Modify the New Document
+layout: sdk_nav
+---
+
 The third step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to modify the new
 document.

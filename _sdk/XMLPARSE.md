@@ -1,3 +1,8 @@
+---
+title: Parsing XML and JSON
+layout: sdk_nav
+---
+
 # Parsing XML {#parsing_xml}
 
 In addition to reading data from an XML/JSON file via [a form

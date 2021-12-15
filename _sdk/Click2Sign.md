@@ -1,3 +1,8 @@
+---
+title: Click2Sign
+layout: sdk_nav
+---
+
 Version 20.1 introduced the Click2Sign feature, which allows a contact
 to add their signature digitally to a document.
 

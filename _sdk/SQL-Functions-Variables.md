@@ -1,3 +1,8 @@
+---
+title: SQL Functions and Variables
+layout: sdk_nav
+---
+
 ## Introduction
 
 ***Priority***offers a set of system functions that can be used to

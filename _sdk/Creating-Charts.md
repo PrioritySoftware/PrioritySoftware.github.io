@@ -1,6 +1,9 @@
-```{=mediawiki}
-{{DISPLAYTITLE:Creating Charts}}
-```
+---
+title: Creating Charts
+layout: sdk_nav
+---
+
+
 ## Introduction
 
 This section explains how to create and define charts, which provide a

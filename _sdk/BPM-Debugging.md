@@ -1,3 +1,9 @@
+---
+title: Debug the BPM
+layout: sdk_nav
+---
+
+
 The seventh step in [creating a BPM flow
 chart](Creating_BPM_Flow_Charts "wikilink") is to run it in debug mode
 in the Windows interface. To do so, use the following command:

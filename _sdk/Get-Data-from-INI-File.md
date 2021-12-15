@@ -1,3 +1,8 @@
+---
+title: Get Data from the Client INI File
+layout: sdk_nav
+---
+
 When the user is working in the Windows interface of **\'\'Priority***,
 you can retrieve information from the user\'s*.ini\'\' file, by means of
 the **TABINI** program (which can be run from a [form

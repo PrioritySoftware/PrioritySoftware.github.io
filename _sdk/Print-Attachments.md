@@ -1,3 +1,8 @@
+---
+title: Print Attachments from a Procedure
+layout: sdk_nav
+---
+
 To print files (e.g., attachments) from within a
 [procedure](Procedures "wikilink"), include the **PREXFILE** program in
 an SQLI step. The **PREXFILE** program receives several parameters:

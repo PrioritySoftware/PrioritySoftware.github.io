@@ -1,3 +1,8 @@
+---
+title: Interacting with External Programs
+layout: sdk_nav
+---
+
 ## List of Programs {#list_of_programs}
 
 The following is a list of programs that may be run within

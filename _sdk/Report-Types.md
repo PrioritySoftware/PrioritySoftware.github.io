@@ -1,3 +1,9 @@
+---
+title: Types of Reports
+layout: sdk_nav
+---
+
+
 ## Tabular Reports {#tabular_reports}
 
 [Reports](Reports "wikilink") can also be displayed in tabular form,
