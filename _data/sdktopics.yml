@@ -108,8 +108,8 @@ chapters:
     topics:
       - page: Special Document Features
         url: Special-Document-Features
-      - page: Outputting the Document
-        url: Document-Printout
+      - page: Outputting the Document - the WINHTML Program
+        url: WINHTML
       - page: The Letter Generator
         url: Letter-Generator
   - title: Interfaces 
