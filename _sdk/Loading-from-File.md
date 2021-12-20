@@ -6,14 +6,14 @@ layout: sdk_nav
 ## Introduction
 
 When using an external file to import or export data in a [form
-load](Form_Loads "wikilink"), make sure you know the structure of the
+load](Form_Loads ), make sure you know the structure of the
 file you will be using before you begin defining the interface.
 
 **Tip:**If you want to create a new form load based on an existing one,
 retrieve the desired form load and run the *File Definitions for Form
 Load* report by Direct Activation from the *Form Load Designer* form.
 
-## Defining the File {#defining_the_file}
+## Defining the File 
 
 Designate the name of the file, its record size and its file type in the
 appropriate columns of the *Form Load Designer* form.
@@ -52,7 +52,7 @@ interfaces will be saved in ASCII format, unless otherwise specified.
 
 ------------------------------------------------------------------------
 
-## Forms in the Load {#forms_in_the_load}
+## Forms in the Load 
 
 Use the *Forms to be Loaded* sub-level form to specify which forms
 participate in the load. These usually consist of a root form (e.g.,
@@ -81,7 +81,7 @@ course, when the root record (e.g., an order) already exists. If the
 load is used only for inserting new root records, leave the column blank
 to make the load faster.
 
-## Link Form Columns to Fields in File {#link_form_columns_to_fields_in_file}
+## Link Form Columns to Fields in File 
 
 Use the next sub-level, *Position of Form Columns in File*, to match the
 data in the file to specific form columns. For text files, also indicate
@@ -102,7 +102,7 @@ the *Form Load Designer*). Specify the column number (in a tab-separated
 file) or the position of the first and last character that defines this
 field (in a fixed-width file).
 
-## Default Values {#default_values}
+## Default Values 
 
 Use the next sub-level, *Default Value for Column,* to assign a default
 value to be loaded into the form column. If the specified position in
@@ -111,7 +111,7 @@ loaded into the form table. When the form load interface is used to
 export data, if the form column is empty, the default value will be
 exported.
 
-## Additional Definitions for XML/JSON Files {#additional_definitions_for_xmljson_files}
+## Additional Definitions for XML/JSON Files 
 
 If you are loading to or from an XML/JSON file, you must define the
 tags. Specifically, you need to take the following steps:
@@ -164,7 +164,7 @@ tags. Specifically, you need to take the following steps:
     Tags*, to link each form column to the appropriate tag. If the tag
     is a date, you can also define the *Date Format*, indicating how the
     date value will be displayed. You can use any of the available [SQL
-    date formats](ATOD_and_DTOA "wikilink"), such as MMDDYY or MM/DD/YY.
+    date formats](ATOD-and-DTOA ), such as MMDDYY or MM/DD/YY.
 
 ------------------------------------------------------------------------
 
@@ -177,7 +177,7 @@ to run. The system indicates where the output file has been saved.
 
 ------------------------------------------------------------------------
 
-## Additional Definitions for Exporting Data {#additional_definitions_for_exporting_data}
+## Additional Definitions for Exporting Data 
 
 When you are exporting data from ***Priority***forms to a file, you can
 use the *Outgoing Interface Definitions* form (a sub-level of *Position
@@ -190,11 +190,11 @@ of Form Columns in File*) to define the following:
     MMDDYY or MM/DD/YY.
 -   *Padding w/Zeroes* -- useful for number columns.
 
-## More on Form Loads {#more_on_form_loads}
+## More on Form Loads 
 
 -   [Loading from/to a Load
-    Table](Loading_from/to_a_Load_Table "wikilink")
--   [Executing the Form Load](Executing_the_Form_Load "wikilink")
+    Table](Loading-from/to-a-Load-Table )
+-   [Executing the Form Load](Executing-the-Form-Load )
 -   [Deleting Records from a
-    Form](Deleting_Records_from_a_Form "wikilink")
--   [Form Loads](Form_Loads "wikilink")
+    Form](Deleting-Records-from-a-Form )
+-   [Form Loads](Form-Loads )

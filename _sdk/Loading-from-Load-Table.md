@@ -6,7 +6,7 @@ layout: sdk_nav
 ## Introduction
 
 When using a load table to import or export data in a [form
-load](Form_Loads "wikilink"), it is recommended that the following steps
+load](Form-Loads ), it is recommended that the following steps
 be taken:
 
 1.  Determine which form columns need to be loaded and into which forms.
@@ -29,7 +29,7 @@ be taken:
     table), you will have to redefine the interface.
 5.  Run the **INTERFACE** program.
 
-## The Load Table {#the_load_table}
+## The Load Table 
 
 Designate the name of the table in the *Load Table* column of the *Form
 Load Designer* form, indicating any *Record Size*.
@@ -79,7 +79,7 @@ key.
 > the value in the **KEY1** column will equal the value in the **CUST**
 > column.
 
-## Forms in the Load {#forms_in_the_load}
+## Forms in the Load 
 
 Use the *Forms to be Loaded* sub-level form to specify which forms
 participate in the load. These usually consist of a root form (e.g.,
@@ -110,7 +110,7 @@ to add the new records to existing ones.
 
 ------------------------------------------------------------------------
 
-## Link Form Columns to Table Columns {#link_form_columns_to_table_columns}
+## Link Form Columns to Table Columns 
 
 Use the next sub-level, *Link Form Cols to Load Tbl Cols*, to indicate
 which form columns are equivalent to which load table columns and to
@@ -143,7 +143,7 @@ values as a true value, flag the *Insert Null Values* column.
 > insert the default unit price of the item instead by activating the
 > form\'s trigger.
 
-## Adding Line Items to an Existing Document {#adding_line_items_to_an_existing_document}
+## Adding Line Items to an Existing Document 
 
 When an interface that adds line items to a document is executed, by
 default the new items are inserted first in the document (that is, they
@@ -163,7 +163,7 @@ directly after the first line item), do the following:
 3.  In the load table, insert the record of the new line to be added
     after the record that retrieves the first line.
 
-## Default Values {#default_values}
+## Default Values 
 
 Use the next sub-level, *Default Value for Column,* to assign a default
 value to be loaded into the form column. If the load table column is
@@ -171,10 +171,10 @@ empty, the value specified in this sub-level form will be loaded into
 the form table. When the form load interface is used to export data, if
 the form column is empty, the default value will be exported.
 
-## More on Form Loads {#more_on_form_loads}
+## More on Form Loads 
 
--   [Loading from/to a File](Loading_from/to_a_File "wikilink")
--   [Executing the Form Load](Executing_the_Form_Load "wikilink")
+-   [Loading from/to a File](Loading-from/to-a-File )
+-   [Executing the Form Load](Executing-the-Form-Load )
 -   [Deleting Records from a
-    Form](Deleting_Records_from_a_Form "wikilink")
--   [Form Loads](Form_Loads "wikilink")
+    Form](Deleting-Records-from-a-Form )
+-   [Form Loads](Form-Loads )

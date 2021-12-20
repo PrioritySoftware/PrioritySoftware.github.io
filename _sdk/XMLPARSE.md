@@ -3,10 +3,10 @@ title: Parsing XML and JSON
 layout: sdk_nav
 ---
 
-# Parsing XML {#parsing_xml}
+# Parsing XML 
 
 In addition to reading data from an XML/JSON file via [a form
-load](Interfaces "wikilink"), you can also use the XMLPARSE command.
+load](Interfaces ), you can also use the XMLPARSE command.
 When the file contains several instances per tab, include the *--all*
 parameter to parse the entire file. Omit it to limit results to the
 first instance of each tab.
@@ -35,7 +35,7 @@ results for the above two EXECUTE commands (without the *--all*
 parameter and with it) are as follows:\
 ![](XMLPARSE_results-173.png "XMLPARSE_results-173.png")
 
-# Parsing JSON {#parsing_json}
+# Parsing JSON 
 
 Parsing a JSON file is identical, with a small addition to the end of
 the EXECUTE commands.

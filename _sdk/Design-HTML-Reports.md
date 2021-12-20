@@ -23,9 +23,9 @@ That is, you select and place the report fields on the output page
 divide the form into table cells, and then place each report field in
 its respective cell. For a detailed explanation, see [Displaying HTML
 Text in
-Reports](Refining_Report_Data_Display#Displaying_HTML_Text_in_Reports "wikilink").
+Reports](Refining-Report-Data-Display#Displaying-HTML-Text-in-Reports ).
 
-## Input Columns and Links in the Report {#input_columns_and_links_in_the_report}
+## Input Columns and Links in the Report 
 
 There are several types of input for a report:
 
@@ -58,7 +58,7 @@ characters at a time, but will be able to record up to 32 characters in
 the column in question. Users can view any data that exceeds 20
 characters by scrolling within the input column.
 
-### Defining Choose Lists {#defining_choose_lists}
+### Defining Choose Lists 
 
 When an input column is a Choose list, you have to define the query for
 retrieving the values that will appear in that list. You can do so in
@@ -81,7 +81,7 @@ the other two fields.)
 fields in the same report, use a variable beginning with **\#** followed
 by the column number (e.g., :#75 for column 75).
 
-### Maintenance of Input and Links {#maintenance_of_input_and_links}
+### Maintenance of Input and Links 
 
 Any HTML page that the user accesses can include a number of reports.
 Each of these reports may have a number of input columns and links. When
@@ -135,7 +135,7 @@ To identify the table row:
     ***Important!*** This report column must be either a displayed
     column or a sort column.
 
-### Defining Links in the Report {#defining_links_in_the_report}
+### Defining Links in the Report 
 
 As explained above, a link in a report can be to a URL or to a procedure
 (the current one or a new one). To create a web link (URL):
@@ -178,7 +178,7 @@ To link to multiple procedures:
 > a customer receipt and a third procedure in the case of payment to a
 > vendor.
 
-## Handling Input From Report Columns in the Procedure {#handling_input_from_report_columns_in_the_procedure}
+## Handling Input From Report Columns in the Procedure 
 
 Three variables help to determine input from report columns:
 
@@ -222,15 +222,15 @@ To access the values input by the user:
 > LABEL 2;
 > ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
 -   [User Identification for Priority
-    Lite/Dashboards](User_Identification_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
 -   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional_Input_Options_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
 -   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining_a_Base_Page_for_HTML_Pages_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
 -   [Writing Dashboard
-    Procedures](Writing_Dashboard_Procedures "wikilink")
+    Procedures](Writing-Dashboard-Procedures )
 -   [Priority Lite and
-    Dashboards](Priority_Lite_and_Dashboards "wikilink")
+    Dashboards](Priority-Lite-and-Dashboards )

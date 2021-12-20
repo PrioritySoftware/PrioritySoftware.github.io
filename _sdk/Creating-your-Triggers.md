@@ -22,7 +22,7 @@ the line or the form.
     user-designed triggers have been created.
 -   You can track changes to custom triggers once they have been
     included in prepared version revisions. See [Tracking Changes to
-    Queries](Installing_Your_Customizations#Tracking_Changes_to_Queries "wikilink").
+    Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
 
 ------------------------------------------------------------------------
 
@@ -51,26 +51,26 @@ External Editor, giving the file path.
 
 ------------------------------------------------------------------------
 
-See also [Form Triggers](Form_Triggers "wikilink").
+See also [Form Triggers](Form-Triggers ).
 
-## Types of Triggers {#types_of_triggers}
+## Types of Triggers 
 
 The following types of triggers may be created:
 
   -------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------
-  [CHECK-FIELD](#CHECK-FIELD "wikilink")             Performs verification checks on a value specified for a form column.
-  [POST-FIELD](#POST-FIELD "wikilink")               Performs operations once form column check is successful.
-  [PRE-INSERT](#PRE-INSERT "wikilink")               Performs verification checks before a record is inserted into the database.
-  [POST-INSERT](#POST-INSERT "wikilink")             Performs operations once a record is successfully inserted.
-  [PRE-UPDATE](#PRE-UPDATE "wikilink")               Performs verification checks before a record is updated in the database.
-  [POST-UPDATE](#POST-UPDATE "wikilink")             Performs operations once a record is successfully updated.
-  [PRE-DELETE](#PRE-DELETE "wikilink")               Performs verification checks before a record is deleted from the database.
-  [POST-DELETE](#POST-DELETE "wikilink")             Performs operations once a record is successfully deleted.
-  [PRE-FORM](#PRE-FORM "wikilink")                   Performs operations before a form is opened.
-  [POST-FORM](#POST-FORM "wikilink")                 Performs operations when a form is exited, provided there were,insertions, updates or deletes in the form.
-  [CHOOSE-FIELD](#CHOOSE-FIELD "wikilink")           Creates a list of values from which the user can choose when filling in a,specific field (for short lists).
-  [SEARCH-FIELD](#SEARCH-FIELD "wikilink")           Creates a list through which the user can search for the needed value of a given field (for long lists).
-  [SEARCH-ALL-FIELD](#SEARCH-ALL-FIELD "wikilink")   Creates a list through which the user can search to find a value for a given field. Allows the user to search by multiple criteria simultaneously.
+  [CHECK-FIELD](#CHECK-FIELD )             Performs verification checks on a value specified for a form column.
+  [POST-FIELD](#POST-FIELD )               Performs operations once form column check is successful.
+  [PRE-INSERT](#PRE-INSERT )               Performs verification checks before a record is inserted into the database.
+  [POST-INSERT](#POST-INSERT )             Performs operations once a record is successfully inserted.
+  [PRE-UPDATE](#PRE-UPDATE )               Performs verification checks before a record is updated in the database.
+  [POST-UPDATE](#POST-UPDATE )             Performs operations once a record is successfully updated.
+  [PRE-DELETE](#PRE-DELETE )               Performs verification checks before a record is deleted from the database.
+  [POST-DELETE](#POST-DELETE )             Performs operations once a record is successfully deleted.
+  [PRE-FORM](#PRE-FORM )                   Performs operations before a form is opened.
+  [POST-FORM](#POST-FORM )                 Performs operations when a form is exited, provided there were,insertions, updates or deletes in the form.
+  [CHOOSE-FIELD](#CHOOSE-FIELD )           Creates a list of values from which the user can choose when filling in a,specific field (for short lists).
+  [SEARCH-FIELD](#SEARCH-FIELD )           Creates a list through which the user can search for the needed value of a given field (for long lists).
+  [SEARCH-ALL-FIELD](#SEARCH-ALL-FIELD )   Creates a list through which the user can search to find a value for a given field. Allows the user to search by multiple criteria simultaneously.
   -------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Except for PRE-FORM triggers, which are ***always***activated,
@@ -79,18 +79,18 @@ or change in the column, row or form. Furthermore, CHOOSE-FIELD and
 SEARCH-FIELD triggers are only activated when the user accesses a Choose
 list or Search list, respectively.
 
-## Order of Trigger Execution {#order_of_trigger_execution}
+## Order of Trigger Execution 
 
 Before demonstrating the usage of each of the user-designed triggers, a
 brief explanation of their sequence of execution is in order:
 
 -   CHECK-FIELD triggers precede POST-FIELD triggers.
--   [Built-in CHECK-FIELDs](Built-in_Triggers#CHECK-FIELD "wikilink")
+-   [Built-in CHECK-FIELDs](Built-in-Triggers#CHECK-FIELD )
     precede user-designed CHECK-FIELDs.
--   [Built-in POST-FIELDs](Built-in_Triggers#POST-FIELD "wikilink")
+-   [Built-in POST-FIELDs](Built-in-Triggers#POST-FIELD )
     precede user-designed POST-FIELDs.
 -   PRE- triggers precede their respective POST- triggers.
--   [Built-in triggers](Built-in_Triggers "wikilink") are executed after
+-   [Built-in triggers](Built-in-Triggers ) are executed after
     PRE- triggers, before POST- triggers.
 -   Standard and custom triggers are sorted alphabetically, so you
     should name your own triggers accordingly. For example, to run your
@@ -118,7 +118,7 @@ built-in and POST- trigger will not be activated.
 > trigger (which fills in the internal number and part description on
 > the basis of the designated part number) be activated.
 
-## Naming Customized Triggers {#naming_customized_triggers}
+## Naming Customized Triggers 
 
 Customized triggers should be given special names (which must be added
 to the *List of Triggers* form; this form can be accessed by pressing
@@ -155,13 +155,13 @@ names must follow a number of rules:
 -   SEARCH-FIELD triggers are the exception to the rule. You cannot
     create a customized SEARCH-FIELD, but rather must use the standard
     trigger. For details, see [Rules for Customizing
-    Forms](Rules_for_Customizing_Forms "wikilink").
+    Forms](Rules-for-Customizing-Forms ).
 
 ------------------------------------------------------------------------
 
-## Creating Column Triggers {#creating_column_triggers}
+## Creating Column Triggers 
 
-### CHECK-FIELD {#check_field}
+### CHECK-FIELD 
 
 CHECK-FIELD triggers perform verification checks on the value specified
 for a column. Note that the value must have been inserted or updated by
@@ -196,7 +196,7 @@ greater than 500.
 > WRNMSG 105 WHERE :$.@ < 0;
 > ```
 
-### POST-FIELD {#post_field}
+### POST-FIELD 
 
 POST-FIELD triggers cause operations to be performed once the value
 specified for the column has successfully passed the verification
@@ -215,7 +215,7 @@ be activated, but its CHECK-FIELD will not.
 
 ------------------------------------------------------------------------
 
-### CHOOSE-FIELD {#choose_field}
+### CHOOSE-FIELD 
 
 CHOOSE-FIELD triggers create a short list of values from which the user
 can choose. Each column in the CHOOSE-FIELD query is restricted to 64
@@ -236,7 +236,7 @@ characters.
 The above type of CHOOSE-FIELD is a regular SQL query where both
 arguments must be of **CHAR** type. In order to display a number, you
 must first convert it into a string using the [ITOA
-function](Non-standard_Scalar_Expressions#Strings "wikilink").
+function](Non-standard-Scalar-Expressions#Strings ).
 
 The first argument in the query is the description and the second is the
 value to be inserted in the column where the Choose list is activated.
@@ -321,13 +321,13 @@ one value from the Choose list at a time.
     number specified in the CHOOSEROWS system constant, a SEARCH-FIELD
     trigger (if defined) is activated instead.
 -   A CHOOSE-FIELD trigger can also be defined for an entire form (see
-    [CHOOSE-FIELD (for form)](#CHOOSE-FIELD_(for_form) "wikilink")).
+    [CHOOSE-FIELD (for form)](#CHOOSE-FIELD-(for-form) )).
 
 ------------------------------------------------------------------------
 
-## Creating Row Triggers {#creating_row_triggers}
+## Creating Row Triggers 
 
-### PRE-INSERT {#pre_insert}
+### PRE-INSERT 
 
 PRE-INSERT triggers perform operations on a new record before it is
 inserted in the database (generally verification checks that are not
@@ -342,7 +342,7 @@ before the line is exited.
 > WRNMSG 1 WHERE :$.ACCOUNT = 0;
 > ```
 
-### POST-INSERT {#post_insert}
+### POST-INSERT 
 
 POST-INSERT triggers cause the performance of certain operations once
 the record has been successfully inserted in the database.
@@ -350,7 +350,7 @@ the record has been successfully inserted in the database.
 > **Example:** The POST-INSERT trigger in **DOCUMENTS_Q** inserts a
 > record into the **SERVCALLS** table.
 
-### PRE-UPDATE {#pre_update}
+### PRE-UPDATE 
 
 PRE-UPDATE triggers perform verification checks before a record is
 updated in the database. Generally, they are similar to PRE-INSERT
@@ -363,7 +363,7 @@ triggers.
 > WRNMSG 1 WHERE :$.ACCOUNT = 0;
 > ```
 
-### POST-UPDATE {#post_update}
+### POST-UPDATE 
 
 POST-UPDATE triggers cause the performance of operations once the record
 has been successfully updated.
@@ -371,7 +371,7 @@ has been successfully updated.
 > **Example:** The POST-UPDATE trigger in the **DOCUMENTS_Q** form
 > updates those form columns that come from the **SERVCALLS** table.
 
-### PRE-DELETE {#pre_delete}
+### PRE-DELETE 
 
 PRE-DELETE triggers perform verification checks before a record is
 deleted from the database (in addition to the checks that are built into
@@ -384,7 +384,7 @@ the system).
 > WRNMSG 334 WHERE :$.BONUSFLAG IN ('Y','F');
 > ```
 
-### POST-DELETE {#post_delete}
+### POST-DELETE 
 
 POST-DELETE triggers cause the performance of operations once a record
 has been successfully deleted.
@@ -396,7 +396,7 @@ has been successfully deleted.
 > DELETE FROM ORDERITEMSA WHERE ORDI = :$.ORDI;
 > ```
 
-### CHOOSE-FIELD (for form) {#choose_field_for_form}
+### CHOOSE-FIELD (for form) 
 
 In addition to creating a CHOOSE-FIELD for a specific form column, you
 can also define a CHOOSE trigger at the form level. This ensures that,
@@ -411,7 +411,7 @@ CHOOSE-FIELD trigger for the form column in question.
 > **ORDSTATUS** table takes its CHOOSE-FIELD from the **ORDSTATUS**
 > form.
 
-### SEARCH-FIELD {#search_field}
+### SEARCH-FIELD 
 
 SEARCH-FIELD triggers create a long Search list which the user can use
 to search for a desired value (e.g., to select a customer out of a list
@@ -438,7 +438,7 @@ the trigger: /\* MULTI \*/.
 -   SEARCH-FIELD triggers are the exception to the rule, as you cannot
     create a customized trigger of this type. Instead, you must use
     standard SEARCH-FIELD triggers. For details, see [**Rules for
-    Customizing Forms**](#Rules_for_Customizing_Forms "wikilink").
+    Customizing Forms**](#Rules-for-Customizing-Forms ).
 -   SEARCH-FIELD triggers can only display table columns with a width of
     up to 59 characters.
 -   If the user selects more than one value in a Multiple Search and the
@@ -447,7 +447,7 @@ the trigger: /\* MULTI \*/.
 
 ------------------------------------------------------------------------
 
-### SEARCH-ALL-FIELD {#search_all_field}
+### SEARCH-ALL-FIELD 
 
 SEARCH-ALL-FIELD also creates a long search list. The critical
 difference between it and SEARCH-FIELD is that SEARCH-ALL-FIELD allows
@@ -506,9 +506,9 @@ constant.
 
 ------------------------------------------------------------------------
 
-## Creating Form Triggers {#creating_form_triggers}
+## Creating Form Triggers 
 
-### PRE-FORM {#pre_form}
+### PRE-FORM 
 
 PRE-FORM triggers perform operations before the form is opened. This
 applies to all root forms, as well as sub-level forms for which the
@@ -555,7 +555,7 @@ line \<syntaxhighlight lang=\"tsql\" enclose=\"pre>
 ```{=html}
 </syntaxhighlight>
 ```
-### POST-FORM {#post_form}
+### POST-FORM 
 
 POST-FORM triggers perform operations upon exiting the form (provided
 that the user has made at least one change in the database). This type
@@ -577,15 +577,15 @@ upper-level form on the basis of values specified in the sub-level form.
 > the *Work Orders* form upon exiting the *Issues to Kits* sub-level
 > form.
 
-## More on Triggers {#more_on_triggers}
+## More on Triggers 
 
--   [SQL Variables](SQL_Variables "wikilink")
--   [Built-in Triggers](Built-in_Triggers "wikilink")
--   [Error and Warning Messages](Error_and_Warning_Messages "wikilink")
--   [Sending a Mail Message](Sending_a_Mail_Message "wikilink")
+-   [SQL Variables](SQL-Variables )
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Including One Trigger in
-    Another](Including_One_Trigger_in_Another "wikilink")
+    Another](Including-One-Trigger-in-Another )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )

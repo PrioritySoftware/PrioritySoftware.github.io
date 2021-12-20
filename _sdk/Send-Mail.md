@@ -22,9 +22,9 @@ e-mail addresses.
 >     :   :FILE = \'C:\\tmp\\msg.doc\';
 >     :   MAILMSG 5 TO EMAIL :EMAIL DATA :FILE; `</code>`{=html}
 
-See also [Form Triggers](Form_Triggers "wikilink").
+See also [Form Triggers](Form-Triggers ).
 
-## Controlling the Appearance of Line Breaks within a Message {#controlling_the_appearance_of_line_breaks_within_a_message}
+## Controlling the Appearance of Line Breaks within a Message 
 
 ------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ of text in the message.
 > Customer: CRR Holding Company\
 > Date&Time: 18/10/08 14:28
 
-## Updating the History of Statuses Using MAILMSG {#updating_the_history_of_statuses_using_mailmsg}
+## Updating the History of Statuses Using MAILMSG 
 
 The MAILMSG command can also be used to update the *History of Statuses*
 (**DOCTODOLISTLOG**) form, by including the following syntax in the
@@ -131,7 +131,7 @@ from the *Sales Orders* (**ORDERS**) form.
 
 ------------------------------------------------------------------------
 
-## Sending a Link to a Document using MAILMSG {#sending_a_link_to_a_document_using_mailmsg}
+## Sending a Link to a Document using MAILMSG 
 
 You can also use the message parameters to include a link to a document
 in a message.
@@ -144,15 +144,15 @@ in a message.
 > MAILMSG 1 TO USER :USER; 
 > ```
 
-## More on Triggers {#more_on_triggers}
+## More on Triggers 
 
--   [SQL Variables](SQL_Variables "wikilink")
--   [Built-in Triggers](Built-in_Triggers "wikilink")
--   [Creating Your Own Triggers](Creating_Your_Own_Triggers "wikilink")
--   [Error and Warning Messages](Error_and_Warning_Messages "wikilink")
+-   [SQL Variables](SQL-Variables )
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Including One Trigger in
-    Another](Including_One_Trigger_in_Another "wikilink")
+    Another](Including-One-Trigger-in-Another )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )

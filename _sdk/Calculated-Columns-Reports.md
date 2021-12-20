@@ -11,7 +11,7 @@ are not stored in or retrieved from any database table. The value of a
 calculated column is determined on the basis of other columns in the
 report, including other calculated columns. To refer to other calculated
 columns in an expression, use their [column
-numbers](Report_Columns#Column_Numbers "wikilink").
+numbers](Report-Columns#Column-Numbers ).
 
 > **Example:** The *Days Late* column (#26) in the**AGEDEBTCUST2**report
 > indicates the number of days that have passed since payment was due by
@@ -25,7 +25,7 @@ numbers](Report_Columns#Column_Numbers "wikilink").
 > difference by 24 hours (to convert it into days); otherwise, display
 > 0.
 
-## Steps for Creating a Calculated Column {#steps_for_creating_a_calculated_column}
+## Steps for Creating a Calculated Column 
 
 To add a calculated column to a given report, take the following steps:
 
@@ -42,7 +42,7 @@ To add a calculated column to a given report, take the following steps:
 4.  Enter the sub-level form, *Report Column Extension*.
 5.  Write the expression that determines the value of the column in the
     *Expression/Condition* column, using [SQL
-    syntax](SQL_Syntax "wikilink"). If there is not enough room for the
+    syntax](SQL-Syntax ). If there is not enough room for the
     entire expression, continue it in the sub-level form,
     *Expression/Condition (cont.)*.
 6.  Designate the column type (e.g., **CHAR**, **INT**, **REAL**) in the
@@ -63,7 +63,7 @@ To add a calculated column to a given report, take the following steps:
 
 ------------------------------------------------------------------------
 
-## Displaying Alternative Date Formats {#displaying_alternative_date_formats}
+## Displaying Alternative Date Formats 
 
 You can also use a calculated column to display dates in various
 formats. The default is MM/DD/YY (e.g., 01/22/92) in an American date
@@ -80,11 +80,11 @@ is used as follows:\
 ------------------------------------------------------------------------
 
 **Note:** For a list of available DTOA patterns, see [ATOD and
-DTOA](ATOD_and_DTOA "wikilink").
+DTOA](ATOD-and-DTOA ).
 
 ------------------------------------------------------------------------
 
-## Condition for a Calculated Column {#condition_for_a_calculated_column}
+## Condition for a Calculated Column 
 
 Sometimes you may wish to include a calculated column that has a
 condition. In that case, you do not create a calculated column, as
@@ -101,7 +101,7 @@ DUMMY.DUMMY AND\".
 > That is, the report only displays a sum when either **DEBIT1** or
 > **CREDIT1** is greater or less than zero.
 
-## Conditions in a Group by Column {#conditions_in_a_group_by_column}
+## Conditions in a Group by Column 
 
 Suppose you want to create a report that displays the number of sales
 orders in a designated time period for each customer, but only for
@@ -133,7 +133,7 @@ AND (1 = 1)
 
 Of course, the first and last conditions are always true.
 
-## Using a Complex Function {#using_a_complex_function}
+## Using a Complex Function 
 
 Sometimes you will want to perform a complex operation on a calculated
 column (beyond a simple sum, average, minimum or maximum).
@@ -149,14 +149,14 @@ Complex functions are defined (like all calculated columns) in the
 *Report Column Extension*form. In addition, a *Col. Func.*of type
 *F*must be specified.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Report Columns](Report_Columns "wikilink")
--   [Organizing Report Data](Organizing_Report_Data "wikilink")
+-   [Report Columns](Report-Columns )
+-   [Organizing Report Data](Organizing-Report-Data )
 -   [Refining Report Data
-    Display](Refining_Report_Data_Display "wikilink")
--   [Types of Reports](Types_of_Reports "wikilink")
--   [Running a Report](Running_a_Report "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Reports](Reports "wikilink")
+    Display](Refining-Report-Data-Display )
+-   [Types of Reports](Types-of-Reports )
+-   [Running a Report](Running-a-Report )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Reports](Reports )

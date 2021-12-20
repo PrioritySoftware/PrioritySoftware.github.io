@@ -5,7 +5,7 @@ layout: sdk_nav
 
 ## Introduction
 
-The [procedures](Procedures "wikilink") used to display
+The [procedures](Procedures ) used to display
 ***Priority***Dashboards in***Priority***and on Outlook (***Priority on
 Outlook***) are very similar to other HTML procedures. Dashboard
 procedures, however, are assigned a different value in the
@@ -29,7 +29,7 @@ There are three types of Dashboard procedures:
     web interface). In the *Rep/Wizard/Dashboard* column of the
     *Procedure Generator*, assign them the value *p*.
 
-## Creating a New Multi-Part Dashboard {#creating_a_new_multi_part_dashboard}
+## Creating a New Multi-Part Dashboard 
 
 1.  Create a copy of an existing procedure (e.g.,
     **WWWDB_SERVICEMNGR**).
@@ -43,9 +43,9 @@ There are three types of Dashboard procedures:
     attach the desired internal procedures (i.e., procedures with the
     *Rep/Wizard/Dashboard* value *d*).\
     **Note:** See [Rules for
-    Customizing](Rules_for_Customizing#Procedures "wikilink").
+    Customizing](Rules-for-Customizing#Procedures ).
 
-## Adding a Dashboard Procedure to Outlook {#adding_a_dashboard_procedure_to_outlook}
+## Adding a Dashboard Procedure to Outlook 
 
 Once you have finished preparing the new Dashboard procedure, you can
 add it to Outlook from the **Mail** menu in **\'\'Priority***(**Mail →
@@ -53,7 +53,7 @@ Mail Options → Outlook → Priority on Outlook**).***Priority**\'\'
 Dashboards appear in Outlook under the heading **Priority Dashboards**
 (in the Shortcuts pane).
 
-## CRM Dashboards {#crm_dashboards}
+## CRM Dashboards 
 
 A CRM Dashboard is a special type of basic Dashboard procedure, which
 displays a report of live CRM data. This type of Dashboard procedure is
@@ -62,15 +62,15 @@ be assigned the value *CRM* in the *Application* column of the
 *Procedure Generator*. CRM Dashboards that are added to Outlook appear
 under the heading **Priority CRM**.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
 -   [User Identification for Priority
-    Lite/Dashboards](User_Identification_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
 -   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing_HTML_Reports_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
 -   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional_Input_Options_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
 -   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining_a_Base_Page_for_HTML_Pages_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
 -   [Priority Lite and
-    Dashboards](Priority_Lite_and_Dashboards "wikilink")
+    Dashboards](Priority-Lite-and-Dashboards )

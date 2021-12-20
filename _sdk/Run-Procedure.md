@@ -3,7 +3,7 @@ title: Running the Procedure
 layout: sdk_nav
 ---
 
-## Using a Program to Run the Procedure {#using_a_program_to_run_the_procedure}
+## Using a Program to Run the Procedure 
 
 You can use the *Run Procedure*program (accessed from the *Procedures*
 menu) or the *Run Report/Procedure* program (run by Direct Activation
@@ -11,7 +11,7 @@ from the *Procedure Generator* form) to execute a procedure. This method
 is particularly useful when testing a newly developed procedure for
 bugs.
 
-## Activation from a Menu {#activation_from_a_menu}
+## Activation from a Menu 
 
 In order for a procedure to be activated from a menu, it must be linked
 to that menu. To create that linkage, take the following steps:
@@ -32,9 +32,9 @@ serves a similar purpose.
 
 ------------------------------------------------------------------------
 
-## Direct Activation from a Form {#direct_activation_from_a_form}
+## Direct Activation from a Form 
 
-[Direct Activation](Direct_Activations "wikilink") of a procedure from
+[Direct Activation](Direct-Activations ) of a procedure from
 within a form can take place in either the foreground or the background.
 If it is in the background, the user will be able to continue work in
 the form while the procedure is being executed. Indeed, printouts of
@@ -70,7 +70,7 @@ Generator*form, serves a similar purpose.
 
 ------------------------------------------------------------------------
 
-## Running a Sub-Procedure {#running_a_sub_procedure}
+## Running a Sub-Procedure 
 
 A procedure can be included as part of another procedure. This is
 useful, for instance, when you wish to use the same set of steps within
@@ -80,15 +80,15 @@ steps several times within a single procedure.
 To include one procedure within another, use the *Procedure Link*form, a
 sub-level of the *Procedure Generator*.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Procedure Steps](Procedure_Steps "wikilink")
--   [Procedure Parameters](Procedure_Parameters "wikilink")
--   [User Input in Procedures](User_Input_in_Procedures "wikilink")
--   [Procedure Step Queries](Procedure_Step_Queries "wikilink")
--   [Procedure Flow Control](Procedure_Flow_Control "wikilink")
--   [Procedure Message Display](Procedure_Message_Display "wikilink")
--   [Processed Reports](Processed_Reports "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Procedures](Procedures "wikilink")
+-   [Procedure Steps](Procedure-Steps )
+-   [Procedure Parameters](Procedure-Parameters )
+-   [User Input in Procedures](User-Input-in-Procedures )
+-   [Procedure Step Queries](Procedure-Step-Queries )
+-   [Procedure Flow Control](Procedure-Flow-Control )
+-   [Procedure Message Display](Procedure-Message-Display )
+-   [Processed Reports](Processed-Reports )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Procedures](Procedures )

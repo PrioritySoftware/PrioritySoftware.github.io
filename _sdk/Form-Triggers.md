@@ -8,7 +8,7 @@ layout: sdk_nav
 A form trigger in ***Priority***is a set of SQL statements that affect
 record insertions, updates and deletions during form completion. Before
 creating triggers, it is important to fully understand the use of SQL
-syntax in***Priority*** (see [SQL Syntax](SQL_Syntax "wikilink")).
+syntax in***Priority*** (see [SQL Syntax](SQL-Syntax )).
 
 ***Priority***provides for several types of triggers in the construction
 of forms. It both includes built-in triggers of its own and enables you
@@ -30,35 +30,35 @@ It should be noted that the term *form trigger* is used in two senses:
 To distinguish between these two usages, the former (generic sense) will
 be called a “form trigger,” whereas the latter (specific sense) will be
 called a “Form trigger.” On form debugging, see [Debug
-Tools](Debug_Tools "wikilink").
+Tools](Debug-Tools ).
 
 ## More on Triggers
 
--   [SQL Variables](SQL_Variables "wikilink")
--   [Built-in Triggers](Built-in_Triggers "wikilink")
--   [Creating Your Own Triggers](Creating_Your_Own_Triggers "wikilink")
--   [Error and Warning Messages](Error_and_Warning_Messages "wikilink")
--   [Sending a Mail Message](Sending_a_Mail_Message "wikilink")
+-   [SQL Variables](SQL-Variables )
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Including One Trigger in
-    Another](Including_One_Trigger_in_Another "wikilink")
+    Another](Including-One-Trigger-in-Another )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )
 
 ## Further Reading
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form-Columns )
+-   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
+    Insertion](Conditions-of-Record-Display-and-Insertion )
+-   [Direct Activations](Direct-Activations )
+-   [Form Refresh](Form-Refresh )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
+-   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Preparation](Form-Preparation )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

@@ -5,24 +5,24 @@ layout: sdk_nav
 
 ## Introduction
 
-You can use a [procedure](Procedures "wikilink") to generate a document.
+You can use a [procedure](Procedures ) to generate a document.
 This kind of procedure collects data from several reports and displays
 it using an Internet browser. Each report creates a file, and the last
 step of the procedure combines all these files into one displayed file.
 The final document can be activated from a form via [Direct
-Activation](Direct_Activations "wikilink") (retrieving input from the
+Activation](Direct-Activations ) (retrieving input from the
 record it was activated from), or it can be run from a menu, in which
 case the user chooses the relevant records during parameter input. The
 reports in such a procedure must handle one record from the base table
 at a time, identified by the [autounique
-key](Keys#The_Autounique_Key "wikilink").
+key](Keys#The-Autounique-Key ).
 
 > **Example:** In the **WWWSHOWORDER** procedure, each report handles
 > one record from the **ORDERS** table at a time. Each report receives
 > an ORD parameter, which contains the value of the autounique key of
 > the relevant order.
 
-## Creating the Input for the Document {#creating_the_input_for_the_document}
+## Creating the Input for the Document 
 
 The INPUT parameter of the linked file for the procedure\'s main table
 must be named PAR.If the procedure is to be activated from the menu, you
@@ -32,7 +32,7 @@ will be linked. If the procedure is to be activated only from a form, it
 is not necessary to specify the PAR parameter as input, but you do have
 to indicate column and table name.
 
-## Declaring the Cursor {#declaring_the_cursor}
+## Declaring the Cursor 
 
 The HTMLCURSORcommand is used to create the cursor that goes over the
 records stored in the linked table. The only thing you should write in
@@ -54,7 +54,7 @@ writing the parameter values into a temporary table before the
 HTMLCURSOR step, and then reading these values from the table in a later
 step.
 
-### Going Over the Records {#going_over_the_records}
+### Going Over the Records 
 
 The next step in the procedure is an SQLI step in which you retrieve the
 records from the cursor. The system automatically opens the cursor that
@@ -64,7 +64,7 @@ cursor.
 The value of the first parameter in the cursor is saved in a variable
 called :HTMLVALUE. This is a system variable of **CHAR** type, and it
 must be converted to an integer using the [ATOI
-function](Non-standard_Scalar_Expressions#Strings "wikilink"). Using
+function](Non-standard-Scalar-Expressions#Strings ). Using
 :HTMLVALUE you can retrieve the relevant record (the one being printed)
 from the main table of the document in question.
 
@@ -80,7 +80,7 @@ from the main table of the document in question.
 >
 > The :\$.ORD variable will be passed to the reports.
 
-### Executing Reports that will Create the Document {#executing_reports_that_will_create_the_document}
+### Executing Reports that will Create the Document 
 
 All reports that are part of the document should receive at least two
 parameters. The first is the value of the autounique key of the record
@@ -90,10 +90,10 @@ in the *Value* column. This parameter will appear again in the final
 INPUT step of the procedure, in which all the text files created by the
 reports are combined into one document.
 
-## Displaying the Document {#displaying_the_document}
+## Displaying the Document 
 
 The last step in the document procedure should be the [INPUT
-command](Procedure_Steps#Basic_Commands "wikilink"). In the *Procedure
+command](Procedure-Steps#Basic-Commands ). In the *Procedure
 Parameters*sub-level form,you must list all the text file parameters
 that were sent to the reports in the procedure. The INPUT step combines
 all these files into a single HTML file.
@@ -115,7 +115,7 @@ Page for Step** action to generate the HTML framework that will be used
 by the document. Rerun this action whenever you adjust the document\'s
 design.
 
-## Defining Print Options {#defining_print_options}
+## Defining Print Options 
 
 You can offer the user a number of print formats to choose from, based
 on selected reports included in the procedure. First, name the print
@@ -123,7 +123,7 @@ format in the sub-level form, *Print Formats;* then, specify which
 reports will be displayed in this format using the *Reports Included in
 Print Format*form. You can also offer the user the option of printing
 attachments together with the main document. To do so, include the
-[HTMLEXTFILES command](Procedure_Steps#Basic_Commands "wikilink")
+[HTMLEXTFILES command](Procedure-Steps#Basic-Commands )
 towards the beginning of the procedure, recording a step query for it.
 This command has no parameters.
 
@@ -131,7 +131,7 @@ This command has no parameters.
 > **WWWSHOWORDER** procedure. See also the HTMLEXTFILES command in this
 > procedure.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Special Document Features](Special_Document_Features "wikilink")
--   [The Letter Generator](The_Letter_Generator "wikilink")
+-   [Special Document Features](Special-Document-Features )
+-   [The Letter Generator](The-Letter-Generator )

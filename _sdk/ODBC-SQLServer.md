@@ -10,7 +10,7 @@ an MS-SQL database. This page contains a comprehensive list of string
 functions, number functions and date functions, together with examples
 of their usage.
 
-## String Functions {#string_functions}
+## String Functions 
 
 The following functions are performed on strings:
 
@@ -98,7 +98,7 @@ and run the **HEBCONV** program.
 > /*Result: (new) 451 סעיף */
 > ```
 
-## Number Functions {#number_functions}
+## Number Functions 
 
 The following functions are performed on numbers:
 
@@ -119,11 +119,11 @@ The following functions are performed on numbers:
 
         :   `SELECT system.dbo.tabula_itoh(15) /* 'f' */`
 
-### Shifted Integers {#shifted_integers}
+### Shifted Integers 
 
 When working with shifted integers, there is often a need to convert
 them to real numbers. In ***Priority***, the [REALQUANT
-function](Non-standard_Scalar_Expressions#Numbers "wikilink") performs
+function](Non-standard-Scalar-Expressions#Numbers ) performs
 this conversion automatically.
 
 There is currently no ODBC-compliant equivalent to the REALQUANT
@@ -158,7 +158,7 @@ DECIMAL system constant (usually, 3).
 
 ------------------------------------------------------------------------
 
-## Date Functions {#date_functions}
+## Date Functions 
 
 In **\'\'Priority***, dates, times and days are stored in the database
 as integers, which correspond to the number of minutes elapsed since
@@ -315,16 +315,16 @@ The following functions are performed on dates:
     \'\<days>\'*) --- converts a date to a string. If you are not
     displaying the names of the days or months, the last two parameters
     should be empty strings. See
-    [Examples](#Converting_a_Date_to_a_String:_Examples "wikilink").
+    [Examples](#Converting-a-Date-to-a-String:-Examples ).
 
 ```{=html}
 <!-- -->
 ```
 -   **system.dbo.tabula_atod** (*string, pattern*) --- converts a string
     to a date. See
-    [Examples](#Converting_a_String_to_a_Date:_Examples "wikilink").
+    [Examples](#Converting-a-String-to-a-Date:-Examples ).
 
-### Date Pattern Components for ATOD and DTOA Expressions {#date_pattern_components_for_atod_and_dtoa_expressions}
+### Date Pattern Components for ATOD and DTOA Expressions 
 
 The following pattern components can be used when outputting a date as a
 string. Of course, more than one component can be used in the same
@@ -346,7 +346,7 @@ and spaces between pattern components as desired.
 -   **YYYY** --- all four digits of year (2006)
 -   **hh:mm** --- hours and minutes (12:05)
 
-### Converting a Date to a String: Examples {#converting_a_date_to_a_string_examples}
+### Converting a Date to a String: Examples 
 
 ``` tsql
 SELECT system.dbo.tabula_dtoa(demo.dbo.INVOICES.IVDATE, 'DD/MM/YY', '','') 
@@ -376,7 +376,7 @@ FROM demo.dbo.INVOICES
 
 ------------------------------------------------------------------------
 
-### Converting a String to a Date: Examples {#converting_a_string_to_a_date_examples}
+### Converting a String to a Date: Examples 
 
 ``` tsql
 SELECT system.dbo.tabula_atod('01/06/2005', 'DD/MM/YYYY');

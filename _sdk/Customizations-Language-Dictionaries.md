@@ -6,14 +6,14 @@ layout: sdk_nav
 ## Introduction
 
 When [installing
-customizations](Installing_Your_Customizations "wikilink"), if users at
+customizations](Installing-Your-Customizations ), if users at
 a customer site use a language other than English, you will need to
 install the revisions in more than one language. This requires, for
 instance, that any revision is translated to the desired language in the
 language dictionaries provided by ***Priority*** (*System Management →
 Dictionaries → Translation*).
 
-## Preparing Upgrades for Other Languages {#preparing_upgrades_for_other_languages}
+## Preparing Upgrades for Other Languages 
 
 1.  ***Before you even begin programming for this customer***, enter the
     *System Constants* form (*System Management → System Maintenance →
@@ -61,13 +61,13 @@ Dictionaries → Translation*).
 > EXECUTE INSTITLE -l', '3', '..\..\system\upgrades\34.sh','..\..\system\upgrades\34-inst.sh ';
 > ```
 
-## Modifying DBI Operations in the Revision {#modifying_dbi_operations_in_the_revision}
+## Modifying DBI Operations in the Revision 
 
 If you began programming for the customer without first updating the
 UPGTITLES constant, you will have to modify all DBI operations in the
 revision as follows:
 
-### Creating a New Table {#creating_a_new_table}
+### Creating a New Table 
 
 Instead of:
 
@@ -87,7 +87,7 @@ COL2(CHAR,32,'[Column: PRIV_NEWTABLE/COL2]')
 UNIQUE(COL1);
 ```
 
-### Creating a New Table Column {#creating_a_new_table_column}
+### Creating a New Table Column 
 
 Instead of:
 
@@ -103,7 +103,7 @@ Use the following:
 :(INT,13,'<nowiki>[Column: MYTABLE/MYNEWCOL]</nowiki>'); 
 ```
 
-### Changing a Table Title {#changing_a_table_title}
+### Changing a Table Title 
 
 Instead of:
 
@@ -117,7 +117,7 @@ Use the following:
 :FOR TABLE MYTABLE CHANGE TITLE TO '<nowiki>[Ktitle : MYTABLE]</nowiki>';
 ```
 
-### Changing a Table Column Title {#changing_a_table_column_title}
+### Changing a Table Column Title 
 
 Instead of:
 
@@ -135,4 +135,4 @@ Use the following:
 
 When you finish modifying all DBI steps for the revision in question,
 continue with steps 2 and 3 under [Preparing Upgrades for Other
-Languages](#Preparing_Upgrades_for_Other_Languages "wikilink").
+Languages](#Preparing-Upgrades-for-Other-Languages ).

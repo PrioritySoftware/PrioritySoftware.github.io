@@ -14,9 +14,9 @@ message:
     period --- e.g., :QUANT
 -   system variables.
 
-See also [Form Triggers](Form_Triggers "wikilink").
+See also [Form Triggers](Form-Triggers ).
 
-## Form Column Variables {#form_column_variables}
+## Form Column Variables 
 
 ***Priority*** defines three SQL variables for each form column:
 
@@ -35,7 +35,7 @@ in the form, then these variables will hold two different values --- the
 updated value and the previous one, respectively. Along the same lines,
 :ORDERITEMS.QUANT.TITLE refers to the title of this column. This is
 useful, for instance, as a parameter in [error or warning messages for
-triggers](Error_and_Warning_Messages "wikilink"). These form column
+triggers](Error-and-Warning-Messages ). These form column
 variables may be used in creating expressions and triggers for the form.
 
 ## Wildcards
@@ -80,7 +80,7 @@ names. This linkage can be expressed using the @ wildcard.
 The use of these wildcards makes it easier to read the trigger. They are
 also useful when employing an **#INCLUDE** command in a trigger (see
 [Including One Trigger in
-Another](Including_One_Trigger_in_Another "wikilink")).
+Another](Including-One-Trigger-in-Another )).
 
 ------------------------------------------------------------------------
 
@@ -89,7 +89,7 @@ of that trigger (e.g., POST-FORM).
 
 ------------------------------------------------------------------------
 
-## User-defined Variables {#user_defined_variables}
+## User-defined Variables 
 
 In addition to form-column variables, whose values are determined by the
 data in the form (or table) column, you may also define your own
@@ -117,14 +117,14 @@ When naming a variable, use the following rule of thumb:
     prefix is unnecessary.
 
 For more details, see [Rules for Customizing
-Forms](Rules_for_Customizing_Forms "wikilink").
+Forms](Rules-for-Customizing-Forms ).
 
 ------------------------------------------------------------------------
 
 **Note:** Variable names are limited to 50 characters. When naming
 variables, keep in mind that a variable defined in a trigger for a
 standard form also includes: the company prefix (see
-[below](#Global_Variables_in_Forms "wikilink")), two underlines (\_),
+[below](#Global-Variables-in-Forms )), two underlines (\_),
 and a period (.).
 
 ------------------------------------------------------------------------
@@ -145,7 +145,7 @@ the quantity of shipped items:
 
 ------------------------------------------------------------------------
 
-## Global Variables in Forms {#global_variables_in_forms}
+## Global Variables in Forms 
 
 Some forms are used to work with data that is relevant to more than one
 company, i.e., they refer to one of the companies defined in the
@@ -179,7 +179,7 @@ the loop starts. If you use a local variable to store the company name,
 this variable will receive the prefix defined for the original company
 upon completing the loop and will subsequently be empty.
 
-## The DUMMY Table {#the_dummy_table}
+## The DUMMY Table 
 
 You will note that the SELECT statements illustrated above refer to the
 **DUMMY** table. This is a single-record, single-column table which may
@@ -192,7 +192,7 @@ some time. It is therefore much faster to execute the SELECT via the
 DUMMY statement does not even access the **DUMMY** table; hence,
 execution is even faster.
 
-### Text Form Variables {#text_form_variables}
+### Text Form Variables 
 
 Using a form trigger, you can define a given text form as read-only when
 its upper-level form has a particular status, and you can prevent users
@@ -207,15 +207,15 @@ need to create a plain text form, set the :\$.NOHTML.T variable to 1.
 
 > **Example:** See the PRE-FORM trigger in the **FTRIGTEXT** form.
 
-## More on Form Triggers {#more_on_form_triggers}
+## More on Form Triggers 
 
--   [Built-in Triggers](Built-in_Triggers "wikilink")
--   [Creating Your Own Triggers](Creating_Your_Own_Triggers "wikilink")
--   [Error and Warning Messages](Error_and_Warning_Messages "wikilink")
--   [Sending a Mail Message](Sending_a_Mail_Message "wikilink")
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Including One Trigger in
-    Another](Including_One_Trigger_in_Another "wikilink")
+    Another](Including-One-Trigger-in-Another )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )

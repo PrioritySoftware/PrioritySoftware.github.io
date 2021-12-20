@@ -4,14 +4,14 @@ layout: sdk_nav
 ---
 
 **\'\'Priority***offers two special interface tools. The [form
-load](Form_Loads "wikilink") utility (**INTERFACE** program) serves both
+load](Form-Loads ) utility (**INTERFACE** program) serves both
 to import data directly into a ***Priority**\'\' form (from an external
 text or XML/JSON file or an internal load table) and to export form data
 to a file or table. In contrast, the [table
-load](Table_Loads "wikilink") utility (**DBLOAD**program) imports data
+load](Table-Loads ) utility (**DBLOAD**program) imports data
 into an interim table from a tab-delimited text file (Excel files can be
 converted into tab-delimited files using [a utility
-program](Table_Loads#Converting_an_Excel_File_to_a_Tab-delimited_Text_File_for_DBLOAD "wikilink")).
+program](Table-Loads#Converting-an-Excel-File-to-a-Tab-delimited-Text-File-for-DBLOAD )).
 SQL statements (a load query) can be recorded for the load and will be
 executed as it is performed. The table data can then be displayed in a
 form, in which further manipulations can be made (e.g., by Direct
@@ -35,11 +35,11 @@ cause bugs in the future. For example, if mandatory columns are added to
 the table in some future software version, with default values that are
 filled in within the form, this will be ignored by your code!
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Form Loads](Form_Loads "wikilink")
--   [Table Loads](Table_Loads "wikilink")
+-   [Form Loads](Form-Loads )
+-   [Table Loads](Table-Loads )
 -   [Combining Table Loads with Form
-    Loads](Combining_Table_Loads_with_Form_Loads "wikilink")
+    Loads](Combining-Table-Loads-with-Form-Loads )
 -   [Tips for Finding Existing
-    Interfaces](Tips_for_Finding_Existing_Interfaces "wikilink")
+    Interfaces](Tips-for-Finding-Existing-Interfaces )

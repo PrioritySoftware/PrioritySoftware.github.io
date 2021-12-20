@@ -3,7 +3,7 @@ title: Return Values and Statement Failure
 layout: sdk_nav
 ---
 
-## Table of Return Values and Statement Failure {#table_of_return_values_and_statement_failure}
+## Table of Return Values and Statement Failure 
 
 ```{=html}
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
@@ -579,7 +579,7 @@ returns what the query returns
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[ENV](Execution_Statements "wikilink")
+[ENV](Execution-Statements )
 
 ```{=html}
 </td>
@@ -615,7 +615,7 @@ returns what the query returns
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[EXECUTE](Execution_Statements "wikilink")
+[EXECUTE](Execution-Statements )
 
 ```{=html}
 </td>
@@ -649,7 +649,7 @@ PID of the child process
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[LINK](LINK_and_UNLINK "wikilink")
+[LINK](LINK-and-UNLINK )
 
 ```{=html}
 </td>
@@ -689,7 +689,7 @@ PID of the child process
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[UNLINK](LINK_and_UNLINK "wikilink")
+[UNLINK](LINK-and-UNLINK )
 
 ```{=html}
 </td>
@@ -725,7 +725,7 @@ PID of the child process
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[GOTO](Flow_Control "wikilink")
+[GOTO](Flow-Control )
 
 ```{=html}
 </td>
@@ -759,7 +759,7 @@ no such label found forwards
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[LOOP](Flow_Control "wikilink")
+[LOOP](Flow-Control )
 
 ```{=html}
 </td>
@@ -793,7 +793,7 @@ no such label found backwards
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[LABEL](Flow_Control "wikilink")
+[LABEL](Flow-Control )
 
 ```{=html}
 </td>
@@ -827,7 +827,7 @@ never
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
 ```
-[END](Flow_Control "wikilink")
+[END](Flow-Control )
 
 ```{=html}
 </td>
@@ -856,16 +856,16 @@ never
 ```{=html}
 </table>
 ```
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL_Functions_and_Variables "wikilink")
--   [Flow Control](Flow_Control "wikilink")
+    Variables](SQL-Functions-and-Variables )
+-   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions_and_Revisions_to_Standard_SQL_Commands "wikilink")
--   [Execution Statements](Execution_Statements "wikilink")
--   [LINK and UNLINK](LINK_and_UNLINK "wikilink")
+    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+-   [Execution Statements](Execution-Statements )
+-   [LINK and UNLINK](LINK-and-UNLINK )
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )
+-   [Viewing Table Structure](Viewing-Table-Structure )

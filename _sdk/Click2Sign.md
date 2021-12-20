@@ -6,7 +6,7 @@ layout: sdk_nav
 Version 20.1 introduced the Click2Sign feature, which allows a contact
 to add their signature digitally to a document.
 
-## Click2Sign General Requirements {#click2sign_general_requirements}
+## Click2Sign General Requirements 
 
 To work with Click2Sign the following conditions must be met:
 
@@ -17,7 +17,7 @@ To work with Click2Sign the following conditions must be met:
 -   The Priority installation must have a Click2Sign application license
     (APP016).
 
-## Form Requirements {#form_requirements}
+## Form Requirements 
 
 You can only add Click2Sign in documents for forms that fulfil the
 following conditions:
@@ -25,7 +25,7 @@ following conditions:
 -   The form is managed with a BPM flow chart
 -   The uppermost level form contains a customer or vendor
 
-## Adding Click2Sign to the Document {#adding_click2sign_to_the_document}
+## Adding Click2Sign to the Document 
 
 To add Click2Sign support, copy the standard document printout procedure
 (or modify an existing private one), and add the following code to the

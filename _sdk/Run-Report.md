@@ -5,21 +5,21 @@ layout: sdk_nav
 
 ## Introduction
 
-A simple [report](Reports "wikilink") (one which is not part of a
-[procedure](Procedures "wikilink")) may be run in one of three ways:
+A simple [report](Reports ) (one which is not part of a
+[procedure](Procedures )) may be run in one of three ways:
 
 -   directly by means of a program
 -   via the menu to which the report is attached
 -   via the form to which it is linked.
 
-## Using a Program to Run the Report {#using_a_program_to_run_the_report}
+## Using a Program to Run the Report 
 
 You can use the *Run Report*program (accessed from the *Reports* menu)
 or the *Run Report/Procedure* program (run by Direct Activation from the
 *Report Generator* form) to run a report. This method is particularly
 useful during the report\'s development stages.
 
-## Creating Menu Links {#creating_menu_links}
+## Creating Menu Links 
 
 Reports, like forms, are generally accessed from menus. To position a
 given report within a menu, take the following steps:
@@ -42,7 +42,7 @@ serves a similar purpose.
 
 ------------------------------------------------------------------------
 
-## Direct Activation from a Form {#direct_activation_from_a_form}
+## Direct Activation from a Form 
 
 Like most other ***Priority***entities, reports may be run directly from
 within a form. This option may be offered in addition to or in place of
@@ -52,7 +52,7 @@ directly activated from the form, input will be restricted to the form
 record on which the cursor rests. Only columns which belong to the
 form's base table serve as input data.
 
-[Direct Activation](Direct_Activations "wikilink") of a report from
+[Direct Activation](Direct-Activations ) of a report from
 within a form can take place in either the foreground or the background.
 If it is in the background, the user will be able to continue work in
 the form while the report is being run. Indeed, printouts of reports are
@@ -79,15 +79,15 @@ Generator*form, serves a similar purpose.
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Report Columns](Report_Columns "wikilink")
--   [Organizing Report Data](Organizing_Report_Data "wikilink")
+-   [Report Columns](Report-Columns )
+-   [Organizing Report Data](Organizing-Report-Data )
 -   [Refining Report Data
-    Display](Refining_Report_Data_Display "wikilink")
+    Display](Refining-Report-Data-Display )
 -   [Calculated Columns in
-    Reports](Calculated_Columns_in_Reports "wikilink")
--   [Types of Reports](Types_of_Reports "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Reports](Reports "wikilink")
+    Reports](Calculated-Columns-in-Reports )
+-   [Types of Reports](Types-of-Reports )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Reports](Reports )

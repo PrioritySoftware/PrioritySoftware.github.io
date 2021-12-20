@@ -28,19 +28,19 @@ Additional ways of forcing a form refresh are:
     include :ACTIVATEREFRESH = 1 in the PRE-FORM trigger of the form in
     question.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form-Columns )
+-   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
+    Insertion](Conditions-of-Record-Display-and-Insertion )
+-   [Direct Activations](Direct-Activations )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
+-   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Triggers](Form-Triggers )
+-   [Form Preparation](Form-Preparation )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

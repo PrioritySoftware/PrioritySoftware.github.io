@@ -6,8 +6,8 @@ layout: sdk_nav
 When the user is working in the Windows interface of **\'\'Priority***,
 you can retrieve information from the user\'s*.ini\'\' file, by means of
 the **TABINI** program (which can be run from a [form
-trigger](Form_Triggers "wikilink") or a
-[procedure](Procedures "wikilink")).
+trigger](Form-Triggers ) or a
+[procedure](Procedures )).
 
 Note the following:
 
@@ -37,7 +37,7 @@ Note the following:
 > UNLINK GENERALLOAD;
 > ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

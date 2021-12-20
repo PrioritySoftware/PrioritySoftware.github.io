@@ -5,10 +5,10 @@ layout: sdk_nav
 
 
 The fifth step in [creating a BPM flow
-chart](Creating_BPM_Flow_Charts "wikilink") is to create the necessary
+chart](Creating-BPM-Flow-Charts ) is to create the necessary
 interfaces.
 
-## BPM Interface {#bpm_interface}
+## BPM Interface 
 
 Create a form interface to the **XXXX_MYDOCSTATS** form. Changes in the
 BPM chart will update the form using this interface.
@@ -32,7 +32,7 @@ will be filled in automatically when you run the BPM procedure.
 
 ------------------------------------------------------------------------
 
-## Update Status/Assigned User {#update_statusassigned_user}
+## Update Status/Assigned User 
 
 The **STATUSMAIL** interface is used by the BPM to change the status and
 assigned user of the **XXXX_MYDOC** form.
@@ -64,4 +64,4 @@ assigned user of the **XXXX_MYDOC** form.
         **XXXX_MYDOC** form that contains the status description.
 
 The next step is to [create the procedure for the BPM
-chart](Creating_the_Procedure_for_the_BPM_Chart "wikilink").
+chart](Creating-the-Procedure-for-the-BPM-Chart ).

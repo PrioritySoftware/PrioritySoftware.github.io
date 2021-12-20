@@ -6,13 +6,13 @@ layout: sdk_nav
 ## Introduction
 
 ***Priority***enables you to organize the data displayed in
-[reports](Reports "wikilink"). You can ensure that records are distinct
+[reports](Reports ). You can ensure that records are distinct
 (i.e., prevent the multiple appearance of identical records); you can
 sort data according to one or more columns; you can group data; you can
 place certain columns in a header; and you can perform certain functions
 upon the members of a group.
 
-## Distinct Records {#distinct_records}
+## Distinct Records 
 
 Sometimes, a report will generate the same records more than once. Take
 the case of the **ORDDELAY** report, which displays all sales orders
@@ -41,7 +41,7 @@ column with the next highest sort priority; and so on. Sorts will be
 performed in ascending order, unless a different sort type is specified
 (the other options are descending sort, alphanumeric ascending and
 alphanumeric descending; for details, see [Sorting
-Data](Form_Columns#Sorting_Data "wikilink")).
+Data](Form-Columns#Sorting-Data )).
 
 ------------------------------------------------------------------------
 
@@ -112,7 +112,7 @@ column (e.g., CRR Holding Company) will appear in the header. If you
 want to display the value only, add a semicolon to the left of the
 revised column title (e.g., ;*Customer Name*).
 
-## Display of Grouped Records {#display_of_grouped_records}
+## Display of Grouped Records 
 
 As mentioned above, identical values are not repeated from one group to
 another. However, you can force repetition of identical values, if you
@@ -144,7 +144,7 @@ each group on a new page.
     runs the report. For example, see the **PBR** input parameter in the
     **ACCOUNTS** procedure.
 
-## Financial Reports: Distinguishing Between Credit and Debit Balances {#financial_reports_distinguishing_between_credit_and_debit_balances}
+## Financial Reports: Distinguishing Between Credit and Debit Balances 
 
 When you create a report that displays financial balances (such as a
 General Ledger report), there is a need to distinguish between credit
@@ -157,7 +157,7 @@ that is flagged as a financial balance column.
 
 Flag the *Balance*column of the *Report Columns*form.
 
-## Group Functions {#group_functions}
+## Group Functions 
 
 If records have been grouped, then the data in any column which does not
 define the group may undergo one of several group functions (determined
@@ -204,7 +204,7 @@ tabular reports (see below).
 
 ------------------------------------------------------------------------
 
-## Operations on Report Columns {#operations_on_report_columns}
+## Operations on Report Columns 
 
 Several functions can be performed on an individual report column.
 Depending on the value specified in the *Col. Func.*column of the
@@ -233,7 +233,7 @@ summarized into a single value.
 
 ------------------------------------------------------------------------
 
-## Additional Sub-totals in Reports {#additional_sub_totals_in_reports}
+## Additional Sub-totals in Reports 
 
 To include sub-totals in a report, add a hidden column with the title
 *#ACCTOTAL*. This will add a sub-total up to a specific point in the
@@ -246,15 +246,15 @@ report will be multiplied by this value.
 
 > **Example:**See the **INCOME_STATEMENT** report.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Report Columns](Report_Columns "wikilink")
+-   [Report Columns](Report-Columns )
 -   [Refining Report Data
-    Display](Refining_Report_Data_Display "wikilink")
+    Display](Refining-Report-Data-Display )
 -   [Calculated Columns in
-    Reports](Calculated_Columns_in_Reports "wikilink")
--   [Types of Reports](Types_of_Reports "wikilink")
--   [Running a Report](Running_a_Report "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Reports](Reports "wikilink")
+    Reports](Calculated-Columns-in-Reports )
+-   [Types of Reports](Types-of-Reports )
+-   [Running a Report](Running-a-Report )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Reports](Reports )

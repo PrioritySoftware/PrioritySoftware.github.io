@@ -24,9 +24,9 @@ content and problems with form display.
 Examples of possible problems:
 
 -   A column in the base table's [autounique or unique
-    key](Keys "wikilink") is missing from the form
+    key](Keys ) is missing from the form
 -   A [calculated
-    column](Form_Column_Attributes#Calculated_Columns "wikilink") has
+    column](Form-Column-Attributes#Calculated-Columns ) has
     been assigned a width that is unsuitable for its column type (e.g.,
     a width of 11 for a **DATE** column)
 -   A form column is neither derived from a table column nor defined by
@@ -41,7 +41,7 @@ Direct Activation.
 
 ------------------------------------------------------------------------
 
-## Loading a Form {#loading_a_form}
+## Loading a Form 
 
 The *Load Form* program (*System Management → Generators → Forms*)
 allows you to access a form on screen without going through any menus. A
@@ -65,19 +65,19 @@ sub-level forms.
 > **ORDERS** form and then access the sub-level form via a record in the
 > *Sales Orders* form.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form-Columns )
+-   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
+    Insertion](Conditions-of-Record-Display-and-Insertion )
+-   [Direct Activations](Direct-Activations )
+-   [Form Refresh](Form-Refresh )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
+-   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Triggers](Form-Triggers )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

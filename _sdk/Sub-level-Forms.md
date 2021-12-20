@@ -84,7 +84,7 @@ Column Extension* form, a sub-level of the *Form Columns* form.
     as a wildcard in place of the form column name (e.g., :$$.@).  
 -   For a detailed explanation of conditions, see [Conditions of Record
     Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink").
+    Insertion](Conditions-of-Record-Display-and-Insertion ).
 
 ------------------------------------------------------------------------
 
@@ -108,7 +108,7 @@ Forms* form. Both are sub-levels of the *Form Generator* form.
 In addition, the root form of a form tree should be linked to a menu,
 from which it will be loaded (alternatively, the root form can be
 activated from within another form via [Direct
-Activation](Direct_Activations "wikilink")). As a menu generally
+Activation](Direct-Activations )). As a menu generally
 contains several items, you are required to indicate the position of the
 root form within the menu (specify an integer). Again, the lower the
 integer, the higher the position of the form in relation to other items
@@ -123,17 +123,17 @@ To link a root form to a menu and to define its position, use either the
 
 ## Further Reading
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form-Columns )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
+    Insertion](Conditions-of-Record-Display-and-Insertion )
+-   [Direct Activations](Direct-Activations )
+-   [Form Refresh](Form-Refresh )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
+-   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Triggers](Form-Triggers )
+-   [Form Preparation](Form-Preparation )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

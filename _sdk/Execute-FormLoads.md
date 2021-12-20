@@ -6,7 +6,7 @@ layout: sdk_nav
 ## Introduction
 
 There are a number of alternate ways to execute a [form
-load](Form_Loads "wikilink").
+load](Form-Loads ).
 
 -   Run the *Load Data* program from the *Form Load (EDI)* menu.
     Indicate whether to import data (Load), load it a second time
@@ -23,7 +23,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
 ```
 
 -   Include the form load as an interface step (type *I*) in a
-    [procedure](Procedure_Steps "wikilink"). You can use the same
+    [procedure](Procedure-Steps ). You can use the same
     parameters as in the previous option, except that they are listed in
     the *Procedure Parameters* form (sub-level form of *Procedure
     Steps*).
@@ -34,11 +34,11 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
 :   **Note:**The last three methods offer more options than the first.
 
 -   In addition, users can export data to an [XML
-    file](Loading_from/to_a_File#Additional_Definitions_for_XML_Files "wikilink")
+    file](Loading-from/to-a-File#Additional-Definitions-for-XML-Files )
     from within a form, by using the *XML File* command in the *Mail*
     menu.
 
-## Form Load Parameters {#form_load_parameters}
+## Form Load Parameters 
 
 -   *\'interface_name\'* --- The *Load Name* used to identify the form
     load in the *Form Load Designer*.
@@ -60,7 +60,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     retrieve any values.
 -   \'-w\' --- Use this option to have the **INTERFACE** program ignore
     warning messages (equivalent to the functionality of the [*Ignore
-    Warnings* column](Form_Loads#Load_Parameters "wikilink") in the
+    Warnings* column](Form-Loads#Load-Parameters ) in the
     *Form Load Designer*).
 -   \'-ns\' --- By default, the **INTERFACE** program displays a
     progress bar as the load is executed. Use this option to disable
@@ -79,7 +79,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     Specified item not in database.\" If you use the \'-nv\' option, the
     message will display: \"Line X - Specified item not in database.\"
 -   \'-noskip\' --- Equivalent to the functionality of the [*Do Not Skip
-    Lines* column](Form_Loads#Load_Parameters "wikilink") in the *Form
+    Lines* column](Form-Loads#Load-Parameters ) in the *Form
     Load Designer*.
 -   \'-enforcebpm\' --- Many forms use business rules (defined in the
     Business Rules Generator or the Data Generator), BPM rules and
@@ -113,7 +113,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
 -   \'-m\' --- Use this option to break up error messages into several
     lines. For an example, see [Using the STACK ERR Table to Store
     Interface
-    Messages](Using_the_STACK_ERR_Table_to_Store_Interface_Messages "wikilink").
+    Messages](Using-the-STACK-ERR-Table-to-Store-Interface-Messages ).
 -   \'-o\' --- Use this option when exporting data. When exporting to a
     file, the data will be written to the file recorded in the *Form
     Load Designer* using ASCII character encoding. When loading to a
@@ -133,7 +133,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     the**INTERFACE**program will write all operations executed by the
     form load into the specified debug file. This is similar to the
     \'-g\' option in other***Priority*\'\'\' tools (see [Debug
-    Tools](Debug_Tools "wikilink")).
+    Tools](Debug-Tools )).
 -   \'-repeat\' --- Equivalent to the *Reload* option (when the program
     is run from the menu). Use this option to reload lines that were not
     successfully loaded in a previous run (see more below).
@@ -149,7 +149,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     **INT, REAL, DATE**) is incompatible with the expected type for that
     position, an error is generated and the file will not be loaded.
 
-## Dealing With Errors and Reloading {#dealing_with_errors_and_reloading}
+## Dealing With Errors and Reloading 
 
 If errors were encountered by the **INTERFACE** program, they can be
 found in the *Load Errors* report (**INTERFACEERR**). These errors are
@@ -203,13 +203,13 @@ Activations.
 
 ------------------------------------------------------------------------
 
-## Executing a Form Load from a Form Trigger or Step Query {#executing_a_form_load_from_a_form_trigger_or_step_query}
+## Executing a Form Load from a Form Trigger or Step Query 
 
 Programs that prepare privileges for procedures and forms also check the
 SQL statements in all form triggers and procedure steps. If any
 interface is executed from a [form
-trigger](Creating_Your_Own_Triggers "wikilink") or [procedure
-step](Procedure_Steps "wikilink"), the required privileges are prepared
+trigger](Creating-Your-Own-Triggers ) or [procedure
+step](Procedure-Steps ), the required privileges are prepared
 whenever the trigger or procedure in question is activated. For example,
 when using the syntax EXECUTE INTERFACE *\'interface_name\',*\... the
 program prepares privileges for the *\'interface_name\'* interface for
@@ -238,11 +238,11 @@ the form or procedure and will prepare all required privileges.
 
 > **Example:** See the BUF7 trigger in the **DOCPACK** form.
 
-## More on Form Loads {#more_on_form_loads}
+## More on Form Loads 
 
 -   [Loading from/to a Load
-    Table](Loading_from/to_a_Load_Table "wikilink")
--   [Loading from/to a File](Loading_from/to_a_File "wikilink")
+    Table](Loading-from/to-a-Load-Table )
+-   [Loading from/to a File](Loading-from/to-a-File )
 -   [Deleting Records from a
-    Form](Deleting_Records_from_a_Form "wikilink")
--   [Form Loads](Form_Loads "wikilink")
+    Form](Deleting-Records-from-a-Form )
+-   [Form Loads](Form-Loads )

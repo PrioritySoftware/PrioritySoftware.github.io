@@ -10,7 +10,7 @@ an Oracle database. This section contains a comprehensive list of string
 functions, number functions and date functions, together with examples
 of their usage.
 
-## String Functions {#string_functions}
+## String Functions 
 
 The following functions are performed on strings:
 
@@ -87,7 +87,7 @@ text formats in strings that contain both English and Hebrew letters.
 > /* Result: ‎(FIFO=3/‎חשבוניות‎=2/‎הזמנות‎=1) ‎בקבלה‎ .‎אוט‎ ‎התאמה‎ */
 > ```
 
-## Number Functions {#number_functions}
+## Number Functions 
 
 The following functions are performed on numbers:
 
@@ -108,11 +108,11 @@ The following functions are performed on numbers:
 
         :   `SELECT tabula.tabulaf.itoh(15) FROM DUAL; /* 'f' */`
 
-### Shifted Integers {#shifted_integers}
+### Shifted Integers 
 
 When working with shifted integers, there is often a need to convert
 them to real numbers. In ***Priority***, the [REALQUANT
-function](Non-standard_Scalar_Expressions#Numbers "wikilink") performs
+function](Non-standard-Scalar-Expressions#Numbers ) performs
 this conversion automatically.
 
 There is currently no ODBC-compliant equivalent to the REALQUANT
@@ -145,7 +145,7 @@ DECIMAL system constant (usually, 3).
 
 ------------------------------------------------------------------------
 
-## Date Functions {#date_functions}
+## Date Functions 
 
 In **\'\'Priority***, dates, times and days are stored in the database
 as integers, which correspond to the number of minutes elapsed since
@@ -296,16 +296,16 @@ The following functions are performed on dates:
 -   **tabula.tabulaf.dtoa** (*date, pattern, x, y)* --- converts a date
     to a string. If you are not displaying the names of the days or
     months, the last two parameters should be empty strings. See
-    [Examples](#Converting_a_Date_to_a_String:_Examples "wikilink").
+    [Examples](#Converting-a-Date-to-a-String:-Examples ).
 
 ```{=html}
 <!-- -->
 ```
 -   **tabula.tabulaf.atod** (*string, pattern, x, y*) --- converts a
     string to a date. See
-    [Example](#Converting_a_String_to_a_Date:_Example "wikilink").
+    [Example](#Converting-a-String-to-a-Date:_Example ).
 
-### Date Pattern Components for ATOD and DTOA Expressions {#date_pattern_components_for_atod_and_dtoa_expressions}
+### Date Pattern Components for ATOD and DTOA Expressions 
 
 The following pattern components can be used when outputting a date as a
 string. Of course, more than one component can be used in the same
@@ -324,7 +324,7 @@ and spaces between pattern components as desired.
 -   **YYYY** --- all four digits of year (2006)
 -   **hh:mm** --- hours and minutes (12:05)
 
-### Converting a Date to a String: Examples {#converting_a_date_to_a_string_examples}
+### Converting a Date to a String: Examples 
 
 ``` tsql
 SELECT tabula.tabulaf.dtoa(IVDATE, 'DD/MM/YY', 0, 0) FROM tabula.demo$INVOICES;
@@ -332,7 +332,7 @@ SELECT tabula.tabulaf.dtoa(IVDATE, 'DD/MM/YY', 0, 0) FROM tabula.demo$INVOICES;
 SELECT tabula.tabulaf.dtoa(UDATE, ' DD-MM-YYYY hh:mm', 0, 0) FROM tabula.demo$INVOICES;
 ```
 
-### Converting a String to a Date: Example {#converting_a_string_to_a_date_example}
+### Converting a String to a Date: Example 
 
 ``` tsql
 SELECT tabula.tabulaf. atod('01/06/2005', 'DD/MM/YYYY') FROM DUAL;

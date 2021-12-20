@@ -1,12 +1,12 @@
 You will often find it useful to combine [table
-loads](Table_Loads "wikilink") with [form loads](Form_Loads "wikilink").
+loads](Table-Loads ) with [form loads](Form-Loads ).
 That is, you create a **DBLOAD** that loads data into an interim table,
 and then display such data via a form based on that interim table. Users
 can use the interim table form to check the loaded data and to fix
 records if necessary. You can also create a
-[procedure](Procedures "wikilink") to manipulate the data (e.g., to add
+[procedure](Procedures ) to manipulate the data (e.g., to add
 a *C* to all customer numbers) and allow users to run it by [Direct
-Activation](Direct_Activations "wikilink") from the form.
+Activation](Direct-Activations ) from the form.
 
 When satisfied with results, a procedure can be run to execute your
 **INTERFACE** program load. After the form load is completed, each
@@ -23,10 +23,10 @@ loaded can be fixed, and the load program can be executed again with the
 > **INTERFACE** program, whose first input parameter is the name of the
 > form load.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Form Loads](Form_Loads "wikilink")
--   [Table Loads](Table_Loads "wikilink")
+-   [Form Loads](Form-Loads )
+-   [Table Loads](Table-Loads )
 -   [Tips for Finding Existing
-    Interfaces](Tips_for_Finding_Existing_Interfaces "wikilink")
--   [Interfaces](Interfaces "wikilink")
+    Interfaces](Tips-for-Finding-Existing-Interfaces )
+-   [Interfaces](Interfaces )

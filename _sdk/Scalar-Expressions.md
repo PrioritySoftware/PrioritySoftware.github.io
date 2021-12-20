@@ -14,13 +14,13 @@ Moreover, it offers support of bitwise operations on integers.
 **Note:**To test the SELECT statements below, you can record them in the
 window of the *SQL Development Program*, as follows, and then execute
 them, using the *SQL Interpreter*. See [Executing SQL
-Statements](Executing_SQL_Statements "wikilink").
+Statements](Executing-SQL-Statements ).
 
 ------------------------------------------------------------------------
 
-## Conditional Expression {#conditional_expression}
+## Conditional Expression 
 
-See [Syntax Conventions](SQL_Syntax "wikilink").
+See [Syntax Conventions](SQL-Syntax ).
 
 Following C language, ***Priority***uses the symbols ? : to designate a
 conditional expression *(if \... then \... else \... )*. The syntax of a
@@ -598,7 +598,7 @@ The following examples are in American date format.
 **ATOD**(*date, pattern*)
 :   converts dates, times and days into internal numbers (mainly used to
     import external data). See [ATOD and
-    DTOA](ATOD_and_DTOA "wikilink").
+    DTOA](ATOD-and-DTOA ).
 
 ```{=html}
 <!-- -->
@@ -607,18 +607,18 @@ The following examples are in American date format.
 **DTOA**(*date, pattern*)
 :   converts dates, times and days in the system to ASCII (mainly used
     to print out or display data to the user). See [ATOD and
-    DTOA](ATOD_and_DTOA "wikilink").
+    DTOA](ATOD-and-DTOA ).
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL_Functions_and_Variables "wikilink")
--   [Flow Control](Flow_Control "wikilink")
+    Variables](SQL-Functions-and-Variables )
+-   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions_and_Revisions_to_Standard_SQL_Commands "wikilink")
--   [Execution Statements](Execution_Statements "wikilink")
--   [LINK and UNLINK](LINK_and_UNLINK "wikilink")
+    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+-   [Execution Statements](Execution-Statements )
+-   [LINK and UNLINK](LINK-and-UNLINK )
 -   [Return Values and Statement
-    Failure](Return_Values_and_Statement_Failure "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Failure](Return-Values-and-Statement-Failure )
+-   [Viewing Table Structure](Viewing-Table-Structure )

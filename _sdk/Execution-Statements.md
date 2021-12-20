@@ -7,7 +7,7 @@ layout: sdk_nav
 
 ***Priority***recognizes several commands which affect execution of the
 SQL statement (or group of statements). See also [Syntax
-Conventions](SQL_Syntax#Syntax_Conventions "wikilink").
+Conventions](SQL-Syntax#Syntax-Conventions ).
 
 ## ENV
 
@@ -46,19 +46,19 @@ strings, each string is also enclosed in a set of apostrophes).
 
 **Note:** For the ***Priority*** web interface, see [Working with the
 Priority Web
-Interface](Working_with_the_Priority_Web_Interface "wikilink").
+Interface](Working-with-the-Priority-Web-Interface ).
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL_Functions_and_Variables "wikilink")
--   [Flow Control](Flow_Control "wikilink")
+    Variables](SQL-Functions-and-Variables )
+-   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions_and_Revisions_to_Standard_SQL_Commands "wikilink")
--   [LINK and UNLINK](LINK_and_UNLINK "wikilink")
+    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+-   [LINK and UNLINK](LINK-and-UNLINK )
 -   [Return Values and Statement
-    Failure](Return_Values_and_Statement_Failure "wikilink")
+    Failure](Return-Values-and-Statement-Failure )
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )
+-   [Viewing Table Structure](Viewing-Table-Structure )

@@ -3,7 +3,7 @@ title: Table Columns
 layout: sdk_nav
 ---
 
-## Column Names and Titles {#column_names_and_titles}
+## Column Names and Titles 
 
 The column name is unique to its table, and is used in SQL statements.
 The column title is also unique to its table; it is updatable and is
@@ -16,9 +16,9 @@ column name will require appropriate changes in SQL statements that
 refer to the column (e.g., in form triggers, compiled programs). As the
 column name is used in SQL statements, it is subject to the same
 restrictions as table names (see [Rules for
-Columns](#Rules_for_Columns "wikilink")).
+Columns](#Rules-for-Columns )).
 
-## Column Types {#column_types}
+## Column Types 
 
 The following table lists all available column types:
 
@@ -56,12 +56,12 @@ Exception to the above rule: During the development phase, you can
 convert **INT** columns to **REAL** and vice versa, using the *Change
 Number Type* program (see [**Options for Creating and Modifying Tables,
 Columns and
-Keys**](Options_for_Creating_and_Modifying_Tables,_Columns_and_Keys "wikilink")).
+Keys**](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )).
 However, once a custom development has been installed in your working
 environment, this operation may fail, in which case you should use the
 above method instead.
 
-## Decimal Precision {#decimal_precision}
+## Decimal Precision 
 
 Decimal precision (the number of places to display to the right of the
 decimal point) is optional; it is used in real numbers and shifted
@@ -76,7 +76,7 @@ to retrieve the actual value.
 
 ------------------------------------------------------------------------
 
-## Rules for Columns {#rules_for_columns}
+## Rules for Columns 
 
 The following rules apply to table columns:
 
@@ -87,7 +87,7 @@ The following rules apply to table columns:
 -   The column name may not be a reserved word (a list of reserved words
     appears in the **RESERVED** form).
 -   When adding a new column to a standard table, you must assign the
-    column name a four-letter prefix (e.g., **XXXX_CUSTNAME**). This
+    column name a four-letter prefix (e.g., **XXXX-CUSTNAME**). This
     should be the same prefix you use for all entities that you add to
     ***Priority*** for the customer in question.
 -   Column titles (up to 20 characters, including spaces) must be
@@ -116,12 +116,12 @@ The following rules apply to table columns:
     instead.
 -   You cannot add columns to system tables.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Tables](Tables "wikilink")
--   [Keys](Keys "wikilink")
+-   [Tables](Tables )
+-   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options_for_Creating_and_Modifying_Tables,_Columns_and_Keys "wikilink")
+    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
 -   [Viewing Tables in the
-    Database](Viewing_Tables_in_the_Database "wikilink")
--   [DBI Syntax](DBI_Syntax "wikilink")
+    Database](Viewing-Tables-in-the-Database )
+-   [DBI Syntax](DBI-Syntax )

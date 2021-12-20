@@ -18,7 +18,7 @@ is invisible by default. To add it to the *Generators* menu, enter the
 retrieve the *Generators* menu. Then add the **TABGEN** menu using the
 *Menu Items* sub-level form. For more information on adding entities to
 menus, see [Linking the Tree to a
-Menu](Sub-level_Forms#Linking_the_Tree_to_a_Menu "wikilink").
+Menu](Sub-level-Forms#Linking-the-Tree-to-a-Menu ).
 
 ------------------------------------------------------------------------
 
@@ -28,7 +28,7 @@ one program to finish before you can run another one. Moreover, care
 must be taken that two individuals do not run any of these programs at
 the same time.
 
-## Programs for Tables {#programs_for_tables}
+## Programs for Tables 
 
 -   **Create Table** --- To create a new table:
     1.  Enter the *Define Table* form and record a table name, type (1)
@@ -63,7 +63,7 @@ the same time.
         table columns, click *OK*; otherwise, click *Cancel*.
 -   **Delete Column from Table**
 
-## Programs for Columns {#programs_for_columns}
+## Programs for Columns 
 
 -   **Change Column Name** --- The revision will have no effect on any
     forms or reports that include the column (as it is the column title,
@@ -75,7 +75,7 @@ the same time.
     forms and reports that include the column. Exercise caution when
     reducing column width, as stored data that were originally wider
     than the new width will be lost (see [**Unique
-    Keys**](#Unique_Keys "wikilink")).
+    Keys**](#Unique-Keys )).
 -   **Change Decimal Precision** --- You can only change decimal
     precision in the following cases (decimal precision will be modified
     in any existing forms and reports that include the column):
@@ -100,7 +100,7 @@ the same time.
 :   **Note:** Once a custom development has been installed in your
     working environment, this operation may fail, in which case you
     should use a workaround method (see [Column
-    Types](Table_Columns#Column_Types "wikilink")).
+    Types](Table-Columns#Column-Types )).
 
 -   **Change Column Title** --- The revision will generally affect all
     forms and reports that include the column. The new title will not
@@ -108,7 +108,7 @@ the same time.
     revised title in a specific form or report, as this overrides the
     table column title.
 
-## Programs for Keys {#programs_for_keys}
+## Programs for Keys 
 
 -   **Add Key to Table** --- To add a table key:
     1.  Run the *Add Key to Table* program. The *Add Key* form opens.
@@ -118,7 +118,7 @@ the same time.
         :There may only be one autounique key per table.\
         :The addition of a unique key to a table that already includes
         records should be done with caution. See [Unique
-        Keys](Keys#Unique_Keys "wikilink").\
+        Keys](Keys#Unique-Keys ).\
     3.  Enter the sub-level form and record the columns in the key.
     4.  Exit all forms.
     5.  A message appears asking if you wish to continue. Click *OK* to
@@ -137,15 +137,15 @@ the same time.
 -   **Delete Column from Key** --- Once a column is removed from a key,
     all columns with a lower priority move up a priority. On the dangers
     of deleting a column from a unique key, see [Unique
-    Keys](Keys#Unique_Keys "wikilink").
+    Keys](Keys#Unique-Keys ).
 -   **Change Column Priority** --- The changing of a column's priority
     will affect the priority of the other columns in the table.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Tables](Tables "wikilink")
--   [Table Columns](Table_Columns "wikilink")
--   [Keys](Keys "wikilink")
+-   [Tables](Tables )
+-   [Table Columns](Table-Columns )
+-   [Keys](Keys )
 -   [Viewing Tables in the
-    Database](Viewing_Tables_in_the_Database "wikilink")
--   [DBI Syntax](DBI_Syntax "wikilink")
+    Database](Viewing-Tables-in-the-Database )
+-   [DBI Syntax](DBI-Syntax )

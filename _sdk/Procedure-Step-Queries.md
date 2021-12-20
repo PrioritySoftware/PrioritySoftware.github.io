@@ -18,21 +18,21 @@ after parameter input.
 
 -   SQLI is a procedure step that executes SQL statements.
 -   HTMLCURSOR and HTMLEXTFILES are Basic commands used in creating
-    [documents](Documents "wikilink").
+    [documents](Documents ).
 
 ------------------------------------------------------------------------
 
-## Error and Warning Messages {#error_and_warning_messages}
+## Error and Warning Messages 
 
 The SQL statements in step queries resemble those in form triggers. For
 instance, they can generate [error or warning
-messages](Error_and_Warning_Messages "wikilink") (by means of ERRMSG and
+messages](Error-and-Warning-Messages ) (by means of ERRMSG and
 WRNMSG statements). The contents of these messages are generally
 specified in the *Procedure Messages*form, a sub-level of the *Step
 Query*form. Long messages (taking up more than one line) can be
 continued in the next sub-level, *Procedure Messages (cont.)*.
 Alternatively, [message
-content](Error_and_Warning_Messages#Specifying_the_Message_Content "wikilink")
+content](Error-and-Warning-Messages#Specifying-the-Message-Content )
 can be taken from an external file.
 
 In any given error or warning message, you can include a message
@@ -50,7 +50,7 @@ customized versions. In this way, the most up-to-date title will appear
 in your message.
 
 You can also send a mail message via a step query, using the [MAILMSG
-command](Sending_a_Mail_Message "wikilink").
+command](Sending-a-Mail-Message ).
 
 When activating the MAILMSG command from an SQLI step in a procedure,
 messages are not actually sent until the SQLI step is completed. In the
@@ -60,7 +60,7 @@ cannot send more than 100 messages in the same SQLI step.
 
 If you wish to send more than 100 messages, you can bypass this limit by
 creating an internal loop between procedure steps, using the [GOTO Basic
-command](Procedure_Steps#Basic_Commands "wikilink"). Finish the SQLI
+command](Procedure-Steps#Basic-Commands ). Finish the SQLI
 step and, in the next procedure step, use the GOTO command to return to
 that SQLI step (or to continue to the next procedure step, once all
 messages have been sent). In each iteration, up to 100 messages will be
@@ -72,7 +72,7 @@ sent.
 
 ------------------------------------------------------------------------
 
-## Parameter Variables {#parameter_variables}
+## Parameter Variables 
 
 Step queries can include SQL variables that refer to specific
 parameters. The system defines an SQL variable for each parameter, which
@@ -81,7 +81,7 @@ of form variables, the procedure name can be replaced by the wildcard
 "\$" if reference is to the current procedure (i.e.,
 :\$.*ParameterName*).
 
-## Procedures With Heavy Processing {#procedures_with_heavy_processing}
+## Procedures With Heavy Processing 
 
 In a procedure that requires heavy processing via a cursor, you can
 display a progress bar that indicates to the user how far the program
@@ -110,28 +110,28 @@ once. If, for example, you write a buffer that contains a cursor, and
 you want to use that buffer more than once in a procedure, you must
 write the declaration section in a separate buffer.
 
-## Checking SQL Syntax {#checking_sql_syntax}
+## Checking SQL Syntax 
 
 You can check the SQL statements in the step query for syntax errors,
 prior to activation of the procedure itself, by running the *Syntax
 Check* program by Direct Activation from within the *Procedure
 Generator*form.
 
-## Tracking Changes in Step Queries {#tracking_changes_in_step_queries}
+## Tracking Changes in Step Queries 
 
 You can track changes to step queries once they have been included in
 prepared version revisions. See [Tracking Changes to
-Queries](Installing_Your_Customizations#Tracking_Changes_to_Queries "wikilink").
+Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Procedure Steps](Procedure_Steps "wikilink")
--   [Procedure Parameters](Procedure_Parameters "wikilink")
--   [User Input in Procedures](User_Input_in_Procedures "wikilink")
--   [Procedure Flow Control](Procedure_Flow_Control "wikilink")
--   [Procedure Message Display](Procedure_Message_Display "wikilink")
--   [Processed Reports](Processed_Reports "wikilink")
--   [Running a Procedure](Running_a_Procedure "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Procedures](Procedures "wikilink")
+-   [Procedure Steps](Procedure-Steps )
+-   [Procedure Parameters](Procedure-Parameters )
+-   [User Input in Procedures](User-Input-in-Procedures )
+-   [Procedure Flow Control](Procedure-Flow-Control )
+-   [Procedure Message Display](Procedure-Message-Display )
+-   [Processed Reports](Processed-Reports )
+-   [Running a Procedure](Running-a-Procedure )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Procedures](Procedures )

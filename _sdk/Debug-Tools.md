@@ -16,7 +16,7 @@ Direct Activation (as opposed to processed reports, which are executed
 by a procedure --- in which case you debug the procedure). Finally, you
 need to optimize forms, reports and SQL queries.
 
-## Debugging a Form, Procedure or Interface {#debugging_a_form_procedure_or_interface}
+## Debugging a Form, Procedure or Interface 
 
 You debug a form or procedure by running it via a special ***Priority***
 tool. From the *Tools* top menu in the Windows interface or the *Run*
@@ -73,7 +73,7 @@ To run a ***Priority Lite*** procedure in debug mode (in the Windows interface o
 > WINHTMLH WWWORDERS -trc ..\..\wwworders.dbg
 > ```
 
-To execute a [form load](Form_Loads "wikilink") in debug mode, you need
+To execute a [form load](Form-Loads ) in debug mode, you need
 to include two additional parameters when running the **INTERFACE**
 program: the first must be \'-debug\' and the second must be the name of
 the debug file. The program then records all queries that were executed
@@ -85,13 +85,13 @@ into the debug file.
 > EXECUTE INTERFACE LOADORDERS 'c:\tmp\msg', '-debug', 'c:\tmp\dbg'; 
 > ```
 
-To execute debugging a [table load](Table_Loads "wikilink") in debug
+To execute debugging a [table load](Table-Loads ) in debug
 mode, you need to include two additional parameters when running the
 **DBLOAD** program: \'-g\', as well as the name of the debug file.
 Again, the program records all executed queries into the designated
 file.
 
-## Debugging a Simple Report {#debugging_a_simple_report}
+## Debugging a Simple Report 
 
 To debug a simple report (one ***not***run from a procedure), dump the
 report\'s query using the*SQL Development*(*\'WINDBI**) program (*System
@@ -154,7 +154,7 @@ each step, it also indicates how many records where retrieved.
 
 ------------------------------------------------------------------------
 
-### Table Access {#table_access}
+### Table Access 
 
 There are three types of table access:
 
@@ -184,7 +184,7 @@ joins or a table that lacks some keys. You should try to avoid
 sequential access to the tables, as that usually means the query will be
 slow.
 
-## Advanced Debugging {#advanced_debugging}
+## Advanced Debugging 
 
 In addition to the above debugging options available from within
 ***Priority***, you may occasionally wish to inspect the queries being
@@ -220,7 +220,7 @@ specified folder.
 
 ## Logging
 
-### Message Severity Levels {#message_severity_levels}
+### Message Severity Levels 
 
 The following is the list of message severities, in ascending order (1
 being the lowest severity, 6 being the highest).
@@ -234,7 +234,7 @@ being the lowest severity, 6 being the highest).
   JOURNAL_ERROR     5
   JOURNAL_FATAL     6
 
-### Usage in *Priority* Procedures {#usage_in_priority_procedures}
+### Usage in *Priority* Procedures 
 
 `EXECUTE JOURNALP 'level', 'message';`
 
@@ -254,7 +254,7 @@ being the lowest severity, 6 being the highest).
 > EXECUTE JOURNALP :SEV, :MSG; 
 > ```
 
-### Tabula.ini Definitions {#tabula.ini_definitions}
+### Tabula.ini Definitions
 
 In order to control which messages will be recorded to the server log,
 define the following \[Log\] section in the *tabula.ini* file:

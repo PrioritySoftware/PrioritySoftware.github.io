@@ -15,9 +15,9 @@ error message command is successful.
 via the *Privilege Explorer*. For details, run the *Privilege Explorer
 Wizard*.
 
-See also [Form Triggers](Form_Triggers "wikilink").
+See also [Form Triggers](Form-Triggers ).
 
-## Activating the Command {#activating_the_command}
+## Activating the Command 
 
 To activate an ERRMSG or WRNMSG command, use the following syntax:
 
@@ -31,7 +31,7 @@ The number refers to the message that will be generated. For example,
 will cause message 4 ("Specify P (part), R (raw material) or O
 (other).") to appear if the part type is not *O, R* or *P*.
 
-## Specifying the Message Content {#specifying_the_message_content}
+## Specifying the Message Content 
 
 For any given form, all ERRMSG and WRNMSG commands appearing in any
 trigger must be accompanied by error and warning messages. Moreover, it
@@ -107,7 +107,7 @@ number should not appear in the *Error & Warning Messages* form.
 > ERRMSG 1000000;
 > ```
 
-## General Error Messages {#general_error_messages}
+## General Error Messages 
 
 To assist in creating a unified language for your users, you can create
 error messages that can be called from any entity. To do so, use the
@@ -120,7 +120,7 @@ retrieve the GENMSG program, and add your message in the **Program
 Messages** sub-level, following the development rules (message number \>
 500).
 
-## Require Password Reentry {#require_password_reentry}
+## Require Password Reentry 
 
 In certain cases, you may wish to prompt the user to reenter their
 password when performing a certain action in a field (e.g. flagging a
@@ -154,7 +154,7 @@ PWD_RETVAL, with the following possible values:
 -   **3** - Username is unchanged and the password was not correct.
 -   **4** - The user pressed the **Cancel** button.
 
-## Message Parameters {#message_parameters}
+## Message Parameters 
 
 An error or warning message can include parameters (a maximum of three
 per message) --- `<P1>`{=html}, `<P2>`{=html} and `<P3>`{=html}. The
@@ -183,8 +183,8 @@ that generates the message, by means of the system variables :PAR1,
 The variables :PAR1,:PAR2 and :PAR3 are of **CHAR** type. If you wish to
 assign a form column variable which is of a different type to a message
 parameter, you will have to first convert it to a string (use
-[**ITOA**](Non-standard_Scalar_Expressions#Strings "wikilink") for an
-integer and [**DTOA**](ATOD_and_DTOA "wikilink") for a date).
+[**ITOA**](Non-standard-Scalar-Expressions#Strings ) for an
+integer and [**DTOA**](ATOD-and-DTOA ) for a date).
 
 > **Example:** To insert the order date into a message parameter,
 > include the following statement in the trigger:
@@ -193,15 +193,15 @@ integer and [**DTOA**](ATOD_and_DTOA "wikilink") for a date).
 > :PAR1 = DTOA (:$.CURDATE, ’MM/DD/YY’)
 > ```
 
-## More on Triggers {#more_on_triggers}
+## More on Triggers 
 
--   [SQL Variables](SQL_Variables "wikilink")
--   [Built-in Triggers](Built-in_Triggers "wikilink")
--   [Creating Your Own Triggers](Creating_Your_Own_Triggers "wikilink")
--   [Sending a Mail Message](Sending_a_Mail_Message "wikilink")
+-   [SQL Variables](SQL-Variables )
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Including One Trigger in
-    Another](Including_One_Trigger_in_Another "wikilink")
+    Another](Including-One-Trigger-in-Another )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )

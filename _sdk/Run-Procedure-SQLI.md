@@ -4,17 +4,17 @@ layout: sdk_nav
 ---
 
 You can execute a
-[procedure](Running_a_Procedure#Running_a_Sub-Procedure "wikilink") from
+[procedure](Running-a-Procedure#Running-a-Sub-Procedure ) from
 an SQLI step of another procedure by executing any of the following
 commands: **WINACTIV**, **ACTIVATE** or **ACTIVATF**. This is useful,
 for example, when you want to run a report and [send it to recipients
-via e-mail](#Running_a_Report_and_Sending_it_by_E-mail "wikilink").
+via e-mail](#Running-a-Report-and-Sending-it-by-E-mail ).
 
 The difference between the **WINACTIV** command and the **ACTIVATE** and
 **ACTIVATF** commands is that **WINACTIV** has a user interface, meaning
 that you can define a progress bar and/or messages that require a
 response from the user (using a [**PRINTF**, **PRINTCONTF** or
-**CHOOSEF** command](Procedure_Steps#Basic_Commands "wikilink")) and
+**CHOOSEF** command](Procedure-Steps#Basic-Commands )) and
 these will be visible to users while the procedure is running, whereas
 the **ACTIVATE** and **ACTIVATF** commands will not display these
 elements. As such, the **WINACTIV** command cannot be used when working
@@ -57,7 +57,7 @@ file.
 > status for price quotes; whenever a quote receives this status, you
 > want to open a sales order automatically based on that quote. To do
 > so, create a custom [POST-UPDATE
-> trigger](Creating_Your_Own_Triggers#Creating_Row_Triggers "wikilink")
+> trigger](Creating-Your-Own-Triggers#Creating-Row-Triggers )
 > that checks whether the new status assigned to the quote is the
 > special status and, if so, executes the *Open Order* procedure
 > (**OPENORDBYCPROF**) using any of the three commands mentioned
@@ -81,7 +81,7 @@ file.
 > LABEL 10099;
 > ```
 
-## Running a Report and Sending it by E-mail {#running_a_report_and_sending_it_by_e_mail}
+## Running a Report and Sending it by E-mail 
 
 You might want to create a program that runs a report and sends it to
 recipients via e-mail. This is useful, for instance, when you write a
@@ -159,7 +159,7 @@ EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', 'c:\temp\cur', 444;
 **Note:** The above code will only work with templates that use the .xlt
 extension.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

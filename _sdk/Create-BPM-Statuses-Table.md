@@ -1,5 +1,10 @@
+---
+title: Create BPM Statuses Table
+layout: sdk_nav
+---
+
 The first step in [creating a BPM flow
-chart](Creating_BPM_Flow_Charts "wikilink") is to create the statuses
+chart](Creating-BPM-Flow-Charts ) is to create the statuses
 table.
 
 1.  Use the *CreateTable* procedure to create a new table with the
@@ -31,4 +36,4 @@ are given here for demonstration purposes and can be changed as desired.
 ------------------------------------------------------------------------
 
 The next step is to [create the statuses
-form](Creating_the_Statuses_Form "wikilink").
+form](Creating-the-Statuses-Form ).

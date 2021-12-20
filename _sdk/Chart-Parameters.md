@@ -8,9 +8,9 @@ layout: sdk_nav
 
 The following explains in detail the various parameters that can be used
 to create charts. Refer to the table in [Section 2 of Defining a New
-Chart](Creating_Charts#Section_2:_Defining_a_New_Chart "wikilink").
+Chart](Creating-Charts#Section-2:_Defining-a-New-Chart ).
 
-## Defining Employees (RESOURCE) {#defining_employees_resource}
+## Defining Employees (RESOURCE) 
 
 **Fields to retrieve:** employee identifier, employee name, target
 value, a sorting column
@@ -38,7 +38,7 @@ value, a sorting column
 > ORDER BY USERLOGIN;
 > ```
 
-## Retrieving Details of a Specific Employee (RESOURCE_DETAILS) {#retrieving_details_of_a_specific_employee_resource_details}
+## Retrieving Details of a Specific Employee (RESOURCE_DETAILS) 
 
 **Fields to retrieve:** Any desired employee details from the USERS or
 USERSB form.
@@ -48,7 +48,7 @@ USERSB form.
 ------------------------------------------------------------------------
 
 **Note:**You can dynamically define [procedure
-messages](Creating_Charts#Procedure_Messages "wikilink") to serve as
+messages](Creating-Charts#Procedure-Messages ) to serve as
 field titles for the returned values by using the **\#** symbol for each
 field, followed by a message number.
 
@@ -63,7 +63,7 @@ field, followed by a message number.
 > AND USERS.USER = USERSB.USER;
 > ```
 
-## Defining Tasks (TASKS) {#defining_tasks_tasks}
+## Defining Tasks (TASKS) 
 
 **Fields to retrieve:** task identifier, employee identifier, task
 description, from date/time, to date/time, target value, display color
@@ -95,7 +95,7 @@ color).
 > AND :TODATEAND USER = (SELECT USER FROM USERS !);
 > ```
 
-## Retrieving Task Details (TASK_DETAILS) {#retrieving_task_details_task_details}
+## Retrieving Task Details (TASK_DETAILS) 
 
 **Fields to retrieve:** Any desired task or employee details from the
 **DIARIES** or **USERS** form.
@@ -105,7 +105,7 @@ color).
 ------------------------------------------------------------------------
 
 **Note:**You can dynamically define [procedure
-messages](Creating_Charts#Procedure_Messages "wikilink") to serve as
+messages](Creating-Charts#Procedure-Messages ) to serve as
 field titles for the returned values by using the **\#** symbol for each
 field, followed by a message number.
 
@@ -121,7 +121,7 @@ field, followed by a message number.
 > AND DIARIES.USER = USERS.USER;
 > ```
 
-## Retrieving Task Text (TASK_TEXT) {#retrieving_task_text_task_text}
+## Retrieving Task Text (TASK_TEXT) 
 
 **Fields to retrieve:** Text, line order (**ORD**)
 
@@ -137,7 +137,7 @@ field, followed by a message number.
 > ORDER BY TEXTORD;
 > ```
 
-## Adding Tasks to the Chart (TASK_INSERT) {#adding_tasks_to_the_chart_task_insert}
+## Adding Tasks to the Chart (TASK_INSERT) 
 
 Record a trigger that inserts values in the fields of the designated
 form when a new task is opened.
@@ -170,7 +170,7 @@ TASKSTIME, TASK.
 > WHERE USER = 0+ :RESOURCEID;
 > ```
 
-## Defining Input Fields for the Dialogue Box (TASK_EDIT) {#defining_input_fields_for_the_dialogue_box_task_edit}
+## Defining Input Fields for the Dialogue Box (TASK_EDIT) 
 
 **Fields to retrieve:** Whatever is needed.
 
@@ -219,7 +219,7 @@ TASKEDATE, TASKSTIME, TASKETIME.
 > AND CUSTNOTESA.CUSER2 = USERS2.USER;
 > ```
 
-## Updating the Display (TASK_REFRESH) {#updating_the_display_task_refresh}
+## Updating the Display (TASK_REFRESH) 
 
 **Fields to retrieve:** task description, target value, from date/hour,
 to date/hour, color.
@@ -237,7 +237,7 @@ to date/hour, color.
 > AND D.USER IN (-9999,:RESOURCEID);
 > ```
 
-## Adding a Custom Date Label (TASK_CUSTOMDATE) {#adding_a_custom_date_label_task_customdate}
+## Adding a Custom Date Label (TASK_CUSTOMDATE) 
 
 **Note:** This step is only available in the Windows interface.
 
@@ -254,7 +254,7 @@ accessed by users in the Timescale definitions of the chart.
 > WHERE KEY = :TASK_CUSTOMDATE_IN;
 > ```
 
-## Office Hours (WORKHOURS) {#office_hours_workhours}
+## Office Hours (WORKHOURS) 
 
 **Fields to retrieve:** day, from hour, to hour
 
@@ -268,7 +268,7 @@ accessed by users in the Timescale definitions of the chart.
 > WHERE USER = :RESOURCEID;
 > ```
 
-## Non-working Days (DAYSOFF) {#non_working_days_daysoff}
+## Non-working Days (DAYSOFF) 
 
 **Fields to retrieve:** from hour
 
@@ -294,7 +294,7 @@ accessed by users in the Timescale definitions of the chart.
 > WHERE CURDATE = :CURDATE;
 > ```
 
-## Employee Work Hours (RESOURCE_WORKHOURS) {#employee_work_hours_resource_workhours}
+## Employee Work Hours (RESOURCE_WORKHOURS) 
 
 **Fields to retrieve:** from date/hour, to date/hour
 
@@ -322,7 +322,7 @@ accessed by users in the Timescale definitions of the chart.
 > AND WDATE BETWEEN :FROMDATE AND :TODATE;
 > ```
 
-## Task Dependencies (RELATIONS) {#task_dependencies_relations}
+## Task Dependencies (RELATIONS) 
 
 Task dependency is defined as a relationship in which the start or
 finish date of a task depends on another task.
@@ -338,7 +338,7 @@ identifier, display color
 
 ------------------------------------------------------------------------
 
-## Choose List for Employees (RESOURCE_CHOOSE) {#choose_list_for_employees_resource_choose}
+## Choose List for Employees (RESOURCE_CHOOSE) 
 
 > **Example:**
 >
@@ -351,7 +351,7 @@ identifier, display color
 > ORDER BY 1;
 > ```
 
-## Additional Choose Lists (RESOURCE_CHOOSE2, RESOURCE_CHOOSE3) {#additional_choose_lists_resource_choose2_resource_choose3}
+## Additional Choose Lists (RESOURCE_CHOOSE2, RESOURCE_CHOOSE3) 
 
 > **Example:**
 >
@@ -363,7 +363,7 @@ identifier, display color
 > ORDER BY 1;
 > ```
 
-## Update After Choosing an Employee (RESOURCE_UPDATE) {#update_after_choosing_an_employee_resource_update}
+## Update After Choosing an Employee (RESOURCE_UPDATE) 
 
 **Query variables:** CHOOSEVALUE, GANTTEXEC
 
@@ -376,7 +376,7 @@ identifier, display color
 > WHERE USERLOGIN = :CHOOSEVALUE;
 > ```
 
-## Update After Additional Choose Lists (RESOURCE_UPDATE2, RESOURCE_UPDATE3) {#update_after_additional_choose_lists_resource_update2_resource_update3}
+## Update After Additional Choose Lists (RESOURCE_UPDATE2, RESOURCE_UPDATE3) 
 
 **Query variables:** CHOOSEVALUE, GANTTEXEC
 
@@ -392,7 +392,7 @@ identifier, display color
 > WHERE GROUPNAME = :CHOOSEVALUE);
 > ```
 
-## Preparing the LINK File Before Producing Reports (TASK_PRINT) {#preparing_the_link_file_before_producing_reports_task_print}
+## Preparing the LINK File Before Producing Reports (TASK_PRINT) 
 
 **Query variables:** ZOOMVALUE, TASKID
 
@@ -415,6 +415,6 @@ procedure.
 ------------------------------------------------------------------------
 
 **Note:** Click to return to [Creating
-Charts](Creating_Charts#Procedure_Messages "wikilink").
+Charts](Creating-Charts#Procedure-Messages ).
 
 ------------------------------------------------------------------------

@@ -28,7 +28,7 @@ in which the customization is made. This should be the same prefix you
 use for all entities that you add to ***Priority*** for the customer in
 question.
 
-## Procedures that Prepare the Data {#procedures_that_prepare_the_data}
+## Procedures that Prepare the Data 
 
 1.  Copy the **PREPORDERSCUBE** and **PREPORDERSCUBE1** procedures and
     create two customized procedures: **PRIV_PREPORDERSCUBE** and
@@ -48,7 +48,7 @@ question.
         change the value of the **ENAME** variable to the name of the
         customized report (**PRIV_EISORDERSREP**).
 
-## The BI Report {#the_bi_report}
+## The BI Report 
 
 1.  Copy the **EISORDERSREP** report and create the customized
     **PRIV_EISORDERSREP** report.
@@ -98,7 +98,7 @@ question.
     -   The report column is assigned the same title as one of the
         columns in the **EISCUBES** report.
 
-## The Procedure that Runs the Report {#the_procedure_that_runs_the_report}
+## The Procedure that Runs the Report 
 
 1.  Copy the **EISORDERSREP** procedure and create the customized
     **PRIV_EISORDERSREP** procedure.

@@ -3,7 +3,7 @@ title: Default Designs for Forms
 layout: sdk_nav
 ---
 
-# What is a Default Design for a Form? {#what_is_a_default_design_for_a_form}
+# What is a Default Design for a Form? 
 
 Most of the frequently used upper-level forms are pre-designed. That is,
 they display a single record organized into sets of vertical columns
@@ -12,7 +12,7 @@ and the like, are all determined by the designer. Users can then use the
 Organize Field utility to rearrange tabs and their columns, hide
 columns, change titles and so forth.
 
-# Creating a Default Design {#creating_a_default_design}
+# Creating a Default Design 
 
 To create a default design:
 
@@ -48,7 +48,7 @@ the *SQL Development* program (fill in the form name):
 > </syntaxhighlight>
 > ```
 
-# Distributing a Default Design in a Revision {#distributing_a_default_design_in_a_revision}
+# Distributing a Default Design in a Revision 
 
 If you are creating a new form or design in your test environment, you
 can distribute it as part of a revision:

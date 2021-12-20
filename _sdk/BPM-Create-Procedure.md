@@ -5,7 +5,7 @@ layout: sdk_nav
 
 
 The sixth step in [creating a BPM flow
-chart](Creating_BPM_Flow_Charts "wikilink") is to create a procedure
+chart](Creating-BPM-Flow-Charts ) is to create a procedure
 called **XXXX_VISMYDOCSTATS** in the *Procedure Generator*.
 
 The procedure steps should be as follows:
@@ -45,4 +45,4 @@ purposes and can be changed as desired.
 
 ------------------------------------------------------------------------
 
-The next step is to [debug the BPM chart](Debugging_the_BPM "wikilink").
+The next step is to [debug the BPM chart](Debugging-the-BPM ).

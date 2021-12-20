@@ -3,7 +3,7 @@ title: Deleting Records via an Interface
 layout: sdk_nav
 ---
 
-The [form load](Form_Loads "wikilink") can also be used to delete
+The [form load](Form-Loads ) can also be used to delete
 records from a form. In fact, the very same interface definition can be
 used both to insert/update form records and to delete them, the sole
 difference being the definition of the record type in the load table or
@@ -23,10 +23,10 @@ to the record type.
 > **Example:**See the POST-FORM2 trigger in the **ORDERITEMS** form,
 > which deletes irrelevant lines from the form.
 
-## More on Form Loads {#more_on_form_loads}
+## More on Form Loads 
 
 -   [Loading from/to a Load
-    Table](Loading_from/to_a_Load_Table "wikilink")
--   [Loading from/to a File](Loading_from/to_a_File "wikilink")
--   [Executing the Form Load](Executing_the_Form_Load "wikilink")
--   [Form Loads](Form_Loads "wikilink")
+    Table](Loading-from/to-a-Load-Table )
+-   [Loading from/to a File](Loading-from/to-a-File )
+-   [Executing the Form Load](Executing-the-Form-Load )
+-   [Form Loads](Form-Loads )

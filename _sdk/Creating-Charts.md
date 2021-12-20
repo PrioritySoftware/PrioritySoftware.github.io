@@ -38,14 +38,14 @@ The user can perform the following operations in a chart:
 -   Access the task in ***Priority***
 -   Access the employee record in ***Priority***
 
-## Defining a New Chart {#defining_a_new_chart}
+## Defining a New Chart 
 
 To create a new chart, you need to define a procedure that activates the
 **GANTT** program. You must also define an interface to the appropriate
 form, to be driven by the **GANTT** program when updating or adding
 fields.
 
-A [procedure](Procedures "wikilink") for building charts consists of two
+A [procedure](Procedures ) for building charts consists of two
 distinct sections:
 
 **Section 1:** Begins with INPUT and/or SQLI steps and ends with the
@@ -55,10 +55,10 @@ activation of the **GANTT** program.
 
 These two sections are separated by an END step.
 
-### Section 1: User Input and Activation of the GANTT Program {#section_1_user_input_and_activation_of_the_gantt_program}
+### Section 1: User Input and Activation of the GANTT Program 
 
 As in other procedures, this section requires [user
-input](User_Input_in_Procedures "wikilink"), to determine which
+input](User-Input-in-Procedures ), to determine which
 resources to display and during what time period. When run by Direct
 Activation, there is no need for an INPUT step, but you do need to
 initialize the necessary parameters (e.g., display mode, time range) in
@@ -117,7 +117,7 @@ the following order:
 4.  The flag determining whether the chart is multi-company (0 = No, 1 =
     Yes).
 
-### Section 2: Defining Parameters {#section_2_defining_parameters}
+### Section 2: Defining Parameters 
 
 The following is the list of parameters to be defined in the second
 section of the procedure (all steps are Type *C*; their order is not
@@ -148,12 +148,12 @@ important).
 
 ------------------------------------------------------------------------
 
-**Note:** [Click here](Parameters_for_a_New_Chart "wikilink") for a
+**Note:** [Click here](Parameters-for-a-New-Chart ) for a
 detailed explanation of each step.
 
 ------------------------------------------------------------------------
 
-## Procedure Messages {#procedure_messages}
+## Procedure Messages 
 
 You can dynamically define procedure messages to serve as field titles
 for retrieved task or employee details. Such messages should be assigned
@@ -192,7 +192,7 @@ For example, in charts used to schedule technicians, you can allow users
 to retrieve records by service call type, rather than by team leader
 name.
 
-## Defining the Interface for Updating/Adding Tasks {#defining_the_interface_for_updatingadding_tasks}
+## Defining the Interface for Updating/Adding Tasks 
 
 The interface is defined against the **GENERALLOAD** table. Define an
 interface for any form against this table, and record the name of the

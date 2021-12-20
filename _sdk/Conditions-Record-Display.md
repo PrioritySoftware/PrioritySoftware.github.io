@@ -22,7 +22,7 @@ the *Expression/Condition* column of its upper-level form, *Form
 Columns*. This flag makes it easy to find any form column with a
 condition.
 
-## Query Condition --- Record Display {#query_condition_record_display}
+## Query Condition --- Record Display 
 
 Query conditions restrict the records from the base table that can be
 accessed by the form in question. The condition must begin with a
@@ -58,7 +58,7 @@ As opposed to Assign conditions, which assign values into each record in
 the sub-level, a simple query condition does not. Hence, deletion will
 not be blocked.
 
-## Assign Condition --- Record Display and Insertion {#assign_condition_record_display_and_insertion}
+## Assign Condition --- Record Display and Insertion 
 
 An Assign condition is distinguished from a simple query condition in
 that no comparative operator is used. This type of condition not only
@@ -98,18 +98,18 @@ forms.
 > *D*. Similar conditions are written for the **TYPE** columns of
 > **DOCUMENTS_P** and **DOCUMENTS_T** (*P* and *T*, respectively).
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form-Columns )
+-   [Sub-level Forms](Sub-level-Forms )
+-   [Direct Activations](Direct-Activations )
+-   [Form Refresh](Form-Refresh )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
+-   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Triggers](Form-Triggers )
+-   [Form Preparation](Form-Preparation )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

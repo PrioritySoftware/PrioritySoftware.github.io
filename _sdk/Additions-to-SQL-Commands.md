@@ -3,16 +3,16 @@ title: Additions and Revisions to Standard SQL Commands
 layout: sdk_nav
 ---
 
-## Additions and Revisions to Standard SQL Commands {#additions_and_revisions_to_standard_sql_commands}
+## Additions and Revisions to Standard SQL Commands 
 
 ***Priority***offers some additional features to several standard SQL
 commands: SELECT, ORDER BY and LIKE. Furthermore, it entails revisions
 to the standard SQL join.
 
 See also [**Syntax
-Conventions**](SQL_Syntax#Syntax_Conventions "wikilink").
+Conventions**](SQL-Syntax#Syntax-Conventions ).
 
-## Output Formats for SELECT {#output_formats_for_select}
+## Output Formats for SELECT 
 
 In ***Priority***, an output format command must be added to the end of
 a SELECT statement in order to obtain output. There are several output
@@ -60,7 +60,7 @@ FORMAT STRCAT ('/tmp/', 'part.sav');
 
 will store results in the *tmp*directory in a file named *part.sav*.
 
-## Extended LIKE Patterns {#extended_like_patterns}
+## Extended LIKE Patterns 
 
 ***Priority***includes several LIKE patterns in addition to those found
 in standard SQL ("\_" and "%" wildcards, which represent a single
@@ -101,7 +101,7 @@ WHERE (PARTNAME LIKE '%' OR PART.PARTDES
 LIKE '%' OR EPARTDES LIKE  '%')
 ```
 
-## Outer Join {#outer_join}
+## Outer Join 
 
 An outer join is represented in ***Priority***'s syntax by a question
 mark (?) following the table ID:
@@ -123,7 +123,7 @@ the join table and the query will succeed.
 > given journal entry item may not necessarily include profit/cost
 > centers from groups 2-5).
 
-## Using OFFSET and FETCH as part of SQL Queries {#using_offset_and_fetch_as_part_of_sql_queries}
+## Using OFFSET and FETCH as part of SQL Queries 
 
 Priority supports the saved words OFFSET and FETCH as part of SQL
 queries. These are useful for cases where you need to create pages of
@@ -164,16 +164,16 @@ specify the number of rows to retrieve.
 > 75 rows. We retrieve starting from row 101, as the results are OFFSET
 > by 100.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL_Functions_and_Variables "wikilink")
--   [Flow Control](Flow_Control "wikilink")
--   [Execution Statements](Execution_Statements "wikilink")
--   [LINK and UNLINK](LINK_and_UNLINK "wikilink")
+    Variables](SQL-Functions-and-Variables )
+-   [Flow Control](Flow-Control )
+-   [Execution Statements](Execution-Statements )
+-   [LINK and UNLINK](LINK-and-UNLINK )
 -   [Return Values and Statement
-    Failure](Return_Values_and_Statement_Failure "wikilink")
+    Failure](Return-Values-and-Statement-Failure )
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )
+-   [Viewing Table Structure](Viewing-Table-Structure )

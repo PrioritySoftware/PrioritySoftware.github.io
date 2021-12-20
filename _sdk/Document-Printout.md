@@ -5,13 +5,13 @@ layout: sdk_nav
 
 ## Introduction
 
-You can create a [procedure](Procedures "wikilink") that opens a
-[document](Documents "wikilink") and embed within it a second procedure
+You can create a [procedure](Procedures ) that opens a
+[document](Documents ) and embed within it a second procedure
 that prints out that document. For instance, you can build a procedure
 that opens sales order via a form interface and then displays the
 printout of the new sales orders.
 
-## Document Format {#document_format}
+## Document Format 
 
 As the printout will be created automatically, there is no user input to
 determine the print format; rather you have to set it yourself. You can
@@ -27,7 +27,7 @@ do so in one of two ways:
     relevant record in the **PRINTFORMAT** table prior to execution of
     the document.
 
-## Determining Available Print Formats {#determining_available_print_formats}
+## Determining Available Print Formats 
 
 To find out which print formats are available for a given document, run
 the following SQL commands in **WINDBI**:
@@ -42,7 +42,7 @@ AND ENAME = 'WWWSHOWORDER')
 AND NUM < 0 FORMAT;
 ```
 
-## Setting the Print Format {#setting_the_print_format}
+## Setting the Print Format 
 
 At this point you should know the **EXEC** of the document you want to
 run and the number of the print format you want to display. In the SQLI
@@ -85,7 +85,7 @@ Reminder: After a successful load, the AutoUnique value of each new order is sav
 KEY1 column of the load table */
 ```
 
-## Executing the Document {#executing_the_document}
+## Executing the Document 
 
 At this point you can execute the document in one of three ways: you can
 display it on screen, you can send it directly to the default printer,
@@ -162,7 +162,7 @@ LABEL 199;
 
 **Note:** The **WINACTIV** command can only be used when programming for
 the Windows interface; see [Working with the Priority Web
-Interface](Working_with_the_Priority_Web_Interface "wikilink") for
+Interface](Working-with-the-Priority-Web-Interface ) for
 details.
 
 ------------------------------------------------------------------------
@@ -220,10 +220,10 @@ LABEL 199;
 
 ------------------------------------------------------------------------
 
-## Executing a Document After Direct Activation {#executing_a_document_after_direct_activation}
+## Executing a Document After Direct Activation 
 
 You might want to create a program that executes a document immediately
-after [Direct Activation](Direct_Activations "wikilink") of a procedure
+after [Direct Activation](Direct_Activations ) of a procedure
 from within a form. If the desired procedure is run in the foreground
 (e.g., in order to display a message when it finishes running), the
 document should nevertheless be executed in the background so that users
@@ -240,7 +240,7 @@ executed with the \'-dQ\' parameter.
 > EXECUTE BACKGROUND WINHTML '-dQ','WWWSHOWAIV', :IV; 
 > ```
 
-## Setting a Number of Copies to Print {#setting_a_number_of_copies_to_print}
+## Setting a Number of Copies to Print 
 
 You also might want to create a program that generates multiple copies
 of a document by default, so that users need not update the number of
@@ -291,7 +291,7 @@ in the HTMLCURSOR step of the procedure:
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

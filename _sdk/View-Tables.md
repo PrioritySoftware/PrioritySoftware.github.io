@@ -3,7 +3,7 @@ title: Table Dictionaries and Reports
 layout: sdk_nav
 ---
 
-## Dictionaries and Reports {#dictionaries_and_reports}
+## Dictionaries and Reports 
 
 In addition to enabling the construction and modification of tables, the
 *Tables Generator* provides access to dictionaries and reports that
@@ -20,15 +20,15 @@ display information on tables already in the database
 **Note:** In addition, various utilities accessed via the *SQL
 Development* program are helpful in understanding table structure. For
 details, see [Viewing Table
-Structure](Viewing_Table_Structure "wikilink").
+Structure](Viewing-Table-Structure ).
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Tables](Tables "wikilink")
--   [Table Columns](Table_Columns "wikilink")
--   [Keys](Keys "wikilink")
+-   [Tables](Tables )
+-   [Table Columns](Table-Columns )
+-   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options_for_Creating_and_Modifying_Tables,_Columns_and_Keys "wikilink")
--   [DBI Syntax](DBI_Syntax "wikilink")
+    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
+-   [DBI Syntax](DBI-Syntax )

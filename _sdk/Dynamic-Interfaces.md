@@ -12,7 +12,7 @@ the data to be exported specified explicitly within the interface code.
 This allows you to import and export data without having to ensure that
 an appropriate interface exists in each Priority system.
 
-## Special Load Parameters for Dynamic Interfaces {#special_load_parameters_for_dynamic_interfaces}
+## Special Load Parameters for Dynamic Interfaces 
 
 > EXECUTE INTERFACE **\'FORMNAME**\', \'msgfile\', **\'-form**\',
 > \[\'-L\', \'link_file\'\], \[\'-stackerr\', \'stackerr_file\'\],
@@ -45,9 +45,9 @@ an appropriate interface exists in each Priority system.
 -   \'-delete\' -- When importing data, indicates that this dynamic
     interface can delete records.
 
-## Dynamic Interface Examples {#dynamic_interface_examples}
+## Dynamic Interface Examples 
 
-### Exporting Data {#exporting_data}
+### Exporting Data 
 
 ``` priority
 SELECT SQL.TMPFILE INTO :TMPFILE FROM DUMMY;
@@ -66,7 +66,7 @@ JSON file (note the use of **--J**). We only export specific fields (as
 denoted by --select), and also export data from the ORDERITEMS sub-level
 and its sub-level of ORDERITEMSTEXT (as denoted by --expand).
 
-### Importing Data {#importing_data}
+### Importing Data 
 
 To import data using a dynamic interface, the file must be structured in
 a format that matches the Priority hierarchy (form \> sub-level \>
@@ -114,7 +114,7 @@ running the following query:
 
 SELECT \* FROM ERRMSGS WHERE USER = SQL.USER AND TYPE = \'i\' FORMAT;
 
-### Deleting Data {#deleting_data}
+### Deleting Data 
 
 When using the **--delete** option, the file needs to specify the keys
 of the records to be deleted. The following example is in JSON format:

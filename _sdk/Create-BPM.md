@@ -31,17 +31,17 @@ following explains how to:
 
 The steps to take (in order) are as follows:
 
-1.  [Create the statuses table](Creating_the_Statuses_Table "wikilink")
-2.  [Create the statuses form](Creating_the_Statuses_Form "wikilink")
-3.  [Modify the new document](Modifying_the_New_Document "wikilink")
+1.  [Create the statuses table](Creating-the-Statuses-Table )
+2.  [Create the statuses form](Creating-the-Statuses-Form )
+3.  [Modify the new document](Modifying-the-New-Document )
 4.  [Enable tracking of documents
-    (optional)](Enabling_Document_Tracking "wikilink")
+    (optional)](Enabling-Document-Tracking )
 5.  [Update the **STATUSTYPES**
-    table](Updating_the_STATUSTYPES_Table "wikilink")
+    table](Updating-the-STATUSTYPES-Table )
 6.  [Create the necessary
-    interfaces](Creating_the_Necessary_Interfaces "wikilink")
+    interfaces](Creating-the-Necessary-Interfaces )
 7.  [Create the procedure for the BPM
-    chart](Creating_the_Procedure_for_the_BPM_Chart "wikilink")
-8.  [Debug the BPM](Debugging_the_BPM "wikilink")
+    chart](Creating-the-Procedure-for-the-BPM-Chart )
+8.  [Debug the BPM](Debugging-the-BPM )
 9.  [Insert the initial status into the status
-    table](Inserting_the_Initial_Status_into_the_Status_Table "wikilink")
+    table](Inserting-the-Initial-Status-into-the-Status-Table )

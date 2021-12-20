@@ -3,7 +3,7 @@ title: View Table Structure
 layout: sdk_nav
 ---
 
-## The SQL Development Program {#the_sql_development_program}
+## The SQL Development Program 
 
 The *SQL Development* (**WINDBI**) program (*System Management* →
 *Generators* → *Procedures*) provides access to utilities that can help
@@ -50,8 +50,8 @@ window):
     also displays decimal precision.
 -   **Table Keys** shows the keys in a table.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Tables](Tables "wikilink")
--   [SQL Syntax](SQL_Syntax "wikilink")
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Tables](Tables )
+-   [SQL Syntax](SQL-Syntax )
+-   [Executing SQL Statements](Executing-SQL-Statements )

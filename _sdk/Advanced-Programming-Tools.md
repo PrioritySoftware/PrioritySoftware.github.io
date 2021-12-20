@@ -8,6 +8,6 @@ in ***Priority***. These tools can be helpful in meeting specific
 programming needs.
 
 Before you begin, make sure that you are familiar with the basics (e.g.,
-how to create [a procedure](Procedures "wikilink") or [a form
-interface](Interfaces "wikilink")).
+how to create [a procedure](Procedures ) or [a form
+interface](Interfaces )).
 

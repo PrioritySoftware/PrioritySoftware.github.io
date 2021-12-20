@@ -3,12 +3,12 @@ title: Interacting with External Programs
 layout: sdk_nav
 ---
 
-## List of Programs {#list_of_programs}
+## List of Programs 
 
 The following is a list of programs that may be run within
 ***Priority*** commands (e.g., [form
-triggers](Form_Triggers "wikilink"), [procedure
-steps](Procedure_Steps "wikilink")), mainly for file management.
+triggers](Form-Triggers ), [procedure
+steps](Procedure-Steps )), mainly for file management.
 
 Copy a file (COPYFILE):
 :   `EXECUTE COPYFILE :f1,:f2;`
@@ -139,7 +139,7 @@ Return a random value in decimal or hexadecimal format (PRANDOM):
 > 18921701411761541617713724720340145117226422542353165233
 > ```
 
-## Filtering the Contents of a File {#filtering_the_contents_of_a_file}
+## Filtering the Contents of a File 
 
 The **FILTER** program performs various manipulations on the contents of
 a specified text file. The examples below illustrate the different
@@ -204,7 +204,7 @@ appears beneath these examples.
     beginning and end of each line in input file; also removes CR
     (carriage return) at the end of the line.
 
-### FILTER parameters {#filter_parameters}
+### FILTER parameters 
 
 -   \'-r\' --- Use this option when you want the **FILTER** program to
     reverse the order of characters in the file (e.g., instead of
@@ -214,7 +214,7 @@ appears beneath these examples.
 -   \'-M\', *\'Msgfile\'* --- Use this option when you want the
     **FILTER** program to record error messages in the designated file.
 
-## Browsing the Contents of a Folder {#browsing_the_contents_of_a_folder}
+## Browsing the Contents of a Folder 
 
 The **FILELIST** program browses the contents of a specified folder. It
 is very useful, for example, when you want to create an automatic
@@ -280,7 +280,7 @@ UNLINK STACK6;
 LABEL 99;
 ```
 
-## Running an External Application (WINAPP) {#running_an_external_application_winapp}
+## Running an External Application (WINAPP) 
 
 The **WINAPP** command allows you to run any application (.exe file) and
 to define parameters for it (e.g., a ***Priority***field). The command
@@ -325,7 +325,7 @@ line (see examples below):
 > EXECUTE WINAPP 'C:\Windows', '-w','notepad','tabula.ini';
 > ```
 
-## Executing Priority Commands from an External Application (WINRUN) {#executing_priority_commands_from_an_external_application_winrun}
+## Executing Priority Commands from an External Application (WINRUN) 
 
 Using the **WINRUN** command, you can execute any ***Priority*** entity
 from the DOS command prompt. To do so, use the following syntax
@@ -351,16 +351,16 @@ from the DOS command prompt. To do so, use the following syntax
 -   The command that runs the entity (e.g., **WINFORM, WINACTIV**),
     followed by the argument(s) required for the specified command. For
     example:
-    -   To open a [form](Forms "wikilink"), use the **WINFORM** command,
+    -   To open a [form](Forms ), use the **WINFORM** command,
         where the argument is the internal name of the form to be
         opened.
-    -   To run a [procedure](Procedures "wikilink") or
-        [report](Reports "wikilink"), use the **WINACTIV** or
+    -   To run a [procedure](Procedures ) or
+        [report](Reports ), use the **WINACTIV** or
         **WINPROC** commands, where the first argument is either **-P**
         for a procedure or **-R** for a report that is run without an
         accompanying procedure, and the second argument is the internal
         name of the procedure/report.
-    -   To run an [interface](Interfaces "wikilink"), use the
+    -   To run an [interface](Interfaces ), use the
         **INTERFACE** command, where the first argument is the name of
         the interface and the second is the name of the temporary file
         in which to store load messages.
@@ -423,7 +423,7 @@ from the DOS command prompt. To do so, use the following syntax
 > INTERFACE LOADORDERS d:\priority\tmp\messages.txt
 > ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

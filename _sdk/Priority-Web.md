@@ -10,12 +10,12 @@ to access the***Priority*** server. As a result, the following
 exceptions apply:
 
 -   You cannot use the [EXECUTE
-    command](Execution_Statements "wikilink") to run entities that
+    command](Execution-Statements ) to run entities that
     require input from the user or that display output. This is because
     the entity is executed on the server and any interface opened will
     be displayed on the server rather than on the local computer.
 -   You cannot add the following syntax to a [procedure
-    step](Procedure_Steps "wikilink") in order to open a form when
+    step](Procedure-Steps ) in order to open a form when
     running a procedure:\
     `EXECUTE WINFORM 'ORDERS';`\
     Instead, add a new procedure step with the desired *Entity Name* and
@@ -43,7 +43,7 @@ button (in the *Procedure Parameter Extension* sub-level form).
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

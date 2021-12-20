@@ -4,7 +4,7 @@ layout: sdk_nav
 ---
 
 Suppose you have defined several Word templates in a given
-[form](Forms "wikilink"), and you want to use a particular one when
+[form](Forms ), and you want to use a particular one when
 sending specific form records to Word. This can be achieved by adding a
 form column of **INT** type, whose name contains the string **AWORD**
 (e.g., **PRIV_AWORD**). This column receives the number of one of the
@@ -136,7 +136,7 @@ If the user flags the **All Displayed Records** option, those records
 with a different Word template than that defined for the current record
 are not sent to Word.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

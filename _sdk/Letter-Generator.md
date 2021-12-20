@@ -8,7 +8,7 @@ layout: sdk_nav
 The *Letter Generator* allows users to design letters that can be sent
 to a third party (e.g., a customer or vendor) using dynamically
 populated data fields. In the *Letter Generator*form, users can assign
-the letter a name and choose which [procedure](Procedures "wikilink") is
+the letter a name and choose which [procedure](Procedures ) is
 used to create it. This procedure creates letters for a specific
 recipient or group, using a linked form record (e.g., a record in the
 *Customers* or *Vendors* form) to populate any data fields.
@@ -19,17 +19,17 @@ The *Letter Generator*form has two sub-levels:
     (including data fields).
 -   *Attachments*--- Used to attach relevant files to the letter.
 
-## Creating a Letter {#creating_a_letter}
+## Creating a Letter 
 
 Procedures used to create and send letters are like other procedures
 that generate HTML documents, and use a similar structure. A procedure
 of this type should contain the following steps, in this order:
 
--   [INPUT](Procedure_Steps#Basic_Commands "wikilink")
--   [HTMLCURSOR](Procedure_Steps#Basic_Commands "wikilink")
+-   [INPUT](Procedure-Steps#Basic-Commands )
+-   [HTMLCURSOR](Procedure-Steps#Basic-Commands )
 -   An SQLI step to retrieve the record for which the letter is being
     created (by means of the [HTMLVALUE
-    variable](Documents#Going_Over_the_Records "wikilink")) and insert
+    variable](Documents#Going-Over-the-Records )) and insert
     values from this record and related records into the **LETTERSTACK**
     table (see below).
 -   Any reports that should appear at the top of the letter (e.g., the
@@ -73,7 +73,7 @@ letters defined for the original procedure (in the **Print Formats**
 sub-level form) from the copied procedure. Then, assign new letters to
 the new procedure.
 
-## The LETTERSTACK Table {#the_letterstack_table}
+## The LETTERSTACK Table 
 
 This table is used as a basis for the procedure\'s source report. The
 table\'s unique key contains the following 4 columns:
@@ -90,7 +90,7 @@ follows:
 -   **USER ---**Receives the name of the current user.
 -   **STATUSTYPE ---**Receives the type of document for which the letter
     is being created, represented by the [BPM
-    system](Creating_BPM_Flow_Charts "wikilink") assigned to that
+    system](Creating-BPM-Flow-Charts ) assigned to that
     document type. For example, for letters to customers, this column
     receives the value *5*.
 -   **KEY1 ---**Receives the autounique value of the record for which
@@ -107,7 +107,7 @@ follows:
 
 -   To offer users the option of sending a letter using the [Automatic
     Mail and Automatic
-    Fax](Special_Document_Features#Sending_Documents_by_Automatic_Mail_or_Automatic_Fax "wikilink")
+    Fax](Special-Document-Features#Sending-Documents-by-Automatic-Mail-or-Automatic-Fax )
     print/send options, the letter\'s source report must include columns
     with the revised title *#MAIL* and *#FAX*, respectively.
 -   To offer users the option of sending attachments together with the
@@ -122,7 +122,7 @@ follows:
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Documents](Documents "wikilink")
--   [Special Document Features](Special_Document_Features "wikilink")
+-   [Documents](Documents )
+-   [Special Document Features](Special-Document-Features )

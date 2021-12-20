@@ -18,7 +18,7 @@ Invoices*), you may want to add the new columns to the existing
 generator. In both cases, as you cannot revise a standard report
 generator, you have to make copies of all the component entities.
 
-## Components of the Report Generator {#components_of_the_report_generator}
+## Components of the Report Generator 
 
 Whether you are creating your own report generator or modifying a
 standard one, you have to create three new ***Priority*** entities:
@@ -31,12 +31,12 @@ standard one, you have to create three new ***Priority*** entities:
 -   A procedure that runs the user-defined report (defined in the
     *Procedure Generator*).
 
-## Creating Your Own Report Generator {#creating_your_own_report_generator}
+## Creating Your Own Report Generator 
 
-### Constructing the Base Report {#constructing_the_base_report}
+### Constructing the Base Report 
 
 For your own report generator, you need to construct a new
-[report](Reports "wikilink") in the usual way. However, in order for it
+[report](Reports ) in the usual way. However, in order for it
 to serve as a base report, the following rules must be maintained as
 well:
 
@@ -53,7 +53,7 @@ well:
 
 ------------------------------------------------------------------------
 
-### Constructing the Form {#constructing_the_form}
+### Constructing the Form 
 
 To create the form, you first copy the standard **ASSETREP** form and
 then make certain adjustments to the copy.
@@ -124,7 +124,7 @@ report name a different prefix instead.
 
 :   5.    Link the **GREPCLMNS** form as a sub-level of your new form.
 
-### Constructing the Procedure That Runs the Report {#constructing_the_procedure_that_runs_the_report}
+### Constructing the Procedure That Runs the Report 
 
 1.  Copy the standard **RUNCUSTREP** procedure to a new procedure.
 2.  In your new procedure, revise the SQLI query in step 10:\
@@ -139,11 +139,11 @@ report name a different prefix instead.
 4.  Change the name of the report in the last procedure step to match
     the new base report you created.
 
-### Allowing User Access to the Report Generator {#allowing_user_access_to_the_report_generator}
+### Allowing User Access to the Report Generator 
 
 -   Link the new form and procedure to the relevant menu.
 
-## Adding New Columns to a Standard Report Generator {#adding_new_columns_to_a_standard_report_generator}
+## Adding New Columns to a Standard Report Generator 
 
 Any revision to a standard report generator -- even if all you want to
 do is to add new columns -- requires you to create copies of all

@@ -17,7 +17,7 @@ layout: sdk_nav
 :   converts dates, times and days in the system to ASCII (mainly used
     to print out or display data to the user)
 
-## Pattern Components for ATOD and DTOA Expressions {#pattern_components_for_atod_and_dtoa_expressions}
+## Pattern Components for ATOD and DTOA Expressions 
 
 The following pattern components can be included in ATOD and DTOA
 expressions (those marked with an asterisk (\*) only apply to DTOA). Of
@@ -105,7 +105,7 @@ and spaces between pattern components as desired.
 :   **FULLDATE**\* --- the month name (abbreviated form), date and
     four-digit year
 
-## Converting a String to a Date: Examples {#converting_a_string_to_a_date_examples}
+## Converting a String to a Date: Examples 
 
 :   `SELECT ATOD('06/21/06','MM/DD/YY') FROM DUMMY FORMAT;` /\* 06/21/06
     (June 21, 2006, in American format) \*/
@@ -118,7 +118,7 @@ and spaces between pattern components as desired.
 :   `SELECT ATOD('31102006','DDMMYYYY') FROM DUMMY FORMAT;` /\* 31/10/06
     (October 31, 2006, in European format) \*/
 
-## Converting a Date to a String: Examples {#converting_a_date_to_a_string_examples}
+## Converting a Date to a String: Examples 
 
 Unless otherwise stated, examples are in American date format.
 
@@ -144,7 +144,7 @@ Unless otherwise stated, examples are in American date format.
 :   `SELECT DTOA(:DATE,'MMMM-YYYY') FROM DUMMY FORMAT;`/\* June-2006 \*/
 :   `SELECT DTOA(:DATE, 'The current date is MM-DD-YY, and the time is hh:mm.') FROM DUMMY FORMAT;`
 
-## Further Reading {#further_reading}
+## Further Reading 
 
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )

@@ -3,7 +3,7 @@ title: LINK and UNLINK
 layout: sdk_nav
 ---
 
-## The Commands {#the_commands}
+## The Commands 
 
 The LINK mechanism creates a temporary copy of a given database table.
 This linked file serves a number of purposes:
@@ -18,7 +18,7 @@ The LINK command is complemented by the UNLINK command.
 
 ## Syntax
 
-See [Syntax Conventions](SQL_Syntax#Syntax_Conventions "wikilink").
+See [Syntax Conventions](SQL-Syntax#Syntax-Conventions ).
 
 :   **LINK***table_name1*\[ ID \] \[ **TO** *filename*1 \];
 
@@ -26,7 +26,7 @@ See [Syntax Conventions](SQL_Syntax#Syntax_Conventions "wikilink").
 
 :   **UNLINK**\[ **AND REMOVE**\] *table_name1*\[ ID \];\]
 
-## Explanation and Examples {#explanation_and_examples}
+## Explanation and Examples 
 
 The LINK command ties a designated table to a temporary file having an
 identical structure, including all the columns and keys from the
@@ -35,7 +35,7 @@ creates it. If it does exist, the command simply executes the linkage.
 If you specify a file name, this file can be used later on.
 
 > **Example:** The SQLI program can create [a linked
-> file](User_Input_in_Procedures#Retrieving_Records_Into_a_Linked_File "wikilink")
+> file](User-Input-in-Procedures#Retrieving-Records-Into-a-Linked-File )
 > in one procedure step, whose contents are used in a report in the next
 > step.
 
@@ -108,17 +108,17 @@ UNLINK ORDERS;
 LABEL 99;
 ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL_Functions_and_Variables "wikilink")
--   [Flow Control](Flow_Control "wikilink")
+    Variables](SQL-Functions-and-Variables )
+-   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions_and_Revisions_to_Standard_SQL_Commands "wikilink")
--   [Execution Statements](Execution_Statements "wikilink")
+    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+-   [Execution Statements](Execution-Statements )
 -   [Return Values and Statement
-    Failure](Return_Values_and_Statement_Failure "wikilink")
+    Failure](Return-Values-and-Statement-Failure )
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )
+-   [Viewing Table Structure](Viewing-Table-Structure )

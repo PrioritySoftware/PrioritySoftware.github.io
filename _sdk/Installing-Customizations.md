@@ -3,7 +3,7 @@ title: Installing your Customizations
 layout: sdk_nav
 ---
 
-## Working with Version Revisions {#working_with_version_revisions}
+## Working with Version Revisions 
 
 In order to properly handle your customizations, you should work with
 two ***Priority*** installations --- one in which you do the programming
@@ -33,7 +33,7 @@ be set to 1.
 
 ------------------------------------------------------------------------
 
-## Steps for Creating Version Revisions {#steps_for_creating_version_revisions}
+## Steps for Creating Version Revisions 
 
 Version revisions are a built-in tool for moving customizations from one
 ***Priority***installation to another.***Priority*** automatically keeps
@@ -61,7 +61,7 @@ forms and programs.
     called *NN*.sh (where NN is the number assigned to the revision) and
     stored in the *system\\upgrades* directory.
 
-## Explanation of the Modification Codes {#explanation_of_the_modification_codes}
+## Explanation of the Modification Codes 
 
   --------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   DBI             Update of the database (tables, table columns, keys).
@@ -88,7 +88,7 @@ forms and programs.
   TAKEHELP        Addition/revision of online help for the designated entity.
   --------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Tips for Working with Revisions {#tips_for_working_with_revisions}
+## Tips for Working with Revisions 
 
 -   Do not create a version revision until you have finished
     programming. This ensures that all revisions are numbered in the
@@ -124,7 +124,7 @@ forms and programs.
     version revision with your modifications and run the *Prepare
     Upgrade* program for the new revision.
 
-## Tracking Changes to Queries {#tracking_changes_to_queries}
+## Tracking Changes to Queries 
 
 Several form and reports allow you to keep track of changes in queries
 appearing in form triggers, SQLI procedure steps and load definitions,
@@ -166,7 +166,7 @@ versions:
     common practice, additions are marked in blue; deletions are marked
     in red strikethrough.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
 -   [Customizations: Installing the Language
-    Dictionaries](Customizations:_Installing_the_Language_Dictionaries "wikilink")
+    Dictionaries](Customizations:_Installing-the-Language-Dictionaries )

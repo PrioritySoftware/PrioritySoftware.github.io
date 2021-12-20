@@ -16,7 +16,7 @@ following purposes:
     to the GOTO command, determining the step to which the GOTO jumps
 -   **END**--- ends the procedure.
 
-## Continuing/Halting the Procedure {#continuinghalting_the_procedure}
+## Continuing/Halting the Procedure 
 
 When a procedure involves heavy data manipulation or has far-reaching
 effects on the database, you may wish to offer the user the option of
@@ -24,7 +24,7 @@ exiting it prior to data processing. The user may have accidentally
 activated the procedure, or may simply have changed his or her mind. The
 CONTINUE command (without parameters) is used for that precise purpose.
 
-## Using the GOTO Command {#using_the_goto_command}
+## Using the GOTO Command 
 
 The GOTO command, which is useful in conjunction with CONTINUE, causes
 the procedure to jump forwards or backwards to another procedure step.
@@ -40,7 +40,7 @@ choice of one of the CHOOSE options.
 
 ------------------------------------------------------------------------
 
-## Activating a User-Chosen Option {#activating_a_user_chosen_option}
+## Activating a User-Chosen Option 
 
 You can create a procedure that offers the user several options and then
 activates certain subsequent procedure steps based on the chosen option.
@@ -59,15 +59,15 @@ case the user wants to change his or her mind. This is achieved by
 jumping to an END command (e.g., step 50). Note that the END command has
 no parameters.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Procedure Steps](Procedure_Steps "wikilink")
--   [Procedure Parameters](Procedure_Parameters "wikilink")
--   [User Input in Procedures](User_Input_in_Procedures "wikilink")
--   [Procedure Step Queries](Procedure_Step_Queries "wikilink")
--   [Procedure Message Display](Procedure_Message_Display "wikilink")
--   [Processed Reports](Processed_Reports "wikilink")
--   [Running a Procedure](Running_a_Procedure "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Procedures](Procedures "wikilink")
+-   [Procedure Steps](Procedure-Steps )
+-   [Procedure Parameters](Procedure-Parameters )
+-   [User Input in Procedures](User-Input-in-Procedures )
+-   [Procedure Step Queries](Procedure-Step-Queries )
+-   [Procedure Message Display](Procedure-Message-Display )
+-   [Processed Reports](Processed-Reports )
+-   [Running a Procedure](Running-a-Procedure )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Procedures](Procedures )

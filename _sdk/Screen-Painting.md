@@ -1,4 +1,4 @@
-## What is a Screen-Painted Form? {#what_is_a_screen_painted_form}
+## What is a Screen-Painted Form? 
 
 Most of the frequently used upper-level forms are screen-painted. That
 is, they display a single record organized into sets of vertical columns
@@ -34,11 +34,11 @@ Once a user runs the *Organize Fields* utility, he or she views a
 you make in the *Screen Painter* will not be visible (with the exception
 of added columns, which will appear in the **Misc** tab --- for more
 details, see
-[below](#Revising_a_Standard_Screen-Painted_Form "wikilink")). To remove
+[below](#Revising_a_Standard_Screen-Painted_Form )). To remove
 the "private" version of the screen-painted form, the user must select
 *Restore Defaults* (within the *Organize Fields* window).
 
-## Creating Your Own Screen-Painted Forms {#creating_your_own_screen_painted_forms}
+## Creating Your Own Screen-Painted Forms 
 
 Before you begin to design your own forms, you should look at existing
 forms in the *Screen Painter* (e.g., **ORDERS, CUSTOMERS**). It may also
@@ -106,7 +106,7 @@ guidelines for using it:
 -   To save all changes, click the **Save Form Release** icon. It is
     recommended that you do so regularly, as there is no undo tool.
 
-## Rules for Creating a Screen-Painted Form {#rules_for_creating_a_screen_painted_form}
+## Rules for Creating a Screen-Painted Form 
 
 The following rules must be followed in order to obtain proper results
 in the form interface:
@@ -120,7 +120,7 @@ in the form interface:
 -   Each set of columns and each set of column titles must be properly
     aligned (use the **Align** tool described above).
 
-## Revising a Standard Screen-Painted Form {#revising_a_standard_screen_painted_form}
+## Revising a Standard Screen-Painted Form 
 
 It is not necessary to use the *Screen Painter* when you add customized
 columns to a standard form. Any added column will automatically be
@@ -137,7 +137,7 @@ title, but will see an empty box in place of the column data. In such a
 case, they should use the *Organize Fields* utility to hide the column
 in question.
 
-## Creating a \"Totals\" Form {#creating_a_totals_form}
+## Creating a \"Totals\" Form 
 
 A "Totals" form is a sub-level of a given document's itemization form.
 It is a query form used to display selected columns (usually prices)
@@ -168,18 +168,18 @@ document text, add an \"Html Viewer\" element.
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form_Columns )
+-   [Sub-level Forms](Sub-level_Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Insertion](Conditions_of_Record_Display_and_Insertion )
+-   [Direct Activations](Direct_Activations )
+-   [Form Refresh](Form_Refresh )
+-   [Accessing a Related Form](Accessing_a_Related_Form )
+-   [Creating a Text Form](Creating_a_Text_Form )
+-   [Form Triggers](Form_Triggers )
+-   [Form Preparation](Form_Preparation )
+-   [Help Messages](Help_Messages )
+-   [Rules for Customizing](Rules_for_Customizing )

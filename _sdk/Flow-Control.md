@@ -3,7 +3,7 @@ title: Flow Control
 layout: sdk_nav
 ---
 
-## Flow Control Commands {#flow_control_commands}
+## Flow Control Commands 
 
 Several ***Priority***commands may be used in SQL statements to affect
 execution flow. These are mainly used in long sequences of SQL commands
@@ -38,7 +38,7 @@ execution flow. These are mainly used in long sequences of SQL commands
 **Note:** When used in a step query, this does not necessarily delay the
 procedure execution flow in the ***Priority*** web interface. To ensure
 interruption of execution flow, use the CONTINUE basic command (see
-[Procedure Steps](Procedure_Steps "wikilink")).
+[Procedure Steps](Procedure-Steps )).
 
 ------------------------------------------------------------------------
 
@@ -48,9 +48,9 @@ interruption of execution flow, use the CONTINUE basic command (see
     of users, or by external mail to one or more e-mail addresses; can
     include an attachment
 
-## Syntax of the Flow Control Commands {#syntax_of_the_flow_control_commands}
+## Syntax of the Flow Control Commands 
 
-See [**Syntax Conventions**](SQL_Syntax#Syntax_Conventions" "wikilink").
+See [**Syntax Conventions**](SQL-Syntax#Syntax-Conventions" ).
 
 The syntax of each of these commands is as follows:
 
@@ -102,7 +102,7 @@ without Outlook.
 
 ------------------------------------------------------------------------
 
-## Examples of Usage {#examples_of_usage}
+## Examples of Usage 
 
 This example illustrates the following:
 
@@ -145,7 +145,7 @@ also define the sub-routine at the beginning of the text.
 
 ------------------------------------------------------------------------
 
-## Using Sub-routines {#using_sub_routines}
+## Using Sub-routines 
 
 Sub-routines are useful, for example, for loading data. The SUB command
 (together with an accompanying integer) marks the beginning of the
@@ -155,17 +155,17 @@ Thus, GOSUB 1 calls up SUB 1, GOSUB 2 calls up SUB 2, and so on. Once
 RETURN is encountered, execution continues from the statement following
 the relevant GOSUB command.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL_Functions_and_Variables "wikilink")
+    Variables](SQL-Functions-and-Variables )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions_and_Revisions_to_Standard_SQL_Commands "wikilink")
--   [Execution Statements](Execution_Statements "wikilink")
--   [LINK and UNLINK](LINK_and_UNLINK "wikilink")
+    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+-   [Execution Statements](Execution-Statements )
+-   [LINK and UNLINK](LINK-and-UNLINK )
 -   [Return Values and Statement
-    Failure](Return_Values_and_Statement_Failure "wikilink")
+    Failure](Return-Values-and-Statement-Failure )
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )
+-   [Viewing Table Structure](Viewing-Table-Structure )

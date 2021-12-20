@@ -4,9 +4,9 @@ layout: sdk_nav
 ---
 
 
-## Tabular Reports {#tabular_reports}
+## Tabular Reports 
 
-[Reports](Reports "wikilink") can also be displayed in tabular form,
+[Reports](Reports ) can also be displayed in tabular form,
 divided into columns and rows. Such tables succinctly summarize report
 data. To define a report as tabular, specify *T*in the *Type*column of
 the *Report Generator*form.
@@ -31,7 +31,7 @@ display value of *T*.
 
 **Notes:**
 
--   Each [group](Organizing_Report_Data#Grouping "wikilink") appears in
+-   Each [group](Organizing-Report-Data#Grouping ) appears in
     a separate row in the table.
 -   You can save horizontal space by using vertical mode (specify *V*in
     the *Table Display Mode*column of the *Report Generator*form).
@@ -57,7 +57,7 @@ assigning a group function to the column in question, as follows:
     specified, the table will display row totals, group totals, column
     totals and a grand total.
 
-## Multi-Company Reports {#multi_company_reports}
+## Multi-Company Reports 
 
 You can define a report to display data from multiple companies
 (databases). In order to create such a multi-company report, add the
@@ -77,30 +77,30 @@ selected via *Define Multiple Companies*(in the *File* menu).
 
 ------------------------------------------------------------------------
 
-## Processed Reports {#processed_reports}
+## Processed Reports 
 
-A [procedure](Procedures "wikilink") is a batch of executable steps that
+A [procedure](Procedures ) is a batch of executable steps that
 are carried out in a predefined sequence. One of the steps in a
 procedure may be the processing of report data. Thus, any given report
 may be part of a procedure. Include a report step in a procedure when
 the report requires manipulations other than simple averages, sum
 totals, minimums or maximums. The procedure allows for more complex
 operations to be performed on data. For a detailed explanation, see
-[Processed Reports](Processed_Reports "wikilink"). Generally, you
+[Processed Reports](Processed-Reports ). Generally, you
 include a report in a procedure via the *Procedure Steps*form, a
 sub-level of the *Procedure Generator*form. You can then view that
 linkage in the *Procedure Link*form, another sub-level of the *Report
 Generator*form.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Report Columns](Report_Columns "wikilink")
--   [Organizing Report Data](Organizing_Report_Data "wikilink")
+-   [Report Columns](Report-Columns )
+-   [Organizing Report Data](Organizing-Report-Data )
 -   [Refining Report Data
-    Display](Refining_Report_Data_Display "wikilink")
+    Display](Refining-Report-Data-Display )
 -   [Calculated Columns in
-    Reports](Calculated_Columns_in_Reports "wikilink")
--   [Running a Report](Running_a_Report "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Reports](Reports "wikilink")
+    Reports](Calculated-Columns-in-Reports )
+-   [Running a Report](Running-a-Report )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Reports](Reports )

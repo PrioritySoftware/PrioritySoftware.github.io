@@ -4,7 +4,7 @@ layout: sdk_nav
 ---
 
 If you want to prevent two users from running a given
-[procedure](Procedures "wikilink") or section of code concurrently, you
+[procedure](Procedures ) or section of code concurrently, you
 can use a semaphore -- a variable that can have one of two values (e.g.,
 ​​0 or 1).
 
@@ -99,7 +99,7 @@ UNIQUE(NAME);
 > LABEL 99;
 > ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

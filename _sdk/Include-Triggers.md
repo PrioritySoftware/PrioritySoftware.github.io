@@ -3,7 +3,7 @@ title: Including One Trigger in Another
 layout: sdk_nav
 ---
 
-## The INCLUDE Command {#the_include_command}
+## The INCLUDE Command 
 
 The #INCLUDE command enables you to use the same trigger more than once
 without rewriting it.
@@ -45,9 +45,9 @@ the form preparation of any forms that include that trigger.
 press **F6**. The trigger text appears in the sub-level form, *Row &
 Form Triggers -- Text*.
 
-See also [Form Triggers](Form_Triggers "wikilink").
+See also [Form Triggers](Form-Triggers ).
 
-## Using Buffers {#using_buffers}
+## Using Buffers 
 
 Often, it is more efficient to include only a portion of a trigger. That
 is, several triggers may share the same set of SQL statements, but each
@@ -67,7 +67,7 @@ included in any trigger that uses this group of statements.
 > #INCLUDE TRANSTRIG/BUF10 /* Check CANCEL and FINAL */ 
 > ```
 
-## Naming Buffers {#naming_buffers}
+## Naming Buffers 
 
 A buffer may either be numbered (BUF1, BUF2, BUF3, \..., BUF19) or
 assigned a trigger name that hints at its usage. Before any buffer name
@@ -78,10 +78,10 @@ appear in this list.
 
 The restrictions on buffer names are virtually identical to those of
 [customized
-triggers](Creating_Your_Own_Triggers#Naming_Customized_Triggers "wikilink").
+triggers](Creating-Your-Own-Triggers#Naming-Customized-Triggers ).
 The only difference is that, of course, no key strings may be used.
 
-## Nesting INCLUDE Commands {#nesting_include_commands}
+## Nesting INCLUDE Commands 
 
 The #INCLUDE command can be nested. That is, one trigger can include
 another, which in turn includes a third trigger (and so on).
@@ -90,7 +90,7 @@ another, which in turn includes a third trigger (and so on).
 > many buffers from the same form. (The **TRANSTRIG** form is a special
 > form that only contains triggers included in other forms.)
 
-## Advantages of the Wildcards {#advantages_of_the_wildcards}
+## Advantages of the Wildcards 
 
 Wildcards (\$ and @) are very useful when including one trigger in
 another. This is because the wildcard has a relative meaning, which
@@ -100,14 +100,14 @@ depends upon the form in which the trigger is activated.
 > Items* form refers to :DOCUMENTS_P.DOC, whereas in the PRE-INSERT
 > trigger of the *Shipped Items* form, it refers to :DOCUMENTS_D.DOC.
 
-## Error and Warning Messages {#error_and_warning_messages}
+## Error and Warning Messages 
 
 Triggers inherit not only all SQL statements from the included trigger
 (or buffer), but also their accompanying [error and warning
-messages](Error_and_Warning_Messages "wikilink"). The scope of the
+messages](Error-and-Warning-Messages ). The scope of the
 messages is all the triggers written for this form.
 
-## Checking Trigger Usage {#checking_trigger_usage}
+## Checking Trigger Usage 
 
 Caution must be exercised when revising a trigger that is included in
 other triggers, as any changes in the former will obviously affect the
@@ -115,14 +115,14 @@ latter. You can view any triggers that include the current trigger in
 the *Use of Trigger* sub-level form of *Form Column Triggers* and of
 *Row & Form Triggers*.
 
-## More on Triggers {#more_on_triggers}
+## More on Triggers 
 
--   [SQL Variables](SQL_Variables "wikilink")
--   [Built-in Triggers](Built-in_Triggers "wikilink")
--   [Creating Your Own Triggers](Creating_Your_Own_Triggers "wikilink")
--   [Error and Warning Messages](Error_and_Warning_Messages "wikilink")
--   [Sending a Mail Message](Sending_a_Mail_Message "wikilink")
+-   [SQL Variables](SQL-Variables )
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )

@@ -56,7 +56,7 @@ individual parameters) are added or modified, the date and time of this
 revision appear in the *Help Date* column of the *Procedure
 Generator*form.
 
-## Line Breaking {#line_breaking}
+## Line Breaking 
 
 Line breaking for help messages is set automatically. Therefore, you can
 freely edit the text in the *Help Text* form without having to worry
@@ -76,7 +76,7 @@ hyphenation. To force the beginning of a line, use the code \\n.
 > \\n\
 > The report displays the name of the user assigned to each order.
 
-## Referring to Other Entities {#referring_to_other_entities}
+## Referring to Other Entities 
 
 Often, you will want to refer to other ***Priority***entities in your
 help text. As entity titles are easily changed (even by the user),
@@ -97,8 +97,8 @@ correct. To do so, run the *Check Entity Names in Msgs/Help* report
 mistakes that are uncovered will have to be corrected in the appropriate
 *Help Text* form.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Forms](Forms "wikilink")
--   [Reports](Reports "wikilink")
--   [Procedures](Procedures "wikilink")
+-   [Forms](Forms )
+-   [Reports](Reports )
+-   [Procedures](Procedures )

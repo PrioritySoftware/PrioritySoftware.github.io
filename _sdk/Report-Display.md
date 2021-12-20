@@ -3,7 +3,7 @@ title: Report Display
 layout: sdk_nav
 ---
 
-## Report Column Attributes {#report_column_attributes}
+## Report Column Attributes 
 
 Report columns inherit the name, title, type, width and decimal
 precision (in the case of **REAL**or **INT**columns) of the table
@@ -14,9 +14,9 @@ To record attributes for report columns, use the appropriate columns in
 the *Report Columns* sub-level of the *Report Generator* form, unless
 otherwise designated.
 
-See also [Reports](Reports "wikilink").
+See also [Reports](Reports ).
 
-## When Creating a New Report {#when_creating_a_new_report}
+## When Creating a New Report 
 
 When you are creating your own report manually (and not copying an
 existing report), you need to decide upon the table columns that will
@@ -49,11 +49,11 @@ columns.
 
 ------------------------------------------------------------------------
 
-**Note:** See [Rules for Customizing](Rules_for_Customizing "wikilink").
+**Note:** See [Rules for Customizing](Rules-for-Customizing ).
 
 ------------------------------------------------------------------------
 
-## Adding Report Columns {#adding_report_columns}
+## Adding Report Columns 
 
 To assign report columns yourself (whether to a new report or to an
 existing one), enter the *Report Columns*form and specify column
@@ -80,7 +80,7 @@ Certain restrictions apply to report column names:
     common four-letter prefix (the same one you use for all entities
     that you add to ***Priority***for the customer in question).
 
-## Column Numbers {#column_numbers}
+## Column Numbers 
 
 Each report column is identified by its unique column number, which is
 assigned automatically by the system. This number is used to identify
@@ -97,11 +97,11 @@ position do not affect column numbers.
 **Note:**In order to prevent future ***Priority***releases from
 overwriting any newly added columns,***manually*** assign them a column
 numberof at least 500 (and then change the position). For more details,
-see [Rules for Customizing](Rules_for_Customizing "wikilink").
+see [Rules for Customizing](Rules-for-Customizing ).
 
 ------------------------------------------------------------------------
 
-## Join Columns {#join_columns}
+## Join Columns 
 
 Join columns limit the records displayed in the report so that the
 appropriate data is displayed. When a new report is created, if no join
@@ -123,11 +123,11 @@ Both the *Join Column* and its *Join Table*must be specified.
 
 **Note:** If you have added a column to a standard report and the join
 is to a new table, assign a *Join ID* greater than 5. For details, see
-[Rules for Customizing](Rules_for_Customizing "wikilink").
+[Rules for Customizing](Rules-for-Customizing ).
 
 ------------------------------------------------------------------------
 
-### Special Joins {#special_joins}
+### Special Joins 
 
 There are two special types of joins:
 
@@ -193,7 +193,7 @@ question mark should appear in*each \'\'of these join IDs.
 
 ------------------------------------------------------------------------
 
-## Report Output {#report_output}
+## Report Output 
 
 You will not always wish all columns assigned to the report to be
 displayed during report output. For instance, there is generally no
@@ -203,7 +203,7 @@ reason to display internal numbers. Hence, the **CUST** and
 
 To prevent output for a given report column, flag the *Hide*column.
 
-## User Input {#user_input}
+## User Input 
 
 To create a parameter input screen, flag the *Input*****column for each
 column to appear in the screen. If you want the input to be Boolean
@@ -222,7 +222,7 @@ helpful.
 > Thus, by specifying "CA001" in the *Customer*input column, the user
 > will obtain only those orders placed by that customer.
 
-## Predefined Query Conditions {#predefined_query_conditions}
+## Predefined Query Conditions 
 
 Besides creating a parameter input screen, in which the user has the
 option of stipulating query conditions, you can also define query
@@ -247,7 +247,7 @@ prescribed condition will appear in the report.
 > table: = \'C\' (so as to limit the report to sales transactions,
 > excluding purchase transactions).
 
-## Accessing a Related Form {#accessing_a_related_form}
+## Accessing a Related Form 
 
 One of the ways to input data is to access a target form (by pressing
 **F6** twice). Thus the target form for the *Customer Number*****column
@@ -289,7 +289,7 @@ target overrides the main target form.
 
 ------------------------------------------------------------------------
 
-### Dynamic Access {#dynamic_access}
+### Dynamic Access 
 
 Sometimes you want the target form to vary, based on the data displayed
 in a given record. For example, in the **AGEDEBTCUST** report, the
@@ -310,7 +310,7 @@ Design* sub-level of the *Report Columns*form:
 
 -   *Internal Link Column#* = same as :HTMLVALUE above.
 
-### Accessing from a Column That is Not a Unique Key {#accessing_from_a_column_that_is_not_a_unique_key}
+### Accessing from a Column That is Not a Unique Key 
 
 Sometimes you want to link to a form from a report column which is not
 part of the unique key. For example, you may want to link from a *Part
@@ -332,27 +332,27 @@ Design* sub-level of the *Report Columns*form:
 -   *Internal Link Column#* = leave empty.
 -   *Target Form (Choose)* = the name of the target form.
 
-### Writing a New CHOOSE-FIELD or SEARCH-FIELD Trigger for a Report Column {#writing_a_new_choose_field_or_search_field_trigger_for_a_report_column}
+### Writing a New CHOOSE-FIELD or SEARCH-FIELD Trigger for a Report Column 
 
 When a column is defined is an input column, if the column has a target
 form and that form has CHOOSE-FIELD or SEARCH-FIELD triggers, those
 triggers will be imported to the report input screen. You may want to
 write a specific CHOOSE-FIELD or SEARCH-FIELD for the report. The same
 restrictions that apply to [form trigger
-names](Creating_Your_Own_Triggers#Naming_Customized_Triggers "wikilink")
+names](Creating-Your-Own-Triggers#Naming-Customized-Triggers )
 apply here as well.
 
 To design a new trigger, use the *Field Triggers* form (a sub-level of
 *Report Columns*).
 
-## Special Report Columns {#special_report_columns}
+## Special Report Columns 
 
 You can use report columns to display special values by using the
 *Report Columns-HTML Design* sub-level of the *Report Columns*form. For
 example, you can display addresses in Google Maps; pictures; or QR
 codes.
 
-### Displaying an Address in Google Maps {#displaying_an_address_in_google_maps}
+### Displaying an Address in Google Maps 
 
 You can define a column that will appear in the report as a link to
 Google Maps, which will bring up the relevant address.
@@ -370,7 +370,7 @@ Design* sub-level of the *Report Columns*form:
 
 > **Example:**See column #60 in the **WWWORDFORM2** report.
 
-### Displaying QR Codes ![75x75 px](QrcodeSDK.jpg "75x75 px") {#displaying_qr_codes_75x75_px}
+### Displaying QR Codes ![75x75 px](QrcodeSDK.jpg "75x75 px") 
 
 You can define a column that will appear in the report as a QR code (a
 2D bar code).
@@ -389,15 +389,15 @@ Design* sub-level of the *Report Columns*form:
 
 > **Example:** See column #190 in the **WWWIV_5** report.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Organizing Report Data](Organizing_Report_Data "wikilink")
+-   [Organizing Report Data](Organizing-Report-Data )
 -   [Refining Report Data
-    Display](Refining_Report_Data_Display "wikilink")
+    Display](Refining-Report-Data-Display )
 -   [Calculated Columns in
-    Reports](Calculated_Columns_in_Reports "wikilink")
--   [Types of Reports](Types_of_Reports "wikilink")
--   [Running a Report](Running_a_Report "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Reports](Reports "wikilink")
+    Reports](Calculated-Columns-in-Reports )
+-   [Types of Reports](Types-of-Reports )
+-   [Running a Report](Running-a-Report )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Reports](Reports )

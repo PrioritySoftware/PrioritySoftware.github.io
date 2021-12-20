@@ -9,7 +9,7 @@ You may find it useful to peruse (and possibly use) various components
 of the standard interfaces provided with ***Priority***. The following
 helps you to locate these interfaces.
 
-## Interfaces for a Specific Form {#interfaces_for_a_specific_form}
+## Interfaces for a Specific Form 
 
 One helpful tool is the *Form Interfaces* (**FORMINTERFACES**) form,
 which is a sub-level of the *Form Generator*. This form displays any
@@ -18,7 +18,7 @@ looking for interfaces, but also important information when you want to
 revise the form in a way that impacts the interface (e.g., add a
 mandatory column).
 
-## Interfaces for a Specific Form Column {#interfaces_for_a_specific_form_column}
+## Interfaces for a Specific Form Column 
 
 You can also view a list of all interfaces built for a given form column
 in the *Interfaces for Column* (**FCLMNINTER**) form, which is a
@@ -27,7 +27,7 @@ Generator*). This is not only useful when looking for interfaces, but
 also important information when you want to revise the form column in a
 way that impacts the interface (e.g., change its width).
 
-## Existing INTERFACE and DBLOAD Programs {#existing_interface_and_dbload_programs}
+## Existing INTERFACE and DBLOAD Programs 
 
 There are a number of ways to find available form loads and table loads,
 both standard and customized:
@@ -44,7 +44,7 @@ both standard and customized:
     then record \'EXECUTE INTERFACE\' or \'EXECUTE DBLOAD\' in the input
     screen.
 
-## Interfaces in General {#interfaces_in_general}
+## Interfaces in General 
 
 There are a number of interface menus (e.g., for inventory counts, for
 sales invoices) that include a table load procedure, an interim table
@@ -55,10 +55,10 @@ device), so that you only have to create a **DBLOAD** program. To find
 such interface components, retrieve by LOAD\* in the various generators
 (for forms, procedures and/or menus).
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Form Loads](Form_Loads "wikilink")
--   [Table Loads](Table_Loads "wikilink")
+-   [Form Loads](Form-Loads )
+-   [Table Loads](Table-Loads )
 -   [Combining Table Loads with Form
-    Loads](Combining_Table_Loads_with_Form_Loads "wikilink")
--   [Interfaces](Interfaces "wikilink")
+    Loads](Combining-Table-Loads-with-Form-Loads )
+-   [Interfaces](Interfaces )

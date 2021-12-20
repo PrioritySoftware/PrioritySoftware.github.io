@@ -16,9 +16,9 @@ Variables are identified by the prefix ":" (colon).
 Each function and variable must belong to one of the following types:
 **CHAR, INT, REAL, DATE, TIME** or **DAY**. These are all valid column
 types (for an explanation of each, see [Table
-Columns](Table_Columns "wikilink")).
+Columns](Table-Columns )).
 
-## System Functions {#system_functions}
+## System Functions 
 
 Here is a partial list of SQL functions recognized by ***Priority***.
 
@@ -27,6 +27,7 @@ Here is a partial list of SQL functions recognized by ***Priority***.
 -   SQL.GROUP: the internal user number of the group representative from
     whom the current user inherits privileges (**INT** type)
 -   SQL.DATE: the current date and time (**DATE** type)
+-   SQL.DATEUTC: the current date and time in UTC (**DATE** type)
 -   SQL.DATE8: the current date without time (**DATE** type)
 -   SQL.TIME: the current time (**TIME** type)
 -   SQL.DAY: the current weekday (**DAY** type)
@@ -39,7 +40,7 @@ Here is a partial list of SQL functions recognized by ***Priority***.
 -   SQL.WEBID, SQL.CLIENTID: identification variables (**INT** type and
     **CHAR** type, respectively) used for ***Priority Lite*** only (see
     [User Identification for Priority
-    Lite/Dashboards](User_Identification_for_Priority_Lite/Dashboards "wikilink")).
+    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )).
 -   SQL.GUID: returns a random 32-character string, using the operating
     system\'s UUID function.
 
@@ -68,7 +69,7 @@ There are several types of SQL variables:
 -   user-defined variables
 -   system variables
 
-## System Variables {#system_variables}
+## System Variables 
 
 :   :RETVAL --- the return value of the previous query (**INT** type).
 
@@ -111,7 +112,7 @@ There are several types of SQL variables:
     variable has a value of 1, the current variable is assigned the name
     of the form interface in question (e.g., see BUF16 in the
     **LOGPART** form; on buffers, see [Using
-    Buffers](Including_One_Trigger_in_Another#Using_Buffers "wikilink")).
+    Buffers](Including-One-Trigger-in-Another#Using-Buffers )).
     If empty, but :form_interface is 1, the records are filled in using
     the REST API.
 
@@ -164,14 +165,14 @@ There are several types of SQL variables:
 
 :   :HTMLACTION, :HTMLVALUE and :HTMLFIELD --- used in ***Priority
     Lite*** procedures (see [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing_HTML_Reports_for_Priority_Lite/Dashboards "wikilink")).
+    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )).
 
 ```{=html}
 <!-- -->
 ```
 
 :   :\_IPHONE --- used in [**\'\'Priority Lite**\'\'
-    procedures](Priority_Lite_and_Dashboards "wikilink"). This variable
+    procedures](Priority-Lite-and-Dashboards ). This variable
     receives a value of 1 when the procedure in question is run from a
     mobile device (e.g., an iPhone or Android device), and a value of 0
     when the procedure is run from a regular PC or iPad. By referring to
@@ -185,7 +186,7 @@ There are several types of SQL variables:
 ```
 
 :   :NOHTMLDESIGN --- used in [processed
-    reports](Processed_Reports "wikilink") and **\'\'Priority Lite**\'\'
+    reports](Processed-Reports ) and **\'\'Priority Lite**\'\'
     procedures. When this variable receives a value of 1, reports will
     be produced in non-HTML format, even if HTML design options are
     defined for report columns. This variable is sometimes used in
@@ -249,7 +250,7 @@ There are several types of SQL variables:
 ```
 
 :   :EDOCUMENT (**INT** type) --- used in e-documents (see [Creating
-    E-Documents](Special_Document_Features#A_Special_SQLI_Step:_Creating_E-Documents "wikilink")).
+    E-Documents](Special-Document-Features#A-Special-SQLI-Step:_Creating-E-Documents )).
     When this variable receives a value of 1, sent e-documents will be
     synchronized with ***Priority*** and recorded as a customer task.
 
@@ -259,7 +260,7 @@ There are several types of SQL variables:
 
 :   :GROUPPAGEBREAK (**INT** type) --- used in processed reports to add
     a page break for the first \"Group by\" set (see [Display of Grouped
-    Records](Organizing_Report_Data#Display_of_Grouped_Records "wikilink")).
+    Records](Organizing-Report-Data#Display-of-Grouped-Records )).
     When this variable receives a value of 1, each group of records in
     the report will appear on a new page.
 
@@ -288,7 +289,7 @@ There are several types of SQL variables:
 :   :EXTERNAL.VARNAME -- used in procedures to refer to variables
     inputted as part of the WINRUN command (see [ Executing Priority
     Commands from an External Application
-    (WINRUN)](Programs_Interfacing_Priority_with_External_Systems#Executing_Priority_Commands_from_an_External_Application_.28WINRUN.29 "wikilink")).
+    (WINRUN)](Programs-Interfacing-Priority-with-External-Systems#Executing-Priority-Commands-from-an-External-Application-.28WINRUN.29 )).
 :   :WEBSDK_APP_ID (**INT** type) --- when entities are accessed via
     Priority\'s Web SDK using a per-application license, this variable
     stores the application ID provided by Priority Software for that
@@ -457,16 +458,16 @@ decimal places, initialize it as follows:
 
 > `:CONV = 0E-9;`
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Executing SQL Statements](Executing_SQL_Statements "wikilink")
--   [Flow Control](Flow_Control "wikilink")
+-   [Executing SQL Statements](Executing-SQL-Statements )
+-   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions_and_Revisions_to_Standard_SQL_Commands "wikilink")
--   [Execution Statements](Execution_Statements "wikilink")
--   [LINK and UNLINK](LINK_and_UNLINK "wikilink")
+    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+-   [Execution Statements](Execution-Statements )
+-   [LINK and UNLINK](LINK-and-UNLINK )
 -   [Return Values and Statement
-    Failure](Return_Values_and_Statement_Failure "wikilink")
+    Failure](Return-Values-and-Statement-Failure )
 -   [Non-standard Scalar
-    Expressions](Non-standard_Scalar_Expressions "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Expressions](Non-standard-Scalar-Expressions )
+-   [Viewing Table Structure](Viewing-Table-Structure )

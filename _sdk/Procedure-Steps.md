@@ -5,7 +5,7 @@ layout: sdk_nav
 
 ## Introduction
 
-To define the entities/commands in a [procedure](Procedures "wikilink"),
+To define the entities/commands in a [procedure](Procedures ),
 and the order in which they are accessed, enter the *Procedure
 Steps*form, a sub-level of the *Procedure Generator*form.
 
@@ -21,35 +21,35 @@ modify the value in the *Step* column. You must create an identical step
 with a different *Step* value, and delete the step that previously
 existed. Similarly, in the version revision you create for the
 modification (see [Installing Your
-Customizations](Installing_Your_Customizations "wikilink")), you must
+Customizations](Installing-Your-Customizations )), you must
 include both the step addition and step deletion.
 
 ------------------------------------------------------------------------
 
-## Step Types {#step_types}
+## Step Types 
 
 There are several different types of procedure steps, each of which is a
 valid entity:
 
--   a [report](Reports "wikilink") (*R*), which generates a report after
+-   a [report](Reports ) (*R*), which generates a report after
     data processing
--   a [form](Forms "wikilink") (*F*), used to input data
+-   a [form](Forms ) (*F*), used to input data
 -   a procedure (*P*), which activates a
-    [sub-procedure](Running_a_Procedure#Running_a_Sub-Procedure "wikilink")
+    [sub-procedure](Running-a-Procedure#Running-a-Sub-Procedure )
 -   a Basic command (*B*), used for [parameter
-    input](User_Input_in_Procedures "wikilink"), [message
-    output](Procedure_Message_Display "wikilink") and [flow
-    control](Procedure_Flow_Control "wikilink")
--   a [form load interface](Interfaces "wikilink") (I), used to load
+    input](User-Input-in-Procedures ), [message
+    output](Procedure-Message-Display ) and [flow
+    control](Procedure-Flow-Control )
+-   a [form load interface](Interfaces ) (I), used to load
     data into a ***Priority*** form
--   a [table load file](Interfaces "wikilink") (*L*), used to import
+-   a [table load file](Interfaces ) (*L*), used to import
     external data into the application
 -   a compiled program (type *C*), used to manipulate data.
 
 Specify the name of the entity or Basic command that constitutes each
 procedure step (in the *Entity Name* column), as well as its type.
 
-## Basic Commands {#basic_commands}
+## Basic Commands 
 
 The following is a list of useful Basic commands.
 
@@ -86,7 +86,7 @@ The following is a list of useful Basic commands.
     screen will ***not*** be displayed if the procedure is run by Direct
     Activation from a form. In document procedures, this command is also
     used (as a final step) to [display the
-    document](Documents#Displaying_the_Document "wikilink").
+    document](Documents#Displaying-the-Document ).
 
 :   **Note:** User input can also be defined for the SQLI program, as
     well as in specific report columns in a processed report (see more
@@ -131,7 +131,7 @@ The following is a list of useful Basic commands.
     inventory document, DOC and \'D\'). It must be followed by an END
     step and a BACKGROUND step. See, for example, the **IVSHOWCOPY**
     procedure. For more on certified copies, see [Special Document
-    Features](Special_Document_Features "wikilink").
+    Features](Special-Document-Features ).
 -   **URL** (*Open Webpage*) --- Opens a webpage according to a web
     address stored in an ASCII file.
 -   **WRNMSG** (*Warning Message*) --- Like the MESSAGE command,
@@ -143,15 +143,15 @@ The following is a list of useful Basic commands.
     message ***will*** be displayed when the procedure is run by Direct
     Activation.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Procedure Parameters](Procedure_Parameters "wikilink")
--   [User Input in Procedures](User_Input_in_Procedures "wikilink")
--   [Procedure Step Queries](Procedure_Step_Queries "wikilink")
--   [Procedure Flow Control](Procedure_Flow_Control "wikilink")
--   [Procedure Message Display](Procedure_Message_Display "wikilink")
--   [Processed Reports](Processed_Reports "wikilink")
--   [Running a Procedure](Running_a_Procedure "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Procedures](Procedures "wikilink")
+-   [Procedure Parameters](Procedure-Parameters )
+-   [User Input in Procedures](User-Input-in-Procedures )
+-   [Procedure Step Queries](Procedure-Step-Queries )
+-   [Procedure Flow Control](Procedure-Flow-Control )
+-   [Procedure Message Display](Procedure-Message-Display )
+-   [Processed Reports](Processed-Reports )
+-   [Running a Procedure](Running-a-Procedure )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Procedures](Procedures )

@@ -5,7 +5,7 @@ layout: sdk_nav
 
 
 The second step in [creating a BPM flow
-chart](Creating_BPM_Flow_Charts "wikilink") is to create the statuses
+chart](Creating-BPM-Flow-Charts ) is to create the statuses
 form.
 
 1.  Use the *Form Generator* to create a new form named
@@ -48,7 +48,7 @@ are given here for demonstration purposes and can be changed as desired.
 
 ------------------------------------------------------------------------
 
-## Form Triggers {#form_triggers}
+## Form Triggers 
 
 The following form triggers need to be created:
 
@@ -132,4 +132,4 @@ The following form triggers need to be created:
 > ```
 
 The next step is to [modify the new
-document](Modifying_the_New_Document "wikilink").
+document](Modifying_the-New-Document ).

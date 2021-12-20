@@ -4,7 +4,7 @@ layout: sdk_nav
 ---
 
 To print files (e.g., attachments) from within a
-[procedure](Procedures "wikilink"), include the **PREXFILE** program in
+[procedure](Procedures ), include the **PREXFILE** program in
 an SQLI step. The **PREXFILE** program receives several parameters:
 
 -   If you want to send the attachments directly to the default printer,
@@ -16,7 +16,7 @@ an SQLI step. The **PREXFILE** program receives several parameters:
     empty, no cover page will be printed.
 -   The program receives a linked table (**STACK24** table, **FILE**
     type) which receives the file path(s) of the
-    [document(s)](Documents "wikilink") to be printed and the order in
+    [document(s)](Documents ) to be printed and the order in
     which multiple documents should be printed. This table contains the
     following columns:
 -   **SORT_LINE** --- Determines the printing order of the documents.
@@ -69,7 +69,7 @@ an SQLI step. The **PREXFILE** program receives several parameters:
 > EXECUTE PREXFILE '-d', '','', :STK; 
 > ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

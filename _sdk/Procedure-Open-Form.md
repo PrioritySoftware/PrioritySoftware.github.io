@@ -13,12 +13,12 @@ automatically.
 The following gives some basic guidelines for creating such a Direct
 Activation:
 
-1.  Define an [interface](Interfaces "wikilink") (e.g.,
+1.  Define an [interface](Interfaces ) (e.g.,
     **YUVV_OPENDOC_D**) using the **GENERALLOAD** load table to open the
     **DOCUMENTS_D** form. In the interface definition, the **TEXT1**
     column will update the **ORDNAME** column in the **DOCUMENTS_D**
     form.
-2.  Create a [procedure](Procedures "wikilink") that runs the interface,
+2.  Create a [procedure](Procedures ) that runs the interface,
     and make it a Direct Activation from the **ORDERS** form. The
     procedure should include an INPUT step with a PAR parameter of
     **LINE** type, taken from the **ORDERS** table (where *Column Name*
@@ -74,7 +74,7 @@ procedure step to skip it). In this additional step, the*Entity
 Name*=*\'ORDERS** and the*Type*= \'F\'. In the*Procedure Parameters\'\'
 sub-level form, add the parameter DNO (of**CHAR\'\'\' type).
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

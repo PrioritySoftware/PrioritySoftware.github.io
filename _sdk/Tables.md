@@ -3,7 +3,7 @@ title: Tables
 layout: sdk_nav
 ---
 
-## Table Names {#table_names}
+## Table Names 
 
 The following rules apply to table names:
 
@@ -18,7 +18,7 @@ The following rules apply to table names:
     (and any other ***Priority*** entities) that you have created for
     the same customer should share the same prefix.
 
-## Table Type {#table_type}
+## Table Type 
 
 The table type determines whether the table is an application table or a
 system table. An application table is a table in which data is
@@ -40,7 +40,7 @@ system tables.
 
 ------------------------------------------------------------------------
 
-## Customization Procedure {#customization_procedure}
+## Customization Procedure 
 
 If users at a customer site work in a language other than English, you
 will need to install revisions in more than one language. ***Before you
@@ -55,11 +55,11 @@ upgrade file) via another program.
 
 **Note:** For more on preparing upgrades for other languages, see
 [Customizations: Installing the Language
-Dictionaries](Customizations:_Installing_the_Language_Dictionaries "wikilink").
+Dictionaries](Customizations:_Installing-the-Language-Dictionaries ).
 
 ------------------------------------------------------------------------
 
-### Rules for Modifying Tables and Table Columns {#rules_for_modifying_tables_and_table_columns}
+### Rules for Modifying Tables and Table Columns 
 
 1.  When modifying tables, do not change standard table columns or any
     of the table\'s unique (or Auto Unique) keys.
@@ -71,7 +71,7 @@ Dictionaries](Customizations:_Installing_the_Language_Dictionaries "wikilink").
     appropriate four-letter prefix (there is no need to add this prefix
     to the new table's columns).
 
-#### When Installing a Revision with Modifications of a Standard Table {#when_installing_a_revision_with_modifications_of_a_standard_table}
+#### When Installing a Revision with Modifications of a Standard Table 
 
 -   Ensure that all users have exited the system.
 
@@ -79,17 +79,17 @@ Dictionaries](Customizations:_Installing_the_Language_Dictionaries "wikilink").
 
 **Note:** For general guidelines for development, see [Working with
 Version
-Revisions](Installing_Your_Customizations#Working_with_Version_Revisions "wikilink").
+Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 
 ------------------------------------------------------------------------
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Table Columns](Table_Columns "wikilink")
--   [Keys](Keys "wikilink")
+-   [Table Columns](Table-Columns )
+-   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options_for_Creating_and_Modifying_Tables,_Columns_and_Keys "wikilink")
+    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
 -   [Viewing Tables in the
-    Database](Viewing_Tables_in_the_Database "wikilink")
--   [DBI Syntax](DBI_Syntax "wikilink")
--   [Viewing Table Structure](Viewing_Table_Structure "wikilink")
+    Database](Viewing-Tables-in-the-Database )
+-   [DBI Syntax](DBI-Syntax )
+-   [Viewing Table Structure](Viewing-Table-Structure )

@@ -23,12 +23,12 @@ To have the procedure identify the user before it runs:
 The value of the first parameter in the cursor is saved in a variable
 called HTMLVALUE. This is a system variable of **CHAR** type, and it
 must be converted to an integer using the [ATOI
-function](Non-standard_Scalar_Expressions#Strings "wikilink"). Using
+function](Non-standard-Scalar-Expressions#Strings ). Using
 HTMLVALUE you can retrieve the relevant record (the one being printed)
 from the main table of the document in question.
 
 To identify the user from within the procedure, use the [SQL.WEBID
-variable](SQL_Functions_and_Variables#SystemFunctions "wikilink"). When
+variable](SQL-Functions-and-Variables#SystemFunctions ). When
 users log in using their e-mail address, this variable receives the
 value of the**\'PHONEBOOK.PHONE** column. In procedures that are defined
 for internal users only, users can also log in with their username. In
@@ -46,7 +46,7 @@ SQL.WEBID.
 > AND PHONEBOOK.CUST = ORDERS.CUST 
 > ```
 
-## Automated User Identification for Priority Lite Websites {#automated_user_identification_for_priority_lite_websites}
+## Automated User Identification for Priority Lite Websites 
 
 If the procedure can only be run by an internal user (i.e., the value of
 the *Internet Access* column is *U*), you can also set up automated
@@ -81,11 +81,11 @@ login information will be applied whenever he or she enters the web
 site. Otherwise, the DOS command must be run again each time the user
 leaves the browser.
 
-## Client Identification for Priority Lite Websites {#client_identification_for_priority_lite_websites}
+## Client Identification for Priority Lite Websites 
 
 In addition to SQL.WEBID, which receives a value only after the user
 logs in, another variable of identification --
-[SQL.CLIENTID](SQL_Functions_and_Variables#SystemFunctions "wikilink")
+[SQL.CLIENTID](SQL-Functions-and-Variables#SystemFunctions )
 -- is created automatically by the system whenever a new user enters the
 web site. This variable is of **CHAR** type, with a width of 20.
 
@@ -94,15 +94,15 @@ user will receive the same ID whenever he or she enters the web site.
 Otherwise, the SQL.CLIENTID is saved only until the user leaves the
 browser.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
 -   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing_HTML_Reports_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
 -   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional_Input_Options_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
 -   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining_a_Base_Page_for_HTML_Pages_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
 -   [Writing Dashboard
-    Procedures](Writing_Dashboard_Procedures "wikilink")
+    Procedures](Writing-Dashboard-Procedures )
 -   [Priority Lite and
-    Dashboards](Priority_Lite_and_Dashboards "wikilink")
+    Dashboards](Priority-Lite-and-Dashboards )

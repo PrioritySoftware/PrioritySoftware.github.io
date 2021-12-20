@@ -5,14 +5,14 @@ layout: sdk_nav
 
 
 The fourth step in [creating a BPM flow
-chart](Creating_BPM_Flow_Charts "wikilink") is to update the
+chart](Creating-BPM-Flow-Charts ) is to update the
 **STATUSTYPES** table.
 
 The **STATUSTYPES** table is used by the BPM mechanism to recognize the
 forms and columns involved in the workflow process. It is therefore
 necessary to find certain values and insert them in this table.
 
-## Finding the Values {#finding_the_values}
+## Finding the Values 
 
 The following values must be determined:
 
@@ -85,7 +85,7 @@ The following values must be determined:
     that holds the date the document was recorded (e.g., **CURDATE**).\
     **Note:** This column is used to retrieve the document when
     performing a full text search; for details, see [**Enterprise
-    Search**](#Enterprise_Search "wikilink").
+    Search**](#Enterprise_Search ).
 
 ```{=html}
 <!-- -->
@@ -123,7 +123,7 @@ The following values must be determined:
         \'DOCTODOLISTLOG\'
     :   AND TYPE = \'F\'; `</code>`{=html}
 
-## Inserting the Data {#inserting_the_data}
+## Inserting the Data 
 
 Run the following query in order to insert the above data into the
 **STATUSTYPES** table:
@@ -153,4 +153,4 @@ as follows:
     form).
 
 The next step is to [create the necessary
-interfaces](Creating_the_Necessary_Interfaces "wikilink").
+interfaces](Creating-the-Necessary-Interfaces ).

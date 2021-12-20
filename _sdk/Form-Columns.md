@@ -7,7 +7,7 @@ layout: sdk_nav
 
 To record attributes for form columns, use the appropriate columns in
 the *Form Columns* sub-level form of the [*Form
-Generator*](Forms "wikilink").
+Generator*](Forms ).
 
 ## Column Names and Titles
 
@@ -39,7 +39,7 @@ The form column title is utilized in the user interface. That is, it
 appears as a column heading in the form itself. The title is
 automatically inherited from the relevant table column. It may, however,
 be revised (even translated into another language). Moreover, when a
-form is [screen-painted](Designing_a_Screen-Painted_Form "wikilink"),
+form is [screen-painted](Designing-a-Screen-Painted-Form ),
 the title appearing in the screen-painter is displayed instead.
 
 > **Example:** In the **DOCUMENTS_T** form, both **WARHSNAME** and
@@ -106,7 +106,7 @@ leave the line without specifying data for this column.
 ------------------------------------------------------------------------
 
 **Note:** Whenever a [form load
-interface](Loading_from/to_a_Load_Table "wikilink") is used to update a
+interface](Loading-from/to-a-Load-Table ) is used to update a
 form, that interface must fill in all mandatory columns. If it does not,
 the **INTERFACE** program will fail.
 
@@ -148,7 +148,7 @@ imported from the **AGENTS** table, and (2) the rep’s number
 **Notes:**
 
 -   If you want the entire form to be read-only, you can make it a
-    [query form](Forms#Query_Forms "wikilink"), thereby blocking all
+    [query form](Forms#Query-Forms ), thereby blocking all
     record insertions, updates and deletions.
 -   The *Privilege Explorer* can be used to make updateable columns
     read-only for specific users. See the *Privilege Explorer Wizard*
@@ -303,7 +303,7 @@ column name (or table name) in this form, nor do you designate a join
 column and join table (see below). Instead you need to use the *Form
 Column Extension* sub-level form, in a similar manner as you record
 calculated columns. For more details, see [Calculated
-Columns](#Calculated_Columns "wikilink")).
+Columns](#Calculated-Columns )).
 
 > **Example:** See the **STARTDATE** column in the *Service Calls* form
 > (**DOCUMENTS_Q**).
@@ -437,7 +437,7 @@ To add a calculated column to a given form, take the following steps:
 
 1.  Designate a unique column name in the *Form Column Name* column of
     the *Form Columns* form (abiding by all [column name
-    restrictions](#Column_Names_and_Titles "wikilink")).
+    restrictions](#Column-Names-and-Titles )).
 2.  Specify its position within the form in the *Pos* column.
 3.  If a calculated column displays a value that should not be revised,
     specify *R* in the *Read-only/Mandatory* column. Leave the column
@@ -456,7 +456,7 @@ To add a calculated column to a given form, take the following steps:
 6.  Enter the sub-level form, *Form Column Extension*.
 7.  Write the expression that determines the value of the column in the
     *Expression/Condition* column, using [SQL
-    syntax](SQL_Syntax "wikilink"). If there is not enough room for the
+    syntax](SQL-Syntax ). If there is not enough room for the
     entire expression, continue it in the sub-level form.
 8.  Designate the column type (e.g., **CHAR, INT, REAL**) in the *Column
     Type* column of the *Form Column Extension* form. Note that the
@@ -527,17 +527,17 @@ the **USERCLMNPRIV** table, as follows:
 
 ## Further Reading
 
--   [Forms](Forms "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
+-   [Forms](Forms )
+-   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
+    Insertion](Conditions-of-Record-Display-and-Insertion )
+-   [Direct Activations](Direct-Activations )
+-   [Form Refresh](Form-Refresh )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
+-   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Triggers](Form-Triggers )
+-   [Form Preparation](Form-Preparation )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

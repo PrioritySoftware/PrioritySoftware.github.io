@@ -9,7 +9,7 @@ The *Database Interpreter* (**DBI**) program comprises a database
 language created especially for constructing and modifying database
 tables.
 
-## Syntax Conventions {#syntax_conventions}
+## Syntax Conventions 
 
 In delineating the syntax for the *Database Interpreter* program, the
 following conventions are employed:
@@ -36,16 +36,16 @@ following conventions are employed:
     statements are enclosed within a pair of slashes and asterisks
     (e.g., /\* Open failed; no record meets condition \*/).
 
-## Modifying Database Tables via SQL Statements {#modifying_database_tables_via_sql_statements}
+## Modifying Database Tables via SQL Statements 
 
 In addition to using the options in the *Tables Generator*, you can run
 the *SQL Development* program and modify tables by means of SQL
 statements, using the syntax outlined below, provided you belong to the
 privilege group of the superuser (*tabula*) (for details, see
 [Installing Your
-Customizations](Installing_Your_Customizations "wikilink")).
+Customizations](Installing-Your-Customizations )).
 
-### Syntax for Tables {#syntax_for_tables}
+### Syntax for Tables 
 
 Create table\
 :**CREATE TABLE** *table_name* \[ *type* \]
@@ -74,7 +74,7 @@ Change table title\
 
 :   **CHANGE TITLE TO** \'*new_title*\';
 
-### Syntax for Columns {#syntax_for_columns}
+### Syntax for Columns 
 
 Add column to table
 
@@ -130,7 +130,7 @@ Change number type
 :   **FOR TABLE** *table_name* **COLUMN** *column_name*
 :   **CHANGE NUMBER TYPE TO INT**;
 
-### Syntax for Keys {#syntax_for_keys}
+### Syntax for Keys 
 
 Add new key to table
 
@@ -166,7 +166,7 @@ Change key type from unique to nonunique
 :   **KEY** { *key_priority \| (column_name 1, \... , column_name n*) }
 :   **CHANGE UNIQUE TO NONUNIQUE**;
 
-### Syntax for Key Columns {#syntax_for_key_columns}
+### Syntax for Key Columns 
 
 Add new column to key
 
@@ -190,12 +190,12 @@ Change column priority in key
 :   **COLUMN** *column_name*
 :   **CHANGE PRIORITY TO** *new_column_priority*;
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Tables](Tables "wikilink")
--   [Table Columns](Table_Columns "wikilink")
--   [Keys](Keys "wikilink")
+-   [Tables](Tables )
+-   [Table Columns](Table-Columns )
+-   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options_for_Creating_and_Modifying_Tables,_Columns_and_Keys "wikilink")
+    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
 -   [Viewing Tables in the
-    Database](Viewing_Tables_in_the_Database "wikilink")
+    Database](Viewing-Tables-in-the-Database )

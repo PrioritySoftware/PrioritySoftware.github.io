@@ -33,9 +33,9 @@ The newly created text form will appear in the *Form Generator* form,
 and its linkage to the upper-level form will be displayed through the
 appropriate forms (*Sub-level Forms* and *Upper-level Forms*). Its base
 table will appear in the *Table Dictionary*. See also [Text Form
-Variables](SQL_Variables#Text_Form_Variables "wikilink").
+Variables](SQL-Variables#Text-Form-Variables ).
 
-## Removing HTML Tags from a Text Table {#removing_html_tags_from_a_text_table}
+## Removing HTML Tags from a Text Table 
 
 All text tables in **\'\'Priority***(e.g., **PARTTEXT**, **ORDERSTEXT**)
 contain HTML tags. Sometimes, however, you may want to receive the
@@ -111,19 +111,19 @@ UNLINK PARTTEXT;
 LABEL 99;
 ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
+-   [Forms](Forms )
+-   [Form Columns](Form-Columns )
+-   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Accessing a Related Form](Accessing_a_Related_Form "wikilink")
+    Insertion](Conditions-of-Record-Display-and-Insertion )
+-   [Direct Activations](Direct-Activations )
+-   [Form Refresh](Form-Refresh )
+-   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Form](Designing-a-Screen-Painted-Form )
+-   [Form Triggers](Form-Triggers )
+-   [Form Preparation](Form-Preparation )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

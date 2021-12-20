@@ -12,7 +12,7 @@ custom form column to appear in this Choose list, it must meet one of
 the following conditions:
 
 -   The name of a [calculated form
-    column](Form_Columns#Calculated_Columns "wikilink") must contain the
+    column](Form-Columns#Calculated-Columns ) must contain the
     following string: **EMAIL** (e.g., **PRIV_ORDEMAIL**). The e‑mail or
     text message will be sent to the address or phone number defined in
     that form column.
@@ -35,7 +35,7 @@ with the specified user (in the *Personnel File* form). For form columns
 taken from the **UGROUPS** table, the e-mail/text message will be sent
 to the members of the specified group.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

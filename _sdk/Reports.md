@@ -11,13 +11,13 @@ its sub-levels (*System Management → Generators → Reports*).
 An easy way to create a custom report is to copy an existing one (using
 the *Copy Report* program in the same menu) and then make revisions to
 it. In fact, this method is mandatory if you want to change the [sorting
-or grouping of columns](Organizing_Report_Data "wikilink").
+or grouping of columns](Organizing-Report-Data ).
 
 Reports selectively display data stored in the database, as well as
 simple calculations of that data (e.g., sum totals). They can also
 display complex calculations of data, defined by SQL expressions.
 Finally, sophisticated operations can be performed on data by including
-the report in a [procedure](Procedures "wikilink") --- i.e., a batch of
+the report in a [procedure](Procedures ) --- i.e., a batch of
 executable steps that are carried out in a predefined sequence. In fact,
 most **\'\'Priority**\'\' reports are embedded in procedures. To
 simplify things, the examples referred to here (e.g., **ORDERSBYCUST**)
@@ -25,7 +25,7 @@ will be treated as simple reports, even though some of them are actually
 processed reports activated by a procedure.
 
 You can create standard and [tabular reports
-(tables)](Types_of_Reports "wikilink"). Reports and tables can display
+(tables)](Types-of-Reports ). Reports and tables can display
 the same data, but in different formats. Reports tend to be more
 detailed, displaying a relatively large amount of information. Tabular
 reports are used to show summarized information.
@@ -35,7 +35,7 @@ A report is characterized by:
 -   a unique name and title
 -   a set of report columns derived from the columns of one or more
     tables in the database
--   [calculated columns](Calculated_Columns_in_Reports "wikilink")
+-   [calculated columns](Calculated-Columns-in-Reports )
     (optional), whose values are determined by other columns.
 
 ------------------------------------------------------------------------
@@ -47,7 +47,7 @@ saved in ASCII format.
 
 ------------------------------------------------------------------------
 
-## Copying Reports {#copying_reports}
+## Copying Reports 
 
 The *Copy Report*program copies:
 
@@ -63,12 +63,12 @@ When assigning a name to the new report, be sure to follow the rules
 designated below. After the program is completed, make any needed
 revisions to the copy.
 
-## Report Attributes {#report_attributes}
+## Report Attributes 
 
 To revise a report\'s attributes (or to open a new report manually), use
 the appropriate columns in the*Report Generator* form.
 
-### Report Name {#report_name}
+### Report Name 
 
 As with forms, the report name is a short name by which the report is
 identified by the system. There are certain restrictions (which also
@@ -84,7 +84,7 @@ apply to report column names):
     add to **\'\'Priority**\'\'for the customer in question; e.g.,
     **XXXX_ORDERS**).
 
-### Report Title {#report_title}
+### Report Title 
 
 The report title is the means of identifying the report in the user
 interface. The designated title will appear in menus, at the top of the
@@ -127,15 +127,15 @@ opening a new report manually, specify "Internal Development"; this way
 you (and your customers) will be able to use the report no matter which
 modules of***Priority*** have been purchased.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Report Columns](Report_Columns "wikilink")
--   [Organizing Report Data](Organizing_Report_Data "wikilink")
+-   [Report Columns](Report-Columns )
+-   [Organizing Report Data](Organizing-Report-Data )
 -   [Refining Report Data
-    Display](Refining_Report_Data_Display "wikilink")
+    Display](Refining-Report-Data-Display )
 -   [Calculated Columns in
-    Reports](Calculated_Columns_in_Reports "wikilink")
--   [Types of Reports](Types_of_Reports "wikilink")
--   [Running a Report](Running_a_Report "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+    Reports](Calculated-Columns-in-Reports )
+-   [Types of Reports](Types-of-Reports )
+-   [Running a Report](Running-a-Report )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

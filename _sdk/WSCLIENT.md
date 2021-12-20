@@ -18,7 +18,7 @@ web services. Use the following syntax to interface with a web service
 >
 > ;
 
-## WSCLIENT Parameters {#wsclient_parameters}
+## WSCLIENT Parameters 
 
 -   *:endpoint_url* -- the URL of the web service. Limited to 127
     characters.
@@ -79,9 +79,9 @@ web services. Use the following syntax to interface with a web service
     XML file.
 -   Requests sent to the web service and response received will be
     written to the server log when it is set to record
-    [DEBUG](Debug_Tools#Logging "wikilink") level messages.
+    [DEBUG](Debug-Tools#Logging ) level messages.
 
-### Interfacing With OAuth2 {#interfacing_with_oauth2}
+### Interfacing With OAuth2 
 
 You can use **WSCLIENT** to interface with services that require
 authorization by OAuth2. Doing so requires some additional setups:

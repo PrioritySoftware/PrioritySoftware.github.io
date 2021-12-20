@@ -5,7 +5,7 @@ layout: sdk_nav
 
 ## Introduction
 
-See also [Form Triggers](Form_Triggers "wikilink").
+See also [Form Triggers](Form-Triggers ).
 
 Essentially, the built-in triggers perform certain checks and, if the
 checks are successful, update the database accordingly. When a new
@@ -77,7 +77,7 @@ POST-DELETE triggers.
 > form that generate the insert/update/delete of records in the
 > **SERVCALLS** table.
 
-## Field Triggers {#field_triggers}
+## Field Triggers 
 
 If, when in insert mode, you fill in all columns that make up the base
 table\'s unique key (which is often a single column, like **ORDNAME** or
@@ -169,7 +169,7 @@ POST-FIELD trigger copies the value of **CUSTDES** into **CDES**.
 
 ------------------------------------------------------------------------
 
-## Insert Triggers {#insert_triggers}
+## Insert Triggers 
 
 When a line is exited, ***Priority***'s built-in insert triggers check
 that values have been assigned to all the columns comprising any unique
@@ -199,7 +199,7 @@ FROM ORDERS
 WHERE ORDNAME = :ORDERS.ORDNAME;
 ```
 
-## Update Triggers {#update_triggers}
+## Update Triggers 
 
 In addition to most of the functions performed by the insert triggers,
 ***Priority***'s built-in update triggers ensure that no column which
@@ -213,7 +213,7 @@ links one form to another form has been updated.
 > is not updateable. Rather, its value is automatically assigned by the
 > system.
 
-## Delete Triggers {#delete_triggers}
+## Delete Triggers 
 
 ***Priority***'s delete triggers prevent the violation of referential
 integrity. That is, they do not allow the deletion of any record
@@ -228,15 +228,15 @@ SELECT 94 INTO :PROGMSG
 FROM ORDERITEMS WHERE (:$1.ORD <> 0 AND ORD = :$1.ORD );
 ```
 
-## More on Triggers {#more_on_triggers}
+## More on Triggers 
 
--   [SQL Variables](SQL_Variables "wikilink")
--   [Creating Your Own Triggers](Creating_Your_Own_Triggers "wikilink")
--   [Error and Warning Messages](Error_and_Warning_Messages "wikilink")
--   [Sending a Mail Message](Sending_a_Mail_Message "wikilink")
+-   [SQL Variables](SQL-Variables )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
 -   [Changing Column Titles
-    Dynamically](Changing_Column_Titles_Dynamically "wikilink")
+    Dynamically](Changing-Column-Titles-Dynamically )
 -   [Including One Trigger in
-    Another](Including_One_Trigger_in_Another "wikilink")
+    Another](Including-One-Trigger-in-Another )
 -   [Trigger Errors and
-    Warnings](Trigger_Errors_and_Warnings "wikilink")
+    Warnings](Trigger-Errors-and-Warnings )

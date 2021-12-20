@@ -4,10 +4,10 @@ layout: sdk_nav
 ---
 
 The third step in [creating a BPM flow
-chart](Creating_BPM_Flow_Charts "wikilink") is to modify the new
+chart](Creating-BPM-Flow-Charts ) is to modify the new
 document.
 
-## Assigned to {#assigned_to}
+## Assigned to 
 
 Add an *Assigned to* column to the new document (**XXXX_MYDOC**).
 Consequently, when a user changes the status of the document to a status
@@ -36,7 +36,7 @@ Do List* form for that user.
         of the document (e.g., Price Quote, Blanket Sales Order), which
         will appear as the *Document Type* in the *To Do List* form.
 
-## The Status Column {#the_status_column}
+## The Status Column 
 
 1.  Add another column to the **MYDOC** table: **MYDOCSTAT**-- **INT**,
     13, *Status (ID)*. This column must have the same name as the column
@@ -74,7 +74,7 @@ Do List* form for that user.
     PRE-INSERT, PRE-UPDATE and PRE-DELETE triggers that print an error
     if the status doesn\'t allow changes.
 
-## Connecting the New Document to the To Do List {#connecting_the_new_document_to_the_to_do_list}
+## Connecting the New Document to the To Do List 
 
 1.  Add the following hidden column to **XXXX_MYDOC**(listed are the
     *Form Column Name*, *Table Name* and *Column Name*, respectively):
@@ -112,6 +112,6 @@ Do List* form for that user.
     :   `DELETE FROM TODOLIST WHERE TYPE = 'PRIV_MYBPM' AND IV = :$.MYDOC;`
 
 The next step is to [update the STATUSTYPES
-table](Updating_the_STATUSTYPES_Table "wikilink"). Optionally, you can
+table](Updating-the-STATUSTYPES-Table ). Optionally, you can
 [enable document tracking for this
-form.](Enabling_Document_Tracking "wikilink")
+form.](Enabling-Document-Tracking )

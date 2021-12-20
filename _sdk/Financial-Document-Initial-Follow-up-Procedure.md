@@ -8,7 +8,7 @@ and follow-up procedures to help ensure that financial documents meet
 your requirements and that additional actions are taken once a document
 is finalized (e.g. updating privately created fields).
 
-## Initial Procedures {#initial_procedures}
+## Initial Procedures 
 
 In the **PREENAME** (Initial Procedure) column of the **IVTYPES** form,
 you can set an initial procedure to check data and ensure that the
@@ -30,7 +30,7 @@ procedures:
     2.  Parameter 2 -- Invoice Date
     3.  Parameter 3 -- Invoice Number
 
-## Follow-up Procedures {#follow_up_procedures}
+## Follow-up Procedures 
 
 In the **CONTENAME** (Follow-Up Procedure) column of the **IVTYPES**
 form, you can set a follow-up procedure to perform additional actions

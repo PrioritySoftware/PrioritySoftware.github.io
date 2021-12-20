@@ -10,7 +10,7 @@ order. They are often used to create *processed reports* --- reports
 that are generated following data manipulation. Similarly, they can be
 used to create a *document*. This is a special procedure that collects
 data from more than one report and displays a final file using an
-Internet browser (see [Documents](Documents "wikilink")). Another type
+Internet browser (see [Documents](Documents )). Another type
 of procedure is used to create a new document (e.g., a sales order) on
 the basis of another document, by means of an interface to a form.
 Finally, procedures also serve to run the SQLI program as well as
@@ -19,7 +19,7 @@ internal programs, which perform data manipulations and other tasks.
 ***You should not create a procedure that inserts records directly into
 a table.*** Instead, use the procedure to run an interface to a form
 that will insert the records. For details, see [Form
-Loads](Form_Loads "wikilink").
+Loads](Form-Loads ).
 
 A procedure is characterized by:
 
@@ -40,12 +40,12 @@ should be very similar in terms of their logic.
 
 **Note:** There are some slight differences when procedures are written
 for the ***Priority*** web interface; see [Working with the Priority Web
-Interface](Working_with_the_Priority_Web_Interface "wikilink") for
+Interface](Working-with-the-Priority-Web-Interface ) for
 details.
 
 ------------------------------------------------------------------------
 
-## Copying Procedures {#copying_procedures}
+## Copying Procedures 
 
 The *Copy Procedure*program copies:
 
@@ -67,19 +67,19 @@ revisions to the copy.
 
 -   If the procedure creates reports, you may need to copy one or more
     of those reports as well, using the [*Copy Report*
-    program](Reports "wikilink").
+    program](Reports ).
 -   If the procedure runs a program, you must not make any changes to
     parameters used by the program.
 
 ------------------------------------------------------------------------
 
-## Procedure Attributes {#procedure_attributes}
+## Procedure Attributes 
 
 To revise a procedure\'s attributes (or to open a new procedure
 manually), use the appropriate columns in the *Procedure Generator*
 form, unless otherwise designated.
 
-### Procedure Name {#procedure_name}
+### Procedure Name 
 
 The procedure name is a short name by which the procedure is identified
 by the system. The following restrictions apply:
@@ -94,7 +94,7 @@ by the system. The following restrictions apply:
     that you add to **\'\'Priority**\'\' for the customer in question;
     e.g., **XXXX_WWWSHOWORDER**).
 
-### Procedure Title {#procedure_title}
+### Procedure Title 
 
 The title is the means of identifying the procedure in the user
 interface. The procedure title will appear in menus and at the top of
@@ -106,7 +106,7 @@ report instead (using the appropriate form in the *Report Generator*).
 If you specify an output title for both, then the one assigned to the
 report will be used.
 
-### Procedure Type {#procedure_type}
+### Procedure Type 
 
 Designate the type of procedure:
 
@@ -120,8 +120,8 @@ Designate the type of procedure:
 
 ------------------------------------------------------------------------
 
-**Note:** See [Processed Reports](Processed_Reports "wikilink") and
-[Documents](Documents "wikilink").
+**Note:** See [Processed Reports](Processed-Reports ) and
+[Documents](Documents ).
 
 ------------------------------------------------------------------------
 
@@ -143,15 +143,15 @@ When opening a new procedure manually, specify "Internal Development";
 this way you (and your customers) will be able to use the procedure no
 matter which modules of***Priority*** have been purchased.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Procedure Steps](Procedure_Steps "wikilink")
--   [Procedure Parameters](Procedure_Parameters "wikilink")
--   [User Input in Procedures](User_Input_in_Procedures "wikilink")
--   [Procedure Step Queries](Procedure_Step_Queries "wikilink")
--   [Procedure Flow Control](Procedure_Flow_Control "wikilink")
--   [Procedure Message Display](Procedure_Message_Display "wikilink")
--   [Processed Reports](Processed_Reports "wikilink")
--   [Running a Procedure](Running_a_Procedure "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+-   [Procedure Steps](Procedure-Steps )
+-   [Procedure Parameters](Procedure-Parameters )
+-   [User Input in Procedures](User-Input-in-Procedures )
+-   [Procedure Step Queries](Procedure-Step-Queries )
+-   [Procedure Flow Control](Procedure-Flow-Control )
+-   [Procedure Message Display](Procedure-Message-Display )
+-   [Processed Reports](Processed-Reports )
+-   [Running a Procedure](Running-a-Procedure )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )

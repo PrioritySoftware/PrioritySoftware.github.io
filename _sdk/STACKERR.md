@@ -4,7 +4,7 @@ layout: sdk_nav
 ---
 
 When running the interface program using [the \'-m\'
-option](Executing_the_Form_Load#Form_Load_Parameters "wikilink"), each
+option](Executing-the-Form-Load#Form-Load-Parameters ), each
 error message is broken up into several lines. Thus, for example,
 instead of the following message:
 
@@ -14,9 +14,9 @@ quotation of Draft‎*status.\'\'
 the user will receive 4 messages when the \'-m\' option is used:
 
 *1: Sales Rep Order Num*\
-*2: form \'Sales Orders\'*‎\
+*2: form \'Sales Orders\'*
 *3: Price Quotation A9000019*\
-‎*4: You cannot base the order on a price quotation of Draft‎ status.*‎
+*4: You cannot base the order on a price quotation of Draft status.*
 
 This can be problematic if the user tries to open two sales orders based
 on two different price quotations and both quotations have the Draft
@@ -91,7 +91,7 @@ the linked file. This will create a separate linked file of the
 > LABEL 99;
 > ```
 
-## Further Reading {#further_reading}
+## Further Reading 
 
-[Click](Advanced_Programming_Tools "wikilink") for information on
+[Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.

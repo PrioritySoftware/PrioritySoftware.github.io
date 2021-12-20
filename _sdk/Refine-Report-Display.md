@@ -3,17 +3,17 @@ title:  Refining Report Data Display
 layout: sdk_nav
 ---
 
-## Spacing Between Report Rows {#spacing_between_report_rows}
+## Spacing Between Report Rows 
 
-In a [report](Reports "wikilink") with fixed positions, you can use a
+In a [report](Reports ) with fixed positions, you can use a
 hidden column with the title *#LINEHEIGHT* (**INT** type) to add a fixed
 amount of space between all rows of the report.
 
 > **Example:** See the **BTLFORM100_DET** report.
 
-## Width, Decimal Precision and Column Title {#width_decimal_precision_and_column_title}
+## Width, Decimal Precision and Column Title 
 
-[Report columns](Report_Columns "wikilink") inherit the widths, decimal
+[Report columns](Report-Columns ) inherit the widths, decimal
 precisions and titles of the table columns whose data they display.
 These values may be revised, where desired.
 
@@ -45,7 +45,7 @@ any **REAL** column with a precision of 0.
 
 ------------------------------------------------------------------------
 
-## Date Displays {#date_displays}
+## Date Displays 
 
 Dates may be displayed in a variety of formats. First of all, the user
 will see dates according to either the American (MM/DD/YY) or European
@@ -61,7 +61,7 @@ specify a column width of between 14 and 19, depending on the display
 mode. Finally, you can designate a date format of your own via a
 calculated column (see below).
 
-## Non-display of Zero Values {#non_display_of_zero_values}
+## Non-display of Zero Values 
 
 You have the option of displaying or withholding the display of zero
 values with respect to **TIME**(00:00), **INT**(0) and **REAL**(0.0)
@@ -73,7 +73,7 @@ Val*column of the *Report Columns*form, you can choose to:
 -   when using a group function to calculate group and/or report totals,
     leave both report columns and totals blank when value is zero (*A*).
 
-## Displaying HTML Text in Reports {#displaying_html_text_in_reports}
+## Displaying HTML Text in Reports 
 
 There are several types of reports that can display HTML text:
 
@@ -94,7 +94,7 @@ There are several types of reports that can display HTML text:
     title when DAYS.DAYNUM = 0, and displays the text when DAYS.DAYNUM =
     1.
 
-## HTML Design {#html_design}
+## HTML Design 
 
 Various options are offered for revising the default HTML design of
 reports. Some affect specific report columns, while others affect the
@@ -124,7 +124,7 @@ Design* sub-level of the *Report Columns*form.
     fields in this tab to divide the page into cells and to determine
     how each column is positioned within a cell (for more details, see
     [Displaying the
-    Document](Documents#Displaying_the_Document "wikilink")).
+    Document](Documents#Displaying-the-Document )).
     -   Indicate the number of the row(s) and column(s) in which the
         field will be located.
     -   Designate the percentage of the *Column Width* when the field
@@ -175,7 +175,7 @@ sub-level of the *Report Generator* form.
 > use of the *Design* and *Location* tabs, see column #50 in the same
 > report. For inclusion of a picture, see column #170 in that report.
 
-## Designing Reports Using CSS Classes {#designing_reports_using_css_classes}
+## Designing Reports Using CSS Classes 
 
 ***Priority*** reports are designed using predefined CSS classes and
 IDs, which are maintained in a system file named *style.htm* (located in
@@ -209,7 +209,7 @@ CSS classes can be applied to any of the following objects in
 > **Example:**For report definitions, see the **WWWTABS2** report. For
 > report column definitions, see columns #5 and #108 in the same report.
 
-## Tips for Advanced Users {#tips_for_advanced_users}
+## Tips for Advanced Users 
 
 Setting the column width is particularly useful when you display two
 reports on the same HTML page, as it helps you line up the fields in the
@@ -236,14 +236,14 @@ To include more than one field in the same cell:
     -   in a separate table cell (*D*). Define the location of that cell
         in the next sub-level, *Column Title--HTML Design*.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Report Columns](Report_Columns "wikilink")
--   [Organizing Report Data](Organizing_Report_Data "wikilink")
+-   [Report Columns](Report-Columns )
+-   [Organizing Report Data](Organizing-Report-Data )
 -   [Calculated Columns in
-    Reports](Calculated_Columns_in_Reports "wikilink")
--   [Types of Reports](Types_of_Reports "wikilink")
--   [Running a Report](Running_a_Report "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
--   [Reports](Reports "wikilink")
+    Reports](Calculated-Columns-in-Reports )
+-   [Types of Reports](Types-of-Reports )
+-   [Running a Report](Running-a-Report )
+-   [Help Messages](Help-Messages )
+-   [Rules for Customizing](Rules-for-Customizing )
+-   [Reports](Reports )

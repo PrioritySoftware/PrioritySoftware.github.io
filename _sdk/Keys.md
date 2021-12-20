@@ -9,14 +9,14 @@ The last step in table construction is to specify the keys attached to
 the table, the columns that make up each key, and the priority of each
 column within the key. Keys are also assigned priorities, but this is
 only relevant for certain types (see [Rules for
-Keys](#Rules_for_Keys "wikilink")). The order in which keys and key
+Keys](#Rules-for-Keys )). The order in which keys and key
 columns are designated determines their priorities.
 
 Keys are used to provide access to records in the table. Autounique and
 unique keys ensure that no two records in a given table will have
 identical values in the columns making up these keys.
 
-## The Autounique Key {#the_autounique_key}
+## The Autounique Key 
 
 The autounique key is similar to the identity column in MSSQL or
 sequence in Oracle. It allows you to create a column that will
@@ -69,7 +69,7 @@ table.
 > **Example:** As there are several order items for each order, there is
 > an autounique key in the **ORDERS** tables.
 
-## Unique Keys {#unique_keys}
+## Unique Keys 
 
 A unique key allows for rapid data retrieval via the columns that make
 up the key. Moreover, it ensures that no two records in a given table
@@ -114,7 +114,7 @@ columns that make up the unique key.
 > two records would have the same unique key, and one of them would be
 > deleted.
 
-## Nonunique Key {#nonunique_key}
+## Nonunique Key 
 
 The nonunique key is used to provide rapid access to data in the table.
 It should include columns which are frequently used to retrieve data and
@@ -160,7 +160,7 @@ which is comprised of two columns: **CUST** and **CLOSED**. In this
 case, the **CUST** column is also treated as a nonunique key in its own
 right.
 
-## Rules for Keys {#rules_for_keys}
+## Rules for Keys 
 
 -   There may only be one autounique key per table. It must comprise a
     single column of **INT** type which does not appear in any other of
@@ -184,7 +184,7 @@ right.
 
 **Note:** You can check the consequences of assigning key column
 priority by means of the SQL optimizer (see [Executing SQL
-Statements](Executing_SQL_Statements "wikilink")).
+Statements](Executing-SQL-Statements )).
 
 ------------------------------------------------------------------------
 
@@ -194,7 +194,7 @@ Statements](Executing_SQL_Statements "wikilink")).
 > This would allow for rapid retrieval by **LASTNAME**:\
 > `SELECT * FROM EMPLOYEES WHERE LASTNAME = ’Brown’;`
 
-## Keys and Record Links {#keys_and_record_links}
+## Keys and Record Links 
 
 Unique and Autounique keys also determine how record links are generated
 in forms that are based on them:
@@ -210,12 +210,12 @@ in forms that are based on them:
 > the table. However, in the **Contacts** form (based on **PHONEBOOK**),
 > the link is based on the autounique PHONE column.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
--   [Tables](Tables "wikilink")
--   [Table Columns](Table_Columns "wikilink")
+-   [Tables](Tables )
+-   [Table Columns](Table-Columns )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options_for_Creating_and_Modifying_Tables,_Columns_and_Keys "wikilink")
+    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
 -   [Viewing Tables in the
-    Database](Viewing_Tables_in_the_Database "wikilink")
--   [DBI Syntax](DBI_Syntax "wikilink")
+    Database](Viewing-Tables-in-the-Database )
+-   [DBI Syntax](DBI-Syntax )

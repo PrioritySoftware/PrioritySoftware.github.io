@@ -6,12 +6,9 @@ layout: sdk_nav
 
 ## Introduction
 
-When an imported column appears in a given form, the user can move from
-that column to a target form (generally the form which is derived from
-the join table). In this way, the user can gain easy and rapid access to
-the target form without having to use the menus.
+When an imported column appears in a given form, the user can move from that column to a target form (generally the form which is derived from the join table). In this way, the user can gain easy and rapid access to the target form without having to use the menus.
 
-## The Target Form {#the_target_form}
+## The Target Form 
 
 The target form must meet two conditions:
 
@@ -62,38 +59,10 @@ one.
 > Columns* (**ZOOMCOLUMNS**) form: *Source Column* = SONPARTNAME;
 > *Target Column* = PARTNAME.
 
-## Dynamic Access {#dynamic_access}
+## Dynamic Access
 
-Sometimes you want the target form to vary, based on the data displayed
-in a given record. For example, in the *Audit Trail* form (**LOGFILE**),
-the target form of the **LOGDOCNO** column (*Doc/Invoice Number*) is the
-relevant document (**DOCUMENT_D, DOCUMENTS_N, AINVOICES**, etc.).
+Sometimes you want the target form to vary, based on the data displayed in a given record. For example, in the *Audit Trail* form (**LOGFILE**), the target form of the **LOGDOCNO** column (*Doc/Invoice Number*) is the relevant document (**DOCUMENT_D, DOCUMENTS_N, AINVOICES**, etc.).
 
-This is achieved by defining a special hidden form column, **ZOOM1**, as
-well as specifying **ZOOM1** as the target form in the *Form Column
+This is achieved by defining a special hidden form column, **ZOOM1**, as well as specifying **ZOOM1** as the target form in the *Form Column
 Extension* sub-level form. This hidden form column holds the internal
-number (in the current example, **EXEC**) of the relevant form for each
-record. The **DOCTYPES** table has a special **EXEC** column that holds
-the internal number of the form for that document type. In the PRE-FORM
-trigger of the **LOGFILE** form, the variables that hold internal
-numbers of the relevant forms are initialized. In some cases the target
-form is the form defined in the **DOCTYPES** table; in other cases the
-target form is one of the variables initialized in the PRE-FORM trigger
-of the **LOGFILE** form.
-
-## Further Reading {#further_reading}
-
--   [Forms](Forms "wikilink")
--   [Form Columns](Form_Columns "wikilink")
--   [Sub-level Forms](Sub-level_Forms "wikilink")
--   [Conditions of Record Display and
-    Insertion](Conditions_of_Record_Display_and_Insertion "wikilink")
--   [Direct Activations](Direct_Activations "wikilink")
--   [Form Refresh](Form_Refresh "wikilink")
--   [Creating a Text Form](Creating_a_Text_Form "wikilink")
--   [Designing a Screen-Painted
-    Form](Designing_a_Screen-Painted_Form "wikilink")
--   [Form Triggers](Form_Triggers "wikilink")
--   [Form Preparation](Form_Preparation "wikilink")
--   [Help Messages](Help_Messages "wikilink")
--   [Rules for Customizing](Rules_for_Customizing "wikilink")
+number (in the current example, **EXEC**) of the relevant form for each record. The **DOCTYPES** table has a special **EXEC** column that holds the internal number of the form for that document type. In the PRE-FORM trigger of the **LOGFILE** form, the variables that hold internal numbers of the relevant forms are initialized. In some cases the target form is the form defined in the **DOCTYPES** table; in other cases the target form is one of the variables initialized in the PRE-FORM trigger of the **LOGFILE** form.

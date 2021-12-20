@@ -3,14 +3,14 @@ title: Additional Input Options (Priority Lite/Dashboards)
 layout: sdk_nav
 ---
 
-## Procedures That Work Like Forms (Input Screens) {#procedures_that_work_like_forms_input_screens}
+## Procedures That Work Like Forms (Input Screens) 
 
 In addition to procedures that display reports, you can create
 procedures that enable user input and have the "look" of a form.
 
 To avoid replication of code (which leads to bugs), load the data into
 ***Priority*** via an interface to the desired form, using the [form
-load utility](Form_Loads "wikilink").
+load utility](Form-Loads).
 
 1.  Using **GENERALLOAD** as your load table, create a linked file of
     all data.
@@ -20,30 +20,26 @@ load utility](Form_Loads "wikilink").
     program.
 
 > **Example:**
->
-> ``` tsql
-> LINK GENERALLOAD TO :$.LNK;
->
-> /* Insert one or more lines into the linked file */
-> INSERT INTO GENERALLOAD (LINE,RECORDTYPE,…) VALUES(…);
->
-> /* Run the interface on the linked file */ 
-> EXECUTE INTERFACE ‘MYINTERFACE’, SQL.TMPFILE, ‘-L’, :$.LNK;
->
-> /* Insert the message that the interface gave to :PAR1 */
-> SELECT MESSAGE INTO :PAR1 FROM ERRMSGS
-> WHERE USER = ATOI(RSTRIND(SQL.CLIENTID,1,9)) 
-> AND TYPE = ‘i’ AND LINE = 1;
->
-> /* Display the message if any lines were not loaded successfully */
-> ERRMSG1 WHERE EXISTS (SELECT ‘X’ FROM GENERALLOAD
-> WHERE LOADED <> ‘Y’ AND LINE > 0);
-> UNLINK GENERALLOAD;
-> ```
+```sql
+LINK GENERALLOAD TO :$.LNK;
+/* Insert one or more lines into the linked file */
+INSERT INTO GENERALLOAD (LINE,RECORDTYPE,…) VALUES(…);
+/* Run the interface on the linked file */ 
+EXECUTE INTERFACE ‘MYINTERFACE’, SQL.TMPFILE, ‘-L’, :$.LNK;
+/* Insert the message that the interface gave to :PAR1 */
+SELECT MESSAGE INTO :PAR1 FROM ERRMSGS
+WHERE USER = ATOI(RSTRIND(SQL.CLIENTID,1,9)) 
+AND TYPE = ‘i’ AND LINE = 1;
 
-## User Input Validation and Messages {#user_input_validation_and_messages}
+/* Display the message if any lines were not loaded successfully */
+ERRMSG1 WHERE EXISTS (SELECT ‘X’ FROM GENERALLOAD
+WHERE LOADED <> ‘Y’ AND LINE > 0);
+UNLINK GENERALLOAD;
+```
 
-### Input Validation {#input_validation}
+## User Input Validation and Messages 
+
+### Input Validation 
 
 In many cases, there is a need to validate user input, whether of
 procedure parameters or of input report columns. To validate user input:
@@ -53,7 +49,7 @@ procedure parameters or of input report columns. To validate user input:
     procedure will display the same HTML page as before, together with
     the appropriate error message.
 
-### Resetting Variables and/or Generating the Reports Again {#resetting_variables_andor_generating_the_reports_again}
+### Resetting Variables and/or Generating the Reports Again 
 
 Sometimes, before the page is re-displayed, you may want to send the
 procedure back to a step prior to INPUT, so as to reset variables or to
@@ -69,7 +65,7 @@ generate the same reports anew. To go back to an earlier step:
 
 ------------------------------------------------------------------------
 
-### Another Way to Display Messages {#another_way_to_display_messages}
+### Another Way to Display Messages 
 
 To display any type of message (including error messages) on the HTML
 page:
@@ -77,7 +73,7 @@ page:
 1.  Add a MESSAGE step to the procedure, prior to the INPUT step.
 2.  Record the message number as the value of its (single) parameter.
 
-## Adding Explanatory Text {#adding_explanatory_text}
+## Adding Explanatory Text 
 
 In many procedures, especially those requiring user input, it is helpful
 to add brief text that guides the user through the actions he or she has
@@ -103,16 +99,16 @@ To record the set text itself:
 3.  In the *Set Text* sub-level form, write the explanatory text that
     will appear on the HTML page.
 
-## Input of Text {#input_of_text}
+## Input of Text 
 
 To enable the user to input text in the HTML screen, use a procedure
 parameter of **TEXT** type. The user keys in an unlimited number of
 lines in the text field, and these lines are returned to the procedure
 via a file linked to the **PROCTABLETEXT** table. For an example, see
 [Inputting Text Into an HTML
-Screen](User_Input_in_Procedures#Inputting_Text_Into_an_HTML_Screen "wikilink").
+Screen](User-Input-in-Procedures#Inputting-Text-Into-an-HTML-Screen ).
 
-## Input of Attachments {#input_of_attachments}
+## Input of Attachments 
 
 The input of attachment files is another special type of procedure
 input. Use a **CHAR** parameter and specify *Y* in the *Browse Button*
@@ -125,15 +121,15 @@ in the procedure parameter. That is, after the INPUT step, the value in
 the attachment parameter will not be the filename that the user keyed
 in, but rather the filename in the server.
 
-## Further Reading {#further_reading}
+## Further Reading 
 
 -   [User Identification for Priority
-    Lite/Dashboards](User_Identification_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
 -   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing_HTML_Reports_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
 -   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining_a_Base_Page_for_HTML_Pages_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
 -   [Writing Dashboard
-    Procedures](Writing_Dashboard_Procedures "wikilink")
+    Procedures](Writing-Dashboard-Procedures )
 -   [Priority Lite and
-    Dashboards](Priority_Lite_and_Dashboards "wikilink")
+    Dashboards](Priority-Lite-and-Dashboards )
