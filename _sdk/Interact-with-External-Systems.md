@@ -10,47 +10,27 @@ The following is a list of programs that may be run within
 triggers](Form-Triggers ), [procedure
 steps](Procedure-Steps )), mainly for file management.
 
-Copy a file (COPYFILE):
-:   `EXECUTE COPYFILE :f1,:f2;`
+Copy a file (COPYFILE):\
+<code>EXECUTE COPYFILE :f1,:f2;</code>
 
-```{=html}
-<!-- -->
-```
+Download a file from the Internet (COPYFILE):\
+<CODE>EXECUTE COPYFILE '-i', :url, :tofile, timeout, [:msgfile];</CODE>
 
-Download a file from the Internet (COPYFILE):
-:   `EXECUTE COPYFILE '-i', :url, :tofile, timeout, [:msgfile];`
+Move a file (MOVEFILE):\
+<CODE>EXECUTE MOVEFILE :f1,:f2;</CODE>
 
-```{=html}
-<!-- -->
-```
+Delete a file (DELWINDOW):\
+<CODE>EXECUTE DELWINDOW 'f',:f1;</CODE>
 
-Move a file (MOVEFILE):
-:   `EXECUTE MOVEFILE :f1,:f2;`
+Create a new folder (MAKEDIR):\
+<CODE>EXECUTE MAKEDIR :DIR;</CODE>
 
-```{=html}
-<!-- -->
-```
-
-Delete a file (DELWINDOW):
-:   `EXECUTE DELWINDOW 'f',:f1;`
-
-```{=html}
-<!-- -->
-```
-
-Create a new folder (MAKEDIR):
-:   `EXECUTE MAKEDIR :DIR;`
-
-```{=html}
-<!-- -->
-```
-
-Display the date of a given file (GETDATE):
-:   `EXECUTE GETDATE 'path/file_name', :$.STK;`
+Display the date of a given file (GETDATE):\
+<CODE>EXECUTE GETDATE 'path/file_name', :$.STK;</CODE>
 
 > **Example of use in a procedure step:**
 >
-> ``` tsql
+> ```sql
 > LINK STACK TO :$.STK; 
 > ERRMSG 1 WHERE :RETVAL <= 0;
 >
@@ -64,12 +44,12 @@ Display the date of a given file (GETDATE):
 > UNLINK STACK;
 > ```
 
-Display the size of a given file (GETSIZE):
-:   `EXECUTE GETSIZE 'path/file_name', :$.STK;`
+Display the size of a given file (GETSIZE):\
+<CODE>EXECUTE GETSIZE 'path/file_name', :$.STK;</CODE>
 
 > **Example of use in a procedure step:**
 >
-> ``` tsql
+> ```sql
 > LINK STACK TO :$.STK;
 > ERRMSG 500 WHERE :RETVAL <= 0;
 >
@@ -84,33 +64,35 @@ Display the size of a given file (GETSIZE):
 > ```
 
 Open a file using the default application for that file type (SHELLEX):
-:   `:file = 'c:\test.doc'; EXECUTE SHELLEX :file;`/\* if MS-Word is the
+```sql
+:file = 'c:\test.doc'; 
+EXECUTE SHELLEX :file; /* if MS-Word is the
     default application for files of type *doc*, opens the
-    *c:\\test.doc* file in Word \*/
-:   `:file = 'www.google.com'; EXECUTE SHELLEX :file`/\* will open
-    default browser and redirect to the URL specified in :file \*/
-
-```{=html}
-<!-- -->
+    c:\test.doc* file in Word */
+:file = 'www.google.com';
+ EXECUTE SHELLEX :file`/* will open
+    default browser and redirect to the URL specified in :file */
 ```
 
 Open a folder in Windows Explorer (SHELLEX):
-:   `:file = 'c:\temp'; EXECUTE SHELLEX :file;`
-
-------------------------------------------------------------------------
+```sql
+:file = 'c:\temp'; 
+EXECUTE SHELLEX :file;
+```
 
 **Note:** The SHELLEX command is not supported in the web client..
 
-------------------------------------------------------------------------
-
 Return a random value in decimal or hexadecimal format (PRANDOM):
-:   `EXECUTE PRANDOM :file, :outtype;` /\*to return a hexadecimal, use Y
-    as the outtype parameter; to return a decimal, specify anything
-    other than Y \*/
+```sql
+EXECUTE PRANDOM :file, :outtype; 
+/*to return a hexadecimal, use Y
+ as the outtype parameter; to return a decimal, specify anything
+ other than Y */
+```
 
 > **Example of use in a procedure step:**
 >
-> ``` tsql
+> ```sql
 > SELECT SQL.TMPFILE INTO :STK1 FROM DUMMY;
 > SELECT SQL.TMPFILE INTO :STK2 FROM DUMMY;
 >
@@ -167,7 +149,7 @@ appears beneath these examples.
 > characters, thereby converting them to the corresponding lowercase
 > letter:
 >
-> ``` tsql
+> ```sql
 > EXECUTE FILTER 'A', 'Z', 'a', :INPUT, :OUTPUT;
 > ```
 >
@@ -175,7 +157,7 @@ appears beneath these examples.
 > comma-delimited file (where \'09\' represents the ASCII value of the
 > tab character):
 >
-> ``` tsql
+> ```sql
 > EXECUTE FILTER '09', '09', ',', :INPUT, :OUTPUT;
 > ```
 
@@ -203,6 +185,7 @@ appears beneath these examples.
 -   **FILTER** -trim \[*Input* *Output*\] --- trims blank spaces at the
     beginning and end of each line in input file; also removes CR
     (carriage return) at the end of the line.
+    <!-- TODO: Add other filters (Vladimir) -->
 
 ### FILTER parameters 
 
@@ -229,7 +212,7 @@ assumed that the files to be loaded are named as follows:
 *loadorder1201061355.load* (where the number represents the date and
 time the file was created).
 
-``` priority
+```sql
 :DIR = '../../tmpDir';
 
 SELECT SQL.TMPFILE INTO :ST6 FROM DUMMY;
@@ -290,8 +273,8 @@ have the following structure:
 -   EXECUTE WINAPP
 -   The full path in which the external program is located
 
-**Note:**In the web interface, the **WINAPP** command can only run
-external programs if they are located in the BIN.95 folder.
+    **Note:** In the web interface, the **WINAPP** command can only run
+    external programs if they are located in the BIN.95 folder of the server.
 
 -   The **-w** parameter (optional). This parameter causes **WINAPP** to
     wait until the external program is completed before returning to
@@ -325,6 +308,9 @@ line (see examples below):
 > EXECUTE WINAPP 'C:\Windows', '-w','notepad','tabula.ini';
 > ```
 
+
+<!-- TODO: Move to Windows only section -->
+
 ## Executing Priority Commands from an External Application (WINRUN) 
 
 Using the **WINRUN** command, you can execute any ***Priority*** entity
@@ -337,7 +323,7 @@ from the DOS command prompt. To do so, use the following syntax
 > var value*\"
 
 -   *x* is the drive on which ***Priority***is located. If you are not
-    running this command from the server,*x*is the*network*drive on
+    running this command from the server, *x* is the *network* drive on
     which***Priority*** is located on the server.
 -   The second parameter is two double quote marks ( \" ).
 -   *company* is the name of the ***Priority*** company in which you are
@@ -378,8 +364,8 @@ from the DOS command prompt. To do so, use the following syntax
     from which the command is run. To work with a different *tabula.ini*
     file, add the command:
 
-> ``` priority
-> set TABULAINIORIG=''xxx''.ini
+> ```cmd
+> set TABULAINIORIG=xxx.ini
 > ```
 >
 > where *xxx* is the name of the file in question.

@@ -30,7 +30,7 @@ user can then choose between using that value or modifying it. To do so,
 specify the pre-set value in the *Value* column (of the *Procedure
 Parameters* form) for the parameter in question. Of course, the
 designated value must match the parameter's data type. Alternatively,
-you can specify the name of a variable (e.g., :date), provided that its
+you can specify the name of a variable (e.g., :DATE), provided that its
 value has already been defined (e.g., in a previous procedure step).
 
 The pre-set input value appears the first time the user runs the
@@ -53,7 +53,6 @@ form). Then enter the *Procedure Parameter Extension* sub-level form and
 specify *C* in the *Type* column. Indicate the range of message numbers
 in the *From Message* and *To Message* columns.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -62,8 +61,6 @@ in the *From Message* and *To Message* columns.
 -   The value of this parameter can then be included in subsequent
     procedure steps (e.g., as the value assigned to a [GOTO
     command](Procedure-Steps#Basic-Commands )).
-
-------------------------------------------------------------------------
 
 ## Choosing Options from a List of Radio Buttons 
 
@@ -96,13 +93,10 @@ radio button, use the empty string (\' \') as the second argument.
 
 > **Example:** See the **COPYPRICELIST** procedure.
 
-------------------------------------------------------------------------
 
 **Note:** Rules for the CHOOSE query are similar to those in
 [CHOOSE-FIELD
 triggers](Creating-Your-Own-Triggers#CHOOSE-FIELD ).
-
-------------------------------------------------------------------------
 
 ## Retrieving Records Into a Linked File 
 
@@ -119,9 +113,9 @@ unlimited number of lines in the text field, and these lines are
 returned to the procedure via a file linked to the **PROCTABLETEXT**
 table.
 
-> **Example:**\
+> **Example:**
 >
-> ``` tsql
+> ```sql
 > LINK PROCTABLETEXT TO :$.TXT; 
 > GOTO 99 WHERE :RETVAL <= 0;
 > INSERT INTO GENERALLOAD (LINE,RECORDTYPE,TEXT)
@@ -138,7 +132,7 @@ also affect user input:
     *Browse Button* column. A Windows Explorer will open in which the
     user selects the file in question.
 
-:   **Note:**The parameter in question must be of **CHAR** type.
+    **Note:** The parameter in question must be of **CHAR** type.
 
 -   To allow users to save a new file, specify *S* in the same column.
 -   To encode user input (e.g., when a password is given), flag the
@@ -185,13 +179,13 @@ that the move will be to ***another root form based on the same
 table***:
 
 -   by designating a main target form (type *M* in the
-    **Zoom/International** column of the *Form Generator*form for the
+    **Zoom/International** column of the *Form Generator* form for the
     form in question);
 -   by designating an application target form (type *Z* in the same
     column);
 -   by designating a form as a target for this particular parameter
     (specify the name of the relevant form in the *Target Form Name*
-    column of the *Procedure Parameter Extension*form).
+    column of the *Procedure Parameter Extension* form).
 
 The last option overrides all other target forms, and the application
 target overrides the main target form.
@@ -206,17 +200,15 @@ The specified target form must meet two conditions:
 -   Its base table must include the column from which the user
     originates.
 
-------------------------------------------------------------------------
 
-**Note:**To disable automatic access from a given column, specify the
+**Note:** To disable automatic access from a given column, specify the
 **NULL** form as the target form.
 
-------------------------------------------------------------------------
 
 ## Input During Direct Activation 
 
 When a procedure is [activated from within a
-form](Direct-Activations ), input is received from the record
+form](Actions), input is received from the record
 on which the cursor rests. That is, a linked file is created, based on
 the form's base table and consisting of that single record. This linked
 file is input to the procedure by the PAR parameter. Therefore, any
@@ -231,7 +223,7 @@ If you want to receive additional input from the user, you must create
 an input screen (using the INPUTF command) or a menu of choices (using
 the CHOOSEF command).
 
-**Tip:**To run the same procedure from a menu, make sure that *Column
+**Tip:** To run the same procedure from a menu, make sure that *Column
 Name* and *Table Name* are also recorded.
 
 ## Using a Form for Input 

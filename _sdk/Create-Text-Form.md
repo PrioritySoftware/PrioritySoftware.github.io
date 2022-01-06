@@ -15,19 +15,19 @@ name of the upper-level form, with the addition of the characters
 title *Remarks*. You may, of course, revise any of these (in the *Form
 Generator* form).
 
-------------------------------------------------------------------------
 
-**Note:** The newly created table will inherit the name of the base
+
+> **Note:** The newly created table will inherit the name of the base
 table for the upper-level form, with the addition of the characters
 **TEXT**, as well as its table type.
 
-------------------------------------------------------------------------
+
 
 To automatically create a text form and link it to its upper-level form,
 run the *Create Text Form* program (*System Management → Generators →
 Forms*).
 
-------------------------------------------------------------------------
+
 
 The newly created text form will appear in the *Form Generator* form,
 and its linkage to the upper-level form will be displayed through the
@@ -44,13 +44,13 @@ exporting***Priority**\'\' data to an external database. You can use the
 **DELHTML** compiled program to delete HTML tags from any text table
 that has the structure defined below.
 
-------------------------------------------------------------------------
 
-**Important note:** Do ***not*** run this program on the original table.
+
+> **Important note:** Do ***not*** run this program on the original table.
 Instead, create a linked table on which the program can run, so that the
 original table will not be affected.
 
-------------------------------------------------------------------------
+
 
 You can run the **DELHTML** program on any text table that is composed
 of the following columns and unique key:\
@@ -72,25 +72,25 @@ of the following columns and unique key:\
 4.  **IDCOLUMN4**
 5.  **TEXTLINE**
 
-------------------------------------------------------------------------
 
-**Note:** **IDCOLUMN1** - **IDCOLUMN4** refer to identifying columns
+
+> **Note:** **IDCOLUMN1** - **IDCOLUMN4** refer to identifying columns
 included in the table\'s unique key, such as **PART, ORD, ORDI**.
 **IDCOLUMN2, IDCOLUMN3**, and **IDCOLUMN4** apply to tables whose unique
 key comprises more than two columns, such as **USEREDUCATIONTEXT**.
 
-------------------------------------------------------------------------
+
 
 The **DELHTML** program receives a table name and a linked table as
 input. Its output is the linked table in which all HTML tags have been
 removed from the **TEXT** column.
 
-------------------------------------------------------------------------
+
 
 **Example:** To delete HTML tags from the **PARTTEXT** table for Part
 '010', the following code would be used:
 
-``` tsql
+```sql
 :PART = 0;
 SELECT PART INTO :PART FROM PART WHERE PARTNAME = '010';
 SELECT SQL.TMPFILE INTO :TXT FROM DUMMY;

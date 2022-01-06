@@ -73,7 +73,7 @@ dates into another pattern (e.g., *Fri, May-12-06*; *12 May 2006*). It
 is used as follows:\
 `DTOA(table.column, ’pattern’)`
 
-> **Example:**DTOA(ORDERS.CURDATE, 'MMM DD, YYYY') converts an order
+> **Example:** DTOA(ORDERS.CURDATE, 'MMM DD, YYYY') converts an order
 > date of 07/12/06 to Jul 12, 2006 (in American format). The type of
 > such a calculated column would be **CHAR**, and its width would be 12.
 
@@ -125,7 +125,7 @@ If you then dump the report\'s query using the *SQL Development*
 (**WINDBI**) program, you will see that the SQL query now includes the
 following conditions in the GROUP BY clause:
 
-``` tsql
+```sql
 HAVING SUM(DUMMY.DUMMY) = 0 
 AND COUNT(*) &gt; :MIN 
 AND (1 = 1)

@@ -6,14 +6,14 @@ layout: sdk_nav
 ## Introduction
 
 You can import data from text files into an interim table in
-**\'\'Priority***from tab-delimited text files (Excel files can be
+***Priority*** from tab-delimited text files (Excel files can be
 converted into tab-delimited files using [a utility
 program](Table-Loads#Converting-an-Excel-File-to-a-Tab-delimited-Text-File-for-DBLOAD )).
 During the execution of this table load, you can perform additional
 processing defined in a set of SQL statements (a load query). Results of
-the load can be viewed --- and revised --- in a form based on the
+the load can be viewed - and revised - in a form based on the
 interim table. Finally, a procedure can be used to transfer the final
-data to a regular***Priority**\'\' form (e.g., **ORDERS**), using the
+data to a regular***Priority*** form (e.g., **ORDERS**), using the
 form load defined above.
 
 In general, a table load interface is characterized by:
@@ -37,14 +37,10 @@ stored in the system\\load directory or one of its sub-directories
 company). Its file name must match the name of the load file defined in
 the *Characteristics for Download* form.
 
-------------------------------------------------------------------------
-
 **Note:** ***Priority***\'s interface tools can import data from either
 ASCII or Unicode (UTF-16) files, and will automatically recognize the
 format used. Data exported from***Priority*** for use in outgoing
 interfaces will be saved in ASCII format, unless otherwise specified.
-
-------------------------------------------------------------------------
 
 This name is subject to the following restrictions:
 
@@ -55,7 +51,7 @@ This name is subject to the following restrictions:
 -   You may not use a reserved word.
 -   The name assigned to any newly created form load should include a
     common four-letter prefix (the same one you use for all entities
-    that you add to **\'\'Priority**\'\'for the customer in question;
+    that you add to ***Priority*** for the customer in question;
     e.g., **XXXX_LOADFNC2**).
 
 If the file in question is stored in a company sub-directory, also flag
@@ -98,11 +94,7 @@ into which data should be inserted. Indicate its type and position
 (first and last character). You can also add a description in the
 *Title* column.
 
-------------------------------------------------------------------------
-
 **Note:** In a file with tab separators, column width is meaningless.
-
-------------------------------------------------------------------------
 
 ### Manual Load Query 
 
@@ -112,11 +104,9 @@ variable that is input into a field, to be used in the load query. For
 each variable, designate its type and define its position within the
 file. You can also add a description (in the *Title* column).
 
-------------------------------------------------------------------------
 
 **Note:** In a file with tab separators, variable width is meaningless.
 
-------------------------------------------------------------------------
 
 Next, record the SQL statements making up the query in the *Load Query*
 sub-level form. You can include ERRMSG and WRNMSG commands. An error
@@ -149,7 +139,7 @@ There are several ways to execute a table load:
 -   Activate the load from an SQLI step of a procedure, using the
     following syntax (parameters are explained in the next section):
 
-``` tsql
+```sql
 EXECUTE DBLOAD ‘-L’, ‘loadname’, ['-I', 'input_file'], ['-I'], ['-T', 'table', 'linkfile'], 
 ['-g', 'debug_file'], ['-ns'], ['-N'], ['-E', 'unloaded_file'], ['-M'], ['-C'], ['-B'], 
 ['-U'], ['-u'], ['-v'], ['msgfile'];
@@ -161,11 +151,9 @@ EXECUTE DBLOAD ‘-L’, ‘loadname’, ['-I', 'input_file'], ['-I'], ['-T', 't
     listed in the *Procedure Parameters* form (sub-level form of
     *Procedure Steps*).
 
-------------------------------------------------------------------------
 
-**Note:**The last two methods offer more options than the first.
+**Note:** The last two methods offer more options than the first.
 
-------------------------------------------------------------------------
 
 ### Table Load Parameters 
 
@@ -181,7 +169,7 @@ EXECUTE DBLOAD ‘-L’, ‘loadname’, ['-I', 'input_file'], ['-I'], ['-T', 't
     table.
 -   \'-g\', *\'debug_file\'* --- This option creates a file that
     displays each query and its execution. This is similar to other
-    ***Priority***debugging tools that offer the --g option (see [Debug
+    ***Priority*** debugging tools that offer the --g option (see [Debug
     Tools](Debug-Tools )).
 -   '-ns' --- By default, the **INTERFACE** program displays a progress
     bar as the load is executed. Use this option to disable this
@@ -241,13 +229,12 @@ Use the EXL2TXT command (from a trigger or Step Query of an SQLI step)
 to convert an .xlsx file to the tab-delimited text file required for
 table loads.
 
-> **Example:** \<syntaxhighlight lang=\"tsql\" enclose=\"pre> EXECUTE
-> WINAPP \'p:\\bin.95\', \'-w\', \'EXL2TXT.exe\', :F, :T; (where p:
-> represents the full path to bin.95)
->
-> ```{=html}
-> </syntaxhighlight>
+> **Example:** 
+> ```sql
+> EXECUTE WINAPP 'p:\bin.95', '-w', 'EXL2TXT.exe', :F, :T; /* where p:
+> represents the full path to bin.95) */
 > ```
+
 
 The file is created with UTF-16 encoding.
 

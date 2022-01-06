@@ -15,14 +15,10 @@ display information on tables already in the database
 -   *Columns per Table* report
 -   *Keys per Table* report.
 
-------------------------------------------------------------------------
-
 **Note:** In addition, various utilities accessed via the *SQL
 Development* program are helpful in understanding table structure. For
 details, see [Viewing Table
 Structure](Viewing-Table-Structure ).
-
-------------------------------------------------------------------------
 
 ## Further Reading 
 

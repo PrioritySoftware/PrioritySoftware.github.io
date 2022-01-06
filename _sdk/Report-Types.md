@@ -27,19 +27,15 @@ display value of *T*.
 > etc.). In order to sort correctly by month number, rather than month
 > name, a hidden sort column (type *O*) is used (see column #102).
 
-------------------------------------------------------------------------
-
 **Notes:**
 
--   Each [group](Organizing-Report-Data#Grouping ) appears in
+-   Each [group](Organizing-Report-Data#Grouping) appears in
     a separate row in the table.
--   You can save horizontal space by using vertical mode (specify *V*in
-    the *Table Display Mode*column of the *Report Generator*form).
+-   You can save horizontal space by using vertical mode (specify *V* in
+    the *Table Display Mode* column of the *Report Generator* form).
 -   If only one row is displayed for the group in question, you can to
     choose to hide its title (specify *h* in the *Table Display Mode*
     column).
-
-------------------------------------------------------------------------
 
 ### Totals
 
@@ -70,12 +66,8 @@ following columns to the report:
 
 > **Example:** See the **ORDERSREP** report.
 
-------------------------------------------------------------------------
-
 **Note:**The companies displayed in the report are the ones the user has
 selected via *Define Multiple Companies*(in the *File* menu).
-
-------------------------------------------------------------------------
 
 ## Processed Reports 
 
@@ -87,10 +79,10 @@ the report requires manipulations other than simple averages, sum
 totals, minimums or maximums. The procedure allows for more complex
 operations to be performed on data. For a detailed explanation, see
 [Processed Reports](Processed-Reports ). Generally, you
-include a report in a procedure via the *Procedure Steps*form, a
-sub-level of the *Procedure Generator*form. You can then view that
-linkage in the *Procedure Link*form, another sub-level of the *Report
-Generator*form.
+include a report in a procedure via the *Procedure Steps* form, a
+sub-level of the *Procedure Generator* form. You can then view that
+linkage in the *Procedure Link* form, another sub-level of the *Report
+Generator* form.
 
 ## Further Reading 
 

@@ -28,12 +28,12 @@ table.
     AutoUnique -- **MYDOCSTAT**\
     Unique -- **STATDES**
 
-------------------------------------------------------------------------
+
 
 **Note:** All the names and descriptions of forms, tables, columns, etc.
 are given here for demonstration purposes and can be changed as desired.
 
-------------------------------------------------------------------------
+
 
 The next step is to [create the statuses
 form](Creating-the-Statuses-Form ).

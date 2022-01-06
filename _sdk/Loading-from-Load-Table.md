@@ -16,9 +16,9 @@ be taken:
     the default **GENERALLOAD** table as your load table and designing
     your own table.
 
-    :   **Tips:**
-    :   \- If needed, you can add columns to the **GENERALLOAD** table.
-    :   \- If you create your own table, in addition to the mandatory
+    **Tips:**
+    - If needed, you can add columns to the **GENERALLOAD** table.
+    - If you create your own table, in addition to the mandatory
         columns (see below), use column names that are relevant to the
         loaded data, as this will facilitate programming and interface
         definitions.
@@ -46,8 +46,6 @@ type, width, title):
 
 The **LINE** column must be the unique key of the table.
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   The predefined **GENERALLOAD** table meets all these criteria and
@@ -57,7 +55,6 @@ The **LINE** column must be the unique key of the table.
     store a message that will be added to the form\'s error message (if
     there is one). See, e.g., the **DELWTASKITEMS** procedure.
 
-------------------------------------------------------------------------
 
 In some cases (see below) you may need more than three key columns. As
 you define the forms included in the load, the *Form Load Designer* will
@@ -97,7 +94,6 @@ For each form, if you want the load to overwrite existing records in the
 sub-levels, flag the *Replace Form Data* column. Leave this column blank
 to add the new records to existing ones.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -108,7 +104,6 @@ to add the new records to existing ones.
     deletion.
 -   This flag is used mainly for text forms.
 
-------------------------------------------------------------------------
 
 ## Link Form Columns to Table Columns 
 
@@ -137,7 +132,7 @@ form.
 If you want the **INTERFACE** program to treat empty strings and zero
 values as a true value, flag the *Insert Null Values* column.
 
-> **Example:**Flag this column to load records into the **ORDERITEMS**
+> **Example:** Flag this column to load records into the **ORDERITEMS**
 > form for ordered parts with a unit price of 0. Otherwise, the
 > **INTERFACE** program will ignore the 0 value in that column and
 > insert the default unit price of the item instead by activating the

@@ -5,16 +5,16 @@ layout: sdk_nav
 
 ## Introduction
 
-A form trigger in ***Priority***is a set of SQL statements that affect
+A form trigger in ***Priority*** is a set of SQL statements that affect
 record insertions, updates and deletions during form completion. Before
 creating triggers, it is important to fully understand the use of SQL
-syntax in***Priority*** (see [SQL Syntax](SQL-Syntax )).
+syntax in ***Priority*** (see [SQL Syntax](SQL-Syntax )).
 
-***Priority***provides for several types of triggers in the construction
+***Priority*** provides for several types of triggers in the construction
 of forms. It both includes built-in triggers of its own and enables you
 to create your own triggers: Column (or Field) triggers, Row triggers
 and Form triggers. This section first explains variables that are
-employed in triggers, then briefly illustrates***Priority***’s built-in
+employed in triggers, then briefly illustrates ***Priority***’s built-in
 triggers, and finally provides an in-depth look at user-designed
 triggers. Each type of user-designed trigger is described and
 exemplified, in addition to which a series of complex examples are

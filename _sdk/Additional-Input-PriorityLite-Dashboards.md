@@ -19,7 +19,7 @@ load utility](Form-Loads).
 4.  If they were not, display the error message returned by the load
     program.
 
-> **Example:**
+**Example:**
 ```sql
 LINK GENERALLOAD TO :$.LNK;
 /* Insert one or more lines into the linked file */

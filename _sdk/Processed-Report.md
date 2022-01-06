@@ -41,12 +41,10 @@ the report step, using the :HTMLFNCTITLE variable.
 
 > **Example:** See step 20 of the **FRTRANS** procedure.
 
-------------------------------------------------------------------------
 
 **Note:**This feature can also be used in HTML documents (see
 [Documents](Documents )).
 
-------------------------------------------------------------------------
 
 ## Defining Dynamic Column Titles 
 
@@ -57,7 +55,7 @@ column title in an SQLI step preceding the report step.
 > displays the title from the procedure rather than what is defined in
 > the report:
 >
-> ``` tsql
+> ```sql
 > :COLTITLES = 1;
 > SELECT ENTMESSAGE('$', 'P', 10) 
 > INTO :title1 FROM DUMMY;

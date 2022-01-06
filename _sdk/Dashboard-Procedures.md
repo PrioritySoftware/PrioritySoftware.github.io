@@ -6,7 +6,7 @@ layout: sdk_nav
 ## Introduction
 
 The [procedures](Procedures ) used to display
-***Priority***Dashboards in***Priority***and on Outlook (***Priority on
+***Priority*** Dashboards in ***Priority*** and on Outlook (***Priority on
 Outlook***) are very similar to other HTML procedures. Dashboard
 procedures, however, are assigned a different value in the
 *Rep/Wizard/Dashboard* column of the *Procedure Generator*:
@@ -36,22 +36,21 @@ There are three types of Dashboard procedures:
 2.  Revise any HTML pages (stored in the *system\\html* directory) in
     your new procedure as follows:\
     Locate the line:\
-    onload=\"<javascript:DashboardLoad(WWWDB_SERVICEMNGR)>\
+    <code>onload= <javascript:DashboardLoad(WWWDB_SERVICEMNGR)></code>
     and replace the procedure name (**WWWDB_SERVICEMNGR**) with the name
     of the new procedure (e.g., **PRIV_NEWDASHBOARD**).
 3.  Customize the new procedure (**PRIV_NEWDASHBOARD**) as desired, and
     attach the desired internal procedures (i.e., procedures with the
     *Rep/Wizard/Dashboard* value *d*).\
-    **Note:** See [Rules for
-    Customizing](Rules-for-Customizing#Procedures ).
+    **Note:** See [Rules for Customizing](Rules-for-Customizing#Procedures ).
 
 ## Adding a Dashboard Procedure to Outlook 
 
 Once you have finished preparing the new Dashboard procedure, you can
-add it to Outlook from the **Mail** menu in **\'\'Priority***(**Mail →
-Mail Options → Outlook → Priority on Outlook**).***Priority**\'\'
+add it to Outlook from the **Mail** menu in ***Priority*** (**Mail →
+Mail Options → Outlook → Priority on Outlook**). ***Priority***
 Dashboards appear in Outlook under the heading **Priority Dashboards**
-(in the Shortcuts pane).
+ (in the Shortcuts pane).
 
 ## CRM Dashboards 
 

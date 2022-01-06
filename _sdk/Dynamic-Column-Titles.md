@@ -4,8 +4,7 @@ layout: sdk_nav
 ---
 
 Column titles can be set dynamically, so that they are assigned when the
-user enters the form. This option is available for forms that do not have a default design, and which
-have a value of *T* in the *One-to-many* column of the *Form Generator*.
+user enters the form. This option is available for forms that do not have a default design, and which have a value of *T* in the *One-to-many* column of the *Form Generator*.
 
 To change the column title, use a variable made up of the form name, the
 title name and \"TITLE\".
@@ -14,8 +13,7 @@ title name and \"TITLE\".
 > \"MY_FORM\" form to \"New Title,\" write in the [PRE-FORM
 > trigger](Creating-Your-Own-Triggers#PRE-FORM ):
 >
-> ``` tsql
->  
+> ```sql
 > MYFORM.TEST.TITLE = 'New Title';
 > ```
 >

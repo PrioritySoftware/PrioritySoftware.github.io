@@ -5,10 +5,10 @@ layout: sdk_nav
 
 ## Syntax Conventions 
 
-Syntax for SQL statements in ***Priority***is based on ANSI standard
+Syntax for SQL statements in ***Priority*** is based on ANSI standard
 syntax and its interpretation, but also includes several additional
 features. Most of the material applies to all SQL queries
-in***Priority***--- those found in form triggers, step queries in
+in ***Priority*** --- those found in form triggers, step queries in
 procedures, load queries and expressions for calculated form columns and
 report columns. Occasionally, however, reference is made to features
 that only apply to one or two of these (e.g., form triggers). When this
@@ -23,7 +23,7 @@ In delineating SQL syntax, the following conventions are employed:
 -   When a set of options is enclosed within curved brackets, one of the
     various options *must*be chosen (e.g., { *form/trigger*\|
     *form/form_column/trigger*}).
--   Characters in **bold**must be specified exactly as they appear.
+-   Characters in **bold** must be specified exactly as they appear.
     Characters in *italics*have to be replaced by appropriate values. An
     underscore between two or more italized words indicates that they
     should be treated as a single value (e.g., **SQLI \$U**/*query_file
@@ -34,7 +34,7 @@ In delineating SQL syntax, the following conventions are employed:
 -   Ellipses (\...) indicate that several values may be indicated for
     the previous argument (e.g., *table_name*, \...).
 -   In examples, curved brackets {} enclosing text signify a comment
-    which does not belong to the SQL statement. Comments *within*SQL
+    which does not belong to the SQL statement. Comments *within* SQL
     statements are enclosed within a pair of slashes and asterisks
     (e.g., /\* Open failed; no record meets condition \*/).
 

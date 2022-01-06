@@ -24,40 +24,48 @@ Dictionaries → Translation*).
 2.  After every run of the *Prepare Upgrades* program, run the *SQL
     Development* program and record the following query:
 
-    :   `EXECUTE INSTITLE `*`fromfile,`` ``tofile`*`;`
-    :   where *fromfile* is the upgrade file you have just created
+```sql
+    EXECUTE INSTITLE `fromfile` `tofile`;
+```
+where:
+- *fromfile* is the upgrade file you have just created
         (i.e., ..\\*system\\upgrades*\\NN.*sh*, where NN is the version
-        number), and *tofile* is the output file that will include the
+        number), 
+- *tofile* is the output file that will include the
         titles in all languages (the base language of English and any
         languages for which there are translations in the dictionaries).
-    :   **Important!** When preparing an upgrade for a system that has a
+
+**Important!** When preparing an upgrade for a system that has a
         different base language than your own system (e.g., yours is a
         Hebrew installation, while the customer\'s is an English
         installation), you will want the titles to be taken from the
         translation (*System Management → Dictionaries → Translation*).
         In this case, record the following query instead:
-    :   `EXECUTE INSTITLE '-l', `**`langcode`**`, `*`fromfile,`` ``tofile`*`;`
-    :   where langcode is the code of the language from which to take
-        the titles (e.g., \'3\' for American English), *fromfile* is the
-        upgrade file you have just created, and *tofile* is the output
-        file that will include the titles in the target language.
+```
+EXECUTE INSTITLE '-l', langcode, `fromfile,` `tofile`;
+```
+where:
+- *langcode* is the code of the language from which to take
+        the titles (e.g., 3 for American English)
+- *fromfile* is the upgrade file you have just created, 
+- *tofile* is the output file that will include the titles in the target language.
 3.  From the **Execute** menu, select **SQLI Interpreter**.
 
-> **Examples:** For version number 34, the following command would be
+> **Examples:** For version revision number 34, the following command would be
 > recorded:
 >
-> ``` tsql
-> EXECUTE INSTITLE '..\..\system\upgrades\34.sh','..\..\system\upgrades\34-inst.sh '; 
+> ```sql
+> EXECUTE INSTITLE '..\..\system\upgrades\34.sh','..\..\system\upgrades\34-inst.sh'; 
 > ```
 >
-> The new file in system\\upgrades, 34-inst.sh, will contain the titles
+> The new file in system\\upgrades, **34-inst.sh**, will contain the titles
 > of the upgrade you created.
 >
 > For the same version, when upgrading from your own Hebrew installation
 > to the customer\'s English installation, the following command would
 > be recorded:
 >
-> ``` tsql
+> ```sql
 > EXECUTE INSTITLE -l', '3', '..\..\system\upgrades\34.sh','..\..\system\upgrades\34-inst.sh ';
 > ```
 
@@ -71,7 +79,7 @@ revision as follows:
 
 Instead of:
 
-``` tsql
+```sql
 CREATE TABLE PRIV_NEWTABLE 'New Table Title' 1
 COL1(CHAR,3,'Column 1')
 COL2(CHAR,32,'Column 2)
@@ -80,7 +88,7 @@ UNIQUE(COL1);
 
 Use the following:
 
-``` tsql
+```sql
 CREATE TABLE PRIV_NEWTABLE '[Ktitle : PRIV_NEWTABLE]' 1
 COL1(CHAR,3,'[Column: PRIV_NEWTABLE/COL1]')
 COL2(CHAR,32,'[Column: PRIV_NEWTABLE/COL2]')
@@ -91,46 +99,46 @@ UNIQUE(COL1);
 
 Instead of:
 
-``` tsql
-:FOR TABLE MYTABLE INSERT MYNEWCOL
-:(INT,13,'My New Column Title'); 
+```sql
+FOR TABLE MYTABLE INSERT MYNEWCOL
+(INT,13,'My New Column Title'); 
 ```
 
 Use the following:
 
-``` tsql
-:FOR TABLE MYTABLE INSERT MYNEWCOL
-:(INT,13,'<nowiki>[Column: MYTABLE/MYNEWCOL]</nowiki>'); 
+```sql
+FOR TABLE MYTABLE INSERT MYNEWCOL
+(INT,13,'<nowiki>[Column: MYTABLE/MYNEWCOL]</nowiki>'); 
 ```
 
 ### Changing a Table Title 
 
 Instead of:
 
-``` tsql
-:FOR TABLE MYTABLE CHANGE TITLE TO 'New Title'; 
+```sql
+FOR TABLE MYTABLE CHANGE TITLE TO 'New Title'; 
 ```
 
 Use the following:
 
-``` tsql
-:FOR TABLE MYTABLE CHANGE TITLE TO '<nowiki>[Ktitle : MYTABLE]</nowiki>';
+```sql
+FOR TABLE MYTABLE CHANGE TITLE TO '<nowiki>[Ktitle : MYTABLE]</nowiki>';
 ```
 
 ### Changing a Table Column Title 
 
 Instead of:
 
-``` tsql
-: FOR TABLE MYTABLE COLUMN MYCOL 
-: CHANGE TITLE TO 'New Title'; 
+```sql
+FOR TABLE MYTABLE COLUMN MYCOL 
+CHANGE TITLE TO 'New Title'; 
 ```
 
 Use the following:
 
-``` tsql
-: FOR TABLE MYTABLE COLUMN MYCOL 
-: CHANGE TITLE TO <nowiki>[Column: MYTABLE /MYCOL]; </nowiki>
+```sql
+FOR TABLE MYTABLE COLUMN MYCOL 
+CHANGE TITLE TO <nowiki>[Column: MYTABLE /MYCOL]; </nowiki>
 ```
 
 When you finish modifying all DBI steps for the revision in question,

@@ -180,13 +180,9 @@ right.
 -   Changing a key column's priority will affect the priority of the
     other columns in the key.
 
-------------------------------------------------------------------------
-
 **Note:** You can check the consequences of assigning key column
 priority by means of the SQL optimizer (see [Executing SQL
 Statements](Executing-SQL-Statements )).
-
-------------------------------------------------------------------------
 
 > **Example:** In a key comprised of the columns **FIRSTNAME** and
 > **LASTNAME** in an **EMPLOYEES** table, you would give highest

@@ -6,7 +6,7 @@ layout: sdk_nav
 Using the WINHTML program, you can output the document in a variety of formats and control document properties. 
 
 In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
-```
+```sql
 EXECUTE WINHTML '-d' 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-g',] ['-s',] ['-e',] ['-edoc' | '-signpdf',] [''output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format' format_num,] ['-lang lang_num'] ['-AMAIL']
 ```
 ## WINHTML Parameters
@@ -78,9 +78,10 @@ Reminder: After a successful load, the AutoUnique value of each new order is sav
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS [,'-format',:PRINTFORMAT]; 
 LABEL 199;
 ```
-    Optionally, if you want to specify the format as part of the command, add '-format' and the format number (as a variable or by specifying the number directly).
 
-    **Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
+Optionally, if you want to specify the format as part of the command, add '-format' and the format number (as a variable or by specifying the number directly).
+
+**Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
 - 	To display the document as a Word file (-wo), use the following code instead:
 
 ```sql
@@ -132,7 +133,7 @@ These variables are updated during runtime, so that if several documents are bei
 
     Example: See the **WWWSHOWCIV** procedure.
 
-Note: See also the SHOWCOPY command in [Procedures](Procedures).
+**Note:** See also the SHOWCOPY command in [Procedures](Procedures).
 
 ## Windows Interface Only – Printing with WINACTIV
 If the user is working in the windows interface and has a default printer defined, you can send documents to the default printer:

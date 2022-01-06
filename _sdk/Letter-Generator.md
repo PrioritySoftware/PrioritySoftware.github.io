@@ -52,7 +52,7 @@ of this type should contain the following steps, in this order:
     -   An **ASCII** parameter with the value \"OUTPUT\", which receives
         the report\'s output.
 
-:   This report can be defined once and then reused as is for any
+    This report can be defined once and then reused as is for any
     procedures used to create letters, with no need for further
     modification.
 
@@ -65,7 +65,7 @@ of this type should contain the following steps, in this order:
     that can be included in the letter, and is based on the
     **LETTERSTACK** table (see below).
 
-> **Example:**See the standard **CUSTLETTER** procedure.
+> **Example:** See the standard **CUSTLETTER** procedure.
 
 **Note:** If you are creating a procedure used to create and send
 letters by copying an existing procedure, make sure to delete the
@@ -101,8 +101,6 @@ follows:
     letters to customers, this column can receive the autounique value
     of the customer\'s main contact).
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   To offer users the option of sending a letter using the [Automatic
@@ -119,8 +117,6 @@ follows:
 -   A single letter can be linked to more than one procedure (in the
     *Letter Generator*form). In such a case, users will be able to
     choose the desired procedure in the Print/Send Options dialogue box.
-
-------------------------------------------------------------------------
 
 ## Further Reading 
 

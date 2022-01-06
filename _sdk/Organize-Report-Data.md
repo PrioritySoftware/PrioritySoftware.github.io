@@ -5,8 +5,8 @@ layout: sdk_nav
 
 ## Introduction
 
-***Priority***enables you to organize the data displayed in
-[reports](Reports ). You can ensure that records are distinct
+***Priority*** enables you to organize the data displayed in
+[reports](Reports). You can ensure that records are distinct
 (i.e., prevent the multiple appearance of identical records); you can
 sort data according to one or more columns; you can group data; you can
 place certain columns in a header; and you can perform certain functions
@@ -28,7 +28,7 @@ As several items in a given order may have a balance greater than 0, the
 same order can appear more than once in the report. To prevent the
 repeated appearance, you must indicate that records should be distinct.
 
-Flag the *Distinct*column of the *Report Generator*form.
+Flag the *Distinct* column of the *Report Generator* form.
 
 ## Sorting
 
@@ -43,8 +43,6 @@ performed in ascending order, unless a different sort type is specified
 alphanumeric descending; for details, see [Sorting
 Data](Form-Columns#Sorting-Data )).
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   It is possible to sort data according to a column which does not
@@ -52,7 +50,7 @@ Data](Form-Columns#Sorting-Data )).
 -   Do not change the sorting of a standard report. Instead, copy the
     existing report and revise the copy to suit your needs.
 
-------------------------------------------------------------------------
+
 
 ## Grouping
 
@@ -72,7 +70,7 @@ repeated. It is therefore advisable to group by any columns which will
 otherwise repeat the same values. For instance, the customer name will
 not change until there is a new customer number. Thus, you should group
 by these columns. If you do not, the same customer name will be repeated
-for ***each***order of this customer.
+for ***each*** order of this customer.
 
 Assign any "Group by" column an integer in the *Group by*column of the
 *Report Columns*form. Integers need not be consecutive, but the first
@@ -82,15 +80,12 @@ constitute a single "Group by" set. Records will first be grouped by the
 set with the lowest integer, then by the set with the next lowest
 integer, and so on.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
 -   Grouping also affects output in tabular reports.
 -   Do not change the grouping of a standard report. Instead, copy the
     existing report and revise the copy to suit your needs.
-
-------------------------------------------------------------------------
 
 ## Headers
 
@@ -99,14 +94,14 @@ report, or they can be placed in report headers, at the top of each
 group. The latter option saves on horizontal space, enabling you to
 display more report columns.
 
-If you decide to use headers, ***always***place the first "Group by" set
+If you decide to use headers, ***always*** place the first "Group by" set
 in the header. You can then decide whether to also include the second
 "Group by" set, the third set, and so on.
 
-To place a "Group by" column in a header, specify either *H*or *h*in the
-*Header*column of the *Report Generator*form. Specify a capital
-*H*whenever you wish to begin a new line in the header. Specify the
-lower case *h*when you wish to continue on the same line. Both the title
+To place a "Group by" column in a header, specify either *H* or *h* in the
+*Header* column of the *Report Generator* form. Specify a capital
+*H* whenever you wish to begin a new line in the header. Specify the
+lower case *h* when you wish to continue on the same line. Both the title
 of the "Group by" column (e.g., *Customer Name*) and the value of the
 column (e.g., CRR Holding Company) will appear in the header. If you
 want to display the value only, add a semicolon to the left of the
@@ -123,19 +118,13 @@ each group on a new page.
     the*Report Columns *form for the first "Group by" set (*Group
     by\'**\'**= 1).
 
-```{=html}
-<!-- -->
-```
 -   To add blank lines after the group, specify an integer (up to 10) in
     the *Skip Lines*column for the first "Group by" set.
 
-```{=html}
-<!-- -->
-```
 -   To start a new page for each group, specify "--1" in the *Skip
     Lines* column for the first "Group by" set.
 
-:   **Note:** When multiple columns are included in the same \"Group
+    **Note:** When multiple columns are included in the same \"Group
     by\" set, a new page can only be started for the first column in the
     set.
 
@@ -155,14 +144,14 @@ determines whether debit or credit balances will be enclosed in
 parentheses. However, these parentheses will only appear in a column
 that is flagged as a financial balance column.
 
-Flag the *Balance*column of the *Report Columns*form.
+Flag the *Balance* column of the *Report Columns* form.
 
 ## Group Functions 
 
 If records have been grouped, then the data in any column which does not
 define the group may undergo one of several group functions (determined
-by the value appearing in the *Group Func.*column of the *Report
-Columns*form):
+by the value appearing in the *Group Func.* column of the *Report
+Columns* form):
 
 -   Totals can be calculated for each group (*Group Func.* = *S* for the
     column to be totaled).
@@ -170,7 +159,7 @@ Columns*form):
     Func.* = *R* for the "Group by" column in question).
 -   Totals can be calculated for the entire report by designating *T* in
     the *Group Func.* column.
--   Both group totals ***and***the entire report total can be displayed.
+-   Both group totals ***and*** the entire report total can be displayed.
     Specify *B* instead of *S* or *T*.
 -   You can repeat the previous value of a string (*Group Func.* = *R*
     for the column whose data is to be repeated).
@@ -186,7 +175,7 @@ Columns*form):
     column 180 in the **INCOME_BUDGETS** report (*Budget P&L -
     Summary*).
 
-:   **Note:**The expression must reference a calculated report column
+    **Note:**The expression must reference a calculated report column
     that has been defined in the *Report Column Extension* sub-level
     form (expressions in the *Expression/Condition (cont.)* sub level
     form will not be taken into account). The*Column Type* of the
@@ -197,12 +186,10 @@ Columns*form):
     *Opening Balance* column can be added to each figure appearing in
     the *Balance* column.
 
-------------------------------------------------------------------------
 
 **Note:** There is one other group function (*H*) that applies only to
 tabular reports (see below).
 
-------------------------------------------------------------------------
 
 ## Operations on Report Columns 
 
@@ -217,21 +204,18 @@ Depending on the value specified in the *Col. Func.*column of the
 -   a complex function (*F*) (defined in the *Report Column
     Extension*sub-level).
 
-When you specify a column function, only the *result*of the operation is
+When you specify a column function, only the *result* of the operation is
 displayed. That is, values for a number of lines are compressed into
 values appearing in a single line. For instance, with respect to a sum
 total, the same information that was detailed for a given group is
 summarized into a single value.
 
 > **Example:** The **AGEDEBTCUST2**report (*Daily Aged
-> Receivables*)makes use of the *S* column function to summarize the
+> Receivables*) makes use of the *S* column function to summarize the
 > amounts owed (in the *Cum. Sum Outstanding* and *Sum* columns).
 
-------------------------------------------------------------------------
+**Note:** You can combine column and group functions.
 
-**Note:**You can combine column and group functions.
-
-------------------------------------------------------------------------
 
 ## Additional Sub-totals in Reports 
 
@@ -244,7 +228,7 @@ as negative values in the calculation of totals, add a hidden column
 entitled *#TOTALSIGN*. When calculating the total, all lines in the
 report will be multiplied by this value.
 
-> **Example:**See the **INCOME_STATEMENT** report.
+> **Example:** See the **INCOME_STATEMENT** report.
 
 ## Further Reading 
 

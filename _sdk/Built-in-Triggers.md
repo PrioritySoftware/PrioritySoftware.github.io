@@ -97,7 +97,7 @@ user-defined.
 
 ------------------------------------------------------------------------
 
-``` tsql
+```sql
 ORDERS/ORDNAME/POST-FIELD TRIGGER:
 ----------------------------------
 #line 1 ORDERS/ORDNAME/POST-FIELD
@@ -131,7 +131,7 @@ data exist in the join table.
 > **Example:** Built-in triggers do not allow you to specify an order
 > made by a customer that does not appear in the **CUSTOMERS** table.
 
-``` tsql
+```sql
 #line 1 ORDERS/CUSTNAME/CHECK-FIELD
 GOTO 1 WHERE :ORDERS.CUSTNAME = '';
 SELECT 'X'
@@ -149,7 +149,7 @@ from that table. Thus, once a valid customer number is designated in the
 *Sales Orders* form, the corresponding customer name will be filled in
 automatically.
 
-``` tsql
+```sql
 #line 1 ORDERS/CUSTNAME/POST-FIELD
 SET TRANSACTION;
 SELECT CUSTDES, CUST, CUST, CURRENCY, LINKDATE, PAY, SHIPTYPE, MCUST, NSFLAG, PAYCUST, 
@@ -161,13 +161,13 @@ FROM CUSTOMERS
 WHERE CUSTNAME = :ORDERS.CUSTNAME;
 ```
 
-------------------------------------------------------------------------
 
-**Note:** For technical reasons, the **CUSTDES** column is hidden in the
+
+> **Note:** For technical reasons, the **CUSTDES** column is hidden in the
 **ORDERS** form, and the **CDES** column is displayed instead. A
 POST-FIELD trigger copies the value of **CUSTDES** into **CDES**.
 
-------------------------------------------------------------------------
+
 
 ## Insert Triggers 
 
@@ -177,7 +177,7 @@ key(s); they provide an automatic value to that table's autounique key
 (increasing the autounique counter by 1); and they insert the new record
 into the form's base table.
 
-``` tsql
+```sql
 ORDERS INSERT TRIGGER:
 SET TRANSACTION;
 INSERT INTO ORDERS ( CURDATE, ORDNAME, BOOKNUM, FORECASTFLAG, DETAILS, REFERENCE, QPRICE, PERCENT,
@@ -220,7 +220,7 @@ integrity. That is, they do not allow the deletion of any record
 containing a column that is imported into another form (including the
 column that links an upper-level form to its sub-level).
 
-``` tsql
+```sql
 ORDERS/DELETE TRIGGER:
 #line 1 ORDERS/DELETE
 SELECT ENTMESSAGE('ORDERITEMS','F',0) INTO :PROGPARAM FROM DUMMY;

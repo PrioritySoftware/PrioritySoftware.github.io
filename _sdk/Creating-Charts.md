@@ -59,12 +59,10 @@ These two sections are separated by an END step.
 
 As in other procedures, this section requires [user
 input](User-Input-in-Procedures ), to determine which
-resources to display and during what time period. When run by Direct
-Activation, there is no need for an INPUT step, but you do need to
-initialize the necessary parameters (e.g., display mode, time range) in
+resources to display and during what time period. When run as an Action, there is no need for an INPUT step, but you do need to initialize the necessary parameters (e.g., display mode, time range) in
 an SQLI step.
 
-Whether you run the **GANTT** procedure by Direct Activation or from the
+Whether you run the **GANTT** procedure as an Action or from the
 menu, you must define a parameter of **FILE** type, indicating a linked
 file of records. This parameter is used to execute a link to the table
 on which the procedure will run. All queries executed by the **GANTT**
@@ -72,7 +70,7 @@ program, in which data is retrieved from that table, are executed
 against the linked table (this is similar to passing a linked table to a
 report).
 
-When the procedure is run by Direct Activation, you can define a
+When the procedure is run as an Action, you can define a
 specific task as "selected", by passing the task identifier in question
 to the **GANTT** program. In such a case, the chart opens with the
 specified task displayed. It is recommended to define a distinct and
@@ -104,17 +102,17 @@ the following order:
     viewed by the current user).
 12. Identifier of the selected task.
 13. Identifier of the employee/resource assigned to the selected task.
-14. -- 17. Record null parameters for these positions.
+14. Record null parameter for this position.
+15. Record null parameter for this position.
+16. Record null parameter for this position.
+17. Record null parameter for this position.
 
-```{=html}
-<!-- -->
-```
-1.  An additional identifier, whose value appears in the variable
+18. An additional identifier, whose value appears in the variable
     **OTHERID**.
-2.  A second additional identifier, whose value appears in the variable
+19. A second additional identifier, whose value appears in the variable
     **OTHERID2**.
-3.  The chart title.
-4.  The flag determining whether the chart is multi-company (0 = No, 1 =
+20. The chart title.
+21. The flag determining whether the chart is multi-company (0 = No, 1 =
     Yes).
 
 ### Section 2: Defining Parameters 
@@ -123,35 +121,33 @@ The following is the list of parameters to be defined in the second
 section of the procedure (all steps are Type *C*; their order is not
 important).
 
-  Name of the Step     Returns
-  -------------------- ---------------------------------------------------------------------------------
-  RESOURCE             The list of employees to display
-  RESOURCE_DETAILS     The details of a specific employee
-  TASKS                The list of tasks to display
-  TASK_DETAILS         The details of a specific task
-  TASK_TEXT            The text of a specific text
-  TASK_INSERT          Opening/updating a task via a form
-  TASK_EDIT            Query to define input fields in the dialogue box
-  TASK_REFRESH         Updated display of task details
-  TASK_CUSTOMDATE      Adds a custom date label to the chart View Definitions (Windows interface only)
-  WORKHOURS            Office hours for each day of the week
-  DAYSOFF              Non-working days
-  RESOURCE_WORKHOURS   Work hours per employee (instead of the previous two steps)
-  RELATIONS            Task dependencies (applicable only in an industrial setting)
-  RESOURCE_CHOOSE      Employee Choose list
-  RESOURCE_CHOOSE2     Additional Choose list (2)
-  RESOURCE_CHOOSE3     Additional Choose list (3)
-  RESOURCE_UPDATE      Update after choosing an employee
-  RESOURCE_UPDATE2     Update after additional Choose list (2)
-  RESOURCE_UPDATE3     Update after additional Choose list (3)
-  TASK_PRINT           Preparation of a **LINK** file before producing reports
+  | Name of the Step  |   Returns |
+  |--------------------|-------------------------------|
+  | RESOURCE           | The list of employees to display
+  | RESOURCE_DETAILS   | The details of a specific employee
+  | TASKS              |   The list of tasks to display
+  | TASK_DETAILS       |   The details of a specific task
+  | TASK_TEXT          |  The text of a specific text
+  | TASK_INSERT        |  Opening/updating a task via a form
+  | TASK_EDIT          |  Query to define input fields in the dialogue box
+  | TASK_REFRESH       |  Updated display of task details
+  | TASK_CUSTOMDATE    |  Adds a custom date label to the chart View Definitions (Windows | interface only)
+  | WORKHOURS          |  Office hours for each day of the week
+  | DAYSOFF            |  Non-working days
+  | RESOURCE_WORKHOURS |  Work hours per employee (instead of the previous two steps)
+  | RELATIONS          |  Task dependencies (applicable only in an industrial setting)
+  | RESOURCE_CHOOSE    |  Employee Choose list
+  | RESOURCE_CHOOSE2   |  Additional Choose list (2)
+  | RESOURCE_CHOOSE3   |  Additional Choose list (3)
+  | RESOURCE_UPDATE    |  Update after choosing an employee
+  | RESOURCE_UPDATE2   |  Update after additional Choose list (2)
+  | RESOURCE_UPDATE3   |  Update after additional Choose list (3)
+  | TASK_PRINT         |  Preparation of a **LINK** file before producing reports
 
-------------------------------------------------------------------------
+
 
 **Note:** [Click here](Parameters-for-a-New-Chart ) for a
 detailed explanation of each step.
-
-------------------------------------------------------------------------
 
 ## Procedure Messages 
 
@@ -164,28 +160,28 @@ display titles. Consequently, when defining a new procedure you should
 always start by filling in the first twenty messages. The following
 table explains how these messages are used:
 
-  No.   Explanation                                               Example
-  ----- --------------------------------------------------------- --------------------------
-  1     Chart name                                                Calendar
-  2     Chart title                                               Calendar
-  3     Title while initializing employees                        Loading employees...
-  4     Title while initializing tasks                            Loading tasks...
-  5     Title while initializing dependencies                     Loading dependencies...
-  6     Title for adding a task                                   New Appointment
-  7     Title for updating a task                                 Update Appointment
-  8     Title for the subject field when updating/adding a task   Subject
-  9     Title for employees/resources                             Employees
-  10    Error message when adding a new task                      Do not add a task
-  11    Error message when updating a task                        Do not update a task
-  12    Error message when deleting a task                        Do not delete a task
-  13    Title for the *Resource Search* dialogue box              Search for Employee/Date
-  14    Title for the *Resource Search* field                     Employee
-  15    Title for the employee Choose list                        Employees
-  16    Title for additional Choose list (2)                      Groups\*
-  17    Title for additional Choose list (3)                      Team leaders\*
-  18    Title for activating the employee Choose list             Choose an employee
-  19    Title for activating additional Choose list (2)           Choose a group\*
-  20    Title for activating additional Choose list (3)           Choose a team leader\*
+ | No.  | Explanation                                             |  Example
+  | ----- | --------------------------------------------------------- |-------------------------- |
+  | 1     | Chart name                                                | Calendar
+  | 2     | Chart title                                               | Calendar
+  | 3     | Title while initializing employees                        | Loading employees...
+  | 4     | Title while initializing tasks                            | Loading tasks...
+  | 5     | Title while initializing dependencies                     | Loading dependencies...
+  | 6     | Title for adding a task                                   | New Appointment
+  | 7     | Title for updating a task                                 | Update Appointment
+  | 8     | Title for the subject field when updating/adding a task   | Subject
+  | 9     | Title for employees/resources                             | Employees
+  | 10    | Error message when adding a new task                      | Do not add a task
+  | 11    | Error message when updating a task                        | Do not update a task
+  | 12    | Error message when deleting a task                        | Do not delete a task
+  | 13    | Title for the *Resource Search* dialogue box              | Search for Employee / Date
+  | 14    | Title for the *Resource Search* field                     | Employee
+  | 15    | Title for the employee Choose list                        | Employees
+  | 16    | Title for additional Choose list (2)                      | Groups\*
+  | 17    | Title for additional Choose list (3)                      | Team leaders\*
+  | 18    | Title for activating the employee Choose list             | Choose an employee
+  | 19    | Title for activating additional Choose list (2)           | Choose a group\*
+  | 20    | Title for activating additional Choose list (3)           | Choose a team leader\*
 
 \* Different lists may be defined, at the discretion of the programmer.
 For example, in charts used to schedule technicians, you can allow users
@@ -203,19 +199,19 @@ code is 1 (in the *Form Load Designer*).
 The values for adding/updating a task appear in the table in the
 following fields:
 
-  Field   Value
-  ------- -------------------------------------------------------
-  INT1    Task identifier
-  INT2    Employee/resource identifier
-  INT3    From hour
-  INT4    To hour
-  INT5    Previous employee/resource identifier (before update)
-  DATE1   From date (DATE 8)
-  DATE2   To date (DATE 8)
-  DATE3   From date/hour (DATE 14)
-  DATE4   To date/hour (DATE 14)
+|  Field |  Value |
+|  ------|  ------------------------------------------------------ |
+|  INT1   | Task identifier
+|  INT2   | Employee/resource identifier
+|  INT3   | From hour
+|  INT4   | To hour
+|  INT5   | Previous employee/resource identifier (before update)
+|  DATE1  | From date (DATE 8)
+|  DATE2  | To date (DATE 8)
+|  DATE3  | From date/hour (DATE 14)
+|  DATE4  | To date/hour (DATE 14)
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -227,4 +223,4 @@ following fields:
     values are transferred to additional fields, as defined in the
     TASK_EDIT step.
 
-------------------------------------------------------------------------
+

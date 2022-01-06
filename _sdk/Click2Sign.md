@@ -31,7 +31,7 @@ To add Click2Sign support, copy the standard document printout procedure
 (or modify an existing private one), and add the following code to the
 SQLI stage directly after the first HTMLCURSOR stage:
 
-``` tsql
+```sql
 :IVC = document identifier
 :TYPEC = flowchart type
 #INCLUDE func/click2sign

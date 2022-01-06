@@ -49,7 +49,7 @@ an appropriate interface exists in each Priority system.
 
 ### Exporting Data 
 
-``` priority
+```sql
 SELECT SQL.TMPFILE INTO :TMPFILE FROM DUMMY;
 LINK ORDERS TO :TMPFILE;
 GOTO 1 WHERE :RETVAL <= 0;
@@ -75,33 +75,33 @@ sub-sub-level). Take the following XML file, named in1.txt, for example:
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <FORM>
-<ORDERS>
-<CUSTNAME>84841</CUSTNAME>
-<ORDERITEMS>
-<PARTNAME>000</PARTNAME>
-<DUEDATE>07/11/20</DUEDATE>
-</ORDERITEMS>
-<ORDERITEMS>
-<PARTNAME>002</PARTNAME>
-<DUEDATE>07/11/20</DUEDATE>
-</ORDERITEMS>
-</ORDERS>
-<ORDERS>
-<CUSTNAME>84841</CUSTNAME>
-<ORDERITEMS>
-<PARTNAME>000</PARTNAME>
-<DUEDATE>08/11/20</DUEDATE>
-</ORDERITEMS>
-<ORDERITEMS>
-<PARTNAME>002</PARTNAME>
-<DUEDATE>08/11/20</DUEDATE>
-</ORDERITEMS>
-</ORDERS>
+    <ORDERS>
+        <CUSTNAME>84841</CUSTNAME>
+        <ORDERITEMS>
+            <PARTNAME>000</PARTNAME>
+            <DUEDATE>07/11/20</DUEDATE>
+        </ORDERITEMS>
+        <ORDERITEMS>
+            <PARTNAME>002</PARTNAME>
+            <DUEDATE>07/11/20</DUEDATE>
+        </ORDERITEMS>
+    </ORDERS>
+    <ORDERS>
+        <CUSTNAME>84841</CUSTNAME>
+        <ORDERITEMS>
+            <PARTNAME>000</PARTNAME>
+            <DUEDATE>08/11/20</DUEDATE>
+        </ORDERITEMS>
+        <ORDERITEMS>
+            <PARTNAME>002</PARTNAME>
+            <DUEDATE>08/11/20</DUEDATE>
+        </ORDERITEMS>
+    </ORDERS>
 </FORM>
 ```
 
-To load it using a dynamic interface, we would use the command: EXECUTE
-INTERFACE \'ORDERS\', \'c:/temp/msg.txt\', \'-form\', \'-i\', \'-f\',
+To load it using a dynamic interface, we would use the command:\
+ EXECUTE INTERFACE \'ORDERS\', \'c:/temp/msg.txt\', \'-form\', \'-i\', \'-f\',
 \'c:/temp/in1.txt\', \'-ignorewrn\', \'-noskip\';
 
 In this case we use the **--ignorewrn** and **--noskip** options to
@@ -111,15 +111,16 @@ expected. As in standard interfaces, warning and error messages are
 stored in the ERRMSGS table (unless you linked them to a STACKERR
 table). While developing in WINDBI, you can easily retrieve them by
 running the following query:
-
-SELECT \* FROM ERRMSGS WHERE USER = SQL.USER AND TYPE = \'i\' FORMAT;
+```sql
+ SELECT * FROM ERRMSGS WHERE USER = SQL.USER AND TYPE = 'i' FORMAT;
+ ```
 
 ### Deleting Data 
 
 When using the **--delete** option, the file needs to specify the keys
 of the records to be deleted. The following example is in JSON format:
 
-``` javascript
+```json
 {
 "ORDERS": [
             {                              

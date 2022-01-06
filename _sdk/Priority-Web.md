@@ -20,10 +20,11 @@ exceptions apply:
     `EXECUTE WINFORM 'ORDERS';`\
     Instead, add a new procedure step with the desired *Entity Name* and
     the Type **F**.
--   You cannot add the following syntax to a procedure step in order to
+-   You cannot use the following syntax to a procedure step in order to
     execute a document when running a procedure:\
     `EXECUTE WINACTIV '-P', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS;`\
-    `LABEL 199;`
+    `LABEL 199;`\
+    Use WINHTML instead.
 -   In procedures that load or export data, add the UPLOAD or DOWNLOAD
     step to upload/download the file in question from the local computer
     to the server (or vice versa). Specify the file name in the
@@ -35,13 +36,10 @@ exceptions apply:
 > **Example:** See the UPLOAD procedure step in the **LOADFNC1**
 > procedure and the DOWNLOAD step in the **ULOADFNC** procedure.
 
-------------------------------------------------------------------------
 
 **Note:** This step is not necessary when opening or saving a file using
 an INPUT parameter of type **CHAR** that is flagged to display a browse
 button (in the *Procedure Parameter Extension* sub-level form).
-
-------------------------------------------------------------------------
 
 ## Further Reading 
 

@@ -17,8 +17,6 @@ value, a sorting column
 
 **Query variables:** FROMDATE, TODATE.
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   Always retrieve values for all four fields.
@@ -28,11 +26,10 @@ value, a sorting column
     retrieve a null value); its purpose is to allow you to sort records
     by something other than the employee name.
 
-------------------------------------------------------------------------
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT USER,USERNAME,USERLOGIN,1 FROM USERS
 > WHERE USER>0
 > ORDER BY USERLOGIN;
@@ -45,18 +42,17 @@ USERSB form.
 
 **Query variables (required):** RESOURCEID.
 
-------------------------------------------------------------------------
 
-**Note:**You can dynamically define [procedure
+
+**Note:** You can dynamically define [procedure
 messages](Creating-Charts#Procedure-Messages ) to serve as
 field titles for the returned values by using the **\#** symbol for each
 field, followed by a message number.
 
-------------------------------------------------------------------------
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT USERLOGIN,SNAME,EMAIL,ADDRESS,SQL.DATES AS ‘#20’
 > FROM USERS,USERSB
 > WHERE USERS.USER = :RESOURCEID
@@ -73,7 +69,7 @@ description, from date/time, to date/time, target value, display color
 -   Required: FROMDATE, TODATE
 -   Optional: SELECTEDID
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -82,11 +78,11 @@ The date field must also include the time (DATE 14).\
 The display color is a value from the **COLORS** table (use 0 for no
 color).
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT DIARY,USER,TEXT
 > (CUSTNOTE <> 0 ? ITOA(CUSTNOTE,0,USECOMMA): ‘’),
 > CURDATE+STIME,CURDATE+ETIME,(DIARY = :SELECTEDID ? 1 : 0)
@@ -102,18 +98,18 @@ color).
 
 **Query variables (required):** TASKID
 
-------------------------------------------------------------------------
+
 
 **Note:**You can dynamically define [procedure
 messages](Creating-Charts#Procedure-Messages ) to serve as
 field titles for the returned values by using the **\#** symbol for each
 field, followed by a message number.
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT DIARIES.TEXT AS ‘#19’,USERS.USERNAME,
 > DIARIES.CURDATE,DIARIES.STIME,DIARIES.ETIME
 > FROM DIARIES,USERS
@@ -129,7 +125,7 @@ field, followed by a message number.
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT TEXT, TEXTORD 
 > FROM CUSTNOTESTEXT
 > WHERE CUSTNOTE = :TASKID
@@ -145,7 +141,7 @@ form when a new task is opened.
 **Query variables (required):** RESOURCEID, TASKDATE, TASKETIME,
 TASKSTIME, TASK.
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -157,11 +153,11 @@ TASKSTIME, TASK.
     have been defined to permit additions or revisions to the chart
     (parameters 9 and 10, respectively).
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > :$.CURDATE = 0+ :TASKDATE;
 > :$.STIME = 0+ :TASKSTIME;
 > :$.ETIME = 0+ :TASKETIME;
@@ -177,7 +173,7 @@ TASKSTIME, TASK.
 **Query variables (required):** RESOURCEID, TASKID, TASKSDATE,
 TASKEDATE, TASKSTIME, TASKETIME.
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -192,11 +188,11 @@ TASKEDATE, TASKSTIME, TASKETIME.
 -   You can define mandatory fields by adding the letter M in
     parentheses after the name of the field in the relevant note.
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > /* Load fields: TEXT,DATE1(M),INT3,DATE2,INT4,
 > TEXT5,TEXT6,TEXT4,TEXT1,TEXT2,TEXT3,TEXT8 */
 >
@@ -228,7 +224,7 @@ to date/hour, color.
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT D.TEXT,ITOA(CUSTNOTES.CUSTNOTE,0,USECOMMA),
 > D.CURDATE+D.STIME,D.CURDATE+D.ETIME,0
 > FROM DIARIES D, CUSTNOTES
@@ -248,7 +244,7 @@ accessed by users in the Timescale definitions of the chart.
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT DETAILS INTO :TASK_CUSTOMDATE_OUT
 > FROM STACK4
 > WHERE KEY = :TASK_CUSTOMDATE_IN;
@@ -262,7 +258,7 @@ accessed by users in the Timescale definitions of the chart.
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT WDAY,STARTT,ENDT 
 > FROM USERTMTBL
 > WHERE USER = :RESOURCEID;
@@ -274,7 +270,7 @@ accessed by users in the Timescale definitions of the chart.
 
 **Query variables (required):** CURDATE
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -285,11 +281,11 @@ accessed by users in the Timescale definitions of the chart.
 -   On days preceding holidays the query should return the time work
     ends.
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT FROMTIME FROM OFFICECLOSED
 > WHERE CURDATE = :CURDATE;
 > ```
@@ -300,7 +296,7 @@ accessed by users in the Timescale definitions of the chart.
 
 **Query variables (required):** RESOURCEID, FROMDATE, TODATE
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -311,11 +307,11 @@ accessed by users in the Timescale definitions of the chart.
 -   This step can be used in place of the previous two steps (WORKHOURS
     and DAYSOFF).
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT WDATE+FROMTIME, WDATE+TOTIME 
 > FROM WORKHOURS
 > WHERE USER = :RESOURCEID
@@ -332,17 +328,17 @@ identifier, display color
 
 **Query variables (required):** FROMDATE, TODATE
 
-------------------------------------------------------------------------
+
 
 **Note:**This step is only applicable in an industrial setting.
 
-------------------------------------------------------------------------
+
 
 ## Choose List for Employees (RESOURCE_CHOOSE) 
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT USERNAME,USERLOGIN
 > FROM USERS,USERSB
 > WHERE USERS.USER = USERSB.USER
@@ -355,7 +351,7 @@ identifier, display color
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT GROUPDES, GROUPNAME
 > FROM UGROUPS
 > WHERE UGROUP <> 0
@@ -369,7 +365,7 @@ identifier, display color
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > INSERT INTO USERGANTT(EXEC,USER,RESOURCEID)
 > SELECT 0+:GANTTEXEC, SQL.USER, USER 
 > FROM USERS
@@ -382,7 +378,7 @@ identifier, display color
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > INSERT INTO USERGANTT(EXEC,USER,RESOURCEID)
 > SELECT 0+:GANTTEXEC, SQL.USER, USER 
 > FROM USERGROUP
@@ -396,25 +392,23 @@ identifier, display color
 
 **Query variables:** ZOOMVALUE, TASKID
 
-------------------------------------------------------------------------
+
 
 **Note:** In order to print reports and/or documents from within the
 chart, add the print procedures as additional steps in the chart
 procedure.
 
-------------------------------------------------------------------------
+
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > INSERT INTO CUSTNOTES 
 > SELECT * FROM CUSTNOTES ORIG
 > WHERE CUSTNOTE = :TASKID;
 > ```
 
-------------------------------------------------------------------------
 
-**Note:** Click to return to [Creating
-Charts](Creating-Charts#Procedure-Messages ).
 
-------------------------------------------------------------------------
+
+

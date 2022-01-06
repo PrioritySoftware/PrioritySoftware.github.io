@@ -74,7 +74,6 @@ upper-level form even though records appear in the sub-level.
 Specify this condition in the *Expression/Condition* column of the *Form
 Column Extension* form, a sub-level of the *Form Columns* form.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -86,7 +85,6 @@ Column Extension* form, a sub-level of the *Form Columns* form.
     Display and
     Insertion](Conditions-of-Record-Display-and-Insertion ).
 
-------------------------------------------------------------------------
 
 ## Creating a Form Tree
 
@@ -107,8 +105,7 @@ Forms* form. Both are sub-levels of the *Form Generator* form.
 
 In addition, the root form of a form tree should be linked to a menu,
 from which it will be loaded (alternatively, the root form can be
-activated from within another form via [Direct
-Activation](Direct-Activations )). As a menu generally
+activated from within another form via an [Action](Actions)). As a menu generally
 contains several items, you are required to indicate the position of the
 root form within the menu (specify an integer). Again, the lower the
 integer, the higher the position of the form in relation to other items

@@ -49,7 +49,7 @@ invoices were finalized:
 
 **Example:**
 
-``` priority
+```sql
 LINK INVOICES TO :$.PAR;
 ERRMSG 1 WHERE :RETVAL <= 0;
 SELECT IV,IVNUM,TYPE,DEBIT FROM INVOICES FORMAT 'c:/tmp/iv.txt';

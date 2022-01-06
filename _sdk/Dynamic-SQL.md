@@ -13,13 +13,9 @@ as a parameter.
 
 ## Executing SQL Server Code from Priority 
 
-SQL Server code can be executed from within **\'\'Priority**\'\' using
+SQL Server code can be executed from within **Priority** using
 the **SQLRUN** program. The program takes as a parameter an ASCII file
 containing the SQL Server code.
 
 > **Example:** See the **SQLCHECK** procedure.
 
-## Further Reading 
-
-[Click](Advanced-Programming-Tools ) for information on
-additional advanced programming tools.

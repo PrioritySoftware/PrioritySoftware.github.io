@@ -28,17 +28,14 @@ CONTINUE command (without parameters) is used for that precise purpose.
 
 The GOTO command, which is useful in conjunction with CONTINUE, causes
 the procedure to jump forwards or backwards to another procedure step.
-The GOTO command always has a single parameter whose value is **\'\'the
-procedure step at which to continue**\'\' and whose type is **INT**.
+The GOTO command always has a single parameter whose value is **the
+procedure step at which to continue** and whose type is **INT**.
 
-------------------------------------------------------------------------
-
-**Note:**The value of the GOTO parameter may be a constant designated in
-the *Value* column of the *Procedure Parameters*form; it may be
+**Note:** The value of the GOTO parameter may be a constant designated in
+the *Value* column of the *Procedure Parameters* form; it may be
 determined by an SQL statement; or it may be determined by the user's
 choice of one of the CHOOSE options.
 
-------------------------------------------------------------------------
 
 ## Activating a User-Chosen Option 
 

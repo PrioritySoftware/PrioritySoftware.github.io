@@ -15,11 +15,8 @@ load](Form-Loads ).
     trigger. To execute the load in this way, use the following syntax
     (parameters are explained in the next section):
 
-``` tsql
-EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr', 'stackerr_file'], 
-['-w'], ['-ns'], ['-nl'], ['-nv'], ['-noskip'], ['-enforcebpm'], ['-t'], ['-W'], ['-m'], ['-o' | '-ou' 
-[, '-f', 'output_file']], ['-debug', 'debug_file'], ['-repeat'], ['-l', 'table_name1', 'link_file1' 
-[, …'-l', table_name10', 'link_file10']], '-v';
+```sql
+EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr', 'stackerr_file'], ['-w'], ['-ns'], ['-nl'], ['-nv'], ['-noskip'], ['-enforcebpm'], ['-t'], ['-W'], ['-m'], ['-o' | '-ou' [, '-f', 'output_file']], ['-debug', 'debug_file'], ['-repeat'], ['-l', 'table_name1', 'link_file1' [, …'-l', 'table_name10', 'link_file10']], '-v';
 ```
 
 -   Include the form load as an interface step (type *I*) in a
@@ -58,30 +55,31 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     **Note:** When using this option, error messages will not be sent to
     the **ERRMSGS** table; thus, the **INTERFACEERR** report will not
     retrieve any values.
--   \'-w\' --- Use this option to have the **INTERFACE** program ignore
+-   *'-w'* --- Use this option to have the **INTERFACE** program ignore
     warning messages (equivalent to the functionality of the [*Ignore
     Warnings* column](Form-Loads#Load-Parameters ) in the
     *Form Load Designer*).
--   \'-ns\' --- By default, the **INTERFACE** program displays a
+-   *'-ns'* --- By default, the **INTERFACE** program displays a
     progress bar as the load is executed. Use this option to disable
     this utility.
--   \'-nl\' --- If the load program encounters errors, it generates an
+-   *'-nl'* --- If the load program encounters errors, it generates an
     errors report. By default, each line in that report indicates the
     line in the load table that generated the error. Use this option if
     you don\'t want to display the line number in the message.
--   \'-nv\' --- When a value generates an error from a CHECK-FIELD
+-   *'-nv'* --- When a value generates an error from a CHECK-FIELD
     trigger, the errors report, by default, displays the name of the
     column and value that generated the error. Use this option to hide
-    this information.\
+    this information.
+
     **Example:** If you try to open a sales order for customer C000981
     and that customer does not exist in the database, the error message
     in the report would be: \"Line X - Customer Number C000981:
     Specified item not in database.\" If you use the \'-nv\' option, the
     message will display: \"Line X - Specified item not in database.\"
--   \'-noskip\' --- Equivalent to the functionality of the [*Do Not Skip
+-   *'-noskip'* --- Equivalent to the functionality of the [*Do Not Skip
     Lines* column](Form-Loads#Load-Parameters ) in the *Form
     Load Designer*.
--   \'-enforcebpm\' --- Many forms use business rules (defined in the
+-   *'-enforcebpm'* --- Many forms use business rules (defined in the
     Business Rules Generator or the Data Generator), BPM rules and
     definitions of paths between statuses to manage business processes.
     As part of this process, the Business Rules Generator/BPM utility
@@ -95,19 +93,21 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     Generator will be ignored, and that any status can be changed to any
     status (e.g., a customer shipment recorded against an order will
     change that order\'s status to **Closed**, even though this status
-    change is prevented by BPM rules).\
+    change is prevented by BPM rules).
+
     **Note:**Data Generator rules are not affected by this parameter as
     they are activated elsewhere in the code (after POST-FIELD). For
     details on the Business Rules Generator, the Data Generator and BPM,
     see the *User Interface Guide*.
--   \'-t\' --- When no file type is defined in the *Form Load Designer*,
+
+-   *'-t'* --- When no file type is defined in the *Form Load Designer*,
     use this parameter to indicate that the file being loaded has tab
     separators. This option is useful when you do not know the file type
     in advance. In such a case, you must define form column positions in
     both ways (for both fixed-width and tab-separated files) and then
     include this parameter when the load is of a file with tab
     separators.
--   \'-W\' --- Use this option to display warning messages in the *Load
+-   *'-W'* --- Use this option to display warning messages in the *Load
     Errors* report even if you defined the form load to ignore such
     messages.
 -   \'-m\' --- Use this option to break up error messages into several
@@ -129,15 +129,16 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     Designer*.\
     **Note:**This is necessary when you have recorded a sample file
     (used to define XML tags) in the *Form Load Designer*.
--   \'-debug**, \'debug_file\' \'\' --- Parameters used in debug mode;
-    the**INTERFACE**program will write all operations executed by the
+-   \'-debug', \'debug_file\' --- Parameters used in debug mode;
+    the **INTERFACE** program will write all operations executed by the
     form load into the specified debug file. This is similar to the
-    \'-g\' option in other***Priority*\'\'\' tools (see [Debug
+     other ***Priority*** debug tools (see [Debug
     Tools](Debug-Tools )).
 -   \'-repeat\' --- Equivalent to the *Reload* option (when the program
     is run from the menu). Use this option to reload lines that were not
     successfully loaded in a previous run (see more below).
--   \'-l\' (lowercase \"L\"), *\'table_name\'*, *\'link_file\'* --- Use
+    <!--- TODO: Give a better explanation of copy interfaces --->
+-   \'-l\' (lowercase \"L\"), *\'table_name\'*, *\'link_file\'* - Use
     this option when you want the **INTERFACE** program to refer to a
     linked copy of the designated table. This is similar to the \'-L\'
     option, except that you can specify any table (not necessarily the
@@ -186,22 +187,17 @@ same load again, with the same data, using the Reload or \'--repeat\'
 option. The **INTERFACE** program will then run only on those records
 for which the **LOADED** column is not assigned the value *Y*.
 
-> **Example:**The load should open orders and insert items into the
+> **Example:** The load should open orders and insert items into the
 > order line. If one item failed to be loaded (e.g., the *Part Number*
 > was not found in the *Part Catalogue*), you can repair the load table
 > (define the part or fix the number) and re-execute the load, and the
 > item will be inserted into the order that was already opened.
 
-------------------------------------------------------------------------
-
 **Note:** Once the form load is successful, you may wish to export it
 for installation on a different server (e.g., if you are running the
 **INTERFACE** program on a test installation and you wish to copy it to
 the production server). To do so, return to the *Forms to be Loaded*
-form and run the *Upload Interface* program from the list of Direct
-Activations.
-
-------------------------------------------------------------------------
+form and run the *Upload Interface* program from the list of Actions .
 
 ## Executing a Form Load from a Form Trigger or Step Query 
 

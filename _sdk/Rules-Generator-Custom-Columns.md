@@ -18,12 +18,12 @@ the following conditions:
     that form column.
 -   A regular form column must be taken from one of the following
     tables/table columns:
-    -   \'\'\'CUSTOMERS (CUSTNAME)
-    -   \'\'\'SUPPLIERS (SUPNAME)
-    -   \'\'\'AGENTS (AGENTNAME )
-    -   \'\'\'USERSB (SNAME)
-    -   \'\'\'PHONEBOOK (NAME)
-    -   \'\'\'USERS (USERLOGIN)
+    -   **CUSTOMERS (CUSTNAME)**
+    -   **SUPPLIERS (SUPNAME)**
+    -   **AGENTS (AGENTNAME )**
+    -   **USERSB (SNAME)**
+    -   **PHONEBOOK (NAME)**
+    -   **USERS (USERLOGIN)**
     -   **UGROUPS (GROUPNAME)**
 
 In such a case, the Business Rules Generator uses the e-mail address or

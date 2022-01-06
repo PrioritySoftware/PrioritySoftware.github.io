@@ -20,11 +20,11 @@ The LINK command is complemented by the UNLINK command.
 
 See [Syntax Conventions](SQL-Syntax#Syntax-Conventions ).
 
-:   **LINK***table_name1*\[ ID \] \[ **TO** *filename*1 \];
+**LINK***table_name1*\[ ID \] \[ **TO** *filename*1 \];
 
 *{ database manipulations }*
 
-:   **UNLINK**\[ **AND REMOVE**\] *table_name1*\[ ID \];\]
+**UNLINK** \[ **AND REMOVE**\] *table_name1*\[ ID \];\]
 
 ## Explanation and Examples 
 
@@ -50,13 +50,13 @@ queries will continue to be executed). However, you can circumvent this
 restriction by adding a different suffix (table ID) to the table name
 for each link.
 
-> **Example:**While you cannot link the **ORDERS** table twice, you can
+> **Example:** While you cannot link the **ORDERS** table twice, you can
 > link both **ORDERS A** and **ORDERS B**. In this case, you will obtain
 > another copy of the table for each link, and these may be used as
 > separate files. Then, after linking, you could perform the following
 > query:
 >
-> ``` priority
+> ```sql
 > INSERT INTO ORDERS A 
 > SELECT * FROM ORDERS B 
 > WHERE ...;
@@ -89,7 +89,7 @@ of the query that uses the linked table.
 
 For example:
 
-``` priority
+```sql
 SELECT SQL.TMPFILE INTO :TMPFILE;
 LINK ORDERS TO :TMPFILE;
 ERRMSG 1 WHERE :RETVAL <= 0;
@@ -99,7 +99,7 @@ UNLINK ORDERS;
 
 or:
 
-``` priority
+```sql
 SELECT SQL.TMPFILE INTO :TMPFILE;
 LINK ORDERS TO :TMPFILE;
 GOTO 99 WHERE :RETVAL <= 0;

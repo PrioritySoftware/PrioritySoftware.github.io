@@ -22,27 +22,23 @@ Columns](#Rules-for-Columns )).
 
 The following table lists all available column types:
 
-  Col. Type                           Description                   Width       Form Col. Type
-  ----------------------------------- ----------------------------- ----------- ----------------
-  **CHAR**                            string of characters          \>1         String →
-  single character                    =1                            Character   
-  **RCHAR**                           string of RTL characters      \>1         String ←
-  **REAL**                            real number                   any         Real
-  **INT**                             signed integer                any         Integer
-  **DATE**                            date (mm/dd/yy or dd/mm/yy)   8           Date
-  date (mm/dd/yyyy or dd/mm/yyyy)     10                            Date        
-  date & time (24-hour clock)         14                            Date+Time   
-  **TIME**                            time (24 hour clock)          5           hh:mm
-  span (number of hours and minutes   6                             hhh:mm      
-  **DAY**                             day of week                   3           Day
-
-------------------------------------------------------------------------
+|    <br>Col. Type    	|    <br>Description                              	|    <br>Width    	|    <br>Form Col. Type    	|
+|---------------------	|-------------------------------------------------	|-----------------	|--------------------------	|
+|    <br>CHAR         	|    <br>string of characters                     	|    <br>>1       	|    <br>String→           	|
+|                     	|    <br>single character                         	|    <br>=1       	|    <br>Character         	|
+|    <br>REAL         	|    <br>real number                              	|    <br>any      	|    <br>Real              	|
+|    <br>INT          	|    <br>signed integer                           	|    <br>any      	|    <br>Integer           	|
+|    <br>DATE         	|    <br>date (mm/dd/yy or dd/mm/yy)              	|    <br>8        	|    <br>Date              	|
+|                     	|    <br>date (mm/dd/yyyy or   dd/mm/yyyy)        	|    <br>10       	|    <br>Date              	|
+|                     	|    <br>date & time (24-hour   clock)            	|    <br>14       	|    <br>Date+Time         	|
+|    <br>TIME         	|    <br>time (24-hour clock)                     	|    <br>5        	|    <br>hh:mm             	|
+|                     	|    <br>span (number of hours and   minutes)     	|    <br>6        	|    <br>hhh:mm            	|
+|    <br>DAY          	|    <br>day of the week                          	|    <br>3        	|    <br>Day               	|
 
 **Note:** It is important to distinguish between integers (columns of
 **INT** type, e.g., **QUANT**, **BALANCE**) and strings of digits
 (columns of **CHAR** type, e.g., **ZIPCODE**, **ORDNAME**, **PHONE**).
 
-------------------------------------------------------------------------
 
 With one exception (see below), you cannot change the type of an
 existing column. Instead, you need to take the following steps:

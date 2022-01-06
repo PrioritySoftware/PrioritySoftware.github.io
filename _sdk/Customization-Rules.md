@@ -38,13 +38,11 @@ layout: sdk_nav
 -   Any [form message](Error-and-Warning-Messages ) that you
     add must be assigned a number greater than 500.
 
-------------------------------------------------------------------------
+<!--- TODO: See if we can combine / change the note-->
 
 **Note:** For general guidelines for development, see [Working with
 Version
 Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
-
-------------------------------------------------------------------------
 
 ## Reports
 
@@ -69,13 +67,13 @@ Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
     **Report Optimization** and record the internal name of the relevant
     report.
 
-------------------------------------------------------------------------
+
 
 **Note:** For general guidelines for development, see [Working with
 Version
 Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 
-------------------------------------------------------------------------
+
 
 ## Procedures
 
@@ -89,13 +87,13 @@ Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
     not change any of the parameters that are transferred to the
     program.
 
-------------------------------------------------------------------------
+
 
 **Note:** For general guidelines for development, see [Working with
 Version
 Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 
-------------------------------------------------------------------------
+
 
 ## Further Reading 
 

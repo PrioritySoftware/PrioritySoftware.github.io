@@ -22,12 +22,12 @@ an SQLI step. The **PREXFILE** program receives several parameters:
 -   **SORT_LINE** --- Determines the printing order of the documents.
 -   **TEXT1** --- The full path and name of the file to be printed.
 
-> **Examples:** To create a new Direct Activation from the *Sales
+> **Examples:** To create a new Action from the *Sales
 > Orders* form, which prints any documents that are attached to the
 > order, include an INPUT step with a PAR parameter of **LINE** type. In
 > the procedure, record the following in the SQLI step:
 >
-> ``` tsql
+> ```sql
 > SELECT SQL.TMPFILE INTO :STK FROM DUMMY;
 >
 > LINK ORDERS TO :$.PAR;
@@ -51,21 +51,21 @@ an SQLI step. The **PREXFILE** program receives several parameters:
 > To send the documents and cover page to the default printer, continue
 > the above code as follows:
 >
-> ``` tsql
+> ```sql
 > EXECUTE PREXFILE '-d', 'description 1', 'description 2', :STK; 
 > ```
 >
 > To open a window to choose a printer from which to print the documents
 > and cover page, use the following code instead:
 >
-> ``` tsql
+> ```sql
 > EXECUTE PREXFILE 'description 1', 'description 2', :STK;
 > ```
 >
 > To send the documents to default printer without a cover page, use the
 > following code instead:
 >
-> ``` tsql
+> ```sql
 > EXECUTE PREXFILE '-d', '','', :STK; 
 > ```
 

@@ -50,7 +50,7 @@ on.
 Consider the following trigger in the **ORDERITEMS** form, which
 computes the *Extended Price* of an order item:
 
-``` tsql
+```sql
 :$.QPRICE = REALQUANT(:$.TQUANT) 
 * :$.PRICE * (100.0 - :$.PERCENT) / 100.0
 * (:$$.CURRENCY = -1 ? :$.IEXCHANGE : 1.0);
@@ -60,7 +60,7 @@ Another example (this time of how to use the previous value of a
 specific column) is found in the CHECK-FIELD trigger for the
 **PARTNAME** column in the same form:
 
-``` tsql
+```sql
 GOTO 1 WHERE :$1.PARTNAME = '' OR :$.ORDI = 0; 
 GOTO 1 WHERE :$.@ = :$1.PARTNAME;
 ```
@@ -98,7 +98,7 @@ variable that counts the number of work orders opened for a given order
 item (see the CHECK-FIELD trigger for the **DUEDATE** column of the
 **ORDERITEMS** form):
 
-``` tsql
+```sql
 :CNT = 0;
 SELECT COUNT(*) INTO :CNT
 FROM ORDSERIAL, SERIAL

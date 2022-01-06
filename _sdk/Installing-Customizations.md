@@ -13,25 +13,17 @@ installation, create an upgrade file and install it in the test
 installation. Only once you are satisfied with results should you
 install it on the production server.
 
-------------------------------------------------------------------------
-
-**Warning!** You should never customize directly on the production
+> **Warning!** You should never customize directly on the production
 server.
-
-------------------------------------------------------------------------
 
 As revisions are maintained per user, it is imperative for all
 programmers to work in their own usernames while performing the
 programming.
 
-------------------------------------------------------------------------
-
 **Note:** In order to execute a DBI operation -- i.e., anything that
 affects a table, table column or key -- you must belong to the privilege
 group of the superuser (*tabula*) and the PRIVUSERS system constant must
 be set to 1.
-
-------------------------------------------------------------------------
 
 ## Steps for Creating Version Revisions 
 
@@ -51,7 +43,7 @@ forms and programs.
     customization in question. The order in which you link these lines
     determines their order in the upgrade file.
 
-    :   **Note:** The lines in the *Revision Steps*form are recorded in
+    **Note:** The lines in the *Revision Steps*form are recorded in
         the name of the user who made the modification. This way, if you
         have more than one programmer, each can track his/her own
         changes.
@@ -63,30 +55,31 @@ forms and programs.
 
 ## Explanation of the Modification Codes 
 
-  --------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  DBI             Update of the database (tables, table columns, keys).
-  DELDIRECTACT    Deletion of a Direct Activation.
-  DELFORMCOL      Deletion of a form column.
-  DELFORMLINK     Deletion of the link between a form and its sub-level.
-  DELMENULINK     Deletion of the link between a menu and its menu item.
-  DELPROCMSG      Deletion of a procedure message.
-  DELPROCSTEP     Deletion of a procedure step.
-  DELREPCOL       Deletion of a report column.
-  DELTRIG         Deletion of a form trigger.
-  DELTRIGMSG      Deletion of a trigger message.
-  TAKEDIRECTACT   Linkage of a Direct Activation to a form.
-  TAKEENTHEADER   Revision to the attributes of an entity (form, report, menu, procedure, interface), such as its title; in the case of a form, also revision to its screen-painted version.
-  TAKEFORMCOL     Any type of revision to a form column (e.g., title, sorting, joins).
-  TAKEFORMLINK    Linkage of a form to its sub-level.
-  TAKEMENULINK    Linkage of a menu item to its menu.
-  TAKEPROCMSG     Addition/revision of a procedure message.
-  TAKEPROCSTEP    Addition/revision of any part of a procedure step (e.g., parameters, step queries).
-  TAKEREPCOL      Any type of revision to a report column (e.g., title, sorting, grouping).
-  TAKESINGLEENT   Addition/revision of an entire entity.
-  TAKETRIG        Addition/revision of a form trigger.
-  TAKETRIGMSG     Addition/revision of a trigger message.
-  TAKEHELP        Addition/revision of online help for the designated entity.
-  --------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Modification Code | Description |
+  |--------------- | ------------ |
+  | DBI            | Update of the database (tables, table columns, keys). |
+  | DELDIRECTACT   | Deletion of a Direct Activation.
+  | DELFORMCOL     | Deletion of a form column.
+  | DELFORMLINK    | Deletion of the link between a form and its sub-level.
+  | DELMENULINK    | Deletion of the link between a menu and its menu item.
+  | DELPROCMSG     | Deletion of a procedure message.
+  | DELPROCSTEP    | Deletion of a procedure step.
+  | DELREPCOL      | Deletion of a report column.
+  | DELTRIG        | Deletion of a form trigger.
+  | DELTRIGMSG     | Deletion of a trigger message.
+  | TAKEDIRECTACT  | Link an Action to a form.
+  | TAKEENTHEADER  | Revision to the attributes of an entity (form, report, menu, procedure, interface), such as its title; in the case of a form, also revision to its default design.
+  | TAKEFORMCOL    | Any type of revision to a form column (e.g., title, sorting, joins).
+  | TAKEFORMLINK   | Linking of a form to its sub-level.
+  | TAKEMENULINK   | Linkage of a menu item to its menu.
+  | TAKEPROCMSG    | Addition/revision of a procedure message.
+  | TAKEPROCSTEP   | Addition/revision of any part of a procedure step (e.g., parameters, step queries).
+  | TAKEREPCOL     | Any type of revision to a report column (e.g., title, sorting, grouping).
+  | TAKESINGLEENT  | Addition/revision of an entire entity.
+  | TAKETRIG       | Addition/revision of a form trigger.
+  | TAKETRIGMSG    | Addition/revision of a trigger message.
+  | TAKEHELP       |  Addition/revision of online help for the designated entity.
+
 
 ## Tips for Working with Revisions 
 
@@ -101,14 +94,14 @@ forms and programs.
     revision, any additional modification to that entity will receive a
     separate record with a separate code.
 
-> **Example:**You create a new form and link the relevant modification
-> to a TAKESINGLEENT line. If you then continue to add columns to the
-> form, you will receive additional TAKEFORMCOL lines for each new
-> column. However, you should not wait more than a working day. When
-> programming takes more than one day, try to prepare the upgrade at the
-> end of each day. This way, at the end of the programming, you will not
-> have to deal with a very large number of records in the *Revision
-> Steps* form.
+    > **Example:** You create a new form and link the relevant modification
+    > to a TAKESINGLEENT line. If you then continue to add columns to the
+    > form, you will receive additional TAKEFORMCOL lines for each new
+    > column. However, you should not wait more than a working day. When
+    > programming takes more than one day, try to prepare the upgrade at the
+    > end of each day. This way, at the end of the programming, you will not
+    > have to deal with a very large number of records in the *Revision
+    > Steps* form.
 
 -   There are also situations in which the order of the lines in the
     revision is important. Here are some examples:
@@ -130,14 +123,10 @@ Several form and reports allow you to keep track of changes in queries
 appearing in form triggers, SQLI procedure steps and load definitions,
 once they have been included in a prepared version revision.
 
-------------------------------------------------------------------------
-
 **Note:** Query changes are maintained per version revision. After
 making your changes, open and prepare a new version revision. If you
 reprepare an existing one, the previous change will not be saved, as the
 new query text will overwrite the old one.
-
-------------------------------------------------------------------------
 
 To view previous versions of a column trigger, a row or form trigger, an
 SQLI step or a load definition:
@@ -150,7 +139,7 @@ SQLI step or a load definition:
     the revision, its number, a short description, the version number
     and the signature of the programmer.
 
-    :   **Note:** Only revisions created after ***Priority*** version
+    **Note:** Only revisions created after ***Priority*** version
         17.3 is installed will appear.
 3.  Enter the next sub-level form, *Previous Versions -- Text*, to view
     the version of the query.
@@ -159,11 +148,10 @@ To view differences between the selected version of the query and other
 versions:
 
 1.  Return to the *Previous Versions* form and select *Track Changes*
-    from the list of Direct Activations.
+    from the list of Actions.
 2.  In the input screen, under *Text to Compare*, choose between the
     *Current Version* (the latest version in effect) and the *Previous
-    Version* (the one immediately prior to the selected revision). As is
-    common practice, additions are marked in blue; deletions are marked
+    Version* (the one immediately prior to the selected revision). Additions are marked in blue; deletions are marked
     in red strikethrough.
 
 ## Further Reading 

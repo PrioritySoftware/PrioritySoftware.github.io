@@ -32,7 +32,7 @@ do so in one of two ways:
 To find out which print formats are available for a given document, run
 the following SQL commands in **WINDBI**:
 
-``` tsql
+```sql
 /* this code will show all print formats defined for the document */
 SELECT * FROM EXTMSG WHERE EXEC = 
 (SELECT EXEC 
@@ -50,7 +50,7 @@ step of the procedure that runs the form interface for the *Sales
 Orders* form, add the following commands after execution of the form
 interface:
 
-``` tsql
+```sql
 /* this code defines the format that will be used to print the document; 
 in the current example, it is assumed that we want to use print format -5 */
 :EXEC = 0;
@@ -94,7 +94,7 @@ or you can save it as a file (and send as a mail attachment).
 -   To display the document on screen in HTML format, continue the above
     code as follows:
 
-``` tsql
+```sql
 EXECUTE WINACTIV '-P', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS [, '-format', :PRINTFORMAT]; 
 LABEL 199; 
 ```
@@ -113,14 +113,14 @@ is run as part of a step in a procedure.
 -   To generate the document as a Word file (-wo), use the following
     code instead:
 
-``` tsql
+```sql
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,]'-wo', 'C:/TEMP/O.docx';
 ```
 
 -   To generate the document as a pdf file based on a word file (-wpdf),
     use the following code instead:
 
-``` tsql
+```sql
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,] '-wpdf', 'C:/TEMP/O.pdf'
 ```
 
@@ -144,7 +144,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORM
 To send the document to the default printer, continue the above code as
 follows:
 
-``` tsql
+```sql
 EXECUTE WINACTIV '-P', 'WWWSHOWORDER', '-q', 'ORDERS', :TMPORDERS;
 LABEL 199; 
 ```
@@ -153,7 +153,7 @@ When sending the document to the default printer, if you want to print
 more than 1 copy, use the flag \'--Q\' instead of \'--q\'. For example,
 to print 2 copies, continue the above code as follows:
 
-``` tsql
+```sql
 EXECUTE WINACTIV '-P', 'WWWSHOWORDER', '-Q',2, 'ORDERS', :TMPORDERS; 
 LABEL 199; 
 ```
@@ -186,7 +186,7 @@ arguments of the linked file (i.e, after \'ORDERS\', :TMPORDERS).
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > :TMPOUT = '..\..\orders_e.pdf'; 
 > EXECUTE WINHTML '-d', 'WWWSHOWORDER_E', 'ORDERS', :TMPORDERS, '-e', '-pdf', :TMPOUT; 
 > ```
@@ -194,21 +194,21 @@ arguments of the linked file (i.e, after \'ORDERS\', :TMPORDERS).
 Once you have generated the file, you can send an e-mail to a
 ***Priority*** user and attach the file:
 
-``` tsql
+```sql
 :USER = SQL.USER;
 MAILMSG 5 TO USER :USER DATA :TMPOUT;
 ```
 
 Or you can send it to a ***Priority*** mail group:
 
-``` tsql
+```sql
 :GROUPNAME = 'myGroup'; 
 MAILMSG 5 TO GROUP :GROUPNAME DATA :TMPOUT;
 ```
 
 or an external e-mail recipient:
 
-``` tsql
+```sql
 :EMAIL = 'example@example.com';
 MAILMSG 5 TO EMAIL :EMAIL DATA :TMPOUT;
 LABEL 199;
@@ -236,7 +236,7 @@ executed with the \'-dQ\' parameter.
 > the procedure (where the :IV variable represents the internal number
 > of the invoice you wish to print):
 >
-> ``` tsql
+> ```sql
 > EXECUTE BACKGROUND WINHTML '-dQ','WWWSHOWAIV', :IV; 
 > ```
 
@@ -261,7 +261,7 @@ in the HTMLCURSOR step of the procedure:
     table to define a loop that generates the designated number of
     copies when executing the document:
 
-> ``` tsql
+> ```sql
 > SELECT WTASKS.WTASK, WTASKS.WTASKNUM,
 > (:$.SRT = 1 ? WTASKS.WTASKNUM :(:$.SRT = 2 ? WAREHOUSES.WARHSNAME : ''))
 > FROM WTASKS, WAREHOUSES, DAYS

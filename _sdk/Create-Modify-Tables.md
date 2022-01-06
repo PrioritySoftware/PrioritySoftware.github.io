@@ -10,17 +10,13 @@ The following options are available from the *Table Generator* menu
 you must belong to the privilege group of the superuser (*tabula*) and
 the PRIVUSERS system constant must be set to 1.
 
-------------------------------------------------------------------------
-
-**Note:** When ***Priority*** is first installed, the *Table Generator*
+> **Important:** When ***Priority*** is first installed, the *Table Generator*
 is invisible by default. To add it to the *Generators* menu, enter the
 *Menu Generator* form (*System Management* → *Generators* → *Menus*) and
 retrieve the *Generators* menu. Then add the **TABGEN** menu using the
 *Menu Items* sub-level form. For more information on adding entities to
 menus, see [Linking the Tree to a
 Menu](Sub-level-Forms#Linking-the-Tree-to-a-Menu ).
-
-------------------------------------------------------------------------
 
 It is imperative that ***only one of these programs be run at a time***;
 otherwise, temporary tables will be overwritten. Thus, you must wait for
@@ -97,7 +93,7 @@ the same time.
     is automatically assigned). For instance, a value of 6 becomes 6.00
     and a value of 2 becomes 2.00.
 
-:   **Note:** Once a custom development has been installed in your
+    **Note:** Once a custom development has been installed in your
     working environment, this operation may fail, in which case you
     should use a workaround method (see [Column
     Types](Table-Columns#Column-Types )).
@@ -114,11 +110,11 @@ the same time.
     1.  Run the *Add Key to Table* program. The *Add Key* form opens.
     2.  Indicate the table to which you want to add the key, the type of
         key (A, U or N) and the key\'s priority.\
-        :**Notes:**\
-        :There may only be one autounique key per table.\
-        :The addition of a unique key to a table that already includes
+        **Notes:**\
+        - There may only be one autounique key per table.
+        - The addition of a unique key to a table that already includes
         records should be done with caution. See [Unique
-        Keys](Keys#Unique-Keys ).\
+        Keys](Keys#Unique-Keys).
     3.  Enter the sub-level form and record the columns in the key.
     4.  Exit all forms.
     5.  A message appears asking if you wish to continue. Click *OK* to

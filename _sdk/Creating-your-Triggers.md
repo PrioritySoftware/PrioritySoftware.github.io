@@ -12,7 +12,7 @@ They are specified in the *Row & Form Triggers* form and its sub level,
 *Row & Form Triggers - Text*, when they are to be activated by exiting
 the line or the form.
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -24,7 +24,7 @@ the line or the form.
     included in prepared version revisions. See [Tracking Changes to
     Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
 
-------------------------------------------------------------------------
+
 
 It is easier to use ***Priority***'s text editor to write trigger text
 rather than using the regular form. However, this must be done with
@@ -34,11 +34,8 @@ undisplayed lines will be lost! So, if you have cleared any lines in the
 form or retrieved only some of the records, be sure to retrieve all
 records before you run the text editor.
 
-------------------------------------------------------------------------
 
-To access the text editor, press **F6**.
-
-------------------------------------------------------------------------
+> To access the text editor, press **F6**.
 
 **Tip:** You can replace the built-in text editor with any editor of
 your choosing (e.g., Notepad). To do so, run the *Define External
@@ -49,32 +46,31 @@ Alternatively, you can open the *tabula.ini* file (in *C:\\Windows*)
 and, under the {Environment} section, revise the line for Tabula
 External Editor, giving the file path.
 
-------------------------------------------------------------------------
-
 See also [Form Triggers](Form-Triggers ).
 
 ## Types of Triggers 
 
 The following types of triggers may be created:
 
-  -------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------
-  [CHECK-FIELD](#CHECK-FIELD )             Performs verification checks on a value specified for a form column.
-  [POST-FIELD](#POST-FIELD )               Performs operations once form column check is successful.
-  [PRE-INSERT](#PRE-INSERT )               Performs verification checks before a record is inserted into the database.
-  [POST-INSERT](#POST-INSERT )             Performs operations once a record is successfully inserted.
-  [PRE-UPDATE](#PRE-UPDATE )               Performs verification checks before a record is updated in the database.
-  [POST-UPDATE](#POST-UPDATE )             Performs operations once a record is successfully updated.
-  [PRE-DELETE](#PRE-DELETE )               Performs verification checks before a record is deleted from the database.
-  [POST-DELETE](#POST-DELETE )             Performs operations once a record is successfully deleted.
-  [PRE-FORM](#PRE-FORM )                   Performs operations before a form is opened.
-  [POST-FORM](#POST-FORM )                 Performs operations when a form is exited, provided there were,insertions, updates or deletes in the form.
-  [CHOOSE-FIELD](#CHOOSE-FIELD )           Creates a list of values from which the user can choose when filling in a,specific field (for short lists).
-  [SEARCH-FIELD](#SEARCH-FIELD )           Creates a list through which the user can search for the needed value of a given field (for long lists).
-  [SEARCH-ALL-FIELD](#SEARCH-ALL-FIELD )   Creates a list through which the user can search to find a value for a given field. Allows the user to search by multiple criteria simultaneously.
-  -------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------
+  | Trigger Type | Trigger Description
+  | --------------------------------------------------| ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | [CHECK-FIELD](#CHECK-FIELD )     |        Performs verification checks on a value specified for a form column. |
+  | [POST-FIELD](#POST-FIELD ) |              Performs operations once form column check is successful. |
+  | [PRE-INSERT](#PRE-INSERT )    |           Performs verification checks before a record is inserted into the database.
+  | [POST-INSERT](#POST-INSERT )   |          Performs operations once a record is successfully inserted.
+  | [PRE-UPDATE](#PRE-UPDATE )      |         Performs verification checks before a record is updated in the database.
+  | [POST-UPDATE](#POST-UPDATE )     |        Performs operations once a record is successfully updated.
+  | [PRE-DELETE](#PRE-DELETE )        |       Performs verification checks before a record is deleted from the database.
+  | [POST-DELETE](#POST-DELETE )       |      Performs operations once a record is successfully deleted.
+  | [PRE-FORM](#PRE-FORM )              |     Performs operations before a form is opened.
+  | [POST-FORM](#POST-FORM )            |     Performs operations when a form is exited, provided there were,insertions, updates or deletes in the form.
+  | [CHOOSE-FIELD](#CHOOSE-FIELD )      |     Creates a list of values from which the user can choose when filling in a,specific field (for short lists).
+  | [SEARCH-FIELD](#SEARCH-FIELD )      |     Creates a list through which the user can search for the needed value of a given field (for long lists).
+  | [SEARCH-ALL-FIELD](#SEARCH-ALL-FIELD ) |   Creates a list through which the user can search to find a value for a given field. Allows the user to search by multiple criteria simultaneously.
 
-Except for PRE-FORM triggers, which are ***always***activated,
-triggers***will not be activated*** unless the user has made an addition
+
+Except for PRE-FORM triggers, which are ***always*** activated,
+triggers ***will not be activated*** unless the user has made an addition
 or change in the column, row or form. Furthermore, CHOOSE-FIELD and
 SEARCH-FIELD triggers are only activated when the user accesses a Choose
 list or Search list, respectively.
@@ -143,7 +139,6 @@ names must follow a number of rules:
     separated by hyphens (i.e., PRE-, POST-, -FIELD, -FORM, -INSERT,
     -UPDATE, -DELETE, CHECK-, CHOOSE-).
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -178,7 +173,7 @@ greater than 500.
 > **Example 1:** The CHECK-FIELD trigger for the **TYPE** column of the
 > **PART** form is:
 >
-> ``` tsql
+> ```sql
 > ERRMSG 4 WHERE :$.TYPE NOT IN ('O','R','P');
 > ```
 >
@@ -192,7 +187,7 @@ greater than 500.
 > the current column of the current form is less than zero ("The
 > designated quantity is a negative number!"):
 >
-> ``` tsql
+> ```sql
 > WRNMSG 105 WHERE :$.@ < 0;
 > ```
 
@@ -207,13 +202,13 @@ checks. They are particularly useful for filling in values.
 > function) into the **CURDATE** column when opening a new purchase
 > order if there is currently no date in that column.
 
-------------------------------------------------------------------------
+
 
 **Note:** When a POST-FIELD trigger changes a value of another form
 column, the POST-FIELD of that other column (if there is one) will also
 be activated, but its CHECK-FIELD will not.
 
-------------------------------------------------------------------------
+
 
 ### CHOOSE-FIELD 
 
@@ -225,7 +220,7 @@ characters.
 > the *Purchase Order Items* form (**PORDERITEMS**) provides a list of
 > the vendor's parts (:\$\$.SUP):
 >
-> ``` tsql
+> ```sql
 > SELECT DISTINCT PARTDES,PARTNAME
 > FROM PART WHERE PART = 
 > (SELECT PART FROM SUPPART WHERE SUP = :$$.SUP AND VALIDFLAG = 'Y')
@@ -251,10 +246,12 @@ to the CHOOSE-FIELD query.
 > by the quote's expiration date.
 
 If the third argument (the one you wish to sort by) is a numeric value,
-using the ITOA function alone will not result in correct sorting --- for
+using the ITOA function alone will not result in correct sorting. For
 example, 10 would precede 5. To avoid this, you can use the function
 ITOA(m,4), which will result in 1 becoming 0001, 5 becoming 0005 and 10
 becoming 0010, so that the order when sorted will be correct.
+
+<!--- TODO: Move PAR4 to Windows only features --->
 
 The first argument in the query is stored in the :PAR4 system variable,
 where it can be used by other triggers assigned to the same column.
@@ -272,7 +269,7 @@ must be structured as follows: *Value, Description*.
 > **Example:** The CHOOSE-FIELD trigger for the **TYPE** column of the
 > **LOGPART** form is:
 >
-> ``` tsql
+> ```sql
 > MESSAGE BETWEEN 100 AND 102;
 > ```
 >
@@ -291,8 +288,6 @@ SELECT /\* AND STOP \*/ ...
 > STOP \*/, see the CHOOSE-FIELD trigger for the **PARTNAME** column in
 > the **ORDERITEMS** form.
 
-------------------------------------------------------------------------
-
 **Note:** The sort in a Union Choose is determined by the first column
 that is retrieved. That is, the sort defined for each query, as well as
 the order of the queries, is ignored. If you want to override this
@@ -303,7 +298,6 @@ after the first asterisk and before the second one):\
 For an example of such usage, see the CHOOSE-FIELD trigger for the
 **ACTNAME** column in the **ALINE** form.
 
-------------------------------------------------------------------------
 
 Finally, you can use a variation of the trigger, called MCHOOSE-FIELD,
 to create a Multiple Choose. This allows the user to select more than
@@ -311,8 +305,6 @@ one value from the Choose list at a time.
 
 > **Example:** See the MCHOOSE-FIELD trigger in the **ORDNAME** column
 > of the **DOCORD** form.
-
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -322,8 +314,6 @@ one value from the Choose list at a time.
     trigger (if defined) is activated instead.
 -   A CHOOSE-FIELD trigger can also be defined for an entire form (see
     [CHOOSE-FIELD (for form)](#CHOOSE-FIELD-(for-form) )).
-
-------------------------------------------------------------------------
 
 ## Creating Row Triggers 
 
@@ -338,7 +328,7 @@ before the line is exited.
 > **Example:** The PRE-INSERT trigger for the **CASH_CASH** form
 > (*Cashiers*) verifies that a GL account is attached to the cashier:
 >
-> ``` tsql
+> ```sql
 > WRNMSG 1 WHERE :$.ACCOUNT = 0;
 > ```
 
@@ -359,7 +349,7 @@ triggers.
 > **Example:** The PRE-UPDATE trigger in the **CASH_CASH** form verifies
 > that a GL account is attached to the cashier:
 >
-> ``` tsql
+> ```sql
 > WRNMSG 1 WHERE :$.ACCOUNT = 0;
 > ```
 
@@ -380,7 +370,7 @@ the system).
 > **Example:** The PRE-DELETE trigger in the **ORDERITEMS** form warns
 > the user that tries to delete a line containing a bonus item:
 >
-> ``` tsql
+> ```sql
 > WRNMSG 334 WHERE :$.BONUSFLAG IN ('Y','F');
 > ```
 
@@ -392,7 +382,7 @@ has been successfully deleted.
 > **Example:** The POST-DELETE trigger in the **ORDERITEMS** form
 > deletes the relevant record from the **ORDERITEMSA** table:
 >
-> ``` tsql
+> ```sql
 > DELETE FROM ORDERITEMSA WHERE ORDI = :$.ORDI;
 > ```
 
@@ -429,8 +419,6 @@ the user to select more than one value from the Search list at a time
 (similar to MCHOOSE-FIELD). To do so, include the following comment in
 the trigger: /\* MULTI \*/.
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   A third type (SEARCH-EDES-FIELD) is used only in a non-English
@@ -444,8 +432,6 @@ the trigger: /\* MULTI \*/.
 -   If the user selects more than one value in a Multiple Search and the
     form generates a warning or error message, insertion of the selected
     values will stop.
-
-------------------------------------------------------------------------
 
 ### SEARCH-ALL-FIELD 
 
@@ -478,14 +464,14 @@ appear in a single line and without interrupting spaces.
 > **Correct Example:** taken from the SEARCH-ALL-FIELD in the LOGPART
 > form
 >
-> ``` tsql
+> ```sql
 > :ORDERBY > ((.*)PDES(.*)).3, (^(?!.*EPARTDES)(.*PARTDES)).3,
 > EPARTDES.2
 > ```
 
 > **Inorrect Example:**
 >
-> ``` tsql
+> ```sql
 > :ORDERBY > ((.*)PDES(.*)).3, (^(?!.*EPARTDES)
 > (.*PARTDES)).3, EPARTDES.2
 > ```
@@ -493,8 +479,6 @@ appear in a single line and without interrupting spaces.
 By default, the system will use SEARCH-ALL-FIELD over a regular
 SEARCH-FIELD, but users can change this using the SEARCHTYPE system
 constant.
-
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -504,7 +488,6 @@ constant.
     allows the user to select multiple search results, and
     SEARCH-ALL-FIELD, which automatically searches by multiple criteria.
 
-------------------------------------------------------------------------
 
 ## Creating Form Triggers 
 
@@ -518,43 +501,35 @@ example:
 
 -   to reset the value of a user-defined variable
 -   to generate a warning or error message concerning retrieved data
--   to retrieve and display all records when the user opens the form ---
-    :KEYSTROKES = '\*{Exit}';
--   to refresh all retrieved records in a form following a Direct
-    Activation --- :ACTIVATEQUERY = 1;
--   to deactivate data privileges in a form --- :\$.NOCLMNPRIV.T = 1;
+-   to retrieve and display all records when the user opens the form <code>
+    :KEYSTROKES = '\*{Exit}'; </code>
+-   to refresh all retrieved records in a form following an Action <code> :ACTIVATEQUERY = 1; </code>
+-   to deactivate data privileges in a form <code> :\$.NOCLMNPRIV.T = 1; </code>
 -   to deactivate data privileges for a specific table in a form: in a
     new PRE-FORM trigger for the form in question, define the
-    :\$.NOTBLPRIV.T variable with the name of the desired table; if the
+    <code>:\$.NOTBLPRIV.T </code> variable with the name of the desired table; if the
     table you want to exclude has a join ID, this should also be
     specified.
 
 > **Example:** In order to exclude the **AGENTS** table from data
 > privilege restrictions defined for the **ORDERS** form, add the
 > following line: \<syntaxhighlight lang=\"tsql\" enclose=\"pre>
->
-> :   \$.NOTBLPRIV.T = \'AGENTS\'
->
-> ```{=html}
-> </syntaxhighlight>
+> ```sql
+> :$.NOTBLPRIV.T = 'AGENTS'
 > ```
-> Or, if there is a join ID of 5: \<syntaxhighlight lang=\"tsql\"
-> enclose=\"pre>
->
-> :   \$.NOTBLPRIV.T = \'AGENTS.5\'
->
-> ```{=html}
-> </syntaxhighlight>
+
+> Or, if there is a join ID of 5: \
+> ```sql
+> :$.NOTBLPRIV.T = 'AGENTS.5'
 > ```
+
 
 **Tip:** To activate a PRE-FORM trigger after every query, include the
-line \<syntaxhighlight lang=\"tsql\" enclose=\"pre>
-
-:   PREFORMQUERY = 1;
-
-```{=html}
-</syntaxhighlight>
+line 
+```sql
+:PREFORMQUERY = 1;
 ```
+
 ### POST-FORM 
 
 POST-FORM triggers perform operations upon exiting the form (provided
@@ -565,7 +540,7 @@ upper-level form on the basis of values specified in the sub-level form.
 > **Example:** The POST-FORM trigger in the **TRANSORDER_K** form
 > includes the following lines (among others):
 >
-> ``` tsql
+> ```sql
 > UPDATE SERIAL SET KITFLAG = 'Y' WHERE SERIAL = :$$.SERIAL
 > AND EXISTS 
 > (SELECT 'X' FROM KITITEMS WHERE SERIAL = :$$.DOC AND TBALANCE > 0 

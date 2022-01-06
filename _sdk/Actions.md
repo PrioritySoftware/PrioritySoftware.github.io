@@ -8,9 +8,9 @@ While ***Priority*** entities are generally accessed from the menus,
 they may also be activated from within a specific record in a given
 form. The form's Actions may include:
 
--   root form --- the activation loads the form and its sub-levels;
--   report --- runs the report, then allows for display, printout, etc.
--   procedure --- if the procedure includes a program, the program will
+-   root form - the activation loads the form and its sub-levels;
+-   report - runs the report, then allows for display, printout, etc.
+-   procedure - if the procedure includes a program, the program will
     be run; if it entails processing of a report, the report will be
     run.
 

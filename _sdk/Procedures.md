@@ -36,14 +36,13 @@ it (using the *Copy Procedure* program in the same menu) and make
 revisions to the copy. The two procedures (standard and customized)
 should be very similar in terms of their logic.
 
-------------------------------------------------------------------------
+<!--- Adjust for Web focus -->
 
 **Note:** There are some slight differences when procedures are written
 for the ***Priority*** web interface; see [Working with the Priority Web
 Interface](Working-with-the-Priority-Web-Interface ) for
 details.
 
-------------------------------------------------------------------------
 
 ## Copying Procedures 
 
@@ -61,7 +60,6 @@ When assigning a name to the new procedure, be sure to follow the rules
 designated below. After the program is completed, make any needed
 revisions to the copy.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -71,7 +69,6 @@ revisions to the copy.
 -   If the procedure runs a program, you must not make any changes to
     parameters used by the program.
 
-------------------------------------------------------------------------
 
 ## Procedure Attributes 
 
@@ -118,12 +115,10 @@ Designate the type of procedure:
 -   If the procedure creates a document, specify *R* in the
     *Rep/Wizard/Dashboard* column and *Y* in the *HTML Document* column.
 
-------------------------------------------------------------------------
 
 **Note:** See [Processed Reports](Processed-Reports ) and
 [Documents](Documents ).
 
-------------------------------------------------------------------------
 
 ### Application
 
@@ -135,13 +130,13 @@ code word that aids in retrieval.
 
 ### Module
 
-Each procedure belongs to a given ***Priority***module. As different
-modules are included in each type of***Priority***package, users are
+Each procedure belongs to a given ***Priority*** module. As different
+modules are included in each type of ***Priority*** package, users are
 restricted to those procedures whose modules they have purchased. If the
 procedure is copied, the module is taken from the original procedure.
 When opening a new procedure manually, specify "Internal Development";
 this way you (and your customers) will be able to use the procedure no
-matter which modules of***Priority*** have been purchased.
+matter which modules of ***Priority*** have been purchased.
 
 ## Further Reading 
 

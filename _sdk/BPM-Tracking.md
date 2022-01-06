@@ -9,13 +9,11 @@ Tracking List, add the following hidden columns to the **MYDOC** form
 (listed are the *Form Column Name*, *Table Name* and *Column Name*,
 respectively):
 
-------------------------------------------------------------------------
-
-**Note:** As these columns are the same in any document that allows
+> **Note:** As these columns are the same in any document that allows
 tracking, you can use existing standard forms as a guideline (e.g.
 **ORDERS**).
 
-------------------------------------------------------------------------
+
 
 1.  **FOLLOWUPIV, MYDOC, MYDOC**. This column contains the autounique
     key of the **XXXX_MYDOC** table (the same as the **MYDOC** column).

@@ -13,7 +13,7 @@ following explains how to:
 -   Create a procedure for the BPM flow chart (and accompanying
     interfaces).
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -27,7 +27,7 @@ following explains how to:
     2.  A unique key, comprising a single column of **CHAR** or **INT**
         type.
 
-------------------------------------------------------------------------
+
 
 The steps to take (in order) are as follows:
 

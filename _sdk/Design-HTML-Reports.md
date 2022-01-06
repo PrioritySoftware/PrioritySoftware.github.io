@@ -101,12 +101,8 @@ For this purpose, three variables have been specially created:
 -   :HTMLFIELD -- to return the value of the current field (relevant for
     input columns, but not for links).
 
-------------------------------------------------------------------------
-
 **Note:** Of course, for a report that displays only one record, it is
 sufficient to identify the column (:HTMLACTION).
-
-------------------------------------------------------------------------
 
 > **Example:** In the list of parts appearing in the Storefront, each
 > part has at least two links:\
@@ -172,7 +168,7 @@ To link to multiple procedures:
     the procedure that needs to be activated for each of the report
     records (similar to the same process in a form).
 
-> **Example:**In order to display the financial document by its
+> **Example:** In order to display the financial document by its
 > reference number in the journal entry, you need to activate one
 > procedure in the case of an invoice, another procedure in the case of
 > a customer receipt and a third procedure in the case of payment to a
@@ -198,8 +194,6 @@ To access the values input by the user:
     the command is activated, the values of a different input column are
     filled in from the report with the three variables.
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   If several reports are displayed by the INPUT step, the values of
@@ -209,18 +203,15 @@ To access the values input by the user:
     :HTMLFIELD variable, but only one :HTMLACTION variable is defined
     (since all values were selected in a single column).
 
-------------------------------------------------------------------------
-
-> **Example:**
->
-> ``` tsql
-> LABEL 1;
-> DISPLAY;
-> GOTO 2 WHERE :RETVAL <= 0;
-> …
-> LOOP 1;
-> LABEL 2;
-> ```
+**Example:**
+```sql
+LABEL 1;
+DISPLAY;
+GOTO 2 WHERE :RETVAL <= 0;
+…
+LOOP 1;
+LABEL 2;
+```
 
 ## Further Reading 
 

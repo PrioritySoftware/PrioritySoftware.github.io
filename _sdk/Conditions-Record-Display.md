@@ -36,7 +36,7 @@ will always apply.
 
 > **Example:** To restrict the display of records in the **WARHSBAL**
 > form to parts with actual balances in the warehouse, the following
-> condition would be written for the **TBALANCE** column: \>0. This
+> condition would be written for the **TBALANCE** column: >0. This
 > condition should be written in any form that displays such balances.
 > Hence, while the **WARHSBAL** table will include records with a
 > balance of 0, only those records which meet the condition will appear

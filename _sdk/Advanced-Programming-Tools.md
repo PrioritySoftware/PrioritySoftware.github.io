@@ -3,7 +3,7 @@ title: Advanced Programming Tools
 layout: sdk_nav
 ---
 
-The following demonstrates usage of advanced programming tools available
+The topics in this section demonstrate the usage of advanced programming tools available
 in ***Priority***. These tools can be helpful in meeting specific
 programming needs.
 

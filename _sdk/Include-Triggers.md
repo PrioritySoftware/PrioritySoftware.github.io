@@ -10,12 +10,11 @@ without rewriting it.
 
 To include the same trigger elsewhere, use the following syntax (note
 that there is no semi-colon at the end of the statement):
-`<code>`{=html}
 
-:   **#INCLUDE** *form_name / trigger_name*\
-:   **#INCLUDE** *form_name / form_column_name / trigger_name*
+**#INCLUDE** *form_name / trigger_name*\
+**#INCLUDE** *form_name / form_column_name / trigger_name*
 
-`</code>`{=html} When a trigger is included in one or more other
+When a trigger is included in one or more other
 triggers, the entire contents of the former are inherited by the latter.
 Thus, if the CHECK-FIELD trigger for the **TYPE** column in the **PART**
 form is identical to the CHECK-FIELD trigger for the **TYPE** column in
@@ -23,10 +22,10 @@ the **LOGPART** form, you could write the trigger for one column and
 include it in the other:
 
 CHECK-FIELD for **TYPE** column in **PART** form:\
-:`ERRMSG 4 WHERE :$.TYPE NOT IN ('O','R','P');`
+ERRMSG 4 WHERE :$.TYPE NOT IN ('O','R','P');
 
 CHECK-FIELD for **TYPE** column in **LOGPART** form:\
-:`#INCLUDE PART/TYPE/CHECK-FIELD`
+#INCLUDE PART/TYPE/CHECK-FIELD
 
 Moreover, you can write more statements to the latter (*including*)
 trigger which do not apply to the former (*included*) trigger (before or
@@ -63,7 +62,7 @@ included in any trigger that uses this group of statements.
 > the PRE-INSERT trigger of all these sub-level forms includes the same
 > trigger that performs the check:
 >
-> ``` tsql
+> ```sql
 > #INCLUDE TRANSTRIG/BUF10 /* Check CANCEL and FINAL */ 
 > ```
 
@@ -114,6 +113,8 @@ other triggers, as any changes in the former will obviously affect the
 latter. You can view any triggers that include the current trigger in
 the *Use of Trigger* sub-level form of *Form Column Triggers* and of
 *Row & Form Triggers*.
+
+<!-- TODO: Mention func form -->
 
 ## More on Triggers 
 

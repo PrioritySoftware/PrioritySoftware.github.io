@@ -47,33 +47,32 @@ well:
 -   For any column that might be used for input, flag the **Input**
     column.
 
-------------------------------------------------------------------------
 
 **Note:** Remember to check all joins, as well as report optimization.
 
-------------------------------------------------------------------------
+
 
 ### Constructing the Form 
 
 To create the form, you first copy the standard **ASSETREP** form and
 then make certain adjustments to the copy.
 
-------------------------------------------------------------------------
 
-***Warning!***This is the only circumstance in which it is permissible
+
+***Warning!*** This is the only circumstance in which it is permissible
 to copy a standard***Priority*** form. Copying a form for any other
 purpose will have adverse effects.
 
-------------------------------------------------------------------------
 
 1.  To copy the standard **ASSETREP** form to a new form, from the
     *Tools* top menu in the Windows interface or the *Run* menu in the
     web interface, select *Run Entity (Advanced...)* and write the
-    command: WINPROC -P COPYFORM\
+    command: WINPROC -P COPYFORM
 
 This will open a new input parameter window, where you need to record
 the internal name of the form you want to copy (**ASSETREP**), as well
-as the name and title to be assigned to the new form.\
+as the name and title to be assigned to the new form.
+
 **Note:** If you wish to create a customized user report generator from
 a standard report generator form other than **ASSETREP**, make sure to
 choose one in which the expression defined for the **TYPE** column is
@@ -85,51 +84,38 @@ report name a different prefix instead.
 
 1.  The PRE-FORM trigger in the copied form should look like this:
 
-> ``` tsql
-> :REPEXEC = 0;
-> SELECT EXEC INTO :REPEXEC FROM EXEC 
-> WHERE ENAME = ' ASSETREP' AND TYPE = 'R';
-> :PREFIX = 'AST';
-> :KEYSTROKES = '%{Exit}'; 
-> ```
+    > ```sql
+    > :REPEXEC = 0;
+    > SELECT EXEC INTO :REPEXEC FROM EXEC 
+    > WHERE ENAME = ' ASSETREP' AND TYPE = 'R';
+    > :PREFIX = 'AST';
+    > :KEYSTROKES = '%{Exit}'; 
+    > ```
 
-:   
-
-    :   Make the following changes:\
-    :   \(1\) Change **ASSETREP** to the name of the base report you
-        created earlier.\
-    :   \(2\) Change the value of :PREFIX to another three-letter string
+    Make the following changes:
+    1. Change **ASSETREP** to the name of the base report you
+        created earlier.
+    2. Change the value of :PREFIX to another three-letter string
         (e.g., :PREFIX = \'PST\';).
 
-```{=html}
-<!-- -->
-```
-
-:   3.    In the *Form Columns* sub-level form, move to the **ENAME**
+    3. In the *Form Columns* sub-level form, move to the **ENAME**
     column. Then enter the *Form Column Extension* sub-level form and
     change the expression from LIKE \'AST%\' to match the string you
     used in the previous step (LIKE \'PST%\').
 
-```{=html}
-<!-- -->
-```
 
-:   4.    Fix the POST-FIELD triggers for the **TITLE** and **ENAME**
+    4. Fix the POST-FIELD triggers for the **TITLE** and **ENAME**
     columns in the same manner. That is, where ENAME LIKE \'AST%\'
     appears, revise this to ENAME LIKE \'PST%\'.
 
-```{=html}
-<!-- -->
-```
-
-:   5.    Link the **GREPCLMNS** form as a sub-level of your new form.
+    5. Link the **GREPCLMNS** form as a sub-level of your new form.
 
 ### Constructing the Procedure That Runs the Report 
 
 1.  Copy the standard **RUNCUSTREP** procedure to a new procedure.
-2.  In your new procedure, revise the SQLI query in step 10:\
-    (1) Change the value of the :TYPE variable from *g* to *r*.\
-    (2) Change the value of the :PAT variable to match the prefix in
+2.  In your new procedure, revise the SQLI query in step 10:
+    1. Change the value of the :TYPE variable from *g* to *r*.
+    2. Change the value of the :PAT variable to match the prefix in
     your new form (e.g., :PAT = \'PST\';).
 3.  If the base report you constructed is to receive input parameters
     from the procedure (e.g., a date range, a flag to display open

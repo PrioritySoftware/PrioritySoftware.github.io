@@ -26,7 +26,7 @@ BPM chart will update the form using this interface.
 
 ------------------------------------------------------------------------
 
-**Note:**You don't need to fill in the *Link Form Cols to Load Tbl Cols*
+**Note:** You don't need to fill in the *Link Form Cols to Load Tbl Cols*
 form (a sub-level of the *Forms to be Downloaded* form), as this form
 will be filled in automatically when you run the BPM procedure.
 
@@ -50,10 +50,13 @@ assigned user of the **XXXX_MYDOC** form.
     create three records, indicating the following *Load Table Column*,
     *Form Column Name* and *Order*, respectively:
 
-    :   **INT1**, **MYDOC**, **1**
-    :   **TEXT1**, **OWNERLOGIN**, **2**
-    :   **TEXT2**, **STATDES**, **3**
-    :   where:
+    **INT1**, **MYDOC**, **1**
+
+    **TEXT1**, **OWNERLOGIN**, **2**
+
+    **TEXT2**, **STATDES**, **3**
+    
+    where:
 
     -   **MYDOC** is the *Form Column Name* of the column in the
         **XXXX_MYDOC** form that contains the autounique key of the

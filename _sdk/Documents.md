@@ -9,9 +9,7 @@ You can use a [procedure](Procedures ) to generate a document.
 This kind of procedure collects data from several reports and displays
 it using an Internet browser. Each report creates a file, and the last
 step of the procedure combines all these files into one displayed file.
-The final document can be activated from a form via [Direct
-Activation](Direct-Activations ) (retrieving input from the
-record it was activated from), or it can be run from a menu, in which
+The final document can be activated from a form via [Actions](Actions) (retrieving input from the record it was activated from), or it can be run from a menu, in which
 case the user chooses the relevant records during parameter input. The
 reports in such a procedure must handle one record from the base table
 at a time, identified by the [autounique
@@ -24,7 +22,7 @@ key](Keys#The-Autounique-Key ).
 
 ## Creating the Input for the Document 
 
-The INPUT parameter of the linked file for the procedure\'s main table
+The INPUT parameter of the linked file for the procedure's main table
 must be named PAR.If the procedure is to be activated from the menu, you
 must define this parameter as input (specify *I* in the *Input*column)
 and specify the *Column Name* and *Table Name* of the table column that
@@ -34,7 +32,7 @@ to indicate column and table name.
 
 ## Declaring the Cursor 
 
-The HTMLCURSORcommand is used to create the cursor that goes over the
+The HTMLCURSOR command is used to create the cursor that goes over the
 records stored in the linked table. The only thing you should write in
 this step is the cursor query. The first column in the query should be
 the autounique key of the table. You can retrieve more columns in the
@@ -70,7 +68,7 @@ from the main table of the document in question.
 
 > **Example:**In the **WWWSHOWORDER** procedure,
 >
-> ``` tsql
+> ```sql
 > SELECT ORDNAME,ORD,ORDSTATUS,BRANCH 
 > INTO :PAR1,:$.ORD,:STAT,:BRANCH
 > FROM ORDERS 

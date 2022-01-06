@@ -8,7 +8,7 @@ The final step in [creating a BPM flow
 chart](Creating-BPM-Flow-Charts ) is to write a query that
 will insert the initial status into the **XXXX_MYDOCSTATS** table:
 
-``` tsql
+```sql
 :INITSTAT = 'Initial Stat';
 :STATUSTYPE = 'PRIV_MYBPM'
 INSERT INTO XXXX_MYDOCSTATS

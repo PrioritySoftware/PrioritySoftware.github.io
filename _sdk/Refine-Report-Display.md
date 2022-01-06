@@ -5,7 +5,7 @@ layout: sdk_nav
 
 ## Spacing Between Report Rows 
 
-In a [report](Reports ) with fixed positions, you can use a
+In a [report](Reports) with fixed positions, you can use a
 hidden column with the title *#LINEHEIGHT* (**INT** type) to add a fixed
 amount of space between all rows of the report.
 
@@ -17,18 +17,14 @@ amount of space between all rows of the report.
 precisions and titles of the table columns whose data they display.
 These values may be revised, where desired.
 
-------------------------------------------------------------------------
-
 **Note:** Because of this option of modifying report attributes, any
 changes in the width or decimal precision of a given table column
-***will not affect***existing report columns. In contrast, changes in
-the title of the table column***will*** be reflected in existing
+***will not affect*** existing report columns. In contrast, changes in
+the title of the table column ***will*** be reflected in existing
 reports, provided that no *Revised Title* has been assigned.
 
-------------------------------------------------------------------------
-
 Widths are adjusted by deleting the inherited column width from the
-*Width* column of the *Report Columns*form and specifying the desired
+*Width* column of the *Report Columns* form and specifying the desired
 width. Decimal precision is adjusted by deleting the inherited decimal
 precision from the *Display Mode* column of the same form and specifying
 the revised one. However, you should be very careful when changing the
@@ -36,14 +32,12 @@ display mode for an **INT** column. Finally, inherited column titles are
 overridden by specifying a new title in the *Revised Title* column of
 the same form.
 
-------------------------------------------------------------------------
 
 **Note:** Whereas a decimal precision of 0 (for a **REAL** column)
 creates varied precision in a form, it rounds off the real number to an
 integer in a report. Thus, you may wish to change decimal precision for
 any **REAL** column with a precision of 0.
 
-------------------------------------------------------------------------
 
 ## Date Displays 
 
@@ -66,7 +60,7 @@ calculated column (see below).
 You have the option of displaying or withholding the display of zero
 values with respect to **TIME**(00:00), **INT**(0) and **REAL**(0.0)
 columns. Depending on the value specified in the *Don\'t Display 0
-Val*column of the *Report Columns*form, you can choose to:
+Val* column of the *Report Columns* form, you can choose to:
 
 -   display zero values in all columns (default);
 -   leave the report column blank in case of zero values (*Y*);
@@ -86,13 +80,13 @@ There are several types of reports that can display HTML text:
     as \"Group By\" fields, and the text appears in the second line
     under the column title (e.g., **WWWORD_2X**). In such a case, the
     following conditions must be met:
--   A join of the **DAYS** table with the expression DAYS.DAYNUM BETWEEN
-    0 AND 1.
--   A real join of the text table when DAYS.DAYNUM = 1; a join of the
-    zero record in the text table when DAYS.DAYNUM = 0.
--   Inclusion of an expression field (width = 68) that displays the
-    title when DAYS.DAYNUM = 0, and displays the text when DAYS.DAYNUM =
-    1.
+    -   A join of the **DAYS** table with the expression DAYS.DAYNUM BETWEEN
+        0 AND 1.
+    -   A real join of the text table when DAYS.DAYNUM = 1; a join of the
+        zero record in the text table when DAYS.DAYNUM = 0.
+    -   Inclusion of an expression field (width = 68) that displays the
+        title when DAYS.DAYNUM = 0, and displays the text when DAYS.DAYNUM =
+        1.
 
 ## HTML Design 
 
@@ -116,10 +110,8 @@ Design* sub-level of the *Report Columns*form.
     color. If the designated report column is hidden, that column must
     have a value in the *Sort Priority* column.
 
-```{=html}
-<!-- -->
-```
--   *Location*tab: The default HTML design creates a regular report,
+
+-   *Location* tab: The default HTML design creates a regular report,
     with a title at the head of each vertical column. You can use the
     fields in this tab to divide the page into cells and to determine
     how each column is positioned within a cell (for more details, see
@@ -141,9 +133,7 @@ Design* sub-level of the *Report Columns*form.
         *Display* tab to determine how the field is positioned within
         its cell.
 
-```{=html}
-<!-- -->
-```
+
 -   *Picture* tab: You can use a specific report column to display a
     picture. Select the appropriate value in the *Picture* column and
     define the picture\'s width and height in pixels. Alternatively, you
@@ -162,16 +152,14 @@ sub-level of the *Report Generator* form.
     separate data within a group (e.g., customer number and customer
     name).
 
-```{=html}
-<!-- -->
-```
+
 -   *More Defs* tab: You can define the number of columns to appear on
     each page, as well as indicate whether the report title will be
     displayed. The former feature allows you to display several reports
     next to each other (each appearing as a separate column on the
     page).
 
-> **Example:**For border definitions, see the **WWWORD_2** report. For
+> **Example:** For border definitions, see the **WWWORD_2** report. For
 > use of the *Design* and *Location* tabs, see column #50 in the same
 > report. For inclusion of a picture, see column #170 in that report.
 
@@ -190,7 +178,7 @@ of this file (together with the content of the *style.htm* file) to the
 header of every HTML report generated by the system (i.e., inside the
 \<head> \</head> tags).
 
-***Important!***Do not modify the standard *style.htm* file, as changes
+***Important!*** Do not modify the standard *style.htm* file, as changes
 to this file may be overwritten by future ***Priority*** releases.
 Instead, make any desired changes in the *style2.htm* file only.
 
@@ -206,7 +194,7 @@ CSS classes can be applied to any of the following objects in
 -   A specific font: Use the *Class* column in the *Font Definitions*
     form to apply a class to a specific font.
 
-> **Example:**For report definitions, see the **WWWTABS2** report. For
+> **Example:** For report definitions, see the **WWWTABS2** report. For
 > report column definitions, see columns #5 and #108 in the same report.
 
 ## Tips for Advanced Users 

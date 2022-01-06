@@ -14,44 +14,44 @@ Begin by defining the following in the *Form Load Designer* and its
 sub-level forms (*System Management → Database Interface → Form Load
 (EDI)*):
 
-  Form Name        Title                    Code (Record Type)
-  ---------------- ------------------------ --------------------
-  ORDERS           Sales Orders             1
-  ORDERSTEXT       Sales Orders - Remarks   2
-  ORDERITEMS       Order Items              3
-  ORDERITEMSTEXT   Order Items - Remarks    4
+| Form Name      	| Title                  	| Code (Record Type) 	|
+|----------------	|------------------------	|--------------------	|
+| ORDERS         	| Sales Orders           	| 1                  	|
+| ORDERSTEXT     	| Sales Orders - Remarks 	| 2                  	|
+| ORDERITEMS     	| Order Items            	| 3                  	|
+| ORDERITEMSTEXT 	| Order Items - Remarks  	| 4                  	|
 
 \
 For the **ORDERS** form:
 
-  Load Table Column   Form Column Name   Order
-  ------------------- ------------------ -------
-  TEXT1               CUSTNAME           1
-  TEXT2               DETAILS            2
+| Load Table Column 	| Form Column Name 	| Order 	|
+|-------------------	|------------------	|-------	|
+| TEXT1             	| CUSTNAME         	| 1     	|
+| TEXT2             	| DETAILS          	| 2     	|
 
 \
 For the **ORDERSTEXT** form:
 
-  Load Table Column   Form Column Name   Order
-  ------------------- ------------------ -------
-  TEXT                TEXT               1
+| Load Table Column 	| Form Column Name 	| Order 	|
+|-------------------	|------------------	|-------	|
+| TEXT            	| TEXT         	| 1     	|
 
 \
 For the **ORDERITEMS** form:
 
-  Load Table Column   Form Column Name   Order
-  ------------------- ------------------ -------
-  TEXT1               PARTNAME           1
-  REAL1               PRICE              2
-  REAL2               PERCENT            3
-  INT1                TQUANT             4
+| Load Table Column 	| Form Column Name 	| Order 	|
+|-------------------	|------------------	|-------	|
+| TEXT1             	| PARTNAME         	| 1     	|
+| REAL1             	| PRICE            	| 2     	|
+| REAL2             	| PERCENT          	| 3     	|
+| INT1              	| TQUANT           	| 4     	|
 
 \
 For the **ORDERITEMSTEXT** form:
 
-  Load Table Column   Form Column Name   Order
-  ------------------- ------------------ -------
-  TEXT                TEXT               1
+| Load Table Column 	| Form Column Name 	| Order 	|
+|-------------------	|------------------	|-------	|
+| TEXT            	| TEXT         	| 1     	|
 
 \
 Next, create a new procedure with 2 input parameters. The first will be
@@ -60,16 +60,16 @@ be the order you want to copy. The procedure will have 2 steps:
 
 -   An INPUT step with 2 input parameters:
 
-  Parameter Name   Pos   Width   Input (I/M)   Type   Column Name   Table Name
-  ---------------- ----- ------- ------------- ------ ------------- ------------
-  CST              0     0       I             LINE   CUSTNAME      CUSTOMERS
-  ORD              5     0       I             LINE   ORDNAME       ORDERS
+| Parameter Name 	| Pos 	| Width 	| Input (I/M) 	| Type 	| Column Name 	| Table Name 	|
+|----------------	|-----	|-------	|-------------	|------	|-------------	|------------	|
+| CST            	| 0   	| 0     	| I           	| LINE 	| CUSTNAME    	| CUSTOMERS  	|
+| ORD            	| 5   	| 0     	| I           	| LINE 	| ORDNAME     	| ORDERS     	|
 
 \
 \* An SQLI step. Define a parameter called GEN (**FILE** type). The step
 query should look like this:
 
-> ``` tsql
+> ```sql
 > LINK CUSTOMERS TO :$.CST;
 > ERRMSG 1 WHERE :RETVAL <= 0;
 >

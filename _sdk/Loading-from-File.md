@@ -9,7 +9,7 @@ When using an external file to import or export data in a [form
 load](Form_Loads ), make sure you know the structure of the
 file you will be using before you begin defining the interface.
 
-**Tip:**If you want to create a new form load based on an existing one,
+**Tip:** If you want to create a new form load based on an existing one,
 retrieve the desired form load and run the *File Definitions for Form
 Load* report by Direct Activation from the *Form Load Designer* form.
 
@@ -28,14 +28,12 @@ the File Name field without a path (i.e., the field does not contain (/)
 or (\\)). Leave the column blank for the program to search for the file
 in system/load.
 
-------------------------------------------------------------------------
-
 **Notes:** If the file name appears with a path (i.e. the field contains
 (/) or (\\)), flagging this column will have no effect.
 
 As of version 19, this column is flagged by default for all interfaces
 in the system (customized or standard) that load data from a file.
-\-\-\--
+
 
 You can use one of three types of files for the form load:
 
@@ -43,14 +41,10 @@ You can use one of three types of files for the form load:
 -   an ASCII or Unicode text file with data separated by tabs
 -   an XML/JSON file (using either ASCII or Unicode character encoding).
 
-------------------------------------------------------------------------
-
 **Note:** ***Priority***\'s interface tools can import data from either
 ASCII or Unicode (UTF-16) files, and will automatically recognize the
 format used. Data exported from***Priority*** for use in outgoing
 interfaces will be saved in ASCII format, unless otherwise specified.
-
-------------------------------------------------------------------------
 
 ## Forms in the Load 
 
@@ -63,7 +57,6 @@ record type. Each level in the form tree must be assigned its own unique
 record type (e.g., **ORDERS** = 1; **ORDERITEMS** = 2). This must match
 the record type in the file itself.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -71,8 +64,6 @@ the record type in the file itself.
     mandatory, record any value here.
 -   After recording a form, run the *List of Sub-level Forms* report by
     Direct Activation to view all its sub-levels (one level down only).
-
-------------------------------------------------------------------------
 
 For each form, if you want the load to overwrite existing records in the
 sub-levels, flag the *Replace Form Data* column. Leave this column blank
@@ -140,7 +131,7 @@ tags. Specifically, you need to take the following steps:
     \'string\' \" in this column.
 4.  Some XML document schemas call for parent tags to repeat for each
     child data item, as depicted in the following example:
-    ``` {.xml .numberLines startFrom="1"}
+    ```xml
     <Order>
         <OrderItems>
             <OrderItem>
@@ -156,8 +147,7 @@ tags. Specifically, you need to take the following steps:
     \
     In other files, this tag needs to appear only once. You can control
     this behavior in the loaded file by prepending a
-    `<b>`{=html}+`</b>`{=html} to a repeating parent, or a
-    `<b>`{=html}--`</b>`{=html} for parent that should appear only once.
+    **+** to a repeating parent, or a **-** for a parent that should appear only once.
     For an example, see the ECSL_BELGIUMMON form interface.
 5.  Return to the *Forms to be Loaded* form and its sub-level *Position
     of Column in File*. Use the next sub-level, *Definition of XML
@@ -166,7 +156,7 @@ tags. Specifically, you need to take the following steps:
     date value will be displayed. You can use any of the available [SQL
     date formats](ATOD-and-DTOA ), such as MMDDYY or MM/DD/YY.
 
-------------------------------------------------------------------------
+<!-- TODO: Move to Windows only -->
 
 **Note:** Once you have created a form load design that uses an XML
 file, ***Priority*** automatically enables users to export data from the

@@ -33,7 +33,7 @@ the *Organize Fields* utility.
 a form. However, an existing screen-painting takes precedence over a
 default design. If you have changed the default design and see no effect
 in the form for other users, check if there is an existing
-screen-painting file in the system/document folder. If there is one,
+screen-painting file in the *system/document* folder. If there is one,
 delete it (save a backup) or move it, and check if the default design
 has taken effect.
 
@@ -41,12 +41,10 @@ The screen-painting files use internal form numbers for the file name.
 To find the internal number of a given form, run the following query via
 the *SQL Development* program (fill in the form name):
 
-> \<syntaxhighlight lang=\"tsql\" enclose=\"pre> SELECT EXEC FROM EXEC
-> WHERE ENAME = *formname* AND TYPE = 'F' FORMAT;
->
-> ```{=html}
-> </syntaxhighlight>
-> ```
+```sql
+ SELECT EXEC FROM EXEC
+ WHERE ENAME = 'formname' AND TYPE = 'F' FORMAT;
+ ```
 
 # Distributing a Default Design in a Revision 
 

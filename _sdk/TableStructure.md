@@ -15,7 +15,7 @@ type; subsequent lines delineate its columns and keys.
 This is the result of the *Dump Table* program for the **ORDSTATUS**
 table:
 
-``` priority
+```sql
 CREATE TABLE ORDSTATUS 'Possible Statuses for Orders' 0
 ORDSTATUS (INT,13,'Order Status (ID)')
 ORDSTATUSDES (CHAR,12,'Order Status')
@@ -46,7 +46,7 @@ window):
 
 -   **Select All** retrieves all records from a designated table.
 -   **Table Columns** shows the columns in a table.
--   **Table Columns incl. precision**provides the same information, but
+-   **Table Columns incl. precision** provides the same information, but
     also displays decimal precision.
 -   **Table Keys** shows the keys in a table.
 

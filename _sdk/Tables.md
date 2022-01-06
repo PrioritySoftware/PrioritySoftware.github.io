@@ -22,9 +22,10 @@ The following rules apply to table names:
 
 The table type determines whether the table is an application table or a
 system table. An application table is a table in which data is
-maintained separately for each **\'\'Priority***company, whereas a
+maintained separately for each ***Priority*** company, whereas a
 system table is used to store data that is common to all companies in
-the current ***Priority**\'\' installation.\
+the current ***Priority*** installation.
+
 For historical reasons,***Priority*** lists 4 possible values in the
 **TYPE** column:
 
@@ -33,12 +34,9 @@ For historical reasons,***Priority*** lists 4 possible values in the
 
 However, new tables should always be assigned type 0.
 
-------------------------------------------------------------------------
 
 **Note:** You cannot create new system tables or add new columns to
 system tables.
-
-------------------------------------------------------------------------
 
 ## Customization Procedure 
 
@@ -51,18 +49,16 @@ Consequently, no titles (in any language) will be stored in the upgrade
 file; rather, they will be inserted into a second file (based on the
 upgrade file) via another program.
 
-------------------------------------------------------------------------
 
 **Note:** For more on preparing upgrades for other languages, see
 [Customizations: Installing the Language
 Dictionaries](Customizations:_Installing-the-Language-Dictionaries ).
 
-------------------------------------------------------------------------
 
 ### Rules for Modifying Tables and Table Columns 
 
 1.  When modifying tables, do not change standard table columns or any
-    of the table\'s unique (or Auto Unique) keys.
+    of the table*s unique (or Auto Unique) keys.
 2.  If you add a column to the table, the column name must begin with a
     four-letter prefix. Use the same prefix for all table columns (as
     well as any other Priority entities) that you have added for a given
@@ -75,13 +71,11 @@ Dictionaries](Customizations:_Installing-the-Language-Dictionaries ).
 
 -   Ensure that all users have exited the system.
 
-------------------------------------------------------------------------
 
 **Note:** For general guidelines for development, see [Working with
 Version
 Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 
-------------------------------------------------------------------------
 
 ## Further Reading 
 

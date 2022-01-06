@@ -90,7 +90,7 @@ removed from the **TEXT** column.
 **Example:** To delete HTML tags from the **PARTTEXT** table for Part
 '010', the following code would be used:
 
-``` tsql
+```sql
 :PART = 0;
 SELECT PART INTO :PART FROM PART WHERE PARTNAME = '010';
 SELECT SQL.TMPFILE INTO :TXT FROM DUMMY;

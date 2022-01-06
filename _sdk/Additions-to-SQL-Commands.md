@@ -25,12 +25,12 @@ format commands:
     (\\n) at the end of each record; useful for preparing files that can
     be loaded into a spreadsheet.
 
-:   **Note:** To create the file without titles, initialize the
+    **Note:** To create the file without titles, initialize the
     :NOTABSTITLE variable to 1 before executing the query.
 
 -   **DATA**--- generates file structure information (header), marked as
     comment lines by the symbol #, as well as the data; useful for
-    exporting ***Priority***data to an external database.
+    exporting ***Priority*** data to an external database.
 -   **ASCII**--- produces output of data only (no column headings) with
     no spaces in between columns.
 -   **SQLSERVER**--- same as **TABS**, except that output does not
@@ -52,7 +52,7 @@ dumped into that file; otherwise, it appears in standard output.
 
 Note that the file name can be an expression. For instance,
 
-``` tsql
+```sql
 SELECT * FROM PART
 WHERE PART > 0 
 FORMAT STRCAT ('/tmp/', 'part.sav'); 
@@ -89,14 +89,14 @@ single line.
 
 **Correct Example**
 
-``` tsql
+```sql
 WHERE (PARTNAME LIKE '%' OR PART.PARTDES LIKE '%' 
 OR EPARTDES LIKE '%')
 ```
 
 **Inorrect Example**
 
-``` tsql
+```sql
 WHERE (PARTNAME LIKE '%' OR PART.PARTDES 
 LIKE '%' OR EPARTDES LIKE  '%')
 ```
@@ -106,7 +106,7 @@ LIKE '%' OR EPARTDES LIKE  '%')
 An outer join is represented in ***Priority***'s syntax by a question
 mark (?) following the table ID:
 
-``` tsql
+```sql
 SELECT ...FROM FNCITEMS, FNCITEMSB ?
 WHERE FNCITEMSB.FNCTRANS = FNCITEMS.FNCTRANS
 AND FNCITEMSB.KLINE = FNCITEMS.KLINE;
@@ -138,7 +138,7 @@ Use OFFSET to retrieve results starting from a specified returned row.
 > 01/01/19, and returns orders from starting with the 101th order
 > retrieved. Orders are sorted by internal order number:
 >
-> ``` tsql
+> ```sql
 > :FR = 100;
 > SELECT ORD, ORDNAME FROM ORDERS WHERE CURDATE > 01/01/19
 > ORDER BY 1
@@ -151,7 +151,7 @@ specify the number of rows to retrieve.
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > :FR = 100;
 > :MAX = 75;
 > SELECT ORD, ORDNAME FROM ORDERS WHERE CURDATE > 01/01/19

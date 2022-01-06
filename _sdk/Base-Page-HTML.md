@@ -17,8 +17,8 @@ The resultant base page will be in ASCII format and can be found in the
 *system\\html* directory of the ***Priority*** server. Its name is the
 procedure name followed by the step number.
 
-> **Example:**If you run the program for the **MYPROG** procedure at
-> step 50, you will create a page called MYPROG-50.htm.
+**Example:** If you run the program for the **MYPROG** procedure at
+step 50, you will create a page called MYPROG-50.htm.
 
 It is advisable to include as little text as possible in base pages, in
 order to facilitate localization to different languages (not including
@@ -33,12 +33,12 @@ as the title of the HTML page, using the following syntax:
 Similarly, you can insert procedure messages directly into the base page
 when the document is produced.
 
-> **Example:** To insert message 5 of the **WWWDOCUMENTS_Q** procedure
-> in a base page, add the following HTML tag:\
-> \<!\--\| Priority Message (WWWDOCUMENTS_Q 5) \|\--\>
+**Example:** To insert message 5 of the **WWWDOCUMENTS_Q** procedure
+in a base page, add the following HTML tag:\
+\<!\--\| Priority Message (WWWDOCUMENTS_Q 5) \|\--\>
 
-***Important!***Whenever you add a new report or input parameter to a
-given INPUT step, you must***re-create the base page*** (i.e., run the
+***Important!*** Whenever you add a new report or input parameter to a
+given INPUT step, you must ***re-create the base page*** (i.e., run the
 program again).
 
 ------------------------------------------------------------------------

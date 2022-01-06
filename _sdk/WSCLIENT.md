@@ -13,10 +13,10 @@ web services. Use the following syntax to interface with a web service
 > :headerFile\]\] \[, \'-usr\', :wsUser \[, \'-pwd\', :wsUserPwd\] \[,
 > \'-domain\', :userDomain\]\] \[, \'-tag\'\|\'-val\', :tagName\] \[,
 > \'-action\', :soapAction\'\] \[, \'-timeout\', :msec\] \[,
-> \'-content\', :contentType\'\] \[, \'-method\', :method\] \[,
+> \'-content\', :contentType\'\] \[, \'-method\', :method\] ['-headout' headers_response_outfile] \[,
 > \'-authname, :tokenCode\] \[, \'-urlfile\', urlfile\];
 >
-> ;
+;
 
 ## WSCLIENT Parameters 
 
@@ -32,7 +32,7 @@ web services. Use the following syntax to interface with a web service
     instances of the *--head2* parameter, each with different headers.
     For example: `'-head2', :headerA, '-head2', :headerB,...`
     Alternatively, you can provide a single header file using *-head*.
-    Note that each header must include a new line after it, including
+    Note that each header file must include a new at the end, including
     the last one.
 -   *\[, \'-usr\', :wsUser \[, \'-pwd\', :wsUserPwd\] \[, \'-domain\',
     :userDomain\]* -- use to specify username, password, and domain (if
@@ -57,26 +57,21 @@ web services. Use the following syntax to interface with a web service
 -   *\[, \'-method\', :method\]* -- if the remote web service is REST
     based, the HTTP method. The default method is **POST**, but you can
     specify others (e.g. GET, PATCH).
+-   *['-headout' headers_response_outfile]* - If some of the data returned by the response is in the header of the response (instead of the body), use this option to store the header response in a file.
 -   \[, \'-authname, :tokenCode\]; -- if the remote web service uses
     OAuth2 for authorization, the OAuth2 token code that contains the
     access token. See **Interfacing With OAuth2** for more information.
-
-```{=html}
-<!-- -->
-```
 -   \[, \'-urlfile\', urlfile\] -- if the URL is greater than 127
     characters, add this option to the WSCLIENT program to transmit the
     endpoint_url within an ASCII file. When using this option, the
     parameter :endpoint_url must be empty.
-
-------------------------------------------------------------------------
 
 **Notes:**
 
 -   Error messages are also written to the ERRMSGS table with type
     *\"w\"* under SQL.USER.
 -   You can use the XMLPARSE command to read a response received as an
-    XML file.
+    XML or JSON file.
 -   Requests sent to the web service and response received will be
     written to the server log when it is set to record
     [DEBUG](Debug-Tools#Logging ) level messages.

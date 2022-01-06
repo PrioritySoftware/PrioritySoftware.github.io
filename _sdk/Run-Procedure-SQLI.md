@@ -36,7 +36,7 @@ file.
 > **Example -- Executing a Report:** To execute the **OPENORDIBYDOER**
 > report for a specific customer, the following code would be used:
 >
-> ``` priority
+> ```sql
 > :F = '../..output.txt';
 > SELECT SQL.TMPFILE INTO :CST FROM DUMMY;
 >
@@ -63,7 +63,7 @@ file.
 > (**OPENORDBYCPROF**) using any of the three commands mentioned
 > earlier. In the current example, the **ACTIVATF** command is used:
 >
-> ``` priority
+> ```sql
 > GOTO 10099 WHERE :$. CPROFSTAT <> :SPECIALSTATUS;
 >
 > SELECT SQL.TMPFILE INTO :FILE FROM DUMMY;
@@ -92,7 +92,7 @@ report created by the form interface.
 The following code runs a report and then sends the results in an e-mail
 attachment.
 
-``` priority
+```sql
 SELECT SQL.TMPFILE INTO :TMP FROM DUMMY;
 
 LINK ERRMSGS TO :TMP;
@@ -128,7 +128,7 @@ following code saves the output of the **OPENORDIBYDOER** report as a
 text file (tab-delimited) and then sends the results as an e-mail
 attachment.
 
-``` priority
+```sql
 :F = '../..output.txt';
 SELECT SQL.TMPFILE INTO :CST FROM DUMMY;
 
@@ -152,7 +152,7 @@ command takes two parameters -- the Excel file without a suffix and the
 **TEMPLATE** number from the **EXCELTEMPLATES** table. For example, the
 following code saves the **OPENORDIBYDOER** report as an Excel file.
 
-``` priority
+```sql
 EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', 'c:\temp\cur', 444; 
 ```
 

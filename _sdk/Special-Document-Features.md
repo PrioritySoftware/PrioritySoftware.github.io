@@ -3,14 +3,13 @@ title: Special Document Features
 layout: sdk_nav
 ---
 
-## Sending Documents by Automatic Mail or Automatic Fax 
+## Sending Documents by Automatic Mail 
 
 There are several print/send options to choose from when working with
 documents. In addition to the standard options, you can use [calculated
 report columns](Calculated-Columns-in-Reports ) to include an
 Automatic Mail option (automatically sends the report to the designated
-contact as an e-mail attachment) and an Automatic Fax option
-(automatically faxes the report to the designated contact).
+contact as an e-mail attachment).
 
 To enable the Automatic Mail option, include a report column with the
 title *#MAIL*. This option opens a customer or vendor task, depending on
@@ -21,28 +20,22 @@ the document via the *External Contacts* form), add a *#CUSTNAME* or
 in the current document. Otherwise, the task will be opened in the name
 of the contact\'s company.
 
-To enable the Automatic Fax option, include a report column with the
-title *#FAX*. You also have the option of adding a *#DEST* column, which
-will cause the contents of this field to appear at the top of the fax
-alongside \"**Attn**.\"
-
 ## Document Design: Forcing Display of the Line Number 
 
 For HTML printouts that require line numbering, you can prevent users
 from hiding the line number by including a report column whose title is
-. Such a column will not be displayed in the design utility, will
+\{#LINE\}. Such a column will not be displayed in the design utility, will
 appear untitled in the document and will automatically be assigned the
 first column position.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
--   Only one  column can be included in any given report.
+-   Only one \{#LINE\} column can be included in any given report.
 -   Only user designs created in ***Priority*** version 17.3 and higher
     will be affected.
 
-------------------------------------------------------------------------
+<!-- eDOCs now included in WINHTML documentation 
 
 ## A Special SQLI Step: Creating E-Documents 
 
@@ -75,74 +68,10 @@ If the above conditions are met:
 > **Example:**See the print formats defined for the **WWWSHOWCIV**
 > procedure.
 
-## Creating a Digitally Signed PDF Document using Procedure Code 
-
-Assuming that the user running the procedure has been granted the
-privileges required for digitally signing PDF documents, an HTML
-document may be converted into a PDF and digitally signed from within
-the procedure itself. This is done by adding the *--signpdf* option to
-the WINHTML command.
-
-> **Example:**The following code will create a digitally signed PDF of
-> the sales order in which ORD = 100:
->
-> ``` tsql
-> :ORD = 100;
-> :PDFFILE = '../../SOMEFILENAME.pdf';
-> EXECUTE WINHTML '-d', 'WWWSHOWORDER','','','-v', :ORD, '-signpdf', '-pdf', :PDFFILE; 
-> ```
-
-## Creating an E-Document using Procedure Code 
-
-If you are required to create a digitally signed E-Document, for
-instance, when printing financial documents, you can create a digitally
-signed E-Document from within the procedure itself. This is done by
-adding the --edoc option to the WINHTML command.
-
-> **Example:**The following code will create a digitally signed
-> E-Document of an Invoice/Credit Memo:
->
-> ``` tsql
-> EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', '-edoc', '-pdf', :FILE2, '-s'; 
-> ```
-
-To automate the mailing of the E-Document that you created, use the
-following code:
-
-> ``` tsql
-> EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', '-edoc,', '-pdf', '-AMAIL', '-s'; 
-> ```
-
-## Saving a Certified Copy when Printing a Document 
-
-You can define a procedure so that, when the document is printed or sent
-by e-mail (:SENDOPTION = \'PRINT\' or \'AMAIL\'), a certified copy is
-saved that can be printed later (using the *Create Certified Copy*
-program).
-
-In order to save a copy:
-
--   Include an [HTMLEXTFILES
-    step](Procedure-Steps#Basic-Commands ) which goes over the
-    attached files.
--   In the first INPUT step, set the :HTMLPRINTORIG variable to 1.
--   In the SQLI step after the HTMLCURSOR step, set the :SAVECOPY
-    variable to 1.
-
-These variables are updated during runtime, so that if several documents
-are being printed together, the variables will be set for each
-individual document, depending on its status.
-
-> **Example:**See the **WWWSHOWCIV** procedure.
-
-------------------------------------------------------------------------
-
-**Note:** See also the [SHOWCOPY
-command](Procedure-Steps#Basic-Commands ).
-
-------------------------------------------------------------------------
+-->
 
 ## Further Reading 
 
 -   [Documents](Documents )
+-   [Outputting the Document](WINHTML)
 -   [The Letter Generator](The-Letter-Generator )

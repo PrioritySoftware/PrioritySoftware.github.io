@@ -9,19 +9,20 @@ chart](Creating-BPM-Flow-Charts ) is to create the statuses
 form.
 
 1.  Use the *Form Generator* to create a new form named
-    **XXXX_MYDOCSTATS**, based on the**XXXX_MYDOCSTATS**table.
+    **XXXX_MYDOCSTATS**, based on the **XXXX_MYDOCSTATS** table.
 2.  Define the following outer joins (add a question mark in the *Join
-    ID* column next to the *Join Table* column):\
-    **XXXX_MYDOCSTATS.MYDOCSTAT**=**DOCSTATUSES.ORIGSTATUSID\
-    DOCSTATUSES.COLOR**=**HTMLCOLORS.COLOR**
+    ID* column next to the *Join Table* column):
+    **XXXX_MYDOCSTATS.MYDOCSTAT** = **DOCSTATUSES.ORIGSTATUSID**, 
+    
+    **DOCSTATUSES.COLOR** = **HTMLCOLORS.COLOR**
 3.  Define the following form columns:\
-    **XXXX_MYDOCSTATS.STATDES** -- *Status*\
+    **XXXX_MYDOCSTATS.STATDES** -- *Status*
     **XXXX_MYDOCSTATS.INITSTATSFLAG** -- *Initial Status*
 4.  Add all of the flags from the **XXXX_MYDOCSTATS** table.
 5.  Add the following flags from the **DOCSTATUSES** table:\
-    **DOCOPENED** -- *Include in ToDo List*\
-    **INACTIVE** -- *Inactive Status*\
-    **ESTATDES** (optional for non-English system) -- Adds a description
+    - **DOCOPENED** -- *Include in ToDo List*\
+    - **INACTIVE** -- *Inactive Status*\
+    - **ESTATDES** (optional for non-English system) -- Adds a description
     in English.\
     **Note:** When recording these columns, do not fill in the *Column
     Name* or *Table Name* columns; rather, enter the *Form Column
@@ -55,7 +56,7 @@ The following form triggers need to be created:
 -   A CHECK-FIELD trigger in the**INITSTATFLAG**column that prevents
     users from marking more than one status as an initial status:
 
-> ``` tsql
+> ```sql
 > ERRMSG 1 WHERE :$.@ = 'Y' AND EXISTS
 > (SELECT 'X' FROM XXXX_MYDOCSTATS 
 > WHERE INITSTATFLAG = 'Y' AND MYDOCSTAT <> :$.MYDOCSTAT);
@@ -65,14 +66,14 @@ The following form triggers need to be created:
     record. For example, the following checks that the initial status
     allows document revision:
 
-> ``` tsql
+> ```sql
 > ERRMSG 2 WHERE :$.INITSTATFLAG = 'Y' AND :$.CHANGEFLAG <> 'Y';
 > ```
 
 -   A POST-INSERT/POST-UPDATE trigger that handles record insertion into
     **DOCSTATUSES**:
 
-> ``` tsql
+> ```sql
 > INSERT INTO DOCSTATUSES(TYPE,ORIGSTATUSID)
 > VALUES(:$.STATUSTYPE, :$.MYDOCSTAT);
 > UPDATE DOCSTATUSES SET STATDES = :$.STATDES,
@@ -91,14 +92,14 @@ The following form triggers need to be created:
 
 -   A POST-DELETE trigger, that deletes from **DOCSTATUSES**:
 
-> ``` tsql
+> ```sql
 > DELETE FROM DOCSTATUSES WHERE TYPE = :$.STATUSTYPE AND ORIGSTATUSID = :$.MYDOCSTAT; 
 > ```
 
 -   A PRE-FORM trigger that causes all records to be displayed when the
     form is entered. It should contain the following text:
 
-> ``` tsql
+> ```sql
 > :statustype = 'PRIV_MYBPM'; /* where 'PRIV_MYBPM' = STATUSTYPE */ 
 > :KEYSTROKES = '*{Exit}'; 
 > ```
@@ -106,7 +107,7 @@ The following form triggers need to be created:
 -   A POST-FORM trigger with additional checks (e.g., that a status was
     marked as initial status):
 
-> ``` tsql
+> ```sql
 > ERRMSG 4 WHERE NOT EXISTS <br />
 > (SELECT 'X' FROM XXXX_MYDOCSTATS WHERE INITSTATFLAG = 'Y');
 > ```
@@ -116,14 +117,14 @@ The following form triggers need to be created:
     in this form, since all the changes will be made using an interface
     run by the BPM Chart:
 
-> ``` tsql
+> ```sql
 > ERRMSG 17 WHERE :FORM_INTERFACE <> 1;
 > ```
 
 -   A CHOOSE-FIELD trigger that displays the statuses from the
     **DOCSTATUSES** table:
 
-> ``` tsql
+> ```sql
 > SELECT STATDES, '', ITOA(SORT,3)
 > FROM DOCSTATUSES
 > WHERE TYPE = 'PRIV_MYBPM'

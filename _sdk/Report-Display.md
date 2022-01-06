@@ -6,7 +6,7 @@ layout: sdk_nav
 ## Report Column Attributes 
 
 Report columns inherit the name, title, type, width and decimal
-precision (in the case of **REAL**or **INT**columns) of the table
+precision (in the case of **REAL**or **INT** columns) of the table
 columns whose data they display. With the exception of column name, all
 these report attributes may be modified, where desired.
 
@@ -28,7 +28,7 @@ To add report columns automatically, enter the *Report Tables*sub-level
 of the *Report Generator*form, and specify all tables from which data
 are derived.
 
-**Tip:**Move to the *Table Name* column and press **F6**. You will
+**Tip:** Move to the *Table Name* column and press **F6**. You will
 access the *Table Dictionary*, in which you can retrieve table names.
 
 The order in which report tables are specified will affect the positions
@@ -38,7 +38,7 @@ second table will receive the next ones, and so on. Within each table,
 columns will be positioned in order of their insertion into the table.
 These column positions, which determine the order in which report
 columns are displayed, may be revised, where desired. You can also
-delete the records (from the *Report Columns*form) for those table
+delete the records (from the *Report Columns* form) for those table
 columns which you do not need in the report, or you can hide unneeded
 columns.
 
@@ -47,11 +47,8 @@ columns.
 > city/state, zip code, phone number, price list, internal customer
 > number.
 
-------------------------------------------------------------------------
 
 **Note:** See [Rules for Customizing](Rules-for-Customizing ).
-
-------------------------------------------------------------------------
 
 ## Adding Report Columns 
 
@@ -63,10 +60,10 @@ columns appear in the report is determined by their relative position
 consecutive. The column assigned the lowest integer will appear first,
 that with the next highest integer will appear second, and so on.
 
-**Tip:**Press **F6** from the *Column Name*****column to access the
-\'\'Column Dictionary \'\'or press**F6**from the \'\'Table
-Name*****column to access the*Table Dictionary*. The*Columns*sub-level
-form of the*Table Dictionary\'\' displays all columns that belong to a
+**Tip:** Press **F6** from the *Column Name* column to access the
+*Column Dictionary* or press **F6** from the *Table
+Name* column to access the *Table Dictionary*. The *Columns* sub-level
+form of the *Table Dictionary* displays all columns that belong to a
 given table.
 
 Certain restrictions apply to report column names:
@@ -78,7 +75,7 @@ Certain restrictions apply to report column names:
     the *Reserved Words* form --- *System Management → Dictionaries*).
 -   The name assigned to any newly created report column must include a
     common four-letter prefix (the same one you use for all entities
-    that you add to ***Priority***for the customer in question).
+    that you add to ***Priority*** for the customer in question).
 
 ## Column Numbers 
 
@@ -92,14 +89,12 @@ column position. If another column already has that ID number, the new
 column will be assigned the next available number. Changes in column
 position do not affect column numbers.
 
-------------------------------------------------------------------------
 
-**Note:**In order to prevent future ***Priority***releases from
-overwriting any newly added columns,***manually*** assign them a column
+**Note:** In order to prevent future ***Priority*** releases from
+overwriting any newly added columns, ***manually*** assign them a column
 numberof at least 500 (and then change the position). For more details,
 see [Rules for Customizing](Rules-for-Customizing ).
 
-------------------------------------------------------------------------
 
 ## Join Columns 
 
@@ -108,7 +103,7 @@ appropriate data is displayed. When a new report is created, if no join
 columns are added, the user will receive all possible combinations of
 data from the included table columns.
 
-> **Example:**If no join columns are displayed in a report based on the
+> **Example:** If no join columns are displayed in a report based on the
 > **ORDERS**, **ORDERITEMS** and **CUSTOMERS** tables, then the report
 > will display Order 1000 for all customers and all ordered parts,
 > regardless of whether there is any connection between these pieces of
@@ -117,15 +112,11 @@ data from the included table columns.
 > internal customer number to the internal customer number in the
 > **CUSTOMERS** table, by means of join columns and their tables.
 
-Both the *Join Column* and its *Join Table*must be specified.
-
-------------------------------------------------------------------------
+Both the *Join Column* and its *Join Table* must be specified.
 
 **Note:** If you have added a column to a standard report and the join
 is to a new table, assign a *Join ID* greater than 5. For details, see
 [Rules for Customizing](Rules-for-Customizing ).
-
-------------------------------------------------------------------------
 
 ### Special Joins 
 
@@ -138,7 +129,7 @@ There are two special types of joins:
 
 *Column ID*s and *Join ID*s are used to distinguish between two joins
 made through the same table column. A good example of a ***multiple
-join***is found in the **TOTWARHSBAL** (*Total Part Inventory*)report,
+join*** is found in the **TOTWARHSBAL** (*Total Part Inventory*) report,
 which displays inventory in both standard part units and in factory
 units. The former unit is stored in **PUNIT** in the **PART** table and
 the latter is stored in **UNIT** in the same table. Both are joined to
@@ -151,28 +142,25 @@ through each join. For instance, the two types of units are imported
 from the same table column: **UNITNAME**from the **UNIT** table. The
 factory unit must be imported through join 0, whereas the standard unit
 must be imported through join 1. Thus, the former is assigned a
-\'\'Column ID*of 0, whereas the latter is assigned a*Column ID\'**\'**of
+*Column ID* of 0, whereas the latter is assigned a *Column ID* of
 1.
 
-------------------------------------------------------------------------
-
-**Important note:**When creating your own multiple joins, use a join ID
+**Important note:** When creating your own multiple joins, use a join ID
 and column ID greater than 5.
 
-------------------------------------------------------------------------
 
-As opposed to regular joins, an ***outer join***allows for unmatched
+As opposed to regular joins, an ***outer join*** allows for unmatched
 rows between joined tables. To designate the outer join, add a question
-mark (?) in the relevant*Column ID*****or *Join ID*****column, next to
+mark (?) in the relevant*Column ID* or *Join ID* column, next to
 the number of the ID. The decision as to where to put the question mark
 (column ID? join ID?) depends on where the null record is expected to be
 encountered. If it is in the table from which the report column is
-derived (i.e., the one appearing in the \'\'Table Name*****column of
-the*Report Columns *form), then add the question mark to the column ID.
+derived (i.e., the one appearing in the *Table Name* column of
+the *Report Columns* form), then add the question mark to the column ID.
 If, on the other hand, the null record is expected to appear in the join
 table, attach the question mark to the join ID. In the case of an
 additional join between the outer join table and another table, the
-question mark should appear in*each \'\'of these join IDs.
+question mark should appear in *each* of these join IDs.
 
 > **Example:** In the **WWWIV_1** report, which creates a header for
 > printouts of various invoices, there is a join to the **NSCUST**
@@ -187,28 +175,25 @@ question mark should appear in*each \'\'of these join IDs.
 > invoices, orders, documents, etc. Nonetheless, it is enough to define
 > only the **IV** column as the outer join.
 
-------------------------------------------------------------------------
+**Note:** Outer-joined tables are accessed after regular join tables.
 
-**Note:**Outer-joined tables are accessed after regular join tables.
-
-------------------------------------------------------------------------
 
 ## Report Output 
 
 You will not always wish all columns assigned to the report to be
 displayed during report output. For instance, there is generally no
 reason to display internal numbers. Hence, the **CUST** and
-**ORD**columns from the **ORDERS** table are not displayed in the
-**ORDERSBYCUST**report.
+**ORD** columns from the **ORDERS** table are not displayed in the
+**ORDERSBYCUST** report.
 
-To prevent output for a given report column, flag the *Hide*column.
+To prevent output for a given report column, flag the *Hide* column.
 
 ## User Input 
 
-To create a parameter input screen, flag the *Input*****column for each
+To create a parameter input screen, flag the *Input* column for each
 column to appear in the screen. If you want the input to be Boolean
-(Y/N) and appear as a check box, also specify \'\'B*****in the*Don\'t
-Display 0 Val\'\' column. This only applies to a **CHAR** column with a
+(Y/N) and appear as a check box, also specify *B* in the *Don't
+Display 0 Val* column. This only applies to a **CHAR** column with a
 width of one character.
 
 To allow the user the option of defining query conditions, a parameter
@@ -217,9 +202,9 @@ this screen can theoretically include any report columns, it is
 advisable only to include those columns which the user will find
 helpful.
 
-> **Example:** The input screen for the **ORDERSBYCUST**report is made
+> **Example:** The input screen for the **ORDERSBYCUST** report is made
 > up of: customer number, customer name, order number and part number.
-> Thus, by specifying "CA001" in the *Customer*input column, the user
+> Thus, by specifying "CA001" in the *Customer* input column, the user
 > will obtain only those orders placed by that customer.
 
 ## Predefined Query Conditions 
@@ -230,12 +215,12 @@ conditions yourself. These conditions will hold whenever the report is
 run. Of course, the user can stipulate query conditions in addition to
 your predefined ones.
 
-Use the *Expression/Condition*****column of the sub-level \'\'Report
-Column Extension \'\'form to set query conditions. If the condition is
+Use the *Expression/Condition* column of the sub-level *Report
+Column Extension *form to set query conditions. If the condition is
 too long to fit in that column, continue in the sub-level form,
-\'\'Expression/Condition (cont.)\'\'. Once the \'\'Report Column
-Extension \'\'form is exited, a check mark appears in the
-\'\'Expression/Condition*****column of the*Report Columns\'\' form. This
+*Expression/Condition (cont.)*. Once the *Report Column
+Extension *form is exited, a check mark appears in the
+*Expression/Condition* column of the *Report Columns* form. This
 flag makes it easy to spot any report column with a condition.
 
 Conditions are written in SQL and must begin with a comparative operator
@@ -250,9 +235,9 @@ prescribed condition will appear in the report.
 ## Accessing a Related Form 
 
 One of the ways to input data is to access a target form (by pressing
-**F6** twice). Thus the target form for the *Customer Number*****column
-would be the \'\'Customers \'\'form, whereas the target from the
-\'\'Order Number*****column would be the*Sales Orders \'\'form. Such
+**F6** twice). Thus the target form for the *Customer Number* column
+would be the *Customers *form, whereas the target from the
+*Order Number* column would be the *Sales Orders* form. Such
 target forms are also accessed when the user clicks on a link within a
 displayed report.
 
@@ -270,24 +255,20 @@ are several ways to override this default, so that the move will be to
 ***another root form based on the same table***:
 
 -   by designating a main target form (type *M* in the
-    *Zoom/International*column of the *Form Generator*form for the form
+    *Zoom/International* column of the *Form Generator* form for the form
     in question);
 -   by designating an application target form (type *Z* in the same
     column);
 -   by designating a form as a target for this particular report column
     (specify the name of the relevant form in the *Target Form Name*
-    column of the *Report Column Extension*sub-level of the *Report
+    column of the *Report Column Extension* sub-level of the *Report
     Columns* form).
 
 The last option overrides all other target forms, and the application
 target overrides the main target form.
 
-------------------------------------------------------------------------
-
-**Note:**To disable automatic access from a given column, specify the
-**NULL**form as the target form in the *Report Column Extension*form.
-
-------------------------------------------------------------------------
+**Note:** To disable automatic access from a given column, specify the
+**NULL**form as the target form in the *Report Column Extension* form.
 
 ### Dynamic Access 
 
@@ -297,15 +278,15 @@ target form of the *Invoice* column is the relevant type of invoice
 (e.g., **AINVOICES**, **CINVOICES**).
 
 In order to achieve this, for the report column in question, record the
-following settings in the *Link/Input*tab of the*Report Columns-HTML
-Design* sub-level of the *Report Columns*form:
+following settings in the *Link/Input* tab of the *Report Columns-HTML
+Design* sub-level of the *Report Columns* form:
 
 -   *Link/Input Type* = P
 -   *Return Value Name (:HTMLACTION)* = \_winform
 -   *Return Value Column# (:HTMLVALUE)* = the number of the column
     containing the **ENAME** of the target form.
 
-:   **Note:**The column with the **ENAME** of the target form must have
+    **Note:** The column with the **ENAME** of the target form must have
     a *Sort*value.
 
 -   *Internal Link Column#* = same as :HTMLVALUE above.
@@ -318,16 +299,16 @@ Description* column to the *Part Catalogue* form, or from a *Details*
 column to the *Sales Orders* form.
 
 In order to achieve this, for the report column in question, record the
-following settings in the *Link/Input*tab of the*Report Columns-HTML
-Design* sub-level of the *Report Columns*form:
+following settings in the *Link/Input* tab of the *Report Columns-HTML
+Design* sub-level of the *Report Columns* form:
 
 -   *Link/Input Type* = P
 -   *Return Value Name (:HTMLACTION)* = \_winform
 -   *Return Value Column# (:HTMLVALUE)* = the number of the column
     containing the key of the target form.
 
-:   **Note:**The column with the key of the target form must have a
-    *Sort*value.
+    **Note:** The column with the key of the target form must have a
+    *Sort* value.
 
 -   *Internal Link Column#* = leave empty.
 -   *Target Form (Choose)* = the name of the target form.
@@ -339,7 +320,7 @@ form and that form has CHOOSE-FIELD or SEARCH-FIELD triggers, those
 triggers will be imported to the report input screen. You may want to
 write a specific CHOOSE-FIELD or SEARCH-FIELD for the report. The same
 restrictions that apply to [form trigger
-names](Creating-Your-Own-Triggers#Naming-Customized-Triggers )
+names](Creating-Your-Own-Triggers#Naming-Customized-Triggers)
 apply here as well.
 
 To design a new trigger, use the *Field Triggers* form (a sub-level of
@@ -348,7 +329,7 @@ To design a new trigger, use the *Field Triggers* form (a sub-level of
 ## Special Report Columns 
 
 You can use report columns to display special values by using the
-*Report Columns-HTML Design* sub-level of the *Report Columns*form. For
+*Report Columns-HTML Design* sub-level of the *Report Columns* form. For
 example, you can display addresses in Google Maps; pictures; or QR
 codes.
 

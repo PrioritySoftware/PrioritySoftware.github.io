@@ -5,13 +5,12 @@ layout: sdk_nav
 
 You can use SQL commands to open a given form and retrieve a given
 record. This is useful, for instance, when you want to create a new
-Direct Activation from the *Sales Orders* form that will open a customer
+Action from the *Sales Orders* form that will open a customer
 shipment. In this example, once the document is successfully opened, the
 *Customer Shipments* form opens and the new document is retrieved
 automatically.
 
-The following gives some basic guidelines for creating such a Direct
-Activation:
+The following gives some basic guidelines for creating such an Action:
 
 1.  Define an [interface](Interfaces ) (e.g.,
     **YUVV_OPENDOC_D**) using the **GENERALLOAD** load table to open the
@@ -25,7 +24,7 @@ Activation:
     = **ORDNAME**). In the procedure, record the following in the SQLI
     step:
 
-> ``` tsql
+> ```sql
 > LINK ORDERS TO :$.PAR;
 > ERRMSG 1 WHERE :RETVAL <= 0;
 >
@@ -56,7 +55,7 @@ Activation:
 >
 > UNLINK GENERALLOAD;
 > ERRMSG 3 WHERE :DOCNO = '';
->
+> 
 > :$.DNO = :DOCNO; /* :$.DNO will be used in the next step to open the ORDERS form in a 
 > web client - see below */
 >
@@ -68,11 +67,12 @@ Activation:
 > LABEL 9;
 > ```
 
-If you are working with the ***Priority***web interface, add another
+<!-- TODO: Fix example and text for Web oriented development -->
+If you are working with the ***Priority*** web interface, add another
 procedure step that is not executed in the Windows client (use the GOTO
-procedure step to skip it). In this additional step, the*Entity
-Name*=*\'ORDERS** and the*Type*= \'F\'. In the*Procedure Parameters\'\'
-sub-level form, add the parameter DNO (of**CHAR\'\'\' type).
+procedure step to skip it). In this additional step, the *Entity
+Name* = **ORDERS** and the *Type* = **F**. In the *Procedure Parameters*
+sub-level form, add the parameter DNO (with type **CHAR**).
 
 ## Further Reading 
 

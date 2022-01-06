@@ -25,15 +25,11 @@ Note the following:
 
 > **Example:**
 >
-> ``` tsql
+> ```sql
 > SELECT SQL.TMPFILE INTO :A FROM DUMMY;
->
 > EXECUTE TABINI 'Environment', 'Tabula Host', :A;
->
 > LINK GENERALLOAD TO :A;
->
 > SELECT TEXT FROM GENERALLOAD WHERE LINE = 1 FORMAT;
->
 > UNLINK GENERALLOAD;
 > ```
 

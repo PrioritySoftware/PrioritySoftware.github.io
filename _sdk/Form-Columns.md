@@ -59,8 +59,6 @@ Obviously, it is unnecessary to be concerned with the position of hidden
 columns (see below). Nonetheless, it is helpful to move these columns
 out of the way, by assigning them all the same high integer (e.g., 99).
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   Positions have no effect on screen-painted forms; the designer can
@@ -68,7 +66,6 @@ out of the way, by assigning them all the same high integer (e.g., 99).
 -   Users can apply form design (*Organize Fields*) to affect how
     columns are displayed specifically for them.
 
-------------------------------------------------------------------------
 
 ## Hidden Columns
 
@@ -103,14 +100,13 @@ Therefore, the **CURDATE** and **CUSTNAME** columns are mandatory. When
 a column is mandatory, built-in triggers will not allow the user to
 leave the line without specifying data for this column.
 
-------------------------------------------------------------------------
 
 **Note:** Whenever a [form load
 interface](Loading-from/to-a-Load-Table ) is used to update a
 form, that interface must fill in all mandatory columns. If it does not,
 the **INTERFACE** program will fail.
 
-------------------------------------------------------------------------
+
 
 The columns that make up the base table’s unique key are a special case:
 they must always contain data (either filled in automatically by the
@@ -123,12 +119,12 @@ as mandatory. In this way, users will know in advance that data must be
 designated here. Otherwise, they will not find out until they try to
 leave the line and receive an error message.
 
-------------------------------------------------------------------------
+
 
 **Note:** The *Privilege Explorer* can be used to make columns mandatory
 for specific users. See the *Privilege Explorer Wizard* for details.
 
-------------------------------------------------------------------------
+
 
 ## Read-only Columns
 
@@ -143,7 +139,7 @@ specified in the **ORDERS** form. This is because (1) the rep’s name is
 imported from the **AGENTS** table, and (2) the rep’s number
 (**AGENTCODE**) is a unique key in that table.
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
@@ -154,7 +150,7 @@ imported from the **AGENTS** table, and (2) the rep’s number
     read-only for specific users. See the *Privilege Explorer Wizard*
     for details.
 
-------------------------------------------------------------------------
+
 
 ### Balances: Special Read-only Columns
 
@@ -217,10 +213,11 @@ customer's location. In order for a form to have the option of opening a
 map, it must contain a special column named **ADDRESSMAP**. You can add
 this column to a customized form using your standard prefix
 (**XXXX_ADDRESSMAP**).  
----- **Note:** It is not possible to add such a column to a standard
+
+ **Note:** It is not possible to add such a column to a standard
 form.
 
-------------------------------------------------------------------------
+
 
 ## Special Date Columns
 
@@ -233,7 +230,7 @@ value 01/01/1988 to be displayed in a particular column, the form column
 name must contain the string **BIRTHDATE** (e.g., the **BIRTHDATE10**
 column in the **USERSB_ONE** form).
 
-------------------------------------------------------------------------
+
 
 **Note:** When a new record is inserted into the database and the date
 column is empty, the system assigns a default value of 0 (i.e.,
@@ -244,7 +241,7 @@ when a new record is inserted into the database and the date column in
 question is empty, the column receives a different default value (e.g.,
 01/01/1900).
 
-------------------------------------------------------------------------
+
 
 ## Sorting Data
 
@@ -267,13 +264,13 @@ order). In contrast, the regular sort treats consecutive digits as a
 number (rather than individual characters). Hence, in ascending order,
 A2 precedes A13 and B39 precedes B200.
 
-------------------------------------------------------------------------
+
 
 **Note:** The designated sort priority and type constitute the default
 sort. A different sort order may be imposed by the user during data
 retrieval (see the *User Interface Guide*).
 
-------------------------------------------------------------------------
+
 
 ## Imported Data
 
@@ -337,12 +334,12 @@ is executed:
     key.
 -   They must include all key columns.
 
-------------------------------------------------------------------------
+
 
 **Note:** The column comprising an autounique key meets both conditions
 required of a join column.
 
-------------------------------------------------------------------------
+
 
 ### Special Joins
 
@@ -378,12 +375,12 @@ ID* of 1. Any other value imported from the **WAREHOUSES** table (e.g.,
 the warehouse description, the bin number) is likewise assigned the
 appropriate *Column ID*.
 
-------------------------------------------------------------------------
+
 
 **Important note:** When creating your own multiple joins, use a join ID
 and column ID greater than 5.
 
-------------------------------------------------------------------------
+
 
 As opposed to regular joins, an ***outer join***allows for unmatched
 rows between the base and join tables. To designate the outer join, add
@@ -407,11 +404,11 @@ these join IDs.
 > table is via **FNCITEMSB**, it is necessary to create an outer join
 > there as well (for instance, via the **COSTC2** column).
 
-------------------------------------------------------------------------
+
 
 **Note:** Outer-joined tables are accessed after regular join tables.
 
-------------------------------------------------------------------------
+
 
 ## Calculated Columns
 
@@ -463,13 +460,13 @@ To add a calculated column to a given form, take the following steps:
     *Type* column in the *Form Columns* form will ***not*** display the
     type of a calculated column.
 
-------------------------------------------------------------------------
+
 
 **Note:** Once you exit the sub-level form, a check mark will appear in
 the *Expression/Condition* column of the *Form Columns* form. This flag
 helps you to find any calculated columns in the form at a glance.
 
-------------------------------------------------------------------------
+
 
 Sometimes you may wish to include a column that sets a condition for the
 entire record. In that case, do not create a calculated column, as

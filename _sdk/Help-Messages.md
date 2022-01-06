@@ -2,10 +2,8 @@
 title: Help Messages
 layout: sdk_nav
 ---
-
-## Introduction
-
-### Forms
+<!-- TODO: Update to reflect shift to text form -->
+## Forms
 
 You can use the *Form Generator* to create on-line help messages for an
 entire form or specific form columns. Form help is specified in the
@@ -15,7 +13,6 @@ form. Whenever help messages (for the entire form or for any column) are
 added or modified, the date and time of this revision appear in the
 *Help Date* column of the *Form Generator* form.
 
-------------------------------------------------------------------------
 
 **Note:** Any modifications of help messages, including the creation of
 new ones, will not be seen by the user until the form in question has
@@ -24,9 +21,7 @@ texts require you to remove the existing form preparation and execute it
 again. To do so, run the *Reprepare Form* program by Direct Activation
 from the *Form Generator*.
 
-------------------------------------------------------------------------
-
-### Reports
+## Reports
 
 Similarly, you can use the *Report Generator* to create on-line help
 messages for an entire report and/or any report column appearing in its
@@ -37,14 +32,10 @@ Columns*form. Whenever help messages (for the entire report or for any
 input column) are added or modified, the date and time of this revision
 appear in the *Help Date*column of the *Report Generator*form.
 
-------------------------------------------------------------------------
-
 **Note:** Do not write help for any report which is activated from a
 procedure; instead, write the help for the procedure.
 
-------------------------------------------------------------------------
-
-### Procedures
+## Procedures
 
 Finally, you can use the *Procedure Generator* to create on-line help
 messages for an entire procedure and/or any parameter appearing in its
@@ -71,17 +62,17 @@ hyphenation. To force the beginning of a line, use the code \\n.
 > To define statuses, along with their attributes and rules, run
 > {VISCPROFSTATS.P} from the list of Direct Activations.
 >
-> *The help for the **OPENORDIBYDOER**report says:*\
+> *The help for the **OPENORDIBYDOER** report says:*\
 > Run this report to view orders to carry out, sorted by due date. \\n\
 > \\n\
 > The report displays the name of the user assigned to each order.
 
 ## Referring to Other Entities 
 
-Often, you will want to refer to other ***Priority***entities in your
+Often, you will want to refer to other ***Priority*** entities in your
 help text. As entity titles are easily changed (even by the user),
 whereas their names are relatively fixed by the time you begin to create
-help messages,***Priority*** offers a mechanism for referring to an
+help messages, ***Priority*** offers a mechanism for referring to an
 entity by name in the help text; its current title will consequently be
 displayed when the help is called up by a user.
 

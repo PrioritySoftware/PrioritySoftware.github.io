@@ -9,15 +9,7 @@ To create a new BI report or modify an existing one, you have to copy
 (and then revise) several standard procedures and reports:
 
 -   procedures that prepare the data for the BI
-
-```{=html}
-<!-- -->
-```
 -   the BI report itself
-
-```{=html}
-<!-- -->
-```
 -   the procedure that runs the BI report.
 
 You should use as your point of departure an existing BI report that
@@ -39,7 +31,7 @@ question.
     make the following revisions:
     -   Change the **TYPE** variable from \'ORDERS\' to \'PRIV_ORDERS\'.
 
-        :   **Note:**As the length of the **TYPE** column in the
+        **Note:** As the length of the **TYPE** column in the
             **EISCUBES** table is 12, assign a value to the **TYPE**
             variable that is less than 12 characters.
     -   Change the query that inserts the records into the **EISCUBES**
@@ -88,7 +80,7 @@ question.
 5.  Modify the rest of the report to suit your needs (e.g., hide
     unnecessary columns).
 
-    :   **Note:** Any column you wish to display in a BI report must
+    **Note:** Any column you wish to display in a BI report must
         meet at least one of the following conditions:
 
     -   The table name and table column defined for the report column

@@ -32,14 +32,10 @@ Examples of possible problems:
 -   A form column is neither derived from a table column nor defined by
     an expression.
 
-------------------------------------------------------------------------
-
 **Note:** In rare cases, the *Form Preparation* program fails to replace
 the older version of the form. If that occurs, retrieve the form in
 question in the *Form Generator* and run the *Reprepare Form* program by
 Direct Activation.
-
-------------------------------------------------------------------------
 
 ## Loading a Form 
 
@@ -49,12 +45,10 @@ similar program (*Open Form*) can be run by Direct Activation from the
 *Form Generator*. These interchangeable programs are particularly useful
 during the form's development stages.
 
-------------------------------------------------------------------------
 
 **Note:** An unprepared form cannot be opened in this manner; it must
 first be prepared.
 
-------------------------------------------------------------------------
 
 When loading a form, **the designated form may not be linked to any
 upper-level form**. To access a sub-level form, load the most

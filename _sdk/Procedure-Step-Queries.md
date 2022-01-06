@@ -12,7 +12,6 @@ INPUT, SQLI, HTMLCURSOR and HTMLEXTFILES commands can be accompanied by
 SQL statements that serve as step queries. Such queries are carried out
 after parameter input.
 
-------------------------------------------------------------------------
 
 **Notes:**
 
@@ -20,7 +19,6 @@ after parameter input.
 -   HTMLCURSOR and HTMLEXTFILES are Basic commands used in creating
     [documents](Documents ).
 
-------------------------------------------------------------------------
 
 ## Error and Warning Messages 
 
@@ -66,11 +64,9 @@ that SQLI step (or to continue to the next procedure step, once all
 messages have been sent). In each iteration, up to 100 messages will be
 sent.
 
-------------------------------------------------------------------------
 
 **Note:** Use this option carefully and avoid creating an infinite loop.
 
-------------------------------------------------------------------------
 
 ## Parameter Variables 
 
@@ -87,7 +83,7 @@ In a procedure that requires heavy processing via a cursor, you can
 display a progress bar that indicates to the user how far the program
 has progressed. To do so, use the following step query:
 
-``` tsql
+```sql
 DECLARE mycursor CURSOR FOR …;
 OPEN mycursor;
 :N = :RETVAL; 

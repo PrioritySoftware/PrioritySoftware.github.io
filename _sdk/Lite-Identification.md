@@ -30,7 +30,7 @@ from the main table of the document in question.
 To identify the user from within the procedure, use the [SQL.WEBID
 variable](SQL-Functions-and-Variables#SystemFunctions ). When
 users log in using their e-mail address, this variable receives the
-value of the**\'PHONEBOOK.PHONE** column. In procedures that are defined
+value of the **PHONEBOOK.PHONE** column. In procedures that are defined
 for internal users only, users can also log in with their username. In
 such a case, the SQL.WEBID variable receives the value of the
 **USERS.USER** column, multiplied by -1.
@@ -41,7 +41,7 @@ SQL.WEBID.
 
 > **Example:** To obtain a list of the customer's orders, use the join
 >
-> ``` tsql
+> ```sql
 > WHERE PHONEBOOK.PHONE = SQL.WEBID
 > AND PHONEBOOK.CUST = ORDERS.CUST 
 > ```
@@ -62,7 +62,7 @@ In a DOS command line, enter the following commands (where
 the relevant username on***Priority*** and *mypassword* is that user\'s
 password):
 
-``` tsql
+```cmd
 set TABULAPORTALURL=http://myWebsite.com
 c:\setuser myuser mypwd Y  3
 c:\setuser myuser mypwd Y  4 /* for clients running Windows Vista and higher*/
