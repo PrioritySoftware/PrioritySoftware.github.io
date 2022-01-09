@@ -9,6 +9,8 @@ collections:
                 output: true
         resttutorial:
                 output: true
+        sdk:
+                output: true
 
 theme: jekyll-theme-slate
 title: "Priority Developer Portal"
@@ -22,3 +24,8 @@ includes_dir: /resources/_includes
 
 # Google Analytics
 google_analytics: UA-12315884-16
+
+# Algolia
+algolia:
+  application_id: 'AXTY3FIAOU'
+  index_name: 'priority-sdk'

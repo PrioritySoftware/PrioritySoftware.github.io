@@ -1,0 +1,44 @@
+---
+title: Trigger Errors
+layout: sdk_nav
+---
+
+[Form preparation](Form-Preparation ) will fail if any major
+trigger errors are encountered. The main trigger errors are:
+
+-   SQL syntax errors
+-   illegal or irresolvable variable types
+-   syntax errors in [#INCLUDE
+    commands](Including-One-Trigger-in-Another )
+-   #INCLUDE commands that refer to non-existent forms, form columns or
+    triggers
+-   [form column
+    variables](SQL-Variables#Form-Column-Variables ) that
+    refer to non-existent form/form column combinations (e.g.,
+    :ORDERS.CUSTNAME, when there is no **CUSTNAME** column in the
+    **ORDERS** form)
+-   [ERRMSG or WRNMSG commands](Error-and-Warning-Messages )
+    that refer to message numbers not specified for the form in
+    question.
+
+In addition, warning messages (without causing form preparation to fail)
+might be generated when the same local variable is used for two distinct
+types. Even though form preparation succeeds in this case, it is
+nevertheless recommended that you take care of all the problems that
+generated the warning messages.
+
+> **Example:** The same variable name contains a value of **INT** type
+> in one trigger and a value of **CHAR** type in another.
+
+## More on Triggers 
+
+-   [SQL Variables](SQL-Variables )
+-   [Built-in Triggers](Built-in-Triggers )
+-   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
+-   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Changing Column Titles
+    Dynamically](Changing-Column-Titles-Dynamically )
+-   [Including One Trigger in
+    Another](Including-One-Trigger-in-Another )
+-   [Form Triggers](Form-Triggers )
