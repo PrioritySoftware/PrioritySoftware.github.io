@@ -1,6 +1,7 @@
 ---
 title: Dashboard Procedures
 layout: sdk_nav
+group: BI
 ---
 
 ## Introduction

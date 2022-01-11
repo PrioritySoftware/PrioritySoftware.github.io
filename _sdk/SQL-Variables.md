@@ -1,6 +1,7 @@
 ---
 title: SQL Variables
 layout: sdk_nav
+group: group: Forms
 ---
 
 ## Introduction

@@ -1,6 +1,7 @@
 ---
 title: Create BPM Statuses Form
 layout: sdk_nav
+group: BPM
 ---
 
 

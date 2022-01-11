@@ -1,6 +1,7 @@
 ---
 title: Table Loads
 layout: sdk_nav
+group: Interfaces
 ---
 
 ## Introduction

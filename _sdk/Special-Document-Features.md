@@ -1,6 +1,7 @@
 ---
 title: Special Document Features 
 layout: sdk_nav
+group: Documents
 ---
 
 ## Sending Documents by Automatic Mail 

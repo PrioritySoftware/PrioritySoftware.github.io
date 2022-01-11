@@ -1,6 +1,7 @@
 ---
 title: Flow Control
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Flow Control Commands 

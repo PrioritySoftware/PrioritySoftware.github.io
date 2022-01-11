@@ -1,6 +1,7 @@
 ---
 title: Changing Column Titles Dynamically
 layout: sdk_nav
+group: CFrms
 ---
 
 Column titles can be set dynamically, so that they are assigned when the

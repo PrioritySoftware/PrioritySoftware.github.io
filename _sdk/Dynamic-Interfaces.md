@@ -1,6 +1,7 @@
 ---
 title: Dynamic Interfaces
 layout: sdk_nav
+group: Interfaces
 ---
 
 Starting with version 21.0, you can create dynamic interfaces from

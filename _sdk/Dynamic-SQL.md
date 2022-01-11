@@ -1,6 +1,7 @@
 ---
 title: Dynamic SQL
 layout: sdk_nav
+group: Programming Tools
 ---
 
 ## Executing SQL Queries Dynamically 

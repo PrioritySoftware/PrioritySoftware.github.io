@@ -1,8 +1,9 @@
 ---
 title: Forms
 layout: sdk_nav
-permalink: /sdk/forms
+permalink: /sdk/Forms
 collection-title: Priority SDK
+group: Forms
 ---
 
 

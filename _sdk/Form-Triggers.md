@@ -1,6 +1,7 @@
 ---
 title: Form Triggers
 layout: sdk_nav
+group: Forms
 ---
 
 ## Introduction

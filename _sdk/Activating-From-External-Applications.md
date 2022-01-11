@@ -1,6 +1,7 @@
 ---
 title: Activating Priority Entities from an External Application
 layout: sdk_nav
+group: Programming Tools
 ---
 
 ## Open a Record from a Hyperlink

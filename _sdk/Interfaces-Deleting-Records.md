@@ -1,6 +1,7 @@
 ---
 title: Deleting Records via an Interface
 layout: sdk_nav
+group: Interfaces
 ---
 
 The [form load](Form-Loads ) can also be used to delete

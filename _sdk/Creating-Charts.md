@@ -1,6 +1,7 @@
 ---
 title: Creating Charts
 layout: sdk_nav
+group: Charts
 ---
 
 

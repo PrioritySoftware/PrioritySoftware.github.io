@@ -1,6 +1,7 @@
 ---
 title:  Form Refresh
 layout: sdk_nav
+group: Forms
 ---
 
 Generally, the data retrieved in any given form are relatively static.

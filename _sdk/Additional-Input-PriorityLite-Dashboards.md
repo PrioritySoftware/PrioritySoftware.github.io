@@ -1,6 +1,7 @@
 ---
 title: Additional Input Options (Priority Lite/Dashboards)
 layout: sdk_nav
+group: Priority Lite
 ---
 
 ## Procedures That Work Like Forms (Input Screens) 

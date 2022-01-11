@@ -6,19 +6,21 @@ chapters:
     url: Customization-Rules
   - title: Database Tables
     url: Tables
+    group: Tables
     topics: 
       - page: Table Columns
         url: Table-Columns
       - page: Table Keys
-        url: Keys
+        url: Keys       
       - page: Creating and Modifying Tables 
-        url: Create-Modify-Tables
+        url: Create-Modify-Tables        
       - page: Viewing Tables
-        url: View-Tables
+        url: View-Tables        
       - page: DBI Syntax
-        url: DBI-Syntax
+        url: DBI-Syntax       
   - title: SQL Syntax
     url: SQL-Syntax
+    group: SQL Syntax
     topics:
       - page: SQL Functions and Variables
         url: SQL-Functions-Variables
@@ -35,6 +37,7 @@ chapters:
             url: ATOD-and-DTOA
   - title: Forms
     url: Forms
+    group: Forms
     topics:
       - page: Form Columns
         url: Form-Columns
@@ -71,6 +74,7 @@ chapters:
         url: Help-Messages
   - title: Reports
     url: Reports
+    group: Reports
     topics:
       - page: Report Columns
         url: Report-Columns
@@ -86,6 +90,7 @@ chapters:
         url: Run-Report
   - title: Procedures
     url: Procedures
+    group: Procedures
     topics:
       - page: Procedure Steps 
         url: Procedure-Steps
@@ -105,6 +110,7 @@ chapters:
         url: Run-Procedure
   - title: Documents
     url: Documents
+    group: Documents
     topics:
       - page: Special Document Features
         url: Special-Document-Features
@@ -114,6 +120,7 @@ chapters:
         url: Letter-Generator
   - title: Interfaces 
     url: Interfaces
+    group: Interfaces
     topics:
       - page: Form Loads
         url: Form-Loads
@@ -134,17 +141,22 @@ chapters:
         url: Existing-Interfaces
   - title: Debug Tools
     url: Debug-Tools
+    group: Debug
   - title: Installing Your Customizations
     url: Installing-Customizations
+    group: Installation
     topics:
       - page: Installing the Language Dictionaries
         url: Customizations-Language-Dictionaries
   - title: User Report Generators
     url: Modifying-Report-Generator
+    group: Report Generators
   - title: BI-Reports
     url: BI-Reports
+    group: BI
   - title: Priority Lite and Dashboards
     url: Lite-Dashboards
+    group: Priority Lite
     topics:
       - page: User Identifaction for Priority Lite/Dashboards
         url: Lite-Identifcation
@@ -158,6 +170,7 @@ chapters:
         url: Dashboard-Procedures
   - title: BPM Flow Charts
     url: Create-BPM
+    group: BPM
     topics:
       - page: The Statuses Table
         url: Create-BPM-Statuses-Table
@@ -179,11 +192,13 @@ chapters:
         url: BPM-Insert-Initial-Status
   - title: Creating Charts
     url: Creating-Charts
+    group: Charts
     topics:
       - page: Parameters for New Charts
         url: Chart-Parameters
   - title: Advanced Programming Tools
     url: Advanced-Programming-Tools
+    group: Programming Tools
     topics: 
       - page: Working with the Priority Web Interface
         url: Priority-Web
@@ -225,8 +240,10 @@ chapters:
         url: Rules-Generator-Custom-Columns
   - title: ODBC for SQL Server
     url: ODBC-SQLServer
+    group: ODBC SQL
   - title: ODBC for Oracle
     url: ODBC-Oracle   
+    group: ODBC Oracle
       
 
 

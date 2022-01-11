@@ -1,6 +1,7 @@
 ---
 title: Parsing XML and JSON
 layout: sdk_nav
+group: Programming Tools
 ---
 
 # Parsing XML 

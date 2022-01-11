@@ -1,6 +1,7 @@
 ---
 title: Table Keys
 layout: sdk_nav
+group: Tables
 ---
 
 ## Introduction

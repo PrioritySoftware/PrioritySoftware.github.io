@@ -1,6 +1,7 @@
 ---
 title: Parameters for Charts
 layout: sdk_nav
+group: Charts
 ---
 
 

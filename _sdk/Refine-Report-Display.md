@@ -1,6 +1,7 @@
 ---
 title:  Refining Report Data Display
 layout: sdk_nav
+group: Reports
 ---
 
 ## Spacing Between Report Rows 

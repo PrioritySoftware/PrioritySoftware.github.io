@@ -1,6 +1,7 @@
 ---
 title: Debug Tools
 layout: sdk_nav
+group: Debug
 ---
 
 ## Introduction

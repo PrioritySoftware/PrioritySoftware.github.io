@@ -1,6 +1,7 @@
 ---
 title: Form Columns
 layout: sdk_nav
+group: Forms
 ---
 
 ## Introduction

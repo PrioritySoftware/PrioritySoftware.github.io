@@ -1,6 +1,7 @@
 ---
 title: LINK and UNLINK
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## The Commands 

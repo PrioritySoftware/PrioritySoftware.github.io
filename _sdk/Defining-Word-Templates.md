@@ -1,6 +1,7 @@
 ---
 title: Defining Word Templates for Specific Records
 layout: sdk_nav
+group: Programming Tools
 ---
 
 Suppose you have defined several Word templates in a given

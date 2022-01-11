@@ -1,6 +1,7 @@
 ---
 title: SQL Functions and Variables
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Introduction

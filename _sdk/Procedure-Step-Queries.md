@@ -1,6 +1,7 @@
 ---
 title: Procedure Step Queries
 layout: sdk_nav
+group: Procedures
 ---
 
 ## Introduction

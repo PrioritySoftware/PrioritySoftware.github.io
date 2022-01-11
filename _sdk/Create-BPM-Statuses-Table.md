@@ -1,6 +1,7 @@
 ---
 title: Create BPM Statuses Table
 layout: sdk_nav
+group: BPM
 ---
 
 The first step in [creating a BPM flow

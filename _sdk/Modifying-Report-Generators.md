@@ -1,6 +1,7 @@
 ---
 title: Creating and Modifying User Report Generators
 layout: sdk_nav
+group: Report Generators
 ---
 
 

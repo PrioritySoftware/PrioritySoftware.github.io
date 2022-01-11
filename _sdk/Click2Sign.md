@@ -1,6 +1,7 @@
 ---
 title: Click2Sign
 layout: sdk_nav
+group: Programming Tools
 ---
 
 Version 20.1 introduced the Click2Sign feature, which allows a contact

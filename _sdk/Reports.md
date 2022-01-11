@@ -1,6 +1,7 @@
 ---
 title: Reports
 layout: sdk_nav
+group: Reports
 ---
 
 ## Introduction

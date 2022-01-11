@@ -1,6 +1,7 @@
 ---
 title: Print Attachments from a Procedure
 layout: sdk_nav
+group: Procedures
 ---
 
 To print files (e.g., attachments) from within a

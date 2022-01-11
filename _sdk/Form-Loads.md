@@ -1,6 +1,7 @@
 ---
 title: Form Loads
 layout: sdk_nav
+group: Interfaces
 ---
 
 ## The Form Load {#the_form_load}

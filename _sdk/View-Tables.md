@@ -1,6 +1,7 @@
 ---
 title: Table Dictionaries and Reports
 layout: sdk_nav
+group: Tables
 ---
 
 ## Dictionaries and Reports 

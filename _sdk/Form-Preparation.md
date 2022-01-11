@@ -1,6 +1,7 @@
 ---
 title: Form Preparation
 layout: sdk_nav
+group: Forms
 ---
 
 ## Introduction

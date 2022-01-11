@@ -1,6 +1,7 @@
 ---
 title: Interacting with Webservices via WSCLIENT
 layout: sdk_nav
+group: Programming Tools
 ---
 
 Using the WSCLIENT program you can make requests to an external web

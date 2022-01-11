@@ -1,6 +1,7 @@
 ---
 title: Debug the BPM
 layout: sdk_nav
+group: BPM
 ---
 
 

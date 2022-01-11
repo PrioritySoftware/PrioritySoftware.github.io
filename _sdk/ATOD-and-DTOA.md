@@ -1,6 +1,7 @@
 ---
 title: ATOD and DTOA
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Syntax

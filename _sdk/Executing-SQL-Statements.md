@@ -1,6 +1,7 @@
 ---
 title: Executing SQL
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## The SQL Interpreter 

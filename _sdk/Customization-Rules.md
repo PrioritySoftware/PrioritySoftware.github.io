@@ -1,6 +1,7 @@
 ---
 title: Customization Rules
 layout: sdk_nav
+group: CR
 ---
 
 

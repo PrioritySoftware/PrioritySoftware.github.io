@@ -1,6 +1,7 @@
 ---
 title: Execution Statements
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Introduction

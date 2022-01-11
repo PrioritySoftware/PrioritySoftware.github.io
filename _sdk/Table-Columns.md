@@ -1,6 +1,7 @@
 ---
 title: Table Columns
 layout: sdk_nav
+group: Tables
 ---
 
 ## Column Names and Titles 

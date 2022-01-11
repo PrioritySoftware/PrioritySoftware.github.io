@@ -1,6 +1,7 @@
 ---
 title: Creating your Own Triggers
 layout: sdk_nav
+group: Forms
 ---
 
 ## Introduction

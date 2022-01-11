@@ -29,3 +29,4 @@ google_analytics: UA-12315884-16
 algolia:
   application_id: 'AXTY3FIAOU'
   index_name: 'priority-sdk'
+  files_to_exclude: []

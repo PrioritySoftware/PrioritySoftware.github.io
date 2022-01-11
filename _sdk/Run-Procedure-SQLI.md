@@ -1,6 +1,7 @@
 ---
 title: Running a Procedure/Report from an SQLI Step or Form Trigger
 layout: sdk_nav
+group: Programming Tools
 ---
 
 You can execute a

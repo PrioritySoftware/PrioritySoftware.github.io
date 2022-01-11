@@ -1,6 +1,7 @@
 ---
 title: Syntax Conventions
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Syntax Conventions 

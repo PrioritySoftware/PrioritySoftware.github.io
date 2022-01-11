@@ -1,6 +1,7 @@
 ---
 title: Procedure Flow Control
 layout: sdk_nav
+group: Procedures
 ---
 
 ## Introduction

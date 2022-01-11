@@ -1,6 +1,7 @@
 ---
 title: Outputting Documents - the WINHTML Program
 layout: sdk_nav
+group: Documents
 ---
 
 Using the WINHTML program, you can output the document in a variety of formats and control document properties. 

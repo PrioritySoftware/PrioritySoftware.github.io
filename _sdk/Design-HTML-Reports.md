@@ -1,6 +1,7 @@
 ---
 title: Designing HTML Reports
 layout: sdk_nav
+group: Reports
 ---
 
 ## Introduction

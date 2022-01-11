@@ -1,6 +1,7 @@
 ---
 title: Update the STATUSTYPES Table
 layout: sdk_nav
+group: BPM
 ---
 
 

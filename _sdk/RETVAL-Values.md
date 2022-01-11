@@ -1,6 +1,7 @@
 ---
 title: Return Values and Statement Failure
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Table of Return Values and Statement Failure 

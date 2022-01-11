@@ -1,6 +1,7 @@
 ---
 title: The Letter Generator
 layout: sdk_nav
+group: Documents
 ---
 
 ## Introduction

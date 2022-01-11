@@ -1,6 +1,7 @@
 ---
 title: Customization - Language Dictionaries
 layout: sdk_nav
+group: Installation
 ---
 
 ## Introduction

@@ -1,6 +1,7 @@
 ---
 title: ODBC for SQL Server
 layout: sdk_nav
+group: ODBC SQL
 ---
 
 ## Introduction

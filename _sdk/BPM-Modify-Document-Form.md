@@ -1,6 +1,7 @@
 ---
 title: Modify the New Document
 layout: sdk_nav
+group: BPM
 ---
 
 The third step in [creating a BPM flow

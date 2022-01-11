@@ -1,6 +1,7 @@
 ---
 title: Procedure Messages
 layout: sdk_nav
+group: Procedures
 ---
 
 ## PRINT, PRINTCONT and PRINTERR 

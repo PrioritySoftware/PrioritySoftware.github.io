@@ -1,6 +1,7 @@
 ---
 title: Documents
 layout: sdk_nav
+group: Documents
 ---
 
 ## Introduction

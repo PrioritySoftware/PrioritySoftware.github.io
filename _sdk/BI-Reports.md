@@ -1,6 +1,7 @@
 ---
 title: Creating and Modifying BI Reports
 layout: sdk_nav
+group: BI Reports
 ---
 
 ## Introduction

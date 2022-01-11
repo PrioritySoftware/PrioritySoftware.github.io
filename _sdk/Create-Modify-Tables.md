@@ -1,6 +1,7 @@
 ---
 title: Creating and Modifying Tables
 layout: sdk_nav
+group: Tables
 ---
 
 ## Introduction

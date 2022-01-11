@@ -1,6 +1,7 @@
 ---
 title: Insert Initial BPM Status
 layout: sdk_nav
+group: BPM
 ---
 
 

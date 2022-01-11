@@ -1,6 +1,7 @@
 ---
 title: Tables
 layout: sdk_nav
+group: Tables
 ---
 
 ## Table Names 

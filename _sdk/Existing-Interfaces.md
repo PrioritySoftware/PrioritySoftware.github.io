@@ -1,6 +1,7 @@
 ---
 title: Finding Form Interfaces
 layout: sdk_nav
+group: Interfaces
 ---
 
 ## Introduction

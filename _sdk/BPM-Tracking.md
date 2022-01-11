@@ -1,6 +1,7 @@
 ---
 title:  Enable Document Tracking
 layout: sdk_nav
+group: BPM
 ---
 
 

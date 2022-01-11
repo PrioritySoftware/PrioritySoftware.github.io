@@ -1,6 +1,7 @@
 ---
 title: DBI Syntax
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Introduction

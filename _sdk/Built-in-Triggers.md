@@ -1,6 +1,7 @@
 ---
 title: Built-in Triggers
 layout: sdk_nav
+group: Forms
 ---
 
 ## Introduction

@@ -1,6 +1,7 @@
 ---
 title: Report Display
 layout: sdk_nav
+group: Reports
 ---
 
 ## Report Column Attributes 

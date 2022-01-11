@@ -1,6 +1,7 @@
 ---
 title: Processed Reports
 layout: sdk_nav
+group: Procedures
 ---
 
 ## Introduction

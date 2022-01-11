@@ -1,6 +1,7 @@
 ---
 title: Installing your Customizations
 layout: sdk_nav
+group: Installation
 ---
 
 ## Working with Version Revisions 

@@ -1,6 +1,7 @@
 ---
 title: Additions and Revisions to Standard SQL Commands
 layout: sdk_nav
+group: SQL Syntax
 ---
 
 ## Additions and Revisions to Standard SQL Commands 

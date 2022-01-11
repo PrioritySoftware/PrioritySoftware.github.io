@@ -1,6 +1,7 @@
 ---
 title: Create BPM
 layout: sdk_nav
+group: BPM
 ---
 
 This section explains how to create a BPM status system for a new

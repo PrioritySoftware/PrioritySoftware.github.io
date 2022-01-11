@@ -1,6 +1,7 @@
 ---
 title: Including One Trigger in Another
 layout: sdk_nav
+group: Forms
 ---
 
 ## The INCLUDE Command 

@@ -1,6 +1,7 @@
 ---
 title: Default Designs for Forms
 layout: sdk_nav
+group: Forms
 ---
 
 # What is a Default Design for a Form? 

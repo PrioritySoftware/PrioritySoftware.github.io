@@ -1,6 +1,7 @@
 ---
 title: Organizing Report Data
 layout: sdk_nav
+group: Reports
 ---
 
 ## Introduction

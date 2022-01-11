@@ -1,6 +1,7 @@
 ---
 title: Help Messages
 layout: sdk_nav
+group: Forms
 ---
 <!-- TODO: Update to reflect shift to text form -->
 ## Forms

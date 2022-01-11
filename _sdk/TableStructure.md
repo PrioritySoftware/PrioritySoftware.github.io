@@ -1,6 +1,7 @@
 ---
 title: View Table Structure
 layout: sdk_nav
+group: Tables
 ---
 
 ## The SQL Development Program 

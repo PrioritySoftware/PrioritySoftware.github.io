@@ -1,6 +1,7 @@
 ---
 title: Running the Report
 layout: sdk_nav
+group: Reports
 ---
 
 ## Introduction

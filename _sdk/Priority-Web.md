@@ -1,6 +1,7 @@
 ---
 title: Programming for Priority Web
 layout: sdk_nav
+group: Programming Tools
 ---
 
 Advanced programming for the ***Priority***web interface is basically

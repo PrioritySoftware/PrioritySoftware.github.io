@@ -1,6 +1,7 @@
 ---
 title: Trigger Errors
 layout: sdk_nav
+group: Forms
 ---
 
 [Form preparation](Form-Preparation ) will fail if any major

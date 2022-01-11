@@ -1,6 +1,7 @@
 ---
 title: Add BPM Chart Procedure
 layout: sdk_nav
+group: BPM
 ---
 
 The sixth step in [creating a BPM flow

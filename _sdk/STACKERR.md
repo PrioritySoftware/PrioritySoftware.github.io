@@ -1,6 +1,7 @@
 ---
 title: The STACKERR Table
 layout: sdk_nav
+group: Interfaces
 ---
 
 When running the interface program using [the \'-m\'

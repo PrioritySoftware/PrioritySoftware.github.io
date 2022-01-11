@@ -28,15 +28,22 @@
       <ul>
         {% if site.data.sdktopics.chapters[0] %}
           {% for chapter in site.data.sdktopics.chapters %}
+          {% assign class = nil %}
+            {% if page.group == chapter.group %}
+              {% assign class = 'active' %}
+            {% endif %}
             <li>
               <strong>
-                <a href="{{ chapter.url }}">{{chapter.title }}</a>
+                <a href="{{ chapter.url }}" class="{{ class }}">{{chapter.title }}</a>
               </strong>  
-            </li>  
+            </li> 
               {% if chapter.topics[0] %}
                 <ul>
                   {% for topic in chapter.topics %}
-                      <li class="nav-topic"><a  href="{{ topic.url }}">{{ topic.page }}</a>
+                  {% if page.group == chapter.group %}
+                    {% assign class = 'active' %}
+                  {% endif %}
+                      <li class="nav-topic {{ class }}"><a  href="{{ topic.url }}">{{ topic.page }}</a>
                         {% if topic.subtopics[0] %}
                           <ul>
                           {% for subtopic in topic.subtopics %}
@@ -64,19 +71,7 @@
     </section>
   
   </main>
-<!-- 
-  <div>
-    <container id="searchbox">
-      
-    </container>
 
-    <input type="text" autocomplete="off" id="search-box"/>
-    
-    <container id="hits">
-     
-    </container>
-
-    <script src="search.js"></script> -->
 
 
   <script>
@@ -93,5 +88,6 @@
         $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
       }
     });
+    </script>
   </body>
 </html>

@@ -74,12 +74,7 @@ body
   {
     padding-left:0 !important;
   }
-  .nav-topic
-  {
-    padding-left: 10px;
-    font-size: 14px;
-    color: #949494;
-  }
+
   .nav-subtopic
   {
     padding-left: 20px;
@@ -87,6 +82,19 @@ body
     color: #949494;
   }
 }
+
+.nav-topic
+{
+  padding-left: 10px;
+  font-size: 14px;
+  color: #949494;
+  display: none;
+}
+
+li.active {
+  display: block !important;
+}
+
 #main_content_wrap 
 {
    background-color:white;
@@ -331,6 +339,9 @@ list-style-type: none;
       text-decoration: none;
       letter-spacing: 1px;
       height: 100%;
+      ul li #nav-topic {
+        display: none;
+      }
     }
     a.active {
       color:  #00b0ec;
@@ -352,7 +363,10 @@ list-style-type: none;
     color:  #00b0ec;
     border-right: 2px solid;
   }
+  
 }
+
+
 
 #primary-navigation::-webkit-scrollbar { 
     display: none; 

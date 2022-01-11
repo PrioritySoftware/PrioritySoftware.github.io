@@ -1,6 +1,7 @@
 ---
 title: Calculated Report Columns
 layout: sdk_nav
+group: Reports
 ---
 
 ## Introduction

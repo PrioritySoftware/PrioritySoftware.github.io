@@ -1,6 +1,7 @@
 ---
 title: Add BPM Interfaces
 layout: sdk_nav
+group: BPM
 ---
 
 
