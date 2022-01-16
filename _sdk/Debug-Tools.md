@@ -2,6 +2,7 @@
 title: Debug Tools
 layout: sdk_nav
 group: Debug
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

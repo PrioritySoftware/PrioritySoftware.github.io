@@ -2,6 +2,7 @@
 title: ODBC for Oracle
 layout: sdk_nav
 group: ODBC Oracle
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

@@ -2,6 +2,7 @@
 title: Defining a Base Page for HTML Pages (Priority Lite/Dashboards)
 layout: sdk_nav
 group: Priority Lite
+tags: 'Priority_SDK'
 ---
 
 ## Defining the Base Page 

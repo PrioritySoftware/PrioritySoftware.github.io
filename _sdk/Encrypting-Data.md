@@ -2,6 +2,7 @@
 title: Encrypting Data
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 **Note:** To use the encryption feature, make sure to update your BIN.95

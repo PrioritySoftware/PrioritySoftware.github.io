@@ -2,6 +2,7 @@
 title: Documents
 layout: sdk_nav
 group: Documents
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

@@ -1,7 +1,8 @@
 ---
 title: Changing Column Titles Dynamically
 layout: sdk_nav
-group: CFrms
+group: Forms
+tags: 'Priority_SDK'
 ---
 
 Column titles can be set dynamically, so that they are assigned when the

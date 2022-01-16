@@ -2,8 +2,10 @@ chapters:
 
   - title: Introduction
     url: Introduction
-  - title: Customization Rules
-    url: Customization-Rules
+  - title: Release Notes
+    url: Release-Notes
+  # - title: Customization Rules
+  #   url: Customization-Rules
   - title: Database Tables
     url: Tables
     group: Tables
@@ -30,11 +32,14 @@ chapters:
         url: Additions-to-SQL-Commands
       - page: Execution Statements
         url: Execution-Statements
+      - page: LINK and UNLINK
+        url: Link-Unlink
+      - page: Return Values and Statement Failure
+        url: RETVAL-Values
       - page: Non-standard Scalar Expressions
         url: Scalar-Expressions
-        subtopics:
-          - page: ATOD and DTOA Expressions
-            url: ATOD-and-DTOA
+      - page: ATOD and DTOA Expressions
+        url: ATOD-and-DTOA
   - title: Forms
     url: Forms
     group: Forms

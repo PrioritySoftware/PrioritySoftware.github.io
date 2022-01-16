@@ -2,6 +2,7 @@
 title: Before you Begin
 layout: default
 permalink: /general
+tags: "General"
 ---
 
 <style type="text/css">

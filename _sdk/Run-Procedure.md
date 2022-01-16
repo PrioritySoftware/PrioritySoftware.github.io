@@ -2,6 +2,7 @@
 title: Running the Procedure
 layout: sdk_nav
 group: Procedures
+tags: 'Priority_SDK'
 ---
 
 ## Using a Program to Run the Procedure 

@@ -2,6 +2,7 @@
 title: Duplicating Documents with an Interface
 layout: sdk_nav
 group: Interfaces
+tags: 'Priority_SDK'
 ---
 
 Suppose you want to copy an entire sales order in order to create the

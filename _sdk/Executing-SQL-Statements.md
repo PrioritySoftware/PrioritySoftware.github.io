@@ -2,6 +2,7 @@
 title: Executing SQL
 layout: sdk_nav
 group: SQL Syntax
+tags: 'Priority_SDK'
 ---
 
 ## The SQL Interpreter 

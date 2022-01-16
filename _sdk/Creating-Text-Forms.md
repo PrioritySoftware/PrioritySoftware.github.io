@@ -1,6 +1,7 @@
 ---
 title: Creating Text Forms
 layout: sdk_nav
+tags: 'Priority_SDK'
 ---
 
 ## Introduction
@@ -118,7 +119,7 @@ LABEL 99;
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
     Insertion](Conditions-of-Record-Display-and-Insertion )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Designing a Screen-Painted

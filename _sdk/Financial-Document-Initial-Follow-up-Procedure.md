@@ -2,6 +2,7 @@
 title: Financial Documents - Initial and Follow-up Procedures
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 In the IVTYPES (Financial Documents) form you can set initial procedures

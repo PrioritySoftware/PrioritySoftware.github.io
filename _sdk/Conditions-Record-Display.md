@@ -2,6 +2,7 @@
 title: Conditions of Record Display and Insertion
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 ## Introduction
@@ -104,7 +105,7 @@ forms.
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Creating a Text Form](Creating-a-Text-Form )

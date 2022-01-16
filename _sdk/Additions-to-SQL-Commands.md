@@ -2,6 +2,7 @@
 title: Additions and Revisions to Standard SQL Commands
 layout: sdk_nav
 group: SQL Syntax
+tags: 'Priority_SDK'
 ---
 
 ## Additions and Revisions to Standard SQL Commands 

@@ -2,6 +2,7 @@
 title: Installing your Customizations
 layout: sdk_nav
 group: Installation
+tags: 'Priority_SDK'
 ---
 
 ## Working with Version Revisions 

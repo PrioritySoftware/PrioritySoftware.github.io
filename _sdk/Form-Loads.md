@@ -2,6 +2,7 @@
 title: Form Loads
 layout: sdk_nav
 group: Interfaces
+tags: 'Priority_SDK'
 ---
 
 ## The Form Load {#the_form_load}

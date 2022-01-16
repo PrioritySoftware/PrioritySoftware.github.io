@@ -2,6 +2,7 @@
 title: Update the STATUSTYPES Table
 layout: sdk_nav
 group: BPM
+tags: 'Priority_SDK'
 ---
 
 

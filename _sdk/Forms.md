@@ -4,6 +4,7 @@ layout: sdk_nav
 permalink: /sdk/Forms
 collection-title: Priority SDK
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 
@@ -187,7 +188,7 @@ The system can prepare up to 25000 forms simultaneously.
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
     Insertion](Conditions-of-Record-Display-and-Insertion )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Creating a Text Form](Creating-a-Text-Form )

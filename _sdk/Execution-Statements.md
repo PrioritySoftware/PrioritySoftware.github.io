@@ -2,6 +2,7 @@
 title: Execution Statements
 layout: sdk_nav
 group: SQL Syntax
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

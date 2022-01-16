@@ -2,6 +2,7 @@
 title: Form Triggers
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 ## Introduction
@@ -54,7 +55,7 @@ Tools](Debug-Tools ).
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
     Insertion](Conditions-of-Record-Display-and-Insertion )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Creating a Text Form](Creating-a-Text-Form )

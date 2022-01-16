@@ -2,6 +2,7 @@
 title: Open Form Record from within a Procedure
 layout: sdk_nav
 group: Procedures
+tags: 'Priority_SDK'
 ---
 
 You can use SQL commands to open a given form and retrieve a given

@@ -2,6 +2,7 @@
 title: Return Values and Statement Failure
 layout: sdk_nav
 group: SQL Syntax
+tags: 'Priority_SDK'
 ---
 
 ## Table of Return Values and Statement Failure 

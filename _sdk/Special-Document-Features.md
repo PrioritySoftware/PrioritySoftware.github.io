@@ -2,6 +2,7 @@
 title: Special Document Features 
 layout: sdk_nav
 group: Documents
+tags: 'Priority_SDK'
 ---
 
 ## Sending Documents by Automatic Mail 

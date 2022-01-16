@@ -2,6 +2,7 @@
 title: Creating your Own Triggers
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

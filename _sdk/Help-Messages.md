@@ -2,6 +2,7 @@
 title: Help Messages
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 <!-- TODO: Update to reflect shift to text form -->
 ## Forms
@@ -61,7 +62,7 @@ hyphenation. To force the beginning of a line, use the code \\n.
 > attributes. \\n\
 > \\n\
 > To define statuses, along with their attributes and rules, run
-> {VISCPROFSTATS.P} from the list of Direct Activations.
+> {VISCPROFSTATS.P} from the list of Actions.
 >
 > *The help for the **OPENORDIBYDOER** report says:*\
 > Run this report to view orders to carry out, sorted by due date. \\n\

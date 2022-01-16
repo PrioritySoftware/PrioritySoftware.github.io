@@ -2,6 +2,7 @@
 title: Creating and Modifying BI Reports
 layout: sdk_nav
 group: BI Reports
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

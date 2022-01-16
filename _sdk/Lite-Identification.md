@@ -2,6 +2,7 @@
 title: User Identification for Priority Lite/Dashboards
 layout: sdk_nav
 group: Priority Lite
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

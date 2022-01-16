@@ -2,6 +2,7 @@
 title: Insert Initial BPM Status
 layout: sdk_nav
 group: BPM
+tags: 'Priority_SDK'
 ---
 
 

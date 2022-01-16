@@ -2,6 +2,7 @@
 title: Create BPM
 layout: sdk_nav
 group: BPM
+tags: 'Priority_SDK'
 ---
 
 This section explains how to create a BPM status system for a new

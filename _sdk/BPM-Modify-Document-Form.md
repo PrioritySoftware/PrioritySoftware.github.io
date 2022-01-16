@@ -2,6 +2,7 @@
 title: Modify the New Document
 layout: sdk_nav
 group: BPM
+tags: 'Priority_SDK'
 ---
 
 The third step in [creating a BPM flow

@@ -2,6 +2,7 @@
 title:  Form Refresh
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 Generally, the data retrieved in any given form are relatively static.
@@ -36,7 +37,7 @@ Additional ways of forcing a form refresh are:
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
     Insertion](Conditions-of-Record-Display-and-Insertion )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Creating a Text Form](Creating-a-Text-Form )
 -   [Designing a Screen-Painted

@@ -2,6 +2,7 @@
 title: Running the Report
 layout: sdk_nav
 group: Reports
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

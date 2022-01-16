@@ -2,6 +2,7 @@
 title: Interacting with External Programs
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 ## List of Programs 

@@ -2,6 +2,7 @@
 title: Syntax Conventions
 layout: sdk_nav
 group: SQL Syntax
+tags: 'Priority_SDK'
 ---
 
 ## Syntax Conventions 

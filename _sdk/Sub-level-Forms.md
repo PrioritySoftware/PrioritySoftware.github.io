@@ -2,6 +2,7 @@
 title: Sub-level Forms
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 ## Introduction
@@ -125,7 +126,7 @@ To link a root form to a menu and to define its position, use either the
 -   [Form Columns](Form-Columns )
 -   [Conditions of Record Display and
     Insertion](Conditions-of-Record-Display-and-Insertion )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Creating a Text Form](Creating-a-Text-Form )

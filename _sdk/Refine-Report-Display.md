@@ -2,6 +2,7 @@
 title:  Refining Report Data Display
 layout: sdk_nav
 group: Reports
+tags: 'Priority_SDK'
 ---
 
 ## Spacing Between Report Rows 

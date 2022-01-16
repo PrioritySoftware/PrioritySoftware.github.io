@@ -2,13 +2,16 @@
 title: Outputting Documents - the WINHTML Program
 layout: sdk_nav
 group: Documents
+tags: 'Priority_SDK'
 ---
 
 Using the WINHTML program, you can output the document in a variety of formats and control document properties. 
 
 In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
 ```sql
-EXECUTE WINHTML '-d' 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-g',] ['-s',] ['-e',] ['-edoc' | '-signpdf',] [''output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format' format_num,] ['-lang lang_num'] ['-AMAIL']
+EXECUTE WINHTML '-d' 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-g',] ['-s',] ['-e',]
+ ['-edoc' | '-signpdf',] [''output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format' format_num,]
+  ['-lang lang_num'] ['-AMAIL']
 ```
 ## WINHTML Parameters
 - 'document_name' – the internal name of the document, e.g. WWWSHOWORDER.

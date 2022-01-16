@@ -2,6 +2,7 @@
 title: Using Semaphores
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 If you want to prevent two users from running a given

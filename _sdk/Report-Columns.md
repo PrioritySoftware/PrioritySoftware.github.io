@@ -2,6 +2,7 @@
 title: Report Columns
 layout: sdk_nav
 group: Reports
+tags: 'Priority_SDK'
 ---
 
 ## Report Column Attributes 

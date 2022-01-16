@@ -2,6 +2,7 @@
 title: Advanced Programming Tools
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 The topics in this section demonstrate the usage of advanced programming tools available

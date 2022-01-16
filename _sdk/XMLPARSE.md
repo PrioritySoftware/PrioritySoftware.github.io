@@ -2,6 +2,7 @@
 title: Parsing XML and JSON
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 # Parsing XML 

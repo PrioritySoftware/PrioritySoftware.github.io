@@ -2,6 +2,7 @@
 title: Customization - Language Dictionaries
 layout: sdk_nav
 group: Installation
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

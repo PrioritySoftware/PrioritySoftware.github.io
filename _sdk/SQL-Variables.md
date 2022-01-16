@@ -1,7 +1,8 @@
 ---
 title: SQL Variables
 layout: sdk_nav
-group: group: Forms
+group: Forms
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

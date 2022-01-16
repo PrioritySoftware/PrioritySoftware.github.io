@@ -2,6 +2,7 @@
 title: Load Data from a File or Export Data to a File
 layout: sdk_nav
 group: Interfaces
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

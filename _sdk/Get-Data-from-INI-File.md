@@ -2,6 +2,7 @@
 title: Get Data from the Client INI File
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 When the user is working in the Windows interface of **\'\'Priority***,

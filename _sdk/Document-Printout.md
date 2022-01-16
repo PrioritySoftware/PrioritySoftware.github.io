@@ -2,6 +2,7 @@
 title: Print Documents from Within a Procedure
 layout: sdk_nav
 group: Documents
+tags: 'Priority_SDK'
 ---
 
 ## Introduction

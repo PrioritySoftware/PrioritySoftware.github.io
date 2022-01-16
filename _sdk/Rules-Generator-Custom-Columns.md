@@ -2,6 +2,7 @@
 title: Using Custom Form Columns in the Business Rules Generator
 layout: sdk_nav
 group: Programming Tools
+tags: 'Priority_SDK'
 ---
 
 The Business Rules Generator enables users to set up error, warning,

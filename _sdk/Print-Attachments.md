@@ -2,6 +2,7 @@
 title: Print Attachments from a Procedure
 layout: sdk_nav
 group: Procedures
+tags: 'Priority_SDK'
 ---
 
 To print files (e.g., attachments) from within a

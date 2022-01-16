@@ -2,6 +2,7 @@
 title: Form Columns
 layout: sdk_nav
 group: Forms
+tags: 'Priority_SDK'
 ---
 
 ## Introduction
@@ -21,7 +22,7 @@ is subject to certain restrictions (which also apply to form names):
 -   The column name must begin with a letter.
 -   You may not use a reserved word.
 -   Any new column must begin with the appropriate four-letter prefix.
--   There can be no more than 330 columns in a form.
+-   There can be no more than 600 columns in a form.
 
 Any change in the form column's name will require appropriate changes in
 SQL variables which refer to that column. The designated name can be
@@ -529,7 +530,7 @@ the **USERCLMNPRIV** table, as follows:
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
     Insertion](Conditions-of-Record-Display-and-Insertion )
--   [Direct Activations](Direct-Activations )
+-   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-a-Related-Form )
 -   [Creating a Text Form](Creating-a-Text-Form )

@@ -18,11 +18,11 @@
   </head>
 
   <body>
-
+    
   <!-- HEADER -->
   {% include header.html %}
-
-  <!-- NAVIGATION -->
+    <!-- NAVIGATION -->
+  <container class="unflex-container">
   <nav id="primary-navigation"> 
   <h3 onclick="location.href=''">{{page.collection-title}}</h3>
 
@@ -57,6 +57,7 @@
     </ul>
   {% endfor %} 
   </nav>  
+
     
   
   <!-- MAIN CONTENT -->
@@ -65,23 +66,33 @@
     <section  class="markdown-body">
           {{ content }}
     </section>
-  
+
   </main>
+  <div id="search-panel">
+    <div id="search-box">
+      <!-- SearchBox widget will appear here -->
+    </div>
+    
+    <div id="hits">
+      <!-- Hits widget will appear here -->
+    </div>
+  </div>
+</container>
 
   <script>
-    $(document).ready(function()
-    {
-      if(screen.width<=640)
-      {
-        $("body").addClass("mobile");
-        $('#primary-navigation').infinitypush({offcanvas:true,spacing:40});   
-      }
-      else
-      {
-        $("body").removeClass("mobile");
-        $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
-      }
-    });
+    // $(document).ready(function()
+    // {
+    //   if(screen.width<=640)
+    //   {
+    //     $("body").addClass("mobile");
+    //     $('#primary-navigation').infinitypush({offcanvas:true,spacing:40});   
+    //   }
+    //   else
+    //   {
+    //     $("body").removeClass("mobile");
+    //     $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
+    //   }
+    // });
         // Was causing issues with the server, removed the button - Chanamel 03/11/2020
         //try it frame
       /*  var showTryIt=function(btn)
@@ -107,8 +118,14 @@
           }
         }; */
     </script>
-    <!-- {% if page.collection-title == "Web SDK" %}
-      <a id="try-it-button" href="{{'/tryit' | relative_url'}}" target="_blank">Try It Yourself</a>
-    {% endif %} -->
+
+
+</container>
+
   </body>
+  <!-- algolia search -->
+
+<script src="{{ '/resources/assets/js/search.js?v=' | append: site.github.build_revision | relative_url }}""></script>
+
+<!-- end of algolia search --> 
 </html>
