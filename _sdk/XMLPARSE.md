@@ -26,22 +26,26 @@ SELECT SQL.TMPFILE INTO :OUTXMLTAB1 FROM DUMMY;
 :FILE = '../../system/load/example.xml';
 
 EXECUTE XMLPARSE :FILE, :OUTXMLTAB1, 0, :MSG; EXECUTE XMLPARSE :FILE,
-:OUTXMLTAB2, 0, :MSG, \'-all\'; SELECT LINE, TAG, VALUE, ATTR FROM
+:OUTXMLTAB2, 0, :MSG, '-all';
+ SELECT LINE, TAG, VALUE, ATTR FROM
 INTERFXMLTAGS I1 WHERE LINE \0 FORMAT; SELECT LINE, TAG, VALUE, ATTR
 FROM INTERFXMLTAGS I2 WHERE LINE \0 FORMAT; LINK INTERFXMLTAGS I1;
 LINK INTERFXMLTAGS I2; 
 LABEL 500;
 ```
 
-When the XML file looks like this:\
-![](https://cdn.priority-software.com/docs/images/XML_file-173.png "XML_file-173.png")\
+When the XML file looks like this:
+
+![](https://cdn.priority-software.com/docs/images/XML_file-173.png "XML_file-173.png")
+
 results for the above two EXECUTE commands (without the *--all*
-parameter and with it) are as follows:\
+parameter and with it) are as follows:
+
 ![](https://cdn.priority-software.com/docs/images/XMLPARSE_results-173.png "XMLPARSE_results-173.png")
 
 # Parsing JSON 
 
-Parsing a JSON file is identical, with a small addition to the end of
+Parsing a JSON file is almost identical, with the small addition of a **'Y'** to the end of
 the EXECUTE commands.
 
 **Example:** 
@@ -53,7 +57,7 @@ LINK INTERFXMLTAGS I1 TO :OUTXMLTAB1;
 GOTO 500 WHERE :RETVAL <= 0;
 LINK INTERFXMLTAGS I2 TO :OUTXMLTAB2; 
 GOTO 500 WHERE :RETVAL \<= 0;
-:FILE = '../../system/load/example.xml\';
+:FILE = '../../system/load/example.json';
 
 EXECUTE XMLPARSE :FILE, :OUTJSONTAB1, 0, :MSG, '', 'Y';
 EXECUTE XMLPARSE :FILE, :OUTJSONTAB2, 0, :MSG, '-all', 'Y';

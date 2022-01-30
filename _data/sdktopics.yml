@@ -144,6 +144,10 @@ chapters:
         url: Table-and-Form-Loads
       - page: Tips for Finding Existing Interfaces
         url: Existing-Interfaces
+      - page: Using a Form Interface to Duplicate Documents
+        url: Interfaces-Duplicate-Docs
+      - page: Using the STACK_ERR Table to Store Interface Messages
+        url: STACKERR
   - title: Debug Tools
     url: Debug-Tools
     group: Debug
@@ -154,7 +158,7 @@ chapters:
       - page: Installing the Language Dictionaries
         url: Customizations-Language-Dictionaries
   - title: User Report Generators
-    url: Modifying-Report-Generator
+    url: Modifying-Report-Generators
     group: Report Generators
   - title: BI-Reports
     url: BI-Reports
@@ -164,7 +168,7 @@ chapters:
     group: Priority Lite
     topics:
       - page: User Identifaction for Priority Lite/Dashboards
-        url: Lite-Identifcation
+        url: Lite-Identification
       - page: Designing HTML Reports for Priority Lite/Dashboards
         url: Lite-Dashboards-Reports
       - page: Additional Input Options (Priority Lite/Dashboards)
@@ -209,33 +213,27 @@ chapters:
         url: Priority-Web
       - page: Running a Procedure/Report from an SQLI Step or Form Trigger
         url: Run-Procedure-SQLI
-      - page: Initial Procedure and Follow-up Procedure for Financial Documents
+      - page: Financial Documents - Initial and Follow-up Procedures  
         url: Financial-Document-Initial-Follow-up-Procedure
       - page: Open Form Records from Program
         url: Procedure-Open-Form
-      - page: Creating a Printout of a Document (---)
-        url: Document-Printout
       - page: Printing Files from a Procedure Step
         url: Print-Attachments
-      - page: Adding Click2Sign Support to a Document Printout
+      - page: Click2Sign 
         url: Click2Sign
       - page: Encrypting Data
-        url: Encyrpting-Data
-      - page: Using a Form Interface to Duplicate Documents
-        url: Interfaces-Duplicate-Docs
-      - page: Using the STACK_ERR Table to Store Interface Messages
-        url: STACKERR
+        url: Encrypting-Data
       - page: Priority and SQL
         url: Dynamic-SQL
       - page: Retrieving Data from the Client .ini File
         url: Get-Data-from-INI-File
       - page: Using Semaphores
         url: Semaphores
-      - page: Activating Priority Entities from an External Application
+      - page: Running Priority Entities from an External Application
         url: Activating-From-External-Applications
-      - page: Programs Interfacing Priority with External Systems
+      - page: Interact with External Systems
         url: Interact-with-External-Systems
-      - page: Using WSCLIENT to Interface with Web Services
+      - page: WSCLIENT - Work with Web Services
         url: WSCLIENT
       - page: Parsing XML/JSON Files
         url: XMLPARSE

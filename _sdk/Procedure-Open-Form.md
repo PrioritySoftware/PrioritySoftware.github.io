@@ -1,7 +1,7 @@
 ---
 title: Open Form Record from within a Procedure
 layout: sdk_nav
-group: Procedures
+group: Programming Tools
 tags: 'Priority_SDK'
 ---
 
@@ -20,7 +20,7 @@ The following gives some basic guidelines for creating such an Action:
     column will update the **ORDNAME** column in the **DOCUMENTS_D**
     form.
 2.  Create a [procedure](Procedures ) that runs the interface,
-    and make it a Direct Activation from the **ORDERS** form. The
+    and make it an Action from the **ORDERS** form. The
     procedure should include an INPUT step with a PAR parameter of
     **LINE** type, taken from the **ORDERS** table (where *Column Name*
     = **ORDNAME**). In the procedure, record the following in the SQLI

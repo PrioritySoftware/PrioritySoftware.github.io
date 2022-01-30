@@ -89,7 +89,7 @@ record type. Each level in the form tree must be assigned its own unique
 record type (e.g., **ORDERS** = 1; **ORDERITEMS** = 2).
 
 **Tip:** After recording a form, run the *List of Sub-level Forms*
-report by Direct Activation to view all its sub-levels (one level down
+report by Action to view all its sub-levels (one level down
 only).
 
 For each form, if you want the load to overwrite existing records in the

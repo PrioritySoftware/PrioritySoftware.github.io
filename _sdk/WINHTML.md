@@ -87,7 +87,6 @@ Optionally, if you want to specify the format as part of the command, add '-form
 
 **Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
 - 	To display the document as a Word file (-wo), use the following code instead:
-
 ```sql
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, '-wo', '../../TEMP/O.docx';
 ```
@@ -96,7 +95,6 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, '-wo', '../../TEMP/O.d
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, '-wpdf', '../../TEMP/O.pdf'; 
 ```
 
-------------------
 **Notes:**
 
 The above code will download the files to your temp folder. 

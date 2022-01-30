@@ -23,7 +23,7 @@ The documentation provides examples of how to request, query, and modify data us
 <a  class="inline-link" href="./api">Web SDK</a>
 <a  class="inline-link" href="./restapi">REST API</a>
 <br>
-<a  class="inline-link" href="./sdk">Priority SDK</a>
+<a  class="inline-link" href="./sdk/Introduction">Priority SDK</a>
 <a  class="inline-link" href="./webhooks">Webhooks</a>
 
 

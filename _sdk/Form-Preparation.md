@@ -15,7 +15,7 @@ unprepared form. You can also activate it manually:
 -   Run the *Form Preparation* (**FORMPREP**) program (*System
     Management → Generators → Forms → Form Preparation*), which can
     prepare multiple forms simultaneously.
--   Run the *Prepare Form* program by Direct Activation from the *Form
+-   Run the *Prepare Form* program by Action from the *Form
     Generator* for a specific form.
 
 Form preparation will fail if errors are encountered (and you will be
@@ -37,13 +37,13 @@ Examples of possible problems:
 **Note:** In rare cases, the *Form Preparation* program fails to replace
 the older version of the form. If that occurs, retrieve the form in
 question in the *Form Generator* and run the *Reprepare Form* program by
-Direct Activation.
+Action.
 
 ## Loading a Form 
 
 The *Load Form* program (*System Management → Generators → Forms*)
 allows you to access a form on screen without going through any menus. A
-similar program (*Open Form*) can be run by Direct Activation from the
+similar program (*Open Form*) can be run by Action from the
 *Form Generator*. These interchangeable programs are particularly useful
 during the form's development stages.
 

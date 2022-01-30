@@ -18,7 +18,7 @@ web services. Use the following syntax to interface with a web service
 > \'-content\', :contentType\'\] \[, \'-method\', :method\] ['-headout' headers_response_outfile] \[,
 > \'-authname, :tokenCode\] \[, \'-urlfile\', urlfile\];
 >
-;
+
 
 ## WSCLIENT Parameters 
 
@@ -72,7 +72,7 @@ web services. Use the following syntax to interface with a web service
 
 -   Error messages are also written to the ERRMSGS table with type
     *\"w\"* under SQL.USER.
--   You can use the XMLPARSE command to read a response received as an
+-   You can use the [XMLPARSE](XMLPARSE) command to read a response received as an
     XML or JSON file.
 -   Requests sent to the web service and response received will be
     written to the server log when it is set to record
@@ -91,7 +91,7 @@ authorization by OAuth2. Doing so requires some additional setups:
     -   ClientID
     -   Secret
     -   Token URL
-    -   OAuth2 URL\
+    -   OAuth2 URL
 
 Fill them in the appropriate fields in the form.
 

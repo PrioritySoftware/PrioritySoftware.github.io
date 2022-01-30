@@ -104,10 +104,9 @@ The following is a list of useful Basic commands.
     execution of the procedure continues uninterrupted. Alternatively,
     this command displays a designated string of characters. This
     message will ***not*** be displayed if the procedure is run by
-    Direct Activation from a form.
+    Action from a form.
 -   **PRINTF** (*Print Message*) --- Same as PRINT, except that the
-    message ***will*** be displayed when the procedure is run by Direct
-    Activation.
+    message ***will*** be displayed when the procedure is run by Action.
 -   **PRINTCONT** (*Print Message & Continue/Stop*) --- Like the PRINT
     command, displays on screen the contents of a file, but also offers
     the user the options of continuing execution of the procedure or
@@ -135,8 +134,7 @@ The following is a list of useful Basic commands.
     execution of the procedure. This message will ***not*** be displayed
     if the procedure is run as an Action from a form.
 -   **WRNMSGF** (*Warning Message*) --- Same as WRNMSG, except that the
-    message ***will*** be displayed when the procedure is run by Direct
-    Activation.
+    message ***will*** be displayed when the procedure is run by Action.
 
 ## Further Reading 
 

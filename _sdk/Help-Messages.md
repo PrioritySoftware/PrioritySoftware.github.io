@@ -20,7 +20,7 @@ added or modified, the date and time of this revision appear in the
 new ones, will not be seen by the user until the form in question has
 been reprepared. Unlike other changes to the form, modifications of help
 texts require you to remove the existing form preparation and execute it
-again. To do so, run the *Reprepare Form* program by Direct Activation
+again. To do so, run the *Reprepare Form* program by an Action
 from the *Form Generator*.
 
 ## Reports

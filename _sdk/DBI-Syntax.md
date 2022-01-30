@@ -1,7 +1,7 @@
 ---
 title: DBI Syntax
 layout: sdk_nav
-group: SQL Syntax
+group: Tables
 tags: 'Priority_SDK'
 ---
 

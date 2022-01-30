@@ -50,8 +50,7 @@ forms and programs.
         have more than one programmer, each can track his/her own
         changes.
 3.  Once you have linked all the relevant modifications, create the
-    shell file by running the *Prepare Upgrade* program by Direct
-    Activation from the *Version Revisions* form. The shell file will be
+    shell file by running the *Prepare Upgrade* program by Action from the *Version Revisions* form. The shell file will be
     called *NN*.sh (where NN is the number assigned to the revision) and
     stored in the *system\\upgrades* directory.
 
@@ -60,7 +59,7 @@ forms and programs.
 | Modification Code | Description |
   |--------------- | ------------ |
   | DBI            | Update of the database (tables, table columns, keys). |
-  | DELDIRECTACT   | Deletion of a Direct Activation.
+  | DELDIRECTACT   | Deletion of a Action.
   | DELFORMCOL     | Deletion of a form column.
   | DELFORMLINK    | Deletion of the link between a form and its sub-level.
   | DELMENULINK    | Deletion of the link between a menu and its menu item.

@@ -82,7 +82,7 @@ Open a folder in Windows Explorer (SHELLEX):
 EXECUTE SHELLEX :file;
 ```
 
-**Note:** The SHELLEX command is not supported in the web client..
+**Note:** The SHELLEX command is not supported in the web client.
 
 Return a random value in decimal or hexadecimal format (PRANDOM):
 ```sql
@@ -147,7 +147,7 @@ appears beneath these examples.
 
 > **Example:** The following command iterates through all characters in
 > the input file that fall within the designated range (all uppercase
-> letters from A to Z) and adds 32 to the ASCII value of these
+> letters from A to Z) and adds 32 to the ASCII valu e of these
 > characters, thereby converting them to the corresponding lowercase
 > letter:
 >

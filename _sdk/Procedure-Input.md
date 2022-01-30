@@ -207,7 +207,7 @@ The specified target form must meet two conditions:
 **NULL** form as the target form.
 
 
-## Input During Direct Activation 
+## Input During Action 
 
 When a procedure is [activated from within a
 form](Actions), input is received from the record

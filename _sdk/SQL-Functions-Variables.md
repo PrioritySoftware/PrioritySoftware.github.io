@@ -279,7 +279,7 @@ There are several types of SQL variables:
 
 The following reserved words are useful with the :KEYSTROKES
 variable:
-- *{Activate}N* (runs the form*s Nth Direct Activation)
+- *{Activate}N* (runs the form*s Nth Action)
 - {Exit} (executes the query)
 -  {Key Right}, {Key Left}, {Key Up}, {Key Down}, {Page Up}, {Page Down} 
 -  *{Sub-level}N* (opens the form*s Nth sub-level form),
@@ -304,7 +304,7 @@ form. For instance, if the **QUANT** and **PRICE** columns in the
 **ORDERITEMS** form are defined as **REAL**, then the :totprice variable
 in the following expression is assumed to be a real number as well:
 
-> `SELECT :ORDERITEMS.QUANT * :ORDERITEMS.PRICE INTO :totpriceFROM DUMMY;`
+> `SELECT :ORDERITEMS.QUANT * :ORDERITEMS.PRICE INTO :totprice FROM DUMMY;`
 
 or
 

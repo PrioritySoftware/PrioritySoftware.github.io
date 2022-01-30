@@ -112,7 +112,7 @@ write the declaration section in a separate buffer.
 
 You can check the SQL statements in the step query for syntax errors,
 prior to activation of the procedure itself, by running the *Syntax
-Check* program by Direct Activation from within the *Procedure
+Check* program by Action from within the *Procedure
 Generator*form.
 
 ## Tracking Changes in Step Queries 

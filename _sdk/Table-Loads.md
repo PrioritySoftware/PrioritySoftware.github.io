@@ -126,7 +126,7 @@ table.
 
 -   To check the SQL statements in your load query for syntax errors,
     prior to activation of the load, run the *Check Syntax* program by
-    Direct Activation from within the *Characteristics for Download*
+    Action from within the *Characteristics for Download*
     form.
 -   You can track changes to load queries once they have been included
     in prepared version revisions. See [Tracking Changes to

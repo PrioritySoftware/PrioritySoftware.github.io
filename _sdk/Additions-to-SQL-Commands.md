@@ -60,28 +60,28 @@ WHERE PART > 0
 FORMAT STRCAT ('/tmp/', 'part.sav'); 
 ```
 
-will store results in the *tmp*directory in a file named *part.sav*.
+will store results in the *tmp* directory in a file named *part.sav*.
 
 ## Extended LIKE Patterns 
 
-***Priority***includes several LIKE patterns in addition to those found
+***Priority*** includes several LIKE patterns in addition to those found
 in standard SQL ("\_" and "%" wildcards, which represent a single
 character and an unlimited number of characters, respectively).
 
 For instance, the symbol " \| " may be used in pairs (as brackets) to
 enclose several characters or a range of characters. Any single
 character appearing within the brackets or falling within the range may
-be retrieved (e.g., **\| A--D \| %**yields any character or string
+be retrieved (e.g., **\| A--D \| %** yields any character or string
 beginning with the letter *A, B, C*or *D*, such as *Armchair, Desk,
 Chair*).
 
 Moreover, the symbol "\^" may be added before one or more characters
 enclosed in brackets, to retrieve any character *other than*those (e.g.
-**\| \^A--D \| %**yields any character or string that does *not*begin
+**\| \^A--D \| %** yields any character or string that does *not*begin
 with the letter *A, B, C*, or *D*).
 
 Finally, the delimiter "\\" should be used to retrieve one of the above
-symbols. For instance, **A\\%**yields the string *A%*.
+symbols. For instance, **A\\%** yields the string *A%*.
 
 For more examples, see the search criteria designated in the *User
 Interface Guide*.

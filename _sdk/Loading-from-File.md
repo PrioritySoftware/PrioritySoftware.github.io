@@ -13,7 +13,7 @@ file you will be using before you begin defining the interface.
 
 **Tip:** If you want to create a new form load based on an existing one,
 retrieve the desired form load and run the *File Definitions for Form
-Load* report by Direct Activation from the *Form Load Designer* form.
+Load* report by Action from the *Form Load Designer* form.
 
 ## Defining the File 
 
@@ -65,7 +65,7 @@ the record type in the file itself.
 -   Record type is irrelevant for XML/JSON files. As the column is
     mandatory, record any value here.
 -   After recording a form, run the *List of Sub-level Forms* report by
-    Direct Activation to view all its sub-levels (one level down only).
+    Action to view all its sub-levels (one level down only).
 
 For each form, if you want the load to overwrite existing records in the
 sub-levels, flag the *Replace Form Data* column. Leave this column blank
@@ -110,7 +110,7 @@ If you are loading to or from an XML/JSON file, you must define the
 tags. Specifically, you need to take the following steps:
 
 1.  From the *Form Load Designer* form, run the *Prepare XML Tags by
-    File Defs* program by Direct Activation. The structure of the file
+    File Defs* program by Action. The structure of the file
     appearing in the *File Name* column will be analyzed and transferred
     to the *XML Tags for Interface* sub-level form. This file should be
     saved in the *system\\load\\company* directory, where *company* is
@@ -146,7 +146,7 @@ tags. Specifically, you need to take the following steps:
     </Order>
     ```
 
-    \
+    
     In other files, this tag needs to appear only once. You can control
     this behavior in the loaded file by prepending a
     **+** to a repeating parent, or a **-** for a parent that should appear only once.

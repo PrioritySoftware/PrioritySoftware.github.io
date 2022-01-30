@@ -1,10 +1,3 @@
----
-title: Print Documents from Within a Procedure
-layout: sdk_nav
-group: Documents
-tags: 'Priority_SDK'
----
-
 ## Introduction
 
 You can create a [procedure](Procedures ) that opens a
@@ -105,12 +98,10 @@ Optionally, if you want to specify the format as part of the command,
 add **\'-format**\' and the format number (as a variable or by
 specifying the number directly).
 
-------------------------------------------------------------------------
-
 **Note:** The above code will only display a document on screen when it
 is run as part of a step in a procedure.
 
-------------------------------------------------------------------------
+
 
 -   To generate the document as a Word file (-wo), use the following
     code instead:
@@ -126,22 +117,17 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORM
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,] '-wpdf', 'C:/TEMP/O.pdf'
 ```
 
-------------------------------------------------------------------------
+
 
 **Notes:**
 
 -   The above code will download the files to your temp folder.
 
-```{=html}
-<!-- -->
-```
 -   This operates similarly to HTML formats where the PRINTFORMAT holds
     USER and EXEC, and VALUE = Word template number. Since Word
     templates are stored as positive values in the PRINTFORMAT table, if
     you based the format on a negative TRIGMSG, convert it to a positive
     value first (multiply by -1).
-
-------------------------------------------------------------------------
 
 To send the document to the default printer, continue the above code as
 follows:
@@ -160,14 +146,12 @@ EXECUTE WINACTIV '-P', 'WWWSHOWORDER', '-Q',2, 'ORDERS', :TMPORDERS;
 LABEL 199; 
 ```
 
-------------------------------------------------------------------------
 
 **Note:** The **WINACTIV** command can only be used when programming for
 the Windows interface; see [Working with the Priority Web
 Interface](Working-with-the-Priority-Web-Interface ) for
 details.
 
-------------------------------------------------------------------------
 
 If you want to save the document as a file, you can choose between a few
 different file types.
@@ -216,16 +200,13 @@ MAILMSG 5 TO EMAIL :EMAIL DATA :TMPOUT;
 LABEL 199;
 ```
 
-------------------------------------------------------------------------
-
 **Note:** You have to record message number 5 for the procedure.
 
-------------------------------------------------------------------------
 
-## Executing a Document After Direct Activation 
+## Executing a Document After an Action 
 
 You might want to create a program that executes a document immediately
-after [Direct Activation](Direct_Activations ) of a procedure
+after [Action](Actions ) of a procedure
 from within a form. If the desired procedure is run in the foreground
 (e.g., in order to display a message when it finishes running), the
 document should nevertheless be executed in the background so that users
@@ -234,7 +215,7 @@ take a few seconds. In such a case, the **WINHTML** program must be
 executed with the \'-dQ\' parameter.
 
 > **Example:** To print an invoice immediately after finalizing it via
-> Direct Activation, include the following command in an SQLI step in
+> Action, include the following command in an SQLI step in
 > the procedure (where the :IV variable represents the internal number
 > of the invoice you wish to print):
 >
@@ -273,8 +254,6 @@ in the HTMLCURSOR step of the procedure:
 > ORDER BY 3, 2;
 > ```
 
-------------------------------------------------------------------------
-
 **Notes:**
 
 -   If you wish to allow for a number of copies that is greater than 7,
@@ -291,7 +270,6 @@ in the HTMLCURSOR step of the procedure:
     other words, additional copies that are generated in this fashion
     are still marked as copies.
 
-------------------------------------------------------------------------
 
 ## Further Reading 
 

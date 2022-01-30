@@ -26,7 +26,7 @@ with caution. When it is employed, the TIMEOUT constant is disabled.
 Additional ways of forcing a form refresh are:
 
 -   Include the REFRESH command in a form trigger.
--   To refresh all retrieved records following a Direct Activation,
+-   To refresh all retrieved records following an Action,
     include :ACTIVATEREFRESH = 1 in the PRE-FORM trigger of the form in
     question.
 
