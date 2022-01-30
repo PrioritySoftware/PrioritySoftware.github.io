@@ -52,6 +52,7 @@ body
 {
   order: 1;
   top: 0;
+  min-width: 20%;
   background-color: #f9f7f6 !important;
   flex-grow: 2;
   overflow:auto !important;
@@ -109,13 +110,21 @@ code{
   max-width: 1000px;
 }
 
+// .padding {
+//   order: 1;
+//   min-width: 20%;
+// }
+
+.api-content {
+  max-width: 50%;
+}
+
 #main_content_wrap 
 {
    background-color:white;
    order:2;
    margin-left: 10px;
-   flex-grow: 8;
-   max-width: 50%;
+   flex-grow: 6;
     border:none;
   .inner > table ,.inner > table td
   {
@@ -130,6 +139,7 @@ code{
 
     &.default {
       margin-left: 60px;
+      // max-width: 100%;
     }
     h2
     {

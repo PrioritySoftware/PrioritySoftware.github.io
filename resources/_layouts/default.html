@@ -22,12 +22,16 @@
     {% include header.html %}
       
     <!-- MAIN CONTENT -->
+    <div class="flex-container">
+      <div class="padding"></div>
     <main id="main_content_wrap" class="{{'outer ' | append : page.class}}">
       <!-- Content -->
       <section class="markdown-body default">
         {{ content }}
       </section>
     </main>
+    <div class="padding-2"></div>
+    </div>
     <script>
     $(document).ready(function()
     {
