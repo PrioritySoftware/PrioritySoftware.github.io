@@ -170,8 +170,8 @@ the form column is empty, the default value will be exported.
 
 ## More on Form Loads 
 
--   [Loading from/to a File](Loading-from/to-a-File )
--   [Executing the Form Load](Executing-the-Form-Load )
+-   [Loading from/to a File](Loading-from-File )
+-   [Executing the Form Load](Execute-FormLoads )
 -   [Deleting Records from a
-    Form](Deleting-Records-from-a-Form )
+    Form](Interfaces-Deleting-Records )
 -   [Form Loads](Form-Loads )

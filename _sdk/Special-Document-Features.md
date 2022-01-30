@@ -9,7 +9,7 @@ tags: 'Priority_SDK'
 
 There are several print/send options to choose from when working with
 documents. In addition to the standard options, you can use [calculated
-report columns](Calculated-Columns-in-Reports ) to include an
+report columns](Calculated-Columns-Reports ) to include an
 Automatic Mail option (automatically sends the report to the designated
 contact as an e-mail attachment).
 
@@ -46,10 +46,10 @@ signed documents (e-documents) to designated customers via e-mail. In
 the SQLI step used to go over the records before printing a document,
 check whether the following conditions are met:
 
--   [:SENDOPTION](SQL-Functions-and-Variables#System-Variables )
+-   [:SENDOPTION](SQL-Functions-Variables#System-Variables )
     = \'AMAIL\' (the user has selected the Automatic Mail option in the
     Print/Send Options dialogue box).
--   [:WANTSEDOCUMENT](SQL-Functions-and-Variables#System-Variables )
+-   [:WANTSEDOCUMENT](SQL-Functions-Variables#System-Variables )
     = 1 (the user has flagged *Are sent e-mails digitally signed by
     Outlook* in the Mail Options dialogue box).
 -   In the **CUSTOMERS** table, the value of the **EDOCUMENTS** column
@@ -64,7 +64,7 @@ If the above conditions are met:
 -   flag the document as *Printed.*
 -   to flag the e-mail for synchronization with ***Priority***
     (optional), set the value of the [:EDOCUMENT
-    variable](SQL-Functions-and-Variables#System-Variables )
+    variable](SQL-Functions-Variables#System-Variables )
     to 1.
 
 > **Example:**See the print formats defined for the **WWWSHOWCIV**
@@ -76,4 +76,4 @@ If the above conditions are met:
 
 -   [Documents](Documents )
 -   [Outputting the Document](WINHTML)
--   [The Letter Generator](The-Letter-Generator )
+-   [The Letter Generator](Letter-Generator )

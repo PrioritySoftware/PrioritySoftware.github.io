@@ -233,12 +233,12 @@ FROM ORDERITEMS WHERE (:$1.ORD <> 0 AND ORD = :$1.ORD );
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

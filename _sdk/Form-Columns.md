@@ -104,7 +104,7 @@ leave the line without specifying data for this column.
 
 
 **Note:** Whenever a [form load
-interface](Loading-from/to-a-Load-Table ) is used to update a
+interface](Loading-from-Load-Table ) is used to update a
 form, that interface must fill in all mandatory columns. If it does not,
 the **INTERFACE** program will fail.
 
@@ -529,14 +529,14 @@ the **USERCLMNPRIV** table, as follows:
 -   [Forms](Forms )
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions-of-Record-Display-and-Insertion )
+    Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
--   [Accessing a Related Form](Accessing-a-Related-Form )
--   [Creating a Text Form](Creating-a-Text-Form )
+-   [Accessing a Related Form](Accessing-Related-Form )
+-   [Creating a Text Form](Create-Text-Form )
 -   [Designing a Screen-Painted
     Form](Designing-a-Screen-Painted-Form )
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )

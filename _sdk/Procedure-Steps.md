@@ -35,10 +35,10 @@ valid entity:
     data processing
 -   a [form](Forms ) (*F*), used to input data
 -   a procedure (*P*), which activates a
-    [sub-procedure](Running-a-Procedure#Running-a-Sub-Procedure )
+    [sub-procedure](Run-Procedure#Running-a-Sub-Procedure )
 -   a Basic command (*B*), used for [parameter
-    input](User-Input-in-Procedures ), [message
-    output](Procedure-Message-Display ) and [flow
+    input](Procedure-Input ), [message
+    output](Procedure-Messages ) and [flow
     control](Procedure-Flow-Control )
 -   a [form load interface](Interfaces ) (I), used to load
     data into a ***Priority*** form
@@ -139,12 +139,12 @@ The following is a list of useful Basic commands.
 ## Further Reading 
 
 -   [Procedure Parameters](Procedure-Parameters )
--   [User Input in Procedures](User-Input-in-Procedures )
+-   [User Input in Procedures](Procedure-Input )
 -   [Procedure Step Queries](Procedure-Step-Queries )
 -   [Procedure Flow Control](Procedure-Flow-Control )
--   [Procedure Message Display](Procedure-Message-Display )
--   [Processed Reports](Processed-Reports )
--   [Running a Procedure](Running-a-Procedure )
+-   [Procedure Message Display](Procedure-Messages )
+-   [Processed Reports](Processed-Report )
+-   [Running a Procedure](Run-Procedure )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )

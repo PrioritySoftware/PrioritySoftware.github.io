@@ -118,7 +118,7 @@ Designate the type of procedure:
     *Rep/Wizard/Dashboard* column and *Y* in the *HTML Document* column.
 
 
-**Note:** See [Processed Reports](Processed-Reports ) and
+**Note:** See [Processed Reports](Processed-Report ) and
 [Documents](Documents ).
 
 
@@ -144,11 +144,11 @@ matter which modules of ***Priority*** have been purchased.
 
 -   [Procedure Steps](Procedure-Steps )
 -   [Procedure Parameters](Procedure-Parameters )
--   [User Input in Procedures](User-Input-in-Procedures )
+-   [User Input in Procedures](Procedure-Input )
 -   [Procedure Step Queries](Procedure-Step-Queries )
 -   [Procedure Flow Control](Procedure-Flow-Control )
--   [Procedure Message Display](Procedure-Message-Display )
--   [Processed Reports](Processed-Reports )
--   [Running a Procedure](Running-a-Procedure )
+-   [Procedure Message Display](Procedure-Messages )
+-   [Processed Reports](Processed-Report )
+-   [Running a Procedure](Run-Procedure )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )

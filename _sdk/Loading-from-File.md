@@ -185,8 +185,8 @@ of Form Columns in File*) to define the following:
 ## More on Form Loads 
 
 -   [Loading from/to a Load
-    Table](Loading-from/to-a-Load-Table )
--   [Executing the Form Load](Executing-the-Form-Load )
+    Table](Loading-from-Load-Table )
+-   [Executing the Form Load](Execute-FormLoads )
 -   [Deleting Records from a
-    Form](Deleting-Records-from-a-Form )
+    Form](Interfaces-Deleting-Records )
 -   [Form Loads](Form-Loads )

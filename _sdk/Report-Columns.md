@@ -50,7 +50,7 @@ columns.
 > number.
 
 
-**Note:** See [Rules for Customizing](Rules-for-Customizing ).
+**Note:** See [Rules for Customizing](Customization-Rules ).
 
 
 ## Adding Report Columns 
@@ -95,7 +95,7 @@ position do not affect column numbers.
 **Note:** In order to prevent future ***Priority*** releases from
 overwriting any newly added columns, ***manually*** assign them a column
 number of at least 500 (and then change the position). For more details,
-see [Rules for Customizing](Rules-for-Customizing ).
+see [Rules for Customizing](Customization-Rules ).
 
 
 ## Join Columns 
@@ -118,7 +118,7 @@ Both the *Join Column* and its *Join Table* must be specified.
 
 **Note:** If you have added a column to a standard report and the join
 is to a new table, assign a *Join ID* greater than 5. For details, see
-[Rules for Customizing](Rules-for-Customizing ).
+[Rules for Customizing](Customization-Rules ).
 
 
 ### Special Joins 
@@ -322,7 +322,7 @@ form and that form has CHOOSE-FIELD or SEARCH-FIELD triggers, those
 triggers will be imported to the report input screen. You may want to
 write a specific CHOOSE-FIELD or SEARCH-FIELD for the report. The same
 restrictions that apply to [form trigger
-names](Creating-Your-Own-Triggers#Naming-Customized-Triggers )
+names](Creating-your-triggers#Naming-Customized-Triggers )
 apply here as well.
 
 To design a new trigger, use the *Field Triggers* form (a sub-level of
@@ -375,13 +375,13 @@ distortion.
 
 ## Further Reading 
 
--   [Organizing Report Data](Organizing-Report-Data )
+-   [Organizing Report Data](organize-report-data )
 -   [Refining Report Data
-    Display](Refining-Report-Data-Display )
+    Display](Refine-Report-Display )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-in-Reports )
--   [Types of Reports](Types-of-Reports )
--   [Running a Report](Running-a-Report )
+    Reports](Calculated-Columns-Reports )
+-   [Types of Reports](Report-Types )
+-   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )

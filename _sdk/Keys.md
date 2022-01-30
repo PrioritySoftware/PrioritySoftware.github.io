@@ -213,7 +213,7 @@ in forms that are based on them:
 -   [Tables](Tables )
 -   [Table Columns](Table-Columns )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
+    Keys](Create-Modify-Tables )
 -   [Viewing Tables in the
-    Database](Viewing-Tables-in-the-Database )
+    Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )

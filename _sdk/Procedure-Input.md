@@ -14,7 +14,7 @@ an [INPUT command](Procedure-Steps#Basic-Commands ). You can
 also specify input in a [CHOOSE
 command](Procedure-Steps#Basic-Commands ), a form step or an
 SQLI step. In addition, in a [processed
-report](Processed-Reports ), columns can be flagged for input
+report](Processed-Report ), columns can be flagged for input
 in the report itself (by flagging the *Input Column* in the *Report
 Columns* form).
 
@@ -86,7 +86,7 @@ by the user will be assigned to the first parameter.
 form of the CHOOSE/CHOOSEF procedure step. This is a regular SQL query
 with three arguments in the SELECT clause. All arguments must be of
 **CHAR** type (convert numbers to strings using the [ITOA
-function](Non-standard-Scalar-Expressions#Strings ).
+function](Scalar-Expressions#Strings ).
 
 The first two arguments in the CHOOSE query are displayed next to the
 radio button and the third is the value to be assigned to the parameter.
@@ -98,7 +98,7 @@ radio button, use the empty string (\' \') as the second argument.
 
 **Note:** Rules for the CHOOSE query are similar to those in
 [CHOOSE-FIELD
-triggers](Creating-Your-Own-Triggers#CHOOSE-FIELD ).
+triggers](Creating-your-triggers#CHOOSE-FIELD ).
 
 ## Retrieving Records Into a Linked File 
 
@@ -145,8 +145,8 @@ also affect user input:
 
 When a parameter is defined as an input column, if the column has a
 target form and that form has
-[CHOOSE-FIELD](Creating-Your-Own-Triggers#CHOOSE-FIELD-(for-form) )
-or [SEARCH-FIELD](Creating-Your-Own-Triggers#SEARCH-FIELD )
+[CHOOSE-FIELD](Creating-your-triggers#CHOOSE-FIELD-(for-form) )
+or [SEARCH-FIELD](Creating-your-triggers#SEARCH-FIELD )
 triggers, those triggers will be imported to the input screen.
 
 You can also write a specific CHOOSE-FIELD or SEARCH-FIELD for the
@@ -160,7 +160,7 @@ list for the latter column to display only those customers that are
 associated with the specified sales rep.
 
 The same restrictions that apply to [form trigger
-names](Creating-Your-Own-Triggers#Naming-Customized-Triggers )
+names](Creating-your-triggers#Naming-Customized-Triggers )
 apply here as well.
 
 To design a new trigger, use the *Field Triggers* form (a sub-level of
@@ -245,9 +245,9 @@ records that will serve as input, particularly when the query is complex
 -   [Procedure Parameters](Procedure-Parameters )
 -   [Procedure Step Queries](Procedure-Step-Queries )
 -   [Procedure Flow Control](Procedure-Flow-Control )
--   [Procedure Message Display](Procedure-Message-Display )
--   [Processed Reports](Processed-Reports )
--   [Running a Procedure](Running-a-Procedure )
+-   [Procedure Message Display](Procedure-Messages )
+-   [Processed Reports](Processed-Report )
+-   [Running a Procedure](Run-Procedure )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )

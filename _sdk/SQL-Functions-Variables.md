@@ -92,7 +92,7 @@ There are several types of SQL variables:
     variable has a value of 1, the current variable is assigned the name
     of the form interface in question (e.g., see BUF16 in the
     **LOGPART** form; on buffers, see [Using
-    Buffers](Including-One-Trigger-in-Another#Using-Buffers )).
+    Buffers](Include-Triggers#Using-Buffers )).
     If empty, but :FORM_INTERFACE is 1, the records are filled in using
     the REST API.
 
@@ -134,7 +134,7 @@ There are several types of SQL variables:
     **WWWDB_PORDERS_A** procedure).
 
 :NOHTMLDESIGN --- used in [processed
-    reports](Processed-Reports ) and ***Priority Lite*** 
+    reports](Processed-Report ) and ***Priority Lite*** 
     procedures. When this variable receives a value of 1, reports will
     be produced in non-HTML format, even if HTML design options are
     defined for report columns. This variable is sometimes used in
@@ -176,7 +176,7 @@ There are several types of SQL variables:
 
 :GROUPPAGEBREAK (**INT** type) --- used in processed reports to add
     a page break for the first \"Group by\" set (see [Display of Grouped
-    Records](Organizing-Report-Data#Display-of-Grouped-Records )).
+    Records](organize-report-data#Display-of-Grouped-Records )).
     When this variable receives a value of 1, each group of records in
     the report will appear on a new page.
 
@@ -343,11 +343,11 @@ decimal places, initialize it as follows:
 -   [Executing SQL Statements](Executing-SQL-Statements )
 -   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+    Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
--   [LINK and UNLINK](LINK-and-UNLINK )
+-   [LINK and UNLINK](Link-Unlink )
 -   [Return Values and Statement
-    Failure](Return-Values-and-Statement-Failure )
+    Failure](RETVAL-Values )
 -   [Non-standard Scalar
-    Expressions](Non-standard-Scalar-Expressions )
--   [Viewing Table Structure](Viewing-Table-Structure )
+    Expressions](Scalar-Expressions )
+-   [Viewing Table Structure](TableStructure )

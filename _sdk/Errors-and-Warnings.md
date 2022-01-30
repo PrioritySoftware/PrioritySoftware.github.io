@@ -180,13 +180,13 @@ that generates the message, by means of the system variables :PAR1,
 > AND SUPPART.PART = PART.PART AND PART.PARTNAME = :$.@);
 > ```
 >
-> Warning message 140 would then be: Vendor `<P1>`{=html} does not
+> Warning message 140 would then be: Vendor `<P1>` does not
 > supply this part. PAR1 is filled in by the appropriate vendor number.
 
 The variables :PAR1,:PAR2 and :PAR3 are of **CHAR** type. If you wish to
 assign a form column variable which is of a different type to a message
 parameter, you will have to first convert it to a string (use
-[**ITOA**](Non-standard-Scalar-Expressions#Strings ) for an
+[**ITOA**](Scalar-Expressions#Strings ) for an
 integer and [**DTOA**](ATOD-and-DTOA ) for a date).
 
 > **Example:** To insert the order date into a message parameter,
@@ -200,11 +200,11 @@ integer and [**DTOA**](ATOD-and-DTOA ) for a date).
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

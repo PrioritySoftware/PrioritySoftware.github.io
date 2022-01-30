@@ -222,12 +222,12 @@ LABEL 2;
 ## Further Reading {#further_reading}
 
 -   [User Identification for Priority
-    Lite/Dashboards](User_Identification_for_Priority_Lite/Dashboards "wikilink")
+    Lite/Dashboards](Lite-Identification "wikilink")
 -   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional_Input_Options_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) "wikilink")
 -   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining_a_Base_Page_for_HTML_Pages_(Priority_Lite/Dashboards) "wikilink")
+    Lite/Dashboards)](Base-Page-HTML) "wikilink")
 -   [Writing Dashboard
-    Procedures](Writing_Dashboard_Procedures "wikilink")
+    Procedures](Dashboard-Procedures "wikilink")
 -   [Priority Lite and
     Dashboards](Priority_Lite_and_Dashboards "wikilink")

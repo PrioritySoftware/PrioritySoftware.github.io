@@ -44,4 +44,4 @@ purposes and can be changed as desired.
 
 ------------------------------------------------------------------------
 
-The next step is to [debug the BPM chart](Debugging-the-BPM ).
+The next step is to [debug the BPM chart](BPM-Debugging ).

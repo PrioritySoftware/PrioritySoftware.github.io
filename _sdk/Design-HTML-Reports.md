@@ -25,7 +25,7 @@ That is, you select and place the report fields on the output page
 divide the form into table cells, and then place each report field in
 its respective cell. For a detailed explanation, see [Displaying HTML
 Text in
-Reports](Refining-Report-Data-Display#Displaying-HTML-Text-in-Reports ).
+Reports](Refine-Report-Display#Displaying-HTML-Text-in-Reports ).
 
 ## Input Columns and Links in the Report 
 

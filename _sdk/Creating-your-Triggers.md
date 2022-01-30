@@ -152,7 +152,7 @@ names must follow a number of rules:
 -   SEARCH-FIELD triggers are the exception to the rule. You cannot
     create a customized SEARCH-FIELD, but rather must use the standard
     trigger. For details, see [Rules for Customizing
-    Forms](Rules-for-Customizing-Forms ).
+    Forms](Customization-Rules-Forms ).
 
 ------------------------------------------------------------------------
 
@@ -233,7 +233,7 @@ characters.
 The above type of CHOOSE-FIELD is a regular SQL query where both
 arguments must be of **CHAR** type. In order to display a number, you
 must first convert it into a string using the [ITOA
-function](Non-standard-Scalar-Expressions#Strings ).
+function](Scalar-Expressions#Strings ).
 
 The first argument in the query is the description and the second is the
 value to be inserted in the column where the Choose list is activated.
@@ -558,11 +558,11 @@ upper-level form on the basis of values specified in the sub-level form.
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

@@ -102,4 +102,4 @@ SELECT DTOA(:DATE, 'The current date is MM-DD-YY, and the time is hh:mm.') FROM 
 ## Further Reading 
 
 -   [Non-standard Scalar
-    Expressions](Non-standard-Scalar-Expressions )
+    Expressions](Scalar-Expressions )

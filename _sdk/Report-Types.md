@@ -31,7 +31,7 @@ display value of *T*.
 
 **Notes:**
 
--   Each [group](Organizing-Report-Data#Grouping) appears in
+-   Each [group](organize-report-data#Grouping) appears in
     a separate row in the table.
 -   You can save horizontal space by using vertical mode (specify *V* in
     the *Table Display Mode* column of the *Report Generator* form).
@@ -80,7 +80,7 @@ may be part of a procedure. Include a report step in a procedure when
 the report requires manipulations other than simple averages, sum
 totals, minimums or maximums. The procedure allows for more complex
 operations to be performed on data. For a detailed explanation, see
-[Processed Reports](Processed-Reports ). Generally, you
+[Processed Reports](Processed-Report ). Generally, you
 include a report in a procedure via the *Procedure Steps* form, a
 sub-level of the *Procedure Generator* form. You can then view that
 linkage in the *Procedure Link* form, another sub-level of the *Report
@@ -89,12 +89,12 @@ Generator* form.
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](Organizing-Report-Data )
+-   [Organizing Report Data](organize-report-data )
 -   [Refining Report Data
-    Display](Refining-Report-Data-Display )
+    Display](Refine-Report-Display )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-in-Reports )
--   [Running a Report](Running-a-Report )
+    Reports](Calculated-Columns-Reports )
+-   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )

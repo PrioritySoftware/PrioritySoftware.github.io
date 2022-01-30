@@ -186,6 +186,6 @@ Change column priority in key
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
+    Keys](Create-Modify-Tables )
 -   [Viewing Tables in the
-    Database](Viewing-Tables-in-the-Database )
+    Database](View-Tables )

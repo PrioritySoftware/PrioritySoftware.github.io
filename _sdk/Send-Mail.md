@@ -148,11 +148,11 @@ in a message.
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

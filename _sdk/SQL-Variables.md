@@ -37,7 +37,7 @@ in the form, then these variables will hold two different values --- the
 updated value and the previous one, respectively. Along the same lines,
 :ORDERITEMS.QUANT.TITLE refers to the title of this column. This is
 useful, for instance, as a parameter in [error or warning messages for
-triggers](Error-and-Warning-Messages ). These form column
+triggers](Errors-and-Warnings ). These form column
 variables may be used in creating expressions and triggers for the form.
 
 ## Wildcards
@@ -82,7 +82,7 @@ names. This linkage can be expressed using the @ wildcard.
 The use of these wildcards makes it easier to read the trigger. They are
 also useful when employing an **#INCLUDE** command in a trigger (see
 [Including One Trigger in
-Another](Including-One-Trigger-in-Another )).
+Another](Include-Triggers )).
 
 ------------------------------------------------------------------------
 
@@ -119,7 +119,7 @@ When naming a variable, use the following rule of thumb:
     prefix is unnecessary.
 
 For more details, see [Rules for Customizing
-Forms](Rules-for-Customizing-Forms ).
+Forms](Customization-Rules-Forms ).
 
 ------------------------------------------------------------------------
 
@@ -212,12 +212,12 @@ need to create a plain text form, set the :\$.NOHTML.T variable to 1.
 ## More on Form Triggers 
 
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

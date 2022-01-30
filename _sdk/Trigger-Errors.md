@@ -11,7 +11,7 @@ trigger errors are encountered. The main trigger errors are:
 -   SQL syntax errors
 -   illegal or irresolvable variable types
 -   syntax errors in [#INCLUDE
-    commands](Including-One-Trigger-in-Another )
+    commands](Include-Triggers )
 -   #INCLUDE commands that refer to non-existent forms, form columns or
     triggers
 -   [form column
@@ -19,7 +19,7 @@ trigger errors are encountered. The main trigger errors are:
     refer to non-existent form/form column combinations (e.g.,
     :ORDERS.CUSTNAME, when there is no **CUSTNAME** column in the
     **ORDERS** form)
--   [ERRMSG or WRNMSG commands](Error-and-Warning-Messages )
+-   [ERRMSG or WRNMSG commands](Errors-and-Warnings )
     that refer to message numbers not specified for the form in
     question.
 
@@ -36,11 +36,11 @@ generated the warning messages.
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Form Triggers](Form-Triggers )

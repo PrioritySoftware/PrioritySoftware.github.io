@@ -25,12 +25,12 @@ To have the procedure identify the user before it runs:
 The value of the first parameter in the cursor is saved in a variable
 called HTMLVALUE. This is a system variable of **CHAR** type, and it
 must be converted to an integer using the [ATOI
-function](Non-standard-Scalar-Expressions#Strings ). Using
+function](Scalar-Expressions#Strings ). Using
 HTMLVALUE you can retrieve the relevant record (the one being printed)
 from the main table of the document in question.
 
 To identify the user from within the procedure, use the [SQL.WEBID
-variable](SQL-Functions-and-Variables#SystemFunctions ). When
+variable](SQL-Functions-Variables#SystemFunctions ). When
 users log in using their e-mail address, this variable receives the
 value of the **PHONEBOOK.PHONE** column. In procedures that are defined
 for internal users only, users can also log in with their username. In
@@ -87,7 +87,7 @@ leaves the browser.
 
 In addition to SQL.WEBID, which receives a value only after the user
 logs in, another variable of identification --
-[SQL.CLIENTID](SQL-Functions-and-Variables#SystemFunctions )
+[SQL.CLIENTID](SQL-Functions-Variables#SystemFunctions )
 -- is created automatically by the system whenever a new user enters the
 web site. This variable is of **CHAR** type, with a width of 20.
 

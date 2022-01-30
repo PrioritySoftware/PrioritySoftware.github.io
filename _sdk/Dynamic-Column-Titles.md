@@ -13,7 +13,7 @@ title name and \"TITLE\".
 
 > **Example:** To change the title of the \"TEST\" column in the
 > \"MY_FORM\" form to \"New Title,\" write in the [PRE-FORM
-> trigger](Creating-Your-Own-Triggers#PRE-FORM ):
+> trigger](Creating-your-triggers#PRE-FORM ):
 >
 > ```sql
 > MYFORM.TEST.TITLE = 'New Title';
@@ -27,10 +27,10 @@ See also [Form Triggers](Form-Triggers ).
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

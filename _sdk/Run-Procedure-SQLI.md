@@ -6,7 +6,7 @@ tags: 'Priority_SDK'
 ---
 
 You can execute a
-[procedure](Running-a-Procedure#Running-a-Sub-Procedure ) from
+[procedure](Run-Procedure#Running-a-Sub-Procedure ) from
 an SQLI step of another procedure by executing any of the following
 commands: **WINACTIV**, **ACTIVATE** or **ACTIVATF**. This is useful,
 for example, when you want to run a report and [send it to recipients
@@ -59,7 +59,7 @@ file.
 > status for price quotes; whenever a quote receives this status, you
 > want to open a sales order automatically based on that quote. To do
 > so, create a custom [POST-UPDATE
-> trigger](Creating-Your-Own-Triggers#Creating-Row-Triggers )
+> trigger](Creating-your-triggers#Creating-Row-Triggers )
 > that checks whether the new status assigned to the quote is the
 > special status and, if so, executes the *Open Order* procedure
 > (**OPENORDBYCPROF**) using any of the three commands mentioned

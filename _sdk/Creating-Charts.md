@@ -60,7 +60,7 @@ These two sections are separated by an END step.
 ### Section 1: User Input and Activation of the GANTT Program 
 
 As in other procedures, this section requires [user
-input](User-Input-in-Procedures ), to determine which
+input](Procedure-Input ), to determine which
 resources to display and during what time period. When run as an Action, there is no need for an INPUT step, but you do need to initialize the necessary parameters (e.g., display mode, time range) in
 an SQLI step.
 

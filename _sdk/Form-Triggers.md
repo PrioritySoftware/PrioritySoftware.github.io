@@ -38,15 +38,15 @@ Tools](Debug-Tools ).
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in
-    Another](Including-One-Trigger-in-Another )
+    Another](Include-Triggers )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )
 
 ## Further Reading
 
@@ -54,13 +54,13 @@ Tools](Debug-Tools ).
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions-of-Record-Display-and-Insertion )
+    Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
--   [Accessing a Related Form](Accessing-a-Related-Form )
--   [Creating a Text Form](Creating-a-Text-Form )
+-   [Accessing a Related Form](Accessing-Related-Form )
+-   [Creating a Text Form](Create-Text-Form )
 -   [Designing a Screen-Painted
     Form](Designing-a-Screen-Painted-Form )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )

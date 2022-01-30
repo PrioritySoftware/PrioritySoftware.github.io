@@ -28,4 +28,4 @@ tracking, you can use existing standard forms as a guideline (e.g.
     specify the *Expression/Condition* **SQL.USER**.
 
 The next step is to [update the STATUSTYPES
-table](Updating-the-STATUSTYPES-Table ).
+table](BPM-Statustypes ).

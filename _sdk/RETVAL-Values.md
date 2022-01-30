@@ -37,12 +37,12 @@ The following table displays return values for each SQL statement and delineates
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL-Functions-and-Variables )
+    Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+    Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
--   [LINK and UNLINK](LINK-and-UNLINK )
+-   [LINK and UNLINK](Link-Unlink )
 -   [Non-standard Scalar
-    Expressions](Non-standard-Scalar-Expressions )
--   [Viewing Table Structure](Viewing-Table-Structure )
+    Expressions](Scalar-Expressions )
+-   [Viewing Table Structure](TableStructure )

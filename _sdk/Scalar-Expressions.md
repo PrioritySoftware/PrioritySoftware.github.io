@@ -630,12 +630,12 @@ converts dates, times and days in the system to ASCII (mainly used
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL-Functions-and-Variables )
+    Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+    Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
--   [LINK and UNLINK](LINK-and-UNLINK )
+-   [LINK and UNLINK](Link-Unlink )
 -   [Return Values and Statement
-    Failure](Return-Values-and-Statement-Failure )
--   [Viewing Table Structure](Viewing-Table-Structure )
+    Failure](RETVAL-Values )
+-   [Viewing Table Structure](TableStructure )

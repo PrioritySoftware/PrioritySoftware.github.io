@@ -20,7 +20,7 @@ display information on tables already in the database
 **Note:** In addition, various utilities accessed via the *SQL
 Development* program are helpful in understanding table structure. For
 details, see [Viewing Table
-Structure](Viewing-Table-Structure ).
+Structure](TableStructure ).
 
 ## Further Reading 
 
@@ -28,5 +28,5 @@ Structure](Viewing-Table-Structure ).
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
+    Keys](Create-Modify-Tables )
 -   [DBI Syntax](DBI-Syntax )

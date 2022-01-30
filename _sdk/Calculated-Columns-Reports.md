@@ -154,11 +154,11 @@ Complex functions are defined (like all calculated columns) in the
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](Organizing-Report-Data )
+-   [Organizing Report Data](organize-report-data )
 -   [Refining Report Data
-    Display](Refining-Report-Data-Display )
--   [Types of Reports](Types-of-Reports )
--   [Running a Report](Running-a-Report )
+    Display](Refine-Report-Display )
+-   [Types of Reports](Report-Types )
+-   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )

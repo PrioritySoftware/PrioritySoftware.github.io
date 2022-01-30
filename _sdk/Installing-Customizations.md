@@ -158,4 +158,4 @@ versions:
 ## Further Reading 
 
 -   [Customizations: Installing the Language
-    Dictionaries](Customizations:_Installing-the-Language-Dictionaries )
+    Dictionaries](Customizations-Language-Dictionaries )

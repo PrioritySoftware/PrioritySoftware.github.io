@@ -33,7 +33,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
 :   **Note:**The last three methods offer more options than the first.
 
 -   In addition, users can export data to an [XML
-    file](Loading-from/to-a-File#Additional-Definitions-for-XML-Files )
+    file](Loading-from-File#Additional-Definitions-for-XML-Files )
     from within a form, by using the *XML File* command in the *Mail*
     menu.
 
@@ -206,7 +206,7 @@ form and run the *Upload Interface* program from the list of Actions .
 Programs that prepare privileges for procedures and forms also check the
 SQL statements in all form triggers and procedure steps. If any
 interface is executed from a [form
-trigger](Creating-Your-Own-Triggers ) or [procedure
+trigger](Creating-your-triggers ) or [procedure
 step](Procedure-Steps ), the required privileges are prepared
 whenever the trigger or procedure in question is activated. For example,
 when using the syntax EXECUTE INTERFACE *\'interface_name\',*\... the
@@ -239,8 +239,8 @@ the form or procedure and will prepare all required privileges.
 ## More on Form Loads 
 
 -   [Loading from/to a Load
-    Table](Loading-from/to-a-Load-Table )
--   [Loading from/to a File](Loading-from/to-a-File )
+    Table](Loading-from-Load-Table )
+-   [Loading from/to a File](Loading-from-File )
 -   [Deleting Records from a
-    Form](Deleting-Records-from-a-Form )
+    Form](Interfaces-Deleting-Records )
 -   [Form Loads](Form-Loads )

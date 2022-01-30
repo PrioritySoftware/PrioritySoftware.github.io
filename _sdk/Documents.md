@@ -64,7 +64,7 @@ cursor.
 The value of the first parameter in the cursor is saved in a variable
 called :HTMLVALUE. This is a system variable of **CHAR** type, and it
 must be converted to an integer using the [ATOI
-function](Non-standard-Scalar-Expressions#Strings ). Using
+function](Scalar-Expressions#Strings ). Using
 :HTMLVALUE you can retrieve the relevant record (the one being printed)
 from the main table of the document in question.
 
@@ -134,4 +134,5 @@ This command has no parameters.
 ## Further Reading 
 
 -   [Special Document Features](Special-Document-Features )
--   [The Letter Generator](The-Letter-Generator )
+-   [Outputting the Document](WINHTML )
+-   [The Letter Generator](Letter-Generator )

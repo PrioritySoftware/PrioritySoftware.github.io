@@ -44,7 +44,7 @@ There are three types of Dashboard procedures:
 3.  Customize the new procedure (**PRIV_NEWDASHBOARD**) as desired, and
     attach the desired internal procedures (i.e., procedures with the
     *Rep/Wizard/Dashboard* value *d*).\
-    **Note:** See [Rules for Customizing](Rules-for-Customizing#Procedures ).
+    **Note:** See [Rules for Customizing](Customization-Rules#Procedures ).
 
 ## Adding a Dashboard Procedure to Outlook 
 

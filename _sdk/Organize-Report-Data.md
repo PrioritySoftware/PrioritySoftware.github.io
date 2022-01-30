@@ -236,11 +236,11 @@ report will be multiplied by this value.
 
 -   [Report Columns](Report-Columns )
 -   [Refining Report Data
-    Display](Refining-Report-Data-Display )
+    Display](Refine-Report-Display )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-in-Reports )
--   [Types of Reports](Types-of-Reports )
--   [Running a Report](Running-a-Report )
+    Reports](Calculated-Columns-Reports )
+-   [Types of Reports](Report-Types )
+-   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )

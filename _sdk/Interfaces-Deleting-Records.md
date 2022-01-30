@@ -25,7 +25,7 @@ to the record type.
 ## More on Form Loads 
 
 -   [Loading from/to a Load
-    Table](Loading-from/to-a-Load-Table )
--   [Loading from/to a File](Loading-from/to-a-File )
--   [Executing the Form Load](Executing-the-Form-Load )
+    Table](Loading-from-Load-Table )
+-   [Loading from/to a File](Loading-from-File )
+-   [Executing the Form Load](Execute-FormLoads )
 -   [Form Loads](Form-Loads )

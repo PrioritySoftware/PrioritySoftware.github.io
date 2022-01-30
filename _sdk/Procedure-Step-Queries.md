@@ -26,13 +26,13 @@ after parameter input.
 
 The SQL statements in step queries resemble those in form triggers. For
 instance, they can generate [error or warning
-messages](Error-and-Warning-Messages ) (by means of ERRMSG and
+messages](Errors-and-Warnings ) (by means of ERRMSG and
 WRNMSG statements). The contents of these messages are generally
 specified in the *Procedure Messages*form, a sub-level of the *Step
 Query*form. Long messages (taking up more than one line) can be
 continued in the next sub-level, *Procedure Messages (cont.)*.
 Alternatively, [message
-content](Error-and-Warning-Messages#Specifying-the-Message-Content )
+content](Errors-and-Warnings#Specifying-the-Message-Content )
 can be taken from an external file.
 
 In any given error or warning message, you can include a message
@@ -50,7 +50,7 @@ customized versions. In this way, the most up-to-date title will appear
 in your message.
 
 You can also send a mail message via a step query, using the [MAILMSG
-command](Sending-a-Mail-Message ).
+command](Send-Mail ).
 
 When activating the MAILMSG command from an SQLI step in a procedure,
 messages are not actually sent until the SQLI step is completed. In the
@@ -125,11 +125,11 @@ Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
 
 -   [Procedure Steps](Procedure-Steps )
 -   [Procedure Parameters](Procedure-Parameters )
--   [User Input in Procedures](User-Input-in-Procedures )
+-   [User Input in Procedures](Procedure-Input )
 -   [Procedure Flow Control](Procedure-Flow-Control )
--   [Procedure Message Display](Procedure-Message-Display )
--   [Processed Reports](Processed-Reports )
--   [Running a Procedure](Running-a-Procedure )
+-   [Procedure Message Display](Procedure-Messages )
+-   [Processed Reports](Processed-Report )
+-   [Running a Procedure](Run-Procedure )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )

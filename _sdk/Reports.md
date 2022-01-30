@@ -13,7 +13,7 @@ its sub-levels (*System Management → Generators → Reports*).
 An easy way to create a custom report is to copy an existing one (using
 the *Copy Report* program in the same menu) and then make revisions to
 it. In fact, this method is mandatory if you want to change the [sorting
-or grouping of columns](Organizing-Report-Data ).
+or grouping of columns](organize-report-data ).
 
 Reports selectively display data stored in the database, as well as
 simple calculations of that data (e.g., sum totals). They can also
@@ -27,7 +27,7 @@ will be treated as simple reports, even though some of them are actually
 processed reports activated by a procedure.
 
 You can create standard and [tabular reports
-(tables)](Types-of-Reports ). Reports and tables can display
+(tables)](Report-Types ). Reports and tables can display
 the same data, but in different formats. Reports tend to be more
 detailed, displaying a relatively large amount of information. Tabular
 reports are used to show summarized information.
@@ -37,7 +37,7 @@ A report is characterized by:
 -   a unique name and title
 -   a set of report columns derived from the columns of one or more
     tables in the database
--   [calculated columns](Calculated-Columns-in-Reports )
+-   [calculated columns](Calculated-Columns-Reports )
     (optional), whose values are determined by other columns.
 
 <!--- TODO: Remove Tabula--->
@@ -126,12 +126,12 @@ modules of ***Priority*** have been purchased.
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](Organizing-Report-Data )
+-   [Organizing Report Data](organize-report-data )
 -   [Refining Report Data
-    Display](Refining-Report-Data-Display )
+    Display](Refine-Report-Display )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-in-Reports )
--   [Types of Reports](Types-of-Reports )
--   [Running a Report](Running-a-Report )
+    Reports](Calculated-Columns-Reports )
+-   [Types of Reports](Report-Types )
+-   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )

@@ -79,7 +79,7 @@ appear in this list.
 
 The restrictions on buffer names are virtually identical to those of
 [customized
-triggers](Creating-Your-Own-Triggers#Naming-Customized-Triggers ).
+triggers](Creating-your-triggers#Naming-Customized-Triggers ).
 The only difference is that, of course, no key strings may be used.
 
 ## Nesting INCLUDE Commands 
@@ -105,7 +105,7 @@ depends upon the form in which the trigger is activated.
 
 Triggers inherit not only all SQL statements from the included trigger
 (or buffer), but also their accompanying [error and warning
-messages](Error-and-Warning-Messages ). The scope of the
+messages](Errors-and-Warnings ). The scope of the
 messages is all the triggers written for this form.
 
 ## Checking Trigger Usage 
@@ -122,10 +122,10 @@ the *Use of Trigger* sub-level form of *Form Column Triggers* and of
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-Your-Own-Triggers )
--   [Error and Warning Messages](Error-and-Warning-Messages )
--   [Sending a Mail Message](Sending-a-Mail-Message )
+-   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Error and Warning Messages](Errors-and-Warnings )
+-   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
-    Dynamically](Changing-Column-Titles-Dynamically )
+    Dynamically](Dynamic-Column-Titles )
 -   [Trigger Errors and
-    Warnings](Trigger-Errors-and-Warnings )
+    Warnings](Trigger-Errors )

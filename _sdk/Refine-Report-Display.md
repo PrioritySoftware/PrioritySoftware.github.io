@@ -229,11 +229,11 @@ To include more than one field in the same cell:
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](Organizing-Report-Data )
+-   [Organizing Report Data](organize-report-data )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-in-Reports )
--   [Types of Reports](Types-of-Reports )
--   [Running a Report](Running-a-Report )
+    Reports](Calculated-Columns-Reports )
+-   [Types of Reports](Report-Types )
+-   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )

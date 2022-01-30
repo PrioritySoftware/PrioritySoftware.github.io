@@ -16,4 +16,4 @@ in the Windows interface. To do so, use the following command:
  Windows): `BPM O -g ..\..\bpm_O.dbg`
 
 The last step is to [insert the initial status into the status
-table](Inserting-the-Initial-Status-into-the-Status-Table ).
+table](BPM-Insert-Initial-Status ).

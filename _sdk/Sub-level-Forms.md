@@ -85,7 +85,7 @@ Column Extension* form, a sub-level of the *Form Columns* form.
     as a wildcard in place of the form column name (e.g., :$$.@).  
 -   For a detailed explanation of conditions, see [Conditions of Record
     Display and
-    Insertion](Conditions-of-Record-Display-and-Insertion ).
+    Insertion](Conditions-Record-Display ).
 
 
 ## Creating a Form Tree
@@ -125,14 +125,14 @@ To link a root form to a menu and to define its position, use either the
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
 -   [Conditions of Record Display and
-    Insertion](Conditions-of-Record-Display-and-Insertion )
+    Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
--   [Accessing a Related Form](Accessing-a-Related-Form )
--   [Creating a Text Form](Creating-a-Text-Form )
+-   [Accessing a Related Form](Accessing-Related-Form )
+-   [Creating a Text Form](Create-Text-Form )
 -   [Designing a Screen-Painted
     Form](Designing-a-Screen-Painted-Form )
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )

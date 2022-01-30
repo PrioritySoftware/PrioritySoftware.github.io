@@ -102,6 +102,6 @@ Do List* form for that user.
     ```
 
 The next step is to [update the STATUSTYPES
-table](Updating-the-STATUSTYPES-Table ). Optionally, you can
+table](BPM-Statustypes ). Optionally, you can
 [enable document tracking for this
-form.](Enabling-Document-Tracking )
+form.](BPM-Tracking )

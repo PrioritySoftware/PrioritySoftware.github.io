@@ -105,7 +105,7 @@ creating a new form, specify a code word that aids in retrieval.
 ------------------------------------------------------------------------
 
 **Note:** The application code can be used to define a [target
-form](Accessing-a-Related-Form#The-Target-Form ) to be reached
+form](Accessing-Related-Form#The-Target-Form ) to be reached
 from a given form column.
 
 ------------------------------------------------------------------------
@@ -187,16 +187,14 @@ The system can prepare up to 25000 forms simultaneously.
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
 -   [Conditions of Record Display and
-    Insertion](Conditions-of-Record-Display-and-Insertion )
+    Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
--   [Accessing a Related Form](Accessing-a-Related-Form )
--   [Creating a Text Form](Creating-a-Text-Form )
+-   [Accessing a Related Form](Accessing-Related-Form )
+-   [Creating a Text Form](Create-Text-Form )
 -   [Creating a Default Design for a
-    Form](Creating-a-Default-Design-for-a-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+    Form](Default-Design )
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )

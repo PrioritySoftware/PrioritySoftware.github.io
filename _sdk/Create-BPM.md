@@ -33,17 +33,17 @@ following explains how to:
 
 The steps to take (in order) are as follows:
 
-1.  [Create the statuses table](Creating-the-Statuses-Table )
-2.  [Create the statuses form](Creating-the-Statuses-Form )
-3.  [Modify the new document](Modifying-the-New-Document )
+1.  [Create the statuses table](Create-BPM-Statuses-Table )
+2.  [Create the statuses form](BPM-Statuses-Form )
+3.  [Modify the new document](BPM-Modify-Document-Form )
 4.  [Enable tracking of documents
-    (optional)](Enabling-Document-Tracking )
+    (optional)](BPM-Tracking )
 5.  [Update the **STATUSTYPES**
-    table](Updating-the-STATUSTYPES-Table )
+    table](BPM-Statustypes )
 6.  [Create the necessary
-    interfaces](Creating-the-Necessary-Interfaces )
+    interfaces](BPM-CreateInterfaces )
 7.  [Create the procedure for the BPM
-    chart](Creating-the-Procedure-for-the-BPM-Chart )
-8.  [Debug the BPM](Debugging-the-BPM )
+    chart](BPM-Create-Procedure )
+8.  [Debug the BPM](BPM-Debugging )
 9.  [Insert the initial status into the status
-    table](Inserting-the-Initial-Status-into-the-Status-Table )
+    table](BPM-Insert-Initial-Status )

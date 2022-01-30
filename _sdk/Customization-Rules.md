@@ -108,14 +108,14 @@ The following rules apply to table columns:
 -   When creating your own [multiple
     joins](Form-Column-Attributes#Special-Joins ), use a join
     ID and column ID greater than 5.
--   Any [trigger](Creating-Your-Own-Triggers ) you add must
+-   Any [trigger](Creating-your-triggers ) you add must
     start with a four-letter prefix or end with a four-letter suffix.
     Choose the first letter in the prefix/suffix for sorting purposes;
     the rest of the prefix/suffix should be the one normally used for
     this customer.
 
     **Important note:** [SEARCH-FIELD
-    triggers](Creating-Your-Own-Triggers#SEARCH-FIELD ) are
+    triggers](Creating-your-triggers#SEARCH-FIELD ) are
     the one exception to this rule, as their name cannot be changed.
     Instead, you have to use the standard trigger. This creates the
     slight risk that your trigger will be overwritten by a standard
@@ -127,7 +127,7 @@ The following rules apply to table columns:
     variable, which will have an adverse effect. It is not sufficient to
     check that such a variable does not already exist in the trigger, as
     it may be added in future software revisions.
--   Any [form message](Error-and-Warning-Messages ) that you
+-   Any [form message](Errors-and-Warnings ) that you
     add must be assigned a number greater than 500.
 
 ### Column Names

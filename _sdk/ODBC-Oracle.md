@@ -91,7 +91,7 @@ The following functions are performed on numbers:
 
 When working with shifted integers, there is often a need to convert
 them to real numbers. In ***Priority***, the [REALQUANT
-function](Non-standard-Scalar-Expressions#Numbers ) performs
+function](Scalar-Expressions#Numbers ) performs
 this conversion automatically.
 
 There is currently no ODBC-compliant equivalent to the REALQUANT

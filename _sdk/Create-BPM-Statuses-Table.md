@@ -38,4 +38,4 @@ are given here for demonstration purposes and can be changed as desired.
 
 
 The next step is to [create the statuses
-form](Creating-the-Statuses-Form ).
+form](BPM-Statuses-Form ).

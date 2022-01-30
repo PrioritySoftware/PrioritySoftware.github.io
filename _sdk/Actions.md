@@ -18,7 +18,7 @@ form. The form's Actions may include:
 
 During activation of a program, report or procedure, input is usually
 based on the content of the form line on which the cursor rests
-(sometimes [user input](User-Input-in-Procedures) is also
+(sometimes [user input](Procedure-Input) is also
 allowed). Upon exiting the entity that was activated, the user returns
 to his or her original place in the form.
 
@@ -41,8 +41,8 @@ sub-level form.
 ------------------------------------------------------------------------
 
 **Note:** For more details on actions that generate simple reports, see
-[Running a Report](Running-a-Report ). For more on processed
+[Running a Report](Run-Report ). For more on processed
 reports and other procedures, see [Running a
-Procedure](Running-a-Procedure ).
+Procedure](Run-Procedure ).
 
 ------------------------------------------------------------------------

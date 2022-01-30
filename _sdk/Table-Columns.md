@@ -54,7 +54,7 @@ Exception to the above rule: During the development phase, you can
 convert **INT** columns to **REAL** and vice versa, using the *Change
 Number Type* program (see [**Options for Creating and Modifying Tables,
 Columns and
-Keys**](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )).
+Keys**](Create-Modify-Tables )).
 However, once a custom development has been installed in your working
 environment, this operation may fail, in which case you should use the
 above method instead.
@@ -119,7 +119,7 @@ The following rules apply to table columns:
 -   [Tables](Tables )
 -   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
-    Keys](Options-for-Creating-and-Modifying-Tables,_Columns-and-Keys )
+    Keys](Create-Modify-Tables )
 -   [Viewing Tables in the
-    Database](Viewing-Tables-in-the-Database )
+    Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )

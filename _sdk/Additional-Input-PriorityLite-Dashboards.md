@@ -108,7 +108,7 @@ parameter of **TEXT** type. The user keys in an unlimited number of
 lines in the text field, and these lines are returned to the procedure
 via a file linked to the **PROCTABLETEXT** table. For an example, see
 [Inputting Text Into an HTML
-Screen](User-Input-in-Procedures#Inputting-Text-Into-an-HTML-Screen ).
+Screen](Procedure-Input#Inputting-Text-Into-an-HTML-Screen ).
 
 ## Input of Attachments 
 

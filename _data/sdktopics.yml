@@ -24,6 +24,10 @@ chapters:
     url: SQL-Syntax
     group: SQL Syntax
     topics:
+      - page: Viewing Table Structure
+        url: TableStructure
+      - page: Executing SQL Statements
+        url: Executing-SQL-Statements
       - page: SQL Functions and Variables
         url: SQL-Functions-Variables
       - page: Flow Control
@@ -56,6 +60,10 @@ chapters:
         url: Form-Refresh
       - page: Accessing a Related Form
         url: Accessing-Related-Form
+      - page: Creating a Text Form
+        url: Create-Text-Form
+      - page: Creating a Default Design for a Form
+        url: Default-Design
       - page: Form Triggers
         url: Form-Triggers
         subtopics:
@@ -73,6 +81,8 @@ chapters:
             url: Dynamic-Column-Titles
           - page: Including One Trigger in Another
             url: Include-Triggers
+          - page: Trigger Errors and Warnings
+            url: Trigger-Errors
       - page: Form Preparation
         url: Form-Preparation
       - page: Help Messages
@@ -88,7 +98,7 @@ chapters:
       - page: Refining Report Data Display
         url: Refine-Report-Display
       - page: Calculated Columns in Reports
-        url: Calculated-Columns-Reports.md
+        url: Calculated-Columns-Reports
       - page: Types of Reports
         url: Report-Types
       - page: Running a Report

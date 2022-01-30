@@ -37,7 +37,7 @@ creates it. If it does exist, the command simply executes the linkage.
 If you specify a file name, this file can be used later on.
 
 > **Example:** The SQLI program can create [a linked
-> file](User-Input-in-Procedures#Retrieving-Records-Into-a-Linked-File )
+> file](Procedure-Input#Retrieving-Records-Into-a-Linked-File )
 > in one procedure step, whose contents are used in a report in the next
 > step.
 
@@ -114,13 +114,13 @@ LABEL 99;
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
 -   [SQL Functions and
-    Variables](SQL-Functions-and-Variables )
+    Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
 -   [Additions and Revisions to Standard SQL
-    Commands](Additions-and-Revisions-to-Standard-SQL-Commands )
+    Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
 -   [Return Values and Statement
-    Failure](Return-Values-and-Statement-Failure )
+    Failure](RETVAL-Values )
 -   [Non-standard Scalar
-    Expressions](Non-standard-Scalar-Expressions )
--   [Viewing Table Structure](Viewing-Table-Structure )
+    Expressions](Scalar-Expressions )
+-   [Viewing Table Structure](TableStructure )

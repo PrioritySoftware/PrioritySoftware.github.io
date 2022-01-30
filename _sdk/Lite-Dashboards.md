@@ -81,12 +81,12 @@ again.
 ## Further Reading
 
 -   [User Identification for Priority
-    Lite/Dashboards](User_Identification_for_Priority_Lite/Dashboards )
+    Lite/Dashboards](Lite-Identification )
 -   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing_HTML_Reports_for_Priority_Lite/Dashboards )
+    Lite/Dashboards](Lite-Dashboards-Reports )
 -   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional_Input_Options_(Priority_Lite/Dashboards) )
+    Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) )
 -   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining_a_Base_Page_for_HTML_Pages_(Priority_Lite/Dashboards) )
+    Lite/Dashboards)](Base-Page-HTML) )
 -   [Writing Dashboard
-    Procedures](Writing_Dashboard_Procedures )
+    Procedures](Dashboard-Procedures )

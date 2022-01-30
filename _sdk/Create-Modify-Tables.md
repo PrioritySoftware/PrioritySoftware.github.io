@@ -145,5 +145,5 @@ the same time.
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
 -   [Viewing Tables in the
-    Database](Viewing-Tables-in-the-Database )
+    Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )

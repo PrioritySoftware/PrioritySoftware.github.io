@@ -80,12 +80,12 @@ Generator*form, serves a similar purpose.
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](Organizing-Report-Data )
+-   [Organizing Report Data](organize-report-data )
 -   [Refining Report Data
-    Display](Refining-Report-Data-Display )
+    Display](Refine-Report-Display )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-in-Reports )
--   [Types of Reports](Types-of-Reports )
+    Reports](Calculated-Columns-Reports )
+-   [Types of Reports](Report-Types )
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Rules-for-Customizing )
+-   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )

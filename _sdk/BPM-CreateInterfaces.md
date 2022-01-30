@@ -69,4 +69,4 @@ assigned user of the **XXXX_MYDOC** form.
         **XXXX_MYDOC** form that contains the status description.
 
 The next step is to [create the procedure for the BPM
-chart](Creating-the-Procedure-for-the-BPM-Chart ).
+chart](BPM-Create-Procedure ).
