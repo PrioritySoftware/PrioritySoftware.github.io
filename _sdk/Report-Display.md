@@ -374,15 +374,15 @@ Design* sub-level of the *Report Columns* form:
 
 [22.0]()
 
-You can now encode the contents of unicode text files as a QR code. To do so, specify a lowercase **q** in the *Picture* field (rather than an uppercase one). The column contents should be the unicode text file you want to encode.
+You can now encode the contents of unicode text files as a QR code. To do so, specify a lowercase **q** in the *Picture* field (rather than an uppercase one). The column contents should be the unicode text file you want to encode. The file to encode can be stated explicitly or as a variable from the printing program.
 
-For an example, see the *** report.
+> **Example:** See column #10 in the **QRCODE** report.
 
 The unicode file can not exceed 1663 characters in length. While this is smaller than the maximum theoretical character length of QR codes (4296 characters), it allows for a high correction level, which makes the code readable in less than optimal conditions, and for support for unicode characters instead of just ANSI. 
 
 #### Updating Custom Printing Programs with QR Codes
 
-Note that prior to version 22.0, several programs used a custom bypass (<code>EXECUTE QRCODE</code>) to exceed the width limit on QR codes defined as **Q** in the *Picture* field. With the new encoding method for text files, this custom bypass is no longer supported.
+Note that prior to version 22.0, several printing programs used a custom bypass (<code>EXECUTE QRCODE</code>) to exceed the width limit on QR codes defined as **Q** in the *Picture* field. With the new encoding method, this custom bypass is no longer supported.
 
 If you created custom printing programs that are based on copies of standard programs that used this bypass, you must adapt your custom programs to use the new encoding method. 
 
