@@ -524,6 +524,20 @@ the **USERCLMNPRIV** table, as follows:
         insert a separate line in the **USERCLMNPRIV** table for each
         value in the designated column for which the user is authorized.
 
+
+## MDM-only Permissions
+
+[22.0]()
+
+You can limit certain forms and columns so that they can only be updated via Master Data Management (MDM, also known as EDI interfaces).
+
+To enable this permission type, you need to add the following:
+
+1. Add a join between the form of the document in question to the SEARCHDOCVERS table.
+2. Add a form column named **FROMEDI** to the form, which is based on the *FROMEDI* column of the SEARCHDOCVERS table.
+
+You can see an example of this kind of column in the **AINVOICES** form.
+
 ## Further Reading
 
 -   [Forms](Forms )
