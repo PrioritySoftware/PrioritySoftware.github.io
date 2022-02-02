@@ -378,7 +378,7 @@ You can now encode the contents of unicode text files as a QR code. To do so, sp
 
 > **Example:** See column #10 in the **QRCODE** report.
 
-The unicode file can not exceed 1663 characters in length. While this is smaller than the maximum theoretical character length of QR codes (4296 characters), it allows for a high correction level, which makes the code readable in less than optimal conditions, and for support for unicode characters instead of just ANSI. 
+The unicode file can not exceed 1663 characters in length. While this is smaller than the maximum theoretical character length of QR codes (4296 characters), it allows for a high correction level, which makes the code readable in less than optimal conditions, and for support for unicode characters instead of just ASCII. 
 
 #### Updating Custom Printing Programs with QR Codes
 
