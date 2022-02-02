@@ -4,8 +4,8 @@ chapters:
     url: Introduction
   - title: Release Notes
     url: Release-Notes
-  # - title: Customization Rules
-  #   url: Customization-Rules
+  - title: Customization Rules
+    url: Customization-Rules
   - title: Database Tables
     url: Tables
     group: Tables

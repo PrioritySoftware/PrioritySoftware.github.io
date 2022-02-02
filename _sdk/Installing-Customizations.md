@@ -5,32 +5,10 @@ group: Installation
 tags: 'Priority_SDK'
 ---
 
-## Working with Version Revisions 
-
-In order to properly handle your customizations, you should work with
-two ***Priority*** installations --- one in which you do the programming
-and another in which you run tests. The method for handling this is as
-follows: After creating your customizations in the programming
-installation, create an upgrade file and install it in the test
-installation. Only once you are satisfied with results should you
-install it on the production server.
-
-> **Warning!** You should never customize directly on the production
-server.
-
-As revisions are maintained per user, it is imperative for all
-programmers to work in their own usernames while performing the
-programming.
-
-**Note:** In order to execute a DBI operation -- i.e., anything that
-affects a table, table column or key -- you must belong to the privilege
-group of the superuser (*tabula*) and the PRIVUSERS system constant must
-be set to 1.
-
 ## Steps for Creating Version Revisions 
 
 Version revisions are a built-in tool for moving customizations from one
-***Priority***installation to another.***Priority*** automatically keeps
+***Priority*** installation to another. ***Priority*** automatically keeps
 track of any modifications you make to any entity. All you need to do is
 group these revisions together and prepare a shell file using standard
 forms and programs.

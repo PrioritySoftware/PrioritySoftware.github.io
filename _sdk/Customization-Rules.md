@@ -1,53 +1,69 @@
 ---
-# title: Customization Rules
-# layout: sdk_nav
-# group: CR
-# tags: 'Priority_SDK'
+title: Customization Rules and Best Practices
+layout: sdk_nav
+group: CR
+tags: 'Priority_SDK'
 ---
 
+## General Rules
 
-## Tables
+### Development Process
 
-### Table Names 
+In order to properly handle your customizations, you should have a total of three ***Priority*** installations:
+- a development environment one in which you develop your customization.
+- a test environment in which you or the customer run tests.
+- the production server for which the customization is developed.
 
-The following rules apply to table names:
+After creating your customizations in the development installation, create an upgrade file and install it in the test installation. Only once you are satisfied with results should you
+install it on the production server.
 
--   They are restricted to 20 characters.
+> **Warning!** You should never customize directly on the production
+server.
+
+As revisions are maintained per user, it is imperative for all
+programmers to work in their own usernames while performing the
+programming.
+
+**Note:** In order to execute a DBI operation -- i.e., anything that
+affects a table, table column or key -- you must belong to the privilege
+group of the superuser (*tabula*) and the PRIVUSERS system constant must
+be set to 1.
+
+For more information on creating the revision and installing it on the test/production server, see [Installing  your Customizations](Installing-Customizations).
+
+### Names
+
+The following rules apply to the internal names of all private entities added to the system:
+
+-   They are restricted to 20 characters in length.
 -   They may only contain alphanumeric values and the underline sign (no
     spaces).
 -   They must begin with a letter.
 -   You may not use a reserved word (a list of reserved words appears in
     the *Reserved Words* form --- *System Management* → *Dictionaries*).
--   The name of any new table (one you have added yourself) must begin
-    with a four-letter prefix (e.g., **XXXX_CUSTOMERS**). All tables
-    (and any other ***Priority*** entities) that you have created for
-    the same customer should share the same prefix.
+-   New custom entities (tables, forms, procdeures, reports, triggers, functions) must begin with a four-letter prefix (e.g., **XXXX_CUSTOMERS**). All entities created for the same customer should share the same prefix.
+-   Sub-entities of standard entities (e.g., new column in standard form or report) should likewise begin with a four-letter prefix.
+-   Any [variable](SQL-Variables#User-defined-Variables ) that
+    you add to your code should start with the same four-letter
+    prefix. If it does not, you run the risk of duplicating a system
+    variable, which will have an adverse effect. It is not sufficient to
+    check that such a variable does not already exist in the trigger, as
+    it may be added in future software revisions.
 
-### Rules for Modifying Tables and Table Columns 
+### Code
 
-1.  When modifying tables, do not change standard table columns or any
+- Never INSERT or UPDATE data in standard tables directly. Use [interfaces](Form-Loads) to insert data in standard forms.
+- Any [LINK or UNLINK](Link-Unlink) operation should be followed by a test to ensure the operation succeeded. Remember, a failed LINK operation could lead to overwriting data in the original table rather than the linked copy!
+- Do not write non-ASCII characters directly in your code. If you need to reference text that is unicode (e.g. a message in Hebrew), use the [ENTMESSAGE](SQL-Functions-Variables) function to insert it into a variable, instead.
+
+
+## Tables
+
+-  When modifying tables, do not change standard table columns or any
     of the table*s unique (or Auto Unique) keys.
-2.  If you add a column to the table, the column name must begin with a
-    four-letter prefix. Use the same prefix for all table columns (as
-    well as any other Priority entities) that you have added for a given
-    customer.
 
 ### Rules for Columns 
 
-The following rules apply to table columns:
-
--   Column names are up to 20 characters.
--   Column names must be made up of alphanumeric values and the
-    underline sign (no spaces).
--   Column names must begin with a letter.
--   The column name may not be a reserved word (a list of reserved words
-    appears in the **RESERVED** form).
--   When adding a new column to a standard table, you must assign the
-    column name a four-letter prefix (e.g., **XXXX-CUSTNAME**). This
-    should be the same prefix you use for all entities that you add to
-    ***Priority*** for the customer in question.
--   Column titles (up to 20 characters, including spaces) must be
-    enclosed in single quotations, e.g., \'*Order Number*\'.
 -   Decimal precision can only be specified for a **REAL** or **INT**
     column. Most columns have a decimal precision of 2. To designate a
     **REAL** number with indefinite precision, use decimal precision 0;
@@ -63,9 +79,7 @@ The following rules apply to table columns:
     and vice versa (number conversion), and only during the development
     phase.
 -   Text columns (i.e., **CHAR** columns) should not exceed a width of
-    80 characters. Wider columns might not be displayed well in forms,
-    depending on the screen resolution of the user\'s computer. While
-    there are a few table columns whose width exceeds 80 characters
+    80 characters.  While there are a few table columns whose width exceeds 80 characters
     (e.g., the **MESSAGE** column in the **ERRMSGS** table), these
     columns are generally only displayed in reports. If you need a wide
     text column, it is recommended that you use a sub-level text form
@@ -100,10 +114,6 @@ The following rules apply to table columns:
 
 -   ***Never*** use a standard base table to create your own form.
     Create your own table instead.
--   Include the appropriate four-letter prefix (e.g., **XXXX_ORDERS**)
-    in the name of any form you create.
--   When modifying a standard form, any newly added column must start
-    with your four-letter prefix.
 -   You cannot delete a standard column from a standard form.
 -   When creating your own [multiple
     joins](Form-Column-Attributes#Special-Joins ), use a join
@@ -121,26 +131,9 @@ The following rules apply to table columns:
     slight risk that your trigger will be overwritten by a standard
     SEARCH-FIELD trigger that is changed in future software revisions.
 
--   Any [variable](SQL-Variables#User-defined-Variables ) that
-    you add to a standard form should start with the same four-letter
-    prefix. If it does not, you run the risk of duplicating a system
-    variable, which will have an adverse effect. It is not sufficient to
-    check that such a variable does not already exist in the trigger, as
-    it may be added in future software revisions.
 -   Any [form message](Errors-and-Warnings ) that you
     add must be assigned a number greater than 500.
-
-### Column Names
-
--   The column name must begin with a letter.
--   You may not use a reserved word.
--   Any new column in a *standard* form must begin with the appropriate four-letter prefix.
-
-<!--- TODO: See if we can combine / change the note-->
-
-**Note:** For general guidelines for development, see [Working with
-Version
-Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
+-   Do not add standard forms as sub-level forms of custom forms. 
 
 ## Reports
 
@@ -155,8 +148,6 @@ If you revise a standard report, you must follow some rules to
 -   Do not change the sorting or grouping of standard reports. If you
     have to do so, copy the standard report and create one of your own.
 -   You cannot delete a standard column from a standard report.
--   Include the appropriate four-letter prefix (e.g., **XXXX_ORDERS**)
-    in the name of any report you create.
 -   When creating your own multiple joins, use a join ID and column ID
     greater than 5.
 -   Whenever you revise a standard report or write a new one, it is
@@ -166,31 +157,32 @@ If you revise a standard report, you must follow some rules to
     **Report Optimization** and record the internal name of the relevant
     report.
 
-
-
-**Note:** For general guidelines for development, see [Working with
-Version
-Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
-
-
-
 ## Procedures
 
 -   You cannot revise a standard procedure. Instead, you must copy it
     and make revisions to the copy. If the procedure runs one or more
     reports, you may need to copy the reports as well (depending on the
     type of revisions desired; see [Reports](Reports )).
--   Include the appropriate four-letter prefix (e.g.,
-    **XXXX_WWWSHOWORDER**) in the name of any procedure you create.
 -   When creating a copy of a standard procedure that runs a program, do
     not change any of the parameters that are transferred to the
     program.
+- All procedures that include a form interface should include the form interface as a step, after an END step. This is utilized by the system for assigning permissions when running the interface.
+- You should avoid using a standard interface as part of a custom procedure, or your code may break in the future due to a change to the interface definitions. 
 
+## Best Practices
 
+For all intents and purposes, Priority's SQL is a development language in its own right, and general best practices for writing code should be kept in mind. 
+- Write reusable code. If you plan on using the same code multiple times, turn it into a function or buffer.
+- Write readable code. Use meaningful variable names and include comments.
 
-**Note:** For general guidelines for development, see [Working with
-Version
-Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
+### Recommendations
+
+The following recommendations are intended for new developers to avoid some common pitfalls.
+
+- Do not add multiple PRE/POST triggers for the same form or form column. If you need to add additional logic, add it as a buffer and include it in the existing PRE/POST trigger.
+- When adding/modifying functionality, include a comment that points towards the specification document or requirement that led to this addition/change.
+- Do not insert error and warning messages within the code being iterated over by a loop or a cursor. These will cause the process to hang while waiting for input from the user. If you need to display a message, escape the loop or wait for it to end, and then display the error/warning.
+
 
 
 
@@ -200,3 +192,4 @@ Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 -   [Forms](Forms )
 -   [Reports](Reports )
 -   [Procedures](Procedures )
+-   [Installing  your Customizations](Installing-Customizations)
