@@ -360,10 +360,18 @@ list-style-type: none;
 }
 #search-panel {
   margin-top: 1em;
-  order: 3;
+  order: 4;
   flex-grow: 2;
   width: 20% ;
   height: 50%;  
+}
+
+#toc-panel {
+  margin-top: 1em;
+  order: 3;
+  flex-grow: 2;
+  top: 1em;
+  position: sticky;
 }
 
 .hide {
