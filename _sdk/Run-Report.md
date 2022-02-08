@@ -16,7 +16,7 @@ A simple [report](Reports ) (one which is not part of a
 
 ## Using a Program to Run the Report 
 
-You can use the *Run Report*program (accessed from the *Reports* menu)
+You can use the *Run Report* program (accessed from the *Reports* menu)
 or the *Run Report/Procedure* program (run as an Action from the
 *Report Generator* form) to run a report. This method is particularly
 useful during the report\'s development stages.
@@ -73,8 +73,8 @@ following steps:
     Execution*column.
 
 
-**Note:** The *Actions*form, which is a sub-level of the *Form
-Generator*form, serves a similar purpose.
+**Note:** The *Actions* form, which is a sub-level of the *Form
+Generator* form, serves a similar purpose.
 
 
 ## Further Reading 
