@@ -126,6 +126,8 @@ The following is a list of useful Basic commands.
     step and a BACKGROUND step. See, for example, the **IVSHOWCOPY**
     procedure. For more on certified copies, see [Special Document
     Features](Special-Document-Features ).
+-   **UPLOAD** (*Upload file to server*) - Uploads a file to the server (from a known path). Cannot be used with *EXECUTE*.
+-   **DOWNLOAD** (*Download file from server) - Downloads a file from the server (to a pre-specified path). Cannot be used with *EXECUTE*.
 -   **URL** (*Open Webpage*) --- Opens a webpage according to a web
     address stored in an ASCII file.
 -   **WRNMSG** (*Warning Message*) --- Like the MESSAGE command,

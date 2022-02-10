@@ -24,7 +24,7 @@ web services. Use the following syntax to interface with a web service
 
 -   *:endpoint_url* -- the URL of the web service. Limited to 127
     characters.
--   *:inFile* -- the file being sent to the web service.
+-   *:inFile* -- the file being sent to the web service. The infile should be unicode - it will be converted as necessary if a different encoding is speficied in the *content-type*.
 -   *:outFile* -- the file where the response from the web service will
     be stored.
 -   *\[, \'-msg\', :msgFile\]* -- The file in which error messages will

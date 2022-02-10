@@ -7,6 +7,11 @@ tags: 'Priority_SDK'
 
 ## SDK 21.1 
 
+### Feb 2022
+
+- Added base64 encode and decode [filters](Interact-with-External-Systems#special-filters)
+- Some clarifications on the encoding of the infile used with [WSCLIENT](WSCLIENT)
+
 ### Jan 2022
 
 - Published the SDK in the Developer Portal!

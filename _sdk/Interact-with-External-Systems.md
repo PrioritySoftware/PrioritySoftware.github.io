@@ -163,6 +163,9 @@ appears beneath these examples.
 > EXECUTE FILTER '09', '09', ',', :INPUT, :OUTPUT;
 > ```
 
+
+### Special Filters
+
 -   **FILTER** \[-r\] *-filter \<Fromchar> \<Tochar>
     \<Targetchar>*\[*Input Output*\] \[-M *Msgfile*\] --- same as the
     above, use when input file is Unicode. Output will be in Unicode.
@@ -187,7 +190,18 @@ appears beneath these examples.
 -   **FILTER** -trim \[*Input* *Output*\] --- trims blank spaces at the
     beginning and end of each line in input file; also removes CR
     (carriage return) at the end of the line.
-    <!-- TODO: Add other filters (Vladimir) -->
+-   **FILTER** -base64 --- encodes a file into base64.
+-   **FILTER** -unbase64 --- decodes a file from base64.
+> **Example**
+> ```sql
+> :_PDF = '../../f.pdf';
+> :_PDF_B = '../../f_base64.txt';
+> :_PDF2 = '../../f_new.pdf';
+> EXECUTE FILTER '-base64', :_PDF, :_PDF_B, SQL.TMPFILE;
+> EXECUTE FILTER '-unbase64', :_PDF_B, :_PDF2, SQL.TMPFILE;
+> ```
+
+<!-- TODO: Add other filters (Vladimir) -->
 
 ### FILTER parameters 
 
