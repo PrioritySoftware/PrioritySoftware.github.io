@@ -443,6 +443,30 @@ AND STRINDEX(CUSTNAME, '073', 1) > 0
 FORMAT;
 ```
 
+## Files
+
+**NEWATTACH**('*filename*', ['*extension*'])
+
+Uploads a file to the server (to the *system/mail* folder) and returns its location. *extension* is optional.
+
+The function can handle conflicts with existing files (by adding a suffix to the filename). 
+
+Files that are not in the permitted file types for upload (in the System Management > System Maintenance > Internet Definitions > Application Server Maintenance > **Uploadable File Types** form) are not uploaded.
+
+This function is useful when you need to upload a file to the server and access it, but don't require it to be saved in a specific location.
+
+The function can be incorporated into SQL statements and use computed values, but only those that can be computed before the query is sent to the database (i.e., you cannot use the values in table columns as part of the computation).
+
+```sql
+:z = NEWATTACH('LOGFILe', '.m');
+SELECT :z FROM DUMMY FORMAT; /*../../system/mail/202202/1t2tymq0/logfile.m */
+SELECT NEWATTACH('LOGFILe', '.m') FROM DUMMY FORMAT;
+SELECT NEWATTACH('C:\TMP\LOGFILe', '.m') FROM DUMMY FORMAT;
+SELECT NEWATTACH('C:\TMP\LOGFILe.zip', '') FROM DUMMY FORMAT;
+SELECT NEWATTACH('C:\TMP\LOGFILe.zip') FROM DUMMY FORMAT;
+SELECT NEWATTACH('C:\TMP\LOGFILe.zip') FROM CUSTOMERS WHERE CUST = 0 FORMAT;
+```
+
 ## Dates
 
 Dates, times and days are stored in the database as integers. Dates may
