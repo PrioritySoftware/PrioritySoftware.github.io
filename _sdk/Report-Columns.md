@@ -373,6 +373,33 @@ distortion.
 
 > **Example:** See column #190 in the **WWWIV_5** report.
 
+[22.0]()
+
+You can now encode the contents of unicode text files as a QR code. To do so, specify a lowercase **q** in the *Picture* field (rather than an uppercase one). The column contents should be the unicode text file you want to encode. The file to encode can be stated explicitly or as a variable from the printing program.
+
+> **Example:** See column #10 in the **QRCODE** report.
+
+The unicode file can not exceed 1663 characters in length. While this is smaller than the maximum theoretical character length of QR codes (4296 characters), it allows for a high correction level, which makes the code readable in less than optimal conditions, and for support for unicode characters instead of just ASCII. 
+
+#### Updating Custom Printing Programs with QR Codes
+
+Note that prior to version 22.0, several printing programs used a custom bypass (<code>EXECUTE QRCODE</code>) to exceed the width limit on QR codes defined as **Q** in the *Picture* field. With the new encoding method, this custom bypass is no longer supported.
+
+If you created custom printing programs that are based on copies of standard programs that used this bypass, you must adapt your custom programs to use the new encoding method. 
+
+You can locate programs that use <code>EXECUTE QRCODE</code> by running the following code in the SQL Interperter:
+
+```sql
+SELECT E.ENAME, E.TITLE, P.POS, PT.TEXT, PT.TEXTORD, E.TYPE 
+FROM PROGRAMSTEXT PT, PROGRAMS P, EXEC E
+WHERE PT.TEXT LIKE '%EXECUTE QRCODE%'
+AND PT.PROG = P.PROG
+AND P.EXEC = E.EXEC
+ORDER BY 1, 3, 5
+FORMAT;
+```
+
+
 ## Further Reading 
 
 -   [Organizing Report Data](organize-report-data )
