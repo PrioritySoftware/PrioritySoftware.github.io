@@ -201,7 +201,7 @@ There are several types of SQL variables:
     Commands from an External Application
     (WINRUN)](Programs-Interfacing-Priority-with-External-Systems#Executing-Priority-Commands-from-an-External-Application-.28WINRUN.29 )).
 
-:WEBSDK_APP_ID (**INT** type) --- when entities are accessed via
+:WEBSDK_APP_ID (**CHAR** type) --- when entities are accessed via
     Priority's Web SDK using a per-application license, this variable
     stores the application ID provided by Priority Software for that
     application. Use this variable to tailor behavior based on the

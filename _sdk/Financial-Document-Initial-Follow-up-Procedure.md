@@ -10,6 +10,8 @@ and follow-up procedures to help ensure that financial documents meet
 your requirements and that additional actions are taken once a document
 is finalized (e.g. updating privately created fields).
 
+These procedures do not receive input. They are run on the server and do not display error/warning messages.
+
 ## Initial Procedures 
 
 In the **PREENAME** (Initial Procedure) column of the **IVTYPES** form,
