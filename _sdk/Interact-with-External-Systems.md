@@ -163,7 +163,6 @@ appears beneath these examples.
 > EXECUTE FILTER '09', '09', ',', :INPUT, :OUTPUT;
 > ```
 
-
 ### Special Filters
 
 -   **FILTER** \[-r\] *-filter \<Fromchar> \<Tochar>
