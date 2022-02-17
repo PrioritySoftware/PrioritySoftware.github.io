@@ -31,6 +31,8 @@ forms and programs.
     shell file by running the *Prepare Upgrade* program by Action from the *Version Revisions* form. The shell file will be
     called *NN*.sh (where NN is the number assigned to the revision) and
     stored in the *system\\upgrades* directory.
+4.  If you are creating a version revision for a system in another language, see the instructions in [Customizations: Installing the Language
+    Dictionaries](Customizations-Language-Dictionaries )
 
 ## Explanation of the Modification Codes 
 
@@ -93,8 +95,7 @@ forms and programs.
         the TAKEFORMCOL line.
 -   Do not prepare the same upgrade twice. If a version revision needs
     to be modified after the upgrade has been prepared, create a new
-    version revision with your modifications and run the *Prepare
-    Upgrade* program for the new revision.
+    version revision with your modifications and run the **Prepare Upgrade** program for the new revision.
 
 ## Tracking Changes to Queries 
 
@@ -132,6 +133,16 @@ versions:
     *Current Version* (the latest version in effect) and the *Previous
     Version* (the one immediately prior to the selected revision). Additions are marked in blue; deletions are marked
     in red strikethrough.
+
+## Installing the Revision
+
+**Caution:** If your revision includes changes to tables (DBI steps), you should ensure all users exit the system before installing the revision.
+
+To install the revision:
+
+1. If installing in the Windows interface, open Priority as an administrator.
+2. Run the System Management > Revisions > **Install Upgrade** program.
+3. In the input, browse to the shell file you created.
 
 ## Further Reading 
 

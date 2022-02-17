@@ -134,6 +134,7 @@ The following rules apply to the internal names of all private entities added to
 -   Any [form message](Errors-and-Warnings ) that you
     add must be assigned a number greater than 500.
 -   Do not add standard forms as sub-level forms of custom forms. 
+-   When using LABELs in your code, use numbers with at least 4 digits. This will prevent conflicts with the label numbers used in standard triggers.
 
 ## Reports
 

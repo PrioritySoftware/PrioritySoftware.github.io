@@ -110,7 +110,7 @@ Use the following:
 
 ```sql
 FOR TABLE MYTABLE INSERT MYNEWCOL
-(INT,13,'<nowiki>[Column: MYTABLE/MYNEWCOL]</nowiki>'); 
+(INT,13,'[Column: MYTABLE/MYNEWCOL]'); 
 ```
 
 ### Changing a Table Title 
@@ -124,7 +124,7 @@ FOR TABLE MYTABLE CHANGE TITLE TO 'New Title';
 Use the following:
 
 ```sql
-FOR TABLE MYTABLE CHANGE TITLE TO '<nowiki>[Ktitle : MYTABLE]</nowiki>';
+FOR TABLE MYTABLE CHANGE TITLE TO '[Ktitle : MYTABLE]';
 ```
 
 ### Changing a Table Column Title 
@@ -140,7 +140,7 @@ Use the following:
 
 ```sql
 FOR TABLE MYTABLE COLUMN MYCOL 
-CHANGE TITLE TO <nowiki>[Column: MYTABLE /MYCOL]; </nowiki>
+CHANGE TITLE TO [Column: MYTABLE /MYCOL];
 ```
 
 When you finish modifying all DBI steps for the revision in question,
