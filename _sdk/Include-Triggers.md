@@ -97,7 +97,7 @@ Wildcards (\$ and @) are very useful when including one trigger in
 another. This is because the wildcard has a relative meaning, which
 depends upon the form in which the trigger is activated.
 
-> **Example:** :\$\$.DOC in the PRE-INSERT trigger of the *Received
+> **Example:** :$$.DOC in the PRE-INSERT trigger of the *Received
 > Items* form refers to :DOCUMENTS_P.DOC, whereas in the PRE-INSERT
 > trigger of the *Shipped Items* form, it refers to :DOCUMENTS_D.DOC.
 

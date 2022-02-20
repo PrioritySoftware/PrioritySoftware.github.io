@@ -220,7 +220,7 @@ characters.
 
 > **Example:** The CHOOSE-FIELD trigger for the **PARTNAME** column in
 > the *Purchase Order Items* form (**PORDERITEMS**) provides a list of
-> the vendor's parts (:\$\$.SUP):
+> the vendor's parts (:$$.SUP):
 >
 > ```sql
 > SELECT DISTINCT PARTDES,PARTNAME

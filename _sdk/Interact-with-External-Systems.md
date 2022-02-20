@@ -176,6 +176,7 @@ appears beneath these examples.
     file to UTF-8.
 -   **FILTER** -utf82unicode \[*Input* *Output*\] --- converts a UTF-8
     file to UTF-16.
+-   **FILTER** -ofx2xml \[*Input* *Output*\] --- converts an ofx file into a regular XML file that can be read with XMLPARSE.
 -   **FILTER** \[-r\] -pc \[*Input Output*\] \[-M *Msgfile*\] ---
     converts the input file from DOS Hebrew to Windows Hebrew.
 -   **FILTER** -heb \[*Input Output*\] \[-M *Msgfile*\] --- reverses the

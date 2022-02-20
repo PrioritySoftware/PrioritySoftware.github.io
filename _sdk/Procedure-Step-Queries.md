@@ -77,7 +77,7 @@ parameters. The system defines an SQL variable for each parameter, which
 stores its value (:*ProcedureName.ParameterName*). Similar to the case
 of form variables, the procedure name can be replaced by the wildcard
 "\$" if reference is to the current procedure (i.e.,
-:\$.*ParameterName*).
+:$.*ParameterName*).
 
 ## Procedures With Heavy Processing 
 

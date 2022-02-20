@@ -199,13 +199,13 @@ execution is even faster.
 Using a form trigger, you can define a given text form as read-only when
 its upper-level form has a particular status, and you can prevent users
 from opening the text editor in non-HTML format. In the former case, set
-the :\$.READONLY.T variable to 1; in the latter, set the :\$.NOEDITOR.T
+the :$.READONLY.T variable to 1; in the latter, set the :$.NOEDITOR.T
 variable to 1.
 
 > **Example:** See the PRE-FORM trigger in the **ORDERSTEXT** form.
 
 By default, all text forms in ***Priority*** are HTML text forms. If you
-need to create a plain text form, set the :\$.NOHTML.T variable to 1.
+need to create a plain text form, set the :$.NOHTML.T variable to 1.
 
 > **Example:** See the PRE-FORM trigger in the **FTRIGTEXT** form.
 

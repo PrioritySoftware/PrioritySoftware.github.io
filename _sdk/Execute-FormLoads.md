@@ -177,7 +177,7 @@ customers. Here are a number of suggestions:
     the load.
 -   In a procedure query, define a MSG parameter of **ASCII** type. Then
     use SELECT MESSAGE FROM ERRMSGS WHERE TYPE = \'i\' AND USER =
-    SQL.USER ASCII :\$.MSG; and pass the MSG parameter to a PRINT
+    SQL.USER ASCII :$.MSG; and pass the MSG parameter to a PRINT
     procedure step.
 -   If you know there will be no more than one error message, you can
     use SELECT MESSAGE INTO :PAR1 FROM ERRMSGS WHERE TYPE = \'i\' AND

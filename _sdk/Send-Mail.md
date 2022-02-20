@@ -22,7 +22,7 @@ e-mail addresses.
 > ```
 > ```sql
 > :EMAIL = 'johndoe@example.com';
-> :FILE = 'C:\\tmp\\msg.doc';
+> :FILE = '..\tmp\msg.doc';
 > MAILMSG 5 TO EMAIL :EMAIL DATA :FILE; 
 > ```
 

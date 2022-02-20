@@ -50,7 +50,7 @@ Do List* form for that user.
     ```
 4.  Add a POST-FIELD trigger to one of the columns that will fill in the initial status. For example, if you have a **MYDOCNAME** column in **XXXX_MYDOC**, add the following POST-FIELD to that column:
     ```sql
-    SELECT MYDOCSTAT INTO :\$.MYDOCSTAT
+    SELECT MYDOCSTAT INTO :$.MYDOCSTAT
     FROM XXXX_MYDOCSTATS
     WHERE INITSTATFLAG = 'Y' 
     AND :$.MYDOC = 0; 
@@ -58,10 +58,10 @@ Do List* form for that user.
 5.  Add POST-INSERT and POST-UPDATE triggers with the text:
 
     ```sql
-    GOTO 51 WHERE :\$.MYDOCSTAT =:\$1.MYDOCSTAT
-    :doc = :\$.MYDOC;
-    :status = :\$.MYDOCSTAT;
-    :statustype = \'PRIV_MYBPM\';
+    GOTO 51 WHERE :$.MYDOCSTAT =:$1.MYDOCSTAT
+    :doc = :$.MYDOC;
+    :status = :$.MYDOCSTAT;
+    :statustype = 'PRIV_MYBPM';
     #INCLUDE STATUSAUTOMAIL/SendStatusMail
     LABEL 51;
     ```
