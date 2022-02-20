@@ -107,14 +107,14 @@ is run as part of a step in a procedure.
     code instead:
 
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,]'-wo', 'C:/TEMP/O.docx';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,]'-wo', '../../TEMP/O.docx';
 ```
 
 -   To generate the document as a pdf file based on a word file (-wpdf),
     use the following code instead:
 
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,] '-wpdf', 'C:/TEMP/O.pdf'
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, ['-format', :PRINTFORMAT,] '-wpdf', '../../TEMP/O.pdf'
 ```
 
 

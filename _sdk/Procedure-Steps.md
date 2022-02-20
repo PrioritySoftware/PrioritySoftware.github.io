@@ -85,7 +85,7 @@ The following is a list of useful Basic commands.
     used (as a final step) to [display the
     document](Documents#Displaying-the-Document ).
 
-:   **Note:** User input can also be defined for the SQLI program, as
+    **Note:** User input can also be defined for the SQLI program, as
     well as in specific report columns in a processed report (see more
     below).
 

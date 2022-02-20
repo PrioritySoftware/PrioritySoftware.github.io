@@ -506,10 +506,10 @@ example:
 -   to retrieve and display all records when the user opens the form <code>
     :KEYSTROKES = '\*{Exit}'; </code>
 -   to refresh all retrieved records in a form following an Action <code> :ACTIVATEQUERY = 1; </code>
--   to deactivate data privileges in a form <code> :\$.NOCLMNPRIV.T = 1; </code>
+-   to deactivate data privileges in a form <code> :$.NOCLMNPRIV.T = 1; </code>
 -   to deactivate data privileges for a specific table in a form: in a
     new PRE-FORM trigger for the form in question, define the
-    <code>:\$.NOTBLPRIV.T </code> variable with the name of the desired table; if the
+    <code>:$.NOTBLPRIV.T </code> variable with the name of the desired table; if the
     table you want to exclude has a join ID, this should also be
     specified.
 

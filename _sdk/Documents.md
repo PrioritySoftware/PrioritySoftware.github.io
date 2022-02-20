@@ -78,7 +78,7 @@ from the main table of the document in question.
 > AND ORD <> 0;
 > ```
 >
-> The :\$.ORD variable will be passed to the reports.
+> The :$.ORD variable will be passed to the reports.
 
 ### Executing Reports that will Create the Document 
 

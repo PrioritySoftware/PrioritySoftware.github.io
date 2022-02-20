@@ -155,7 +155,7 @@ command takes two parameters -- the Excel file without a suffix and the
 following code saves the **OPENORDIBYDOER** report as an Excel file.
 
 ```sql
-EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', 'c:\temp\cur', 444; 
+EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur', 444; 
 ```
 
 **Note:** The above code will only work with templates that use the .xlt
