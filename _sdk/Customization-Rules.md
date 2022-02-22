@@ -52,7 +52,7 @@ The following rules apply to the internal names of all private entities added to
 
 ### Code
 
-- Never INSERT or UPDATE data in standard tables directly. Use [interfaces](Form-Loads) to insert data in standard forms.
+- Never INSERT or UPDATE data in standard tables directly. Use [interfaces](Form-Loads) or other tools that interact with the form to insert data in standard forms.
 - Any [LINK or UNLINK](Link-Unlink) operation should be followed by a test to ensure the operation succeeded. Remember, a failed LINK operation could lead to overwriting data in the original table rather than the linked copy!
 - Do not write non-ASCII characters directly in your code. If you need to reference text that is unicode (e.g. a message in Hebrew), use the [ENTMESSAGE](SQL-Functions-Variables) function to insert it into a variable, instead.
 
@@ -60,7 +60,7 @@ The following rules apply to the internal names of all private entities added to
 ## Tables
 
 -  When modifying tables, do not change standard table columns or any
-    of the table*s unique (or Auto Unique) keys.
+    of the table's unique (or Auto Unique) keys. If you wish to increase the width of certain columns, it is best to consult with Priority Software beforehand.
 
 ### Rules for Columns 
 
@@ -105,10 +105,6 @@ The following rules apply to the internal names of all private entities added to
     priority of 3).
 -   Changing a key column's priority will affect the priority of the
     other columns in the key.
-
-### When Installing a Revision with Modifications of a Standard Table 
-
--   Ensure that all users have exited the system.
 
 ## Forms
 
