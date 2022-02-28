@@ -152,7 +152,7 @@ MAILMSG 5 TO EMAIL 'demo@demo.com' DATA, :F;
 You can also redirect the report results to an MS-Excel file. This
 command takes two parameters -- the Excel file without a suffix and the
 **TEMPLATE** number from the **EXCELTEMPLATES** table. For example, the
-following code saves the **OPENORDIBYDOER** report as an Excel file.
+following code saves the **ORGUNITS** report as an Excel file.
 
 ```sql
 EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur', 444; 
