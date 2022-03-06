@@ -35,9 +35,10 @@ an appropriate interface exists in each Priority system.
 -   \'-J\' -- export data to a JSON file or import data from one. When
     omitted, the dynamic interface will export/import using XML files.
 -   \'-select\', \'FIELDNAME\' -- when exporting data, use select to
-    specify which fields to export. You can specify as many fields as
-    you want, with commas between them, e.g. \'-select\', \'CUSTNAME\',
-    \'CUSTDES\', and so forth.
+    specify which fields to export. You can specify multiple fields,
+    using commas to separate them, e.g. \'-select\', \'CUSTNAME\',
+    \'CUSTDES\', and so forth.\
+    **Note:** **EXECUTE** is limited to a maximum of 100 arguments.
 -   \'-expand\', \'SUBLEVELFORM\' -- when exporting data, use --expand
     to select sub-level forms from which you want to export data. After
     an expand, you can use select to specify which fields in the
@@ -65,8 +66,14 @@ LABEL 1;
 
 In this example, we retrieve two specific orders, then export them to a
 JSON file (note the use of **--J**). We only export specific fields (as
-denoted by --select), and also export data from the ORDERITEMS sub-level
+denoted by -select), and also export data from the ORDERITEMS sub-level
 and its sub-level of ORDERITEMSTEXT (as denoted by --expand).
+
+If you do not uses *-select* to specify fields, all form fields will be exported. The following code  exports all fields of ORDERS and the ORDERITEMS sublevel to an XML file. Only fields with values are exported.
+
+```sql
+EXECUTE INTERFACE 'ORDERS', 'C:/tmp/msg.txt', '-form', '-ou', '-L', :CHUN_ORD, '-f', 'C:/tmp/testxml.xml', '-expand', 'ORDERITEMS';
+```
 
 ### Importing Data 
 
