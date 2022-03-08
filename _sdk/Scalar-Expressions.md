@@ -445,21 +445,21 @@ FORMAT;
 
 **NEWATTACH**('*filename*', ['*extension*'])
 
-Creates a valid file location in the *system/mail* folder and returns it. *extension* is optional.
+Creates a valid file location in the *system/mail* folder and returns it. While *extension* is optional, it is recommended that you add it. Note that the extension parameter should contain the dot as part of the string ('.zip' and not 'zip').
 
-The function can handle conflicts with existing files (by providing a different folder to store the file). 
+The function can handle conflicts with existing files (by adding a number suffix to the filename). 
 
-This function is useful when you are working in the Web interface and need to copy a file on the server to the  *system/mail* folder, which is accessible to users (unlike the temporary folder where files are created).  
+This function is useful when you are working in the Web interface and need to prepare a file on the server in the  *system/mail* folder, which is accessible to users (unlike the temporary folder where files are usually created). You can also use it to create a valid folder name to which to move files you previously created.
+
+If your filename and extension are a single string (e.g. after being uploaded in a procedure), you can use STRPIECE with a **.** delimiter to split the extension and file.
 
 The function can be incorporated into SQL statements and use computed values, but only those that can be computed before the query is sent to the database (i.e., you cannot use the values in table columns as part of the computation).
 
 ```sql
-:z = NEWATTACH('LOGFILe', '.m');
+:z = NEWATTACH('LOGFILe', '.zip');
 SELECT :z FROM DUMMY FORMAT; /*../../system/mail/202202/1t2tymq0/logfile.m */
-SELECT NEWATTACH('LOGFILe', '.m') FROM DUMMY FORMAT;
-SELECT NEWATTACH('C:\TMP\LOGFILe', '.m') FROM DUMMY FORMAT;
-SELECT NEWATTACH('C:\TMP\LOGFILe.zip', '') FROM DUMMY FORMAT;
-SELECT NEWATTACH('C:\TMP\LOGFILe.zip') FROM DUMMY FORMAT;
+SELECT NEWATTACH('LOGFILe', '.zip') FROM DUMMY FORMAT;
+SELECT NEWATTACH('C:\TMP\LOGFILe', '.zip') FROM DUMMY FORMAT;
 SELECT NEWATTACH('C:\TMP\LOGFILe.zip') FROM CUSTOMERS WHERE CUST = 0 FORMAT;
 ```
 
