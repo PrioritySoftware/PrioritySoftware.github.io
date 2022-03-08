@@ -79,11 +79,8 @@ The following rules apply to the internal names of all private entities added to
     and vice versa (number conversion), and only during the development
     phase.
 -   Text columns (i.e., **CHAR** columns) should not exceed a width of
-    80 characters.  While there are a few table columns whose width exceeds 80 characters
-    (e.g., the **MESSAGE** column in the **ERRMSGS** table), these
-    columns are generally only displayed in reports. If you need a wide
-    text column, it is recommended that you use a sub-level text form
-    instead.
+    120 characters. 
+- Columns that are part of the SELECT statement of a SEARCH type trigger cannot exceed 59 characters.
 -   You cannot add columns to system tables.
 
 ### Rules for Keys 
