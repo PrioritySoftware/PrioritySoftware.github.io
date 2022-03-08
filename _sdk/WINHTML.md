@@ -103,21 +103,6 @@ The above code will download the files to your temp folder.
 Both HTML formats and Word templates behave in a similar way, where the value of *'-format'* needs to match that of a HTML format or Word template. Since Word templates are stored as positive values in the PRINTFORMAT table, if you based the format on a negative TRIGMSG, convert it to a positive value first (multiply by -1). 
 
 
-
-### Displaying the Document in a Browser Window
-
-Once the document is created (as a HTML or PDF document), you can upload the file to the server with [NEWATTACH](Scalar-Expressions#files), then as a seperate **URL** procedure step, access the address provided.
-
-<!-- TODO: Test this once  we have a 22.00 ENV with coding privileges -->
-
-> **Example**
-> ```sql
->  :FILE = '../../TEMP/O.pdf'
->  EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, '-wpdf', :FILE; 
->  :ADDRESS = NEWATTACH(:FILE) 
->  ```
-
-
 ### Creating a Digitally Signed PDF Document using Procedure Code
 Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, an HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the –signpdf option to the WINHTML command.
 

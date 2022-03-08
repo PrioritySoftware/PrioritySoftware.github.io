@@ -443,17 +443,13 @@ AND STRINDEX(CUSTNAME, '073', 1) > 0
 FORMAT;
 ```
 
-## Files
-
 **NEWATTACH**('*filename*', ['*extension*'])
 
-Uploads a file to the server (to the *system/mail* folder) and returns its location. *extension* is optional.
+Creates a valid file location in the *system/mail* folder and returns it. *extension* is optional.
 
-The function can handle conflicts with existing files (by adding a suffix to the filename). 
+The function can handle conflicts with existing files (by providing a different folder to store the file). 
 
-Files that are not in the permitted file types for upload (in the System Management > System Maintenance > Internet Definitions > Application Server Maintenance > **Uploadable File Types** form) are not uploaded.
-
-This function is useful when you need to upload a file to the server and access it, but don't require it to be saved in a specific location.
+This function is useful when you are working in the Web interface and need to copy a file on the server to the  *system/mail* folder, which is accessible to users (unlike the temporary folder where files are created).  
 
 The function can be incorporated into SQL statements and use computed values, but only those that can be computed before the query is sent to the database (i.e., you cannot use the values in table columns as part of the computation).
 
