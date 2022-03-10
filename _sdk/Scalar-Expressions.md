@@ -445,7 +445,7 @@ FORMAT;
 
 **NEWATTACH**('*filename*', ['*extension*'])
 
-Creates a valid file location in the *system/mail* folder and returns it. While *extension* is optional, it is recommended that you add it. Note that the extension parameter should contain the dot as part of the string ('.zip' and not 'zip').
+Creates a valid file location in the *system/mail* folder and returns it. While *extension* is optional, it is recommended that you add it. Note that the extension parameter should contain the dot as part of the string (**'.zip'** and not *'zip'*).
 
 The function can handle conflicts with existing files (by adding a number suffix to the filename). 
 
