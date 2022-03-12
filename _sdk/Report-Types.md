@@ -10,16 +10,16 @@ tags: 'Priority_SDK'
 
 [Reports](Reports ) can also be displayed in tabular form,
 divided into columns and rows. Such tables succinctly summarize report
-data. To define a report as tabular, specify *T*in the *Type*column of
-the *Report Generator*form.
+data. To define a report as tabular, specify *T* in the *Type* column of
+the *Report Generator* form.
 
 Each tabular column displays data for the report column which has been
-assigned a graphic display value of *X*(in the *Graphic Display*column
-of the *Report Columns*form).The order in which these data appear is
+assigned a graphic display value of *X* (in the *Graphic Display* column
+of the *Report Columns* form).The order in which these data appear is
 determined by a non-displayed column (e.g., the internal part number)
 that has been assigned a graphic display value of *O*. This is
-particularly useful when the *X*data display dates. If you have not
-assigned *O*to any column, then the *X*data will be sorted
+particularly useful when the *X* data display dates. If you have not
+assigned *O* to any column, then the *X* data will be sorted
 alphanumerically. Finally, the content of the table cell is determined
 by the report column (or columns) which has been assigned a graphic
 display value of *T*.
@@ -47,7 +47,7 @@ assigning a group function to the column in question, as follows:
 
 -   If a row total (group function = *H*) has been specified, each row
     will be totaled.
--   If a sum total (group function = *S)*has been specified, each group
+-   If a sum total (group function = *S*) has been specified, each group
     and row will be totaled.
 -   If a total (group function = *T*) has been specified, column totals
     will appear.
