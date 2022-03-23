@@ -10,7 +10,7 @@ Using the WINHTML program, you can output the document in a variety of formats a
 In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
 ```sql
 EXECUTE WINHTML '-d' 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-g',] ['-s',] ['-e',]
- ['-edoc' | '-signpdf',] [''output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format' format_num,]
+ ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format' format_num,]
   ['-lang lang_num'] ['-AMAIL']
 ```
 ## WINHTML Parameters
@@ -88,11 +88,11 @@ Optionally, if you want to specify the format as part of the command, add '-form
 **Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
 - 	To display the document as a Word file (-wo), use the following code instead:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, '-wo', '../../TEMP/O.docx';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', '../../TEMP/O.docx';
 ```
 - 	To display the document as a pdf file based on a word file (-wpdf), use the following code instead:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPFILE, '-wpdf', '../../TEMP/O.pdf'; 
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TEMP/O.pdf'; 
 ```
 
 **Notes:**

@@ -158,9 +158,6 @@ following code saves the **ORGUNITS** report as an Excel file.
 EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur', 444; 
 ```
 
-**Note:** The above code will only work with templates that use the .xlt
-extension.
-
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on

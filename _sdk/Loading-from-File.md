@@ -122,8 +122,8 @@ tags. Specifically, you need to take the following steps:
     you want this (or any other value) to be used in all records,
     regardless of definitions in the file, specify *C* in the *Type of
     Value* column. If necessary, revise the value.\
-    You may note that the `<i>`{=html}Type of Value`</i>`{=html} column
-    contains a value of `<i>`{=html}E`</i>`{=html}, which cannot be
+    You may note that the **Type of Value** column
+    contains a value of *E*, which cannot be
     revised. This denotes a tag in the XML that is empty of data or
     attributes, and serves an organizational purpose in the file.
 3.  If you are exporting data to an XML file and there are attributes
@@ -149,8 +149,9 @@ tags. Specifically, you need to take the following steps:
     
     In other files, this tag needs to appear only once. You can control
     this behavior in the loaded file by prepending a
-    **+** to a repeating parent, or a **-** for a parent that should appear only once.
+    **+** to a repeating parent, or a **-** for a parent that should appear only once, in the *XML Tags for Interface* sub-level form.
     For an example, see the ECSL_BELGIUMMON form interface.
+    ![](https://cdn.priority-software.com/docs/images/SDK_XMLInterface_RepeatingTags.png)
 5.  Return to the *Forms to be Loaded* form and its sub-level *Position
     of Column in File*. Use the next sub-level, *Definition of XML
     Tags*, to link each form column to the appropriate tag. If the tag
