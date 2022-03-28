@@ -5,29 +5,24 @@ group: Programming Tools
 tags: 'Priority_SDK'
 ---
 
-## List of Programs 
+## File Management Utilities 
 
-The following is a list of programs that may be run within
-***Priority*** commands (e.g., [form
-triggers](Form-Triggers ), [procedure
-steps](Procedure-Steps )), mainly for file management.
+Copy a file:\
+<code>EXECUTE COPYFILE :source, :destination;</code>
 
-Copy a file (COPYFILE):\
-<code>EXECUTE COPYFILE :f1,:f2;</code>
-
-Download a file from the Internet (COPYFILE):\
+Download a file from the Internet:\
 <CODE>EXECUTE COPYFILE '-i', :url, :tofile, timeout, [:msgfile];</CODE>
 
-Move a file (MOVEFILE):\
+Move a file:\
 <CODE>EXECUTE MOVEFILE :f1,:f2;</CODE>
 
-Delete a file (DELWINDOW):\
+Delete a file:\
 <CODE>EXECUTE DELWINDOW 'f',:f1;</CODE>
 
-Create a new folder (MAKEDIR):\
-<CODE>EXECUTE MAKEDIR :DIR;</CODE>
+Create a new folder:\
+<CODE>EXECUTE MAKEDIR :dir;</CODE>
 
-Display the date of a given file (GETDATE):\
+Display the date of a given file:\
 <CODE>EXECUTE GETDATE 'path/file_name', :$.STK;</CODE>
 
 > **Example of use in a procedure step:**
@@ -46,7 +41,7 @@ Display the date of a given file (GETDATE):\
 > UNLINK STACK;
 > ```
 
-Display the size of a given file (GETSIZE):\
+Display the size of a given file:\
 <CODE>EXECUTE GETSIZE 'path/file_name', :$.STK;</CODE>
 
 > **Example of use in a procedure step:**
@@ -65,6 +60,10 @@ Display the size of a given file (GETSIZE):\
 > UNLINK STACK;
 > ```
 
+## Misc. Utilities 
+
+> **Note:** The SHELLEX command is supported by the Windows client only.
+
 Open a file using the default application for that file type (SHELLEX):
 ```sql
 :file = 'c:\test.doc'; 
@@ -81,8 +80,6 @@ Open a folder in Windows Explorer (SHELLEX):
 :file = 'c:\temp'; 
 EXECUTE SHELLEX :file;
 ```
-
-**Note:** The SHELLEX command is not supported in the web client.
 
 Return a random value in decimal or hexadecimal format (PRANDOM):
 ```sql
