@@ -57,7 +57,7 @@ LINK ORDERS TO :TMPFILE;
 GOTO 1 WHERE :RETVAL <= 0;
 INSERT INTO ORDERS
 SELECT * FROM ORDERS ORIG WHERE ORDNAME IN ('SO2000001364','SO2000001365');
-EXECUTE INTERFACE 'ORDERS', 'c:/temp/msg.txt', '-form', '-select', 'ORDNAME', 'CUSTNAME', '-ou', '-L', :TMPFILE, '-f', 'C:/temp/o2.txt', '-J',
+EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', '-form', '-select', 'ORDNAME', 'CUSTNAME', '-ou', '-L', :TMPFILE, '-f', '../../tmp/o2.txt', '-J',
 '-expand', 'ORDERITEMS', '-select', 'PRICE', 'PARTNAME', '-expand', 'ORDERITEMSTEXT';
 UNLINK ORDERS;
 LABEL 1;
@@ -68,6 +68,7 @@ JSON file (note the use of **--J**). We only export specific fields (as
 denoted by --select), and also export data from the ORDERITEMS sub-level
 and its sub-level of ORDERITEMSTEXT (as denoted by --expand).
 
+EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', '-form', '-ou', '-L', :CHUN_ORD, '-f', '../../tmp/testxml.xml', '-expand', 'ORDERITEMS';
 ### Importing Data 
 
 To import data using a dynamic interface, the file must be structured in
@@ -103,8 +104,8 @@ sub-sub-level). Take the following XML file, named in1.txt, for example:
 ```
 
 To load it using a dynamic interface, we would use the command:\
- EXECUTE INTERFACE \'ORDERS\', \'c:/temp/msg.txt\', \'-form\', \'-i\', \'-f\',
-\'c:/temp/in1.txt\', \'-ignorewrn\', \'-noskip\';
+ EXECUTE INTERFACE \'ORDERS\', \'../../tmp/msg.txt\', \'-form\', \'-i\', \'-f\',
+\'../../tmp/in1.txt\', \'-ignorewrn\', \'-noskip\';
 
 In this case we use the **--ignorewrn** and **--noskip** options to
 ensure that data is loaded regardless of warning messages that crop up.
