@@ -11,9 +11,9 @@ Flow control commands are used to affect
 execution flow, mainly in long sequences of SQL commands
 (e.g., form triggers). They include:
 
--   **GOTO** --- causes a jump *forward*to a given label when the
+-   **GOTO** --- causes a jump *forward* to a given label when the
     statement is successful
--   **LOOP** --- causes a jump *backward*to a given label when the
+-   **LOOP** --- causes a jump *backward* to a given label when the
     statement is successful
 -   **LABEL** --- signifies the place at which to continue execution of
     SQL statements after a GOTO or LOOP command has been encountered.
