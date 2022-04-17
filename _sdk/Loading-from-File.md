@@ -21,7 +21,7 @@ Designate the name of the file, its record size and its file type in the
 appropriate columns of the *Form Load Designer* form.
 
 If the file is stored in the *system\\load* directory, you can specify
-just the filename. Otherwise, give the full path to the file.
+just the filename. Otherwise, provide a path to the file, which can be relative (such as **../../tmp/filename.txt**) or a full path.
 
 For interfaces that load file data, flag the *Sub-directory?* column to
 search for the file in the sub-folder of the current company within

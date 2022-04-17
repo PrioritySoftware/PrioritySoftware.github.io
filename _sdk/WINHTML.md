@@ -86,11 +86,12 @@ LABEL 199;
 Optionally, if you want to specify the format as part of the command, add '-format' and the format number (as a variable or by specifying the number directly).
 
 **Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
-- 	To display the document as a Word file (-wo), use the following code instead:
+
+- 	To output the document as a Word file (-wo), use the following code instead:
 ```sql
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', '../../TEMP/O.docx';
 ```
-- 	To display the document as a pdf file based on a word file (-wpdf), use the following code instead:
+- 	To output the document as a pdf file based on a word file (-wpdf), use the following code instead:
 ```sql
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TEMP/O.pdf'; 
 ```
@@ -101,7 +102,6 @@ The above code will download the files to your temp folder.
 
 Both HTML formats and Word templates behave in a similar way, where the value of *'-format'* needs to match that of a HTML format or Word template. Since Word templates are stored as positive values in the PRINTFORMAT table, if you based the format on a negative TRIGMSG, convert it to a positive value first (multiply by -1). 
 
-----
 
 ### Creating a Digitally Signed PDF Document using Procedure Code
 Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, an HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the –signpdf option to the WINHTML command.

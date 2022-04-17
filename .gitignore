@@ -2,8 +2,8 @@ _site/
 .sass-cache/5dfc5e59e1491018b259cb02f9ad7146b94ae0f8/jekyll-theme-slate.scssc
 .sass-cache/5dfc5e59e1491018b259cb02f9ad7146b94ae0f8/rouge-github.scssc
 _algolia_api_key
+.jekyll-cache
 *cache*
-.jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/00/832b9e08d48eeefadcaa76d29f2d6ea73d0c37f5d7d471a4fac9a14c4439fa
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/03/0a00154c80124fefc99a1b7098eda2101d3ca6731ac4aa57da8710bab70698
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/03/b80cb69109370ef1fb8b420f8d8a24bff78006163d41db43db00456a344cab
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/03/b845bac1e37e6d44e22032ba82950c38b4defb84119d2cc2f5b55caddd1b3a
