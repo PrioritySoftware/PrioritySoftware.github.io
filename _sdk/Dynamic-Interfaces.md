@@ -72,10 +72,9 @@ and its sub-level of ORDERITEMSTEXT (as denoted by --expand).
 If you do not uses *-select* to specify fields, all form fields will be exported. The following code  exports all fields of ORDERS and the ORDERITEMS sublevel to an XML file. Only fields with values are exported.
 
 ```sql
-EXECUTE INTERFACE 'ORDERS', 'C:/tmp/msg.txt', '-form', '-ou', '-L', :CHUN_ORD, '-f', 'C:/tmp/testxml.xml', '-expand', 'ORDERITEMS';
+EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', '-form', '-ou', '-L', :TMPFILE, '-f', '../../tmp/testxml.xml', '-expand', 'ORDERITEMS';
 ```
 
-EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', '-form', '-ou', '-L', :CHUN_ORD, '-f', '../../tmp/testxml.xml', '-expand', 'ORDERITEMS';
 ### Importing Data 
 
 To import data using a dynamic interface, the file must be structured in
