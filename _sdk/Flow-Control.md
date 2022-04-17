@@ -7,32 +7,32 @@ tags: 'Priority_SDK'
 
 ## Flow Control Commands 
 
-Several ***Priority***commands may be used in SQL statements to affect
-execution flow. These are mainly used in long sequences of SQL commands
+Flow control commands are used to affect
+execution flow, mainly in long sequences of SQL commands
 (e.g., form triggers). They include:
 
--   **GOTO**--- causes a jump *forward*to a given label when the
+-   **GOTO** --- causes a jump *forward* to a given label when the
     statement is successful
--   **LOOP**--- causes a jump *backward*to a given label when the
+-   **LOOP** --- causes a jump *backward* to a given label when the
     statement is successful
--   **LABEL**--- signifies the place at which to continue execution of
+-   **LABEL** --- signifies the place at which to continue execution of
     SQL statements after a GOTO or LOOP command has been encountered.
     The label number must be identical to that specified for the
     appropriate GOTO or LOOP command.
--   **SLEEP**--- signifies the number of seconds to pause before
+-   **SLEEP** --- signifies the number of seconds to pause before
     continuing; generally, used when waiting for a response from an
     external device
--   **GOSUB**--- causes a jump to a specific sub-routine
--   **SUB**--- signifies the beginning of a sub-routine; no commands
+-   **GOSUB** --- causes a jump to a specific sub-routine
+-   **SUB** --- signifies the beginning of a sub-routine; no commands
     from here until the next RETURN command will be executed unless
     specifically called by a GOSUB command
--   **RETURN**--- ends the sub-routine and continues with the statement
+-   **RETURN** --- ends the sub-routine and continues with the statement
     following the appropriate GOSUB command
--   **END**--- discontinues execution of SQL statements
--   **ERRMSG**--- causes failure and prints out an error message on
+-   **END** --- discontinues execution of SQL statements
+-   **ERRMSG** --- causes failure and prints out an error message on
     screen; used in form triggers, step queries (in procedures) and load
     queries
--   **WRNMSG**--- prints out a warning message on screen; used in form
+-   **WRNMSG** --- prints out a warning message on screen; used in form
     triggers, step queries and load queries
 
 
@@ -53,35 +53,35 @@ See [**Syntax Conventions**](SQL-Syntax#Syntax-Conventions" ).
 
 The syntax of each of these commands is as follows:
 
--   **GOTO** *label_number* \[**WHERE** *condition* \];
--   **LOOP***label_number* \[**WHERE** *condition* \];
+-   **GOTO** *label_number* \[ **WHERE** *condition* \];
+-   **LOOP** *label_number* \[ **WHERE** *condition* \];
 -   **LABEL** *label_number*;
 -   **SLEEP** *number_of_seconds*;
--   **GOSUB** *sub_number* \[**WHERE** *condition* \];
+-   **GOSUB** *sub_number* \[ **WHERE** *condition* \];
 -   **SUB** *sub_number*;
 -   **RETURN**;
--   **END**\[ **WHERE***condition* \];
--   **ERRMSG***msg_number* \[ **WHERE***condition* \];
--   **WRNMSG***msg_number* \[ **WHERE***condition* \];
+-   **END** \[ **WHERE***condition* \];
+-   **ERRMSG** *msg_number* \[ **WHERE** *condition* \];
+-   **WRNMSG** *msg_number* \[ **WHERE** *condition* \];
 -   **REFRESH** 1;
 -   **MAILMSG** *msg_number* **TO** { **USER \| GROUP \| EMAIL** }
     'recipient' [ **DATA** 'attachment_filename' ]
-    [**WHERE** *condition* ];
+    [ **WHERE** *condition* ];
 
 Usually, the MAILMSG command retrieves the e-mail\'s subject and content
 from the message specified in the *msg_number* argument, and any file
-specified in the [ **DATA***attachment_filename* ] option will be
+specified in the [ **DATA** *attachment_filename* ] option will be
 included as an attachment. However, you can also have the MAILMSG
 command create an e-mail on the basis of an existing HTML document by
 using a *msg_number* argument that indicates an empty message and using
-the [ **DATA***attachment_filename* ] option to indicate an HTML
+the [ **DATA** *attachment_filename* ] option to indicate an HTML
 attachment.
 
 
 **Notes:**
 
 -   If you use this option, the attachment indicated by the
-    *attachment_filename*argument must be an HTML file.
+    *attachment_filename* argument must be an HTML file.
 -   If you are working on a Unicode installation, the HTML attachment
     should be saved in a Unicode-compliant format.
 
