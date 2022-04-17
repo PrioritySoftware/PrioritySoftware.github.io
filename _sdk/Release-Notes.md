@@ -5,6 +5,13 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 22.0
+
+### April 2022
+
+- Added [NEWATTACH](Scalar-Expressions#strings) - a function that returns a valid name for a new folder.
+- Added support for encoding unicode text files as [QR Codes](Report-Columns#displaying-qr-codes).
+
 ## SDK 21.1 
 
 ### Feb 2022
