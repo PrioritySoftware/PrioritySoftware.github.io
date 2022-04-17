@@ -11,6 +11,7 @@ with the web interface you must keep in mind the different method used
 to access the***Priority*** server. As a result, the following
 exceptions apply:
 
+-   When working with attachments, only files located in the **system/mail** folder can be interacted with by the user. Any attachments uploaded by code should be stored in this folder if users need to interact with the attachment. 
 -   You cannot use the [EXECUTE
     command](Execution-Statements ) to run entities that
     require input from the user or that display output. This is because
