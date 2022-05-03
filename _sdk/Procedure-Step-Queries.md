@@ -80,8 +80,9 @@ of form variables, the procedure name can be replaced by the wildcard
 :$.*ParameterName*).
 
 ## Procedures With Heavy Processing 
+> Windows Interface only
 
-In a procedure that requires heavy processing via a cursor, you can
+In a procedure that requires heavy processing via a cursor, in the Windows interface, you can
 display a progress bar that indicates to the user how far the program
 has progressed. To do so, use the following step query:
 

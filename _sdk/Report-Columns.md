@@ -229,6 +229,8 @@ Conditions are written in SQL and must begin with a comparative operator
 (\<, \>, \<=, \>=, \<\>, =). Only records that comply with the
 prescribed condition will appear in the report.
 
+Conditions and expressions have a maximum length of 3000 characters. 
+
 > **Example:** The **TRANSPARTCUST** (*Customer Shipments*) report
 > includes a condition for the **OTYPE** column from the **DOCTYPES**
 > table: **= C** (so as to limit the report to sales transactions,

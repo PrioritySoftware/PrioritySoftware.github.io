@@ -9,9 +9,7 @@ Using the WINHTML program, you can output the document in a variety of formats a
 
 In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
 ```sql
-EXECUTE WINHTML '-d' 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-g',] ['-s',] ['-e',]
- ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format' format_num,]
-  ['-lang lang_num'] ['-AMAIL']
+EXECUTE WINHTML '-d', 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] ['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] ['-AMAIL']
 ```
 ## WINHTML Parameters
 - 'document_name' – the internal name of the document, e.g. WWWSHOWORDER.
@@ -19,17 +17,18 @@ EXECUTE WINHTML '-d' 'document_name', 'table', 'linked_file', '-v', 'record_id',
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '',
 - '-v' – use when outputting a single record, such as when using an Action from a form. This will result in faster output, as the program will skip the HTMLCURSOR step. 
 - 'record_id' – the unique id of the record you are outputting (e.g. ORD = 100).
+- '-trc', debug_file - runs the WINHTML program in debug mode and outputs debugging information to the debug file.
 - '-e' – when working in a language other than English, use the English version of the document.
 - 'edoc' – output the document as an e-document.
 - 'signpdf' – output the document as a PDF and digitally sign it. Please note that a signed PDF is not equivalent to an e-document!.
 - '-output_file' - file name + path to file to create.
-- '-s' – save as attachment in document form.
+- '-s' – supresses the notification window that pops up when preparing the document.
 - '-o' \|'-pdf' \| '-wo' \| '-wpdf' – select the output format of the document:
   - -o outputs the document as a system document (HTML)
   - -pdf outputs the document as a PDF based on a system document
   - -wo outputs the document based on a Word template (DOCX file)
   - -wpdf outputs the document as a PDF based on a word template
-- '-format' format_num – specify the number of the print format (for system documents) or Word template (for template documents). When this parameter is used, the system will ignore the values in the PRINTFORMATS table.
+- '-format', format_num – specify the number of the print format (for system documents) or Word template (for template documents). When this parameter is used, the system will ignore the values in the PRINTFORMATS table.
 - '-lang lang_num' – Use this parameter to specify the language of the printout. This is useful if you want to output the document in a language other than that of the current user (e.g. a user in a German system outputting a document in French for a customer in France).
 - '-AMAIL' – automatically send the document to the customer/vendor contact, or to the customer/vendor directly (based on whether a contact with an email is defined or not).
 

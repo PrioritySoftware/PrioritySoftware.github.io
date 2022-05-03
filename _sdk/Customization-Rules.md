@@ -150,6 +150,8 @@ If you revise a standard report, you must follow some rules to
     Generators → Procedures*). From the **Optimization** menu, select
     **Report Optimization** and record the internal name of the relevant
     report.
+-   Conditions and expressions cannot exceed a maximum length of 3000 characters. 
+
 
 ## Procedures
 

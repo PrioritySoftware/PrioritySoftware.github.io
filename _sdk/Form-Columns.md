@@ -194,16 +194,9 @@ empty (just like the one you use to define Boolean columns).
 
 ## Attachment Columns
 
-**''Priority***offers the option of an attachment column — a special
-form column that is used to attach a file to the current record. Such
-columns are displayed together with a paper clip icon, which can be used
-to open the Windows Explorer and navigate to the file in question.
-Alternatively, users can record the file path manually. An example of
-this type of column is the*File Name*column of the*Customer Documents
-for Task*form, a sub-level of the*Tasks'' form. In order for a form
-column to be defined as an attachment column, it must be of **CHAR**
-type and the form column name must contain the string **EXTFILENAME**
-(e.g., **PRIV\_ EXTFILENAME**).
+***Priority*** offers the option of an attachment column — a special
+form column that is used to attach a file to the current record. Such columns are displayed together with a paper clip icon, which can be used to open the Windows Explorer and navigate to the file in question. Alternatively, users can record the file path manually. An example of this type of column is the *File Name* column of the **Customer Documents for Task** form, a sub-level of the *Tasks* form. In order for a form column to be defined as an attachment column, it must be of **CHAR**
+type and the form column name must contain the string **EXTFILENAME** (e.g., **PRIV\_ EXTFILENAME**).
 
 ## Address Columns
 

@@ -22,7 +22,8 @@ execution flow, mainly in long sequences of SQL commands
 -   **SLEEP** --- signifies the number of seconds to pause before
     continuing; generally, used when waiting for a response from an
     external device
--   **GOSUB** --- causes a jump to a specific sub-routine
+-   **GOSUB** --- causes a jump to a specific sub-routine.\
+    **Note**: Sub-routines can receive an identifier number from 1-999999.
 -   **SUB** --- signifies the beginning of a sub-routine; no commands
     from here until the next RETURN command will be executed unless
     specifically called by a GOSUB command
@@ -144,6 +145,8 @@ executed when specifically called by the appropriate GOSUB command.
 Thus, GOSUB 1 calls up SUB 1, GOSUB 2 calls up SUB 2, and so on. Once
 RETURN is encountered, execution continues from the statement following
 the relevant GOSUB command.
+
+Sub-routines can receive an identifier number from 1-999,999.
 
 ## Further Reading 
 
