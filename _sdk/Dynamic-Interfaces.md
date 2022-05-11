@@ -5,14 +5,9 @@ group: Interfaces
 tags: 'Priority_SDK'
 ---
 
-Starting with version 21.0, you can create dynamic interfaces from
-within the code itself, without having to predefine them in the
-interface generator. These interfaces use the file structure in XML or
-JSON files to determine the load order when loading data into the
-system. Likewise, data can exported to one of these file formats, with
-the data to be exported specified explicitly within the interface code.
-This allows you to import and export data without having to ensure that
-an appropriate interface exists in each Priority system.
+Starting with version 21.0, you can create dynamic interfaces from within the code itself, without having to predefine them in the interface generator. These interfaces use the file structure in XML or JSON files to determine the load order when loading data into the system. Likewise, data can exported to one of these file formats, with the data to be exported specified explicitly within the interface code. This allows you to import and export data without having to ensure that an appropriate interface exists in each Priority system.
+
+**Note:** Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
 
 ## Special Load Parameters for Dynamic Interfaces 
 
@@ -113,16 +108,13 @@ To load it using a dynamic interface, we would use the command:\
  EXECUTE INTERFACE \'ORDERS\', \'../../tmp/msg.txt\', \'-form\', \'-i\', \'-f\',
 \'../../tmp/in1.txt\', \'-ignorewrn\', \'-noskip\';
 
-In this case we use the **--ignorewrn** and **--noskip** options to
-ensure that data is loaded regardless of warning messages that crop up.
+In this case we use the **--ignorewrn** and **--noskip** options to ensure that data is loaded regardless of warning messages that crop up.
 We recommend adding these options if data isn\'t being loaded as
-expected. As in standard interfaces, warning and error messages are
-stored in the ERRMSGS table (unless you linked them to a STACKERR
-table). While developing in WINDBI, you can easily retrieve them by
-running the following query:
+expected. As in standard interfaces, warning and error messages are stored in the ERRMSGS table (unless you linked them to a STACKERR table). While developing in WINDBI, you can easily retrieve them by running the following query:
 ```sql
- SELECT * FROM ERRMSGS WHERE USER = SQL.USER AND TYPE = 'i' FORMAT;
+SELECT * FROM ERRMSGS WHERE USER = SQL.USER AND TYPE = 'i' FORMAT;
  ```
+
 
 ### Deleting Data 
 

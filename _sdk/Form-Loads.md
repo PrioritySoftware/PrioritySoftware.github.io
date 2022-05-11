@@ -10,44 +10,30 @@ tags: 'Priority_SDK'
 The form load is used both to import records directly into
 ***Priority*** forms and to export records from those forms.
 
-> **Example:** You write a procedure that receives the customer name and
-> a list of ordered items as input. The procedure opens a sales order
-> for the customer in input, and inserts the items into the *Order
-> Items* sub-level form. In this case you must use the *Form Load
-> Designer* to insert new records into the *Sales Orders* form and its
-> sub-levels.
+> **Example:** You write a procedure that receives the customer name and > a list of ordered items as input. The procedure opens a sales order for the customer in input, and inserts the items into the *Order Items* sub-level form. In this case you must use the *Form Load Designer* to insert new records into the *Sales Orders* form and its sub-levels.
 
 In general, a form load interface is characterized by:
 
 -   a unique interface name
--   a load table in ***Priority*** or an external file to which data is
-    loaded (or from which it is exported)
--   definitions linking the table columns, file columns or XML tags to
-    individual form columns
+-   a load table in ***Priority*** or an external file to which data is loaded (or from which it is exported)
+-   definitions linking the table columns, file columns or XML tags to individual form columns
 -   parameters affecting the load.
 
-These definitions are recorded in the *Form Load Designer* form and its
-sub-levels (*System Management → Database Interface → Form Load (EDI)*).
+These definitions are recorded in the *Form Load Designer* form and its sub-levels (*System Management → Database Interface → Form Load (EDI)*).
 
 Each form load can be based on either a load table or an external file.
 
 ## Load Name and Title {#load_name_and_title}
 
-The load name is a short name by which the load is identified by the
-system. The following restrictions apply:
+The load name is a short name by which the load is identified by the system. The following restrictions apply:
 
 -   Only alphanumeric values (uppercase and lowercase letters and
     digits) and the underline sign may be used (no spaces).
 -   The name must begin with a letter.
--   You may not use a reserved word (a list of reserved words appears in
-    the *Reserved Words* form --- *System Management → Dictionaries*).
--   The name assigned to any newly created form load must include a
-    common four-letter prefix (the same one you use for all entities
-    that you add to ***Priority*** for the customer in question;
-    e.g., **XXXX_LOADFNC**).
+-   You may not use a reserved word (a list of reserved words appears in the *Reserved Words* form → *System Management → Dictionaries*).
+-   The name assigned to any newly created form load must include a common four-letter prefix (the same one you use for all entities that you add to ***Priority*** for the customer in question; e.g., **XXXX_LOADFNC**).
 
-The load title is the means of identifying the load when executing it
-from the menu.
+The load title is the means of identifying the load when executing it from the menu.
 
 ## Module
 
@@ -69,11 +55,11 @@ be designated during execution of the load itself:
     the insertion of records of the current record type when an error is
     encountered.
 
-:   **Note:** The same purpose is served by the --*noskip* parameter,
+    **Note:** The same purpose is served by the --*noskip* parameter,
     which can be included in the form load execution (see more details
     below).
 
-> **Example:**The form load is supposed to open two sales orders, each
+> **Example:** The form load is supposed to open two sales orders, each
 > of which contains a few order items. If the **INTERFACE** program
 > encounters an error while loading the first item of the first sales
 > order and the *Do Not Skip Lines* column is not flagged, then the
@@ -86,7 +72,7 @@ be designated during execution of the load itself:
     want the **INTERFACE** program to treat warning messages as errors.
     To ignore warning messages, flag this column.
 
-:   **Note:** The same purpose is served by the --*w* parameter, which
+    **Note:** The same purpose is served by the --*w* parameter, which
     can be included during the form load. Furthermore, you can define a
     specific run of the form load so that warnings appear in the errors
     report even when they are \"ignored\", by means of the *--W*

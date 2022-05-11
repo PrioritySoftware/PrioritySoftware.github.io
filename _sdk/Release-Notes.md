@@ -7,6 +7,11 @@ tags: 'Priority_SDK'
 
 ## SDK 22.0
 
+### May 2022
+
+- Clarified that decimal seperator used in JSON files must be a decimal point.
+- Added a note that the WINHTML option [-format](WINHTML#winhtml-parameters) is only available when printing a single document with **-v**.
+
 ### April 2022
 
 - Added [NEWATTACH](Scalar-Expressions#strings) - a function that returns a valid name for a new folder.

@@ -140,3 +140,4 @@ _algolia_api_key
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/fd/a9345db89c07bd02d472f40c7ead258d8c1c9c2c806df089e47ee7f2594a93
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/ff/603557d44345735c69b197d1d2803f95cd4944323abd389ab4cfdd6ed83f3f
 *cache*
+jekyll-algolia-record-too-big.log

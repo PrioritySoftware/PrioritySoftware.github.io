@@ -106,26 +106,16 @@ exported.
 
 ## Additional Definitions for XML/JSON Files 
 
-If you are loading to or from an XML/JSON file, you must define the
-tags. Specifically, you need to take the following steps:
+If you are loading to or from an XML/JSON file, you must define the tags/fields. Specifically, you need to take the following steps:
 
 1.  From the *Form Load Designer* form, run the *Prepare XML Tags by
     File Defs* program by Action. The structure of the file
-    appearing in the *File Name* column will be analyzed and transferred
-    to the *XML Tags for Interface* sub-level form. This file should be
-    saved in the *system\\load\\company* directory, where *company* is
-    the name of the current company (SQL.ENV).\
-    **Note:** If you are exporting data to an XML file, use a sample
-    file with the desired tags to create the structure.
-2.  Enter the *XML Tags for Interface* form and check results. For each
-    tag, the data in the first record appears in the *Value* column. If
-    you want this (or any other value) to be used in all records,
-    regardless of definitions in the file, specify *C* in the *Type of
-    Value* column. If necessary, revise the value.\
+    appearing in the *File Name* column will be analyzed and transferred to the *XML Tags for Interface* sub-level form. This file should be saved in the *system\\load\\company* directory, where *company* is the name of the current company (SQL.ENV).\
+    **Note:** If you are exporting data to an XML file, use a sample file with the desired tags to create the structure.
+2.  Enter the *XML Tags for Interface* form and check results. For each tag, the data in the first record appears in the *Value* column. If you want this (or any other value) to be used in all records, regardless of definitions in the file, specify *C* in the *Type of Value* column. If necessary, revise the value.\
     You may note that the **Type of Value** column
     contains a value of *E*, which cannot be
-    revised. This denotes a tag in the XML that is empty of data or
-    attributes, and serves an organizational purpose in the file.
+    revised. This denotes a tag in the XML that is empty of data or attributes, and serves an organizational purpose in the file.
 3.  If you are exporting data to an XML file and there are attributes
     for any tags, record them in the XML Attributes column.\
     **Example:** For an XML tag defined as \<custname
@@ -161,12 +151,9 @@ tags. Specifically, you need to take the following steps:
 
 <!-- TODO: Move to Windows only -->
 
-**Note:** Once you have created a form load design that uses an XML
-file, ***Priority*** automatically enables users to export data from the
-main form of this load design to an XML file. In this case the *XML
-File* option in the *Mail* top menu of the relevant form will be enabled
-(in Windows). When it is selected, the user gets a choice of interfaces
-to run. The system indicates where the output file has been saved.
+**Notes:** 
+- Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
+- Windows only: Once you have created a form load design that uses an XML file, ***Priority*** automatically enables users to export data from the main form of this load design to an XML file. In this case the *XML File* option in the *Mail* top menu of the relevant form will be enabled (in Windows). When it is selected, the user gets a choice of interfaces to run. The system indicates where the output file has been saved.
 
 ------------------------------------------------------------------------
 

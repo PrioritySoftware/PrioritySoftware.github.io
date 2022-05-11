@@ -28,7 +28,8 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '',
   - -pdf outputs the document as a PDF based on a system document
   - -wo outputs the document based on a Word template (DOCX file)
   - -wpdf outputs the document as a PDF based on a word template
-- '-format', format_num – specify the number of the print format (for system documents) or Word template (for template documents). When this parameter is used, the system will ignore the values in the PRINTFORMATS table.
+- '-format', format_num – specify the number of the print format (for system documents) or Word template (for template documents). When this parameter is used, the system will ignore the values in the PRINTFORMATS table. 
+The *-format* option can only be used when printing a single document, i.e. the **-v** option is also specified.
 - '-lang lang_num' – Use this parameter to specify the language of the printout. This is useful if you want to output the document in a language other than that of the current user (e.g. a user in a German system outputting a document in French for a customer in France).
 - '-AMAIL' – automatically send the document to the customer/vendor contact, or to the customer/vendor directly (based on whether a contact with an email is defined or not).
 
@@ -78,11 +79,11 @@ Reminder: After a successful load, the AutoUnique value of each new order is sav
 ### Executing the Document
 - 	To display the document on screen in HTML format, continue the above code as follows:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS [,'-format',:PRINTFORMAT]; 
+EXECUTE WINHTML '-d', '-v', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS [,'-format',:PRINTFORMAT]; 
 LABEL 199;
 ```
 
-Optionally, if you want to specify the format as part of the command, add '-format' and the format number (as a variable or by specifying the number directly).
+Optionally, if you want to specify the format as part of the command, add '-format' and the format number (as a variable or by specifying the number directly). This option is only available when printing a **single** document, that is **-v** is also specified.
 
 **Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
 
