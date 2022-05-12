@@ -9,48 +9,29 @@ tags: 'Priority_SDK'
 
 ***Priority*** enables you to organize the data displayed in
 [reports](Reports). You can ensure that records are distinct
-(i.e., prevent the multiple appearance of identical records); you can
-sort data according to one or more columns; you can group data; you can
-place certain columns in a header; and you can perform certain functions
-upon the members of a group.
+(i.e., prevent the multiple appearance of identical records); you can sort data according to one or more columns; you can group data; you can place certain columns in a header; and you can perform certain functions upon the members of a group.
 
 ## Distinct Records 
 
-Sometimes, a report will generate the same records more than once. Take
-the case of the **ORDDELAY** report, which displays all sales orders
-that meet two conditions:
+Sometimes, a report will generate the same records more than once. Take the case of the **ORDDELAY** report, which displays all sales orders that meet two conditions:
 
 -   they have not been fully supplied to the customer (at least one
-    order item is still due); and
+order item is still due); and
 -   the due dates of those items have already passed.
 
-Hence, an order will be displayed if the balance of at least one of its
-order items is greater than 0 and its due date is prior to today's date.
-As several items in a given order may have a balance greater than 0, the
-same order can appear more than once in the report. To prevent the
-repeated appearance, you must indicate that records should be distinct.
+Hence, an order will be displayed if the balance of at least one of its order items is greater than 0 and its due date is prior to today's date. As several items in a given order may have a balance greater than 0, the same order can appear more than once in the report. To prevent the repeated appearance, you must indicate that records should be distinct.
 
 Flag the *Distinct* column of the *Report Generator* form.
 
 ## Sorting
 
-Sorting data in reports is similar to sorting records in forms. Here,
-too, you can assign sort priorities to one or more columns, and you may
-designate the type of sort (in the *Report Columns*form). The records in
-a given report will be sorted first according to the data in the column
-with the highest sort priority; then according to the data for the
-column with the next highest sort priority; and so on. Sorts will be
-performed in ascending order, unless a different sort type is specified
-(the other options are descending sort, alphanumeric ascending and
-alphanumeric descending; for details, see [Sorting
-Data](Form-Columns#Sorting-Data )).
+Sorting data in reports is similar to sorting records in forms. Here, too, you can assign sort priorities to one or more columns, and you may designate the type of sort (in the *Report Columns* form). The records in a given report will be sorted first according to the data in the column with the highest sort priority; then according to the data for the column with the next highest sort priority; and so on. Sorts will be performed in ascending order, unless a different sort type is specified (the other options are descending sort, alphanumeric ascending and alphanumeric descending; for details, see [Sorting Data](Form-Columns#Sorting-Data)).
 
 **Notes:**
 
 -   It is possible to sort data according to a column which does not
-    appear during report output.
--   Do not change the sorting of a standard report. Instead, copy the
-    existing report and revise the copy to suit your needs.
+appear during report output.
+-   Do not change the sorting of a standard report. Instead, copy the existing report and revise the copy to suit your needs.
 
 
 
@@ -87,7 +68,7 @@ integer, and so on.
 
 -   Grouping also affects output in tabular reports.
 -   Do not change the grouping of a standard report. Instead, copy the
-    existing report and revise the copy to suit your needs.
+existing report and revise the copy to suit your needs.
 
 ## Headers
 
@@ -117,22 +98,22 @@ so desire. You can also add blank lines between groups or even start
 each group on a new page.
 
 -   To repeat values, specify 1 in the \'\'Repeat Group (1)*column of
-    the*Report Columns *form for the first "Group by" set (*Group
-    by\'**\'**= 1).
+the*Report Columns *form for the first "Group by" set (*Group
+by\'**\'**= 1).
 
 -   To add blank lines after the group, specify an integer (up to 10) in
-    the *Skip Lines*column for the first "Group by" set.
+the *Skip Lines*column for the first "Group by" set.
 
 -   To start a new page for each group, specify "--1" in the *Skip
-    Lines* column for the first "Group by" set.
+Lines* column for the first "Group by" set.
 
     **Note:** When multiple columns are included in the same \"Group
-    by\" set, a new page can only be started for the first column in the
-    set.
+by\" set, a new page can only be started for the first column in the
+set.
 
 -   To let the user decide whether to add a page break before each
-    group, use the system variable :GROUPPAGEBREAK in the procedure that
-    runs the report. For example, see the **PBR** input parameter in the
+group, use the system variable :GROUPPAGEBREAK in the procedure that
+runs the report. For example, see the **PBR** input parameter in the
     **ACCOUNTS** procedure.
 
 ## Financial Reports: Distinguishing Between Credit and Debit Balances 
@@ -156,37 +137,37 @@ by the value appearing in the *Group Func.* column of the *Report
 Columns* form):
 
 -   Totals can be calculated for each group (*Group Func.* = *S* for the
-    column to be totaled).
+column to be totaled).
 -   Sub-totals can be calculated for any portion of the group (*Group
-    Func.* = *R* for the "Group by" column in question).
+Func.* = *R* for the "Group by" column in question).
 -   Totals can be calculated for the entire report by designating *T* in
-    the *Group Func.* column.
+the *Group Func.* column.
 -   Both group totals ***and*** the entire report total can be displayed.
-    Specify *B* instead of *S* or *T*.
+Specify *B* instead of *S* or *T*.
 -   You can repeat the previous value of a string (*Group Func.* = *R*
-    for the column whose data is to be repeated).
+for the column whose data is to be repeated).
 -   Cumulative balances can be calculated from one line to the next,
-    within each group (*Group Func.* = *A*). This is useful, for
-    example, in a General Ledger report, which displays credit and debit
-    balances that are updated for each displayed financial transaction.
-    In this case, you would calculate cumulative balances for the
+within each group (*Group Func.* = *A*). This is useful, for
+example, in a General Ledger report, which displays credit and debit
+balances that are updated for each displayed financial transaction.
+In this case, you would calculate cumulative balances for the
     *Balance* column.
 -   Complex total functions can be created for the group (*Group Func. =
-    s, t, b* for the column to be totaled) by designating *F* in the
+s, t, b* for the column to be totaled) by designating *F* in the
     *Col. Func* column of the *Report Columns* form. For example, see
-    column 180 in the **INCOME_BUDGETS** report (*Budget P&L -
-    Summary*).
+column 180 in the **INCOME_BUDGETS** report (*Budget P&L -
+Summary*).
 
     **Note:**The expression must reference a calculated report column
-    that has been defined in the *Report Column Extension* sub-level
-    form (expressions in the *Expression/Condition (cont.)* sub level
-    form will not be taken into account). The*Column Type* of the
-    calculated column must be **REAL**.
+that has been defined in the *Report Column Extension* sub-level
+form (expressions in the *Expression/Condition (cont.)* sub level
+form will not be taken into account). The*Column Type* of the
+calculated column must be **REAL**.
 
 -   A constant value (*Group Func.* = *C*) can be added to the
-    cumulative balance. For instance, the value appearing in the
+cumulative balance. For instance, the value appearing in the
     *Opening Balance* column can be added to each figure appearing in
-    the *Balance* column.
+the *Balance* column.
 
 
 **Note:** There is one other group function (*H*) that applies only to
@@ -204,7 +185,7 @@ Depending on the value specified in the *Col. Func.*column of the
 -   a minimum value (*I*)
 -   a maximum value (*M*)
 -   a complex function (*F*) (defined in the *Report Column
-    Extension*sub-level).
+Extension*sub-level).
 
 When you specify a column function, only the *result* of the operation is
 displayed. That is, values for a number of lines are compressed into
@@ -236,9 +217,9 @@ report will be multiplied by this value.
 
 -   [Report Columns](Report-Columns )
 -   [Refining Report Data
-    Display](Refine-Report-Display )
+Display](Refine-Report-Display )
 -   [Calculated Columns in
-    Reports](Calculated-Columns-Reports )
+Reports](Calculated-Columns-Reports )
 -   [Types of Reports](Report-Types )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
