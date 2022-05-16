@@ -39,7 +39,7 @@ format commands:
     include the titles of retrieved columns.
 -   **ORACLE**--- generates a file for **sqlldr** (SQL Loader -- an
     Oracle utility used to load data from external files).
--   **UNICODE**--- generates output in Unicode (UTF-16) format.
+-   **UNICODE**--- generates output in Unicode (UTF-16) format. Add this option if the data contains special characters (such as those in languages such as Spanish or German).
 -   **ADDTO**--- adds data to end of specified file, rather than
     replacing the contents of the file.
 
