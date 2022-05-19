@@ -1,5 +1,6 @@
-
-<!--  Duplicate of Report-Columns -->
+---
+#Duplicate of Report-Columns
+---
 
 ## Report Column Attributes 
 
