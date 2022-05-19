@@ -562,13 +562,18 @@ SELECT CTIME(1146693600) FROM DUMMY FORMAT;/* Thu May 04 01:00:00
     2006 */
 ```
 
+**BEGINOFWEEK**(*date in format YYWW*)
+
+```sql
+SELECT BEGINOFWEEK(2220) FROM DUMMY FORMAT; /* 15/05/22 */
+```
+
 **BEGINOFMONTH**(*date*)
 
 yields the date of the first day of the month
 ```sql
 SELECT BEGINOFMONTH(05/04/06) FROM DUMMY FORMAT;/* 05/01/06 */
 ```
-
 
 
 **BEGINOFQUARTER**(*date*)

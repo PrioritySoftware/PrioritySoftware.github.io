@@ -212,7 +212,7 @@ There are several types of SQL variables:
     Use this variable to tailor behavior based on the specific
     application used to access the system.
 
-:FROM_TTS (**INT** type) --- set to 1 when procedures or reports are
+:FROMTTS (**INT** type) --- set to 1 when procedures or reports are
     run via the Tabula Task Scheduler, set to 0 otherwise. This variable
     is useful when you want to set behavior that is relevant only when
     running the program via the TTS (e.g., setting a default value in
