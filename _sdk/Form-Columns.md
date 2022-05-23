@@ -518,9 +518,30 @@ the **USERCLMNPRIV** table, as follows:
         value in the designated column for which the user is authorized.
 
 
-## MDM-only Permissions
+## MDM Features
 
-[22.0]()
+### Supporting Transformation Interfaces
+
+[21.1]
+
+MDM transformation interfaces take data from one type of record in the source company, and create a different type of record in the target company. For example, an interface that converts a purchase order in company A into a sales order in company B.
+ 
+Transformation interfaces require storing additional data at the form level, and by default are only supported in specific forms (see the MDM SOP on [Priority Xpert](https://support.priority-software.com/) for more information.)
+
+To add support for transformation interfaces in additional forms, you need to add two private columns to the form:
+
+1. A **XXXX_MYEMAIL** calculated form column, of type CHAR, with the following expression:
+   ```sql
+    (ENVIRONMENTA5.INTERNALID <> '' ?
+    ENVIRONMENTA5.INTERNALID : SQL.ENV)
+    ```
+2. A **XXXX_DNAME** column based on the ENVIRONMENTA.DNAME table column, with a join ID of 5, and the expression <code>SQL.ENV</code>.
+
+See the standard **MYEMAIL** and **EI_DNAME** columns in the **ORDERS** form as an example.
+
+### MDM-only Permissions
+
+[22.0]
 
 You can limit certain forms and columns so that they can only be updated via Master Data Management (MDM, also known as EDI interfaces).
 
