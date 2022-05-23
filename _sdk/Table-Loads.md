@@ -142,7 +142,7 @@ There are several ways to execute a table load:
     following syntax (parameters are explained in the next section):
 
 ```sql
-EXECUTE DBLOAD ‘-L’, ‘loadname’, ['-I', 'input_file'], ['-I'], ['-T', 'table', 'linkfile'], 
+EXECUTE DBLOAD ‘-L’, ‘loadname’, ['-i', 'input_file'], ['-I'], ['-T', 'table', 'linkfile'], 
 ['-g', 'debug_file'], ['-ns'], ['-N'], ['-E', 'unloaded_file'], ['-M'], ['-C'], ['-B'], 
 ['-U'], ['-u'], ['-v'], ['msgfile'];
 ```
