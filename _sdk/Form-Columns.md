@@ -528,7 +528,7 @@ MDM transformation interfaces take data from one type of record in the source co
  
 Transformation interfaces require storing additional data at the form level, and by default are only supported in specific forms (see the MDM SOP on [Priority Xpert](https://support.priority-software.com/) for more information.)
 
-To add support for transformation interfaces in additional forms, you need to add two private columns to the form:
+To add support for transformation interfaces in additional forms, you need to add these private columns to the form:
 
 1. A **XXXX_MYEMAIL** calculated form column, of type CHAR, with the following expression:
    ```sql
@@ -537,7 +537,9 @@ To add support for transformation interfaces in additional forms, you need to ad
     ```
 2. A **XXXX_DNAME** column based on the ENVIRONMENTA.DNAME table column, with a join ID of 5, and the expression <code>SQL.ENV</code>.
 
-See the standard **MYEMAIL** and **EI_DNAME** columns in the **ORDERS** form as an example.
+3. An **EI_EMAIL** column based on the MAILINTERCOMP column of either the CUSTOMERSA or SUPPLIERSA tables - choose the appropriate one based on the form in questions. For example, in Export Invoices (FINVOICES), you'd select CUSTOMERSA.
+
+See the standard versions of these columns in the **ORDERS** form as an example.
 
 ### MDM-only Permissions
 
