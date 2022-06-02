@@ -23,6 +23,8 @@ appropriate columns of the *Form Load Designer* form.
 If the file is stored in the *system\\load* directory, you can specify
 just the filename. Otherwise, provide a path to the file, which can be relative (such as **../../tmp/filename.txt**) or a full path.
 
+For XML/JSON files in the web interface, see detailed instructions [below](#additional-definitions-for-xmljson-files)
+
 For interfaces that load file data, flag the *Sub-directory?* column to
 search for the file in the sub-folder of the current company within
 system/load. The flag is only relevant when a file name is specified in
@@ -107,6 +109,11 @@ exported.
 ## Additional Definitions for XML/JSON Files 
 
 If you are loading to or from an XML/JSON file, you must define the tags/fields. Specifically, you need to take the following steps:
+
+**In the Web Interface do this first:**
+
+
+
 
 1.  From the *Form Load Designer* form, run the *Prepare XML Tags by
     File Defs* program by Action. The structure of the file

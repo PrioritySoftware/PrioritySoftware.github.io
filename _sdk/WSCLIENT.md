@@ -34,7 +34,7 @@ web services. Use the following syntax to interface with a web service
     instances of the *--head2* parameter, each with different headers.
     For example: `'-head2', :headerA, '-head2', :headerB,...`
     Alternatively, you can provide a single header file using *-head*.
-    Note that each header file must include a new at the end, including
+    Note that each header file must include a new line at the end, including
     the last one.
 -   *\[, \'-usr\', :wsUser \[, \'-pwd\', :wsUserPwd\] \[, \'-domain\',
     :userDomain\]* -- use to specify username, password, and domain (if

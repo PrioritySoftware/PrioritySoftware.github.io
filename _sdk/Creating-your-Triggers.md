@@ -40,9 +40,10 @@ records before you run the text editor.
 > To access the text editor, press **F6**.
 
 **Tip:** You can replace the built-in text editor with any editor of
-your choosing (e.g., Notepad). To do so, run the *Define External
-Editor* program (*System Management* → *Generators* → *Procedures*),
-indicating the full path to the file you want to use (e.g., Tabula
+your choosing (e.g., Notepad++). To do so:
+
+- In the Web Environment, simply press F6 within the trigger text. This saves a temporary text file and opens it in the system default text editor. When you save the file and close it, the trigger text is updated in Priority.
+- In the Windows interface, run the *Define External Editor* program (*System Management* → *Generators* → *Procedures*), indicating the full path to the file you want to use (e.g., Tabula
 External Editor= C:\\Windows\\Notepad.exe) in the input screen.
 Alternatively, you can open the *tabula.ini* file (in *C:\\Windows*)
 and, under the {Environment} section, revise the line for Tabula

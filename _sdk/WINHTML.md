@@ -37,13 +37,13 @@ The *-format* option can only be used when printing a single document, i.e. the 
 
 As the printout will be created automatically, there is no user input to determine the print format; rather you have to set it yourself. 
 You can do so in one of two ways:
-- 	By specifying the format as part of the document execution command, using the -format parameter. (see [Executing the Document](#executing-the-document)).
+- 	By specifying the format as part of the document execution command, using the -format parameter. (see [Executing the Document](#executing-the-document)). This option can only be used when printing a single document, i.e. the **-v** option is also specified.
 - 	By means of the PRINTFORMAT table, which always saves the last print format utilized by a given user for a given document. Thus, when the document runs, the system takes the print format to be displayed from this table. In order to ensure that your procedure always displays the desired print format, you have to update the relevant record in the PRINTFORMAT table prior to execution of the document. 
 
 ### Determining Available Print Formats
 To find out which print formats are available for a given document, run the following SQL commands in WINDBI:
 ```sql
-/* this code will show all printsystem print formats defined for the document */
+/* this code will show all system document print formats defined for the Order Confirmation document */
 SELECT * FROM EXTMSG WHERE EXEC = (
 SELECT EXEC FROM EXEC WHERE TYPE = 'P' AND ENAME = 'WWWSHOWORDER') AND NUM < 0 FORMAT;
 /* this code will show word templates defined for the document */
@@ -54,8 +54,6 @@ SELECT EXEC FROM EXEC WHERE TYPE = 'P' AND ENAME = 'WWWSHOWORDER') FORMAT;
 ### Setting the Print Format
 At this point you should know the EXEC of the document you want to run and the number of the print format you want to display. 
 
- In the SQLI step of the procedure that runs the form interface for the Sales Orders form, add the following commands after execution of the form interface:
-
 ```sql
 /* this code defines the format that will be used to print the document; in the current example, it is assumed that we want to use print format -5 */
 :EXEC = 0;
@@ -63,37 +61,27 @@ SELECT EXEC INTO :EXEC FROM EXEC WHERE TYPE = 'P' AND ENAME = 'WWWSHOWORDER';
 :PRINTFORMAT = -5;
 UPDATE PRINTFORMAT SET VALUE = :PRINTFORMAT
 WHERE EXEC = :EXEC AND USER = SQL.USER;
-SELECT SQL.TMPFILE INTO :TMPORDERS FROM DUMMY;
-LINK ORDERS TO :TMPORDERS;
-GOTO 199 WHERE :RETVAL <= 0;
-INSERT INTO ORDERS SELECT * FROM ORDERS O 
-WHERE ORD = (
-SELECT ATOI(KEY1) FROM GENERALLOAD 
-WHERE RECORDTYPE = '1' AND LOADED = 'Y');
-/* Remark: In this example I assume the form interface uses the GENERALLOAD table and that RECORDTYPE = '1' is the RECORDTYPE used for the ORDERS form. 
-Reminder: After a successful load, the AutoUnique value of each new order is saved in the KEY1 column of the load table */
 ```
 
 ## WINHTML Examples
 
 ### Executing the Document
-- 	To display the document on screen in HTML format, continue the above code as follows:
+
+- 	To output the document as an HTML system document (-o), use the following code:
 ```sql
-EXECUTE WINHTML '-d', '-v', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS [,'-format',:PRINTFORMAT]; 
-LABEL 199;
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', '../../TMP/O.html';
 ```
-
-Optionally, if you want to specify the format as part of the command, add '-format' and the format number (as a variable or by specifying the number directly). This option is only available when printing a **single** document, that is **-v** is also specified.
-
-**Note:** The above code will only display a document on screen when it is run as part of a step in a procedure.
-
+- 	To output the document as PDF based on a system document (-pdf), use the following code:
+```sql
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', '../../TMP/O.html';
+```
 - 	To output the document as a Word file (-wo), use the following code instead:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', '../../TEMP/O.docx';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', '../../TMP/O.docx';
 ```
 - 	To output the document as a pdf file based on a word file (-wpdf), use the following code instead:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TEMP/O.pdf'; 
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TMP/O.pdf'; 
 ```
 
 **Notes:**
@@ -102,29 +90,31 @@ The above code will download the files to your temp folder.
 
 Both HTML formats and Word templates behave in a similar way, where the value of *'-format'* needs to match that of a HTML format or Word template. Since Word templates are stored as positive values in the PRINTFORMAT table, if you based the format on a negative TRIGMSG, convert it to a positive value first (multiply by -1). 
 
-
 ### Creating a Digitally Signed PDF Document using Procedure Code
-Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, an HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the –signpdf option to the WINHTML command.
+Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, an HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the **–signpdf** option to the WINHTML command. Remember that a digital signature is not the same as an e-document!
 
 Example: The following code will create a digitally signed PDF of the sales order in which ORD = 100:
 ```sql
 :ORD = 100;
-:PDFFILE = '../../SOMEFILENAME.pdf';
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-g', '-signpdf', '-pdf', :FILE1, '-s';
+:PDFFILE = '../../tmp/SOMEFILENAME.pdf';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-signpdf', '-pdf', :PDFFILE;
 ```
 
 ### Creating an E-Document using Procedure Code 
-If you are required to create a digitally signed E-Document, for instance, when printing financial documents, you can create a digitally signed E-Document from within the procedure itself. This is done by adding the –signpdf -edoc option to the WINHTML command.
+If you are required to create a digitally signed E-Document, for instance, when printing financial documents, you can create a digitally signed E-Document from within the procedure itself. This is done by adding the  **-edoc** option to the WINHTML command.
 
 Example: The following code will create a digitally signed E-Document of an Invoice/Credit Memo:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', '-signpdf' '-edoc', :FILE2, '-s'; 
+EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-s', '-edoc', '-pdf', :FILE2; 
 ```
 
 To automate the mailing of the E-Document that you created, use the following code:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', '- signpdf' '-edoc', '-AMAIL', '-s'; 
+EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', '-edoc', '-AMAIL', '-s'; 
 ```
+
+**Note:** When using the -AMAIL parameter, do not specify a path/filename, as the file will be renamed automatically and saved in the relevant invoice's attachments.
+
 ### Saving a Certified Copy when Printing a Document
 You can define a procedure so that, when the document is printed or sent by e-mail (:SENDOPTION = 'PRINT' or 'AMAIL'), a certified copy is saved that can be printed later (using the Create Certified Copy program). 
 In order to save a copy:
@@ -137,13 +127,33 @@ These variables are updated during runtime, so that if several documents are bei
 
 **Note:** See also the SHOWCOPY command in [Procedures](Procedures).
 
-## Windows Interface Only – Printing with WINACTIV
-If the user is working in the windows interface and has a default printer defined, you can send documents to the default printer:
-```sql
-EXECUTE WINACTIV '-P', 'WWWSHOWORDER', '-q', 'ORDERS', :TMPORDERS;
-LABEL 199;
-```
-When sending the document to the default printer, if you want to print more than 1 copy, use the flag '–Q' instead of '–q'. For example, to print 2 copies, continue the above code as follows:
-```sql
-EXECUTE WINACTIV '-P', 'WWWSHOWORDER', '-Q',2, 'ORDERS', :TMPORDERS; LABEL 199;
-```
+
+## Displaying the Document 
+
+[22.0]()
+
+If you are executing WINHTML from a procedure, you can combine it with a **URL** step in order to display the document in the browser or download the docx file.
+
+1. Add a SQLI step, with a paramter of type ASCII that will contain the url for the file. In this example, we'll use ADD (short for address).
+2. Add the following code:
+  ```sql
+  :DOC = 100;
+  :FILENAME = 'document.pdf';
+  :PATH = '';
+  /* We use the NEWATTACH function to create a path in the system/mail folder*/
+  SELECT NEWATTACH(:FILENAME) INTO :PATH FROM DUMMY;
+  EXECUTE WINHTML '-d', 'WWWSHOWORD', '', '', '-v', :DOC, '-pdf', :PATH;
+  SELECT SQL.TMPFILE INTO :$.ADD FROM DUMMY; /*This file will contain our URL */
+  /* You can find out the start of the URL by opening an existing attachment on the server
+  and copying the start of the address up to "primail" */
+  :URLSTART =  'https://exampleserver.com/comp/primail/';
+  /* Cut the previously generated path to only the subfolder and filename */
+  SELECT SUBSTR(:PATH, 19, STRLEN(:PATH)) INTO :PATH FROM DUMMY;
+  /* Combine the url together into the ADD url file */
+  SELECT STRCAT(:URLSTART, :PATH)  FROM DUMMY
+  ASCII :$.ADD;
+  ```
+3. Add a URL step to the procedure, with the ADD parameter.
+
+When run, the procedure will generate the document in the specified format (in our case PDF), then open it in the browser.
+

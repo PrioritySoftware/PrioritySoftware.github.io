@@ -24,11 +24,11 @@ You can debug a form or procedure by running it via the *Run Entity* ***Priority
 tool. From the *Tools* top menu in the Windows interface or the *Run*
 menu in the web interface, select *Run Entity (Advanced)*. In the command dialog that opens:
 
-To run a form in debug mode in the Windows interface:\
-WINFORM *FORM_NAME* -trc *debug_file*
-
 To run a form in debug mode in the web interface:\
 *FORM_NAME* -trc *debug_file*
+
+To run a form in debug mode in the Windows interface:\
+WINFORM *FORM_NAME* -trc *debug_file*
 
 > **Example:**
 >
@@ -76,7 +76,7 @@ into the debug file.
 > **Example:**
 >
 > ```sql
-> EXECUTE INTERFACE LOADORDERS 'c:\tmp\msg', '-debug', 'c:\tmp\dbg'; 
+> EXECUTE INTERFACE LOADORDERS SQL.TMPFILE, '-debug', '..\..\tmp\dbg.txt'; 
 > ```
 
 To execute a [table load](Table-Loads ) in debug
@@ -96,25 +96,25 @@ question. Results, for example, look like this:
 ```sql
 /*
 *
-* Report ORDBYPROJMANAGER : ‎Orders per Project Manager‎
-‎*
-‎*/ 
-‎‎/* ‎ Orders per Project Manager ‎ */‎
-‎SELECT USERS.USERLOGIN AS 'Project Manager', CPROFTYPES.TYPECODE AS 'Type of Sale (Code)',
-‎CPROFTYPES.TYPEDES AS 'Type of Sale-Descrip', ORDERS.CURDATE AS 'Order Date', 
-‎ORDERS.ORDNAME AS 'Order', DOCPROJ.PROJDES AS 'Project', 
-ORDSTATUS.ORDSTATUSDES ‎AS 'Order Status', ORDERS.DETAILS AS 'Details', 
-ORDERS.DISPRICE AS 'Total Price w/o Tax',‎ ‎CURRENCIES.CODE AS 'Curr'‎
-‎FROM DOCUMENTS, CURRENCIES, ORDSTATUS, DOCPROJ, ORDERS, ‎CPROFTYPES, USERS ‎
-‎WHERE (ORDSTATUS.MANAGERREPOUT <> 'Y')
-‎AND (ORDERS.ORDSTATUS = ORDSTATUS.ORDSTATUS)‎
-‎AND (ORDERS.ORDTYPE = CPROFTYPES.CPROFTYPE)‎
-‎AND (ORDERS.PROJ = DOCUMENTS.DOC)‎
-‎AND (ORDERS.CURRENCY = CURRENCIES.CURRENCY)‎
-‎AND (DOCPROJ.MUSER = USERS.USER)‎
-AND (DOCUMENTS.DOC = DOCPROJ.DOC)‎
-‎AND (1=1) ‎
-‎ORDER BY1 ASC, 2 ASC, 4 ASC, 5 ASC;‎
+* Report ORDBYPROJMANAGER : Orders per Project Manager
+*
+*/ 
+/*  Orders per Project Manager  */
+SELECT USERS.USERLOGIN AS 'Project Manager', CPROFTYPES.TYPECODE AS 'Type of Sale (Code)',
+CPROFTYPES.TYPEDES AS 'Type of Sale-Descrip', ORDERS.CURDATE AS 'Order Date', 
+ORDERS.ORDNAME AS 'Order', DOCPROJ.PROJDES AS 'Project', 
+ORDSTATUS.ORDSTATUSDES AS 'Order Status', ORDERS.DETAILS AS 'Details', 
+ORDERS.DISPRICE AS 'Total Price w/o Tax', CURRENCIES.CODE AS 'Curr'
+FROM DOCUMENTS, CURRENCIES, ORDSTATUS, DOCPROJ, ORDERS, CPROFTYPES, USERS 
+WHERE (ORDSTATUS.MANAGERREPOUT <> 'Y')
+AND (ORDERS.ORDSTATUS = ORDSTATUS.ORDSTATUS)
+AND (ORDERS.ORDTYPE = CPROFTYPES.CPROFTYPE)
+AND (ORDERS.PROJ = DOCUMENTS.DOC)
+AND (ORDERS.CURRENCY = CURRENCIES.CURRENCY)
+AND (DOCPROJ.MUSER = USERS.USER)
+AND (DOCUMENTS.DOC = DOCPROJ.DOC)
+AND (1=1) 
+ORDER BY1 ASC, 2 ASC, 4 ASC, 5 ASC;
 ```
 
 **Note:** You can also run a report in debug mode from within the
