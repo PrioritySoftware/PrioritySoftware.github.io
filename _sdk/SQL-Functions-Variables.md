@@ -67,6 +67,8 @@ There are several types of SQL variables:
 -   user-defined variables
 -   system variables
 
+Regardless of type, all variables are limited to a size of 120 characters.
+
 ## System Variables 
 
 :RETVAL --- the return value of the previous query (**INT** type).
