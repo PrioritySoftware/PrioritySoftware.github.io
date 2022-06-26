@@ -28,11 +28,9 @@ from the *Form Generator*.
 Similarly, you can use the *Report Generator* to create on-line help
 messages for an entire report and/or any report column appearing in its
 parameter input screen. Help for the report itself is specified in the
-*Help Text*form, a sub-level of the *Report Generator*form; input column
-help is designated in the *Help Text*form, a sub-level of the *Report
-Columns*form. Whenever help messages (for the entire report or for any
-input column) are added or modified, the date and time of this revision
-appear in the *Help Date*column of the *Report Generator*form.
+*Help Text* form, a sub-level of the *Report Generator* form; input column
+help is designated in the *Help Text* form, a sub-level of the *Report Columns* form. Whenever help messages (for the entire report or for any
+input column) are added or modified, the date and time of this revision appear in the *Help Date*column of the *Report Generator* form.
 
 **Note:** Do not write help for any report which is activated from a
 procedure; instead, write the help for the procedure.
@@ -41,33 +39,10 @@ procedure; instead, write the help for the procedure.
 
 Finally, you can use the *Procedure Generator* to create on-line help
 messages for an entire procedure and/or any parameter appearing in its
-input screen. Help for the procedure itself is specified in the *Help
-Text*form, a sub-level of the *Procedure Generator*form; parameter help
-is designated in the *Help Text*form, a sub-level of the *Procedure
-Parameters*form. Whenever help messages (for the entire procedure or
+input screen. Help for the procedure itself is specified in the *Help Text* form, a sub-level of the *Procedure Generator* form; parameter help
+is designated in the *Help Text* form, a sub-level of the *Procedure Parameters* form. Whenever help messages (for the entire procedure or
 individual parameters) are added or modified, the date and time of this
-revision appear in the *Help Date* column of the *Procedure
-Generator*form.
-
-## Line Breaking 
-
-Line breaking for help messages is set automatically. Therefore, you can
-freely edit the text in the *Help Text* form without having to worry
-about the length of lines. You should therefore refrain from the use of
-hyphenation. To force the beginning of a line, use the code \\n.
-
-> **Examples:**\
-> *The help for the **CPROFSTATS** form says:*\
-> Use this form to view statuses of price quotations and their
-> attributes. \\n\
-> \\n\
-> To define statuses, along with their attributes and rules, run
-> {VISCPROFSTATS.P} from the list of Actions.
->
-> *The help for the **OPENORDIBYDOER** report says:*\
-> Run this report to view orders to carry out, sorted by due date. \\n\
-> \\n\
-> The report displays the name of the user assigned to each order.
+revision appear in the *Help Date* column of the *Procedure Generator*form.
 
 ## Referring to Other Entities 
 

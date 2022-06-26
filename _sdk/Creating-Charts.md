@@ -148,7 +148,7 @@ important).
 
 
 
-**Note:** [Click here](Parameters-for-a-New-Chart ) for a
+**Note:** [Click here](Chart-Parameters) for a
 detailed explanation of each step.
 
 ## Procedure Messages 
