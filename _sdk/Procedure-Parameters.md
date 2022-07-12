@@ -116,13 +116,13 @@ procedure parameters must have a specified type.
 
 ## Further Reading {#further_reading}
 
--   [Procedure Steps](Procedure_Steps)
+-   [Procedure Steps](Procedure-Steps)
 -   [User Input in Procedures](Procedure-Input)
--   [Procedure Step Queries](Procedure_Step_Queries)
--   [Procedure Flow Control](Procedure_Flow_Control)
--   [Procedure Message Display](Procedure_Message_Display)
--   [Processed Reports](Processed_Reports)
--   [Running a Procedure](Running_a_Procedure)
--   [Help Messages](Help_Messages)
--   [Rules for Customizing](Rules_for_Customizing)
+-   [Procedure Step Queries](Procedure-Step-Queries)
+-   [Procedure Flow Control](Procedure-Flow-Control)
+-   [Procedure Message Display](Procedure-Messages)
+-   [Processed Reports](Processed-Reports)
+-   [Running a Procedure](Run-Procedure)
+-   [Help Messages](Help-Messages)
+-   [Rules for Customizing](Rules-for-Customizing)
 -   [Procedures](Procedures)

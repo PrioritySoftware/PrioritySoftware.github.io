@@ -55,7 +55,11 @@ web services. Use the following syntax to interface with a web service
     the request times out
 -   *\[, \'-content\', :contentType\'\]* -- the content type of the
     request (such as **application/json**). The default content type is
-    **text/xml;charset=\\\"utf-8\\\"**.
+    **text/xml;charset=\\\"utf-8\\\"**.\
+    In the case of XML, the content type must match the one encoding specified in the XML file header, e.g.
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    ```
 -   *\[, \'-method\', :method\]* -- if the remote web service is REST
     based, the HTTP method. The default method is **POST**, but you can
     specify others (e.g. GET, PATCH).
