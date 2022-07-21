@@ -94,7 +94,7 @@ chapters:
       - page: Report Columns
         url: Report-Columns
       - page: Organizing Report Data
-        url: organize-report-data
+        url: Organize-Report-Data
       - page: Refining Report Data Display
         url: Refine-Report-Display
       - page: Calculated Columns in Reports

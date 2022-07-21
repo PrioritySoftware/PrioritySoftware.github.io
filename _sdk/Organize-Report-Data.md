@@ -127,7 +127,7 @@ determines whether debit or credit balances will be enclosed in
 parentheses. However, these parentheses will only appear in a column
 that is flagged as a financial balance column.
 
-Flag the *Balance* column of the *Report Columns* form.
+**Note**: If you flag the column for a value of type CHAR, the report should not be exported to Excel. Excel will not be able to interpret the column and output a blank worksheet instead.
 
 ## Group Functions 
 
