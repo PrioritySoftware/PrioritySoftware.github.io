@@ -127,9 +127,35 @@ attachments together with the main document. To do so, include the
 towards the beginning of the procedure, recording a step query for it.
 This command has no parameters.
 
-> **Example:**See the various print formats defined for the
+> **Example:** See the various print formats defined for the
 > **WWWSHOWORDER** procedure. See also the HTMLEXTFILES command in this
 > procedure.
+
+## Setting a Number of Copies to Print 
+
+You also might want to create a program that generates multiple copies of a document by default, so that users need not update the number of copies each time the document is printed. The number of copies to be printed can be maintained in a custom form column.
+
+For instance, say you want to create a procedure that prints multiple copies of a designated warehouse task, in which the number of copies is defined per warehouse. In order to achieve this, you can add a custom column to the **WAREHOUSES** form in which to define the desired number of copies. This value can then be retrieved when executing the document, in the HTMLCURSOR step of the procedure:
+
+1.  Add a custom column to the WAREHOUSES form (column name =
+    **PRIV_NUMCOPIES**; column type = **INT**) that can receive any number between 1 and 7.
+2.  In the HTMLCURSOR step of the custom procedure, use the **DAYS** table to define a loop that generates the designated number of copies when executing the document:
+
+> ```sql
+> SELECT WTASKS.WTASK, WTASKS.WTASKNUM,
+> (:$.SRT = 1 ? WTASKS.WTASKNUM :(:$.SRT = 2 ? WAREHOUSES.WARHSNAME : ''))
+> FROM WTASKS, WAREHOUSES, DAYS
+> WHERE WTASKS.WTASK <> 0
+> AND WTASKS.WARHS = WAREHOUSES.WARHS
+> AND DAYS.DAYNUM BETWEEN 1 AND MAXOP(1, WAREHOUSES.PRIV_NUMCOPIES)
+> ORDER BY 3, 2;
+> ```
+
+**Notes:**
+
+-   If you wish to allow for a number of copies that is greater than 7, you can use a custom table rather than the **DAYS** table. However, any table you use must contain a fixed number of records, like the **DAYS** table.
+-   If the user also specifies a number of copies when sending the document to the printer (e.g., 2), the total number of copies printed will be a product of both numbers (e.g., if   **PRIV_NUMCOPIES** = 3, a total of 6 copies will be printed).
+-   If this mechanism is used to generate multiple copies of a document in which only one original can be printed (such as an invoice or receipt), this mechanism does not override that restriction. In other words, additional copies that are generated in this fashion are still marked as copies.
 
 ## Further Reading 
 

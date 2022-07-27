@@ -9,9 +9,10 @@ Using the WINHTML program, you can output the document in a variety of formats a
 
 In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
 ```sql
-EXECUTE WINHTML '-d', 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] ['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] ['-AMAIL']
+EXECUTE WINHTML '-d' | '-dQ', 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] ['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] ['-AMAIL']
 ```
 ## WINHTML Parameters
+- '-d' - create document. Use '-dQ' instead if you want to print document with the default printer.
 - 'document_name' – the internal name of the document, e.g. WWWSHOWORDER.
 - 'table, linked_file' – specify this if you are outputting a record from a linked table. Leave as empty quotes if you are outputting from a standard table, e.g.:
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '',
@@ -73,7 +74,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', '../../TMP/O.h
 ```
 - 	To output the document as PDF based on a system document (-pdf), use the following code:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', '../../TMP/O.html';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-pdf', '../../TMP/O.html';
 ```
 - 	To output the document as a Word file (-wo), use the following code instead:
 ```sql
@@ -89,6 +90,18 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TMP/
 The above code will download the files to your temp folder. 
 
 Both HTML formats and Word templates behave in a similar way, where the value of *'-format'* needs to match that of a HTML format or Word template. Since Word templates are stored as positive values in the PRINTFORMAT table, if you based the format on a negative TRIGMSG, convert it to a positive value first (multiply by -1). 
+
+### Printing the Document using the Default Printer
+
+If you want to print the document, use **'-dQ'** instead of '-d'. In this example we assume our order has an id of 100.
+
+```sql
+:ORD = 100;
+EXECUTE WINHTML '-dQ', 'WWWSHOWORDER', :ORD
+```
+
+
+
 
 ### Creating a Digitally Signed PDF Document using Procedure Code
 Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, an HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the **–signpdf** option to the WINHTML command. Remember that a digital signature is not the same as an e-document!
