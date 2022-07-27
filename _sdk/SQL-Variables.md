@@ -7,12 +7,10 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-***Priority***'s form preparation mechanism recognizes the following as
-SQL variables in form triggers; anything else will generate a warning
-message:
+***Priority***'s form preparation mechanism recognizes the following as SQL variables in form triggers; anything else will generate a warning message:
 
 -   a form column variable --- e.g., :ORDERS.QUANT (see below)
--   any variable preceded by a semi-colon, which does not include a
+-   any variable preceded by a colon, which does not include a
     period --- e.g., :QUANT
 -   system variables.
 
@@ -22,18 +20,12 @@ See also [Form Triggers](Form-Triggers ).
 
 ***Priority*** defines three SQL variables for each form column:
 
-:   *:form_name.form_column_name* --- stores the column's current value
-    on screen (note the required semi-colon and period)
-:   *:form_name1.form_column_name* --- stores its value in the table
-    (note the addition of "1" before the period)
-:   *:form_name.form_column_name.***TITLE** --- stores the form column
-    title.
+-   *:form_name.form_column_name* --- stores the column's current value  on screen (note the required colon and period)
+-   *:form_name1.form_column_name* --- stores its value in the table (note the addition of "1" before the period)
+-   *:form_name.form_column_name.**TITLE*** --- stores the form column title.
 
 Thus, :ORDERITEMS.QUANT refers to the ordered quantity currently
-designated in the **ORDERITEMS** form. In contrast, :ORDERITEMS1.QUANT
-refers to the ordered quantity stored in the **ORDERITEMS** table. If
-you are updating an existing record and have not left the current line
-in the form, then these variables will hold two different values --- the
+designated in the **ORDERITEMS** form. In contrast, :ORDERITEMS1.QUANT refers to the ordered quantity stored in the **ORDERITEMS** table. If you are updating an existing record and have not left the current line in the form, then these variables will hold two different values --- the
 updated value and the previous one, respectively. Along the same lines,
 :ORDERITEMS.QUANT.TITLE refers to the title of this column. This is
 useful, for instance, as a parameter in [error or warning messages for
@@ -42,12 +34,8 @@ variables may be used in creating expressions and triggers for the form.
 
 ## Wildcards
 
-Generally, expressions and triggers refer to the current form (e.g.,
-**ORDERITEMS**) or to its upper-level form (e.g., **ORDERS**).
-***Priority*** allows you to use the dollar sign as a wildcard in place
-of these form names. Use one dollar sign (\$) for the current form, two
-(\$\$) for the next level up, three (\$\$\$) for the next level, and so
-on.
+Generally, expressions and triggers refer to the current form (e.g., **ORDERITEMS**) or to its upper-level form (e.g., **ORDERS**).
+***Priority*** allows you to use the dollar sign as a wildcard in place of these form names. Use one dollar sign (\$) for the current form, two (\$\$) for the next level up, three (\$\$\$) for the next level, and so on.
 
 Consider the following trigger in the **ORDERITEMS** form, which
 computes the *Extended Price* of an order item:
@@ -67,38 +55,25 @@ GOTO 1 WHERE :$1.PARTNAME = '' OR :$.ORDI = 0;
 GOTO 1 WHERE :$.@ = :$1.PARTNAME;
 ```
 
-Sometimes a trigger employing a dollar sign may refer to a non-existing
-form (e.g., \$\$ when there is no upper-level form). This sometimes
-happens when the trigger is included in more than one form. In such a
-case, ***Priority*** will consider the wildcard as representing the next
-form level down (the current form, to continue the above example).
+Sometimes a trigger employing a dollar sign may refer to a non-existing form (e.g., \$\$ when there is no upper-level form). This sometimes happens when the trigger is included in more than one form. In such a case, ***Priority*** will consider the wildcard as representing the next form level down (the current form, to continue the above example).
 
-Expressions and Column triggers often refer to the current form column.
-You can therefore use @ as a wildcard in place of this form column name
+Expressions and Column triggers often refer to the current form column. You can therefore use @ as a wildcard in place of this form column name
 (see example above). For instance, the link between sub-level and
 upper-level forms is generally made between columns having identical
 names. This linkage can be expressed using the @ wildcard.
 
-The use of these wildcards makes it easier to read the trigger. They are
-also useful when employing an **#INCLUDE** command in a trigger (see
-[Including One Trigger in
-Another](Include-Triggers )).
+The use of these wildcards makes it easier to read the trigger. They are also useful when employing an **#INCLUDE** command in a trigger (see [Including One Trigger in Another](Include-Triggers)).
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------
 
-**Note:** The use of @ in a Row or Form trigger will stand for the name
-of that trigger (e.g., POST-FORM).
+**Note:** The use of @ in a Row or Form trigger will stand for the name of that trigger (e.g., POST-FORM).
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------
 
 ## User-defined Variables 
 
-In addition to form-column variables, whose values are determined by the
-data in the form (or table) column, you may also define your own
-variables. For example, the following SQL statement employs a :CNT
-variable that counts the number of work orders opened for a given order
-item (see the CHECK-FIELD trigger for the **DUEDATE** column of the
-**ORDERITEMS** form):
+In addition to form-column variables, whose values are determined by the data in the form (or table) column, you may also define your own
+variables. For example, the following SQL statement employs a :CNT variable that counts the number of work orders opened for a given order item (see the CHECK-FIELD trigger for the **DUEDATE** column of the **ORDERITEMS** form):
 
 ```sql
 :CNT = 0;
@@ -112,24 +87,17 @@ AND SERIAL.CLOSEDATE = 0;
 
 When naming a variable, use the following rule of thumb:
 
--   If the variable is included in a trigger in a standard form, use the
-    appropriate four-letter prefix, so as to easily distinguish it from
-    standard variables.
--   If the variable is included in a trigger in your own form, the
-    prefix is unnecessary.
+-   If the variable is included in a trigger in a standard form, use the appropriate four-letter prefix, so as to easily distinguish it from standard variables.
+-   If the variable is included in a trigger in your own form, the prefix is unnecessary.
 
-For more details, see [Rules for Customizing
-Forms](Customization-Rules-Forms ).
+For more details, see [Rules for Customizing Forms](Customization-Rules).
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------
 
-**Note:** Variable names are limited to 50 characters. When naming
-variables, keep in mind that a variable defined in a trigger for a
-standard form also includes: the company prefix (see
-[below](#Global-Variables-in-Forms )), two underlines (\_),
+**Note:** Variable names are limited to 50 characters. When naming variables, keep in mind that a variable defined in a trigger for a standard form also includes: the company prefix (see [below](#Global-Variables-in-Forms )), two underlines (\_),
 and a period (.).
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------
 
 User-defined variables (such as :CNT) do not have an automatic starting
 value; rather, this must be set by a trigger. Consider, for instance,
@@ -215,9 +183,6 @@ need to create a plain text form, set the :$.NOHTML.T variable to 1.
 -   [Creating Your Own Triggers](Creating-your-triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
--   [Changing Column Titles
-    Dynamically](Dynamic-Column-Titles )
--   [Including One Trigger in
-    Another](Include-Triggers )
--   [Trigger Errors and
-    Warnings](Trigger-Errors )
+-   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
+-   [Including One Trigger in Another](Include-Triggers )
+-   [Trigger Errors and Warnings](Trigger-Errors )
