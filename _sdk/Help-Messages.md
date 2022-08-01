@@ -4,7 +4,8 @@ layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---
-<!-- TODO: Update to reflect shift to text form -->
+
+**Important:** Help messages, regardless of type/location, should not exceed 2000 characters in length.
 ## Forms
 
 You can use the *Form Generator* to create on-line help messages for an

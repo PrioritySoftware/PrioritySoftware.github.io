@@ -7,7 +7,7 @@ tags: 'Priority_SDK'
 
 Using the WSCLIENT program you can make requests to an external web
 service. The WSCLIENT program is generic and can make requests to most
-web services. Use the following syntax to interface with a web service
+web services. Use the following syntax to work with a web service
 (optional parameters are specified in square brackets \[ \]):
 
 > EXECUTE WSCLIENT :endpoint_url, :inFile, :outFile \[, \'-msg\',
@@ -66,7 +66,7 @@ web services. Use the following syntax to interface with a web service
 -   *['-headout' headers_response_outfile]* - If some of the data returned by the response is in the header of the response (instead of the body), use this option to store the header response in a file.
 -   \[, \'-authname, :tokenCode\]; -- if the remote web service uses
     OAuth2 for authorization, the OAuth2 token code that contains the
-    access token. See **Interfacing With OAuth2** for more information.
+    access token. See **Authenticating With OAuth2** for more information.
 -   \[, \'-urlfile\', urlfile\] -- if the URL is greater than 127
     characters, add this option to the WSCLIENT program to transmit the
     endpoint_url within an ASCII file. When using this option, the
@@ -82,10 +82,10 @@ web services. Use the following syntax to interface with a web service
     written to the server log when it is set to record
     [DEBUG](Debug-Tools#Logging ) level messages.
 
-### Interfacing With OAuth2 
+### Authenticating With OAuth2 
 
-You can use **WSCLIENT** to interface with services that require
-authorization by OAuth2. Doing so requires some additional setups:
+You can use **WSCLIENT** to communicate with services that require
+ OAuth2 authentication. Doing so requires some additional setups:
 
 1.  In **\'\'Priority**\'\', open the **OAuth2 Definitions** form.
 2.  Specify a **Token Code** and **Token Description** for the web
@@ -115,8 +115,7 @@ Fill them in the appropriate fields in the form.
         **<urn:ietf:wg:oauth:2.0:oob>**. Record them in the **Redirect
         URL** field in the **OAuth2 Definitions** form.
 2.  Finally, fill in the **Scope**. This should also be supplied by the
-    provider, and end with **offline_access**. For example: **write:vat
-    read:vat offline_access**
+    provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**
 
 You can now obtain the access token to work with the web service:
 
