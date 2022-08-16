@@ -116,16 +116,13 @@ LABEL 99;
 ## Further Reading 
 
 -   [Forms](Forms )
--   [Form Columns](Form-Columns )
--   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Form Columns](Form-Columns)
+-   [Sub-level Forms](Sub-level-Forms)
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display)
 -   [Actions](Actions)
--   [Form Refresh](Form-Refresh )
--   [Accessing a Related Form](Accessing-Related-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
--   [Form Triggers](Form-Triggers )
--   [Form Preparation](Form-Preparation )
+-   [Form Refresh](Form-Refresh)
+-   [Accessing a Related Form](Accessing-Related-Form)
+-   [Form Triggers](Form-Triggers)
+-   [Form Preparation](Form-Preparation)
 -   [Help Messages](Help-Messages )
--   [Rules for Customizing](Customization-Rules )
+-   [Rules for Customizing](Customization-Rules)
