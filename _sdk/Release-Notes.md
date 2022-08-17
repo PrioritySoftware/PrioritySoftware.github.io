@@ -7,6 +7,10 @@ tags: 'Priority_SDK'
 
 ## SDK 22.0
 
+### August 2022
+
+- User identifcation via Priority Lite is now deprecated and was removed from the SDK.
+
 ### May 2022
 
 - Clarified that decimal seperator used in JSON files must be a decimal point.

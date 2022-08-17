@@ -48,53 +48,6 @@ SQL.WEBID.
 > AND PHONEBOOK.CUST = ORDERS.CUST 
 > ```
 
-## Automated User Identification for Priority Lite Websites 
-
-If the procedure can only be run by an internal user (i.e., the value of
-the *Internet Access* column is *U*), you can also set up automated
-identification for a particular user via the DOS command prompt.
-
-To do so, first copy the setuser.exe application from the
-*x\\priority\\bin.95\\* directory to the local C drive on the
-workstation from which ***Priority Lite***will be run (where*x*is the
-network drive on which***Priority*** is installed).
-
-In a DOS command line, enter the following commands (where
-*myWebsite.com* is the URL of your ***Priority Lite***website,*myuser*is
-the relevant username on***Priority*** and *mypassword* is that user\'s
-password):
-
-```cmd
-set TABULAPORTALURL=http://myWebsite.com
-c:\setuser myuser mypwd Y  3
-c:\setuser myuser mypwd Y  4 /* for clients running Windows Vista and higher*/
-```
-
-Subsequently, when the user in questions runs a ***Priority Lite***
-procedure, he or she should include the following parameter:
-&\_portal=1.
-
-> **Example:** To run a procedure called **WWWMYPROC**, enter the URL as
-> follows:
-> <http://myWebsite.com/priority/prihtml.dll?WWWMYPROC&_tabulaini=tabula.ini&_portal=1>
-
-If the PC from which this user works keeps track of Cookies, then this
-login information will be applied whenever he or she enters the web
-site. Otherwise, the DOS command must be run again each time the user
-leaves the browser.
-
-## Client Identification for Priority Lite Websites 
-
-In addition to SQL.WEBID, which receives a value only after the user
-logs in, another variable of identification --
-[SQL.CLIENTID](SQL-Functions-Variables#SystemFunctions )
--- is created automatically by the system whenever a new user enters the
-web site. This variable is of **CHAR** type, with a width of 20.
-
-If the PC from which this user works keeps track of Cookies, then this
-user will receive the same ID whenever he or she enters the web site.
-Otherwise, the SQL.CLIENTID is saved only until the user leaves the
-browser.
 
 ## Further Reading 
 
