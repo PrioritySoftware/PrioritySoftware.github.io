@@ -23,9 +23,9 @@ const searchClient = algoliasearch('AXTY3FIAOU', '4546621310eecf69709b717188d9c7
       templates: {
           empty: 'No results',
           item: `
-          <a href="{{url}}"><h3> {{title}}</h3></a> 
+          <a href="{{url}}#{{anchor}}"><h3> {{title}}</h3></a> 
           <p class="tag">  {{tags}} </p>
-          <p> {{#helpers.snippet}}{ "attribute": "excerpt_text", "highlightedTagName": "mark" }{{/helpers.snippet}} </p>
+          <p> {{#helpers.snippet}}{ "attribute": "content", "highlightedTagName": "mark" }{{/helpers.snippet}} </p>
           `
       }
     }),
