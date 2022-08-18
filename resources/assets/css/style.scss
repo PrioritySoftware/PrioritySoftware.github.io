@@ -6,7 +6,7 @@
 body
 {
   background-color:white;
-  overflow-x:hidden;
+  // overflow-x:hidden;
 }
 .center
 {
@@ -54,6 +54,7 @@ body
   top: 0;
   min-width: 20%;
   background-color: #f9f7f6 !important;
+  position: sticky;
   flex-grow: 2;
   overflow:auto !important;
   >h3
@@ -179,7 +180,7 @@ code{
           color: #FF595E;
           background: none;
         }
-        .na, {
+        .na {
           color: #000;
         }
       }
@@ -242,7 +243,6 @@ code{
 
 #header_wrap
 {
-  position:relative;
   z-index: 5001;
   border-top: 4px solid #00b0ec;
 
@@ -250,6 +250,9 @@ code{
   > header {
     padding: 10px 20px;
     display: flex;
+    position:sticky;
+    top:0;
+    align-self: flex-start;
 
     > nav.left-nav {
       flex: 1;
@@ -364,14 +367,18 @@ list-style-type: none;
   flex-grow: 2;
   width: 20% ;
   height: 50%;  
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
 
 #toc-panel {
   margin-top: 1em;
   order: 3;
   flex-grow: 2;
-  top: 1em;
+  top: 0;
   position: sticky;
+  align-self: flex-start;
 }
 
 .hide {
