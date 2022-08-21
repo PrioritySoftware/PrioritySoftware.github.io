@@ -36,7 +36,7 @@ The relationship between upper-level and subforms can be complex, with certain s
 
 Attempting to access just the subform (e.g., just **ORDERITEMS**) will generate an error.
 
-The data available via ODBC is subject to the data permissions of the user making the connection. Records which you are not authorized to view in the Priority UI are also unavailable via ODBC.
+The data available via ODBC is subject to the system privileges of the user making the connection. Forms which you are not authorized to view in the Priority UI are also unavailable via ODBC.
 
 ## Defining Forms as Available via ODBC
 
@@ -60,23 +60,49 @@ The changes made in this form will take effect when you next connect with the OD
 You can check whether the installation was successful by running **ODBC Data Sources (64-bit)** (%windir%\system32\odbcad32.exe) and checking under the Drivers tab.\
 **Note:** Not to be confused with the 32-bit version (%windir%\\**syswow64**\odbcad32.exe). The driver is only available in 64-bit. 
 
+![ODBC Data Source Administrator](https://cdn.priority-software.com/docs/images/ODBC_data_sources.png)
+
 Alternatively, you can check whether the driver is installed in the registry.
 
-## Connecting to the Database
+## Connecting to the Data Source
 
+You can either pre-configure the data source, in the **ODBC Data Sources (64-bit)** utility, or add the configuration as part of the connection string in your code.
 
+**To preconfigure your data source:**
 
-### Local Server
+![ODBC Data Source Administrator](https://cdn.priority-software.com/docs/images/ODBC_data_source_config.png)
 
+1. In the **ODBC Data Sources (64-bit)** (%windir%\system32\odbcad32.exe) utility, switch to the **User DSN** tab.
+2. Click **Add**.
+3. Choose **Priority ODBC Unicode Driver**** and click **Finish**.
+4. Configure the connection properties:
+   - Data Source Name: Priority (or another name of your choice)
+   - Server: <netgate_ip>:8005 (IP address or name of the Priority Application server where the netgate.exe process is running)
+   - Tabula.ini: *tabula.ini* (name of configuration file in Priority server)
+   - Language: 1 for Hebrew, 3 for English \
+   **Note:** Language codes for other languages can be found in **System Management > Dictionaries > Translation > Languages**.
+   - User: <priority_user>
+   - Password: <priority_password>
+   - Database: <company_name> \
+    **Note:** You can find the company names in **System Management > System Maintenance > Companies > Companies**.
 
-### Cloud Server
+5. Press the **Test** button to check the connection.
 
+### Connecting with a Connection String
+
+Alternatively, you can fill in this data as part of the connection string:
+
+```
+Driver=Priority ODBC Unicode Driver;Server=<netgate_ip>:8005;Tabulaini=tabula.ini;Database=my_company;Lang=1;User=<pri_user>;Pwd=<pri_password>
+```
 
 ## ODBC Functions
 
-Using Priority ODBC Driver 3rd party application can retrieve list of databases, tables, primary keys, foreign keys, etc.
-See below list of functions currently supported in v1:
+Using the Priority ODBC Driver 3rd party application can retrieve list of databases, tables, primary keys, foreign keys, etc.
+Currently, the ODBC only supports the direct execution method. Prepared execution (SQLPrepareW and SQLExecute), procedures and catalog functions are not yet supported.
+The following is a list of functions supported in v1 of the ODBC driver:
 
+```
 SQLAllocConnect 
 SQLAllocEnv 
 SQLAllocStmt 
@@ -146,12 +172,70 @@ SQLStatisticsW
 SQLTablesW
 SQLTablePrivilegesW
 SQLTransact
+```
 
-NOTE: in v1 ODBC direct execution method only is supported. Prepared execution (SQLPrepareW and SQLExecute), procedures and catalog functions are not supported
+## Debugging
+
+There are a number of tools you can use to debug ODBC calls to the server:
+
+**Client Side**
+
+On the client side, you can enable tracing in **ODBC Data Source Administrator (64-bit)**:
+
+![ODBC Tracing](https://cdn.priority-software.com/docs/images/ODBC_data_source_trace.png)
+
+**Server Side**
+
+ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder.
 
 
-The ODBC only supports SELECT statements - the data is read-only and cannot be manipulated.
-Create files and download/save them to a specific location?
+## Rules and Constraints
 
+- only SELECT statements are supported (no INSERT/UPDATE etc.)
 
-## Code Example?
+- only one SELECT statement per request is supported
+
+- 'database.table' notation is not supported, only table names should be used in SELECT statements
+
+- The following special characters can not be used in the names of objects (database, table, columns, etc.): @, #, $
+
+- Subquery (select from select) is not supported :
+    ```sql
+    SELECT OTBL.ACTNAME, OTBL.ACT, OTBL.WORKC, OTBL.C1, OTBL.C2, ITBL.WORKPATNAME, ITBL.WORKPATDES FROM ( SELECT OTBL.ACTNAME, OTBL.ACT, OTBL.WORKC, ITBL.WORKCNAME as C1, ITBL.WORKCDES as C2, ITBL.WORKPAT FROM ACT as OTBL left outer join WORKC as ITBL on (OTBL.WORKC = ITBL.WORKC) ) as OTBL;
+    ```
+
+- IS NULL / IS NOT NULL expression should replaced by **=** or **<>** **''** for string values, or **=** or **<> 0** for numeric values
+
+- The COUNT(X) function is replaced by COUNT(DISTINCT X)
+
+- You can not use an expression in ORDER BY:
+    ```sql
+    SELECT COUNT(ACTNAME) as c0, ACT.WORKC as c1 FROM ACT GROUP BY c1 ORDER BY COUNT(ACTNAME) DESC;
+    But there is workaround: expression should be replaced by alias or index:
+    SELECT COUNT(ACTNAME) as c0, ACT.WORKC as c1 FROM ACT GROUP BY c1 ORDER BY c0 DESC;
+    SELECT COUNT(ACTNAME) as c0, ACT.WORKC as c1 FROM ACT GROUP BY c1 ORDER BY 1 DESC;
+    ```
+
+- ORDER BY/GROUP BY column must appear in SELECTed columns:
+    ```sql
+    SELECT ACTNAME FROM ACT ORDER BY ACT; 
+    ```
+    the above statement will not work since ACT column is absent from the  SELECT columns; it should be:
+    ```sql
+    SELECT ACT, ACTNAME FROM ACT ORDER BY ACT;
+    ```
+- You can not select by TOP PERCENT:
+    ```sql
+    SELECT TOP 50 PERCENT VARNAME AS c0, ACT AS c1, PARAM AS c2, VAR AS c3 FROM ACT_sep_ACTVAR;
+    ```
+
+- COUNT(X) doesn't work for calculated fields:
+    ```sql
+    SELECT COUNT(CINVOICES_sep_CINVOICEITEMS.DISPRICE) AS c2 FROM CINVOICES_sep_CINVOICEITEMS;
+    ```
+
+- text forms are not supported
+
+- picture fields are not supported
+
+- Privileges for individual fields in a form, or for records by data authorization, are not yet supported.
