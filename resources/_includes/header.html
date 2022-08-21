@@ -88,37 +88,37 @@
       
     };
 
-    function locationHashChanged() {
-        $(".nav-link").each(function() {
-          if (this.href === window.location.href) {
-              $(this).addClass("active");
-          }
-          else {
-            $(this).removeClass("active");
-          }
-        });
-    }
+    // function locationHashChanged() {
+    //     $(".nav-link").each(function() {
+    //       if (this.href === window.location.href) {
+    //           $(this).addClass("active");
+    //       }
+    //       else {
+    //         $(this).removeClass("active");
+    //       }
+    //     });
+    // }
 
-    window.onhashchange = locationHashChanged;
+    // window.onhashchange = locationHashChanged;
 
-    $(document).ready(function() {
-      locationHashChanged();
+    // $(document).ready(function() {
+    //   locationHashChanged();
 
-      $(document).scroll(function () {
-      currentHash = window.location.hash;
-        $(".anchor-link").each(function () {
-            var top = window.pageYOffset;
-            var distance = top - $(this).offset().top;
-            var hash = $(this).attr('name');
-            // 30 is an arbitrary padding choice, 
-            // if you want a precise check then use distance===0
-            if (distance < 50 && distance > -50 && currentHash != hash) {
-                window.location.hash = encodeURI((hash));
-                currentHash = hash;
-            }
-        });
-    });
-    });
+    //   $(document).scroll(function () {
+    //   currentHash = window.location.hash;
+    //     $(".anchor-link").each(function () {
+    //         var top = window.pageYOffset;
+    //         var distance = top - $(this).offset().top;
+    //         var hash = $(this).attr('name');
+    //         // 30 is an arbitrary padding choice, 
+    //         // if you want a precise check then use distance===0
+    //         if (distance < 50 && distance > -50 && currentHash != hash) {
+    //             window.location.hash = encodeURI((hash));
+    //             currentHash = hash;
+    //         }
+    //     });
+    // });
+    // });
 
 
 
