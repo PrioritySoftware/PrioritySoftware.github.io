@@ -1,6 +1,5 @@
 ---
 title: Release Notes and Change Log
-layout: sdk_nav
 group: Release Notes
 tags: 'Priority_SDK'
 ---

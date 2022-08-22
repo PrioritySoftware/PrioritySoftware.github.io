@@ -1,6 +1,5 @@
 ---
 title: Customization Rules and Best Practices
-layout: sdk_nav
 group: CR
 tags: 'Priority_SDK'
 ---

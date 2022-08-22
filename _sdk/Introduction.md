@@ -1,6 +1,5 @@
 ---
 title: Introduction
-layout: sdk_nav
 group: Introduction
 tags: 'Priority_SDK'
 ---

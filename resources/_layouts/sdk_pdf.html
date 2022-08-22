@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+        
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/resources/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+   {% include head.html %}
+   
+
+  </head>
+
+  <body>
+
+    <!-- NAVIGATION -->
+  <div class="flex-container">
+    
+  <!-- MAIN CONTENT -->
+  <main id="main_content_wrap" class="{{'outer api-content'}}">
+    <!-- Content -->
+    <h1>{{ page.title }}</h1>
+    <section  class="markdown-body">
+          {{ content }}
+    </section>
+  
+  </main>
+  <div id="toc-panel">
+    {% include toc.html html=content sanitize=true class="inline_toc" id="my_toc" h_min=2 h_max=3 %}
+  </div>
+
+
+  <script>
+    $(document).ready(function()
+    {
+      if(screen.width<=640)
+      {
+        $("body").addClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:true,spacing:40});   
+      }
+      else
+      {
+        $("body").removeClass("mobile");
+        $('#primary-navigation').infinitypush({offcanvas:false,spacing:40});
+      }
+    });
+    </script>
+</div>
+
+  </body>
+
+</html>
