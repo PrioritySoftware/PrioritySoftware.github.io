@@ -1,6 +1,5 @@
 ---
 title: Procedures
-layout: sdk_nav
 group: Procedures
 tags: 'Priority_SDK'
 ---

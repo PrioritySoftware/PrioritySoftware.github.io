@@ -1,6 +1,5 @@
 ---
 title: Parameters for Charts
-layout: sdk_nav
 group: Charts
 tags: 'Priority_SDK'
 ---

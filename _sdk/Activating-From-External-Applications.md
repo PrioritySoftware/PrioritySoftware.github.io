@@ -1,6 +1,5 @@
 ---
 title: Activating Priority Entities from an External Application
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

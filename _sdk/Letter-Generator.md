@@ -1,6 +1,5 @@
 ---
 title: The Letter Generator
-layout: sdk_nav
 group: Documents
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: Duplicating Documents with an Interface
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---

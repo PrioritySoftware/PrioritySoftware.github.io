@@ -1,6 +1,5 @@
 ---
 title: Non-standard Scalar Expressions
-layout: sdk_nav
 group: SQL Syntax
 tags: 'Priority_SDK'
 ---

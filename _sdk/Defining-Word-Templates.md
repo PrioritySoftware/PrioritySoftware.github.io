@@ -1,6 +1,5 @@
 ---
 title: Defining Word Templates for Specific Records
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

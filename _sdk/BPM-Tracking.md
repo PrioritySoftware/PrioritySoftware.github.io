@@ -1,6 +1,5 @@
 ---
 title:  Enable Document Tracking
-layout: sdk_nav
 group: BPM
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: LINK and UNLINK
-layout: sdk_nav
 group: SQL Syntax
 tags: 'Priority_SDK'
 ---

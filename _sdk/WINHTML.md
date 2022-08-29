@@ -1,6 +1,5 @@
 ---
 title: Outputting Documents - the WINHTML Program
-layout: sdk_nav
 group: Documents
 tags: 'Priority_SDK'
 ---

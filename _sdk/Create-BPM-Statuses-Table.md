@@ -1,6 +1,5 @@
 ---
 title: Create BPM Statuses Table
-layout: sdk_nav
 group: BPM
 tags: 'Priority_SDK'
 ---

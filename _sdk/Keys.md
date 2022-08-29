@@ -1,6 +1,5 @@
 ---
 title: Table Keys
-layout: sdk_nav
 group: Tables
 tags: 'Priority_SDK'
 ---

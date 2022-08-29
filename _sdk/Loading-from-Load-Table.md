@@ -1,6 +1,5 @@
 ---
 title: Loading from/to a Load Table
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---

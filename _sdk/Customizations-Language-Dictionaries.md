@@ -1,6 +1,5 @@
 ---
 title: Customization - Language Dictionaries
-layout: sdk_nav
 group: Installation
 tags: 'Priority_SDK'
 ---
@@ -57,7 +56,8 @@ where:
 > recorded:
 >
 > ```sql
-> EXECUTE INSTITLE '..\..\system\upgrades\34.sh','..\..\system\upgrades\34-inst.sh'; 
+> EXECUTE INSTITLE '..\..\system\upgrades\34.sh',
+> '..\..\system\upgrades\34-inst.sh'; 
 > ```
 >
 > The new file in system\\upgrades, **34-inst.sh**, will contain the titles
@@ -68,7 +68,8 @@ where:
 > be recorded:
 >
 > ```sql
-> EXECUTE INSTITLE -l', '3', '..\..\system\upgrades\34.sh','..\..\system\upgrades\34-inst.sh ';
+> EXECUTE INSTITLE -l', '3', '..\..\system\upgrades\34.sh',
+> '..\..\system\upgrades\34-inst.sh ';
 > ```
 
 ## Modifying DBI Operations in the Revision 

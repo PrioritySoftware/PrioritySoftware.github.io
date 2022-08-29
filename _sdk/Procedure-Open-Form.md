@@ -1,6 +1,5 @@
 ---
 title: Open Form Record from within a Procedure
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

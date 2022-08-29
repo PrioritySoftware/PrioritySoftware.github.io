@@ -1,6 +1,5 @@
 ---
-title: Form Interfaces
-layout: sdk_nav
+title: Form Loads
 group: Interfaces
 tags: 'Priority_SDK'
 ---

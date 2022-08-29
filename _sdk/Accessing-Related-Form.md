@@ -1,6 +1,5 @@
 ---
 title: Accessing Related Forms
-layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---

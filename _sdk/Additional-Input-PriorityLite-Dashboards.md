@@ -1,6 +1,5 @@
 ---
 title: Additional Input Options (Priority Lite/Dashboards)
-layout: sdk_nav
 group: Priority Lite
 tags: 'Priority_SDK'
 ---

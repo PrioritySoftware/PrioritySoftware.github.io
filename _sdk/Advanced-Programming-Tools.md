@@ -1,6 +1,5 @@
 ---
 title: Advanced Programming Tools
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

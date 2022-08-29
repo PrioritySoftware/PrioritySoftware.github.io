@@ -1,6 +1,5 @@
 ---
 title: Dynamic Interfaces
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---

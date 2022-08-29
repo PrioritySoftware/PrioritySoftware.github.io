@@ -1,6 +1,5 @@
 ---
 title: Dynamic SQL
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: View Table Structure
-layout: sdk_nav
 group: Tables
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: Processed Reports
-layout: sdk_nav
 group: Procedures
 tags: 'Priority_SDK'
 ---

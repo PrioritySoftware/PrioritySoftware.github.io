@@ -1,6 +1,5 @@
 ---
 title: Creating a Text Form
-layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---

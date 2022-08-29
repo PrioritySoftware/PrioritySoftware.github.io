@@ -1,6 +1,5 @@
 ---
 title: Sending an Email from a Program
-layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---

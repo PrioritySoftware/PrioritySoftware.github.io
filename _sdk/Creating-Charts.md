@@ -1,6 +1,5 @@
 ---
 title: Creating Charts
-layout: sdk_nav
 group: Charts
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: Create BPM Statuses Form
-layout: sdk_nav
 group: BPM
 tags: 'Priority_SDK'
 ---
@@ -94,7 +93,8 @@ The following form triggers need to be created:
 -   A POST-DELETE trigger, that deletes from **DOCSTATUSES**:
 
 > ```sql
-> DELETE FROM DOCSTATUSES WHERE TYPE = :$.STATUSTYPE AND ORIGSTATUSID = :$.MYDOCSTAT; 
+> DELETE FROM DOCSTATUSES WHERE TYPE = :$.STATUSTYPE
+> AND ORIGSTATUSID = :$.MYDOCSTAT; 
 > ```
 
 -   A PRE-FORM trigger that causes all records to be displayed when the

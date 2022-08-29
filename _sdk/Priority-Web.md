@@ -1,6 +1,5 @@
 ---
 title: Programming for Priority Web
-layout: sdk_nav
 group: PriorityWeb
 tags: 'Priority_SDK'
 ---

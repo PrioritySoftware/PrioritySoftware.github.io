@@ -1,6 +1,5 @@
 ---
-title: Working with JSON and XML
-layout: sdk_nav
+title: Parsing XML and JSON
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

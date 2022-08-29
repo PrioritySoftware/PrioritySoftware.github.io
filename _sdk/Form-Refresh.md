@@ -1,6 +1,5 @@
 ---
 title:  Form Refresh
-layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---

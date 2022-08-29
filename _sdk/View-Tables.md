@@ -1,6 +1,5 @@
 ---
 title: Table Dictionaries and Reports
-layout: sdk_nav
 group: Tables
 tags: 'Priority_SDK'
 ---

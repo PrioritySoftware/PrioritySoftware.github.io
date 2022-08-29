@@ -1,6 +1,5 @@
 ---
 title: Dashboard Procedures
-layout: sdk_nav
 group: BI
 tags: 'Priority_SDK'
 ---

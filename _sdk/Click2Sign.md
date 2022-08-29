@@ -1,6 +1,5 @@
 ---
 title: Click2Sign
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

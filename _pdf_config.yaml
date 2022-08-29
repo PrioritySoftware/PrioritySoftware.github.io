@@ -16,8 +16,7 @@ destination: _pdf_site/
 defaults:
   -  
     scope:
-      path: "sdk"
-      type: "pages"
+      path: "_sdk"
     values:
       layout: "sdk_pdf"
 

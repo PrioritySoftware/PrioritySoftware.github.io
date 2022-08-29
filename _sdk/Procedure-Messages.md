@@ -1,6 +1,5 @@
 ---
 title: Procedure Messages
-layout: sdk_nav
 group: Procedures
 tags: 'Priority_SDK'
 ---

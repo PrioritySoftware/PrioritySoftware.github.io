@@ -1,6 +1,5 @@
 ---
 title: Get Data from the Client INI File
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

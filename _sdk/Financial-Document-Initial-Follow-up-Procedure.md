@@ -1,6 +1,5 @@
 ---
 title: Financial Documents - Initial and Follow-up Procedures
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

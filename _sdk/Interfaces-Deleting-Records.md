@@ -1,6 +1,5 @@
 ---
 title: Deleting Records via an Interface
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---

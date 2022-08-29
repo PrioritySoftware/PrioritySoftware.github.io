@@ -1,6 +1,5 @@
 ---
 title: Conditions of Record Display and Insertion
-layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---

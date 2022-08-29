@@ -1,6 +1,5 @@
 ---
 title: Modify the New Document
-layout: sdk_nav
 group: BPM
 tags: 'Priority_SDK'
 ---
@@ -92,7 +91,9 @@ Do List* form for that user.
     form from the *To Do List*:
 
     ```sql
-    INSERT INTO ZOOMCOLUMNS(NAME, TONAME, POS) VALUES('TODOREF', 'MYDOCNAME', X); /* where X = some number */
+    INSERT INTO ZOOMCOLUMNS(NAME, TONAME, POS) 
+    VALUES('TODOREF', 'MYDOCNAME', X); 
+    /* where X = some number */
     ```
 6.  Every change in the status or user assigned to your document is documented in the **TODOLIST** table. You should also decide whether users will be able to delete records from the document. For example, you cannot delete records in the **ORDERS** form, you can only change their status to one which is flagged as **Canceled**.
     If you decide to allow record deletion in your document, you must ensure that any deleted records are deleted from the **TODOLIST** table as well. To do so, add a POST-DELETE trigger to the **XXXX_MYDOC** form:

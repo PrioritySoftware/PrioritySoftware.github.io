@@ -1,6 +1,5 @@
 ---
 title: Encrypting Data
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

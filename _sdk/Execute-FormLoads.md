@@ -1,6 +1,5 @@
 ---
 title: Executing the Form Load
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---

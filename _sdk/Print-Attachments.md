@@ -1,6 +1,5 @@
 ---
 title: Print Attachments from a Procedure
-layout: sdk_nav
 group: Procedures
 tags: 'Priority_SDK'
 ---

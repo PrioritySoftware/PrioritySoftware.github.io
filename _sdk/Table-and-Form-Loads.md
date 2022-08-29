@@ -1,6 +1,5 @@
 ---
 title: Combining Table Loads with Form Loads
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---

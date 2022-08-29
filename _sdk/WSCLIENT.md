@@ -1,6 +1,5 @@
 ---
 title: Interacting with Webservices via WSCLIENT
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: Using Custom Form Columns in the Business Rules Generator
-layout: sdk_nav
 group: Programming Tools
 tags: 'Priority_SDK'
 ---

@@ -1,6 +1,5 @@
 ---
 title: Priority Lite and Dashboards
-layout: sdk_nav
 group: Priority Lite
 tags: 'Priority_SDK'
 ---

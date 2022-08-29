@@ -1,6 +1,5 @@
 ---
 title: Built-in Triggers
-layout: sdk_nav
 group: Forms
 tags: 'Priority_SDK'
 ---
