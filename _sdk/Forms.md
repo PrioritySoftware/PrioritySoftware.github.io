@@ -50,26 +50,24 @@ columns in the *Form Generator*.
 The form name is a short name by which the form is identified by the
 system. As this name is used in SQL variables in form triggers, there
 are certain restrictions (which also apply to form column names):  
-\*Only alphanumeric values (upper- and lower-case letters and digits)
-and the underscore may be used (no spaces).
 
+- Only alphanumeric values (upper- and lower-case letters and digits)
+and the underscore may be used (no spaces).
 -   The name must begin with a letter.
 -   You may not used a reserved word. A list of reserved words is
     available in the *Reserved Words* form (*System Management →
     Dictionaries*).
 -   The name assigned to any newly created forms must begin with a
     common four-letter prefix. This should be the same for all entities
-    added to the customer's **''Priority**'' installation (e.g.,
+    added to the customer's **Priority** installation (e.g.,
     **ACME_ORDERS**).  
 
 ------------------------------------------------------------------------
 
 **Notes:**  
-\*It is advisable to assign the form the same name as its base table.
+- It is advisable to assign the form the same name as its base table.
 
--   Because SQL variables are based on the form name, any changes in the
-    name must be accompanied by changes in the appropriate SQL
-    statements.
+- Because SQL variables are based on the form name, any changes in the name must be accompanied by changes in the appropriate SQL statements.
 
 ------------------------------------------------------------------------
 
@@ -112,12 +110,12 @@ from a given form column.
 
 ## Module
 
-Each form belongs to a given ***Priority***module. As different modules
-are included in each type of***Priority***package, users are restricted
+Each form belongs to a given ***Priority*** module. As different modules
+are included in each type of ***Priority*** package, users are restricted
 to those forms whose modules that have purchased. When creating a new
 form, specify “Internal Development.” This way you (and your customers)
 will be able to use your own forms no matter which modules
-of***Priority*** have been purchased.
+of ***Priority*** have been purchased.
 
 ## Query Forms
 
@@ -132,9 +130,7 @@ retrieved from the database.
 It is not necessary to flag any of the columns in a query form as
 read-only. In fact, it is advisable to make the columns in the unique
 key updateable for the user’s convenience.  
-**Tip:** To create a form in which records cannot be inserted or
-updated, but deletions are allowed, assign [read-only
-status](Form-Column-Attributes#Read-only-Columns ) to all the
+**Tip:** To create a form in which records cannot be inserted or updated, but deletions are allowed, assign [read-only status](Form-Columns#read-only-columns) to all the
 form’s columns.
 
 ## Blocking Record Deletion
