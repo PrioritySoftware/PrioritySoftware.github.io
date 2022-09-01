@@ -149,8 +149,10 @@ For instance, say you want to create a procedure that prints multiple copies of 
 -   If the user also specifies a number of copies when sending the document to the printer (e.g., 2), the total number of copies printed will be a product of both numbers (e.g., if   **PRIV_NUMCOPIES** = 3, a total of 6 copies will be printed).
 -   If this mechanism is used to generate multiple copies of a document in which only one original can be printed (such as an invoice or receipt), this mechanism does not override that restriction. In other words, additional copies that are generated in this fashion are still marked as copies.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Special Document Features](Special-Document-Features )
 -   [Outputting the Document](WINHTML )
 -   [The Letter Generator](Letter-Generator )
+{% endif %}

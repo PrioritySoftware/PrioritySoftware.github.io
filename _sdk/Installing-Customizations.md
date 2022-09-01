@@ -151,6 +151,8 @@ To install the revision:
 2. Run the System Management > Revisions > **Install Upgrade** program.
 3. In the input, browse to the shell file you created.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Customizations: Installing the Language Dictionaries](Customizations-Language-Dictionaries )
+{% endif %}

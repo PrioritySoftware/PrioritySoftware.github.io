@@ -77,6 +77,7 @@ is written to the REPCONDITION variable (in ASCII format).
 
 > **Example:** See step 40 of the **WWWDB_PORDERS_A** procedure.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -89,3 +90,4 @@ is written to the REPCONDITION variable (in ASCII format).
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

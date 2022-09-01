@@ -109,17 +109,15 @@ UNLINK ORDERS;
 LABEL 99;
 ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
--   [SQL Functions and
-    Variables](SQL-Functions-Variables )
+-   [SQL Functions and Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
--   [Return Values and Statement
-    Failure](RETVAL-Values )
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Return Values and Statement Failure](RETVAL-Values )
+-   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )
+{% endif %}

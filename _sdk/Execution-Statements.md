@@ -42,6 +42,7 @@ strings, each string is also enclosed in a set of apostrophes).\
 <!-- TODO: Fix focus to web interface -->
 **Note:** For the ***Priority*** web interface, see [Working with the Priority Web Interface](Priority-Web).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
@@ -52,3 +53,4 @@ strings, each string is also enclosed in a set of apostrophes).\
 -   [Return Values and Statement Failure](RETVAL-Values )
 -   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )
+{% endif %}

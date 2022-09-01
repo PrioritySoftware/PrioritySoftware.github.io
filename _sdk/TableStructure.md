@@ -51,8 +51,10 @@ window):
     also displays decimal precision.
 -   **Table Keys** shows the keys in a table.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables )
 -   [SQL Syntax](SQL-Syntax )
 -   [Executing SQL Statements](Executing-SQL-Statements )
+{% endif %}

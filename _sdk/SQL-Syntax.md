@@ -39,19 +39,17 @@ In delineating SQL syntax, the following conventions are employed:
     statements are enclosed within a pair of slashes and asterisks
     (e.g., /\* Open failed; no record meets condition \*/).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Viewing Table Structure](TableStructure )
 -   [Executing SQL Statements](Executing-SQL-Statements )
--   [SQL Functions and
-    Variables](SQL-Functions-Variables )
+-   [SQL Functions and Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
 -   [LINK and UNLINK](Link-Unlink )
--   [Return Values and Statement
-    Failure](RETVAL-Values )
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Return Values and Statement Failure](RETVAL-Values )
+-   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [ATOD and DTOA](ATOD-and-DTOA )
+{% endif %}

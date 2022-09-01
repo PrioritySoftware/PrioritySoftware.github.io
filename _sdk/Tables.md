@@ -60,12 +60,13 @@ system tables.
 **Note:** For general guidelines for development, see [Working with Version Revisions](Installing-Customizations).
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
--   [Options for Creating and Modifying Tables, Columns and
-    Keys](Create-Modify-Tables )
+-   [Options for Creating and Modifying Tables, Columns and Keys](Create-Modify-Tables )
 -   [Viewing Tables in the Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )
 -   [Viewing Table Structure](TableStructure )
+{% endif %}

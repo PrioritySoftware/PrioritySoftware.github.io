@@ -36,7 +36,9 @@ with the specified user (in the *Personnel File* form). For form columns
 taken from the **UGROUPS** table, the e-mail/text message will be sent
 to the members of the specified group.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

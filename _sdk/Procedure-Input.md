@@ -238,6 +238,7 @@ records that will serve as input, particularly when the query is complex
 
 > **Example:** See the **CLOSEAIVS** procedure.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -250,3 +251,4 @@ records that will serve as input, particularly when the query is complex
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

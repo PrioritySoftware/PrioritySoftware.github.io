@@ -15,6 +15,7 @@ collections:
 theme: jekyll-theme-slate
 title: "Priority Developer Portal"
 permalinks: pretty
+output: web
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "no_intra_emphasis", "fenced_code_blocks", "lax_spacing", "smart"]
@@ -27,6 +28,7 @@ defaults:
       path: "_sdk"
     values:
       layout: "sdk_nav"
+      output: web
 
 # Google Analytics
 google_analytics: UA-12315884-16

@@ -21,11 +21,12 @@ Development* program are helpful in understanding table structure. For
 details, see [Viewing Table
 Structure](TableStructure ).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables )
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
--   [Options for Creating and Modifying Tables, Columns and
-    Keys](Create-Modify-Tables )
+-   [Options for Creating and Modifying Tables, Columns and Keys](Create-Modify-Tables )
 -   [DBI Syntax](DBI-Syntax )
+{% endif %}

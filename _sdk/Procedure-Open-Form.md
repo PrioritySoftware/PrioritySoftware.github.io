@@ -75,7 +75,9 @@ procedure step to skip it). In this additional step, the *Entity
 Name* = **ORDERS** and the *Type* = **F**. In the *Procedure Parameters*
 sub-level form, add the parameter DNO (with type **CHAR**).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

@@ -156,7 +156,9 @@ following code saves the **ORGUNITS** report as an Excel file.
 EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur', 444; 
 ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

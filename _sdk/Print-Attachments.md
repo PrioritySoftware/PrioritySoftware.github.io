@@ -70,7 +70,9 @@ an SQLI step. The **PREXFILE** program receives several parameters:
 > EXECUTE PREXFILE '-d', '','', :STK; 
 > ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

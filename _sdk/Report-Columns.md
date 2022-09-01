@@ -399,6 +399,7 @@ FORMAT;
 ```
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Organizing Report Data](Organize-Report-Data )
@@ -409,3 +410,4 @@ FORMAT;
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )
+{% endif %}

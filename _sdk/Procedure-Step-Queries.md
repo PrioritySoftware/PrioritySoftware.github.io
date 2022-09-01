@@ -96,6 +96,7 @@ Check* program by Action from within the *Procedure Generator* form.
 You can track changes to step queries once they have been included in
 prepared version revisions. See [Tracking Changes to Queries](Installing-Customizations#Tracking-Changes-to-Queries ).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -108,3 +109,4 @@ prepared version revisions. See [Tracking Changes to Queries](Installing-Customi
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

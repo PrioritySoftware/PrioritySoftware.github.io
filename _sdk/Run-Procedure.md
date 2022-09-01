@@ -75,6 +75,7 @@ steps several times within a single procedure.
 To include one procedure within another, use the *Procedure Link* form, a
 sub-level of the *Procedure Generator*.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -87,3 +88,4 @@ sub-level of the *Procedure Generator*.
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

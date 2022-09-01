@@ -31,10 +31,11 @@ There are a number of ways to find available form loads and table loads, both st
 
 There are a number of interface menus (e.g., for inventory counts, for sales invoices) that include a table load procedure, an interim table form and a form load procedure. You may find that the interim table form and form load procedure already meet your needs (e.g., if you want to load an inventory count file of data collected from a peripheral device), so that you only have to create a **DBLOAD** program. To find such interface components, retrieve by LOAD\* in the various generators (for forms, procedures and/or menus).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Form Loads](Form-Loads )
 -   [Table Loads](Table-Loads )
--   [Combining Table Loads with Form
-    Loads](Combining-Table-Loads-with-Form-Loads )
+-   [Combining Table Loads with Form Loads](Combining-Table-Loads-with-Form-Loads )
 -   [Interfaces](Interfaces )
+{% endif %}

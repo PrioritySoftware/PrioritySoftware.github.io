@@ -122,15 +122,18 @@ opening a new report manually, specify "Internal Development"; this way
 you (and your customers) will be able to use the report no matter which
 modules of ***Priority*** have been purchased.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
 -   [Organizing Report Data](Organize-Report-Data )
--   [Refining Report Data
-    Display](Refine-Report-Display )
--   [Calculated Columns in
-    Reports](Calculated-Columns-Reports )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Calculated Columns in Reports](Calculated-Columns-Reports )
+-   [Organizing Report Data](organize-report-data )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Calculated Columns in Reports](Calculated-Columns-Reports )
 -   [Types of Reports](Report-Types )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

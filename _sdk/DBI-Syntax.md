@@ -179,6 +179,7 @@ Change column priority in key
 **COLUMN** *column_name*\
 **CHANGE PRIORITY TO** *new_column_priority*;
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables )
@@ -186,3 +187,4 @@ Change column priority in key
 -   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and Keys](Create-Modify-Tables )
 -   [Viewing Tables in the Database](View-Tables )
+{% endif %}

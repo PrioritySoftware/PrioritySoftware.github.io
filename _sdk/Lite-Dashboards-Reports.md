@@ -216,10 +216,12 @@ LOOP 1;
 LABEL 2;
 ```
 
+{% if site.output == "web" %}
 ## Further Reading {#further_reading}
 
--   [User Identification for Priority Lite/Dashboards](Lite-Identification)
--   [Additional Input Options (Priority Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) 
--   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML) 
--   [Writing Dashboard Procedures](Dashboard-Procedures) 
--   [Priority Lite and Dashboards](Lite-Dashboards)
+-   [User Identification for Priority Lite/Dashboards](Lite-Identification "wikilink")
+-   [Additional Input Options (Priority Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) "wikilink")
+-   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML) "wikilink")
+-   [Writing Dashboard Procedures](Dashboard-Procedures "wikilink")
+-   [Priority Lite and Dashboards](Priority_Lite_and_Dashboards "wikilink")
+{% endif %}

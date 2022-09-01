@@ -423,7 +423,9 @@ from the DOS command prompt. To do so, use the following syntax
 > INTERFACE LOADORDERS d:\priority\tmp\messages.txt
 > ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

@@ -138,11 +138,12 @@ the same time.
 -   **Change Column Priority** --- The changing of a column's priority
     will affect the priority of the other columns in the table.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables )
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
--   [Viewing Tables in the
-    Database](View-Tables )
+-   [Viewing Tables in the Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )
+{% endif %}

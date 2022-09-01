@@ -99,6 +99,7 @@ forms.
 > *D*. Similar conditions are written for the **TYPE** columns of
 > **DOCUMENTS_P** and **DOCUMENTS_T** (*P* and *T*, respectively).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Forms](Forms )
@@ -108,9 +109,9 @@ forms.
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Default Designs for Forms](Default-Design)
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

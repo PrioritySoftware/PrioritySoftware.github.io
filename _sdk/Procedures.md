@@ -137,6 +137,7 @@ When opening a new procedure manually, specify "Internal Development";
 this way you (and your customers) will be able to use the procedure no
 matter which modules of ***Priority*** have been purchased.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -149,3 +150,4 @@ matter which modules of ***Priority*** have been purchased.
 -   [Running a Procedure](Run-Procedure )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

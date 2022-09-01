@@ -85,15 +85,15 @@ sub-level of the *Procedure Generator* form. You can then view that
 linkage in the *Procedure Link* form, another sub-level of the *Report
 Generator* form.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
 -   [Organizing Report Data](Organize-Report-Data )
--   [Refining Report Data
-    Display](Refine-Report-Display )
--   [Calculated Columns in
-    Reports](Calculated-Columns-Reports )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Calculated Columns in Reports](Calculated-Columns-Reports )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )
+{% endif %}

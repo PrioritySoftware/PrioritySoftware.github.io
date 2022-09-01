@@ -207,12 +207,12 @@ in forms that are based on them:
 > the table. However, in the **Contacts** form (based on **PHONEBOOK**),
 > the link is based on the autounique PHONE column.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables )
 -   [Table Columns](Table-Columns )
--   [Options for Creating and Modifying Tables, Columns and
-    Keys](Create-Modify-Tables )
--   [Viewing Tables in the
-    Database](View-Tables )
+-   [Options for Creating and Modifying Tables, Columns and Keys](Create-Modify-Tables )
+-   [Viewing Tables in the Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )
+{% endif %}

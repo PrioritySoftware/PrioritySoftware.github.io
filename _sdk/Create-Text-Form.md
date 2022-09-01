@@ -16,19 +16,13 @@ name of the upper-level form, with the addition of the characters
 title *Remarks*. You may, of course, revise any of these (in the *Form
 Generator* form).
 
-
-
 > **Note:** The newly created table will inherit the name of the base
 table for the upper-level form, with the addition of the characters
 **TEXT**, as well as its table type.
 
-
-
 To automatically create a text form and link it to its upper-level form,
 run the *Create Text Form* program (*System Management → Generators →
 Forms*).
-
-
 
 The newly created text form will appear in the *Form Generator* form,
 and its linkage to the upper-level form will be displayed through the
@@ -109,6 +103,7 @@ UNLINK PARTTEXT;
 LABEL 99;
 ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Forms](Forms )

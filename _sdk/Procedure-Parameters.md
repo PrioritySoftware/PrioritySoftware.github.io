@@ -113,6 +113,7 @@ procedure parameters must have a specified type.
     -   Select **LINE** if the file consists of a single record input
         from the database.
 
+{% if site.output == "web" %}
 ## Further Reading {#further_reading}
 
 -   [Procedure Steps](Procedure-Steps)
@@ -125,3 +126,4 @@ procedure parameters must have a specified type.
 -   [Help Messages](Help-Messages)
 -   [Rules for Customizing](Customization-Rules)
 -   [Procedures](Procedures)
+{% endif %}

@@ -112,19 +112,19 @@ UNLINK PARTTEXT;
 LABEL 99;
 ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Default Design for a Form](Default-Design )
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

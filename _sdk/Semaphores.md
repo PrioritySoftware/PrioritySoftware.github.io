@@ -100,7 +100,9 @@ UNIQUE(NAME);
 > LABEL 99;
 > ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

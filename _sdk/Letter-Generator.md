@@ -114,7 +114,9 @@ letter and the BPM flow chart.
     *Letter Generator* form). In such a case, users will be able to
 choose the desired procedure in the Print/Send Options dialogue box.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Documents](Documents )
 -   [Special Document Features](Special-Document-Features )
+{% endif %}

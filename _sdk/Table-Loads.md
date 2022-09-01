@@ -237,9 +237,11 @@ table loads.
 
 The file is created with UTF-16 encoding.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
--   [Form Loads](Form-Loads)
--   [Combining Table Loads with Form Loads](Table-and-Form-Loads)
--   [Tips for Finding Existing Interfaces](Existing-Interfaces)
--   [Interfaces](Interfaces)
+-   [Form Loads](Form-Loads )
+-   [Combining Table Loads with Form Loads](Combining-Table-Loads-with-Form-Loads )
+-   [Tips for Finding Existing Interfaces](Existing-Interfaces )
+-   [Interfaces](Interfaces )
+{% endif %}

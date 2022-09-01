@@ -24,10 +24,8 @@ content and problems with form display.
 
 Examples of possible problems:
 
--   A column in the base table's [autounique or unique
-    key](Keys ) is missing from the form
--   A [calculated
-    column](Form-Column-Attributes#Calculated-Columns ) has
+-   A column in the base table's [autounique or unique key](Keys ) is missing from the form
+-   A [calculated column](Form-Column-Attributes#Calculated-Columns ) has
     been assigned a width that is unsuitable for its column type (e.g.,
     a width of 11 for a **DATE** column)
 -   A form column is neither derived from a table column nor defined by
@@ -60,19 +58,19 @@ sub-level forms.
 > **ORDERS** form and then access the sub-level form via a record in the
 > *Sales Orders* form.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Default Design for a Form](Default-Design )
 -   [Form Triggers](Form-Triggers )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

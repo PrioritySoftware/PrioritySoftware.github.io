@@ -1,0 +1,16 @@
+---
+layout: none
+---
+
+{% assign list = site.data.sdktopics.chapters %}
+
+    {% for chapter in list %}
+        {{site.url}}{{site.baseurl}}/sdk/{{chapter.url}}.html
+            {%for topic in chapter.topics %}
+                {{site.url}}{{site.baseurl}}/sdk/{{topic.url}}.html
+                    {%for subtopic in topic.subtopics %}
+                        {{site.url}}{{site.baseurl}}/sdk/{{subtopic.url}}.html
+                    {% endfor %}
+            {% endfor %}
+    {% endfor %}
+                

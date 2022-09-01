@@ -46,6 +46,7 @@ SQL.WEBID.
 > ```
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Designing HTML Reports for Priority Lite/Dashboards](Lite-Dashboards-Reports)
@@ -53,3 +54,4 @@ SQL.WEBID.
 -   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML)
 -   [Writing Dashboard Procedures](Dashboard-Procedures )
 -   [Priority Lite and Dashboards](Lite-Dashboards)
+{% endif %}

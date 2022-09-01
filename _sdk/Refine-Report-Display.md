@@ -232,6 +232,7 @@ To include more than one field in the same cell:
     -   in a separate table cell (*D*). Define the location of that cell
         in the next sub-level, *Column Title--HTML Design*.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
@@ -242,3 +243,4 @@ To include more than one field in the same cell:
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )
+{% endif %}

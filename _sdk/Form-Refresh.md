@@ -30,19 +30,19 @@ Additional ways of forcing a form refresh are:
     include :ACTIVATEREFRESH = 1 in the PRE-FORM trigger of the form in
     question.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Default Design for a Form](Default-Design )
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

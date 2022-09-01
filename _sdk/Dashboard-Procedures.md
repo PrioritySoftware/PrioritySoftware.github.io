@@ -62,15 +62,12 @@ be assigned the value *CRM* in the *Application* column of the
 *Procedure Generator*. CRM Dashboards that are added to Outlook appear
 under the heading **Priority CRM**.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
--   [User Identification for Priority
-    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
--   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
--   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
--   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
--   [Priority Lite and
-    Dashboards](Priority-Lite-and-Dashboards )
+-   [User Identification for Priority Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
+-   [Designing HTML Reports for Priority Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
+-   [Additional Input Options (Priority Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
+-   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
+-   [Priority Lite and Dashboards](Priority-Lite-and-Dashboards )
+{% endif %}

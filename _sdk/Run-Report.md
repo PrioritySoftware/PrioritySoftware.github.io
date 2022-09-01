@@ -76,15 +76,15 @@ following steps:
 Generator* form, serves a similar purpose.
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
 -   [Organizing Report Data](Organize-Report-Data )
--   [Refining Report Data
-    Display](Refine-Report-Display )
--   [Calculated Columns in
-    Reports](Calculated-Columns-Reports )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Calculated Columns in Reports](Calculated-Columns-Reports )
 -   [Types of Reports](Report-Types )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )
+{% endif %}

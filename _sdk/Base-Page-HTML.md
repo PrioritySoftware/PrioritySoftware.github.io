@@ -57,15 +57,12 @@ standard editor for HTML page design. You can add pictures, links and
 text, and you can change the order and position of the reports,
 parameters and messages that are input into the template.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
--   [User Identification for Priority
-    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
--   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
--   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
--   [Writing Dashboard
-    Procedures](Writing-Dashboard-Procedures )
--   [Priority Lite and
-    Dashboards](Priority-Lite-and-Dashboards )
+-   [User Identification for Priority Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
+-   [Designing HTML Reports for Priority Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
+-   [Additional Input Options (Priority Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
+-   [Writing Dashboard Procedures](Writing-Dashboard-Procedures )
+-   [Priority Lite and Dashboards](Priority-Lite-and-Dashboards )
+{% endif %}

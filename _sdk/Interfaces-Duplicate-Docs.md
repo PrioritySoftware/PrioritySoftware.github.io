@@ -5,8 +5,7 @@ tags: 'Priority_SDK'
 ---
 
 Suppose you want to copy an entire sales order in order to create the
-same one for another customer. You can use the [form
-interface](Form-Loads ) to do this. In the following example,
+same one for another customer. You can use the [form interface](Form-Loads) to do this. In the following example,
 a new sales order is opened for a customer that is received as input,
 copying the order items, unit price, discount, ordered quantity, order
 item remarks and order remarks.
@@ -119,7 +118,9 @@ query should look like this:
 > EXECUTE BACKGROUND WINFORM 'ORDERS','',:ORDNAME, '','2';
 > ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 [Click](Advanced-Programming-Tools ) for information on
 additional advanced programming tools.
+{% endif %}

@@ -551,18 +551,19 @@ To enable this permission type, you need to add the following:
 
 You can see an example of this kind of column in the **AINVOICES** form.
 
+{% if site.output == "web" %}
 ## Further Reading
 
 -   [Forms](Forms )
 -   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Default Design for Form](Default-Design))
+-   [Default Design for Form](Default-Design)
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

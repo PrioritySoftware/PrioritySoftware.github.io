@@ -57,6 +57,7 @@ case the user wants to change his or her mind. This is achieved by
 jumping to an END command (e.g., step 50). Note that the END command has
 no parameters.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -69,3 +70,4 @@ no parameters.
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

@@ -1,7 +1,6 @@
 collections:
   sdk:
     output: true
-    layout: sdk_pdf
 
 theme: jekyll-theme-slate
 title: "Priority SDK"
@@ -12,11 +11,11 @@ redcarpet:
 repository: mobile/neomib.github.io
 layouts_dir:  /resources/_layouts
 includes_dir: /resources/_includes
-destination: _pdf_site/
 defaults:
   -  
     scope:
       path: "_sdk"
     values:
       layout: "sdk_pdf"
+      output: pdf
 

@@ -28,6 +28,7 @@ procedure. The message number must be stored in an **INT** parameter
 (either via the *Value* column or defined in an earlier procedure step);
 its content is recorded in the *Procedure Messages* form.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Steps](Procedure-Steps )
@@ -40,3 +41,4 @@ its content is recorded in the *Procedure Messages* form.
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

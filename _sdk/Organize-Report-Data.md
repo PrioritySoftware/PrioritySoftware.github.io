@@ -210,15 +210,15 @@ report will be multiplied by this value.
 
 > **Example:** See the **INCOME_STATEMENT** report.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Refining Report Data
-Display](Refine-Report-Display )
--   [Calculated Columns in
-Reports](Calculated-Columns-Reports )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Calculated Columns in Reports](Calculated-Columns-Reports )
 -   [Types of Reports](Report-Types )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )
+{% endif %}

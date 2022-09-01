@@ -31,17 +31,15 @@ Additional options for using the *SQL Interpreter* are:
     indicates the number of records retrieved in each step.
 
 **Note**: By default, the SQL Development program does not output data in unicode. If you need to view data that contains special characters (e.g. text from languages such as Spanish or German), remember to append the [UNICODE](Additions-to-SQL-Commands#output-formats-for-select) option to your query.
+{% if site.output == "web" %}
 ## Further Reading 
 
--   [SQL Functions and
-    Variables](SQL-Functions-Variables)
+-   [SQL Functions and Variables](SQL-Functions-Variables)
 -   [Flow Control](Flow-Control)
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands)
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands)
 -   [Execution Statements](Execution-Statements)
 -   [LINK and UNLINK](Link-Unlink)
--   [Return Values and Statement
-    Failure](RETVAL-Values)
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions)
+-   [Return Values and Statement Failure](RETVAL-Values)
+-   [Non-standard Scalar Expressions](Scalar-Expressions)
 -   [Viewing Table Structure](TableStructure)
+{% endif %}

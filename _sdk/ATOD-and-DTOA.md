@@ -98,7 +98,10 @@ SELECT DTOA(:DATE,'MMMM-YYYY') FROM DUMMY FORMAT;/* June-2006 */
 SELECT DTOA(:DATE, 'The current date is MM-DD-YY, and the time is hh:mm.') FROM DUMMY FORMAT;
 ```
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Non-standard Scalar
     Expressions](Scalar-Expressions )
+
+{% endif %}

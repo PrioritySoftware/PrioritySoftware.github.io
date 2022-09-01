@@ -147,17 +147,15 @@ the relevant GOSUB command.
 
 Sub-routines can receive an identifier number from 1-999,999.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
--   [SQL Functions and
-    Variables](SQL-Functions-Variables )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
+-   [SQL Functions and Variables](SQL-Functions-Variables )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
 -   [LINK and UNLINK](Link-Unlink )
--   [Return Values and Statement
-    Failure](RETVAL-Values )
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Return Values and Statement Failure](RETVAL-Values )
+-   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )
+{% endif %}

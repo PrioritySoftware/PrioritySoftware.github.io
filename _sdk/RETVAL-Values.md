@@ -32,16 +32,15 @@ The following table displays return values for each SQL statement and delineates
 |    <br>LABEL                                     	|    <br>                                                                                                                                                               	|    <br>never                                                                                                                                                                	|
 |    <br>END                                       	|    <br>                                                                                                                                                               	|    <br>never                                                                                                                                                                	|
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
--   [SQL Functions and
-    Variables](SQL-Functions-Variables )
+-   [SQL Functions and Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
 -   [LINK and UNLINK](Link-Unlink )
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )
+{% endif %}

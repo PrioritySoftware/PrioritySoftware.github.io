@@ -28,10 +28,11 @@ loaded can be fixed, and the load program can be executed again with the
 > **INTERFACE** program, whose first input parameter is the name of the
 > form load.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Form Loads](Form-Loads )
 -   [Table Loads](Table-Loads )
--   [Tips for Finding Existing
-    Interfaces](Existing-Interfaces )
+-   [Tips for Finding Existing Interfaces](Existing-Interfaces )
 -   [Interfaces](Interfaces )
+{% endif %}

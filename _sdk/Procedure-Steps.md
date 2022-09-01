@@ -79,6 +79,7 @@ The following basic steps are reserved for use by **Priority Software** only.
 
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Procedure Parameters](Procedure-Parameters )
@@ -91,3 +92,4 @@ The following basic steps are reserved for use by **Priority Software** only.
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Procedures](Procedures )
+{% endif %}

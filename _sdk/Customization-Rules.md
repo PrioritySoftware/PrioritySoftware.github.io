@@ -180,6 +180,7 @@ The following recommendations are intended for new developers to avoid some comm
 
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables)
@@ -187,3 +188,4 @@ The following recommendations are intended for new developers to avoid some comm
 -   [Reports](Reports )
 -   [Procedures](Procedures )
 -   [Installing  your Customizations](Installing-Customizations)
+{% endif %}

@@ -73,6 +73,8 @@ UNLINK DAYS;
 LABEL 999;
 ```
 
-6. After you run your code, open the file from the attachments form (**Customer Documents for Task** in our example). You should see the contents of the table:
+{% if site.output == "web" %}
 
-![Debug file after running code](https://cdn.priority-software.com/docs/images/SDK_Web_DebugResult.png) 
+[Click](Advanced-Programming-Tools ) for information on
+additional advanced programming tools.
+{% endif %}

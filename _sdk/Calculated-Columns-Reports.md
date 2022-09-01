@@ -146,14 +146,17 @@ column (beyond a simple sum, average, minimum or maximum).
 Complex functions are defined (like all calculated columns) in the
 *Report Column Extension* form. In addition, a *Col. Func.* of type *F* must be specified.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
 -   [Organizing Report Data](Organize-Report-Data )
--   [Refining Report Data
-    Display](Refine-Report-Display )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Organizing Report Data](organize-report-data )
+-   [Refining Report Data Display](Refine-Report-Display )
 -   [Types of Reports](Report-Types )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
 -   [Reports](Reports )
+{% endif %}

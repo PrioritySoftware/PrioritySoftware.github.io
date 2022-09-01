@@ -105,8 +105,7 @@ To enable the user to input text in the HTML screen, use a procedure
 parameter of **TEXT** type. The user keys in an unlimited number of
 lines in the text field, and these lines are returned to the procedure
 via a file linked to the **PROCTABLETEXT** table. For an example, see
-[Inputting Text Into an HTML
-Screen](Procedure-Input#Inputting-Text-Into-an-HTML-Screen ).
+[Inputting Text Into an HTML Screen](Procedure-Input#Inputting-Text-Into-an-HTML-Screen ).
 
 ## Input of Attachments 
 
@@ -121,6 +120,7 @@ in the procedure parameter. That is, after the INPUT step, the value in
 the attachment parameter will not be the filename that the user keyed
 in, but rather the filename in the server.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [User Identification for Priority Lite/Dashboards](Lite-Identification)

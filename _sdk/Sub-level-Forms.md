@@ -82,9 +82,7 @@ Column Extension* form, a sub-level of the *Form Columns* form.
     the upper-level form name (e.g., :$$.ORD). Moreover, if the link is
     made between columns having identical names, you can use the @ sign
     as a wildcard in place of the form column name (e.g., :$$.@).  
--   For a detailed explanation of conditions, see [Conditions of Record
-    Display and
-    Insertion](Conditions-Record-Display ).
+-   For a detailed explanation of conditions, see [Conditions of Record Display and Insertion](Conditions-Record-Display ).
 
 
 ## Creating a Form Tree
@@ -119,6 +117,7 @@ To link a root form to a menu and to define its position, use either the
 *Menu/Form Link* form, a sub-level of the *Form Generator* form, or the
 *Menu Items* form, a sub-level of the *Menu Generator* form.
 
+{% if site.output == "web" %}
 ## Further Reading
 
 -   [Forms](Forms )
@@ -133,3 +132,4 @@ To link a root form to a menu and to define its position, use either the
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

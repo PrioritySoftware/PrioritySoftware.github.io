@@ -71,8 +71,10 @@ If the above conditions are met:
 
 -->
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Documents](Documents )
 -   [Outputting the Document](WINHTML)
 -   [The Letter Generator](Letter-Generator )
+{% endif %}

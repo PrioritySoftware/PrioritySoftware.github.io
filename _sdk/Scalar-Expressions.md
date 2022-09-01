@@ -660,13 +660,15 @@ converts dates, times and days into internal numbers (mainly used to
 converts dates, times and days in the system to ASCII (mainly used
     to print out or display data to the user). See [ATOD and DTOA](ATOD-and-DTOA ).
 
+{% if site.output == "web" %}
 ## Further Reading 
 
--   [Executing SQL Statements](Executing-SQL-Statements)
--   [SQL Functions and Variables](SQL-Functions-Variables)
--   [Flow Control](Flow-Control)
--   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands)
--   [Execution Statements](Execution-Statements)
--   [LINK and UNLINK](Link-Unlink)
--   [Return Values and Statement Failure](RETVAL-Values)
--   [Viewing Table Structure](TableStructure)
+-   [Executing SQL Statements](Executing-SQL-Statements )
+-   [SQL Functions and Variables](SQL-Functions-Variables )
+-   [Flow Control](Flow-Control )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
+-   [Execution Statements](Execution-Statements )
+-   [LINK and UNLINK](Link-Unlink )
+-   [Return Values and Statement Failure](RETVAL-Values )
+-   [Viewing Table Structure](TableStructure )
+{% endif %}

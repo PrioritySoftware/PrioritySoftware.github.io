@@ -342,6 +342,7 @@ decimal places, initialize it as follows:
 
 > `:CONV = 0E-9;`
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
@@ -352,3 +353,4 @@ decimal places, initialize it as follows:
 -   [Return Values and Statement Failure](RETVAL-Values )
 -   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )
+{% endif %}

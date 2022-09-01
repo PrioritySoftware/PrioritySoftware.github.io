@@ -34,8 +34,10 @@ Often, you will want to refer to other ***Priority*** entities in your help text
 To refer to a specific entity in a help message, designate the entity name followed by a period and its type (as illustrated in the above example), where *F*=form, *R*=report and *P*=procedure, enclosing all of this in curved brackets.
 
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Forms](Forms )
 -   [Reports](Reports )
 -   [Procedures](Procedures )
+{% endif %}

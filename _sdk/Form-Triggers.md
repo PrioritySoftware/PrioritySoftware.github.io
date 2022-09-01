@@ -33,6 +33,7 @@ be called a “form trigger,” whereas the latter (specific sense) will be
 called a “Form trigger.” On form debugging, see [Debug
 Tools](Debug-Tools ).
 
+{% if site.output == "web" %}
 ## More on Triggers
 
 -   [SQL Variables](SQL-Variables )
@@ -40,26 +41,22 @@ Tools](Debug-Tools ).
 -   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
--   [Changing Column Titles
-    Dynamically](Dynamic-Column-Titles )
--   [Including One Trigger in
-    Another](Include-Triggers )
--   [Trigger Errors and
-    Warnings](Trigger-Errors )
+-   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
+-   [Including One Trigger in Another](Include-Triggers )
+-   [Trigger Errors and Warnings](Trigger-Errors )
 
 ## Further Reading
 
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
 -   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Default Design for a Form](Default-Design )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )
 -   [Rules for Customizing](Customization-Rules )
+{% endif %}

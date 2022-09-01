@@ -34,7 +34,3 @@ Note the following:
 > UNLINK GENERALLOAD;
 > ```
 
-## Further Reading 
-
-[Click](Advanced-Programming-Tools ) for information on
-additional advanced programming tools.

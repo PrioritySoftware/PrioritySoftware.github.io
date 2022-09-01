@@ -21,9 +21,11 @@ existing entities for the rest.
 **Important!** The records stored in ***Priority*** tables are always inserted into those tables via ***Priority*** forms. ***Never*** insert records directly into ***Priority*** tables, as this will bypass the integrity checks and other actions defined in the form triggers. Even if you repeat all existing logic of the form in question, your code can cause bugs in the future. For example, if mandatory columns are added to the table in some future software version, with default values that are
 filled in within the form, this will be ignored by your code!
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Form Loads](Form-Loads )
 -   [Table Loads](Table-Loads )
--   [Combining Table Loads with Form Loads](Table-and-Form-Loads)
+-   [Combining Table Loads with Form Loads](Combining-Table-Loads-with-Form-Loads )
 -   [Tips for Finding Existing Interfaces](Existing-Interfaces )
+{% endif %}

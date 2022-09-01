@@ -111,12 +111,12 @@ The following rules apply to table columns:
     instead.
 -   You cannot add columns to system tables.
 
+{% if site.output == "web" %}
 ## Further Reading 
 
 -   [Tables](Tables )
 -   [Keys](Keys )
--   [Options for Creating and Modifying Tables, Columns and
-    Keys](Create-Modify-Tables )
--   [Viewing Tables in the
-    Database](View-Tables )
+-   [Options for Creating and Modifying Tables, Columns and Keys](Create-Modify-Tables )
+-   [Viewing Tables in the Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )
+{% endif %}
