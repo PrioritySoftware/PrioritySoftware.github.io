@@ -17,8 +17,7 @@ Variables are identified by the prefix ":" (colon).
 
 Each function and variable must belong to one of the following types:
 **CHAR, INT, REAL, DATE, TIME** or **DAY**. These are all valid column
-types (for an explanation of each, see [Table
-Columns](Table-Columns )).
+types (for an explanation of each, see [Table Columns](Table-Columns )).
 
 ## System Functions 
 
@@ -37,14 +36,19 @@ Here is a partial list of SQL functions recognized by ***Priority***.
     retrieved records are numbered consecutively (**INT** type)
 -   SQL.TMPFILE: a full path to a temporary file name; you can use this
     path to link tables to the file
+-   SQL.LANGUAGE: the language code of the current user 
 -   SQL.ENVLANG: the language defined for the current ***Priority***
     company (in the *Companies* form)
 -   SQL.WEBID, SQL.CLIENTID: identification variables (**INT** type and
-    **CHAR** type, respectively) used for ***Priority Lite*** only (see
-    [User Identification for Priority
-    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )).
+    **CHAR** type, respectively) used for ***Priority Lite*** only.
 -   SQL.GUID: returns a random 32-character string, using the operating
     system*s UUID function.
+-   SQL.PRETTY: returns the External Access ID in Priority Connect for the current company (in lowercase), or from another company on the server (in uppercase). For example, suppose we have a server with 2 companies, Example Company and  Demo Company, with only the latter having an External Access ID **prettydemo**:
+    ```sql
+    SELECT SQL.PRETTY FROM DUMMY FORMAT;
+    /* In Demo Company, returns: prettydemo
+       In Example Company, returns: PRETTYDEMO
+    ```
 
 > **Examples:**
 >
@@ -344,12 +348,9 @@ decimal places, initialize it as follows:
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
 -   [Flow Control](Flow-Control )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
 -   [Execution Statements](Execution-Statements )
 -   [LINK and UNLINK](Link-Unlink )
--   [Return Values and Statement
-    Failure](RETVAL-Values )
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Return Values and Statement Failure](RETVAL-Values )
+-   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )
