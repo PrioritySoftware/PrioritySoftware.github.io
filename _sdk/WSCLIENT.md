@@ -87,16 +87,24 @@ web services. Use the following syntax to work with a web service
 You can use **WSCLIENT** to communicate with services that require
  OAuth2 authentication. Doing so requires some additional setups:
 
-1.  In **\'\'Priority**\'\', open the **OAuth2 Definitions** form.
-2.  Specify a **Token Code** and **Token Description** for the web
-    service.
+1.  In **Priority**, open the **OAuth2 Definitions** form.
+2.  Record a **Token Code** and **Token Description** for the web
+    service. You should use your custom prefix for the code, e.g. **DEMO_TOKEN**.
 3.  Register in the web service provider\'s website, and obtain the
     following:
     -   ClientID
-    -   Secret
+    -   Client Secret & Client Secret 2 (if the secret exceeds the width of Client Secret)
     -   Token URL
     -   OAuth2 URL
 
+<!--TODO: Review with Sergey: Additional params for OAuth vs. Scope field. What do flags do?
+
+Additional params - for any additional query params that are not specifically Scope
+Encrypted Tokens - encrypts tokens so users cannot copy others tokens
+Client secret 2 - if secret is very long
+Multi/single company - obvioius
+By user - If flagged, you can only view your own tokens in the sub-level
+ -->
 Fill them in the appropriate fields in the form.
 
 1.  Next, fill in the **Redirect Url**. You can work with Automatic
@@ -112,22 +120,16 @@ Fill them in the appropriate fields in the form.
         register it with the provider.
     -   The parameters of the OOB Redirect are supplied by the web
         service provider. They should appear similar to this example:
-        **<urn:ietf:wg:oauth:2.0:oob>**. Record them in the **Redirect
-        URL** field in the **OAuth2 Definitions** form.
-2.  Finally, fill in the **Scope**. This should also be supplied by the
-    provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**
+        **<urn:ietf:wg:oauth:2.0:oob>**. Record them in the **Redirect URL** field in the **OAuth2 Definitions** form.
+2.  Finally, fill in the **Scope**. This should also be supplied by the provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**
 
 You can now obtain the access token to work with the web service:
 
-1.  From the **OAuth2 Defintions** form, run the **Get New Token** from
-    the list of actions.
-2.  A browser window opens, where you will be prompted to login to your
-    account with the vendor (e.g. VAT service).
-3.  If you work with Automatic Redirect, the Access Token and Refresh
-    Token are obtained automatically.
-4.  If you work with OOB Redirect, the browser will navigate to a new
-    page, where a long string of characters appears. Copy this string
+1.  In the **OAuth2 Defintions** subform, record an **Entity ID** and **Description** and run the **Get New Token** from the list of actions.
+2.  A browser window opens, where you will be prompted to login to your account with the vendor (e.g. VAT service).
+3.  If you work with Automatic Redirect, the Access Token and Refresh Token are obtained automatically.
+4.  If you work with OOB Redirect, the browser will navigate to a new page, where a long string of characters appears. Copy this string
     and paste it into the input window in ***Priority***.
-5.  The Access Token and Refresh Token have been filled in. If you need
-    to refresh your access token in the future, you can do so by running
+    <!-- TODO: Review Get New Token vs. Get Token w/Redirect -->
+5.  The Access Token and Refresh Token have been filled in. If you need to refresh your access token in the future, you can do so by running
     **Refresh Token** from list of actions in the form.
