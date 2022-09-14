@@ -49,6 +49,11 @@ Here is a partial list of SQL functions recognized by ***Priority***.
     /* In Demo Company, returns: prettydemo
        In Example Company, returns: PRETTYDEMO
     ```
+- SQL.CLOUDURL: For an environment hosted in Priority Software's Cloud, returns its address.
+- SQL.REGNAME: Returns the system's registration name - same as the one that appears when clicking **About Priority** in the Help menu.
+- SQL.HOSTING: Returns 1 if the system is hosted in Priority Software's Cloud, 0 otherwise.
+- SQL.ORACLE: Returns 1 for a system with an Oracle database, 2 for a system with SQL Server as the database.
+
 
 > **Examples:**
 >
