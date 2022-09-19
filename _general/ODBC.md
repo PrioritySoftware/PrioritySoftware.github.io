@@ -2,6 +2,7 @@
 title: ODBC
 layout: default
 permalink: /ODBC
+class: nomenu
 tags: "ODBC"
 ---
 
@@ -11,18 +12,18 @@ tags: "ODBC"
         list-style-type: disc;
     }
 
-    #main_content_wrap {
+    /* #main_content_wrap {
         font-size: 120%;
         width: 60%;
-    }
+    } */
 
 </style>
 
 
-
 ## Introduction
 
-[22.1]
+[22.1]()
+
 The Priority ODBC driver allows 3rd party applications to access data on the Priority server using SQL statements.
 
 The driver does not provide direct access to the underlying database (MSSQL or Oracle), but rather to a wrapper which presents the same data available in Priority forms via the UI. Each form is represented as a table, and form fields are columns in this table.
@@ -48,6 +49,8 @@ The Priority system has a large number of forms (over 3,000), but you generally 
 2. Select any forms you want exposed through ODBC in the **Form** field. If it is a subform, also specify the **Upper-level Form**. Add another line for each seperate upper-level form under which you want to access the subform.
 
 The changes made in this form will take effect when you next connect with the ODBC Driver.
+
+In order to improve performance, the ODBC driver caches to memory all metadata once it is received from the server. If there were server side changes to the metadata (columns added/removed/changed to a form, or added/removed forms), priodbc.dll should be reloaded (by restarting the client application).
 
 ## Installing the ODBC Driver
 
