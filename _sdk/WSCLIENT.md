@@ -97,14 +97,6 @@ You can use **WSCLIENT** to communicate with services that require
     -   Token URL
     -   OAuth2 URL
 
-<!--TODO: Review with Sergey: Additional params for OAuth vs. Scope field. What do flags do?
-
-Additional params - for any additional query params that are not specifically Scope
-Encrypted Tokens - encrypts tokens so users cannot copy others tokens
-Client secret 2 - if secret is very long
-Multi/single company - obvioius
-By user - If flagged, you can only view your own tokens in the sub-level
- -->
 Fill them in the appropriate fields in the form.
 
 1.  Next, fill in the **Redirect Url**. You can work with Automatic
@@ -121,11 +113,16 @@ Fill them in the appropriate fields in the form.
     -   The parameters of the OOB Redirect are supplied by the web
         service provider. They should appear similar to this example:
         **<urn:ietf:wg:oauth:2.0:oob>**. Record them in the **Redirect URL** field in the **OAuth2 Definitions** form.
-2.  Finally, fill in the **Scope**. This should also be supplied by the provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**
+2.  Fill in the **Scope**. This should also be supplied by the provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**
+3.  Additional parameters for the URL can be specified in **Additional Parameters**.
+4.  The checkboxes control the behavior of the tokens:
+    - **Encrypted Tokens** - will automatically encrypt the received tokens so users cannot copy tokens of other users.
+    - **By User** - if selected, users can only view their own tokens in the sub-level forms.
+    - **Multi-company** - determines whether token is multi-company, i.e. persists between different companies in the system. Single-company tokens need a new token per company in the system.
 
 You can now obtain the access token to work with the web service:
 
-1.  In the **OAuth2 Defintions** subform, record an **Entity ID** and **Description** and run the **Get New Token** from the list of actions.
+1.  In the **OAuth2 Defintions** (or **Auth Data(Multienv)**, depending on the token type) subform, record an **Entity ID** and **Description** and run the **Get New Token** from the list of actions.
 2.  A browser window opens, where you will be prompted to login to your account with the vendor (e.g. VAT service).
 3.  If you work with Automatic Redirect, the Access Token and Refresh Token are obtained automatically.
 4.  If you work with OOB Redirect, the browser will navigate to a new page, where a long string of characters appears. Copy this string

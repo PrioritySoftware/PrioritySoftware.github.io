@@ -251,12 +251,6 @@ chapters:
         url: Defining-Word-Templates
       - page: Using Custom Form Columns in the Business Rules Generator
         url: Rules-Generator-Custom-Columns
-  - title: ODBC for SQL Server
-    url: ODBC-SQLServer
-    group: ODBC SQL
-  - title: ODBC for Oracle
-    url: ODBC-Oracle   
-    group: ODBC Oracle
-      
+
 
 
