@@ -96,7 +96,7 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
 Alternatively, you can fill in this data as part of the connection string:
 
 ```
-Driver=Priority ODBC Unicode Driver;Server=<netgate_ip>:8005;Tabulaini=tabula.ini;Database=my_company;Lang=1;User=<pri_user>;Pwd=<pri_password>
+Driver=Priority ODBC Unicode Driver;Server=<netgate_ip>:8005;Tabulaini=tabula.ini;Database=<my_company>;Lang=3;User=<pri_user>;Pwd=<pri_password>
 ```
 
 ## ODBC Functions
