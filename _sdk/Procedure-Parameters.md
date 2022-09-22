@@ -11,7 +11,7 @@ To define parameters, use the *Procedure Parameters* form, a sub-level
 of the *Procedure Steps*form (itself a sub-level of the *Procedure
 Generator*).
 
-Most [procedure steps](Procedure_Steps) incorporate
+Most [procedure steps](Procedure-Steps) incorporate
 parameters. These are a means of transferring arguments from the
 procedure to programs or reports activated by the procedure. They also
 serve to transfer information from one procedure step to another (or
@@ -20,16 +20,16 @@ from the user to the procedure step).
 > **Example:**When a program finds an error, it writes the appropriate
 > message to a file (i.e., a parameter in the program). The parameter is
 > then passed on to the [PRINTERR
-> command](Procedure_Steps#Basic_Commands), which prints out
+> command](Procedure-Steps#Basic_Commands), which prints out
 > its contents on screen.
 
 Only certain steps require parameter specification (e.g.,
-[CONTINUE](Procedure_Steps#Basic_Commands) and
-[END](Procedure_Steps#Basic_Commands) do not). Moreover,
+[CONTINUE](Procedure-Steps#Basic_Commands) and
+[END](Procedure-Steps#Basic_Commands) do not). Moreover,
 different types of steps require that different attributes of the
 parameter be defined. For instance, you need not specify type for any
 parameter in a [CHOOSE or CHOOSEF
-command](Procedure_Steps#Basic_Commands), and there is no
+command](Procedure-Steps#Basic_Commands), and there is no
 need to designate position for any parameters in a report step.
 
 ## Parameter Name and Title 
@@ -43,7 +43,7 @@ The title is a short description of the parameter. When the parameter is
 for input purposes or generates a Choose menu, the user will see the
 title. It can also be used to store a brief message that is displayed by
 the [PRINT, PRINTCONT or PRINTERR
-command](Procedure_Steps#Basic_Commands).
+command](Procedure-Steps#Basic_Commands).
 
 ## Parameter Order 
 
@@ -124,5 +124,5 @@ procedure parameters must have a specified type.
 -   [Processed Reports](Processed-Reports)
 -   [Running a Procedure](Run-Procedure)
 -   [Help Messages](Help-Messages)
--   [Rules for Customizing](Rules-for-Customizing)
+-   [Rules for Customizing](Customization-Rules)
 -   [Procedures](Procedures)

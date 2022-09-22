@@ -108,8 +108,7 @@ The following rules apply to the internal names of all private entities added to
 -   ***Never*** use a standard base table to create your own form.
     Create your own table instead.
 -   You cannot delete a standard column from a standard form.
--   When creating your own [multiple
-    joins](Form-Column-Attributes#Special-Joins ), use a join
+-   When creating your own [multiple joins](Form-Columns#Special-Joins), use a join
     ID and column ID greater than 5.
 -   Any [trigger](Creating-your-triggers ) you add must
     start with a four-letter prefix or end with a four-letter suffix.

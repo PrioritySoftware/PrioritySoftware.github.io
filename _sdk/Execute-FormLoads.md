@@ -113,9 +113,7 @@ EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr'
     Errors* report even if you defined the form load to ignore such
     messages.
 -   \'-m\' --- Use this option to break up error messages into several
-    lines. For an example, see [Using the STACK ERR Table to Store
-    Interface
-    Messages](Using-the-STACK-ERR-Table-to-Store-Interface-Messages ).
+    lines. For an example, see [Using the STACK ERR Table to Store Interface Messages](STACKERR).
 -   \'-o\' --- Use this option when exporting data. When exporting to a
     file, the data will be written to the file recorded in the *Form
     Load Designer* using ASCII character encoding. When loading to a

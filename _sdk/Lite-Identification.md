@@ -24,13 +24,11 @@ To have the procedure identify the user before it runs:
 
 The value of the first parameter in the cursor is saved in a variable
 called HTMLVALUE. This is a system variable of **CHAR** type, and it
-must be converted to an integer using the [ATOI
-function](Scalar-Expressions#Strings ). Using
+must be converted to an integer using the [ATOI function](Scalar-Expressions#Strings ). Using
 HTMLVALUE you can retrieve the relevant record (the one being printed)
 from the main table of the document in question.
 
-To identify the user from within the procedure, use the [SQL.WEBID
-variable](SQL-Functions-Variables#SystemFunctions ). When
+To identify the user from within the procedure, use the [SQL.WEBID variable](SQL-Functions-Variables#SystemFunctions ). When
 users log in using their e-mail address, this variable receives the
 value of the **PHONEBOOK.PHONE** column. In procedures that are defined
 for internal users only, users can also log in with their username. In
@@ -51,13 +49,8 @@ SQL.WEBID.
 
 ## Further Reading 
 
--   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
--   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional-Input-Options-(Priority-Lite/Dashboards) )
--   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
--   [Writing Dashboard
-    Procedures](Writing-Dashboard-Procedures )
--   [Priority Lite and
-    Dashboards](Priority-Lite-and-Dashboards )
+-   [Designing HTML Reports for Priority Lite/Dashboards](Lite-Dashboards-Reports)
+-   [Additional Input Options (Priority Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards)
+-   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML)
+-   [Writing Dashboard Procedures](Dashboard-Procedures )
+-   [Priority Lite and Dashboards](Lite-Dashboards)

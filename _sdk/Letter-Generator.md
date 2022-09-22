@@ -89,7 +89,7 @@ follows:
 
 -   **USER** Receives the name of the current user.
 -   **STATUSTYPE** Receives the type of document for which the letter
-is being created, represented by the [BPM system](Creating-BPM-Flow-Charts) assigned to that
+is being created, represented by the [BPM system](Create-BPM) assigned to that
 document type. For example, for letters to customers, this column
 receives the value *5*.
 -   **KEY1** Receives the autounique value of the record for which

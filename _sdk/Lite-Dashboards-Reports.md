@@ -23,9 +23,7 @@ fields that appear in the report wherever you want on the HTML page.
 That is, you select and place the report fields on the output page
 (hereafter "form"). To place the fields in the form, you logically
 divide the form into table cells, and then place each report field in
-its respective cell. For a detailed explanation, see [Displaying HTML
-Text in
-Reports](Refining_Report_Data_Display#Displaying_HTML_Text_in_Reports "wikilink").
+its respective cell. For a detailed explanation, see [Displaying HTML Text in Reports](Refine-Report-Display#displaying-html-text-in-reports) .
 
 ## Input Columns and Links in the Report {#input_columns_and_links_in_the_report}
 
@@ -221,13 +219,8 @@ LABEL 2;
 
 ## Further Reading {#further_reading}
 
--   [User Identification for Priority
-    Lite/Dashboards](Lite-Identification "wikilink")
--   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) "wikilink")
--   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Base-Page-HTML) "wikilink")
--   [Writing Dashboard
-    Procedures](Dashboard-Procedures "wikilink")
--   [Priority Lite and
-    Dashboards](Priority_Lite_and_Dashboards "wikilink")
+-   [User Identification for Priority Lite/Dashboards](Lite-Identification)
+-   [Additional Input Options (Priority Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) 
+-   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML) 
+-   [Writing Dashboard Procedures](Dashboard-Procedures) 
+-   [Priority Lite and Dashboards](Lite-Dashboards)

@@ -124,14 +124,12 @@ To link a root form to a menu and to define its position, use either the
 
 -   [Forms](Forms )
 -   [Form Columns](Form-Columns )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display )
 -   [Actions](Actions)
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Designing a Form](Default-Design)
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )

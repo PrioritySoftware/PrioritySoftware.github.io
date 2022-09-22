@@ -102,8 +102,7 @@ Regardless of type, all variables are limited to a size of 120 characters.
 :FORM_INTERFACE_NAME (**CHAR** type) --- when the :FORM_INTERFACE
     variable has a value of 1, the current variable is assigned the name
     of the form interface in question (e.g., see BUF16 in the
-    **LOGPART** form; on buffers, see [Using
-    Buffers](Include-Triggers#Using-Buffers )).
+    **LOGPART** form; on buffers, see [Using Buffers](Include-Triggers#Using-Buffers )).
     If empty, but :FORM_INTERFACE is 1, the records are filled in using
     the REST API.
 
@@ -130,12 +129,9 @@ Regardless of type, all variables are limited to a size of 120 characters.
     טרוא ס\"יב); assign it a value of 1 to ensure that such characters
     appear in the correct order (e.g., בי\"ס אורט ירושלים).
 
-:HTMLACTION, :HTMLVALUE and :HTMLFIELD --- used in ***Priority
-    Lite*** procedures (see [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )).
+:HTMLACTION, :HTMLVALUE and :HTMLFIELD --- used in ***Priority Lite*** procedures (see [Designing HTML Reports for Priority Lite/Dashboards](Lite-Dashboards-Reports)).
 
-:\_IPHONE --- used in [***Priority Lite*** 
-    procedures](Priority-Lite-and-Dashboards ). This variable
+:\_IPHONE --- used in [***Priority Lite*** procedures](Lite-Dashboards). This variable
     receives a value of 1 when the procedure in question is run from a
     mobile device (e.g., an iPhone or Android device), and a value of 0
     when the procedure is run from a regular PC or iPad. By referring to
@@ -180,14 +176,12 @@ Regardless of type, all variables are limited to a size of 120 characters.
     the *Are sent e-mails digitally signed by Outlook* column of the
     *Mail Options* dialogue box.
 
-:EDOCUMENT (**INT** type) --- used in e-documents (see [Creating
-    E-Documents](Special-Document-Features#A-Special-SQLI-Step:_Creating-E-Documents )).
+:EDOCUMENT (**INT** type) --- used in e-documents (see [Creating E-Documents](WINHTML#creating-an-e-document-using-procedure-code)).
     When this variable receives a value of 1, sent e-documents will be
     synchronized with ***Priority*** and recorded as a customer task.
 
 :GROUPPAGEBREAK (**INT** type) --- used in processed reports to add
-    a page break for the first \"Group by\" set (see [Display of Grouped
-    Records](organize-report-data#Display-of-Grouped-Records )).
+    a page break for the first \"Group by\" set (see [Display of Grouped Records](Organize-Report-Data#display-of-grouped-records)).
     When this variable receives a value of 1, each group of records in
     the report will appear on a new page.
 
@@ -208,9 +202,7 @@ Regardless of type, all variables are limited to a size of 120 characters.
     interface and 1 when working in the web interface.
 
 :EXTERNAL.VARNAME -- used in procedures to refer to variables
-    inputted as part of the WINRUN command (see [ Executing Priority
-    Commands from an External Application
-    (WINRUN)](Programs-Interfacing-Priority-with-External-Systems#Executing-Priority-Commands-from-an-External-Application-.28WINRUN.29 )).
+    inputted as part of the WINRUN command (see [ Executing Priority Commands from an External Application (WINRUN)](Interact-with-External-Systems#executing-priority-commands-from-an-external-application-winrun )).
 
 :WEBSDK_APP_ID (**CHAR** type) --- when entities are accessed via
     Priority's Web SDK using a per-application license, this variable

@@ -7,8 +7,7 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-When using an external file to import or export data in a [form
-load](Form_Loads ), make sure you know the structure of the
+When using an external file to import or export data in a [form load](Form-Loads), make sure you know the structure of the
 file you will be using before you begin defining the interface.
 
 **Tip:** If you want to create a new form load based on an existing one,
@@ -179,9 +178,7 @@ of Form Columns in File*) to define the following:
 
 ## More on Form Loads 
 
--   [Loading from/to a Load
-    Table](Loading-from-Load-Table )
+-   [Loading from/to a Load Table](Loading-from-Load-Table )
 -   [Executing the Form Load](Execute-FormLoads )
--   [Deleting Records from a
-    Form](Interfaces-Deleting-Records )
--   [Form Loads](Form-Loads )
+-   [Deleting Records from a Form](Interfaces-Deleting-Records )
+-   [Form Loads](Form-Loads)

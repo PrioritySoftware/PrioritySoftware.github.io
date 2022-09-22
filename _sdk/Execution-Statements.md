@@ -7,9 +7,8 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-***Priority***recognizes several commands which affect execution of the
-SQL statement (or group of statements). See also [Syntax
-Conventions](SQL-Syntax#Syntax-Conventions ).
+***Priority*** recognizes several commands which affect execution of the
+SQL statement (or group of statements). See also [Syntax Conventions](SQL-Syntax#Syntax-Conventions ).
 
 ## ENV
 
@@ -20,7 +19,6 @@ specified company. The syntax is:
 
 where the company can be defined by a string (the value appearing in the
 *Company* column of the *Companies* form) or a variable.
-
 
 **Note:** In the web interface, the ENV command has a minor limitation.
 When used within a procedure, if you then open a form from within the
@@ -41,23 +39,17 @@ The syntax is:
 
 where the program and each of its parameters can be specified as a
 string or variable. (All parameters are separated by commas. For
-strings, each string is also enclosed in a set of apostrophes).
+strings, each string is also enclosed in a set of apostrophes).\
 <!-- TODO: Fix focus to web interface -->
-**Note:** For the ***Priority*** web interface, see [Working with the
-Priority Web
-Interface](Working-with-the-Priority-Web-Interface ).
+**Note:** For the ***Priority*** web interface, see [Working with the Priority Web Interface](Priority-Web).
 
 ## Further Reading 
 
 -   [Executing SQL Statements](Executing-SQL-Statements )
--   [SQL Functions and
-    Variables](SQL-Functions-Variables )
+-   [SQL Functions and Variables](SQL-Functions-Variables )
 -   [Flow Control](Flow-Control )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands )
 -   [LINK and UNLINK](Link-Unlink )
--   [Return Values and Statement
-    Failure](RETVAL-Values )
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Return Values and Statement Failure](RETVAL-Values )
+-   [Non-standard Scalar Expressions](Scalar-Expressions )
 -   [Viewing Table Structure](TableStructure )

@@ -44,7 +44,7 @@ In addition to using the options in the *Tables Generator*, you can run
 the *SQL Development* program and modify tables by means of SQL
 statements, using the syntax outlined below, provided you belong to the
 privilege group of the superuser (*tabula*) (for details, see
-[Installing Your Customizations](Installing-Your-Customizations )).
+[Installing Your Customizations](Installing-Customizations)).
 
 ### Syntax for Tables 
 
@@ -185,7 +185,5 @@ Change column priority in key
 -   [Tables](Tables )
 -   [Table Columns](Table-Columns )
 -   [Keys](Keys )
--   [Options for Creating and Modifying Tables, Columns and
-    Keys](Create-Modify-Tables )
--   [Viewing Tables in the
-    Database](View-Tables )
+-   [Options for Creating and Modifying Tables, Columns and Keys](Create-Modify-Tables )
+-   [Viewing Tables in the Database](View-Tables )

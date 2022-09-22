@@ -6,8 +6,7 @@ tags: 'Priority_SDK'
 ---
 
 
-The second step in [creating a BPM flow
-chart](Creating-BPM-Flow-Charts ) is to create the statuses
+The second step in [creating a BPM flow chart](Create-BPM) is to create the statuses
 form.
 
 1.  Use the *Form Generator* to create a new form named
@@ -134,5 +133,4 @@ The following form triggers need to be created:
 > #INCLUDE STATUSARCS/EXP1
 > ```
 
-The next step is to [modify the new
-document](Modifying_the-New-Document ).
+The next step is to [modify the new document](BPM-Modify-Document-Form).

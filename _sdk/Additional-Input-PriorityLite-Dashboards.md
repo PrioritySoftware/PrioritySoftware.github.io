@@ -11,8 +11,7 @@ In addition to procedures that display reports, you can create
 procedures that enable user input and have the "look" of a form.
 
 To avoid replication of code (which leads to bugs), load the data into
-***Priority*** via an interface to the desired form, using the [form
-load utility](Form-Loads).
+***Priority*** via an interface to the desired form, using the [form load utility](Form-Loads).
 
 1.  Using **GENERALLOAD** as your load table, create a linked file of
     all data.
@@ -125,13 +124,8 @@ in, but rather the filename in the server.
 
 ## Further Reading 
 
--   [User Identification for Priority
-    Lite/Dashboards](User-Identification-for-Priority-Lite/Dashboards )
--   [Designing HTML Reports for Priority
-    Lite/Dashboards](Designing-HTML-Reports-for-Priority-Lite/Dashboards )
--   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Defining-a-Base-Page-for-HTML-Pages-(Priority-Lite/Dashboards) )
--   [Writing Dashboard
-    Procedures](Writing-Dashboard-Procedures )
--   [Priority Lite and
-    Dashboards](Priority-Lite-and-Dashboards )
+-   [User Identification for Priority Lite/Dashboards](Lite-Identification)
+-   [Designing HTML Reports for Priority Lite/Dashboards](Lite-Dashboards-Reports)
+-   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML)
+-   [Writing Dashboard Procedures](Dashboard-Procedures )
+-   [Priority Lite and  Dashboards](Lite-Dashboards)

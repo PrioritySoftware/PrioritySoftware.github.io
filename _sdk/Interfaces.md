@@ -26,7 +26,5 @@ filled in within the form, this will be ignored by your code!
 
 -   [Form Loads](Form-Loads )
 -   [Table Loads](Table-Loads )
--   [Combining Table Loads with Form
-    Loads](Combining-Table-Loads-with-Form-Loads )
--   [Tips for Finding Existing
-    Interfaces](Existing-Interfaces )
+-   [Combining Table Loads with Form Loads](Table-and-Form-Loads)
+-   [Tips for Finding Existing Interfaces](Existing-Interfaces )

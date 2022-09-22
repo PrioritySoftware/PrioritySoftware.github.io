@@ -37,8 +37,7 @@ must construct the HTML procedure and its reports.
 There are two essential structural differences between HTML procedures
 and regular ones:
 
--   Reports can only be displayed in an [INPUT
-    step](Procedure_Steps#Basic_Commands).
+-   Reports can only be displayed in an [INPUT step](Procedure-Steps#Basic_Commands).
 -   The procedure does not run continuously from beginning to end.
     Rather, it is interrupted at each INPUT step, at which time it
     generates an HTML page. It continues where it left off when the user
@@ -69,8 +68,7 @@ As the procedure does not run continuously, but rather stops and starts,
 its link files and variables "disappear" whenever it is interrupted. To
 retain the value of a variable:
 
-1.  Define it as a [procedure
-    parameter](Procedure_Parameters).
+1.  Define it as a [procedure parameter](Procedure-Parameters).
 2.  Make sure it is included as a parameter in the INPUT step at which
     the procedure stops.
 
@@ -80,13 +78,8 @@ again.
 
 ## Further Reading
 
--   [User Identification for Priority
-    Lite/Dashboards](Lite-Identification )
--   [Designing HTML Reports for Priority
-    Lite/Dashboards](Lite-Dashboards-Reports )
--   [Additional Input Options (Priority
-    Lite/Dashboards)](Additional-Input-PriorityLite-Dashboards) )
--   [Defining a Base Page for HTML Pages (Priority
-    Lite/Dashboards)](Base-Page-HTML) )
--   [Writing Dashboard
-    Procedures](Dashboard-Procedures )
+-   [User Identification for Priority Lite/Dashboards](Lite-Identification )
+-   [Designing HTML Reports for Priority Lite/Dashboards](Lite-Dashboards-Reports )
+-   [Additional Input Options (Priority Lite/Dashboards)](Lite-Dashboards) )
+-   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML) )
+-   [Writing Dashboard Procedures](Dashboard-Procedures )
