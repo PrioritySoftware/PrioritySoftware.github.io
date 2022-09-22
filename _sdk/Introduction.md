@@ -2,6 +2,7 @@
 title: Introduction
 group: Introduction
 tags: 'Priority_SDK'
+type: first_page
 ---
 
 Welcome to Priority's SDK.

@@ -4,6 +4,9 @@ layout: none
 
 {% assign list = site.data.sdktopics.chapters %}
 
+    http://localhost:4000/sdk/Title-page.html
+    http://localhost:4000/sdk/toc.html
+
     {% for chapter in list %}
         {{site.url}}{{site.baseurl}}/sdk/{{chapter.url}}.html
             {%for topic in chapter.topics %}
