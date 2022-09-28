@@ -146,5 +146,4 @@ To install the revision:
 
 ## Further Reading 
 
--   [Customizations: Installing the Language
-    Dictionaries](Customizations-Language-Dictionaries )
+-   [Customizations: Installing the Language Dictionaries](Customizations-Language-Dictionaries )

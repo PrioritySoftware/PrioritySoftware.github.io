@@ -53,8 +53,7 @@ upgrade file) via another program.
 
 
 **Note:** For more on preparing upgrades for other languages, see
-[Customizations: Installing the Language
-Dictionaries](Customizations:_Installing-the-Language-Dictionaries ).
+[Customizations: Installing the Language Dictionaries](Customizations-Language-Dictionaries).
 
 
 ### Rules for Modifying Tables and Table Columns 
@@ -74,9 +73,7 @@ Dictionaries](Customizations:_Installing-the-Language-Dictionaries ).
 -   Ensure that all users have exited the system.
 
 
-**Note:** For general guidelines for development, see [Working with
-Version
-Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
+**Note:** For general guidelines for development, see [Working with Version Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 
 
 ## Further Reading 
@@ -85,7 +82,6 @@ Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
 -   [Keys](Keys )
 -   [Options for Creating and Modifying Tables, Columns and
     Keys](Create-Modify-Tables )
--   [Viewing Tables in the
-    Database](View-Tables )
+-   [Viewing Tables in the Database](View-Tables )
 -   [DBI Syntax](DBI-Syntax )
 -   [Viewing Table Structure](TableStructure )

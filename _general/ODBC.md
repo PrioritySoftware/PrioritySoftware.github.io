@@ -22,11 +22,15 @@ tags: "ODBC"
 
 ## Introduction
 
-[22.1]()
+[22.1]
 
 The Priority ODBC driver allows 3rd party applications to access data on the Priority server using SQL statements.
 
 The driver does not provide direct access to the underlying database (MSSQL or Oracle), but rather to a wrapper which presents the same data available in Priority forms via the UI. Each form is represented as a table, and form fields are columns in this table.
+
+## Requirements
+
+ODBC requires that you have a Priority Application Server installed, with port 8005 opened.
 
 ## Database Schema
 
@@ -75,10 +79,10 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
 
 ![ODBC Data Source Administrator](https://cdn.priority-software.com/docs/images/ODBC_data_source_config.png)
 
-1. In the **ODBC Data Sources (64-bit)** (%windir%\system32\odbcad32.exe) utility, switch to the **User DSN** tab.
-2. Click **Add**.
-3. Choose **Priority ODBC Unicode Driver**** and click **Finish**.
-4. Configure the connection properties:
+2. In the **ODBC Data Sources (64-bit)** (%windir%\system32\odbcad32.exe) utility, switch to the **User DSN** tab.
+3. Click **Add**.
+4. Choose **Priority ODBC Unicode Driver**** and click **Finish**.
+5. Configure the connection properties:
    - Data Source Name: Priority (or another name of your choice)
    - Server: <netgate_ip>:8005 (IP address or name of the Priority Application server where the netgate.exe process is running)
    - Tabula.ini: *tabula.ini* (name of configuration file in Priority server)
@@ -89,7 +93,7 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
    - Database: <company_name> \
     **Note:** You can find the company names in **System Management > System Maintenance > Companies > Companies**.
 
-5. Press the **Test** button to check the connection.
+6. Press the **Test** button to check the connection.
 
 ### Connecting with a Connection String
 

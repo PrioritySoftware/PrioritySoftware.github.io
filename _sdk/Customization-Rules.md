@@ -14,8 +14,7 @@ In order to properly handle your customizations, you should have a total of thre
 - a test environment in which you or the customer run tests.
 - the production server for which the customization is developed.
 
-After creating your customizations in the development installation, create an upgrade file and install it in the test installation. Only once you are satisfied with results should you
-install it on the production server.
+After creating your customizations in the development installation, create an upgrade file and install it in the test installation. Only once you are satisfied with results should you install it on the production server.
 
 > **Warning!** You should never customize directly on the production
 server.
@@ -23,6 +22,8 @@ server.
 As revisions are maintained per user, it is imperative for all
 programmers to work in their own usernames while performing the
 programming.
+
+<!-- TODO: Remove note, integrate into new Getting Started page -->
 
 **Note:** In order to execute a DBI operation -- i.e., anything that
 affects a table, table column or key -- you must belong to the privilege
