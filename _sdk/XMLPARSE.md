@@ -7,11 +7,10 @@ tags: 'Priority_SDK'
 
 # Parsing XML 
 
-In addition to reading data from an XML/JSON file via [a form
-load](Interfaces ), you can also use the XMLPARSE command.
-When the file contains several instances per tab, include the *--all*
-parameter to parse the entire file. Omit it to limit results to the
-first instance of each tab.
+In addition to reading data from an XML/JSON file via [a form load](Interfaces), you can also use the XMLPARSE command.
+When the file contains several instances per tab, include the *--all* parameter to parse the entire file. Omit it to limit results to the first instance of each tab.
+
+**Note**: XMLPARSE can read a maximum of 1023 characters in a single XML tag / JSON field. 
 
 **Example:**
 ```sql
@@ -40,8 +39,7 @@ When the XML file looks like this:
 
 ![](https://cdn.priority-software.com/docs/images/XML_file-173.png "XML_file-173.png")
 
-results for the above two EXECUTE commands (without the *--all*
-parameter and with it) are as follows:
+results for the above two EXECUTE commands (without the *--all* parameter and with it) are as follows:
 
 ![](https://cdn.priority-software.com/docs/images/XMLPARSE_results-173.png "XMLPARSE_results-173.png")
 
