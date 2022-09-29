@@ -30,11 +30,11 @@ The driver does not provide direct access to the underlying database (MSSQL or O
 
 ## Requirements
 
-ODBC requires that you have a Priority Application Server installed, with port 8005 opened.
+The Priority ODBC Driver requires that you have a Priority Application Server installed, with port 8005 opened.
 
 ## Database Schema
 
-Each Priority company is treated a seperate database, with the database name taken from the company name. If you want to view data from more than one company, you need to establish multiple connections.
+Each Priority company is treated a seperate database, with the database name taken from the internal company name (DNAME). If you want to view data from more than one company, you need to establish multiple connections.
 
 The tables of top level forms share the same internal name. For example, the **ORDERS** form is reprsented in the ODBC as the *ORDERS* table.
 The relationship between upper-level and subforms can be complex, with certain subforms having more than one possible upper-level parent. To circumvent this, when accessing a subform, the upper-level form must be stated explicitly, in the structure *upperLevelForm*\_sep\_*subform*, e.g. **ORDERS\_sep\_ORDERITEMS**. 
@@ -211,7 +211,7 @@ ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder.
     SELECT OTBL.ACTNAME, OTBL.ACT, OTBL.WORKC, OTBL.C1, OTBL.C2, ITBL.WORKPATNAME, ITBL.WORKPATDES FROM ( SELECT OTBL.ACTNAME, OTBL.ACT, OTBL.WORKC, ITBL.WORKCNAME as C1, ITBL.WORKCDES as C2, ITBL.WORKPAT FROM ACT as OTBL left outer join WORKC as ITBL on (OTBL.WORKC = ITBL.WORKC) ) as OTBL;
     ```
 
-- IS NULL / IS NOT NULL expression should replaced by **=** or **<>** **''** for string values, or **=** or **<> 0** for numeric values
+- IS NULL / IS NOT NULL expressions must be replaced by <code>= ''</code> or <code><> ''</code> <> '' for string values, and <code>= 0</code> or <code><> 0</code> for numeric values, as there are no NULL values in the schema exposed by ODBC.
 
 - The COUNT(X) function is replaced by COUNT(DISTINCT X)
 
@@ -227,7 +227,7 @@ ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder.
     ```sql
     SELECT ACTNAME FROM ACT ORDER BY ACT; 
     ```
-    the above statement will not work since ACT column is absent from the  SELECT columns; it should be:
+    The above statement will not work since ACT column is absent from the  SELECT columns; it should be:
     ```sql
     SELECT ACT, ACTNAME FROM ACT ORDER BY ACT;
     ```
@@ -241,8 +241,8 @@ ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder.
     SELECT COUNT(CINVOICES_sep_CINVOICEITEMS.DISPRICE) AS c2 FROM CINVOICES_sep_CINVOICEITEMS;
     ```
 
-- text forms are not supported
+- Text forms are not supported
 
-- picture fields are not supported
+- Picture fields are not supported
 
 - Privileges for individual fields in a form, or for records by data authorization, are not yet supported.
