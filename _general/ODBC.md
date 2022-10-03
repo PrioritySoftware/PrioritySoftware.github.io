@@ -1,7 +1,7 @@
 ---
 title: ODBC
 layout: default
-permalink: /ODBC
+permalink: /odbc
 class: nomenu
 tags: "ODBC"
 ---

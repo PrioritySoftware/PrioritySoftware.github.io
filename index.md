@@ -25,7 +25,7 @@ The documentation provides examples of how to request, query, and modify data us
 <br>
 <a  class="inline-link" href="./sdk/Introduction">Priority SDK</a>
 <a  class="inline-link" href="./webhooks">Webhooks</a>
-<a  class="inline-link" href="./ODBC">ODBC</a>
+<a  class="inline-link" href="./odbc">ODBC</a>
 
 
 
