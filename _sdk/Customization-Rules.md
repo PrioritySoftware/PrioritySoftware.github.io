@@ -23,8 +23,6 @@ As revisions are maintained per user, it is imperative for all
 programmers to work in their own usernames while performing the
 programming.
 
-<!-- TODO: Remove note, integrate into new Getting Started page -->
-
 **Note:** In order to execute a DBI operation -- i.e., anything that
 affects a table, table column or key -- you must belong to the privilege
 group of the superuser (*tabula*) and the PRIVUSERS system constant must
