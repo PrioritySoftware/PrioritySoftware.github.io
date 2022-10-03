@@ -120,12 +120,16 @@ code{
   max-width: 50%;
 }
 
+.main_page {
+  flex-grow: 6 !important;
+}
+
 #main_content_wrap 
 {
    background-color:white;
    order:2;
    margin-left: 10px;
-   flex-grow: 6;
+  //  flex-grow: 6;
     border:none;
   .inner > table ,.inner > table td
   {
@@ -511,6 +515,8 @@ background: #dadada;
 
 .nomenu {
   width: 70%;
+  list-style: disc;
+  font-size: 120%;
 }
 
 a.btn {

@@ -5,7 +5,22 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 22.1
+
+### October 2022
+
+- Removed the sections on Oracle and SQL ODBC. Read about the new and improved ODBC [here](../ODBC).
+- Added more information on working with XML/JSON interface files in the web interface.
+- Several new options added to the [OAuth2 Defintions](WSCLIENT#authenticating-with-oauth2) form.
+- Added a new [Setting Up](Setting-Up) page with information on initial setup of a new development environment. It also contains information on the new option for working as a developer without being assigned to the *tabula* user group.
+
 ## SDK 22.0
+
+## September 2022
+
+- Documented the following [SQL Functions](SQL-Functions-Variables) - SQL.CLOUDURL, SQL.REGNAME, SQL.HOSTING, SQL.ORACLE
+- Clarification that the *unbase64* filter expects unicode input.
+- Added the size limit of tags read by XMLPARSE.
 
 ### August 2022
 

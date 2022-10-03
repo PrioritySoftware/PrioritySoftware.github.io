@@ -2,10 +2,16 @@ chapters:
 
   - title: Introduction
     url: Introduction
+    group: Introduction
   - title: Release Notes
     url: Release-Notes
+    group: Release Notes
   - title: Customization Rules
     url: Customization-Rules
+    group: CR
+  - title: Setting Up the Dev Environment
+    url: Setting-Up
+    group: Setting Up
   - title: Database Tables
     url: Tables
     group: Tables
