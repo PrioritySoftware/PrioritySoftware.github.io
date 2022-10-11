@@ -22,7 +22,9 @@ tags: "ODBC"
 
 ## Introduction
 
-[22.1]
+{% include info.html content="<p>The Priority ODBC Driver is not yet available. We are hard at work to get it into your hands as soon as possible.</p>" %}
+
+[22.1]()
 
 The Priority ODBC driver allows 3rd party applications to access data on the Priority server using SQL statements.
 
