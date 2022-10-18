@@ -30,5 +30,5 @@ algolia:
   application_id: 'AXTY3FIAOU'
   index_name: 'priority-sdk'
   files_to_exclude: []
-  nodes_to_index: 'p,blockquote,span'
+  nodes_to_index: 'p,blockquote,span,li'
   settings: false
