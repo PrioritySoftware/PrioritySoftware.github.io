@@ -405,13 +405,15 @@ SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT; /* You
 
 
 
-**SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, IMAGE\], path output type: 1 for relative, or 0 for absolute)
+**SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, IMAGE\], path output type: 1 for relative, or 0 for absolute)
 
 returns the the path for a given system folder
 ```sql
-SELECT SYSPATH('MAIL', 1) FROM DUMMY; /*.. / .. /system /mail */
-SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:\\system\\mail\\ */
+SELECT SYSPATH('MAIL', 1) FROM DUMMY; /*../../system/mail */
+SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:\system\mail\ */
 ```
+
+**Note:** In the Windows environment, the TMP folder location can change between users.
 
 **STRINDEX**(full_string, search_string, index)
 
