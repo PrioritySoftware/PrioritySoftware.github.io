@@ -251,7 +251,7 @@ chapters:
         url: Interact-with-External-Systems
       - page: WSCLIENT - Work with Web Services
         url: WSCLIENT
-      - page: Parsing XML/JSON Files
+      - page: Working with XML/JSON Files
         url: XMLPARSE
       - page: Defining Word Templates for Specific Form Records
         url: Defining-Word-Templates

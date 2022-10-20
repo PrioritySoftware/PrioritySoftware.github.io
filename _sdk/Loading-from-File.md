@@ -7,7 +7,7 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-When using an external file to import or export data in a [form load](Form_Loads), make sure you know the structure of the file you will be using before you begin defining the interface.
+When using an external file to import or export data in a [form load](Form-Loads), make sure you know the structure of the file you will be using before you begin defining the interface.
 
 **Tip:** If you want to create a new form load based on an existing one,
 retrieve the desired form load and run the *File Definitions for Form
@@ -104,6 +104,19 @@ loaded into the form table. When the form load interface is used to
 export data, if the form column is empty, the default value will be
 exported.
 
+## Additional Definitions for Exporting Data 
+
+When you are exporting data from ***Priority*** forms to a file, you can
+use the *Outgoing Interface Definitions* form (a sub-level of *Position
+of Form Columns in File*) to define the following:
+
+-   *Align* -- determines how to align the columns in the file (left or
+    right); useful for number columns.
+-   *Date Format* -- determines how date values will be displayed.
+    Again, you can use any of the available SQL date formats, such as
+    MMDDYY or MM/DD/YY.
+-   *Padding w/Zeroes* -- useful for number columns.
+
 ## Additional Definitions for XML/JSON Files 
 
 ### Parsing File Tags/Fields
@@ -156,18 +169,7 @@ In XML files, you may note that the **Type of Value** column contains a value of
 
 ------------------------------------------------------------------------
 
-## Additional Definitions for Exporting Data 
 
-When you are exporting data from ***Priority*** forms to a file, you can
-use the *Outgoing Interface Definitions* form (a sub-level of *Position
-of Form Columns in File*) to define the following:
-
--   *Align* -- determines how to align the columns in the file (left or
-    right); useful for number columns.
--   *Date Format* -- determines how date values will be displayed.
-    Again, you can use any of the available SQL date formats, such as
-    MMDDYY or MM/DD/YY.
--   *Padding w/Zeroes* -- useful for number columns.
 
 ## More on Form Loads 
 

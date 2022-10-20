@@ -28,7 +28,7 @@ must be converted to an integer using the [ATOI function](Scalar-Expressions#Str
 HTMLVALUE you can retrieve the relevant record (the one being printed)
 from the main table of the document in question.
 
-To identify the user from within the procedure, use the [SQL.WEBID variable](SQL-Functions-Variables#SystemFunctions ). When
+To identify the user from within the procedure, use the [SQL.WEBID variable](SQL-Functions-Variables#System-Functions). When
 users log in using their e-mail address, this variable receives the
 value of the **PHONEBOOK.PHONE** column. In procedures that are defined
 for internal users only, users can also log in with their username. In
