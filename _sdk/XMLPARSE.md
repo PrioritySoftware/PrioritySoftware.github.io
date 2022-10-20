@@ -50,13 +50,13 @@ results for the above two EXECUTE commands (without the *--all* parameter and wi
 You can use the **INSTAG** command to insert data into an XML tag in an existing file.
 
 **Syntax:**
-```SQL
+```sql
 EXECUTE INSTAG 'path_to_xml_file', 'path_to_data_file', 'tag_name';
 ```
 
 You can provide the file paths and tag name as variables:
 
-```SQL
+```sql
 :XMLFILE = 'path_to_xml_file';
 :DATAFILE = 'path_to_data_file';
 :XMLTAG = 'tag_name';
