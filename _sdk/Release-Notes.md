@@ -13,6 +13,8 @@ tags: 'Priority_SDK'
 - Added more information on working with XML/JSON interface files in the web interface.
 - Several new options added to the [OAuth2 Defintions](WSCLIENT#authenticating-with-oauth2) form.
 - Added a new [Setting Up](Setting-Up) page with information on initial setup of a new development environment. It also contains information on the new option for working as a developer without being assigned to the *tabula* user group.
+- Added documentation of the [INSTAG](XMLPARSE#inserting-data-into-an-xml-tag) function for inserting data into an XML file.
+- Added more examples for [WINHTML](WINHTML#executing-the-document) for outputting a single document.
 
 ## SDK 22.0
 

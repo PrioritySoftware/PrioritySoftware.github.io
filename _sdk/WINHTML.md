@@ -68,20 +68,50 @@ WHERE EXEC = :EXEC AND USER = SQL.USER;
 
 ### Executing the Document
 
+The following examples come in pairs. The first example is for outputting a single document (with '-v'), the second one is for outputting multiple documents:
+
 - 	To output the document as an HTML system document (-o), use the following code:
 ```sql
+/*single document*/
+:ORD = 100;
+:HTMLFILE = '../../tmp/SOMEFILENAME.html';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-o', :HTMLFILE;
+```
+```sql
+/*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', '../../TMP/O.html';
 ```
 - 	To output the document as PDF based on a system document (-pdf), use the following code:
 ```sql
+/*single document*/
+:ORD = 100;
+:PDFFILE = '../../tmp/SOMEFILENAME.pdf';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-pdf', :PDFFILE;
+```
+```sql
+/*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-pdf', '../../TMP/O.html';
 ```
-- 	To output the document as a Word file (-wo), use the following code instead:
+- 	To output the document as a Word file (-wo), use the following code:
 ```sql
+/*single document*/
+:ORD = 100;
+:WORDFILE = '../../tmp/SOMEFILENAME.docx';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-wo', :WORDFILE;
+```
+```sql
+/*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', '../../TMP/O.docx';
 ```
-- 	To output the document as a pdf file based on a word file (-wpdf), use the following code instead:
+- 	To output the document as a pdf file based on a word file (-wpdf), use the following code:
 ```sql
+/*single document*/
+:ORD = 100;
+:PDFFILE = '../../tmp/SOMEFILENAME.pdf';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-wpdf', :PDFFILE;
+```
+```sql
+/*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TMP/O.pdf'; 
 ```
 

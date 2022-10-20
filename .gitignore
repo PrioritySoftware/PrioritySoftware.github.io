@@ -141,3 +141,5 @@ _algolia_api_key
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/ff/603557d44345735c69b197d1d2803f95cd4944323abd389ab4cfdd6ed83f3f
 *cache*
 jekyll-algolia-record-too-big.log
+.vscode/settings.json
+.gitignore
