@@ -1,5 +1,6 @@
 ---
 type: frontmatter
+title: 
 search: exclude
 ---
 

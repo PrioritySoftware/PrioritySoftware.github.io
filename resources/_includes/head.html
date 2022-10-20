@@ -1,5 +1,7 @@
 {% if site.google_analytics and jekyll.environment == 'production' %}
 {% include analytics.html %}
 {% endif %}
+{% if site.output == 'web'  %}
 {% include bootstrap.html %}
+{% endif %}
 {% include algolia.html %}
