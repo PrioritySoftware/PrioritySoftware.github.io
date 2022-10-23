@@ -74,7 +74,7 @@ EXECUTE FILTER '-base64', :IN_JPG, :IN_JPGBASE;
 EXECUTE INSTAG :IN_XML, :IN_JPGBASE, :IN_TAG;
 ```
 
-Note that if there are multiple tags with the same name in the file, the contents will be inserted into the first tag found.
+Note that if there are multiple tags with the same name in the XML file, the contents will be inserted into the first tag found.
 
 # Parsing JSON 
 
