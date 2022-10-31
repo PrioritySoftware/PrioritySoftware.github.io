@@ -18,4 +18,5 @@ defaults:
     values:
       layout: "sdk_pdf"
       output: pdf
+      type: sdk
 
