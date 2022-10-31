@@ -123,7 +123,8 @@ The following rules apply to the internal names of all private entities added to
     SEARCH-FIELD trigger that is changed in future software revisions.
 
 -   Any [form message](Errors-and-Warnings ) that you
-    add must be assigned a number greater than 500.
+    add must be assigned a number greater than 500.\
+    **Note:** Certain forms, such as those of constants, have standard messages with numbers larger than 500.
 -   Do not add standard forms as sub-level forms of custom forms. 
 -   When using LABELs in your code, use numbers with at least 4 digits. This will prevent conflicts with the label numbers used in standard triggers.
 
