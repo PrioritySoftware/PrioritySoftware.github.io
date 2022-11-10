@@ -93,24 +93,24 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
 
 2. In the **ODBC Data Sources (64-bit)** (%windir%\system32\odbcad32.exe) utility, switch to the **User DSN** tab.
 3. Click **Add**.
-4. Choose **Priority ODBC Unicode Driver**** and click **Finish**.
+4. Choose **Priority ODBC Unicode Driver** and click **Finish**.
 5. Configure the connection properties:
    - Data Source Name: Priority (or another name of your choice)
-   - Server: <odbc_url>:8005 (address of the ODBC service on the application server).\
+   - Server: *odbc_url* (address of the ODBC service on the application server).
    - Tabula.ini: *tabula.ini* (name of configuration file in Priority server)
    - Language: 1 for Hebrew, 3 for English \
    **Note:** Language codes for other languages can be found in **System Management > Dictionaries > Translation > Languages**.
-   - User: <priority_user>
-   - Password: <priority_password>
-   - Database: <company_name> \
-    **Note:** You can find the company names in **System Management > System Maintenance > Companies > Companies**.
+   - User: *priority_username*
+   - Password: *priority_password*
+   - Database: *internal_company_name*\
+   **Note:** You can find the internal company name in Priority under **System Management > System Maintenance > Companies > Companies**.
 
 6. Press the **Test** button to check the connection.
 
 To generate the ODBC url, use the **Send Program Activation Link** in Priority, send an API link, then replace the the entire part of the url that starts with *odata* and replace it with **ODBC**.
 
 For example:
-```url
+```
 www.example.com/prirotiy/odata/Priority/tabula.ini/comp
 ```
 
@@ -122,12 +122,20 @@ www.example.com/prirotiy/odbc
 
 You can also test the ODBC against Priority's sandbox environment, at the url **https://www.eshbelsaas.com/ui/mob/odbc/**.
 
+Use the following information:
+
+![Sandbox Connection Info](https://cdn.priority-software.com/docs/images/ODBC_sandbox_config.png)
+
+Password: 123
+
+If you do not have a dedicated ODBC client, you can use Microsoft Excel to consume data from an ODBC source.
+
 ### Connecting with a Connection String
 
 Alternatively, you can fill in this data as part of the connection string:
 
 ```
-Driver=Priority ODBC Unicode Driver;Server=<odbc_url>:8005;Tabulaini=tabula.ini;Database=<my_company>;Lang=3;User=<pri_user>;Pwd=<pri_password>
+Driver=Priority ODBC Unicode Driver;Server=<odbc_url>;Tabulaini=tabula.ini;Database=<my_company>;Lang=3;User=<pri_user>;Pwd=<pri_password>
 ```
 
 ## ODBC Functions
