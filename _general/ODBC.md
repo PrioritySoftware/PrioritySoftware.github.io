@@ -22,8 +22,6 @@ tags: "ODBC"
 
 ## Introduction
 
-{% include info.html content="<p>The Priority ODBC Driver is not yet available. We are hard at work to get it into your hands as soon as possible.</p>" %}
-
 [22.1]()
 
 The Priority ODBC driver allows 3rd party applications to access data on the Priority server using SQL statements.
@@ -45,7 +43,19 @@ Attempting to access just the subform (e.g., just **ORDERITEMS**) will generate 
 
 The data available via ODBC is subject to the system privileges of the user making the connection. Forms which you are not authorized to view in the Priority UI are also unavailable via ODBC.
 
-## Defining Forms as Available via ODBC
+## Setting Up ODBC
+
+### Update the BIN95 Folder
+
+The Priority ODBC Driver is available starting with version 22.1.21 (Nov. 6 2022) version of the Priority BIN95 folder. Download and update it as necessary.
+
+For more information, see [here](https://support.priority-software.com/#/kb/FQI2000507_E/English).
+
+### Reinstall the Application Server
+
+On the Priority application server, run the Install Application Server procedure. A new option in the installation is to Activate ODBC on the application server. 
+
+### Defining Forms as Available via ODBC
 
 The Priority system has a large number of forms (over 3,000), but you generally only want to access a handful of them via ODBC. Therefore, only forms which are specified in the **Define ODBC Forms** form are actually exposed via ODBC.
 
@@ -58,9 +68,9 @@ The changes made in this form will take effect when you next connect with the OD
 
 In order to improve performance, the ODBC driver caches to memory all metadata once it is received from the server. If there were server side changes to the metadata (columns added/removed/changed to a form, or added/removed forms), priodbc.dll should be reloaded (by restarting the client application).
 
-## Installing the ODBC Driver
+### Installing the ODBC Driver
 
-1. Download the Priority ODBC Driver Package (priodbc.zip).
+1. Download the [Priority ODBC Driver Package](https://cdn.priority-software.com/upgrades/var/odbc/22.1/priodbc.zip).
 2. Extract the contents of the zip file to a folder of your choice. For example, if you extracted it in the root C:\ drive, you'd have a new folder *C:\\priodbc*.
 3. Run the installation script *install.bat* as an administrator.
 
@@ -86,7 +96,7 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
 4. Choose **Priority ODBC Unicode Driver**** and click **Finish**.
 5. Configure the connection properties:
    - Data Source Name: Priority (or another name of your choice)
-   - Server: <netgate_ip>:8005 (IP address or name of the Priority Application server where the netgate.exe process is running)
+   - Server: <odbc_url>:8005 (address of the ODBC service on the application server).\
    - Tabula.ini: *tabula.ini* (name of configuration file in Priority server)
    - Language: 1 for Hebrew, 3 for English \
    **Note:** Language codes for other languages can be found in **System Management > Dictionaries > Translation > Languages**.
@@ -97,12 +107,27 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
 
 6. Press the **Test** button to check the connection.
 
+To generate the ODBC url, use the **Send Program Activation Link** in Priority, send an API link, then replace the the entire part of the url that starts with *odata* and replace it with **ODBC**.
+
+For example:
+```url
+www.example.com/prirotiy/odata/Priority/tabula.ini/comp
+```
+
+Would become:
+
+```
+www.example.com/prirotiy/odbc
+```
+
+You can also test the ODBC against Priority's sandbox environment, at the url **https://www.eshbelsaas.com/ui/mob/odbc/**.
+
 ### Connecting with a Connection String
 
 Alternatively, you can fill in this data as part of the connection string:
 
 ```
-Driver=Priority ODBC Unicode Driver;Server=<netgate_ip>:8005;Tabulaini=tabula.ini;Database=<my_company>;Lang=3;User=<pri_user>;Pwd=<pri_password>
+Driver=Priority ODBC Unicode Driver;Server=<odbc_url>:8005;Tabulaini=tabula.ini;Database=<my_company>;Lang=3;User=<pri_user>;Pwd=<pri_password>
 ```
 
 ## ODBC Functions
