@@ -30,7 +30,9 @@ The driver does not provide direct access to the underlying database (MSSQL or O
 
 ## Requirements
 
-The Priority ODBC Driver requires that you have a Priority Application Server installed, with port 8005 opened.
+- The Priority ODBC Driver requires that you have a Priority Application Server installed.
+
+- To use ODBC, you must obtain a license for the ODBC module.
 
 ## Database Schema
 
@@ -47,11 +49,15 @@ The data available via ODBC is subject to the system privileges of the user maki
 
 ### Update the BIN95 Folder
 
+This step is for local machines only. Cloud customers can skip to [Defining Forms as Available via ODBC](#defining-forms-as-available-via-odbc).
+
 The Priority ODBC Driver is available starting with version 22.1.21 (Nov. 6 2022) version of the Priority BIN95 folder. Download and update it as necessary.
 
-For more information, see [here](https://support.priority-software.com/#/kb/FQI2000507_E/English).
+For more information, see [here](https://support.priority-software.com/#/kb/FQ17000068_E/English).
 
 ### Reinstall the Application Server
+
+This step is for local machines only. Cloud customers can skip to [Defining Forms as Available via ODBC](#defining-forms-as-available-via-odbc).
 
 On the Priority application server, run the Install Application Server procedure. A new option in the installation is to Activate ODBC on the application server. 
 
@@ -69,6 +75,8 @@ The changes made in this form will take effect when you next connect with the OD
 In order to improve performance, the ODBC driver caches to memory all metadata once it is received from the server. If there were server side changes to the metadata (columns added/removed/changed to a form, or added/removed forms), priodbc.dll should be reloaded (by restarting the client application).
 
 ### Installing the ODBC Driver
+
+This step should be performed on the machine from which you plan to connect to the system via ODBC.
 
 1. Download the [Priority ODBC Driver Package](https://cdn.priority-software.com/upgrades/var/odbc/22.1/priodbc.zip).
 2. Extract the contents of the zip file to a folder of your choice. For example, if you extracted it in the root C:\ drive, you'd have a new folder *C:\\priodbc*.
