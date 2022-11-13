@@ -78,7 +78,7 @@ chapters:
           - page: Built-in Triggers
             url: Built-in-Triggers
           - page: Creating Your Own Triggers
-            url: Creating-your-triggers
+            url: Creating-your-Triggers
           - page: Error and Warning Messages
             url: Errors-and-Warnings
           - page: Sending a Mail Message

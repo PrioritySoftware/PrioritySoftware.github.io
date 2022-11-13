@@ -200,7 +200,7 @@ integer and [**DTOA**](ATOD-and-DTOA ) for a date).
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles
     Dynamically](Dynamic-Column-Titles )

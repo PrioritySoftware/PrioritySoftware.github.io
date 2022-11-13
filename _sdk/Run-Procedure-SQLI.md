@@ -59,7 +59,7 @@ file.
 > status for price quotes; whenever a quote receives this status, you
 > want to open a sales order automatically based on that quote. To do
 > so, create a custom [POST-UPDATE
-> trigger](Creating-your-triggers#Creating-Row-Triggers )
+> trigger](Creating-your-Triggers#Creating-Row-Triggers )
 > that checks whether the new status assigned to the quote is the
 > special status and, if so, executes the *Open Order* procedure
 > (**OPENORDBYCPROF**) using any of the three commands mentioned

@@ -79,7 +79,7 @@ appear in this list.
 
 The restrictions on buffer names are virtually identical to those of
 [customized
-triggers](Creating-your-triggers#Naming-Customized-Triggers ).
+triggers](Creating-your-Triggers#Naming-Customized-Triggers ).
 The only difference is that, of course, no key strings may be used.
 
 ## Nesting INCLUDE Commands 
@@ -122,7 +122,7 @@ the *Use of Trigger* sub-level form of *Form Column Triggers* and of
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles

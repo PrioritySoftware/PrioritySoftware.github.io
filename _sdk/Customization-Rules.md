@@ -109,14 +109,14 @@ The following rules apply to the internal names of all private entities added to
 -   You cannot delete a standard column from a standard form.
 -   When creating your own [multiple joins](Form-Columns#Special-Joins), use a join
     ID and column ID greater than 5.
--   Any [trigger](Creating-your-triggers ) you add must
+-   Any [trigger](Creating-your-Triggers ) you add must
     start with a four-letter prefix or end with a four-letter suffix.
     Choose the first letter in the prefix/suffix for sorting purposes;
     the rest of the prefix/suffix should be the one normally used for
     this customer.
 
     **Important note:** [SEARCH-FIELD
-    triggers](Creating-your-triggers#SEARCH-FIELD ) are
+    triggers](Creating-your-Triggers#SEARCH-FIELD ) are
     the one exception to this rule, as their name cannot be changed.
     Instead, you have to use the standard trigger. This creates the
     slight risk that your trigger will be overwritten by a standard

@@ -204,7 +204,7 @@ form and run the *Upload Interface* program from the list of Actions .
 Programs that prepare privileges for procedures and forms also check the
 SQL statements in all form triggers and procedure steps. If any
 interface is executed from a [form
-trigger](Creating-your-triggers ) or [procedure
+trigger](Creating-your-Triggers ) or [procedure
 step](Procedure-Steps ), the required privileges are prepared
 whenever the trigger or procedure in question is activated. For example,
 when using the syntax EXECUTE INTERFACE *\'interface_name\',*\... the

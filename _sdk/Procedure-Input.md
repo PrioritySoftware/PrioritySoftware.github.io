@@ -98,7 +98,7 @@ radio button, use the empty string (\' \') as the second argument.
 
 **Note:** Rules for the CHOOSE query are similar to those in
 [CHOOSE-FIELD
-triggers](Creating-your-triggers#CHOOSE-FIELD ).
+triggers](Creating-your-Triggers#CHOOSE-FIELD ).
 
 ## Retrieving Records Into a Linked File 
 
@@ -145,8 +145,8 @@ also affect user input:
 
 When a parameter is defined as an input column, if the column has a
 target form and that form has
-[CHOOSE-FIELD](Creating-your-triggers#CHOOSE-FIELD-(for-form) )
-or [SEARCH-FIELD](Creating-your-triggers#SEARCH-FIELD )
+[CHOOSE-FIELD](Creating-your-Triggers#CHOOSE-FIELD-(for-form) )
+or [SEARCH-FIELD](Creating-your-Triggers#SEARCH-FIELD )
 triggers, those triggers will be imported to the input screen.
 
 You can also write a specific CHOOSE-FIELD or SEARCH-FIELD for the
@@ -160,7 +160,7 @@ list for the latter column to display only those customers that are
 associated with the specified sales rep.
 
 The same restrictions that apply to [form trigger
-names](Creating-your-triggers#Naming-Customized-Triggers )
+names](Creating-your-Triggers#Naming-Customized-Triggers )
 apply here as well.
 
 To design a new trigger, use the *Field Triggers* form (a sub-level of

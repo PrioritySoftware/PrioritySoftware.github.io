@@ -230,7 +230,7 @@ FROM ORDERITEMS WHERE (:$1.ORD <> 0 AND ORD = :$1.ORD );
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
--   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles

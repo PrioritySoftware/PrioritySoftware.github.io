@@ -38,7 +38,7 @@ Tools](Debug-Tools ).
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
--   [Creating Your Own Triggers](Creating-your-triggers )
+-   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
 -   [Changing Column Titles

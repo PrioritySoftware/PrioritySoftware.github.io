@@ -324,7 +324,7 @@ form and that form has CHOOSE-FIELD or SEARCH-FIELD triggers, those
 triggers will be imported to the report input screen. You may want to
 write a specific CHOOSE-FIELD or SEARCH-FIELD for the report. The same
 restrictions that apply to [form trigger
-names](Creating-your-triggers#Naming-Customized-Triggers )
+names](Creating-your-Triggers#Naming-Customized-Triggers )
 apply here as well.
 
 To design a new trigger, use the *Field Triggers* form (a sub-level of
