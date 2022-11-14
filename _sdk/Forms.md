@@ -90,7 +90,7 @@ titles and types) from the base table.
 ------------------------------------------------------------------------
 
 **Note:** When creating a new form, you should also create a new base
-table for it (see [Tables](Tables )).
+table for it (see [Tables](Tables)).
 
 ------------------------------------------------------------------------
 
@@ -103,7 +103,7 @@ creating a new form, specify a code word that aids in retrieval.
 ------------------------------------------------------------------------
 
 **Note:** The application code can be used to define a [target
-form](Accessing-Related-Form#The-Target-Form ) to be reached
+form](Accessing-Related-Form#The-Target-Form) to be reached
 from a given form column.
 
 ------------------------------------------------------------------------
@@ -151,7 +151,7 @@ specify *x* in the *One-to-many* column.
 When you are designing your own form, once the above attributes have
 been designated, the form may be prepared as an executable file and
 loaded on screen, and values may be filled in its columns. All [built-in
-triggers](Built-in-Triggers ) will be activated.  
+triggers](Built-in-Triggers) will be activated.  
 The result, of course, will be very rough. All columns (including
 internal numbers) will be displayed and updateable. Form column
 position, which determines the order of form column display, will be
@@ -174,23 +174,21 @@ forms:
 -   Auto-refresh of upper-level forms when updating a sub-level - up to
     10 form levels above the current form.
 -   Sort columns - 10
--   Tables participating in form - 200
+-   Tables participating in form - 80
 
 The system can prepare up to 25000 forms simultaneously.
 
 ## Further Reading
 
--   [Form Columns](Form-Columns )
--   [Sub-level Forms](Sub-level-Forms )
--   [Conditions of Record Display and
-    Insertion](Conditions-Record-Display )
+-   [Form Columns](Form-Columns)
+-   [Sub-level Forms](Sub-level-Forms)
+-   [Conditions of Record Display and Insertion](Conditions-Record-Display)
 -   [Actions](Actions)
--   [Form Refresh](Form-Refresh )
--   [Accessing a Related Form](Accessing-Related-Form )
--   [Creating a Text Form](Create-Text-Form )
--   [Creating a Default Design for a
-    Form](Default-Design )
--   [Form Triggers](Form-Triggers )
--   [Form Preparation](Form-Preparation )
--   [Help Messages](Help-Messages )
--   [Rules for Customizing](Customization-Rules )
+-   [Form Refresh](Form-Refresh)
+-   [Accessing a Related Form](Accessing-Related-Form)
+-   [Creating a Text Form](Create-Text-Form)
+-   [Creating a Default Design for a Form](Default-Design)
+-   [Form Triggers](Form-Triggers)
+-   [Form Preparation](Form-Preparation)
+-   [Help Messages](Help-Messages)
+-   [Rules for Customizing](Customization-Rules)

@@ -7,6 +7,11 @@ tags: 'Priority_SDK'
 
 ## SDK 22.1
 
+### November 2022
+
+- Reverted form limitation for number of participating tables back to 80.
+- [ODBC](../ODBC) is now available. Added some more information regarding requirements surrounding the use of the module.
+
 ### October 2022
 
 - Removed the sections on Oracle and SQL ODBC. Read about the new and improved ODBC [here](../ODBC).
