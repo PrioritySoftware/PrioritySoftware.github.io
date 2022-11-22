@@ -37,12 +37,12 @@ The load title is the means of identifying the load when executing it from the m
 
 ## Module
 
-Each form load belongs to a given ***Priority***module. As different
-modules are included in each type of***Priority***package, users are
+Each form load belongs to a given ***Priority*** module. As different
+modules are included in each type of ***Priority*** package, users are
 restricted to those form loads whose modules they have purchased. Assign
 a new form load the "Internal Development" module; this way you (and
 your customers) will be able to use it no matter which modules
-of***Priority*** have been purchased.
+of ***Priority*** have been purchased.
 
 ## Load Parameters {#load_parameters}
 
@@ -78,8 +78,8 @@ be designated during execution of the load itself:
     report even when they are \"ignored\", by means of the *--W*
     parameter (see more details below).
 
--   *HTML Text* --- When exporting ***Priority***data to an application
-    that supports HTML tags (such as another***Priority*** application),
+-   *HTML Text* --- When exporting ***Priority*** data to an application
+    that supports HTML tags (such as another ***Priority*** application),
     flag this column. HTML text definitions, such as fonts, sizes and
     colors, will be transferred intact, together with the text.
 

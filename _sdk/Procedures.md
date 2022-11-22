@@ -41,21 +41,20 @@ should be very similar in terms of their logic.
 <!--- Adjust for Web focus -->
 
 **Note:** There are some slight differences when procedures are written
-for the ***Priority*** web interface; see [Working with the Priority Web
-Interface](Working-with-the-Priority-Web-Interface ) for
+for the ***Priority*** web interface; see [Working with the Priority Web Interface](Priority-Web) for
 details.
 
 
 ## Copying Procedures 
 
-The *Copy Procedure*program copies:
+The *Copy Procedure* program copies:
 
 -   all the procedure steps
 -   all their parameters
 -   all step queries and procedure messages
 -   any designated target forms.
 
-It ***does not***copy the output title, links to menus, forms or other
+It ***does not*** copy the output title, links to menus, forms or other
 procedures.
 
 When assigning a name to the new procedure, be sure to follow the rules
@@ -66,8 +65,7 @@ revisions to the copy.
 **Notes:**
 
 -   If the procedure creates reports, you may need to copy one or more
-    of those reports as well, using the [*Copy Report*
-    program](Reports ).
+    of those reports as well, using the [*Copy Report* program](Reports).
 -   If the procedure runs a program, you must not make any changes to
     parameters used by the program.
 
@@ -90,7 +88,7 @@ by the system. The following restrictions apply:
     the *Reserved Words* form, at: *System Management → Dictionaries*).
 -   The name assigned to any newly created procedure must include a
     common four-letter prefix (the same one you use for all entities
-    that you add to **\'\'Priority**\'\' for the customer in question;
+    that you add to **Priority** for the customer in question;
     e.g., **XXXX_WWWSHOWORDER**).
 
 ### Procedure Title 

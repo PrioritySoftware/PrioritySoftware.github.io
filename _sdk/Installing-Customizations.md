@@ -23,7 +23,7 @@ forms and programs.
     customization in question. The order in which you link these lines
     determines their order in the upgrade file.
 
-    **Note:** The lines in the *Revision Steps*form are recorded in
+    **Note:** The lines in the *Revision Steps* form are recorded in
         the name of the user who made the modification. This way, if you
         have more than one programmer, each can track his/her own
         changes.

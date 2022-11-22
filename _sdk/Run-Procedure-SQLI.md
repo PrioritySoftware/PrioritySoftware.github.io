@@ -15,8 +15,7 @@ via e-mail](#Running-a-Report-and-Sending-it-by-E-mail ).
 The difference between the **WINACTIV** command and the **ACTIVATE** and
 **ACTIVATF** commands is that **WINACTIV** has a user interface, meaning
 that you can define a progress bar and/or messages that require a
-response from the user (using a [**PRINTF**, **PRINTCONTF** or
-**CHOOSEF** command](Procedure-Steps#Basic-Commands )) and
+response from the user (using a [ **PRINTF**, **PRINTCONTF** or **CHOOSEF** command](Procedure-Steps#Basic-Commands)) and
 these will be visible to users while the procedure is running, whereas
 the **ACTIVATE** and **ACTIVATF** commands will not display these
 elements. As such, the **WINACTIV** command cannot be used when working

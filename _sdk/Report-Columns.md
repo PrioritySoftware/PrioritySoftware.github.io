@@ -8,7 +8,7 @@ tags: 'Priority_SDK'
 ## Report Column Attributes 
 
 Report columns inherit the name, title, type, width and decimal
-precision (in the case of **REAL**or **INT** columns) of the table
+precision (in the case of **REAL** or **INT** columns) of the table
 columns whose data they display. With the exception of column name, all
 these report attributes may be modified, where desired.
 
@@ -26,8 +26,8 @@ make up the report. These columns may be derived from several different
 tables. The columns that make up a report can be assigned automatically
 or manually.
 
-To add report columns automatically, enter the *Report Tables*sub-level
-of the *Report Generator*form, and specify all tables from which data
+To add report columns automatically, enter the *Report Tables* sub-level
+of the *Report Generator* form, and specify all tables from which data
 are derived.
 
 **Tip:** Move to the *Table Name* column and press **F6**. You will
@@ -40,7 +40,7 @@ second table will receive the next ones, and so on. Within each table,
 columns will be positioned in order of their insertion into the table.
 These column positions, which determine the order in which report
 columns are displayed, may be revised, where desired. You can also
-delete the records (from the *Report Columns*form) for those table
+delete the records (from the *Report Columns* form) for those table
 columns which you do not need in the report, or you can hide unneeded
 columns.
 
@@ -56,7 +56,7 @@ columns.
 ## Adding Report Columns 
 
 To assign report columns yourself (whether to a new report or to an
-existing one), enter the *Report Columns*form and specify column
+existing one), enter the *Report Columns* form and specify column
 position, column name and table name. As with forms, the order in which
 columns appear in the report is determined by their relative position
 (an integer). Integers determining column position need not be
@@ -64,8 +64,8 @@ consecutive. The column assigned the lowest integer will appear first,
 that with the next highest integer will appear second, and so on.
 
 **Tip:** Press **F6** from the *Column Name* column to access the
-*Column Dictionary* or press**F6** from the *Table
-Name* column to access the *Table Dictionary*. The*Columns* sub-level
+*Column Dictionary* or press **F6** from the *Table
+Name* column to access the *Table Dictionary*. The *Columns* sub-level
 form of the *Table Dictionary* displays all columns that belong to a
 given table.
 
@@ -142,7 +142,7 @@ assigned a *Join ID* of 1 and **UNIT** is assigned a *Join ID* of 0.
 Just as a distinction must be made between the two joins, so, too, must
 a distinction be made between the report columns that are imported
 through each join. For instance, the two types of units are imported
-from the same table column: **UNITNAME**from the **UNIT** table. The
+from the same table column: **UNITNAME** from the **UNIT** table. The
 factory unit must be imported through join 0, whereas the standard unit
 must be imported through join 1. Thus, the former is assigned a
 *Column ID* of 0, whereas the latter is assigned a *Column ID* of
@@ -272,7 +272,7 @@ The last option overrides all other target forms, and the application
 target overrides the main target form.
 
 **Note:** To disable automatic access from a given column, specify the
-**NULL**form as the target form in the *Report Column Extension* form.
+**NULL** form as the target form in the *Report Column Extension* form.
 
 ### Dynamic Access 
 
@@ -291,7 +291,7 @@ Design* sub-level of the *Report Columns* form:
     containing the **ENAME** of the target form.
 
     **Note:** The column with the **ENAME** of the target form must have
-    a *Sort*value.
+    a *Sort* value.
 
 -   *Internal Link Column#* = same as :HTMLVALUE above.
 
@@ -303,8 +303,7 @@ Description* column to the *Part Catalogue* form, or from a *Details*
 column to the *Sales Orders* form.
 
 In order to achieve this, for the report column in question, record the
-following settings in the *Link/Input* tab of the*Report Columns-HTML
-Design* sub-level of the *Report Columns* form:
+following settings in the *Link/Input* tab of the *Report Columns-HTML Design* sub-level of the *Report Columns* form:
 
 -   *Link/Input Type* = P
 -   *Return Value Name (:HTMLACTION)* = \_winform
@@ -312,7 +311,7 @@ Design* sub-level of the *Report Columns* form:
     containing the key of the target form.
 
     **Note:** The column with the key of the target form must have a
-    *Sort*value.
+    *Sort* value.
 
 -   *Internal Link Column#* = leave empty.
 -   *Target Form (Choose)* = the name of the target form.
@@ -333,7 +332,7 @@ To design a new trigger, use the *Field Triggers* form (a sub-level of
 ## Special Report Columns 
 
 You can use report columns to display special values by using the
-*Report Columns-HTML Design* sub-level of the *Report Columns*form. For
+*Report Columns-HTML Design* sub-level of the *Report Columns* form. For
 example, you can display addresses in Google Maps; pictures; or QR
 codes.
 
@@ -343,8 +342,7 @@ You can define a column that will appear in the report as a link to
 Google Maps, which will bring up the relevant address.
 
 In order to achieve this, for the report column in question, record the
-following settings in the *Link/Input*tab of the*Report Columns-HTML
-Design* sub-level of the *Report Columns*form:
+following settings in the *Link/Input* tab of the *Report Columns-HTML Design* sub-level of the *Report Columns* form:
 
 -   *Link/Input Type* = Q
 -   *Return Value Name (:HTMLACTION)* = any value (do not leave empty)
@@ -363,7 +361,7 @@ You can define a column that will appear in the report as a QR code (a
 
 In order to achieve this, for the report column in question, record the
 following settings in the *Picture* tab of the *Report Columns-HTML
-Design* sub-level of the *Report Columns*form:
+Design* sub-level of the *Report Columns* form:
 
 -   *Picture* = Q
 -   *Width \[pixels\]*= Determined by the amount of data encoded

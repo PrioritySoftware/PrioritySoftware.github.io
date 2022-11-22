@@ -50,7 +50,7 @@ execution flow, mainly in long sequences of SQL commands
 
 ## Syntax of the Flow Control Commands 
 
-See [**Syntax Conventions**](SQL-Syntax#Syntax-Conventions" ).
+See [**Syntax Conventions**](SQL-Syntax#Syntax-Conventions).
 
 The syntax of each of these commands is as follows:
 
@@ -61,7 +61,7 @@ The syntax of each of these commands is as follows:
 -   **GOSUB** *sub_number* \[ **WHERE** *condition* \];
 -   **SUB** *sub_number*;
 -   **RETURN**;
--   **END** \[ **WHERE***condition* \];
+-   **END** \[ **WHERE** *condition* \];
 -   **ERRMSG** *msg_number* \[ **WHERE** *condition* \];
 -   **WRNMSG** *msg_number* \[ **WHERE** *condition* \];
 -   **REFRESH** 1;

@@ -15,7 +15,7 @@ During the execution of this table load, you can perform additional
 processing defined in a set of SQL statements (a load query). Results of
 the load can be viewed - and revised - in a form based on the
 interim table. Finally, a procedure can be used to transfer the final
-data to a regular***Priority*** form (e.g., **ORDERS**), using the
+data to a regular ***Priority*** form (e.g., **ORDERS**), using the
 form load defined above.
 
 In general, a table load interface is characterized by:
@@ -41,7 +41,7 @@ the *Characteristics for Download* form.
 
 **Note:** ***Priority***\'s interface tools can import data from either
 ASCII or Unicode (UTF-16) files, and will automatically recognize the
-format used. Data exported from***Priority*** for use in outgoing
+format used. Data exported from ***Priority*** for use in outgoing
 interfaces will be saved in ASCII format, unless otherwise specified.
 
 This name is subject to the following restrictions:

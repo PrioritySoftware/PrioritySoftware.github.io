@@ -73,7 +73,7 @@ the same time.
     forms and reports that include the column. Exercise caution when
     reducing column width, as stored data that were originally wider
     than the new width will be lost (see [**Unique
-    Keys**](#Unique-Keys )).
+    Keys**](Keys#unique-keys)).
 -   **Change Decimal Precision** --- You can only change decimal
     precision in the following cases (decimal precision will be modified
     in any existing forms and reports that include the column):

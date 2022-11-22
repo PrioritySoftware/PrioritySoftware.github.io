@@ -158,7 +158,7 @@ variable. While the SELECT statements in the above triggers could have
 referred to an ordinary database table, this would have caused the SQL
 mechanism to travel through all the table's records, which would take
 some time. It is therefore much faster to execute the SELECT via the
-**DUMMY** table. In fact, in **\'\'Priority**\'\' any SELECT \... FROM
+**DUMMY** table. In fact, in **Priority** any SELECT \... FROM
 DUMMY statement does not even access the **DUMMY** table; hence,
 execution is even faster.
 

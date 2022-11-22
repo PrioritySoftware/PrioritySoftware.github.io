@@ -19,14 +19,14 @@ is the case, this restriction is explicitly stated.
 In delineating SQL syntax, the following conventions are employed:
 
 -   Anything within brackets is optional (e.g., \[ *filename* \]). If
-    brackets are omitted, the argument *must*be specified.
+    brackets are omitted, the argument *must* be specified.
 -   The "\|" symbol between several options indicates that only one may
-    be chosen (e.g., \[ **FORMAT**\| **DATA**\| **ASCII** \]).
+    be chosen (e.g., \[ **FORMAT** \| **DATA** \| **ASCII** \]).
 -   When a set of options is enclosed within curved brackets, one of the
-    various options *must*be chosen (e.g., { *form/trigger*\|
+    various options *must* be chosen (e.g., { *form/trigger* \|
     *form/form_column/trigger*}).
 -   Characters in **bold** must be specified exactly as they appear.
-    Characters in *italics*have to be replaced by appropriate values. An
+    Characters in *italics* have to be replaced by appropriate values. An
     underscore between two or more italized words indicates that they
     should be treated as a single value (e.g., **SQLI \$U**/*query_file
     parameter*).

@@ -17,7 +17,7 @@ again. To do so, run the *Reprepare Form* program by an Action from the *Form Ge
 
 ## Reports
 
-Similarly, you can use the *Report Generator* to create on-line help messages for an entire report and/or any report column appearing in its parameter input screen. Help for the report itself is specified in the *Help Text* form, a sub-level of the *Report Generator* form; input column help is designated in the *Help Text* form, a sub-level of the *Report Columns* form. Whenever help messages (for the entire report or for any input column) are added or modified, the date and time of this revision appear in the *Help Date*column of the *Report Generator* form.
+Similarly, you can use the *Report Generator* to create on-line help messages for an entire report and/or any report column appearing in its parameter input screen. Help for the report itself is specified in the *Help Text* form, a sub-level of the *Report Generator* form; input column help is designated in the *Help Text* form, a sub-level of the *Report Columns* form. Whenever help messages (for the entire report or for any input column) are added or modified, the date and time of this revision appear in the *Help Date* column of the *Report Generator* form.
 
 **Note:** Do not write help for any report which is activated from a
 procedure; instead, write the help for the procedure.

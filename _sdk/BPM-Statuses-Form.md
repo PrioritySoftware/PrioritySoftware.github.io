@@ -54,7 +54,7 @@ are given here for demonstration purposes and can be changed as desired.
 
 The following form triggers need to be created:
 
--   A CHECK-FIELD trigger in the**INITSTATFLAG**column that prevents
+-   A CHECK-FIELD trigger in the **INITSTATFLAG** column that prevents
     users from marking more than one status as an initial status:
 
 > ```sql

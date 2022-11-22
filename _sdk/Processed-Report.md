@@ -13,8 +13,8 @@ prior to output. Such output may take the form of a standard report or a
 table.
 
 A procedure which generates a processed report is considered a special
-type of procedure. Thus, you have to specify an *R*in the
-*Rep/Wizard/Dashboard* column of the *Procedure Generator*form. Whenever
+type of procedure. Thus, you have to specify an *R* in the
+*Rep/Wizard/Dashboard* column of the *Procedure Generator* form. Whenever
 a procedure of this type is activated, ***it will act like a regular
 report***. Indeed, there is no way for the user to distinguish between a
 regular report and a processed one; they look exactly the same.

@@ -41,10 +41,7 @@ Variables](SQL-Variables#Text-Form-Variables ).
 
 All text tables in **\'\'Priority***(e.g., **PARTTEXT**, **ORDERSTEXT**)
 contain HTML tags. Sometimes, however, you may want to receive the
-content of these tables without the HTML tags --- for example, when
-exporting***Priority**\'\' data to an external database. You can use the
-**DELHTML** compiled program to delete HTML tags from any text table
-that has the structure defined below.
+content of these tables without the HTML tags --- for example, when exporting ***Priority*** data to an external database. You can use the **DELHTML** compiled program to delete HTML tags from any text table that has the structure defined below.
 
 
 

@@ -7,12 +7,11 @@ tags: 'Priority_SDK'
 
 ## Additions and Revisions to Standard SQL Commands 
 
-***Priority***offers some additional features to several standard SQL
+***Priority*** offers some additional features to several standard SQL
 commands: SELECT, ORDER BY and LIKE. Furthermore, it entails revisions
 to the standard SQL join.
 
-See also [**Syntax
-Conventions**](SQL-Syntax#Syntax-Conventions ).
+See also [ **Syntax Conventions** ](SQL-Syntax#Syntax-Conventions ).
 
 ## Output Formats for SELECT 
 
@@ -46,7 +45,7 @@ format commands:
 The syntax of these commands is:
 
 :   **SELECT** \... \[ { **FORMAT \| TABS \| DATA \| ASCII** \|
-    **SQLSERVER \| ORACLE**} \[**UNICODE** \] \[ **ADDTO** \] \[
+    **SQLSERVER \| ORACLE**} \[**UNICODE**\] \[ **ADDTO** \] \[
     *\'filename\'*\] \];
 
 If a file name is specified (enclosed in single quotes), the output is
@@ -72,12 +71,11 @@ For instance, the symbol " \| " may be used in pairs (as brackets) to
 enclose several characters or a range of characters. Any single
 character appearing within the brackets or falling within the range may
 be retrieved (e.g., **\| A--D \| %** yields any character or string
-beginning with the letter *A, B, C*or *D*, such as *Armchair, Desk,
+beginning with the letter *A, B, C* or *D*, such as *Armchair, Desk,
 Chair*).
 
 Moreover, the symbol "\^" may be added before one or more characters
-enclosed in brackets, to retrieve any character *other than*those (e.g.
-**\| \^A--D \| %** yields any character or string that does *not*begin
+enclosed in brackets, to retrieve any character *other than* those (e.g. **\| \^A--D \| %** yields any character or string that does *not* begin
 with the letter *A, B, C*, or *D*).
 
 Finally, the delimiter "\\" should be used to retrieve one of the above

@@ -7,7 +7,7 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-***Priority***offers a set of system functions that can be used to
+***Priority*** offers a set of system functions that can be used to
 retrieve set results (e.g., the current date and time). Furthermore, it
 recognizes a number of kinds of variables. These functions and variables
 are used in SQL statements.
@@ -42,7 +42,7 @@ Here is a partial list of SQL functions recognized by ***Priority***.
 -   SQL.WEBID, SQL.CLIENTID: identification variables (**INT** type and
     **CHAR** type, respectively) used for ***Priority Lite*** only.
 -   SQL.GUID: returns a random 32-character string, using the operating
-    system*s UUID function.
+    system's UUID function.
 -   SQL.PRETTY: returns the External Access ID in Priority Connect for the current company (in lowercase), or from another company on the server (in uppercase). For example, suppose we have a server with 2 companies, Example Company and  Demo Company, with only the latter having an External Access ID **prettydemo**:
     ```sql
     SELECT SQL.PRETTY FROM DUMMY FORMAT;
@@ -114,7 +114,7 @@ Regardless of type, all variables are limited to a size of 120 characters.
     Activation.
 
 :ACTIVATE_POST_FORM (**CHAR** type, width 1) --- assign it a value
-    of *Y* in a PRE-FORM trigger to activate the form*s POST-FORM
+    of *Y* in a PRE-FORM trigger to activate the form's POST-FORM
     trigger upon exiting the form, even if no changes have been made
     (e.g., see PRE-FORM trigger in the **TRANSORDER_H** form).
 
@@ -131,7 +131,7 @@ Regardless of type, all variables are limited to a size of 120 characters.
 
 :HTMLACTION, :HTMLVALUE and :HTMLFIELD --- used in ***Priority Lite*** procedures (see [Designing HTML Reports for Priority Lite/Dashboards](Lite-Dashboards-Reports)).
 
-:\_IPHONE --- used in [***Priority Lite*** procedures](Lite-Dashboards). This variable
+:\_IPHONE --- used in [ ***Priority Lite*** procedures](Lite-Dashboards). This variable
     receives a value of 1 when the procedure in question is run from a
     mobile device (e.g., an iPhone or Android device), and a value of 0
     when the procedure is run from a regular PC or iPad. By referring to
@@ -166,13 +166,13 @@ Regardless of type, all variables are limited to a size of 120 characters.
     user when a document is printed. Print formats are saved in the
     **EXTMSG** table.
 
-:SENDOPTION (**CHAR** type) --- stores the user*s selection in the
+:SENDOPTION (**CHAR** type) --- stores the user's selection in the
     *Print/Send Options* dialogue box when a document is printed.
 
 :ISSENDPDF (**INT** type) --- when a value of 1 is received, creates
     a PDF document rather than an HTML document (used with :SENDOPTION).
 
-:WANTSEDOCUMENT (**INT** type) --- stores the user*s selection in
+:WANTSEDOCUMENT (**INT** type) --- stores the user's selection in
     the *Are sent e-mails digitally signed by Outlook* column of the
     *Mail Options* dialogue box.
 
@@ -282,10 +282,10 @@ Regardless of type, all variables are limited to a size of 120 characters.
 
 The following reserved words are useful with the :KEYSTROKES
 variable:
-- *{Activate}N* (runs the form*s Nth Action)
+- *{Activate}N* (runs the form's Nth Action)
 - {Exit} (executes the query)
 -  {Key Right}, {Key Left}, {Key Up}, {Key Down}, {Page Up}, {Page Down} 
--  *{Sub-level}N* (opens the form*s Nth sub-level form),
+-  *{Sub-level}N* (opens the form's Nth sub-level form),
 -   {Table/Line View} (toggles between multi-record and full-record display).
 
 
@@ -315,7 +315,7 @@ or
 
 Similarly, a variable will inherit the type of a constant value
 appearing in the expression. For instance, in the expression :i + 5,
-*i*is assumed to be an **INT** variable.
+*i* is assumed to be an **INT** variable.
 
 Given an expression without a type context, SQL assigns a default
 variable type of **CHAR**. However, for a string with a width of 1

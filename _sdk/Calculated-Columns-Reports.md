@@ -15,7 +15,7 @@ report, including other calculated columns. To refer to other calculated
 columns in an expression, use their [column
 numbers](Report-Columns#Column-Numbers ).
 
-> **Example:** The *Days Late* column (#26) in the**AGEDEBTCUST2**report
+> **Example:** The *Days Late* column (#26) in the **AGEDEBTCUST2** report
 > indicates the number of days that have passed since payment was due by
 > comparing today\'s date (**SQL.DATE8** --- an SQL variable) to the
 > payment date (column #5):\
@@ -31,8 +31,7 @@ numbers](Report-Columns#Column-Numbers ).
 
 To add a calculated column to a given report, take the following steps:
 
-1.  In the *Report Columns*form, specify the position of the calculated
-    column in the *Pos*column.
+1.  In the *Report Columns* form, specify the position of the calculated column in the *Pos* column.
 2.  Designate the column's width in the *Width* column. In the case of a
     real number or a shifted integer, designate decimal precision as
     well.
@@ -48,7 +47,7 @@ To add a calculated column to a given report, take the following steps:
     entire expression, continue it in the sub-level form,
     *Expression/Condition (cont.)*.
 6.  Designate the column type (e.g., **CHAR**, **INT**, **REAL**) in the
-    *Column Type* column of the *Report Column Extension*form.
+    *Column Type* column of the *Report Column Extension* form.
 
 ------------------------------------------------------------------------
 
@@ -56,11 +55,9 @@ To add a calculated column to a given report, take the following steps:
 
 -   You can quickly view all calculated columns in a given report
     (identified by column number and title). To do so, access the
-    *Calculated Columns*form, a sub-level of both the *Report Column
-    Extension*form and the *Expression/Condition (cont.)*form.
+    *Calculated Columns* form, a sub-level of both the *Report Column Extension* form and the *Expression/Condition (cont.)* form.
 -   Once you exit the *Report Column Extension* form, a check mark
-    appears in the *Expression/Condition* column of the *Report
-    Columns*form. This flag helps you to spot any calculated columns in
+    appears in the *Expression/Condition* column of the *Report Columns* form. This flag helps you to spot any calculated columns in
     the report at a glance.
 
 ------------------------------------------------------------------------
@@ -91,7 +88,7 @@ DTOA](ATOD-and-DTOA ).
 Sometimes you may wish to include a calculated column that has a
 condition. In that case, you do not create a calculated column, as
 described above. Instead, add a dummy column to the form (column name =
-**DUMMY**; table name = **DUMMY**) and assign ***it***the desired
+**DUMMY**; table name = **DUMMY**) and assign ***it*** the desired
 condition. The condition itself must be preceded by "=1 AND" or \"=
 DUMMY.DUMMY AND\".
 
@@ -148,8 +145,7 @@ column (beyond a simple sum, average, minimum or maximum).
 > calculates the number of months in inventory in the period.
 
 Complex functions are defined (like all calculated columns) in the
-*Report Column Extension*form. In addition, a *Col. Func.*of type
-*F*must be specified.
+*Report Column Extension* form. In addition, a *Col. Func.* of type *F* must be specified.
 
 ## Further Reading 
 

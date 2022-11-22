@@ -19,7 +19,7 @@ BPM chart will update the form using this interface.
 2.  In the *Load Name* column, write the name of the interface:
     "BPMPRIV_MYBPM", where "PRIV_MYBPM" is the name of the
     **STATUSTYPE**.
-3.  In the*Load Table* column, write "GENERALLOAD".
+3.  In the *Load Table* column, write "GENERALLOAD".
 4.  In the *Record Size* column, specify "500" (this should be large
     enough).
 5.  Enter the *Forms to be Downloaded* sub-level form.

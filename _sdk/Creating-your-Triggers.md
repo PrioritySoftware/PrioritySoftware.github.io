@@ -23,8 +23,7 @@ the line or the form.
     form. This flag makes it easy to locate those columns for which
     user-designed triggers have been created.
 -   You can track changes to custom triggers once they have been
-    included in prepared version revisions. See [Tracking Changes to
-    Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
+    included in prepared version revisions. See [Tracking Changes to Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
 
 
 
@@ -428,13 +427,9 @@ the trigger: /\* MULTI \*/.
     system, to search by the name/description in English.
 -   SEARCH-FIELD triggers are the exception to the rule, as you cannot
     create a customized trigger of this type. Instead, you must use
-    standard SEARCH-FIELD triggers. For details, see [**Rules for
-    Customizing Forms**](#Rules-for-Customizing-Forms ).
--   SEARCH-FIELD triggers can only display table columns with a width of
-    up to 59 characters.
--   If the user selects more than one value in a Multiple Search and the
-    form generates a warning or error message, insertion of the selected
-    values will stop.
+    standard SEARCH-FIELD triggers. For details, see [**Rules for Customizing Forms**](#Rules-for-Customizing-Forms ).
+-   SEARCH-FIELD triggers can only display table columns with a width of up to 59 characters.
+-   If the user selects more than one value in a Multiple Search and the form generates a warning or error message, insertion of the selected values will stop.
 
 ### SEARCH-ALL-FIELD 
 

@@ -45,7 +45,7 @@ You can use one of three types of files for the form load:
 
 **Note:** ***Priority***\'s interface tools can import data from either
 ASCII or Unicode (UTF-16) files, and will automatically recognize the
-format used. Data exported from***Priority*** for use in outgoing
+format used. Data exported from ***Priority*** for use in outgoing
 interfaces will be saved in ASCII format, unless otherwise specified.
 
 ## Forms in the Load 

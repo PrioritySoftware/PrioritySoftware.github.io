@@ -62,7 +62,7 @@ then make certain adjustments to the copy.
 
 
 ***Warning!*** This is the only circumstance in which it is permissible
-to copy a standard***Priority*** form. Copying a form for any other
+to copy a standard ***Priority*** form. Copying a form for any other
 purpose will have adverse effects.
 
 
@@ -151,7 +151,7 @@ form and procedure.
     base report (e.g., copy **INVOICEREP** to **XXXX_INVOICEREP**).
     Revise the new form as described above with respect to the ASSETREP
     form.
-3.  Copy the relevant **RUN\*REP** procedure of the report you copied
+3.  Copy the relevant **RUN*REP** procedure of the report you copied
     (e.g., copy **RUNINVOICEREP** to **XXXX_RUNINVOICEREP**), revising
     the appropriate SQLI query line to :TYPE = \'r\'; :PAT = \'XXX\';
     (where XXX is the prefix you assigned in the form) and changing the

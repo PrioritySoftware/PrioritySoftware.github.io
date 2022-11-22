@@ -52,9 +52,7 @@ existing column. Instead, you need to take the following steps:
 
 Exception to the above rule: During the development phase, you can
 convert **INT** columns to **REAL** and vice versa, using the *Change
-Number Type* program (see [**Options for Creating and Modifying Tables,
-Columns and
-Keys**](Create-Modify-Tables )).
+Number Type* program (see [ **Options for Creating and Modifying Tables, Columns and Keys** ](Create-Modify-Tables)).
 However, once a custom development has been installed in your working
 environment, this operation may fail, in which case you should use the
 above method instead.

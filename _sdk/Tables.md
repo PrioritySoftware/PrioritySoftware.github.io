@@ -59,7 +59,7 @@ upgrade file) via another program.
 ### Rules for Modifying Tables and Table Columns 
 
 1.  When modifying tables, do not change standard table columns or any
-    of the table*s unique (or Auto Unique) keys.
+    of the table's unique (or Auto Unique) keys.
 2.  If you add a column to the table, the column name must begin with a
     four-letter prefix. Use the same prefix for all table columns (as
     well as any other Priority entities) that you have added for a given

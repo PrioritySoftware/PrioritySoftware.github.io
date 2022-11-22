@@ -101,7 +101,7 @@ one-record report. The following describes a number of the simpler, more
 useful options.
 
 To design individual report columns, use the *Report Columns-HTML
-Design* sub-level of the *Report Columns*form.
+Design* sub-level of the *Report Columns* form.
 
 -   *Design* tab: You can change the font and/or font color of a
     specific report column, as well as determine its background color.

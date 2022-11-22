@@ -69,12 +69,10 @@ The following values must be determined:
 
 -   **DOCDATENAME** -- The name of the column in the **XXXX_MYDOC** form
     that holds the date the document was recorded (e.g., **CURDATE**).
-    <!-- **Note:** This column is used to retrieve the document when
-    performing a full text search; for details, see [**Enterprise
-    Search**](#Enterprise_Search ). -->
+    
 
 
--   **TEXTEXEC** -- If the **XXXX_MYDOC**document has a sub-level text form (e.g., the **ORDERSTEXT** sub-level of the **ORDERS** form), the **EXEC** value of this text form.
+-   **TEXTEXEC** -- If the **XXXX_MYDOC** document has a sub-level text form (e.g., the **ORDERSTEXT** sub-level of the **ORDERS** form), the **EXEC** value of this text form.
 
     The following query assumes this form is called      **XXXX_MYDOCTEXT**:
 
@@ -84,7 +82,7 @@ The following values must be determined:
     ```
 
 
--   **TEXT2EXEC** -- If the **XXXX_MYDOC**document has an additional sub-level text form (e.g., for text in a second language), the **EXEC** value of the second sub-level text form.
+-   **TEXT2EXEC** -- If the **XXXX_MYDOC** document has an additional sub-level text form (e.g., for text in a second language), the **EXEC** value of the second sub-level text form.
 
     The following query assumes this form is called
     **XXXX_MYDOCTEXT2**:

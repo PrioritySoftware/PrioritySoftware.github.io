@@ -6,7 +6,7 @@ tags: 'Priority_SDK'
 ---
 
 ## Open a Record from a Hyperlink
-To open a ***Priority***entity from a hyperlink, it should point to the following location
+To open a ***Priority*** entity from a hyperlink, it should point to the following location
 (parameters are explained below):
 
 > *priority:priform\@FORMNAME:DOCUMENTNUM:COMPANY:TABINIFILE:LANG*
@@ -18,7 +18,7 @@ To open a ***Priority***entity from a hyperlink, it should point to the followin
     procedure; R = report). For example, to activate the *Project
     Reports* procedure, you would use the following syntax:\
     > priform@WWWDB_TRANSORDER_p.P
--   *DOCUMENTNUM* is the ID number of the **\'\'Priority**\'\' record
+-   *DOCUMENTNUM* is the ID number of the **Priority** record
     you want to retrieve in the designated form (not relevant when
     activating other types of entities). This is the value of the key
     column in the form\'s base table. For example, in the **ORDERS**

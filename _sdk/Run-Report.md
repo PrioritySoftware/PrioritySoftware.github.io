@@ -70,7 +70,7 @@ following steps:
 3.  Specify an integer to determine the order of the report within the
     form's list of Actions.
 4.  If the report is to be run in the background, flag the *Background
-    Execution*column.
+    Execution* column.
 
 
 **Note:** The *Actions* form, which is a sub-level of the *Form

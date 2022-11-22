@@ -125,8 +125,8 @@ form.
 > already exist in the **ORDERITEMS** form, you would define one of the
 > load table columns as updating the hidden **ORDI** column in that
 > form. In this case, make this column first in order of insertion. But
-> to specify the ordered part, use the **PARTNAME** column. **\'\'Do
-> not**\'\' use the hidden **PART** column, even though this may seem
+> to specify the ordered part, use the **PARTNAME** column. **Do
+> not** use the hidden **PART** column, even though this may seem
 > easier, as the CHECK-FIELD trigger of the **PARTNAME** column will be
 > bypassed and this is likely to have an adverse effect on record
 > insertion.

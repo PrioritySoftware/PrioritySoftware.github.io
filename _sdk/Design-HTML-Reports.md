@@ -7,8 +7,8 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-Any ***Priority***report can be displayed on the Internet or
-in***Priority*** Dashboards, provided that it is run from within an HTML
+Any ***Priority*** report can be displayed on the Internet or
+in ***Priority*** Dashboards, provided that it is run from within an HTML
 procedure.
 
 Nonetheless, a few forms in the *Report Generator* enhance its

@@ -8,7 +8,7 @@ tags: 'Priority_SDK'
 ## Introduction
 
 To record SQL statements, use the *Step Query* form, a sub-level of the
-*Procedure Steps*form (itself a sub-level of the *Procedure Generator*).
+*Procedure Steps* form (itself a sub-level of the *Procedure Generator*).
 
 INPUT, SQLI, HTMLCURSOR and HTMLEXTFILES commands can be accompanied by
 SQL statements that serve as step queries. Such queries are carried out
@@ -28,11 +28,9 @@ The SQL statements in step queries resemble those in form triggers. For
 instance, they can generate [error or warning
 messages](Errors-and-Warnings ) (by means of ERRMSG and
 WRNMSG statements). The contents of these messages are generally
-specified in the *Procedure Messages*form, a sub-level of the *Step
-Query*form. Long messages (taking up more than one line) can be
+specified in the *Procedure Messages* form, a sub-level of the *Step Query* form. Long messages (taking up more than one line) can be
 continued in the next sub-level, *Procedure Messages (cont.)*.
-Alternatively, [message
-content](Errors-and-Warnings#Specifying-the-Message-Content )
+Alternatively, [message content](Errors-and-Warnings#Specifying-the-Message-Content )
 can be taken from an external file.
 
 In any given error or warning message, you can include a message
@@ -40,8 +38,8 @@ parameter (`<P1>`{=html}, `<P2>`{=html}, `<P3>`{=html}). The values to
 be assigned to these parameters are defined in the query that generates
 the message, by means of the system variables :PAR1, :PAR2 and :PAR3.
 
-You can also refer to a specific **\'\'Priority**\'\'entity in the
-message, using the format **{*entity_name*.**{ **F**\| **R**\| **P**}
+You can also refer to a specific **Priority** entity in the
+message, using the format **{*entity_name*.**{ **F** \| **R** \| **P**}
 **}**, where F = form, R = report and P = procedure. That is, you
 designate the entity name and type, and the entity's title will appear
 in their place. This format is useful because entity names are rarely
@@ -113,8 +111,7 @@ write the declaration section in a separate buffer.
 
 You can check the SQL statements in the step query for syntax errors,
 prior to activation of the procedure itself, by running the *Syntax
-Check* program by Action from within the *Procedure
-Generator*form.
+Check* program by Action from within the *Procedure Generator* form.
 
 ## Tracking Changes in Step Queries 
 

@@ -80,7 +80,7 @@ In many procedures, especially those requiring user input, it is helpful
 to add brief text that guides the user through the actions he or she has
 to perform. While this text can be written on the base page itself, it
 is more efficient to record it as set text directly in
-**\'\'Priority**\'\'. For this purpose, a standard report called
+**Priority**. For this purpose, a standard report called
 **HTMLTEXT** has been created.
 
 To include set text in the procedure:

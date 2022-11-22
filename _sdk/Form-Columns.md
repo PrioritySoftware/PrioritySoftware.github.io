@@ -8,8 +8,7 @@ tags: 'Priority_SDK'
 ## Introduction
 
 To record attributes for form columns, use the appropriate columns in
-the *Form Columns* sub-level form of the [*Form
-Generator*](Forms ).
+the *Form Columns* sub-level form of the [*Form Generator*](Forms ).
 
 ## Column Names and Titles
 
@@ -156,7 +155,7 @@ imported from the **AGENTS** table, and (2) the rep’s number
 
 ### Balances: Special Read-only Columns
 
-**''Priority***offers the option of a***balance**'' column — a special
+**Priority** offers the option of a ***balance*** column — a special
 read-only column that displays financial balances. In order to
 distinguish between credit and debit balances, one is displayed within
 parentheses while the other appears in regular format. By default, it is
@@ -179,7 +178,7 @@ two columns to the form:
 
 In addition, you can include an ***opening balance*** column, if you
 want cumulative balance calculations to start from something other than
-0. In that case, specify *C* in the *Read/Mandatory/Bal* column.
+1. In that case, specify *C* in the *Read/Mandatory/Bal* column.
 
 > **Example:** See the **BAL_BASE**, **BAL** and **OPENNBAL** columns in
 > the **ACCFNCITEMS** form.
@@ -216,10 +215,10 @@ form.
 
 ## Special Date Columns
 
-As mentioned earlier, dates are stored in **''Priority***as integers,
+As mentioned earlier, dates are stored in ***Priority*** as integers,
 which correspond to the number of minutes elapsed since Jan. 1, 1988
 (for example, Dec. 31, 1987 = -1440). Hence, the date 01/01/1988 is
-stored as "0". Since***Priority**'' forms do not generally display zero
+stored as "0". Since ***Priority*** forms do not generally display zero
 values, this date is not displayed in form columns. If you want the
 value 01/01/1988 to be displayed in a particular column, the form column
 name must contain the string **BIRTHDATE** (e.g., the **BIRTHDATE10**
@@ -377,17 +376,15 @@ and column ID greater than 5.
 
 
 
-As opposed to regular joins, an ***outer join***allows for unmatched
+As opposed to regular joins, an ***outer join*** allows for unmatched
 rows between the base and join tables. To designate the outer join, add
-a question mark (?) in the relevant*Column ID*or*Join ID*column, next to
-the number of the ID. The decision as to where to put the question mark
+a question mark (?) in the relevant *Column ID* or *Join ID* column, next to the number of the ID. The decision as to where to put the question mark
 (column ID? join ID?) depends on where the null record is expected to be
 encountered. If it is in the table from which the form column is derived
-(i.e., the one appearing in the*Table Name*column of the*Form
-Columns*form), then add the question mark to the column ID. If the null
+(i.e., the one appearing in the *Table Name* column of the *Form Columns* form), then add the question mark to the column ID. If the null
 record is expected to appear in the join table, attach the question mark
 to the join ID. In the case of an additional join between the outer join
-table and another table, the question mark should appear in***each*** of
+table and another table, the question mark should appear in ***each*** of
 these join IDs.  
 
 > **Example:** The **FNCITEMS** table, which stores journal entry items,

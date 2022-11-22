@@ -39,7 +39,7 @@ The following functions are performed on strings:
 
 -   **tabula.tabulaf.strpiece**(*string, delimiter, m, n*) --- for a
     given input string and delimiter (which breaks up the string into
-    parts), retrieves *n*parts, beginning from the *m*th part.
+    parts), retrieves *n* parts, beginning from the *m*th part.
 
     `SELECT tabula.tabulaf.strpiece('hello-world','-',2,1) FROM DUAL; /* 'world' */`
     `SELECT tabula.tabulaf.strpiece('112.113.114.115','.',1,3) FROM DUAL; /* '112.113.114' */`
@@ -128,7 +128,7 @@ DECIMAL system constant (usually, 3).
 In ***Priority***, dates, times and days are stored in the database
 as integers, which correspond to the number of minutes elapsed since
 Jan. 1, 1988 (for example, Dec. 31, 1987 = -1440). These integers can be
-retrieved using the*SQL Development\'\' (**WINDBI**) program by writing
+retrieved using the *SQL Development* (**WINDBI**) program by writing
 a query such as:
 
 `SELECT 0 + IVDATE FROM INVOICES FORMAT;`

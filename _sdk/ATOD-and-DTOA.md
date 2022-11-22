@@ -45,7 +45,7 @@ and spaces between pattern components as desired.
 
 **YYYY** --- all four digits of year (2006)
 
-**day**\* --- weekday (Mon)
+**day** --- weekday (Mon)
 
 **hh:mm** --- hours and minutes (12:05)
 
@@ -57,7 +57,7 @@ and spaces between pattern components as desired.
     or European format, depending on the language type defined in the
     *Languages* form.
 
-**FULLDATE**\* --- the month name (abbreviated form), date and
+**FULLDATE** --- the month name (abbreviated form), date and
     four-digit year
 
 ## Converting a String to a Date: Examples 

@@ -40,7 +40,7 @@ The following is a list of useful Basic commands.
 -   **CHOOSE** (*Select Parameter*) --- Creates a menu of exclusive
 options, one of which must be chosen by the user (by flagging one of the radio buttons). This Choose menu will ***not*** be displayed if the procedure is run as an Action from a form.
 -   **CHOOSEF** (*Select Parameter*) --- Same as CHOOSE, except that the menu ***will*** be displayed when the procedure is run as an Action.
--   **CONTINUE** (*Continue*) --- Opens a pop-up menu of two exclusive options, one of which must be chosen by the user. The procedure will continue if the **OK**option is chosen; it will halt if the **Cancel**option is selected. This pop-up menu will ***not*** be displayed if the procedure is run as an Action from a form.
+-   **CONTINUE** (*Continue*) --- Opens a pop-up menu of two exclusive options, one of which must be chosen by the user. The procedure will continue if the **OK** option is chosen; it will halt if the **Cancel** option is selected. This pop-up menu will ***not*** be displayed if the procedure is run as an Action from a form.
 -   **CONTINUEF** (*Continue*) --- Same as CONTINUE, except that the
 menu ***will*** be displayed when the procedure is run as an Action.
 -   **END** (*End of Procedure*) --- Ends execution of the procedure; generally used in conjunction with the GOTO command.

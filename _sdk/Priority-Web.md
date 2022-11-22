@@ -5,10 +5,10 @@ group: Programming Tools
 tags: 'Priority_SDK'
 ---
 
-Advanced programming for the ***Priority***web interface is basically
+Advanced programming for the ***Priority*** web interface is basically
 the same as programming for the Windows interface. However, when working
 with the web interface you must keep in mind the different method used
-to access the***Priority*** server. As a result, the following
+to access the ***Priority*** server. As a result, the following
 exceptions apply:
 
 -   When working with attachments, only files located in the **system/mail** folder can be interacted with by the user. Any attachments uploaded by code should be stored in this folder if users need to interact with the attachment. 

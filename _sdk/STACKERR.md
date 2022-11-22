@@ -15,7 +15,7 @@ quotation of Draft‎*status.\'\'
 
 the user will receive 4 messages when the \'-m\' option is used:
 
-*1: Sales Rep Order Num*\
+*1: Sales Rep Order Num* \
 *2: form \'Sales Orders\'*
 *3: Price Quotation A9000019*\
 *4: You cannot base the order on a price quotation of Draft status.*

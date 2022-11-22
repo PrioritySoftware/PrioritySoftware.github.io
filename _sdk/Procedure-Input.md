@@ -8,7 +8,7 @@ tags: 'Priority_SDK'
 ## Introduction
 
 When the values of [parameters](Procedure-Parameters ) are
-determined by the user, an *I*is specified in the Input column (or an
+determined by the user, an *I* is specified in the Input column (or an
 *M*, if the input is mandatory). Input does not have to be defined via
 an [INPUT command](Procedure-Steps#Basic-Commands ). You can
 also specify input in a [CHOOSE
@@ -175,7 +175,7 @@ access a related target form in which to retrieve records.
 In the last case, the user normally arrives at a default target form.
 This is the form that serves as a "window" into the database table to
 which the column in question belongs (i.e., the table specified in the
-*Procedure Parameters*form), provided that the table and form share the
+*Procedure Parameters* form), provided that the table and form share the
 same name. However, there are several ways to override this default, so
 that the move will be to ***another root form based on the same
 table***:

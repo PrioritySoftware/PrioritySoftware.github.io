@@ -22,11 +22,11 @@ The LINK command is complemented by the UNLINK command.
 
 See [Syntax Conventions](SQL-Syntax#Syntax-Conventions ).
 
-**LINK***table_name1*\[ ID \] \[ **TO** *filename*1 \];
+**LINK** *table_name1* \[ ID \] \[ **TO** *filename*1 \];
 
 *{ database manipulations }*
 
-**UNLINK** \[ **AND REMOVE**\] *table_name1*\[ ID \];\]
+**UNLINK** \[**AND REMOVE**\] *table_name1* \[ID\];
 
 ## Explanation and Examples 
 
@@ -78,7 +78,7 @@ Use the AND REMOVE option if you wish the linked file to be deleted when
 it is unlinked. This is necessary when working with loops, particularly
 when manipulations are carried out on the data in the linked file. If
 you do not remove the linked file, and the function using LINK and
-UNLINK is called more than once, you will receive the *same copy*of the
+UNLINK is called more than once, you will receive the *same copy* of the
 table during the next link. So, if you want the LINK command to open a
 new (updated) copy of the table, use UNLINK AND REMOVE.
 

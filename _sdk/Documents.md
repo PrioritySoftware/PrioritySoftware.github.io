@@ -26,7 +26,7 @@ key](Keys#The-Autounique-Key ).
 
 The INPUT parameter of the linked file for the procedure's main table
 must be named PAR.If the procedure is to be activated from the menu, you
-must define this parameter as input (specify *I* in the *Input*column)
+must define this parameter as input (specify *I* in the *Input* column)
 and specify the *Column Name* and *Table Name* of the table column that
 will be linked. If the procedure is to be activated only from a form, it
 is not necessary to specify the PAR parameter as input, but you do have
@@ -85,7 +85,7 @@ from the main table of the document in question.
 All reports that are part of the document should receive at least two
 parameters. The first is the value of the autounique key of the record
 currently being worked on (e.g., the sales order in question). The
-second parameter should be of **ASCII**type, and must contain \"OUTPUT\"
+second parameter should be of **ASCII** type, and must contain \"OUTPUT\"
 in the *Value* column. This parameter will appear again in the final
 INPUT step of the procedure, in which all the text files created by the
 reports are combined into one document.
@@ -93,14 +93,13 @@ reports are combined into one document.
 ## Displaying the Document 
 
 The last step in the document procedure should be the [INPUT
-command](Procedure-Steps#Basic-Commands ). In the *Procedure
-Parameters*sub-level form,you must list all the text file parameters
+command](Procedure-Steps#Basic-Commands ). In the *Procedure Parameters* sub-level form,you must list all the text file parameters
 that were sent to the reports in the procedure. The INPUT step combines
 all these files into a single HTML file.
 
 To understand how the text files are positioned on the page, the HTML
 page can be viewed as a matrix. Each text file is placed in that matrix
-in the order you specify in the *Proc. Parameter-HTML Design*form, a
+in the order you specify in the *Proc. Parameter-HTML Design* form, a
 sub-level of *Procedure Parameters*.
 
 Thus, for each parameter, specify its location in terms of row and
@@ -120,8 +119,7 @@ design.
 You can offer the user a number of print formats to choose from, based
 on selected reports included in the procedure. First, name the print
 format in the sub-level form, *Print Formats;* then, specify which
-reports will be displayed in this format using the *Reports Included in
-Print Format*form. You can also offer the user the option of printing
+reports will be displayed in this format using the *Reports Included in Print Format* form. You can also offer the user the option of printing
 attachments together with the main document. To do so, include the
 [HTMLEXTFILES command](Procedure-Steps#Basic-Commands )
 towards the beginning of the procedure, recording a step query for it.

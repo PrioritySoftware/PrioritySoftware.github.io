@@ -55,8 +55,8 @@ not change until there is a new customer number. Thus, you should group
 by these columns. If you do not, the same customer name will be repeated
 for ***each*** order of this customer.
 
-Assign any "Group by" column an integer in the *Group by*column of the
-*Report Columns*form. Integers need not be consecutive, but the first
+Assign any "Group by" column an integer in the *Group by* column of the
+*Report Columns* form. Integers need not be consecutive, but the first
 "Group by" column should be assigned a value of 1. All "Group by"
 columns from the same table should share the same integer; they
 constitute a single "Group by" set. Records will first be grouped by the
@@ -98,11 +98,11 @@ so desire. You can also add blank lines between groups or even start
 each group on a new page.
 
 -   To repeat values, specify 1 in the \'\'Repeat Group (1)*column of
-the*Report Columns *form for the first "Group by" set (*Group
+the *Report Columns *form for the first "Group by" set (*Group
 by\'**\'**= 1).
 
 -   To add blank lines after the group, specify an integer (up to 10) in
-the *Skip Lines*column for the first "Group by" set.
+the *Skip Lines* column for the first "Group by" set.
 
 -   To start a new page for each group, specify "--1" in the *Skip
 Lines* column for the first "Group by" set.
@@ -161,7 +161,7 @@ Summary*).
     **Note:**The expression must reference a calculated report column
 that has been defined in the *Report Column Extension* sub-level
 form (expressions in the *Expression/Condition (cont.)* sub level
-form will not be taken into account). The*Column Type* of the
+form will not be taken into account). The *Column Type* of the
 calculated column must be **REAL**.
 
 -   A constant value (*Group Func.* = *C*) can be added to the
@@ -178,14 +178,13 @@ tabular reports (see below).
 
 Several functions can be performed on an individual report column.
 Depending on the value specified in the *Col. Func.*column of the
-*Report Columns*form, you can obtain:
+*Report Columns* form, you can obtain:
 
 -   a sum total (*Col. Func.*= *S*)
 -   an average (*A*)
 -   a minimum value (*I*)
 -   a maximum value (*M*)
--   a complex function (*F*) (defined in the *Report Column
-Extension*sub-level).
+-   a complex function (*F*) (defined in the *Report Column Extension* sub-level).
 
 When you specify a column function, only the *result* of the operation is
 displayed. That is, values for a number of lines are compressed into
@@ -193,8 +192,7 @@ values appearing in a single line. For instance, with respect to a sum
 total, the same information that was detailed for a given group is
 summarized into a single value.
 
-> **Example:** The **AGEDEBTCUST2**report (*Daily Aged
-> Receivables*) makes use of the *S* column function to summarize the
+> **Example:** The **AGEDEBTCUST2** report (*Daily Aged Receivables*) makes use of the *S* column function to summarize the
 > amounts owed (in the *Cum. Sum Outstanding* and *Sum* columns).
 
 **Note:** You can combine column and group functions.

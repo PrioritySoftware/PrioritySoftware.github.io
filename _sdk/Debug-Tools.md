@@ -87,9 +87,8 @@ file.
 
 ## Debugging a Simple Report 
 
-To debug a simple report (one ***not***run from a procedure), dump the
-report\'s query using the*SQL Development*(*\'WINDBI**) program (*System
-Management → Generators → Procedures\'\'). From the **Dump** menu,
+To debug a simple report (one ***not*** run from a procedure), dump the
+report\'s query using the *SQL Development* (**WINDBI**) program (*System Management → Generators → Procedures*). From the **Dump** menu,
 select **Report** and then record the internal name of the report in
 question. Results, for example, look like this:
 

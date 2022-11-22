@@ -73,7 +73,7 @@ Do List* form for that user.
 
 1.  Add the following hidden column to **XXXX_MYDOC**(listed are the *Form Column Name*, *Table Name* and *Column Name*, respectively):
     **NSCUST**, **MYDOC**, **MYDOC**. This column contains the autounique key of the **XXXX_MYDOC** table (the same as the **MYDOC** column).
-2.  Add POST-FIELD triggers, in both the **MYDOC**and **NSCUST**columns, to copy the values from one column to the other. For example, in the**MYDOC** column, the trigger would be:
+2.  Add POST-FIELD triggers, in both the **MYDOC** and **NSCUST** columns, to copy the values from one column to the other. For example, in the **MYDOC** column, the trigger would be:
 
     ```sql
     :$.NSCUST = :$.@;
