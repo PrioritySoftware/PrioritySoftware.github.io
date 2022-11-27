@@ -55,6 +55,8 @@ not change until there is a new customer number. Thus, you should group
 by these columns. If you do not, the same customer name will be repeated
 for ***each*** order of this customer.
 
+Grouping also affects the collapse/expand functionality of reports. For each grouping level, the report shows collapse/expand buttons (as + or - symbols). The user can use these buttons to expand or collapse sections of the report based on the grouping.
+
 Assign any "Group by" column an integer in the *Group by* column of the
 *Report Columns* form. Integers need not be consecutive, but the first
 "Group by" column should be assigned a value of 1. All "Group by"
