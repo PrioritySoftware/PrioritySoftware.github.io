@@ -29,10 +29,18 @@
   <div class="flex-container">
     
   <!-- MAIN CONTENT -->
-  <main id="main_content_wrap" class="{{'outer api-content'}}">
+  {% if page.type == 'title' %}
+  <main id="main_content_wrap" class="{{'outer api-content title' }}">
+    {% endif %}
+  {% if page.type == 'toc' %}
+  <main id="main_content_wrap" class="{{'outer api-content toc' }}">
+    {% endif %}
+  {% if page.type == 'sdk' %}
+  <main id="main_content_wrap" class="{{'outer api-content' }}">
+    {% endif %}
     <!-- Content -->
     {% if page.type == 'sdk' %}
-    <h1 class="{{page.type}}">{{ page.title }}</h1>
+    <h1 class="{{page.type}} print">{{ page.title }}</h1>
     {% endif %}
     <section  class="markdown-body">
           {{ content }}

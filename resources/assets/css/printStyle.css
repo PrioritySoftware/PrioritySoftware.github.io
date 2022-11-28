@@ -34,9 +34,18 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
     font-family: sans-serif;
     font-style:none;
     color: gray;
-    -prince-image-resolution: auto, 100dpi;
 
 }
+
+.title {
+    object-fit: fill;
+    -prince-image-resolution: 300dpi;
+    height:auto;
+    width:auto;
+    background-image: url('https://cdn.priority-software.com/docs/images/SDK_Title.png');
+    background-size: cover;
+}
+
 
 .printTitle {
     line-height:30pt;
@@ -61,8 +70,9 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 }
 
 .printTitleImage {
-    /* max-width:250px; */
-    margin-bottom:200px;
+    object-fit: fill;
+    image-resolution: 300dpi snap !important;  
+    width:1080px;   
 }
 
 

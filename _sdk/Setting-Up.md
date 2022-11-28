@@ -1,6 +1,5 @@
 ---
 title: Setting Up the Dev Environment
-layout: sdk_nav
 group: Setting Up
 tags: 'Priority_SDK'
 ---
