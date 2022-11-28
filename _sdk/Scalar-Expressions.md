@@ -47,6 +47,8 @@ determine that value.
 
 ## Numbers
 
+### Mathmatical Expressions
+
 **ROUND**(*m* )
 
 rounds *m* (a real number) to the nearest integer and treats it as an
@@ -63,26 +65,6 @@ rounds *m* (a real number) to the nearest integer but treats it as a
 ```sql
 SELECT ROUNDR(1.45) FROM DUMMY FORMAT; /* 1.000000 */
 ```
-
-
-
-**MINOP**(*m, n*)
-
-returns the minimum value between two numbers
-```sql
-SELECT MINOP(1.5,2) FROM DUMMY FORMAT; /* 1.500000 */
-```
-
-
-
-**MAXOP**(*m, n*)
-
-returns the maximum value between two numbers
-```sql
-SELECT MAXOP(1.5,2) FROM DUMMY FORMAT; /* 2.000000 */
-```
-
-
 
 **EXP**(*m, n*)
 
@@ -144,6 +126,25 @@ You can also use the MOD function to retrieve the time from a
 SELECT 17/05/09 12:25 MOD 24:00 FROM DUMMY FORMAT;/* 12:25 */
 ```
 
+### Comparisons
+
+
+**MINOP**(*m, n*)
+
+returns the minimum value between two numbers
+```sql
+SELECT MINOP(1.5,2) FROM DUMMY FORMAT; /* 1.500000 */
+```
+
+**MAXOP**(*m, n*)
+
+returns the maximum value between two numbers
+```sql
+SELECT MAXOP(1.5,2) FROM DUMMY FORMAT; /* 2.000000 */
+```
+
+### Conversions
+
 **REALQUANT**(*m*)
 
 inputs a shifted integer and translates it to a real number, where
@@ -193,6 +194,8 @@ SELECT HTOI(b) FROM DUMMY FORMAT; /* 11 */
 
 ## Strings
 
+### Conversions
+
 **ITOA**(*m, n*)
 
 outputs *m* as a string having *n* characters, where both values are
@@ -206,8 +209,6 @@ SELECT ITOA(35,4) FROM DUMMY FORMAT;/* \'0035\' */
 SELECT ITOA(35) FROM DUMMY FORMAT;/* \'35\' */
 ```
 
-
-
 **ATOI**(*string*)
 
 outputs the designated string as an integer (maximum length of 10
@@ -216,8 +217,6 @@ outputs the designated string as an integer (maximum length of 10
 SELECT ATOI('35') FROM DUMMY FORMAT;/* 35 */
 ```
 
-
-
 **ATOR**(*string*)
 
 outputs the designated string as a real number(maximum length of 14
@@ -225,8 +224,6 @@ outputs the designated string as a real number(maximum length of 14
 ```sql
 SELECT ATOR('109012.99') FROM DUMMY FORMAT;/* 109012.990000 */
 ```
-
-
 
 **RTOA**(*m, n, USECOMMA*)
 
@@ -244,94 +241,13 @@ SELECT RTOA(150654.665,2,USECOMMA) FROM DUMMY FORMAT; /*
 SELECT RTOA(3.665432,2) FROM DUMMY FORMAT; /* \'3.67\' */
 ```
 
-
+### String Information 
 
 **STRLEN**(*string*)
 
 outputs the length of the string (an integer)
 ```sql
 SELECT STRLEN('Priority') FROM DUMMY FORMAT;/* 8 */
-```
-
-
-
-**STRCAT**(*string1*, *string2*, \...)
-
-outputs the concatenation of given strings\
-
-**Note:**The length of the resulting concatenation is limited to 127
-    characters.
-```sql
-SELECT STRCAT('abc','ba') FROM DUMMY FORMAT;/* \'abcba\' */
-```
-
-
-
-**STRIND**(*string, m, n*)
-
-beginning from the *m* th position in a given string, retrieves
-    *n* characters
-```sql
-SELECT STRIND('Priority',3,2) FROM DUMMY FORMAT;/* \'io\' */
-```
-
-
-
-**SUBSTR**(*string, m, n*)
-
-beginning from the *m* th position in a given string, retrieves
-    *n* characters, whether *m* and *n* are variables or fixed values
-```sql
-:STR = 'Priority';
-:I = 3;
-:T = 2;
-SELECT SUBSTR(:STR, :I, :T) FROM DUMMY FORMAT; /*'io' */
-SELECT SUBSTR('Priority',3,2) FROM DUMMY FORMAT;/* 'io' */
-```
-
-**RSTRIND**(*string, m, n*)
-
-same as STRIND, except that the string is read from right to left
-```sql
-SELECT RSTRIND('Priority',3,2) FROM DUMMY FORMAT; /* \'ri\' */
-```
-
-
-**Note:** **STRIND** and **RSTRIND** behave differently when run on a *variable* within a SELECT statement from a real table, which can be confusing. As such, we recommend you always use **SUBSTR** and **RSUBSTR** instead.
-
-**RSUBSTR**(*string, m, n*):
-
-same as SUBSTR, except that the string is read from right to left
-
-```sql
-:STR = 'Priority';
-:I = 3;
-:T = 2;
-SELECT RSUBSTR(:STR, :I, :T) FROM DUMMY FORMAT; /*'ri' */
-SELECT RSUBSTR('Priority',3,2) FROM DUMMY FORMAT;/* 'ri' */
-```
-
-**STRPREFIX**(*string, n*)
-
-retrieves the first *n* characters of the string, where *n* is a
-    fixed value
-```sql
-SELECT STRPREFIX('Priority',2) FROM DUMMY FORMAT; /* \'Pr\' */
-```
-
-**STRPIECE**(*string, delimiter, m, n*)
-
-for a given input string and delimiter (which breaks up the string
-    into parts), retrieves *n* parts, beginning from the *m* th part\
-
-**Note:** The string and parameters *m* and *n* may be variables,
-    but the delimiter must be a fixed value. The delimiter must be a
-    single character long.
-```sql
-SELECT STRPIECE('a/b.c.d/e.f','.',2,1) FROM DUMMY FORMAT;/* 'c' */
-SELECT STRPIECE('a/b.c.d/e.f','/',2,1) FROM DUMMY FORMAT;/*'b.c.d' */
-SELECT STRPIECE('a/b.c.d/e.f','.',1,3) FROM DUMMY FORMAT;/*  'a/b.c.d/e' */
-SELECT STRPIECE('a/b.c.d/e.f','/',1,3) FROM DUMMY FORMAT;/* 'a/b.c.d/e.f' */
 ```
 
 **ISALPHA**(*string*)
@@ -380,41 +296,6 @@ indicates whether a given string is a real number; yields 1 if it
 SELECT ISFLOAT('14.5') FROM DUMMY FORMAT; /* 1 */
 ```
 
-**TOUPPER**(*string*)
-
-changes characters to uppercase letters
-```sql
-:LOW = 'marianne';SELECT TOUPPER(:LOW) FROM DUMMY FORMAT;/*MARIANNE */
-```
-
-**TOLOWER**(*string*)
-
-changes characters to lowercase letters
-```sql
-:UPPER = 'MARIANNE';SELECT TOLOWER(:UPPER) FROM DUMMY FORMAT; /*marianne */
-```
-
-**ENTMESSAGE**(*entity_name, entity_type, message_number*)
-
-returns the message for *message_number* of entity *entity_name*
-    with type *entity_type*
-```sql
-SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT; /* You
-    cannot revise the number of an itemized order. */
-```
-
-
-
-**SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, IMAGE\], path output type: 1 for relative, or 0 for absolute)
-
-returns the the path for a given system folder
-```sql
-SELECT SYSPATH('MAIL', 1) FROM DUMMY; /*../../system/mail */
-SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:\system\mail\ */
-```
-
-**Note:** In the Windows environment, the TMP folder location can change between users.
-
 **STRINDEX**(full_string, search_string, index)
 
 returns the index location of a search string within the full
@@ -445,7 +326,122 @@ AND STRINDEX(CUSTNAME, '073', 1) > 0
 FORMAT;
 ```
 
+
+### String Manipulation
+
+**STRCAT**(*string1*, *string2*, \...)
+
+outputs the concatenation of given strings\
+
+**Note:**The length of the resulting concatenation is limited to 127
+    characters.
+```sql
+SELECT STRCAT('abc','ba') FROM DUMMY FORMAT;/* 'abcba' */
+```
+
+**STRIND**(*string, m, n*)
+
+beginning from the *m* th position in a given string, retrieves
+    *n* characters
+```sql
+SELECT STRIND('Priority',3,2) FROM DUMMY FORMAT;/* 'io' */
+```
+
+**SUBSTR**(*string, m, n*)
+
+beginning from the *m* th position in a given string, retrieves
+    *n* characters, whether *m* and *n* are variables or fixed values
+```sql
+:STR = 'Priority';
+:I = 3;
+:T = 2;
+SELECT SUBSTR(:STR, :I, :T) FROM DUMMY FORMAT; /* 'io' */
+SELECT SUBSTR('Priority',3,2) FROM DUMMY FORMAT;/* 'io' */
+```
+
+**RSTRIND**(*string, m, n*)
+
+same as STRIND, except that the string is read from right to left
+```sql
+SELECT RSTRIND('Priority',3,2) FROM DUMMY FORMAT; /* 'ri' */
+```
+
+**Note:** **STRIND** and **RSTRIND** behave differently when run on a *variable* within a SELECT statement from a real table, which can be confusing. As such, we recommend you always use **SUBSTR** and **RSUBSTR** instead.
+
+**RSUBSTR**(*string, m, n*):
+
+same as SUBSTR, except that the string is read from right to left
+
+```sql
+:STR = 'Priority';
+:I = 3;
+:T = 2;
+SELECT RSUBSTR(:STR, :I, :T) FROM DUMMY FORMAT; /*'ri' */
+SELECT RSUBSTR('Priority',3,2) FROM DUMMY FORMAT;/* 'ri' */
+```
+
+**STRPREFIX**(*string, n*)
+
+retrieves the first *n* characters of the string, where *n* is a
+    fixed value
+```sql
+SELECT STRPREFIX('Priority',2) FROM DUMMY FORMAT; /* 'Pr' */
+```
+
+**STRPIECE**(*string, delimiter, m, n*)
+
+for a given input string and delimiter (which breaks up the string
+    into parts), retrieves *n* parts, beginning from the *m* th part\
+
+**Note:** The string and parameters *m* and *n* may be variables,
+    but the delimiter must be a fixed value. The delimiter must be a
+    single character long.
+```sql
+SELECT STRPIECE('a/b.c.d/e.f','.',2,1) FROM DUMMY FORMAT;/* 'c' */
+SELECT STRPIECE('a/b.c.d/e.f','/',2,1) FROM DUMMY FORMAT;/*'b.c.d' */
+SELECT STRPIECE('a/b.c.d/e.f','.',1,3) FROM DUMMY FORMAT;/*  'a/b.c.d/e' */
+SELECT STRPIECE('a/b.c.d/e.f','/',1,3) FROM DUMMY FORMAT;/* 'a/b.c.d/e.f' */
+```
+
+
+**TOUPPER**(*string*)
+
+changes characters to uppercase letters
+```sql
+:LOW = 'marianne';SELECT TOUPPER(:LOW) FROM DUMMY FORMAT;/*MARIANNE */
+```
+
+**TOLOWER**(*string*)
+
+changes characters to lowercase letters
+```sql
+:UPPER = 'MARIANNE';SELECT TOLOWER(:UPPER) FROM DUMMY FORMAT; /*marianne */
+```
+
+### Files and Messages
+
+**ENTMESSAGE**(*entity_name, entity_type, message_number*)
+
+returns the message for *message_number* of entity *entity_name*
+    with type *entity_type*
+```sql
+SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT; /* You cannot revise the number of an itemized order. */
+```
+
+
+**SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, IMAGE\], path output type: 1 for relative, or 0 for absolute)
+
+returns the the path for a given system folder
+```sql
+SELECT SYSPATH('MAIL', 1) FROM DUMMY; /*../../system/mail */
+SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:/system/mail/ */
+```
+
+**Note:** In the Windows environment, the TMP folder location can change between users.
+
 **NEWATTACH**('*filename*', ['*extension*'])
+
+[22.0]()
 
 Creates a valid file location in the *system/mail* folder and returns it. While *extension* is optional, it is recommended that you add it. Note that the extension parameter should contain the dot as part of the string (**'.zip'** and not *'zip'*).
 
@@ -475,6 +471,8 @@ the *Languages* form: *System Management* → *Dictionaries* →
 
 The following examples are in American date format.
 
+### Date Parsing
+
 **DAY**(*date*)
 
 yields the number of the weekday on which the specified date falls
@@ -496,8 +494,6 @@ yields the number of the day in the month
 ```sql
 SELECT MDAY(03/22/06) FROM DUMMY FORMAT;/* 22 */
 ```
-
-
 
 **WEEK**(*date*)
 
@@ -563,6 +559,8 @@ yields the date corresponding to the given number of seconds since
 SELECT CTIME(1146693600) FROM DUMMY FORMAT;/* Thu May 04 01:00:00
     2006 */
 ```
+
+### Calculated Dates
 
 **BEGINOFWEEK**(*date in format YYWW*)
 
@@ -638,31 +636,26 @@ yields the date of the end of the year
 SELECT ENDOFYEAR(03/22/06) FROM DUMMY FORMAT;/* 12/31/06 */
 ```
 
-
+### Date Conversion
 
 **ATOD**(*date, pattern*)
 
 converts dates, times and days into internal numbers (mainly used to
-    import external data). See [ATOD and
-    DTOA](ATOD-and-DTOA ).
+    import external data). See [ATOD and DTOA](ATOD-and-DTOA).
 
 
 **DTOA**(*date, pattern*)
 
 converts dates, times and days in the system to ASCII (mainly used
-    to print out or display data to the user). See [ATOD and
-    DTOA](ATOD-and-DTOA ).
+    to print out or display data to the user). See [ATOD and DTOA](ATOD-and-DTOA ).
 
 ## Further Reading 
 
--   [Executing SQL Statements](Executing-SQL-Statements )
--   [SQL Functions and
-    Variables](SQL-Functions-Variables )
--   [Flow Control](Flow-Control )
--   [Additions and Revisions to Standard SQL
-    Commands](Additions-to-SQL-Commands )
--   [Execution Statements](Execution-Statements )
--   [LINK and UNLINK](Link-Unlink )
--   [Return Values and Statement
-    Failure](RETVAL-Values )
--   [Viewing Table Structure](TableStructure )
+-   [Executing SQL Statements](Executing-SQL-Statements)
+-   [SQL Functions and Variables](SQL-Functions-Variables)
+-   [Flow Control](Flow-Control)
+-   [Additions and Revisions to Standard SQL Commands](Additions-to-SQL-Commands)
+-   [Execution Statements](Execution-Statements)
+-   [LINK and UNLINK](Link-Unlink)
+-   [Return Values and Statement Failure](RETVAL-Values)
+-   [Viewing Table Structure](TableStructure)
