@@ -113,7 +113,10 @@ Fill them in the appropriate fields in the form.
     -   The parameters of the OOB Redirect are supplied by the web
         service provider. They should appear similar to this example:
         **<urn:ietf:wg:oauth:2.0:oob>**. Record them in the **Redirect URL** field in the **OAuth2 Definitions** form.
-2.  Fill in the **Scope**. This should also be supplied by the provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**
+2.  Fill in the **Scope**. This should also be supplied by the provider, and end with **offline_access**. For example: **write:vat read:vat offline_access**.
+
+The following fields are only available starting with version 22.1:
+
 3.  Additional parameters for the URL can be specified in **Additional Parameters**.
 4.  The checkboxes control the behavior of the tokens:
     - **Encrypted Tokens** - will automatically encrypt the received tokens so users cannot copy tokens of other users.
@@ -122,7 +125,8 @@ Fill them in the appropriate fields in the form.
 
 You can now obtain the access token to work with the web service:
 
-1.  In the **OAuth2 Defintions** (or **Auth Data(Multienv)**, depending on the token type) subform, record an **Entity ID** and **Description** and run the **Get New Token** from the list of actions.
+1.  In the **OAuth2 Data** subform, record an **Entity ID** and **Description** and run the **Get New Token** from the list of actions.\
+    Starting with version 22.1, you can also define tokens as multi-company and obtain tokens in the **Auth Data (Multienv)** subform instead.
 2.  A browser window opens, where you will be prompted to login to your account with the vendor (e.g. VAT service).
 3.  If you work with Automatic Redirect, the Access Token and Refresh Token are obtained automatically.
 4.  If you work with OOB Redirect, the browser will navigate to a new page, where a long string of characters appears. Copy this string
