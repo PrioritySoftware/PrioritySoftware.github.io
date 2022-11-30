@@ -92,6 +92,8 @@ in your message.
 > form: <code>The shipping address is identical to the customer's mailing
 > address. See the {CUSTOMERS.F} form.</code>
 
+If the message is an error message, the entity code will also function as a clickable link to the relevant entity. In warning messages, only the entity title will appear, without being clickable.
+
 Remember to check that the entity name and type have been correctly
 written, that is, the entity you specified really exists.
 

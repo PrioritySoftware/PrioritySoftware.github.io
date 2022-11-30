@@ -174,7 +174,7 @@ forms:
 -   Auto-refresh of upper-level forms when updating a sub-level - up to
     10 form levels above the current form.
 -   Sort columns - 10
--   Tables participating in form - 80
+-   Tables participating in form - 78
 
 The system can prepare up to 25000 forms simultaneously.
 
