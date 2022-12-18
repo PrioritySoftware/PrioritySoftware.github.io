@@ -123,7 +123,7 @@ leave the line and receive an error message.
 
 
 **Note:** The *Privilege Explorer* can be used to make columns mandatory
-for specific users. See the *Privilege Explorer Wizard* for details.
+for specific users. You can find more info on the Privilege Explorer in Priority Xpert.
 
 
 
@@ -148,8 +148,7 @@ imported from the **AGENTS** table, and (2) the rep’s number
     [query form](Forms#Query-Forms ), thereby blocking all
     record insertions, updates and deletions.
 -   The *Privilege Explorer* can be used to make updateable columns
-    read-only for specific users. See the *Privilege Explorer Wizard*
-    for details.
+    read-only for specific users. You can find more info on the Privilege Explorer in Priority Xpert.
 
 
 

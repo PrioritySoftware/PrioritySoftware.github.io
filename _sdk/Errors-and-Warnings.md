@@ -14,8 +14,7 @@ continues when a warning message command is successful, it halts once an
 error message command is successful.
 
 **Tip:** The system manager can change any warning into an error message
-via the *Privilege Explorer*. For details, run the *Privilege Explorer
-Wizard*.
+via the *Privilege Explorer*. You can find more info on the Privilege Explorer in Priority Xpert.
 
 See also [Form Triggers](Form-Triggers ).
 
