@@ -94,7 +94,7 @@ WHERE (PARTNAME LIKE '%' OR PART.PARTDES LIKE '%'
 OR EPARTDES LIKE '%')
 ```
 
-**Inorrect Example**
+**Incorrect Example**
 
 ```sql
 WHERE (PARTNAME LIKE '%' OR PART.PARTDES 
