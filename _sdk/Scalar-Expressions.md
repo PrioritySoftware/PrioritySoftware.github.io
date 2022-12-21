@@ -439,7 +439,7 @@ SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:/system/mail/ */
 
 **Note:** In the Windows environment, the TMP folder location can change between users.
 
-**NEWATTACH**('*filename*', ['*extension*'])
+**NEWATTACH**('*filename*', \['*extension*'\])
 
 [22.0]()
 
@@ -452,6 +452,12 @@ This function is useful when you are working in the Web interface and need to pr
 If your filename and extension are a single string (e.g. after being uploaded in a procedure), you can use STRPIECE with a **.** delimiter to split the extension and file.
 
 The function can be incorporated into SQL statements and use computed values, but only those that can be computed before the query is sent to the database (i.e., you cannot use the values in table columns as part of the computation).
+
+Keep in mind that the filename will be changed to lowercase, as can be seen in the example.
+
+[22.1]()
+
+In version 22.1, the function will also create the folder on the server (instead of just providing a valid location).
 
 ```sql
 :z = NEWATTACH('LOGFILe', '.zip');
