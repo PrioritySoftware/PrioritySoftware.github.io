@@ -332,7 +332,7 @@ identifier, display color
 
 
 
-**Note:**This step is only applicable in an industrial setting.
+**Note:**This step is only applicable in an manufacturing setting.
 
 
 

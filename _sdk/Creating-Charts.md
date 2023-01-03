@@ -16,7 +16,7 @@ charts consist of four principal elements:
 -   Employees/resources
 -   Tasks (any kind of operation (e.g., work order) that can be
     displayed in a chart)
--   Task dependencies (applicable only in an industrial setting)
+-   Task dependencies (applicable only in an manufacturing setting)
 
 The **GANTT** program supports three kinds of charts:
 
@@ -137,7 +137,7 @@ important).
   | WORKHOURS          |  Office hours for each day of the week
   | DAYSOFF            |  Non-working days
   | RESOURCE_WORKHOURS |  Work hours per employee (instead of the previous two steps)
-  | RELATIONS          |  Task dependencies (applicable only in an industrial setting)
+  | RELATIONS          |  Task dependencies (applicable only in an manufacturing setting)
   | RESOURCE_CHOOSE    |  Employee Choose list
   | RESOURCE_CHOOSE2   |  Additional Choose list (2)
   | RESOURCE_CHOOSE3   |  Additional Choose list (3)
