@@ -40,8 +40,8 @@ The form column title is utilized in the user interface. That is, it
 appears as a column heading in the form itself. The title is
 automatically inherited from the relevant table column. It may, however,
 be revised (even translated into another language). Moreover, when a
-form is [screen-painted](Designing-a-Screen-Painted-Form ),
-the title appearing in the screen-painter is displayed instead.
+form has a [default design](Default-Design),
+the title assigned in the default design is displayed instead.
 
 > **Example:** In the **DOCUMENTS_T** form, both **WARHSNAME** and
 > **TOWARHSNAME** inherit the title *Warehouse Number* from their common
@@ -518,7 +518,7 @@ the **USERCLMNPRIV** table, as follows:
 
 ### Supporting Transformation Interfaces
 
-[21.1]
+[21.1]()
 
 MDM transformation interfaces take data from one type of record in the source company, and create a different type of record in the target company. For example, an interface that converts a purchase order in company A into a sales order in company B.
  
@@ -539,7 +539,7 @@ See the standard versions of these columns in the **ORDERS** form as an example.
 
 ### MDM-only Permissions
 
-[22.0]
+[22.0]()
 
 You can limit certain forms and columns so that they can only be updated via Master Data Management (MDM, also known as EDI interfaces).
 
@@ -560,8 +560,7 @@ You can see an example of this kind of column in the **AINVOICES** form.
 -   [Form Refresh](Form-Refresh )
 -   [Accessing a Related Form](Accessing-Related-Form )
 -   [Creating a Text Form](Create-Text-Form )
--   [Designing a Screen-Painted
-    Form](Designing-a-Screen-Painted-Form )
+-   [Default Design for Form](Default-Design))
 -   [Form Triggers](Form-Triggers )
 -   [Form Preparation](Form-Preparation )
 -   [Help Messages](Help-Messages )

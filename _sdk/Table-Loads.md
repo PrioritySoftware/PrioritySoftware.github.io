@@ -128,8 +128,7 @@ table.
     Action from within the *Characteristics for Download*
     form.
 -   You can track changes to load queries once they have been included
-    in prepared version revisions. See [Tracking Changes to
-    Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
+    in prepared version revisions. See [Tracking Changes to Queries](Installing-Customizations#Tracking-Changes-to-Queries ).
 
 ## Loading the File 
 
