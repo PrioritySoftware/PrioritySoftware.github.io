@@ -9,8 +9,7 @@ tags: 'Priority_SDK'
 
 You can import data from text files into an interim table in
 ***Priority*** from tab-delimited text files (Excel files can be
-converted into tab-delimited files using [a utility
-program](Table-Loads#Converting-an-Excel-File-to-a-Tab-delimited-Text-File-for-DBLOAD )).
+converted into tab-delimited files using [a utility program](Table-Loads#Converting-an-Excel-File-to-a-Tab-delimited-Text-File-for-DBLOAD )).
 During the execution of this table load, you can perform additional
 processing defined in a set of SQL statements (a load query). Results of
 the load can be viewed - and revised - in a form based on the
@@ -242,9 +241,7 @@ The file is created with UTF-16 encoding.
 
 ## Further Reading 
 
--   [Form Loads](Form-Loads )
--   [Combining Table Loads with Form
-    Loads](Combining-Table-Loads-with-Form-Loads )
--   [Tips for Finding Existing
-    Interfaces](Existing-Interfaces )
--   [Interfaces](Interfaces )
+-   [Form Loads](Form-Loads)
+-   [Combining Table Loads with Form Loads](Table-and-Form-Loads)
+-   [Tips for Finding Existing Interfaces](Existing-Interfaces)
+-   [Interfaces](Interfaces)

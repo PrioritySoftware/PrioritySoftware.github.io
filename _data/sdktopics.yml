@@ -156,6 +156,8 @@ chapters:
             url: Interfaces-Deleting-Records
           - page: Dynamic Interfaces
             url: Dynamic-Interfaces
+      - page: Table Loads
+        url: Table-Loads
       - page: Combining Table Loads with Form Loads
         url: Table-and-Form-Loads
       - page: Tips for Finding Existing Interfaces
