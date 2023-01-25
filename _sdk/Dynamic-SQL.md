@@ -11,6 +11,8 @@ SQL queries can be created and executed dynamically in forms or
 procedures using the command EXECUTE SQLI -- which takes an ASCII file
 as a parameter.
 
+Only the *tabula* user can run the EXECUTE SQLI command.
+
 > **Example:** See step 20 of the **LOADMIGUSERS** procedure.
 
 ## Executing SQL Server Code from Priority 
