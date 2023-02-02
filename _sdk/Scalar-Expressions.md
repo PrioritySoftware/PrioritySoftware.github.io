@@ -420,19 +420,13 @@ changes characters to lowercase letters
 
 ### Files and Messages
 
-
-
 **ENTMESSAGE**(*entity_name, entity_type, message_number*)
 
 returns the message for *message_number* of entity *entity_name*
-    with type *entity_type*. 
-
-*ENTMESSAGE* should only be run against the DUMMY table. If you need to use it in a statement that includes a database table, store it in a variable first.
-
+    with type *entity_type*
 ```sql
 SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT; /* You cannot revise the number of an itemized order. */
 ```
-
 
 
 **SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, IMAGE\], path output type: 1 for relative, or 0 for absolute)

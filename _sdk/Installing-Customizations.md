@@ -31,43 +31,35 @@ forms and programs.
     shell file by running the *Prepare Upgrade* program by Action from the *Version Revisions* form. The shell file will be
     called *NN*.sh (where NN is the number assigned to the revision) and
     stored in the *system\\upgrades* directory.
-4.  If you are creating a version revision for a system in another language, see the instructions in [Customizations: Installing the Language Dictionaries](Customizations-Language-Dictionaries)
+4.  If you are creating a version revision for a system in another language, see the instructions in [Customizations: Installing the Language
+    Dictionaries](Customizations-Language-Dictionaries )
 
 ## Explanation of the Modification Codes 
 
 | Modification Code | Description |
   |--------------- | ------------ |
   | DBI            | Update of the database (tables, table columns, keys). |
-  | DELDIRECTACT   | Deletion of an Action.
+  | DELDIRECTACT   | Deletion of a Action.
   | DELFORMCOL     | Deletion of a form column.
   | DELFORMLINK    | Deletion of the link between a form and its sub-level.
   | DELMENULINK    | Deletion of the link between a menu and its menu item.
-  | DELPACKENT     | Deletion of an entire system package.
-  | DELPACKEXEC    | Deletion of a link between a package and an entity.
   | DELPROCMSG     | Deletion of a procedure message.
   | DELPROCSTEP    | Deletion of a procedure step.
   | DELREPCOL      | Deletion of a report column.
   | DELTRIG        | Deletion of a form trigger.
   | DELTRIGMSG     | Deletion of a trigger message.
-  | DELWORDTMPL    | Deletion of a Word template.
   | TAKEDIRECTACT  | Link an Action to a form.
   | TAKEENTHEADER  | Revision to the attributes of an entity (form, report, menu, procedure, interface), such as its title; in the case of a form, also revision to its default design.
-  | TAKEEXTMSG     | Addition/revision of a compiled program message (relevant to adding a custom general message in GENMSG) 
   | TAKEFORMCOL    | Any type of revision to a form column (e.g., title, sorting, joins).
   | TAKEFORMLINK   | Linking of a form to its sub-level.
   | TAKEMENULINK   | Linkage of a menu item to its menu.
-  | TAKEOUTPUTTITLE | Addition/revision of the output title of a report |
-  | TAKEPACKENT    | Addition/revision of an entire system package 
-  | TAKEPACKEXEC   | Addition/revision of a specific entity in relation to a system package
-  | TAKEPACKTITLE  | Revision to the title of a system package
   | TAKEPROCMSG    | Addition/revision of a procedure message.
   | TAKEPROCSTEP   | Addition/revision of any part of a procedure step (e.g., parameters, step queries).
   | TAKEREPCOL     | Any type of revision to a report column (e.g., title, sorting, grouping).
   | TAKESINGLEENT  | Addition/revision of an entire entity.
   | TAKETRIG       | Addition/revision of a form trigger.
   | TAKETRIGMSG    | Addition/revision of a trigger message.
-  | TAKEWORDTMPL   | Addition/revision of a Word template included in the revision
-  | TAKEHELP       | Addition/revision of online help for the designated entity.
+  | TAKEHELP       |  Addition/revision of online help for the designated entity.
 
 
 ## Tips for Working with Revisions 
