@@ -18,8 +18,9 @@ after parameter input.
 **Notes:**
 
 -   SQLI is a procedure step that executes SQL statements.
+-   Statements for INPUT steps are executed **after** the user entered their input (input parameters are already filled)
 -   HTMLCURSOR and HTMLEXTFILES are Basic commands used in creating
-    [documents](Documents ).
+    [documents](Documents).
 
 
 ## Error and Warning Messages 
@@ -57,13 +58,11 @@ step in a buffer. This buffer is limited to 100 messages, meaning you
 cannot send more than 100 messages in the same SQLI step.
 
 If you wish to send more than 100 messages, you can bypass this limit by
-creating an internal loop between procedure steps, using the [GOTO Basic
-command](Procedure-Steps#Basic-Commands ). Finish the SQLI
+creating an internal loop between procedure steps, using the [GOTO Basic command](Procedure-Steps#Basic-Commands). Finish the SQLI
 step and, in the next procedure step, use the GOTO command to return to
 that SQLI step (or to continue to the next procedure step, once all
 messages have been sent). In each iteration, up to 100 messages will be
 sent.
-
 
 **Note:** Use this option carefully and avoid creating an infinite loop.
 
@@ -78,28 +77,8 @@ of form variables, the procedure name can be replaced by the wildcard
 :$.*ParameterName*).
 
 ## Procedures With Heavy Processing 
-> Windows Interface only
 
-In a procedure that requires heavy processing via a cursor, in the Windows interface, you can
-display a progress bar that indicates to the user how far the program
-has progressed. To do so, use the following step query:
-
-```sql
-DECLARE mycursor CURSOR FOR …;
-OPEN mycursor;
-:N = :RETVAL; 
-:I = 0;
-GOTO 9 WHERE :N <= 0;
-LABEL 1;
-FETCH mycursor INTO …;
-GOTO 8 WHERE :RETVAL <= 0;
-:I = :I + 1;
-DISPLAY :I OF :N; {processing of current record}
-LOOP 1;
-LABEL 8;
-CLOSE mycursor;
-LABEL 9;
-```
+A single procedure can have up to 100 cursors open at the same time. To open more cursors, you would have to close some previously opened cursors.
 
 ***Important!*** You can use the same cursor more than once within a
 given procedure or form trigger, but the declaration can be done only
@@ -116,8 +95,7 @@ Check* program by Action from within the *Procedure Generator* form.
 ## Tracking Changes in Step Queries 
 
 You can track changes to step queries once they have been included in
-prepared version revisions. See [Tracking Changes to
-Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
+prepared version revisions. See [Tracking Changes to Queries](Installing-Customizations#Tracking-Changes-to-Queries ).
 
 ## Further Reading 
 
