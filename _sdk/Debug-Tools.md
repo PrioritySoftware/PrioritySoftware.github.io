@@ -7,16 +7,14 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
-***Priority*** gives you the option of executing entities (forms,
-procedures and interfaces) using debug mode. When you execute the entity
-in debug mode, SQL queries, server responses, variables used and more
-are recorded in a file you specify. This is very useful for debugging
+***Priority*** gives you the option of executing entities (forms, procedures and interfaces) using debug mode. When you execute the entity in debug mode, SQL queries, server responses, variables used and more are recorded in a file you specify. This is very useful for debugging
 forms, procedures and interfaces.
 
-You can also debug simple reports, i.e., reports run from the menu or by
-Action (as opposed to processed reports, which are executed
-by a procedure - in which case you debug the procedure). Finally, you
-need to optimize forms, reports and SQL queries.
+You can also debug simple reports, i.e., reports run from the menu or by Action (as opposed to processed reports, which are executed by a procedure - in which case you debug the procedure). Finally, you need to optimize forms, reports and SQL queries.
+
+[23.0]()
+
+**Important!** Debug commands will not work when the DEBUGRESTRICTED system constant is set to 0.
 
 ## Debugging a Form, Procedure or Interface 
 
