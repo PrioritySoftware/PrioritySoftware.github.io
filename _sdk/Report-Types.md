@@ -31,7 +31,7 @@ display value of *T*.
 
 **Notes:**
 
--   Each [group](organize-report-data#Grouping) appears in
+-   Each [group](Organize-Report-Data#Grouping) appears in
     a separate row in the table.
 -   You can save horizontal space by using vertical mode (specify *V* in
     the *Table Display Mode* column of the *Report Generator* form).
@@ -89,7 +89,7 @@ Generator* form.
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](organize-report-data )
+-   [Organizing Report Data](Organize-Report-Data )
 -   [Refining Report Data
     Display](Refine-Report-Display )
 -   [Calculated Columns in

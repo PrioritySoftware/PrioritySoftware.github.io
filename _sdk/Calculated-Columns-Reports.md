@@ -150,7 +150,7 @@ Complex functions are defined (like all calculated columns) in the
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](organize-report-data )
+-   [Organizing Report Data](Organize-Report-Data )
 -   [Refining Report Data
     Display](Refine-Report-Display )
 -   [Types of Reports](Report-Types )

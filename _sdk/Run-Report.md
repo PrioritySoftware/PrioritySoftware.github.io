@@ -80,7 +80,7 @@ Generator* form, serves a similar purpose.
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](organize-report-data )
+-   [Organizing Report Data](Organize-Report-Data )
 -   [Refining Report Data
     Display](Refine-Report-Display )
 -   [Calculated Columns in

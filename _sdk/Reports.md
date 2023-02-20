@@ -13,7 +13,7 @@ its sub-levels (*System Management → Generators → Reports*).
 An easy way to create a custom report is to copy an existing one (using
 the *Copy Report* program in the same menu) and then make revisions to
 it. In fact, this method is mandatory if you want to change the [sorting
-or grouping of columns](organize-report-data ).
+or grouping of columns](Organize-Report-Data ).
 
 Reports selectively display data stored in the database, as well as
 simple calculations of that data (e.g., sum totals). They can also
@@ -126,7 +126,7 @@ modules of ***Priority*** have been purchased.
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](organize-report-data )
+-   [Organizing Report Data](Organize-Report-Data )
 -   [Refining Report Data
     Display](Refine-Report-Display )
 -   [Calculated Columns in

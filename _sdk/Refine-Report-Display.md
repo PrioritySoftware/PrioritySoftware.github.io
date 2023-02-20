@@ -229,9 +229,8 @@ To include more than one field in the same cell:
 ## Further Reading 
 
 -   [Report Columns](Report-Columns )
--   [Organizing Report Data](organize-report-data )
--   [Calculated Columns in
-    Reports](Calculated-Columns-Reports )
+-   [Organizing Report Data](Organize-Report-Data)
+-   [Calculated Columns in Reports](Calculated-Columns-Reports)
 -   [Types of Reports](Report-Types )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )
