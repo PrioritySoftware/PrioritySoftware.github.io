@@ -7,6 +7,10 @@ tags: 'Priority_SDK'
 
 ## SDK 22.1
 
+### February 2023
+
+- Added information on server buffering of log writes to the documentation of the [JOURNAL](Debug-Tools#tabulaini-definitions) program.
+
 ### November 2022
 
 - Reverted form limitation for number of participating tables back to 80.
