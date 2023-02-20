@@ -208,14 +208,14 @@ specified folder.
 The following is the list of message severities, in ascending order (1
 being the lowest severity, 6 being the highest).
 
-  Severity          Level
-  ----------------- -------
-  JOURNAL_DEBUG     1
-  JOURNAL_TRACE     2
-  JOURNAL_INFO      3
-  JOURNAL_WARNING   4
-  JOURNAL_ERROR     5
-  JOURNAL_FATAL     6
+  | Severity          |  Level  |
+  | ----------------- | ------- |
+  | JOURNAL_DEBUG     |  1      |
+  | JOURNAL_TRACE     |  2      |
+  | JOURNAL_INFO      |  3      |
+  | JOURNAL_WARNING   |  4      |
+  | JOURNAL_ERROR     |  5      |
+  | JOURNAL_FATAL     |  6      |
 
 ### Usage in *Priority* Procedures 
 
@@ -249,9 +249,16 @@ define the following \[Log\] section in the *tabula.ini* file:
     Client Level='minimum_level'(e.g., 4) 
 
 
-**Note:** All messages (both automatic and manual) having a severity
+All messages (both automatic and manual) having a severity
 level greater than or equal to the *\'minimum_level\'* will be recorded
 in the log. Specifying 0 is equivalent to 5; that is, messages with
 levels 5 or 6 will be recorded in the log. To record messages of any
 severity, specify a *\'minimum_level\'* of 1.
 
+If you have added JOURNAL commands but are not seeing the results immediately, it may be related to server buffering. When buffering is on, the server delays log writes until the process is over (e.g. procedure ends or form is closed).
+
+You can disable server buffering by setting the **Server Buffered** option to 0 under the *\[Log\]* section of the *tabula.ini* file.
+
+```txt
+Server Buffered=0
+```
