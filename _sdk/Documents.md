@@ -11,11 +11,7 @@ You can use a [procedure](Procedures ) to generate a document.
 This kind of procedure collects data from several reports and displays
 it using an Internet browser. Each report creates a file, and the last
 step of the procedure combines all these files into one displayed file.
-The final document can be activated from a form via [Actions](Actions) (retrieving input from the record it was activated from), or it can be run from a menu, in which
-case the user chooses the relevant records during parameter input. The
-reports in such a procedure must handle one record from the base table
-at a time, identified by the [autounique
-key](Keys#The-Autounique-Key ).
+The final document can be activated from a form via [Actions](Actions) (retrieving input from the record it was activated from), or it can be run from a menu, in which case the user chooses the relevant records during parameter input. The reports in such a procedure must handle one record from the base table at a time, identified by the [autounique key](Keys#The-Autounique-Key).
 
 > **Example:** In the **WWWSHOWORDER** procedure, each report handles
 > one record from the **ORDERS** table at a time. Each report receives
@@ -25,12 +21,11 @@ key](Keys#The-Autounique-Key ).
 ## Creating the Input for the Document 
 
 The INPUT parameter of the linked file for the procedure's main table
-must be named PAR.If the procedure is to be activated from the menu, you
-must define this parameter as input (specify *I* in the *Input* column)
-and specify the *Column Name* and *Table Name* of the table column that
-will be linked. If the procedure is to be activated only from a form, it
-is not necessary to specify the PAR parameter as input, but you do have
-to indicate column and table name.
+must be named PAR. If the procedure is to be activated from the menu, you must define this parameter as input (specify *I* in the *Input* column) and specify the *Column Name* and *Table Name* of the table column that will be linked. If the procedure is to be activated only from a form, it is not necessary to specify the PAR parameter as input, but you do have to indicate column and table name.
+
+[23.0]()
+
+In this version, the linked file parameter can also be of type NFILE. This can prevent performance issues, if the main table is one with a very large amount of records.
 
 ## Declaring the Cursor 
 
