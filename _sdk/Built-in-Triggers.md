@@ -225,7 +225,7 @@ SELECT ENTMESSAGE('ORDERITEMS','F',0) INTO :PROGPARAM FROM DUMMY;
 SELECT 94 INTO :PROGMSG 
 FROM ORDERITEMS WHERE (:$1.ORD <> 0 AND ORD = :$1.ORD );
 ```
-
+{% if site.output == "web" %}
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
@@ -238,3 +238,4 @@ FROM ORDERITEMS WHERE (:$1.ORD <> 0 AND ORD = :$1.ORD );
     Another](Include-Triggers )
 -   [Trigger Errors and
     Warnings](Trigger-Errors )
+{% endif %}

@@ -549,15 +549,14 @@ upper-level form on the basis of values specified in the sub-level form.
 > the *Work Orders* form upon exiting the *Issues to Kits* sub-level
 > form.
 
+{% if site.output == "web" %}
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
--   [Changing Column Titles
-    Dynamically](Dynamic-Column-Titles )
--   [Including One Trigger in
-    Another](Include-Triggers )
--   [Trigger Errors and
-    Warnings](Trigger-Errors )
+-   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
+-   [Including One Trigger in Another](Include-Triggers )
+-   [Trigger Errors and Warnings](Trigger-Errors )
+{% endif %}

@@ -143,15 +143,14 @@ in a message.
 > MAILMSG 1 TO USER :USER; 
 > ```
 
+{% if site.output == "web" %}
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
 -   [Built-in Triggers](Built-in-Triggers )
 -   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
--   [Changing Column Titles
-    Dynamically](Dynamic-Column-Titles )
--   [Including One Trigger in
-    Another](Include-Triggers )
--   [Trigger Errors and
-    Warnings](Trigger-Errors )
+-   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
+-   [Including One Trigger in Another](Include-Triggers )
+-   [Trigger Errors and Warnings](Trigger-Errors )
+{% endif %}

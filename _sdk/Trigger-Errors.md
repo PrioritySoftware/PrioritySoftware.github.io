@@ -31,6 +31,7 @@ generated the warning messages.
 > **Example:** The same variable name contains a value of **INT** type
 > in one trigger and a value of **CHAR** type in another.
 
+{% if site.output == "web" %}
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
@@ -38,8 +39,7 @@ generated the warning messages.
 -   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
--   [Changing Column Titles
-    Dynamically](Dynamic-Column-Titles )
--   [Including One Trigger in
-    Another](Include-Triggers )
+-   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
+-   [Including One Trigger in Another](Include-Triggers )
 -   [Form Triggers](Form-Triggers )
+{% endif %}

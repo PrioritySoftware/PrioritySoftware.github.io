@@ -117,6 +117,7 @@ the *Use of Trigger* sub-level form of *Form Column Triggers* and of
 
 <!-- TODO: Mention func form -->
 
+{% if site.output == "web" %}
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
@@ -124,7 +125,6 @@ the *Use of Trigger* sub-level form of *Form Column Triggers* and of
 -   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
--   [Changing Column Titles
-    Dynamically](Dynamic-Column-Titles )
--   [Trigger Errors and
-    Warnings](Trigger-Errors )
+-   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
+-   [Trigger Errors and Warnings](Trigger-Errors )
+{% endif %}

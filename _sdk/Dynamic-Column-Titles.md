@@ -22,6 +22,7 @@ title name and \"TITLE\".
 
 See also [Form Triggers](Form-Triggers ).
 
+{% if site.output == "web" %}
 ## More on Triggers 
 
 -   [SQL Variables](SQL-Variables )
@@ -29,7 +30,6 @@ See also [Form Triggers](Form-Triggers ).
 -   [Creating Your Own Triggers](Creating-your-Triggers )
 -   [Error and Warning Messages](Errors-and-Warnings )
 -   [Sending a Mail Message](Send-Mail )
--   [Including One Trigger in
-    Another](Include-Triggers )
--   [Trigger Errors and
-    Warnings](Trigger-Errors )
+-   [Including One Trigger in Another](Include-Triggers )
+-   [Trigger Errors and Warnings](Trigger-Errors )
+{% endif %}
