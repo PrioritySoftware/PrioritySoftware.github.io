@@ -7,6 +7,53 @@ tags: 'Priority_SDK'
 
 ## Introduction
 
+Load tables are used when working with interfaces based on events in Priority itself, such as a procedure that opens a customer shipment based on a sales order. While mostly used to import data into new or existing records, you can also export data from existing records to a load table, manipulate it, and then reimport it as new records. This is the case for copying an existing document.
+
+A load table is a special table with a specific structure. The default **GENERALLOAD** table will suffice for most use cases, but you can also create your own. You can also add additional columns to the **GENERALLOAD** table if necessary.
+
+To use a load table for your interface, specify it in the **Form Load (EDI)** form, in the **Load Table** column.
+
+Before you start mapping out the interface, it is a good idea to manually perform the operations to be automated in the actual form. Take note of the order in which you filled in the fields, as well as any mandatory fields. By doing this ahead of time, you can find any errors that might cause the interface to fail.
+
+## Mapping the Interface
+
+In the **Forms for Import** sublevel, record the form(s) with which to interface, and the **Code(Record Type)** associated with each. The interface recognizes the form by its record type.
+
+Indicate the name of each form, as well as the code representing its
+record type. Each level in the form tree must be assigned its own unique
+record type (e.g., **ORDERS** = 1; **ORDERITEMS** = 2).
+
+**Tip:** After recording a form, run the *List of Sub-level Forms*
+report by Action to view all its sub-levels (one level down
+only).
+
+For each form, if you want the load to overwrite existing records in the
+sub-levels, flag the *Replace Form Data* column. Leave it blank
+to add the new records to existing ones.
+
+
+**Notes:**
+
+-   This flag is used primarily for text forms.
+-   Use of this flag to overwrite form data is based on the assumption
+    that the existing record(s) will be deleted successfully.
+-   If the form in question has a PRE-DELETE trigger, it is not
+    advisable to flag this column, as the trigger may interfere with
+    deletion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 When using a load table to import or export data in a [form
 load](Form-Loads ), it is recommended that the following steps
 be taken:
