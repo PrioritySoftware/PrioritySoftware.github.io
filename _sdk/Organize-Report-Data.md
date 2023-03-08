@@ -99,15 +99,10 @@ another. However, you can force repetition of identical values, if you
 so desire. You can also add blank lines between groups or even start
 each group on a new page.
 
--   To repeat values, specify 1 in the \'\'Repeat Group (1)*column of
-the *Report Columns *form for the first "Group by" set (*Group
-by\'**\'**= 1).
+-   To repeat values, specify 1 in the **Repeat Group (1)** column of
+the *Report Columns* form for the first "Group by" set (**Group By** = 1).
 
--   To add blank lines after the group, specify an integer (up to 10) in
-the *Skip Lines* column for the first "Group by" set.
-
--   To start a new page for each group, specify "--1" in the *Skip
-Lines* column for the first "Group by" set.
+-   To start a new page for each group, specify **-1** in the **Skip Lines** column for the first "Group by" set.
 
     **Note:** When multiple columns are included in the same \"Group
 by\" set, a new page can only be started for the first column in the
@@ -117,6 +112,9 @@ set.
 group, use the system variable :GROUPPAGEBREAK in the procedure that
 runs the report. For example, see the **PBR** input parameter in the
     **ACCOUNTS** procedure.
+
+For [documents](Documents) only, to add blank lines after the group, specify an integer (up to 10) in
+the *Skip Lines* column for the first "Group by" set.
 
 ## Financial Reports: Distinguishing Between Credit and Debit Balances 
 

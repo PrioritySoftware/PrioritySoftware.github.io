@@ -69,6 +69,13 @@ Val* column of the *Report Columns* form, you can choose to:
 -   when using a group function to calculate group and/or report totals,
     leave both report columns and totals blank when value is zero (*A*).
 
+If a column contains all NULL values for the report, it will be omitted. For cases where you want to force the column to show even if all the values are empty, use a ternary expression to show a default NULL value  when there is no value stored in the database. For example, if we want to show the Remarks for a sales order:
+
+```sql
+(ORDERS.DETAILS <> '' ? ORDERS.DETAILS : '&nbsp')
+/* '&nbsp' is a non-breaking space in HTML, and can be used as a null value for CHAR column */
+```
+
 ## Displaying HTML Text in Reports 
 
 There are several types of reports that can display HTML text:
