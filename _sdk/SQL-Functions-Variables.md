@@ -162,6 +162,8 @@ Regardless of type, all variables are limited to a size of 120 characters.
     action only if a single field, or a specific set of fields, has been
     changed.
 
+**CHANGECOUNT** only counts fields that are visible in the form. Hidden fields are not counted, even if they are changed by post-field triggers. For read-only fields that are changed by triggers, only fields that are part of the base table of the form are counted.
+
 :PRINTFORMAT (**INT** type) -- stores the print format chosen by the
     user when a document is printed. Print formats are saved in the
     **EXTMSG** table.

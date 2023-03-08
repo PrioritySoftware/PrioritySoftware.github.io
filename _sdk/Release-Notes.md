@@ -7,6 +7,12 @@ tags: 'Priority_SDK'
 
 ## SDK 22.1
 
+### March 2023
+
+- Added more information on the behavior of the CHANGECOUNT variable. 
+- Added info on showing zero values in reports in cases where the entire column has null values.
+- Clarified that the *Skip Lines* field in the report generator is only relevant for splitting groups into pages when used in a simple report (-1 value only). It can be used for more exact line spacing in Documents.
+
 ### February 2023
 
 - Added information on server buffering of log writes to the documentation of the [JOURNAL](Debug-Tools#tabulaini-definitions) program.
