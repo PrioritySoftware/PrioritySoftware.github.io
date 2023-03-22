@@ -59,7 +59,7 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     the **ERRMSGS** table; thus, the **INTERFACEERR** report will not
     retrieve any values.
 -   *'-w'* - Use this option to have the **INTERFACE** program ignore
-    warning messages (equivalent to the functionality of the [*Ignore Warnings* column](Form-Loads#Load-Parameters) in the *Form Load Designer*).
+    warning messages (equivalent to the functionality of the [*Ignore Warnings* column](Form-Loads#load-parameters-load_parameters) in the *Form Load Designer*).
 -   *'-ns'* - By default, the **INTERFACE** program displays a
     progress bar as the load is executed. Use this option to disable
     this utility.
@@ -77,7 +77,7 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     in the report would be: \"Line X - Customer Number C000981:
     Specified item not in database.\" If you use the '-nv' option, the
     message will display: \"Line X - Specified item not in database.\"
--   *'-noskip'* - Equivalent to the functionality of the [*Do Not Skip  Lines* column](Form-Loads#Load-Parameters ) in the *Form
+-   *'-noskip'* - Equivalent to the functionality of the [*Do Not Skip  Lines* column](Form-Loads#load-parameters-load_parameters ) in the *Form
     Load Designer*.
 -   *'-enforcebpm'* - Many forms use business rules (defined in the
     Business Rules Generator or the Data Generator), BPM rules and
