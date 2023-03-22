@@ -147,7 +147,7 @@ chapters:
         url: Form-Loads
         subtopics:
           - page: Loading from/to a Load Table
-            url: Loading-from-Load-Table
+            url: Form-Interface-Generalload
           - page: Loading from/to a File
             url: Loading-from-File
           - page: Executing the Form Load

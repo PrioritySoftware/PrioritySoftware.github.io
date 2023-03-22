@@ -20,11 +20,7 @@ For fixed-width and TSV files, you'll need detailed information regarding the st
 
 ***Priority***\'s interface tools can import data from either ASCII or Unicode (UTF-16) files, and will automatically recognize the format used.
 
-
-<!-- Needs checking -->
-
- Data exported from ***Priority*** for use in outgoing
-interfaces will be saved in ASCII format, unless otherwise specified.
+Data exported from ***Priority*** for use in outgoing interfaces will be saved in Unicode (UTF16) format, unless otherwise specified.
 
 ## Fixed Position and TSV Files
 
@@ -112,7 +108,7 @@ of Form Columns in File*) to define the following:
 ## XML/JSON Files 
 
 ### Parsing File Tags/Fields
-If you are loading to or from an XML/JSON file, you must define the tags/fields in the system. To do so, you must import a file with the tags/fields and let the system parse it:
+If you are loading to or from an XML/JSON file, you must define the tags/properties in the system. To do so, you must import a file with the tags/properties and let the system parse it:
 
 **In the Web Interface**
 
@@ -128,44 +124,55 @@ is analyzed and transferred to the *Tags for Interface* sub-level form.
 3. Run the **Prepare Tags by File Defs** Action. The structure of the file
 is analyzed and transferred to the *Tags for Interface* sub-level form.
 
-### Working with the Parsed File
+### Working with the Parsed XML File
 
-{% include info.html content="<p><b>Updated to Version 23.0</b></p>" %}
+{% include info.html content="<p><b>Additions in Version 23.0</b></p>" %}
 
-Enter the *Tags for Interface* form and check the results. The form should show all tags that are present in the XML file. You can delete tags that are not necessary.
+1. Enter the *Tags for Interface* form and check the results. The form should show all tags that are present in the XML file. You can delete tags that are not necessary. You can also add/revise tag names.
 
-For each tag, the data in the first record appears in the *Value* column. If you want this (or any other value) to be used in all records, regardless of definitions in the file, specify *C* in the *Type of Value* column. Revise the values as necessary.
+2. For parsed tags, the data in the first record appears in the *Value* column. If you want this (or any other value) to be used in all records, regardless of definitions in the file, specify *C* in the *Type of Value* column. Revise the values as necessary.
 
-In XML files, you may note that the **Type of Value** column contains a value of *E*, which cannot be revised. This denotes a tag in the XML that is empty of data or attributes, and serves an organizational purpose in the file.
+3. To mark a tag as a structural tag, i.e., a tag in the XML that is empty of data or attributes, and serves an organizational purpose in the file, specify *E* in the **Type of Value** column. Parsed tags may receive this value automatically based on analysis of the file.
 
-If you are exporting data to an XML file and there are attributes for any tags, record them in the XML Attributes column.\
-**Example:** For an XML tag defined as \<custname type=\'string\'\>1001\</custname> you would record \"type =\'string\' \" in this column.
+    Some XML document schemas call for parent tags to repeat for each child data item, as depicted in the following example:
 
-Some XML document schemas call for parent tags to repeat for each child data item, as depicted in the following example:
+    ```xml
+    <Order>
+        <OrderItems>
+            <OrderItem>
+                <part>001</part>
+            </OrderItem>
+            <OrderItem>
+                <part>002</part>
+            </OrderItem>
+        </OrderItems>
+    </Order>
+    ```
 
-```xml
-<Order>
-    <OrderItems>
-        <OrderItem>
-            <part>001</part>
-        </OrderItem>
-        <OrderItem>
-            <part>002</part>
-        </OrderItem>
-    </OrderItems>
-</Order>
-```
+    For tags that need to be repeated, specify *R* in the **Type of Value** column.
 
-In other files, this tag needs to appear only once. Record *R* in **Type of Value** for a repeating parent. or a **-** for a parent that should appear only once, in the *XML Tags for Interface* sub-level form.
+    **Note:** In previous versions, this was accomplished by adding **+** to the tag name. This previous option is now in **deprecated** status.
 
-1.  Return to the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate tag/field. If the tag is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
+4. If you are exporting data to an XML file and there are attributes for any tags, record them in the XML Attributes column.
 
-**Notes:** 
-- Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
-- Windows only: Once you have created a form load design that uses an XML file, ***Priority*** automatically enables users to export data from the main form of this load design to an XML file. In this case the *XML File* option in the *Mail* top menu of the relevant form will be enabled. When it is selected, the user gets a choice of interfaces to run. The system indicates where the output file has been saved.
+    **Example:** For an XML tag defined as \<custname type=\'string\'\>1001\</custname> you would record \"type =\'string\' \" in this column.
+    In other files, this tag needs to appear only once. Record *R* in **Type of Value** for a repeating parent. or a **-** for a parent that should appear only once, in the *XML Tags for Interface* sub-level form.
 
-------------------------------------------------------------------------
+5.  Return to the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate tag/field. If the tag is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
+6.  If a tag/field should be omitted entirely from the XML/JSON when empty, use the **Without Empty Tags** checkbox.
 
+**Note:**  Windows only: Once you have created a form load design that uses an XML file, ***Priority*** automatically enables users to export data from the main form of this load design to an XML file. In this case the *XML File* option in the *Mail* top menu of the relevant form will be enabled. When it is selected, the user gets a choice of interfaces to run. The system indicates where the output file has been saved.
+
+
+### Working with the Parsed JSON File
+
+1. Enter the *Tags for Interface* form and check the results. The form should show all properties that are present in the JSON file. You can delete properties that are not necessary. You can also add/revise property names.
+
+2. For parsed properties, the data in the first record appears in the *Value* column. If you want this (or any other value) to be used in all records, regardless of definitions in the file, specify *C* in the *Type of Value* column. Revise the values as necessary.
+
+5.  Return to the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate property. If the property is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
+
+**Note:** Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
 
 
 ## More on Form Loads 

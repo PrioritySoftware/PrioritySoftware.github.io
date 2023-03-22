@@ -19,7 +19,9 @@ There are several advantages to using form interfaces to insert and update data:
 
 As such, interfaces are an excellent option whenever you need to create or update records, especially in standard forms.
 
-**Note:** Think carefully when running an interface from a form trigger. If the form interface can cause that same trigger to fire again, you may create an infinite loop where an interface triggers itself.
+**Notes:** 
+- Think carefully before running an interface from a form trigger. If the form interface can cause that same trigger to fire again, you may create an infinite loop where an interface triggers itself.
+- To ensure accountability, interfaces will generate an error when trying to update documents that are assigned to inactive users. System administrators can use standard tools in the system to reassign documents from inactive users to active ones.
 
 ## Form Interface Sources and Targets
 
