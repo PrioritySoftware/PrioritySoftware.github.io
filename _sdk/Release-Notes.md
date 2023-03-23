@@ -5,6 +5,11 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 23.0
+
+- New options when using form interfaces to export data to [XML files](Loading-from-File#working-with-the-parsed-xml-file). The documentation of form interfaces has undergone a significant rewrite as part of this.
+- [Documents](Documents) now support using NFILE in the input.
+
 ## SDK 22.1
 
 ### March 2023
