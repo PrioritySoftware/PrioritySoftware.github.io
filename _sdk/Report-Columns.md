@@ -403,10 +403,8 @@ FORMAT;
 ## Further Reading 
 
 -   [Organizing Report Data](Organize-Report-Data )
--   [Refining Report Data
-    Display](Refine-Report-Display )
--   [Calculated Columns in
-    Reports](Calculated-Columns-Reports )
+-   [Refining Report Data Display](Refine-Report-Display )
+-   [Calculated Columns in Reports](Calculated-Columns-Reports )
 -   [Types of Reports](Report-Types )
 -   [Running a Report](Run-Report )
 -   [Help Messages](Help-Messages )

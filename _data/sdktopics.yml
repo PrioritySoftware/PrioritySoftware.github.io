@@ -9,6 +9,9 @@ chapters:
   - title: Customization Rules
     url: Customization-Rules
     group: CR
+  - title: Priority Cloud
+    url: Priority-Cloud
+    groupc: Cloud
   - title: Setting Up the Dev Environment
     url: Setting-Up
     group: Setting Up
