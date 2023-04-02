@@ -14,7 +14,7 @@ You can also debug simple reports, i.e., reports run from the menu or by Action 
 
 [23.0]()
 
-**Important!** Debug commands will not work when the DEBUGRESTRICTED system constant is set to 0.
+**Important!** Debug commands will not work when the DEBUGRESTRICTED system constant is set to 1. In freshly installed systems, the default is 1, so you will have to change it to 0 to use debugging tools.
 
 ## Debugging a Form, Procedure or Interface 
 

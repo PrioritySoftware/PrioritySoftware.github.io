@@ -9,6 +9,7 @@ tags: 'Priority_SDK'
 
 - New options when using form interfaces to export data to [XML files](Loading-from-File#working-with-the-parsed-xml-file). The documentation of form interfaces has undergone a significant rewrite as part of this.
 - [Documents](Documents) now support using NFILE in the input.
+- Referenced the new DEBUGRESTRICTED system constant in [Debug Tools](Debug-Tools)
 
 ## SDK 22.1
 
