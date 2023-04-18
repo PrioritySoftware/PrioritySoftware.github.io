@@ -26,6 +26,7 @@ with caution. When it is employed, the TIMEOUT constant is disabled.
 Additional ways of forcing a form refresh are:
 
 -   Include the REFRESH command in a form trigger.
+    Do not include the REFRESH command in POST-UPDATE or POST-INSERT triggers in froms that include a BPM chart, as these can negatively interact with business rules.
 -   To refresh all retrieved records following an Action,
     include :ACTIVATEREFRESH = 1 in the PRE-FORM trigger of the form in
     question.
