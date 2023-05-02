@@ -7,30 +7,29 @@ tags: 'Priority_SDK'
 
 Development on Priority Cloud is mostly identical to development for [Priority Web](Priority-Web) on a local installation. However, there are some additional restrictions on where files can be saved.
 
-When saving files via code, they can only be saved to the following system folders:
+When saving files via code, they can only be saved to the temporary file system folder:
 
-- **system/load**
 - **system/tmp**
 
-You cannot save files directly to the attachments directory (*system/mail*). However, you can create the files first in the permitted folders, then use the COPYFILE program to copy it to the attachments directory. For example:
+You cannot save files directly to the attachments directory (*system/mail*) or interface directory (*system/load*). However, you can create the files first in the permitted folder, then use the COPYFILE program to copy it to the relevant directory. For example:
 
 ```sql
-:MYFILE = '../../system/tmp/demoFile.xls';
-EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', :MYFILE, 444;
+/* Create a valid filename target in system/mail */
+SELECT NEWATTACH('aaa1', 'txt') INTO :FOUT FROM DUMMY;
+/* Create a temporary file to work with */
+SELECT SQL.TMPFILE INTO :F FROM DUMMY;
+SELECT * FROM DAYS WHERE DAYNUM BETWEEN 1 AND 4 TABS :F;
+SELECT * FROM DAYS WHERE DAYNUM > 4 TABS ADDTO :F;
 
-:SYSMAILPATH = '';
-SELECT NEWATTACH('demoFile') INTO :SYSMAILPATH FROM DUMMY;
-
-EXECUTE COPYFILE :MYFILE, :SYSMAILPATH;
+EXECUTE COPYFILE :F, :FOUT;
+SELECT :FOUT FROM DUMMY FORMAT;
 ```
 
 The exception to this rule is the **WINHTML** program, which *can* save files to *system/mail*:
 
 ```sql
   :DOC = 100;
-  :FILENAME = 'document.pdf';
-  :PATH = '';
-  SELECT NEWATTACH(:FILENAME) INTO :PATH FROM DUMMY;
+  SELECT NEWATTACH('document.pdf') INTO :PATH FROM DUMMY;
   EXECUTE WINHTML '-d', 'WWWSHOWORD', '', '', '-v', :DOC, '-pdf', :PATH;
 ```
 

@@ -196,6 +196,8 @@ empty (just like the one you use to define Boolean columns).
 form column that is used to attach a file to the current record. Such columns are displayed together with a paper clip icon, which can be used to open the Windows Explorer and navigate to the file in question. Alternatively, users can record the file path manually. An example of this type of column is the *File Name* column of the **Customer Documents for Task** form, a sub-level of the *Tasks* form. In order for a form column to be defined as an attachment column, it must be of **CHAR**
 type and the form column name must contain the string **EXTFILENAME** (e.g., **PRIV\_ EXTFILENAME**).
 
+When working with attachments, files are uploaded to the **system/mail** folder on the server, and can be interacted with by the user. Only files in **system/mail** can be interacted with; If you specify a path to a different folder on the server, even if it is valid (such as the **system/load** folder), the user will not be able to interact with the file.
+
 ## Address Columns
 
 Another option is to allow users to open Google Maps from within a form.
@@ -293,7 +295,7 @@ column name (or table name) in this form, nor do you designate a join
 column and join table (see below). Instead you need to use the *Form
 Column Extension* sub-level form, in a similar manner as you record
 calculated columns. For more details, see [Calculated
-Columns](#Calculated-Columns )).
+Columns](#Calculated-Columns).
 
 > **Example:** See the **STARTDATE** column in the *Service Calls* form
 > (**DOCUMENTS_Q**).
