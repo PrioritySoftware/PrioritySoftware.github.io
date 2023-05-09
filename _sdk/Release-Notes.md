@@ -7,6 +7,12 @@ tags: 'Priority_SDK'
 
 ## SDK 23.0
 
+### May 2023
+
+- Moved the [Priority Web](Priority-Web) section to a stand-alone page. Added a short guide on how a programmer can access files they created via code in cases where the server machine is inaccessible.
+
+### April 2023
+
 - New options when using form interfaces to export data to [XML files](Loading-from-File#working-with-the-parsed-xml-file). The documentation of form interfaces has undergone a significant rewrite as part of this.
 - [Documents](Documents) now support using NFILE in the input.
 - Referenced the new DEBUGRESTRICTED system constant in [Debug Tools](Debug-Tools)

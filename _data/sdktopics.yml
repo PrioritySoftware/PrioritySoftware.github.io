@@ -223,6 +223,9 @@ chapters:
     topics:
       - page: Parameters for New Charts
         url: Chart-Parameters
+  - title: Programming for Priority Web
+    url: Priority-Web
+    group: PriorityWeb
   - title: Priority Cloud
     url: Priority-Cloud
     group: Cloud
@@ -230,8 +233,6 @@ chapters:
     url: Advanced-Programming-Tools
     group: Programming Tools
     topics: 
-      - page: Working with the Priority Web Interface
-        url: Priority-Web
       - page: Running a Procedure/Report from an SQLI Step or Form Trigger
         url: Run-Procedure-SQLI
       - page: Financial Documents - Initial and Follow-up Procedures  
