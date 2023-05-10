@@ -184,12 +184,12 @@ SELECT ITOH(10) FROM DUMMY FORMAT; /* a */
 
 
 
-**HTOI**(*m*)
+**HTOI**(STRING *'M'*)
 
 inputs a hexadecimal value and translates it to its corresponding
     integer
 ```sql
-SELECT HTOI(b) FROM DUMMY FORMAT; /* 11 */
+SELECT HTOI('2f4') FROM DUMMY FORMAT; /* 756 */
 ```
 
 ## Strings
@@ -308,10 +308,10 @@ returns the index location of a search string within the full
 ```sql
 :STR = 'hello world this is my string';
 :SUBSTR = 'is';
-:INDEX= 1; 
+:INDEX = 1; 
 SELECT :STR, :SUBSTR, :INDEX, STRINDEX(:STR, :SUBSTR, :INDEX) FROM DUMMY FORMAT; /* Result = 15*/
 
-:INDEX= -1;
+:INDEX = -1;
 SELECT :STR, :SUBSTR, :INDEX, STRINDEX(:STR, :SUBSTR, :INDEX) FROM DUMMY FORMAT; /* Result = 18*/
 ```
 
