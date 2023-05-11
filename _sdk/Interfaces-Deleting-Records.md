@@ -21,6 +21,7 @@ to the record type.
 > **Example:** See the POST-FORM2 trigger in the **ORDERITEMS** form,
 > which deletes irrelevant lines from the form.
 
+{% if site.output == "web" %}
 ## More on Form Loads 
 
 -   [Loading from/to a Load
@@ -28,3 +29,4 @@ to the record type.
 -   [Loading from/to a File](Loading-from-File )
 -   [Executing the Form Load](Execute-FormLoads )
 -   [Form Loads](Form-Loads )
+{% endif %}

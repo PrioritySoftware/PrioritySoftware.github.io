@@ -176,6 +176,7 @@ need to create a plain text form, set the :$.NOHTML.T variable to 1.
 
 > **Example:** See the PRE-FORM trigger in the **FTRIGTEXT** form.
 
+{% if site.output == "web" %}
 ## More on Form Triggers 
 
 -   [Built-in Triggers](Built-in-Triggers )
@@ -185,3 +186,5 @@ need to create a plain text form, set the :$.NOHTML.T variable to 1.
 -   [Changing Column Titles Dynamically](Dynamic-Column-Titles )
 -   [Including One Trigger in Another](Include-Triggers )
 -   [Trigger Errors and Warnings](Trigger-Errors )
+
+{% endif %}

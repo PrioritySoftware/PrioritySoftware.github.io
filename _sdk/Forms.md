@@ -175,6 +175,7 @@ forms:
 
 The system can prepare up to 25000 forms simultaneously.
 
+{% if site.output == "web" %}
 ## Further Reading
 
 -   [Form Columns](Form-Columns)
@@ -189,3 +190,4 @@ The system can prepare up to 25000 forms simultaneously.
 -   [Form Preparation](Form-Preparation)
 -   [Help Messages](Help-Messages)
 -   [Rules for Customizing](Customization-Rules)
+{% endif %}

@@ -36,7 +36,7 @@ must construct the HTML procedure and its reports.
 There are two essential structural differences between HTML procedures
 and regular ones:
 
--   Reports can only be displayed in an [INPUT step](Procedure-Steps#Basic_Commands).
+-   Reports can only be displayed in an [INPUT step](Procedure-Steps#Basic-Commands).
 -   The procedure does not run continuously from beginning to end.
     Rather, it is interrupted at each INPUT step, at which time it
     generates an HTML page. It continues where it left off when the user
@@ -75,6 +75,7 @@ The variables in question are recorded in a hidden section of the HTML
 page, and their values are returned to the procedure when it is run
 again.
 
+{% if site.output == "web" %}
 ## Further Reading
 
 -   [User Identification for Priority Lite/Dashboards](Lite-Identification )
@@ -82,3 +83,4 @@ again.
 -   [Additional Input Options (Priority Lite/Dashboards)](Lite-Dashboards) )
 -   [Defining a Base Page for HTML Pages (Priority Lite/Dashboards)](Base-Page-HTML) )
 -   [Writing Dashboard Procedures](Dashboard-Procedures )
+{% endif %}

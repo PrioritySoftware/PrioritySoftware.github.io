@@ -275,10 +275,11 @@ UNLINK ORDERS;
 UNLINK GNERALLOAD;
 ```
 
-
+{% if site.output == "web" %}
 ## More on Form Loads 
 
 -   [Loading from/to a Load Table](Loading-from-Load-Table )
 -   [Loading from/to a File](Loading-from-File )
 -   [Deleting Records from a Form](Interfaces-Deleting-Records )
 -   [Form Loads](Form-Loads )
+{% endif %}

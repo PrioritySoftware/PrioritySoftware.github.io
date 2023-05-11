@@ -11,7 +11,7 @@ Steps* form, a sub-level of the *Procedure Generator* form.
 
 A procedure is composed of a set of entities and/or commands that are executed in a fixed order. Each entity, identified by its name and type, constitutes a separate step in the procedure. The order of execution is determined by the *Step* column.
 
-**Note:** When modifying the order of execution, it is not sufficient to modify the value in the *Step* column. You must create an identical step with a different *Step* value, and delete the step that previously existed. Similarly, in the version revision you create for the modification (see [Installing Your Customizations](Installing-Your-Customizations)), you must
+**Note:** When modifying the order of execution, it is not sufficient to modify the value in the *Step* column. You must create an identical step with a different *Step* value, and delete the step that previously existed. Similarly, in the version revision you create for the modification (see [Installing Your Customizations](Installing-Customizations)), you must
 include both the step addition and step deletion.
 
 ## Step Types 

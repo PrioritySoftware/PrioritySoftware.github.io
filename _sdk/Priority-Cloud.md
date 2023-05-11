@@ -1,6 +1,5 @@
 ---
 title: Priority Cloud
-layout: sdk_nav
 group: Cloud
 tags: 'Priority_SDK'
 ---

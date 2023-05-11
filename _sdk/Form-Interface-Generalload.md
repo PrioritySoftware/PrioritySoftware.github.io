@@ -1,6 +1,5 @@
 ---
 title: Loading from/to a Load Table
-layout: sdk_nav
 group: Interfaces
 tags: 'Priority_SDK'
 ---
@@ -213,7 +212,7 @@ your own table.
 
 
 
-
+{% if site.output == "web" %}
 ## More on Form Loads 
 
 -   [Loading from/to a File](Loading-from-File )
@@ -221,3 +220,4 @@ your own table.
 -   [Deleting Records from a
     Form](Interfaces-Deleting-Records )
 -   [Form Loads](Form-Loads )
+{% endif %}

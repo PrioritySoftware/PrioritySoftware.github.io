@@ -173,10 +173,11 @@ is analyzed and transferred to the *Tags for Interface* sub-level form.
 
 **Note:** Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
 
-
+{% if site.output == "web" %}
 ## More on Form Loads 
 
 -   [Loading from/to a Load Table](Loading-from-Load-Table)
 -   [Executing the Form Load](Execute-FormLoads)
 -   [Deleting Records from a Form](Interfaces-Deleting-Records)
 -   [Form Loads](Form-Loads)
+{% endif %}
