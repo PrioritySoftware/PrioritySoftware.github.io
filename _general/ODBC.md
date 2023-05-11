@@ -31,8 +31,8 @@ The driver does not provide direct access to the underlying database (MSSQL or O
 ## Requirements
 
 - The Priority ODBC Driver requires that you have a Priority Application Server installed.
-
 - To use ODBC, you must obtain a license for the ODBC module.
+- Ther user accessing ODBC must be assigned an API User license 
 
 ## Database Schema
 
