@@ -32,6 +32,15 @@ On a fresh installation of **Priority**, the Table Generator is not linked to th
 
 **Result:** The table generator menu is now available in the Generators menu.
 
+## Developing for Multiple Languages
+
+If users at a customer site work in a language other than English, you will need to install revisions in more than one language. ***Before you even begin programming*** for such a customer, enter the *System
+Constants* form (*System Management* → *System Maintenance* → *Constant Forms*) and change the value of the UPGTITLES constant to 0.
+
+Consequently, no titles (in any language) will be stored in the upgrade file; rather, they will be inserted into a second file (based on the upgrade file) using the INSTITLES program.
+
+**Note:** For more on preparing upgrades for other languages, see [Customizations: Installing the Language Dictionaries](Customizations-Language-Dictionaries).
+
 ## Recommended: Add the Util Folder
 
 **Windows Only**

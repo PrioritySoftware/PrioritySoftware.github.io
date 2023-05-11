@@ -40,21 +40,6 @@ However, new tables should always be assigned type 0.
 **Note:** You cannot create new system tables or add new columns to
 system tables.
 
-## Customization Procedure 
-
-If users at a customer site work in a language other than English, you
-will need to install revisions in more than one language. ***Before you
-even begin programming*** for such a customer, enter the *System
-Constants* form (*System Management* → *System Maintenance* → *Constant
-Forms*) and change the value of the UPGTITLES constant to 0.
-Consequently, no titles (in any language) will be stored in the upgrade
-file; rather, they will be inserted into a second file (based on the
-upgrade file) via another program.
-
-
-**Note:** For more on preparing upgrades for other languages, see
-[Customizations: Installing the Language Dictionaries](Customizations-Language-Dictionaries).
-
 
 ### Rules for Modifying Tables and Table Columns 
 
@@ -73,7 +58,7 @@ upgrade file) via another program.
 -   Ensure that all users have exited the system.
 
 
-**Note:** For general guidelines for development, see [Working with Version Revisions](Installing-Your-Customizations#Working-with-Version-Revisions ).
+**Note:** For general guidelines for development, see [Working with Version Revisions](Installing-Customizations).
 
 
 ## Further Reading 
