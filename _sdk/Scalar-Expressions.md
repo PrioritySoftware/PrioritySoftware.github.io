@@ -32,17 +32,17 @@ If the first expression yields a True value, then the second will
 determine the resulting value. If not, then the third expression will
 determine that value.
 
-> **Example:** A conditional expression could be used for a calculated
-> column in the **ORDERSBYCUST** report which warns that the order is
-> overdue:
->
-> ```sql
-> ( SQL.DATE8 > ORDERITEMS.DUEDATE AND ORDERITEMS.BALANCE > 0 ? ’*’ : ’ ’ )
-> ```
->
-> That is, if the current date is later than the due date and the
-> balance to be delivered is greater than 0, then display an asterisk;
-> otherwise, leave blank.
+**Example:** A conditional expression could be used for a calculated
+column in the **ORDERSBYCUST** report which warns that the order is
+overdue:
+
+```sql
+( SQL.DATE8 ORDERITEMS.DUEDATE AND ORDERITEMS.BALANCE 0 ? ’*’ : ’ ’ )
+```
+
+That is, if the current date is later than the due date and the
+balance to be delivered is greater than 0, then display an asterisk;
+otherwise, leave blank.
 
 ## Numbers
 
@@ -308,10 +308,12 @@ returns the index location of a search string within the full
 :STR = 'hello world this is my string';
 :SUBSTR = 'is';
 :INDEX = 1; 
-SELECT :STR, :SUBSTR, :INDEX, STRINDEX(:STR, :SUBSTR, :INDEX) FROM DUMMY FORMAT; /* Result = 15*/
+SELECT :STR, :SUBSTR, :INDEX, 
+STRINDEX(:STR, :SUBSTR, :INDEX) FROM DUMMY FORMAT; /* Result = 15*/
 
 :INDEX = -1;
-SELECT :STR, :SUBSTR, :INDEX, STRINDEX(:STR, :SUBSTR, :INDEX) FROM DUMMY FORMAT; /* Result = 18*/
+SELECT :STR, :SUBSTR, :INDEX,
+STRINDEX(:STR, :SUBSTR, :INDEX) FROM DUMMY FORMAT; /* Result = 18*/
 ```
 
 This expression can also be used in queries. For example:
@@ -396,10 +398,14 @@ for a given input string and delimiter (which breaks up the string
     but the delimiter must be a fixed value. The delimiter must be a
     single character long.
 ```sql
-SELECT STRPIECE('a/b.c.d/e.f','.',2,1) FROM DUMMY FORMAT;/* 'c' */
-SELECT STRPIECE('a/b.c.d/e.f','/',2,1) FROM DUMMY FORMAT;/*'b.c.d' */
-SELECT STRPIECE('a/b.c.d/e.f','.',1,3) FROM DUMMY FORMAT;/*  'a/b.c.d/e' */
-SELECT STRPIECE('a/b.c.d/e.f','/',1,3) FROM DUMMY FORMAT;/* 'a/b.c.d/e.f' */
+SELECT STRPIECE('a/b.c.d/e.f','.',2,1) FROM DUMMY FORMAT;
+/* 'c' */
+SELECT STRPIECE('a/b.c.d/e.f','/',2,1) FROM DUMMY FORMAT;
+/*'b.c.d' */
+SELECT STRPIECE('a/b.c.d/e.f','.',1,3) FROM DUMMY FORMAT;
+/*  'a/b.c.d/e' */
+SELECT STRPIECE('a/b.c.d/e.f','/',1,3) FROM DUMMY FORMAT;
+/* 'a/b.c.d/e.f' */
 ```
 
 
@@ -407,14 +413,16 @@ SELECT STRPIECE('a/b.c.d/e.f','/',1,3) FROM DUMMY FORMAT;/* 'a/b.c.d/e.f' */
 
 changes characters to uppercase letters
 ```sql
-:LOW = 'marianne';SELECT TOUPPER(:LOW) FROM DUMMY FORMAT;/*MARIANNE */
+:LOW = 'marianne';SELECT TOUPPER(:LOW) FROM DUMMY FORMAT;
+/*MARIANNE */
 ```
 
 **TOLOWER**(*string*)
 
 changes characters to lowercase letters
 ```sql
-:UPPER = 'MARIANNE';SELECT TOLOWER(:UPPER) FROM DUMMY FORMAT; /*marianne */
+:UPPER = 'MARIANNE';SELECT TOLOWER(:UPPER) FROM DUMMY FORMAT;
+ /*marianne */
 ```
 
 ### Files and Messages
@@ -429,7 +437,8 @@ returns the message for *message_number* of entity *entity_name*
 *ENTMESSAGE* should only be run against the DUMMY table. If you need to use it in a statement that includes a database table, store it in a variable first.
 
 ```sql
-SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT; /* You cannot revise the number of an itemized order. */
+SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT; 
+/* You cannot revise the number of an itemized order. */
 ```
 
 
@@ -466,7 +475,8 @@ In version 22.1, the function will also create the folder on the server (instead
 
 ```sql
 :z = NEWATTACH('LOGFILe', '.zip');
-SELECT :z FROM DUMMY FORMAT; /*../../system/mail/202202/1t2tymq0/logfile.m */
+SELECT :z FROM DUMMY FORMAT; 
+/*../../system/mail/202202/1t2tymq0/logfile.m */
 SELECT NEWATTACH('LOGFILe', '.zip') FROM DUMMY FORMAT;
 SELECT NEWATTACH('C:\TMP\LOGFILe', '.zip') FROM DUMMY FORMAT;
 SELECT NEWATTACH('C:\TMP\LOGFILe.zip') FROM CUSTOMERS WHERE CUST = 0 FORMAT;

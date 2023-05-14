@@ -116,7 +116,8 @@ LABEL 1;
 FETCH C INTO ...
 GOTO 8 WHERE :RETVAL = 0; /* No more fetched records */
 
-'Database manipulations with the fetched fields; usually updates of some sort'
+'Database manipulations with the fetched fields; 
+usually updates of some sort'
 
 GOSUB 100 WHERE ...;
 LOOP 1;
