@@ -21,12 +21,11 @@ The following pattern components can be included in ATOD and DTOA
 expressions (those marked with an asterisk (\*) only apply to DTOA). Of
 course, more than one component can be used in the same expression.
 
-------------------------------------------------------------------------
+-------------------------------------------------------------------
 
-**Note:** You can add punctuation marks (e.g., dashes, slashes, commas)
-and spaces between pattern components as desired.
+**Note:** You can add punctuation marks (e.g., dashes, slashes, commas) and spaces between pattern components as desired.
 
-------------------------------------------------------------------------
+-------------------------------------------------------------------
 
    **MMM** or **mmm**--- abbreviated form (first three letters) of
     month name (Jan)
@@ -86,22 +85,22 @@ SELECT DTOA(:DATE,'MM') FROM DUMMY FORMAT; /* 06 */
 SELECT DTOA(:DATE,'MONTH') FROM DUMMY FORMAT; /* Jun-06 */
 SELECT DTOA(:DATE,'day') FROM DUMMY FORMAT; /* Thu */
 SELECT DTOA(06/01/06,'XX/XX/XX') FROM DUMMY FORMAT; /* 06/01/06
-    (June 1, 2006, in American format; January 6, 2006, in European) */
-SELECT DTOA(:DATE,'FULLDATE') AS 'FULLDATE' FROM DUMMY FORMAT; /*
-    Jun 01,2006 */
-
+(June 1, 2006, in American format;
+ January 6, 2006, in European) */
+SELECT DTOA(:DATE,'FULLDATE') AS 'FULLDATE' FROM DUMMY FORMAT;
+ /*  Jun 01,2006 */
 :DATE = 06/01/06 12:33;
-SELECT DTOA(:DATE,'MM/DD/YY hh:mm,day') FROM DUMMY FORMAT; /*
-    06/01/06 12:33,Thu */
+SELECT DTOA(:DATE,'MM/DD/YY hh:mm,day') FROM DUMMY FORMAT;
+ /*  06/01/06 12:33,Thu */
 SELECT DTOA(:DATE,'MMM-YY') FROM DUMMY FORMAT; /* Jun-06 */
 SELECT DTOA(:DATE,'MMMM-YYYY') FROM DUMMY FORMAT;/* June-2006 */
-SELECT DTOA(:DATE, 'The current date is MM-DD-YY, and the time is hh:mm.') FROM DUMMY FORMAT;
+SELECT DTOA(:DATE, 'The current date is MM-DD-YY,
+ and the time is hh:mm.') FROM DUMMY FORMAT;
 ```
 
 {% if site.output == "web" %}
 ## Further Reading 
 
--   [Non-standard Scalar
-    Expressions](Scalar-Expressions )
+-   [Non-standard Scalar Expressions](Scalar-Expressions)
 
 {% endif %}

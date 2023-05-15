@@ -17,7 +17,8 @@ e-mail addresses.
 
 > **Examples:**
 > ```sql
-> MAILMSG 9 TO USER :NEXTSIGN WHERE :NEXTSIGN <> 0 AND :NEXTSIGN <> SQL.USER;
+> MAILMSG 9 TO USER :NEXTSIGN WHERE :NEXTSIGN <> 0 
+> AND :NEXTSIGN <> SQL.USER;
 > ```
 > ```sql
 > :EMAIL = 'johndoe@example.com';
@@ -93,23 +94,23 @@ The MAILMSG command can also be used to update the *History of Statuses*
 appropriate POST- trigger:
 
 ```sql
-:PAR1 = statustype; /* the type of document whose assigned user and status you want to record in the '''DOCTODOLISTLOG''' form */
-:PAR2 = :iv; /* the autounique value of the record whose assigned user and status you want to record in the '''DOCTODOLISTLOG''' form */
+:PAR1 = statustype; /* the type of document whose assigned user
+ and status you want to record in the '''DOCTODOLISTLOG''' form */
+:PAR2 = :iv; /* the autounique value of the record whose assigned
+ user and status you want to record in the '''DOCTODOLISTLOG''' 
+ form */
 MAILMSG 1 TO USER -2;
 ```
 
-The parameters :PAR1 and :PAR2 are used to indicate a unique form and
-record from which to retrieve the status and assigned user. The MAILMSG
-command generates a new line in the *History of Statuses* form with the
-user and status currently assigned to the specified record.
+The parameters :PAR1 and :PAR2 are used to indicate a unique form and record from which to retrieve the status and assigned user. The MAILMSG command generates a new line in the *History of Statuses* form with the user and status currently assigned to the specified record.
 
-> **Example:** To add a new line to the *History of Statuses* sub-level
-> of the *Sales Orders* (**ORDERS**) form for Order No. A00098, use the
-> following syntax:
+> **Example:** To add a new line to the *History of Statuses* sub-level of the *Sales Orders* (**ORDERS**) form for Order No. A00098, use the following syntax:
 >
 > ```sql
->  :PAR1 = 'O'; /* the Type defined for all records in the ORDERS form */ 
->  :PAR2 = '15982'; /* the internal Document (ID) of Order Number A00098 */ 
+>  :PAR1 = 'O'; /* the Type defined for all records in the ORDERS
+> form */ 
+>  :PAR2 = '15982'; /* the internal Document (ID) of Order Number
+> A00098 */ 
 >  MAILMSG 1 TO USER -2;
 > ```
 
@@ -118,22 +119,16 @@ record other changes to a form record.
 
 > **Examples:**
 >
-> 1.  To update the status history for the *Tasks* form after a change
->     in the *Notes* (**CUSTNOTESTEXT**) form, add the above syntax to a
->     new custom POST-FORM trigger.
-> 2.  To do the same after a change in the *Start Date* of the task, add
->     the above syntax to a new custom POST-UPDATE trigger.
+> 1.  To update the status history for the *Tasks* form after a change in the *Notes* (**CUSTNOTESTEXT**) form, add the above syntax to a new custom POST-FORM trigger.
+> 2.  To do the same after a change in the *Start Date* of the task, add the above syntax to a new custom POST-UPDATE trigger.
 
 
-**Note:** This feature can only be used in a sub-level form, not in the
-root form. For example, you cannot update the status history of an order
-from the *Sales Orders* (**ORDERS**) form.
+**Note:** This feature can only be used in a sub-level form, not in the root form. For example, you cannot update the status history of an order from the *Sales Orders* (**ORDERS**) form.
 
 
 ## Sending a Link to a Document using MAILMSG 
 
-You can also use the message parameters to include a link to a document
-in a message.
+You can also use the message parameters to include a link to a document in a message.
 
 > **Example:** Message 1 is defined as: \"Here is a link to order
 > \<P1.ORDERS.F>.\"

@@ -22,7 +22,7 @@ the line or the form.
     form. This flag makes it easy to locate those columns for which
     user-designed triggers have been created.
 -   You can track changes to custom triggers once they have been
-    included in prepared version revisions. See [Tracking Changes to Queries](Installing-Your-Customizations#Tracking-Changes-to-Queries ).
+    included in prepared version revisions. See [Tracking Changes to Queries](Installing-Customizations#Tracking-Changes-to-Queries ).
 
 
 
@@ -41,8 +41,7 @@ records before you run the text editor.
 your choosing (e.g., Notepad++). To do so:
 
 - In the Web Environment, simply press F6 within the trigger text. This saves a temporary text file and opens it in the system default text editor. When you save the file and close it, the trigger text is updated in Priority.
-- In the Windows interface, run the *Define External Editor* program (*System Management* → *Generators* → *Procedures*), indicating the full path to the file you want to use (e.g., Tabula
-External Editor= C:\\Windows\\Notepad.exe) in the input screen.
+- In the Windows interface, run the *Define External Editor* program (*System Management* → *Generators* → *Procedures*), indicating the full path to the file you want to use (e.g., Tabula External Editor= C:\\Windows\\Notepad.exe) in the input screen.
 Alternatively, you can open the *tabula.ini* file (in *C:\\Windows*)
 and, under the {Environment} section, revise the line for Tabula
 External Editor, giving the file path.
@@ -82,78 +81,42 @@ Before demonstrating the usage of each of the user-designed triggers, a
 brief explanation of their sequence of execution is in order:
 
 -   CHECK-FIELD triggers precede POST-FIELD triggers.
--   [Built-in CHECK-FIELDs](Built-in-Triggers#CHECK-FIELD )
+-   [Built-in CHECK-FIELDs](#CHECK-FIELD )
     precede user-designed CHECK-FIELDs.
--   [Built-in POST-FIELDs](Built-in-Triggers#POST-FIELD )
+-   [Built-in POST-FIELDs](#POST-FIELD )
     precede user-designed POST-FIELDs.
 -   PRE- triggers precede their respective POST- triggers.
--   [Built-in triggers](Built-in-Triggers ) are executed after
+-   [Built-in triggers](Built-in-Triggers) are executed after
     PRE- triggers, before POST- triggers.
 -   Standard and custom triggers are sorted alphabetically, so you
-    should name your own triggers accordingly. For example, to run your
-    own trigger after a standard POST-INSERT trigger, use
+    should name your own triggers accordingly. For example, to run your own trigger after a standard POST-INSERT trigger, use
     POST-INSERT_AXXX or ZXXX_POST-INSERT (where XXX is part of the
     prefix you normally use for this customer).
 
 Trigger execution is discontinued when an END or ERRMSG command
 succeeds. It is not discontinued if a WRNMSG command succeeds. If a
-CHECK-FIELD trigger is discontinued, then the corresponding POST-FIELD
-triggers (built-in and user-designed) will not be activated. Similarly,
-if a verification check fails in any of the PRE- triggers, then
-activation of that trigger is discontinued, and the corresponding
-built-in and POST- trigger will not be activated.
+CHECK-FIELD trigger is discontinued, then the corresponding POST-FIELD triggers (built-in and user-designed) will not be activated. Similarly, if a verification check fails in any of the PRE- triggers, then activation of that trigger is discontinued, and the corresponding built-in and POST- trigger will not be activated.
 
-> **Example:** Suppose the **PARTNAME** column of the **ORDERITEMS**
-> form has been assigned both a CHECK-FIELD and a POST-FIELD trigger.
-> The former ensures that the part number is not updated once it has
-> been successfully inserted in a record (rather, the user must delete
-> the record for the unwanted part number and insert a new record). The
-> POST-FIELD trigger generates a unit price for the ordered part based
-> on the customer's price list. If the CHECK-FIELD should fail (i.e.,
-> the user has attempted to update the part number), then the price of
-> the part will not be generated. Nor will the built-in POST-FIELD
-> trigger (which fills in the internal number and part description on
-> the basis of the designated part number) be activated.
+> **Example:** Suppose the **PARTNAME** column of the **ORDERITEMS** form has been assigned both a CHECK-FIELD and a POST-FIELD trigger. The former ensures that the part number is not updated once it has been successfully inserted in a record (rather, the user must delete the record for the unwanted part number and insert a new record). The POST-FIELD trigger generates a unit price for the ordered part based on the customer's price list. If the CHECK-FIELD should fail (i.e., the user has attempted to update the part number), then the price of the part will not be generated. Nor will the built-in POST-FIELD trigger (which fills in the internal number and part description on the basis of the designated part number) be activated.
 
 ## Naming Customized Triggers 
 
-Customized triggers should be given special names (which must be added
-to the *List of Triggers* form; this form can be accessed by pressing
-**F6** from the *Row & Form Triggers* form or from the *Form Column
-Triggers* form). These names have to include key strings which indicate
-the type of trigger involved, together with additional characters that
-refer to the customization. For instance, customized CHECK-FIELD
-triggers must include the strings "CHECK" and "FIELD" (in capital
-letters). Thus, a customized CHECK-FIELD for an installation at CRR
-Holding Company might be labelled CRRH_CHECK-FIELD. Customized trigger
-names must follow a number of rules:
+Customized triggers should be given special names (which must be added to the *List of Triggers* form; this form can be accessed by pressing **F6** from the *Row & Form Triggers* form or from the *Form Column Triggers* form). These names have to include key strings which indicate the type of trigger involved, together with additional characters that refer to the customization. For instance, customized CHECK-FIELD triggers must include the strings "CHECK" and "FIELD" (in capital letters). Thus, a customized CHECK-FIELD for an installation at CRR Holding Company might be labelled CRRH_CHECK-FIELD. Customized trigger names must follow a number of rules:
 
--   They can only contain alphanumeric values, the underline sign (\_)
-    and the hyphen (--).
+-   They can only contain alphanumeric values, the underline sign (\_)  and the hyphen (-).
 -   They must begin with a letter.
 -   They must not include spaces.
--   They must include a four-letter prefix or suffix, similar to what
-    you use throughout the system for this customer. The difference is
-    that you will need to choose the appropriate first letter of the
-    prefix (or suffix) for sorting purposes (see example above).
--   They must include the required key strings that identify trigger,
-    separated by hyphens (i.e., PRE-, POST-, -FIELD, -FORM, -INSERT,
-    -UPDATE, -DELETE, CHECK-, CHOOSE-).
-
+-   They must include a four-letter prefix or suffix, similar to what you use throughout the system for this customer. The difference is that you will need to choose the appropriate first letter of the prefix (or suffix) for sorting purposes (see example above).
+-   They must include the required key strings that identify trigger, separated by hyphens (i.e., PRE-, POST-, -FIELD, -FORM, -INSERT, -UPDATE, -DELETE, CHECK-, CHOOSE-).
 
 **Notes:**
 
--   Key strings need not be consecutive (e.g., they may be separated by
-    additional strings).
--   You can combine key strings to create, for instance, a customized
-    trigger that operates both as a POSTt-INSERT and a POST-UPDATE
-    (e.g., ARRH_POST-INSERT-UPDATE).
+-   Key strings need not be consecutive (e.g., they may be separated by additional strings).
+-   You can combine key strings to create, for instance, a customized  trigger that operates both as a POST-INSERT and a POST-UPDATE (e.g., ARRH_POST-INSERT-UPDATE).
 -   SEARCH-FIELD triggers are the exception to the rule. You cannot
-    create a customized SEARCH-FIELD, but rather must use the standard
-    trigger. For details, see [Rules for Customizing
-    Forms](Customization-Rules-Forms ).
+    create a customized SEARCH-FIELD, but rather must use the standard trigger. For details, see [Customization Rules](Customization-Rules#forms ).
 
-------------------------------------------------------------------------
+-------------------------------------------------------------------
 
 ## Creating Column Triggers 
 
@@ -230,15 +193,9 @@ characters.
 > ```
 
 The above type of CHOOSE-FIELD is a regular SQL query where both
-arguments must be of **CHAR** type. In order to display a number, you
-must first convert it into a string using the [ITOA
-function](Scalar-Expressions#Strings ).
+arguments must be of **CHAR** type. In order to display a number, you must first convert it into a string using the [ITOA function](Scalar-Expressions#Strings).
 
-The first argument in the query is the description and the second is the
-value to be inserted in the column where the Choose list is activated.
-You can also add a third argument for sorting purposes. If you want to
-display a single value in the Choose list, you must add the empty string
-to the CHOOSE-FIELD query.
+The first argument in the query is the description and the second is the value to be inserted in the column where the Choose list is activated. You can also add a third argument for sorting purposes. If you want to display a single value in the Choose list, you must add the empty string to the CHOOSE-FIELD query.
 
 > **Example:** See the CHOOSE-FIELD trigger for the **CPROFNUM** column
 > in the **ORDERS** form. Its first argument displays the quote's
@@ -246,22 +203,13 @@ to the CHOOSE-FIELD query.
 > value that will be filled in); the third determines the sort, which is
 > by the quote's expiration date.
 
-If the third argument (the one you wish to sort by) is a numeric value,
-using the ITOA function alone will not result in correct sorting. For
-example, 10 would precede 5. To avoid this, you can use the function
-ITOA(m,4), which will result in 1 becoming 0001, 5 becoming 0005 and 10
-becoming 0010, so that the order when sorted will be correct.
+If the third argument (the one you wish to sort by) is a numeric value, using the ITOA function alone will not result in correct sorting. For example, 10 would precede 5. To avoid this, you can use the function ITOA(m,4), which will result in 1 becoming 0001, 5 becoming 0005 and 10 becoming 0010, so that the order when sorted will be correct.
 
 <!--- TODO: Move PAR4 to Windows only features --->
 
-The first argument in the query is stored in the :PAR4 system variable,
-where it can be used by other triggers assigned to the same column.
+The first argument in the query is stored in the :PAR4 system variable, where it can be used by other triggers assigned to the same column.
 
-> **Example:** See the BUF2 trigger for the **SERNUM** column in the
-> **DOCUMENTS_Q** form (called from the CHECK-FIELD trigger for that
-> form column). It uses the :PAR4 variable, containing the part
-> description that corresponds with the chosen serialized part, to
-> determine the corresponding part number.
+> **Example:** See the BUF2 trigger for the **SERNUM** column in the **DOCUMENTS_Q** form (called from the CHECK-FIELD trigger for that form column). It uses the :PAR4 variable, containing the part description that corresponds with the chosen serialized part, to determine the corresponding part number.
 
 A CHOOSE-FIELD trigger can also display a list of constant values, taken
 from form messages. When using this type of CHOOSE-FIELD, the messages
@@ -283,38 +231,23 @@ you can define the SELECT statement so that once one of the queries
 succeeds, no subsequent queries are run. To do so, use the syntax:
 SELECT /\* AND STOP \*/ ...
 
-> **Example:** Use a Union Choose in the **ORDERS** form to create a
-> Choose list comprised of the customer\'s part list and the
-> representative customer\'s part list. For an example of SELECT /\* AND
-> STOP \*/, see the CHOOSE-FIELD trigger for the **PARTNAME** column in
-> the **ORDERITEMS** form.
+> **Example:** Use a Union Choose in the **ORDERS** form to create a Choose list comprised of the customer's part list and the representative customer's part list. For an example of SELECT /\* AND STOP */, see the CHOOSE-FIELD trigger for the **PARTNAME** column in the **ORDERITEMS** form.
 
-**Note:** The sort in a Union Choose is determined by the first column
-that is retrieved. That is, the sort defined for each query, as well as
-the order of the queries, is ignored. If you want to override this
-default, using instead the sequence of results retrieved from each
-query, add the following comment anywhere in the trigger (note the space
-after the first asterisk and before the second one):\
-/\* NO SORT \*/\
+**Note:** The sort in a Union Choose is determined by the first column that is retrieved. That is, the sort defined for each query, as well as the order of the queries, is ignored. If you want to override this default, using instead the sequence of results retrieved from each query, add the following comment anywhere in the trigger (note the space after the first asterisk and before the second one):\
+<code>/* NO SORT */</code>\
 For an example of such usage, see the CHOOSE-FIELD trigger for the
 **ACTNAME** column in the **ALINE** form.
 
 
-Finally, you can use a variation of the trigger, called MCHOOSE-FIELD,
-to create a Multiple Choose. This allows the user to select more than
-one value from the Choose list at a time.
+Finally, you can use a variation of the trigger, called MCHOOSE-FIELD, to create a Multiple Choose. This allows the user to select more than one value from the Choose list at a time.
 
-> **Example:** See the MCHOOSE-FIELD trigger in the **ORDNAME** column
-> of the **DOCORD** form.
+> **Example:** See the MCHOOSE-FIELD trigger in the **ORDNAME** column of the **DOCORD** form.
 
 **Notes:**
 
 -   If there are no values in the Choose list (e.g., no parts were
-    defined for the vendor), or if it contains more records than the
-    number specified in the CHOOSEROWS system constant, a SEARCH-FIELD
-    trigger (if defined) is activated instead.
--   A CHOOSE-FIELD trigger can also be defined for an entire form (see
-    [CHOOSE-FIELD (for form)](#CHOOSE-FIELD-(for-form) )).
+    defined for the vendor), or if it contains more records than the number specified in the CHOOSEROWS system constant, a SEARCH-FIELD trigger (if defined) is activated instead.
+-   A CHOOSE-FIELD trigger can also be defined for an entire form (see [CHOOSE-FIELD (for form)](#CHOOSE-FIELD-(for-form))).
 
 ## Creating Row Triggers 
 
@@ -347,8 +280,7 @@ PRE-UPDATE triggers perform verification checks before a record is
 updated in the database. Generally, they are similar to PRE-INSERT
 triggers.
 
-> **Example:** The PRE-UPDATE trigger in the **CASH_CASH** form verifies
-> that a GL account is attached to the cashier:
+> **Example:** The PRE-UPDATE trigger in the **CASH_CASH** form verifies that a GL account is attached to the cashier:
 >
 > ```sql
 > WRNMSG 1 WHERE :$.ACCOUNT = 0;
@@ -424,43 +356,27 @@ the trigger: /\* MULTI \*/.
 
 -   A third type (SEARCH-EDES-FIELD) is used only in a non-English
     system, to search by the name/description in English.
--   SEARCH-FIELD triggers are the exception to the rule, as you cannot
-    create a customized trigger of this type. Instead, you must use
-    standard SEARCH-FIELD triggers. For details, see [**Rules for Customizing Forms**](#Rules-for-Customizing-Forms ).
+-   SEARCH-FIELD triggers are the exception to the rule, as you cannot create a customized trigger of this type. Instead, you must use standard SEARCH-FIELD triggers. For details, see [**Rules for Customizing Forms**](Customization-Rules#forms ).
 -   SEARCH-FIELD triggers can only display table columns with a width of up to 59 characters.
 -   If the user selects more than one value in a Multiple Search and the form generates a warning or error message, insertion of the selected values will stop.
 
 ### SEARCH-ALL-FIELD 
 
 SEARCH-ALL-FIELD also creates a long search list. The critical
-difference between it and SEARCH-FIELD is that SEARCH-ALL-FIELD allows
-the user to search through multiple attributes at once. This is useful
-for fields where different users might want to search by different
-criteria.
+difference between it and SEARCH-FIELD is that SEARCH-ALL-FIELD allows the user to search through multiple attributes at once. This is useful for fields where different users might want to search by different criteria.
 
-> **Example:** In the ORDERS form, when searching in Customer Name the
-> SEARCH-DES-FIELD trigger only searches through customer names.
-> However, searching using SEARCH-ALL-FIELD, you can search through both
-> Customer Name and Customer Number simultaneously.
+> **Example:** In the ORDERS form, when searching in Customer Name the SEARCH-DES-FIELD trigger only searches through customer names.However, searching using SEARCH-ALL-FIELD, you can search through both Customer Name and Customer Number simultaneously.
 
 In Priority Web, the SEARCH-ALL-FIELD trigger has additional
-functionality, as the same search list can be shared across multiple
-columns in a form, determined by the columns mentioned in the INCLUDES
-comment at the start of the trigger.
+functionality, as the same search list can be shared across multiple columns in a form, determined by the columns mentioned in the INCLUDES comment at the start of the trigger.
 
-> **Example:** The SEARCH-ALL-FIELD trigger in the **CUSTOMERS** form is
-> available in both the **Customer Number** and **Customer Name** fields
-> in the **Sales Orders** form. It\'s appearance in **Customer Name** is
-> governed by the commented line in the trigger :ORDERS.F \> CDES.
+> **Example:** The SEARCH-ALL-FIELD trigger in the **CUSTOMERS** form is available in both the **Customer Number** and **Customer Name** fields in the **Sales Orders** form. It's appearance in **Customer Name** is governed by the commented line in the trigger: ORDERS.F > CDES.
 
-If the search trigger uses regular expression for ordering results (the
-ORDER BY section), all components of the expression, including
-parentheses (), periods (.), and number denoting order priority, must
-appear in a single line and without interrupting spaces.
+If the search trigger uses regular expression for ordering results (the ORDER BY section), all components of the expression, including
+parentheses (), periods (.), and number denoting order priority, must appear in a single line and without interrupting spaces.
 
-> **Correct Example:** taken from the SEARCH-ALL-FIELD in the LOGPART
-> form
->
+> **Correct Example:** taken from the SEARCH-ALL-FIELD in the LOGPART form
+
 > ```sql
 > :ORDERBY > ((.*)PDES(.*)).3, (^(?!.*EPARTDES)(.*PARTDES)).3,
 > EPARTDES.2

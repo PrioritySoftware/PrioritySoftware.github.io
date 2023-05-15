@@ -8,7 +8,11 @@ Using the WINHTML program, you can output the document in a variety of formats a
 
 In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
 ```sql
-EXECUTE WINHTML '-d' | '-dQ', 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] ['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] ['-AMAIL']
+EXECUTE WINHTML '-d' | '-dQ', 'document_name', 'table', 
+'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] 
+['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | 
+'-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] 
+['-AMAIL']
 ```
 ## WINHTML Parameters
 - '-d' - create document. 
@@ -44,21 +48,28 @@ You can do so in one of two ways:
 ### Determining Available Print Formats
 To find out which print formats are available for a given document, run the following SQL commands in WINDBI:
 ```sql
-/* this code will show all system document print formats defined for the Order Confirmation document */
+/* this code will show all system document print formats defined
+ for the Order Confirmation document */
 SELECT * FROM EXTMSG WHERE EXEC = (
-SELECT EXEC FROM EXEC WHERE TYPE = 'P' AND ENAME = 'WWWSHOWORDER') AND NUM < 0 FORMAT;
+SELECT EXEC FROM EXEC WHERE TYPE = 'P' 
+AND ENAME = 'WWWSHOWORDER') 
+AND NUM < 0 FORMAT;
 /* this code will show word templates defined for the document */
 SELECT * FROM TRIGMSG WHERE EXEC = (
-SELECT EXEC FROM EXEC WHERE TYPE = 'P' AND ENAME = 'WWWSHOWORDER') FORMAT;
+SELECT EXEC FROM EXEC WHERE TYPE = 'P' 
+AND ENAME = 'WWWSHOWORDER') FORMAT;
 ```
 
 ### Setting the Print Format
 At this point you should know the EXEC of the document you want to run and the number of the print format you want to display. 
 
 ```sql
-/* this code defines the format that will be used to print the document; in the current example, it is assumed that we want to use print format -5 */
+/* this code defines the format that will be used to print the 
+document; in the current example, it is assumed that we want to 
+use print format -5 */
 :EXEC = 0;
-SELECT EXEC INTO :EXEC FROM EXEC WHERE TYPE = 'P' AND ENAME = 'WWWSHOWORDER';
+SELECT EXEC INTO :EXEC FROM EXEC WHERE TYPE = 'P' 
+AND ENAME = 'WWWSHOWORDER';
 :PRINTFORMAT = -5;
 UPDATE PRINTFORMAT SET VALUE = :PRINTFORMAT
 WHERE EXEC = :EXEC AND USER = SQL.USER;
@@ -75,44 +86,52 @@ The following examples come in pairs. The first example is for outputting a sing
 /*single document*/
 :ORD = 100;
 :HTMLFILE = '../../tmp/SOMEFILENAME.html';
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-o', :HTMLFILE;
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-o', :HTMLFILE;
 ```
 ```sql
 /*multiple documents*/
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', '../../TMP/O.html';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', 
+'../../TMP/O.html';
 ```
 - 	To output the document as PDF based on a system document (-pdf), use the following code:
 ```sql
 /*single document*/
 :ORD = 100;
 :PDFFILE = '../../tmp/SOMEFILENAME.pdf';
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-pdf', :PDFFILE;
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-pdf', :PDFFILE;
 ```
 ```sql
 /*multiple documents*/
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-pdf', '../../TMP/O.html';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, 
+'-pdf', '../../TMP/O.html';
 ```
 - 	To output the document as a Word file (-wo), use the following code:
 ```sql
 /*single document*/
 :ORD = 100;
 :WORDFILE = '../../tmp/SOMEFILENAME.docx';
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-wo', :WORDFILE;
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-wo', :WORDFILE;
 ```
 ```sql
 /*multiple documents*/
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', '../../TMP/O.docx';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', 
+'../../TMP/O.docx';
 ```
 - 	To output the document as a pdf file based on a word file (-wpdf), use the following code:
 ```sql
 /*single document*/
 :ORD = 100;
 :PDFFILE = '../../tmp/SOMEFILENAME.pdf';
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-wpdf', :PDFFILE;
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-wpdf', :PDFFILE;
 ```
 ```sql
 /*multiple documents*/
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wpdf', '../../TMP/O.pdf'; 
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, 
+'-wpdf', '../../TMP/O.pdf'; 
 ```
 
 **Notes:**
@@ -132,15 +151,15 @@ EXECUTE WINHTML '-dQ', 'WWWSHOWORDER', :ORD
 
 
 
-
 ### Creating a Digitally Signed PDF Document using Procedure Code
-Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, an HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the **–signpdf** option to the WINHTML command. Remember that a digital signature is not the same as an e-document!
+Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, a HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the **–signpdf** option to the WINHTML command. Remember that a digital signature is not the same as an e-document!
 
 Example: The following code will create a digitally signed PDF of the sales order in which ORD = 100:
 ```sql
 :ORD = 100;
 :PDFFILE = '../../tmp/SOMEFILENAME.pdf';
-EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', '-signpdf', '-pdf', :PDFFILE;
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-signpdf', '-pdf', :PDFFILE;
 ```
 
 ### Creating an E-Document using Procedure Code 
@@ -148,18 +167,20 @@ If you are required to create a digitally signed E-Document, for instance, when 
 
 Example: The following code will create a digitally signed E-Document of an Invoice/Credit Memo:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-s', '-edoc', '-pdf', :FILE2; 
+EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-s', 
+'-edoc', '-pdf', :FILE2; 
 ```
 
 To automate the mailing of the E-Document that you created, use the following code:
 ```sql
-EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', '-edoc', '-AMAIL', '-s'; 
+EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g', 
+'-edoc', '-AMAIL', '-s'; 
 ```
 
 **Note:** When using the -AMAIL parameter, do not specify a path/filename, as the file will be renamed automatically and saved in the relevant invoice's attachments.
 
 ### Saving a Certified Copy when Printing a Document
-You can define a procedure so that, when the document is printed or sent by e-mail (:SENDOPTION = 'PRINT' or 'AMAIL'), a certified copy is saved that can be printed later (using the Create Certified Copy program). 
+You can define a procedure so that, when the document is printed or sent by e-mail (:SENDOPTION = 'PRINT' or 'AMAIL'), a certified copy is saved that can be printed later (using the Create Certified Copy program). \
 In order to save a copy:
 - 	Include an HTMLEXTFILES step which goes over the attached files.
 - 	In the first INPUT step, set the :HTMLPRINTORIG variable to 1.
@@ -183,14 +204,19 @@ If you are executing WINHTML from a procedure, you can combine it with a **URL**
   :DOC = 100;
   :FILENAME = 'document.pdf';
   :PATH = '';
-  /* We use the NEWATTACH function to create a path in the system/mail folder*/
+  /* We use the NEWATTACH function to create a path in the system/
+  mail folder*/
   SELECT NEWATTACH(:FILENAME) INTO :PATH FROM DUMMY;
-  EXECUTE WINHTML '-d', 'WWWSHOWORD', '', '', '-v', :DOC, '-pdf', :PATH;
-  SELECT SQL.TMPFILE INTO :$.ADD FROM DUMMY; /*This file will contain our URL */
-  /* You can find out the start of the URL by opening an existing attachment on the server
-  and copying the start of the address up to "primail" */
+  EXECUTE WINHTML '-d', 'WWWSHOWORD', '', '', '-v', :DOC, '-pdf', 
+  :PATH;
+  SELECT SQL.TMPFILE INTO :$.ADD FROM DUMMY; /*This file will 
+  contain our URL */
+  /* You can find out the start of the URL by opening an existing 
+  attachment on the server and copying the start of the address up
+   to "primail" */
   :URLSTART =  'https://exampleserver.com/comp/primail/';
-  /* Cut the previously generated path to only the subfolder and filename */
+  /* Cut the previously generated path to only the subfolder and
+   filename */
   SELECT SUBSTR(:PATH, 19, STRLEN(:PATH)) INTO :PATH FROM DUMMY;
   /* Combine the url together into the ADD url file */
   SELECT STRCAT(:URLSTART, :PATH)  FROM DUMMY

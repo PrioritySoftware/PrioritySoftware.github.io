@@ -484,11 +484,7 @@ SELECT NEWATTACH('C:\TMP\LOGFILe.zip') FROM CUSTOMERS WHERE CUST = 0 FORMAT;
 
 ## Dates
 
-Dates, times and days are stored in the database as integers. Dates may
-be represented to the user in American (MMDDYY) or European (DDMMYY)
-format, depending on the type assigned to the language being used (in
-the *Languages* form: *System Management* → *Dictionaries* →
-*Translation*).
+Dates, times and days are stored in the database as integers. Dates may be represented to the user in American (MMDDYY) or European (DDMMYY) format, depending on the type assigned to the language being used (in the *Languages* form: *System Management* → *Dictionaries* → *Translation*).
 
 The following examples are in American date format.
 

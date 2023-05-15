@@ -47,7 +47,7 @@ The differences between the tools are outlined in the following table:
 | Uploading attachments | Supported (V. 21.0) | Supported |
 | Programming language | Any programming language that provides a HTTP client | JavaScript only| 
 | Standards compliance | OData [specification](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html) | - |
-| Released in Priority version | Read only v. 17.1, read and write v. 17.2 | v 18.0 |
+
 
 
 ### Make sure you have the relevant skills
