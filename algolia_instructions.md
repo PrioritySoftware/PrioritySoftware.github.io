@@ -1,0 +1,1 @@
+Run <code>bundle exec jekyll algolia</code> from repository root.
