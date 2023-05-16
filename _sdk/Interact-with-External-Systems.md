@@ -102,20 +102,24 @@ EXECUTE PRANDOM :file, :outtype;
 > LINK STACK4 S2 TO :STK2;
 > GOTO 1 WHERE :RETVAL <= 0;
 >
-> SELECT DETAILS AS 'RANDOM HEXA' FROM STACK4 S1 WHERE KEY = 1 FORMAT;
-> SELECT DETAILS AS 'RANDOM DECIMAL' FROM STACK4 S2 WHERE KEY = 1 FORMAT;
+> SELECT DETAILS AS 'RANDOM HEXA' 
+> FROM STACK4 S1 WHERE KEY = 1 FORMAT;
+> SELECT DETAILS AS 'RANDOM DECIMAL'
+> FROM STACK4 S2 WHERE KEY = 1 FORMAT;
 >
 > UNLINK STACK4 S1;
 > UNLINK STACK4 S2;
 > LABEL 1;
->
+```
+
+```
 > Output:
 > RANDOM HEXA
-> --------------------------------------------------------------------------------
+> ---------------------------------------------------------
 > 81F5D3AB68A937242E9D888E84924A3C3F22B3261B119A69B49B4936
 >
 > RANDOM DECIMAL
-> --------------------------------------------------------------------------------
+> ---------------------------------------------------------
 > 18921701411761541617713724720340145117226422542353165233
 > ```
 
@@ -232,8 +236,8 @@ SELECT SQL.TMPFILE INTO :MSG FROM DUMMY;
 
 EXECUTE FILELIST :DIR,:ST6,:MSG;
 
-/* In the linked file of the STACK6 table, you will find all files and folders under the 
-input directory :DIR. */
+/* In the linked file of the STACK6 table, you will find all 
+files and folders under the input directory :DIR. */
 LINK STACK6 TO :ST6;
 GOTO 99 WHERE :RETVAL <= 0;
 
@@ -253,7 +257,8 @@ LABEL 10;
 FETCH NEWFILES INTO :FILENAME;
 GOTO 85 WHERE :RETVAL <= 0;
 
-:PATH = STRCAT(:DIR,'/',:FILENAME); /* now the variable :path holds the filename */
+:PATH = STRCAT(:DIR,'/',:FILENAME); 
+/* now the variable :path holds the filename */
 
 /* there are 2 options to execute the DBLOAD */
 
@@ -263,8 +268,9 @@ EXECUTE COPYFILE :PATH, :TOFILENAME;
 /* here you need to make sure you define the load Example.load */
 EXECUTE DBLOAD '-L', 'Example.load';
 
-/* option 2: add two more parameters to the DBLOAD program; these parameters tell the 
-DBLOAD program to load the file that comes after the -i option */
+/* option 2: add two more parameters to the DBLOAD program;
+ these parameters tell the DBLOAD program to load the
+  file that comes after the -i option */
 EXECUTE DBLOAD '-L', 'Example.load', -i, :PATH;
 
 LOOP 10;
@@ -404,21 +410,21 @@ from the DOS command prompt. To do so, use the following syntax
 >
 > To open the *Sales Orders* form from the workstation:
 >
-> ``` priority
+> ```
 > p:\priority\bin.95\winrun "" tabula XYZabc1 p:\priority\system\prep demo 
 > WINFORM ORDERS
 > ```
 >
 > To run the *Overnight Backflush-New Transact* program from the server:
 >
-> ``` priority
+> ```
 > d:\priority\bin.95\winrun "" tabula XYZabc1 d:\priority\system\prep demo 
 > WINACTIV -P BACKFLUSH_ONNEW
 > ```
 >
 > To run the interface that loads sales orders from the server:
 >
-> ``` priority
+> ```
 > d:\priority\bin.95\winrun "" tabula XYZabc1 d:\priority\system\prep demo 
 > INTERFACE LOADORDERS d:\priority\tmp\messages.txt
 > ```

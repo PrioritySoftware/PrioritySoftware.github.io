@@ -81,10 +81,11 @@ query should look like this:
 > UNLINK CUSTOMERS;
 > ERRMSG 2 WHERE :CUSTNAME = '';
 >
-> /* The following commands run the interface defined above, storing the output in a linked 
+> /* The following commands run the interface defined above,
+> storing the output in a linked 
 > file of the GENERALLOAD table, :$.GEN */
-> EXECUTE INTERFACE 'TEST_OPENSALESORD', SQL.TMPFILE, '-o', '-L', :$.ORD, '-l', 
-> 'GENERALLOAD', :$.GEN;
+> EXECUTE INTERFACE 'TEST_OPENSALESORD', SQL.TMPFILE, 
+> '-o', '-L', :$.ORD, '-l', 'GENERALLOAD', :$.GEN;
 >
 > LINK GENERALLOAD TO :$.GEN;
 > ERRMSG 1 WHERE :RETVAL <= 0;
@@ -114,7 +115,9 @@ query should look like this:
 > FROM ORDERS 
 > WHERE ORD = :ORD;
 >
-> /* The next command opens the Sales Orders form. */
+> /* Windows: The next command opens the Sales Orders form. 
+> In Priority Web, add the ORDERS form as a separate step
+> in the procedure*/
 > EXECUTE BACKGROUND WINFORM 'ORDERS','',:ORDNAME, '','2';
 > ```
 

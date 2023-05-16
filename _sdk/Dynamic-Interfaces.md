@@ -52,8 +52,11 @@ LINK ORDERS TO :TMPFILE;
 GOTO 1 WHERE :RETVAL <= 0;
 INSERT INTO ORDERS
 SELECT * FROM ORDERS ORIG WHERE ORDNAME IN ('SO2000001364','SO2000001365');
-EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', '-form', '-select', 'ORDNAME', 'CUSTNAME', '-ou', '-L', :TMPFILE, '-f', '../../tmp/o2.txt', '-J',
-'-expand', 'ORDERITEMS', '-select', 'PRICE', 'PARTNAME', '-expand', 'ORDERITEMSTEXT';
+EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', 
+'-form', '-select', 'ORDNAME', 'CUSTNAME',
+ '-ou', '-L', :TMPFILE, '-f', '../../tmp/o2.txt', '-J',
+'-expand', 'ORDERITEMS', '-select', 'PRICE', 'PARTNAME', 
+'-expand', 'ORDERITEMSTEXT';
 UNLINK ORDERS;
 LABEL 1;
 ```
@@ -61,12 +64,14 @@ LABEL 1;
 In this example, we retrieve two specific orders, then export them to a
 JSON file (note the use of **--J**). We only export specific fields (as
 denoted by -select), and also export data from the ORDERITEMS sub-level
-and its sub-level of ORDERITEMSTEXT (as denoted by --expand).
+and its sub-level of ORDERITEMSTEXT (as denoted by -expand).
 
 If you do not uses *-select* to specify fields, all form fields will be exported. The following code  exports all fields of ORDERS and the ORDERITEMS sublevel to an XML file. Only fields with values are exported.
 
 ```sql
-EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', '-form', '-ou', '-L', :TMPFILE, '-f', '../../tmp/testxml.xml', '-expand', 'ORDERITEMS';
+EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', 
+'-form', '-ou', '-L', :TMPFILE, '-f', '../../tmp/testxml.xml',
+ '-expand', 'ORDERITEMS';
 ```
 
 ### Importing Data 

@@ -16,10 +16,10 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     (parameters are explained in the next section):
 
     ```sql
-    EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], ['-stackerr', 'stackerr_file'],
-    ['-w'], ['-ns'], ['-nl'], ['-nv'], ['-noskip'], ['-enforcebpm'], ['-t'], ['-W'], ['-m'],
-    ['-o' | '-ou' [, '-f', 'output_file']], ['-debug', 'debug_file'], ['-repeat'],
-    ['-l', 'table_name1', 'link_file1'], '-v';
+    EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], 
+    ['-stackerr', 'stackerr_file'], ['-w'], ['-ns'], ['-nl'], ['-nv'], ['-noskip'],
+     ['-enforcebpm'], ['-t'], ['-W'], ['-m'], ['-o' | '-ou' [, '-f', 'output_file']],
+      ['-debug', 'debug_file'], ['-repeat'],['-l', 'table_name1', 'link_file1'], '-v';
     ```
 
 -   Include the form load as an interface step (type *I*) in a
