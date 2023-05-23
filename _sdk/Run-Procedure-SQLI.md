@@ -109,7 +109,8 @@ GOTO 90 WHERE :RETVAL <= 0;
 :MAILER = SQL.USER;
 EXECUTE WINACTIV '-R', 'INTERFACEERR', 'ERRMSGS', :TMP,'-u', :MAILER;
 
-/* to send the report as an attachment to a Priority group, defined in the UGROUPS form */
+/* to send the report as an attachment to a Priority group,
+ defined in the UGROUPS form */
 :GROUPNAME = 'mailGroup';
 EXECUTE WINACTIV '-R', 'INTERFACEERR', 'ERRMSGS', :TMP,'-g', :GROUPNAME;
 

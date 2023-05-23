@@ -57,12 +57,13 @@ The following gives some basic guidelines for creating such an Action:
 > UNLINK GENERALLOAD;
 > ERRMSG 3 WHERE :DOCNO = '';
 > 
-> :$.DNO = :DOCNO; /* :$.DNO will be used in the next step to open the ORDERS form in a 
-> web client - see below */
+> :$.DNO = :DOCNO; /* :$.DNO will be used in the next 
+> step to open the ORDERS form in a web client - see below */
 >
 > GOTO 9 WHERE :SQL.NET = 1;
 >
-> /* to open the form and retrieve newly created record in Windows client: */
+> /* to open the form and retrieve newly created
+> record in Windows client: */
 > EXECUTE WINFORM 'DOCUMENTS_D','',:DOCNO, '','2';
 >
 > LABEL 9;
