@@ -12,7 +12,8 @@ In the following syntax, optional parameters are specified in square brackets **
 EXECUTE WINHTML '-d' | '-dQ', 'document_name', 'table', 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] ['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | '-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] ['-AMAIL']
 ```
 ## WINHTML Parameters
-- '-d' - create document. Use '-dQ' instead if you want to print document with the default printer.
+- '-d' - create document. 
+- '-dQ' - Print document with the default printer. You can only print a single document (i.e., one specified as a record ID) when using this parameter.
 - 'document_name' – the internal name of the document, e.g. WWWSHOWORDER.
 - 'table, linked_file' – specify this if you are outputting a record from a linked table. Leave as empty quotes if you are outputting from a standard table, e.g.:
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '',
@@ -123,7 +124,7 @@ Both HTML formats and Word templates behave in a similar way, where the value of
 
 ### Printing the Document using the Default Printer
 
-If you want to print the document, use **'-dQ'** instead of '-d'. In this example we assume our order has an id of 100.
+If you want to print the document, use **'-dQ'** instead of '-d'. In this example we assume our order has an id of 100. Remember that you must specify the document as a record ID in this case.
 
 ```sql
 :ORD = 100;
