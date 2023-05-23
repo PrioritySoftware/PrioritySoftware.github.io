@@ -112,7 +112,8 @@ EXECUTE PRANDOM :file, :outtype;
 > LABEL 1;
 ```
 
-```
+
+> ```
 > Output:
 > RANDOM HEXA
 > ---------------------------------------------------------

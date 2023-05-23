@@ -9,6 +9,9 @@ tags: 'Priority_SDK'
 ### May 2023
 
 - Moved the [Priority Web](Priority-Web) section to a stand-alone page. Added a short guide on how a programmer can access files they created via code in cases where the server machine is inaccessible.
+{% if site.output == "web" %} - Added a PDF version of the contents of this website. You can find it here.
+{% endif %}
+
 
 ### April 2023
 

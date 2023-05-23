@@ -15,3 +15,6 @@ This SDK is a living document that is updated as time goes on. Features that wer
 
 Please note that the SDK is technical in nature and does not go into licensing requirements that may be necessary for working with some features. The customer / partner is responsible for ensuring they have the necessary licensing to work with these features. 
 
+{% if site.output == "web" %}
+A PDF version is available here. It is regenerated periodically based on the contents of this website.
+{% endif %}

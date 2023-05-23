@@ -7,8 +7,7 @@ tags: 'Priority_SDK'
 ## Spacing Between Report Rows 
 
 In a [report](Reports) with fixed positions, you can use a
-hidden column with the title *#LINEHEIGHT* (**INT** type) to add a fixed
-amount of space between all rows of the report.
+hidden column with the title *#LINEHEIGHT* (**INT** type) to add a fixed amount of space between all rows of the report.
 
 > **Example:** See the **BTLFORM100_DET** report.
 
@@ -58,21 +57,18 @@ calculated column (see below).
 
 ## Non-display of Zero Values 
 
-You have the option of displaying or withholding the display of zero
-values with respect to **TIME**(00:00), **INT**(0) and **REAL**(0.0)
-columns. Depending on the value specified in the *Don\'t Display 0
-Val* column of the *Report Columns* form, you can choose to:
+You have the option of displaying or withholding the display of zero values with respect to **TIME**(00:00), **INT**(0) and **REAL**(0.0) columns. Depending on the value specified in the *Don\'t Display 0 Val* column of the *Report Columns* form, you can choose to:
 
 -   display zero values in all columns (default);
 -   leave the report column blank in case of zero values (*Y*);
--   when using a group function to calculate group and/or report totals,
-    leave both report columns and totals blank when value is zero (*A*).
+-   when using a group function to calculate group and/or report totals, leave both report columns and totals blank when value is zero (*A*).
 
-If a column contains all NULL values for the report, it will be omitted. For cases where you want to force the column to show even if all the values are empty, use a ternary expression to show a default NULL value  when there is no value stored in the database. For example, if we want to show the Remarks for a sales order:
+If a column contains all NULL values for the report, it will be omitted. For cases where you want to force the column to show even if all the values are empty, use a ternary expression to show a default NULL value when there is no value stored in the database. For example, if we want to show the Remarks for a sales order:
 
 ```sql
 (ORDERS.DETAILS <> '' ? ORDERS.DETAILS : '&nbsp')
-/* '&nbsp' is a non-breaking space in HTML, and can be used as a null value for CHAR column */
+/* '&nbsp' is a non-breaking space in HTML, and can be
+used as a null value for CHAR column */
 ```
 
 ## Displaying HTML Text in Reports 
@@ -81,20 +77,11 @@ There are several types of reports that can display HTML text:
 
 -   A fixed component report that displays only text (e.g.,
     **WWWORD_4**).
--   A fixed component report in which all fields but the text appear in
-    the first line as "Group By" fields, and the text appears in the
-    second line (e.g., **CUSTNOTESSUM**).
--   A tabular component report in which all fields but the text appear
-    as \"Group By\" fields, and the text appears in the second line
-    under the column title (e.g., **WWWORD_2X**). In such a case, the
-    following conditions must be met:
-    -   A join of the **DAYS** table with the expression DAYS.DAYNUM BETWEEN
-        0 AND 1.
-    -   A real join of the text table when DAYS.DAYNUM = 1; a join of the
-        zero record in the text table when DAYS.DAYNUM = 0.
-    -   Inclusion of an expression field (width = 68) that displays the
-        title when DAYS.DAYNUM = 0, and displays the text when DAYS.DAYNUM =
-        1.
+-   A fixed component report in which all fields but the text appear in the first line as "Group By" fields, and the text appears in the second line (e.g., **CUSTNOTESSUM**).
+-   A tabular component report in which all fields but the text appear as \"Group By\" fields, and the text appears in the second line under the column title (e.g., **WWWORD_2X**). In such a case, the following conditions must be met:
+    -   A join of the **DAYS** table with the expression DAYS.DAYNUM BETWEEN 0 AND 1.
+    -   A real join of the text table when DAYS.DAYNUM = 1; a join of the zero record in the text table when DAYS.DAYNUM = 0.
+    -   Inclusion of an expression field (width = 68) that displays the title when DAYS.DAYNUM = 0, and displays the text when DAYS.DAYNUM = 1.
 
 ## HTML Design 
 
