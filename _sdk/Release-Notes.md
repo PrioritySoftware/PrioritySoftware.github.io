@@ -6,6 +6,10 @@ tags: 'Priority_SDK'
 
 ## SDK 23.0
 
+### June 2023
+
+- Moved [Filters](Filters) to a separate section and organized them. Added documention of two additional filters - '-replacef' and '-replacestrbase64'.
+
 ### May 2023
 
 - Moved the [Priority Web](Priority-Web) section to a stand-alone page. Added a short guide on how a programmer can access files they created via code in cases where the server machine is inaccessible.

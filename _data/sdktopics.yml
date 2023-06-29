@@ -255,6 +255,8 @@ chapters:
         url: Activating-From-External-Applications
       - page: Interact with External Systems
         url: Interact-with-External-Systems
+      - page: Filters - Manipulate Text Files
+        url: Filters
       - page: WSCLIENT - Work with Web Services
         url: WSCLIENT
       - page: Working with XML/JSON Files
