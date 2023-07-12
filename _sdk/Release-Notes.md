@@ -6,6 +6,10 @@ tags: 'Priority_SDK'
 
 ## SDK 23.0
 
+### July 2023
+
+- Documented a new option for DTOA parsing - 'WW' for outputting the week in the current year.
+
 ### June 2023
 
 - Moved [Filters](Filters) to a separate section and organized them. Added documention of two additional filters - '-replacef' and '-replacestrbase64'.

@@ -58,6 +58,9 @@ course, more than one component can be used in the same expression.
 **FULLDATE** --- the month name (abbreviated form), date and
     four-digit year
 
+**WW** --- [23.0]() week in the year (03). \
+**Note:** This is similar to the WEEK function, however, the WEEK function returns both the year and week (0603).
+
 ## Converting a String to a Date: Examples 
 
 ```sql
