@@ -35,7 +35,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '',
   - -wpdf outputs the document as a PDF based on a word template
 - '-format', format_num – specify the number of the print format (for system documents) or Word template (for template documents). When this parameter is used, the system will ignore the values in the PRINTFORMATS table. 
 The *-format* option can only be used when printing a single document, i.e. the **-v** option is also specified.
-- '-lang lang_num' – Use this parameter to specify the language of the printout. This is useful if you want to output the document in a language other than that of the current user (e.g. a user in a German system outputting a document in French for a customer in France).
+- '-lang lang_num' – Use this parameter to specify the language of the printout. This is useful if you want to output the document a format defined for a language differing from that of the current UI language of the user (e.g. a user working in the system with the UI in German, who wants to  output a document in French for a customer in France). In this case you need to specify both the format and the language in which the format is defined.
 - '-AMAIL' – automatically send the document to the customer/vendor contact, or to the customer/vendor directly (based on whether a contact with an email is defined or not).
 
 ### Document Format
