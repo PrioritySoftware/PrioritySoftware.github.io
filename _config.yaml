@@ -37,6 +37,6 @@ google_analytics: UA-12315884-16
 algolia:
   application_id: 'AXTY3FIAOU'
   index_name: 'priority-sdk'
-  files_to_exclude: []
+  files_to_exclude: ['sdk/toc.md']
   nodes_to_index: 'p,blockquote,span,li'
   settings: false

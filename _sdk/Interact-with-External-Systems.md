@@ -24,44 +24,36 @@ Create a new folder:\
 Display the date of a given file:\
 <CODE>EXECUTE GETDATE 'path/file_name', :$.STK;</CODE>
 
-> **Example of use in a procedure step:**
->
-> ```sql
-> LINK STACK TO :$.STK; 
-> ERRMSG 1 WHERE :RETVAL <= 0;
->
-> EXECUTE GETDATE 'path/file_name', :$.STK;
->
-> :FILEDATE = 0;
-> SELECT ELEMENT INTO :FILEDATE 
-> FROM STACK 
-> WHERE ELEMENT > 0;
->
-> UNLINK STACK;
-> ```
+**Example of use in a procedure step:**
+```sql
+LINK STACK TO :$.STK; 
+ERRMSG 1 WHERE :RETVAL <= 0;
+EXECUTE GETDATE 'path/file_name', :$.STK;
+:FILEDATE = 0;
+SELECT ELEMENT INTO :FILEDATE 
+FROM STACK 
+WHERE ELEMENT 0;
+UNLINK STACK;
+```
 
 Display the size of a given file:\
 <CODE>EXECUTE GETSIZE 'path/file_name', :$.STK;</CODE>
 
-> **Example of use in a procedure step:**
->
-> ```sql
-> LINK STACK TO :$.STK;
-> ERRMSG 500 WHERE :RETVAL <= 0;
->
-> EXECUTE GETSIZE 'path/file_name', :$.STK;
->
-> :FILESIZE = 0;
-> SELECT ELEMENT INTO :FILESIZE 
-> FROM STACK 
-> WHERE ELEMENT > 0;
->
-> UNLINK STACK;
-> ```
+**Example of use in a procedure step:**
+```sql
+LINK STACK TO :$.STK;
+ERRMSG 500 WHERE :RETVAL <= 0;
+EXECUTE GETSIZE 'path/file_name', :$.STK;
+:FILESIZE = 0;
+SELECT ELEMENT INTO :FILESIZE 
+FROM STACK 
+WHERE ELEMENT 0;
+UNLINK STACK;
+```
 
 ## Misc. Utilities 
 
-> **Note:** The SHELLEX command is supported by the Windows client only.
+**Note:** The SHELLEX command is supported by the Windows client only.
 
 Open a file using the default application for that file type (SHELLEX):
 ```sql
@@ -88,40 +80,34 @@ EXECUTE PRANDOM :file, :outtype;
  other than Y */
 ```
 
-> **Example of use in a procedure step:**
->
-> ```sql
-> SELECT SQL.TMPFILE INTO :STK1 FROM DUMMY;
-> SELECT SQL.TMPFILE INTO :STK2 FROM DUMMY;
->
-> EXECUTE PRANDOM :STK1, 'Y';
-> EXECUTE PRANDOM :STK2, '';
->
-> LINK STACK4 S1 TO :STK1;
-> GOTO 1 WHERE :RETVAL <= 0;
-> LINK STACK4 S2 TO :STK2;
-> GOTO 1 WHERE :RETVAL <= 0;
->
-> SELECT DETAILS AS 'RANDOM HEXA' 
-> FROM STACK4 S1 WHERE KEY = 1 FORMAT;
-> SELECT DETAILS AS 'RANDOM DECIMAL'
-> FROM STACK4 S2 WHERE KEY = 1 FORMAT;
->
-> UNLINK STACK4 S1;
-> UNLINK STACK4 S2;
-> LABEL 1;
+**Example of use in a procedure step:**
+```sql
+SELECT SQL.TMPFILE INTO :STK1 FROM DUMMY;
+SELECT SQL.TMPFILE INTO :STK2 FROM DUMMY;
+EXECUTE PRANDOM :STK1, 'Y';
+ EXECUTE PRANDOM :STK2, '';
+LINK STACK4 S1 TO :STK1;
+GOTO 1 WHERE :RETVAL <= 0;
+LINK STACK4 S2 TO :STK2;
+GOTO 1 WHERE :RETVAL <= 0;
+SELECT DETAILS AS 'RANDOM HEXA' 
+FROM STACK4 S1 WHERE KEY = 1 FORMAT;
+SELECT DETAILS AS 'RANDOM DECIMAL'
+FROM STACK4 S2 WHERE KEY = 1 FORMAT;
+UNLINK STACK4 S1;
+UNLINK STACK4 S2;
+LABEL 1;
 
 Output:
 
-> ```sql
-> RANDOM HEXA
-> ---------------------------------------------------------
-> 81F5D3AB68A937242E9D888E84924A3C3F22B3261B119A69B49B4936
->
-> RANDOM DECIMAL
-> ---------------------------------------------------------
-> 18921701411761541617713724720340145117226422542353165233
-> ```
+```sql
+RANDOM HEXA
+---------------------------------------------------------
+81F5D3AB68A937242E9D888E84924A3C3F22B3261B119A69B49B4936
+RANDOM DECIMAL
+---------------------------------------------------------
+18921701411761541617713724720340145117226422542353165233
+```
 
 
 ## Browsing the Contents of a Folder 
@@ -222,20 +208,15 @@ line (see examples below):
     segment.
 -   Add a semi-colon (; ) at the end of the command line.
 
-> **Examples:**
->
-> To run MS-Word:
->
-> ``` priority
-> EXECUTE WINAPP 'C:\Program Files\Microsoft Office\Office', 'WINWORD.EXE';
-> ```
->
-> To open the *tabula.ini*file in Notepad and return to ***Priority***
-> only after Notepad is exited:
->
-> ``` priority
-> EXECUTE WINAPP 'C:\Windows', '-w','notepad','tabula.ini';
-> ```
+**Examples:**
+To run MS-Word:
+``` priority
+EXECUTE WINAPP 'C:\Program Files\Microsoft Office\Office', 'WINWORD.EXE';
+```
+To open the *tabula.ini*file in Notepad and return to ***Priority*** only once the user closes Notepad:
+``` priority
+EXECUTE WINAPP 'C:\Windows', '-w','notepad','tabula.ini';
+```
 
 
 <!-- TODO: Move to Windows only section -->
@@ -248,41 +229,25 @@ Using the **WINRUN** command, you can execute any ***Priority*** entity
 from the DOS command prompt. To do so, use the following syntax
 (parameters are explained below):
 
-> *x*:\\priority\\bin.95\\winrun \"\" *username password*
-> x:\\priority\\system\\prep *company* -nbg ‑err errfile *command
-> arguments* --var:*VARA* \"*first var value*\" --var:*VARB* \"*second
-> var value*\"
+*x*:\\priority\\bin.95\\winrun \"\" *username password*
+x:\\priority\\system\\prep *company* -nbg ‑err errfile *command
+arguments* --var:*VARA* \"*first var value*\" --var:*VARB* \"*second
+var value*\"
 
--   *x* is the drive on which ***Priority*** is located. If you are not
-    running this command from the server, *x* is the *network* drive on
-    which ***Priority*** is located on the server.
+-   *x* is the drive on which ***Priority*** is located. If you are not running this command from the server, *x* is the *network* drive on which ***Priority*** is located on the server.
 -   The second parameter is two double quote marks ( \" ).
--   *company* is the name of the ***Priority*** company in which you are
-    executing the command.
--   **-nbg** --- Use this option if you want the entity to run in the
-    foreground, rather than the background.
--   **-err** *errfile* --- Use this option when executing a procedure
-    using the **WINPROC** or **WINACTIV** commands if you want to have
-    error messages sent to the specified error file instead of being
-    displayed on screen.
+-   *company* is the name of the ***Priority*** company in which you are executing the command.
+-   **-nbg** --- Use this option if you want the entity to run in the foreground, rather than the background.
+-   **-err** *errfile* --- Use this option when executing a procedure using the **WINPROC** or **WINACTIV** commands if you want to have error messages sent to the specified error file instead of being displayed on screen.
 -   The command that runs the entity (e.g., **WINFORM, WINACTIV**),
-    followed by the argument(s) required for the specified command. For
-    example:
+    followed by the argument(s) required for the specified command. For example:
     -   To open a [form](Forms ), use the **WINFORM** command,
         where the argument is the internal name of the form to be
         opened.
-    -   To run a [procedure](Procedures ) or
-        [report](Reports ), use the **WINACTIV** or
-        **WINPROC** commands, where the first argument is either **-P**
-        for a procedure or **-R** for a report that is run without an
-        accompanying procedure, and the second argument is the internal
-        name of the procedure/report.
-    -   To run an [interface](Interfaces ), use the
-        **INTERFACE** command, where the first argument is the name of
-        the interface and the second is the name of the temporary file
-        in which to store load messages.
+    -   To run a [procedure](Procedures) or [report](Reports), use the **WINACTIV** or **WINPROC** commands, where the first argument is either **-P** for a procedure or **-R** for a report that is run without an accompanying procedure, and the second argument is the internal name of the procedure/report.
+    -   To run an [interface](Interfaces ), use the **INTERFACE** command, where the first argument is the name of the interface and the second is the name of the temporary file in which to store load messages.
 -   **-var** *VARNAME* \"*var value*\" ---- Use this option when
-    executing a procedure to input a variable for use by the procedure.
+    executing a procedure to input a variable for use by the procedure.\
     To access this variable, the procedure must contain an
     :EXTERNAL.*VARNAME* variable that matches the specified *VARNAME*.
 
@@ -295,11 +260,10 @@ from the DOS command prompt. To do so, use the following syntax
     from which the command is run. To work with a different *tabula.ini*
     file, add the command:
 
-> ```cmd
-> set TABULAINIORIG=xxx.ini
-> ```
->
-> where *xxx* is the name of the file in question.
+```cmd
+set TABULAINIORIG=xxx.ini
+```
+where *xxx* is the name of the file in question.
 
 -   When executing the **WINACTIV** command with the **-err** *errfile*
     option, only preliminary messages will be written to the specified
@@ -312,33 +276,26 @@ from the DOS command prompt. To do so, use the following syntax
 
 ------------------------------------------------------------------------
 
-> **Examples:**
->
-> In the following examples, **Priority** is installed on the
-> server in the **d** drive, which is mapped on the workstation as drive
-> **p**. The **WINRUN** command is run in the **demo** company for the
-> **tabula** user, whose password is **XYZabc1**.
->
-> To open the *Sales Orders* form from the workstation:
->
-> ```
-> p:\priority\bin.95\winrun "" tabula XYZabc1 p:\priority\system\prep demo 
-> WINFORM ORDERS
-> ```
->
-> To run the *Overnight Backflush-New Transact* program from the server:
->
-> ```
-> d:\priority\bin.95\winrun "" tabula XYZabc1 d:\priority\system\prep demo 
-> WINACTIV -P BACKFLUSH_ONNEW
-> ```
->
-> To run the interface that loads sales orders from the server:
->
-> ```
-> d:\priority\bin.95\winrun "" tabula XYZabc1 d:\priority\system\prep demo 
-> INTERFACE LOADORDERS d:\priority\tmp\messages.txt
-> ```
+**Examples:**
+In the following examples, **Priority** is installed on the
+server in the **d** drive, which is mapped on the workstation as drive
+**p**. The **WINRUN** command is run in the **demo** company for the
+**tabula** user, whose password is **XYZabc1**.
+To open the *Sales Orders* form from the workstation:
+```
+p:\priority\bin.95\winrun "" tabula XYZabc1 p:\priority\system\prep demo 
+WINFORM ORDERS
+```
+To run the *Overnight Backflush-New Transact* program from the server:
+```
+d:\priority\bin.95\winrun "" tabula XYZabc1 d:\priority\system\prep demo 
+WINACTIV -P BACKFLUSH_ONNEW
+```
+To run the interface that loads sales orders from the server:
+```
+d:\priority\bin.95\winrun "" tabula XYZabc1 d:\priority\system\prep demo 
+INTERFACE LOADORDERS d:\priority\tmp\messages.txt
+```
 
 {% if site.output == "web" %}
 ## Further Reading 

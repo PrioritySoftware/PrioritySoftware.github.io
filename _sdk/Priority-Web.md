@@ -10,7 +10,8 @@ Programming for the ***Priority*** web interface is basically
 the same as programming for the Windows interface. However, when working with the web interface you must keep in mind the different method used to access the ***Priority*** server. As a result, the following exceptions apply:
 
 -   When working with attachments, only files located in the **system/mail** folder can be interacted with by the user. Any attachments uploaded by code should be stored in this folder if users need to interact with the attachment. 
--   You cannot use the [EXECUTE command](Execution-Statements ) to run entities that require input from the user or that display output. This is because the entity is executed on the server and any interface opened will be displayed on the server rather than on the local computer.\
+-   You cannot use the [EXECUTE command](Execution-Statements) to run entities that require input from the user or that display output. This is because the entity is executed on the server and any interface opened will be displayed on the server rather than on the local computer.\
+Instead, add the procedure as a separate step in the procedure, with the the desired *Entity Name* and the Type **P**. Note that you cannot feed in linked temporary tables to procedures run as a step.\
 **Note:** This also extends to ACTIVAT and ACTIVATF if they run an entity that requires input, such as the SHVA program.
 -   You cannot add the following syntax to a [procedure step](Procedure-Steps) in order to open a form when running a procedure:\
     `EXECUTE WINFORM 'ORDERS';`\
