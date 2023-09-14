@@ -265,6 +265,9 @@ chapters:
         url: Defining-Word-Templates
       - page: Using Custom Form Columns in the Business Rules Generator
         url: Rules-Generator-Custom-Columns
+  - title: VSCode Priority Dev Tools Extension
+    url: VSCode-Extension
+    group: VSCode-Extension  
 
 
 

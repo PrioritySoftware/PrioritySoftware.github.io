@@ -139,6 +139,8 @@ You can now obtain the access token to work with the web service:
 
 ## SFTP Client
 
+[23.1]()
+
 ```SQL
 EXECUTE WSCLIENT '-sftp', 'CONFIGID', '-u[pload]' || '-d[ownload]', 'SOURCEFILE',
 'DESTINATIONFILE', ['-msg MSGFILE'], [-timeout seconds]
@@ -146,7 +148,7 @@ EXECUTE WSCLIENT '-sftp', 'CONFIGID', '-u[pload]' || '-d[ownload]', 'SOURCEFILE'
 
 - -sftp - designates that WSCLIENT should work as a SFTP client.
 - CONFIGID - the identifier of the SFTP configuration in the **Definitions for SFTP** form (System Management > System Maintenance > Internet Definitions > Definitions for SFTP).
-- -u || -d - determines whether you are uploading a file to the SFTP server or downloading a file from it.
+- -u *or* -d - determines whether you are uploading a file to the SFTP server or downloading a file from it.
 - SOURCEFILE - The file to upload from Priority, or to download from the SFTP server.
 - DESTINATIONFILE - the name of the file to create on the SFTP server (when uploading) or on the Priority server (when downloading). Note that you cannot create folders on the SFTP server as part of the upload.
 - *\[, \'-msg\', :msgFile\]* -- The file in which error messages will
@@ -178,6 +180,7 @@ ASCII :SOURCE;
 in the Defintions for SFTP form */
 :DEST = 'destinationTest.txt';
 
+/* 'ch1' is the code of the SFTP server in the Defintions for SFTP form */
 EXECUTE WSCLIENT '-sftp', 'ch1', '-u', :SOURCE, :DEST;
 
 /* In the second example, we download a file from a folder on the server to Priority */
