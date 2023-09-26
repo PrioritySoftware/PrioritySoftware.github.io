@@ -51,6 +51,108 @@ WHERE ELEMENT 0;
 UNLINK STACK;
 ```
 
+## Browsing the Contents of a Folder 
+
+<code>EXECUTE FILELIST :DIR,:ST6,:MSG;</code>
+
+
+The **FILELIST** program browses the contents of a specified folder. It
+is very useful, for example, when you want to create an automatic
+procedure (to be run by the Tabula Task Scheduler) that checks the
+contents of a folder and loads certain files from that folder into
+***Priority*** tables.
+
+The following code is used when you have an external program that
+creates files in one of your system folders, and the files contain data
+of new sales orders that you need to load into ***Priority***. It is
+assumed that the files to be loaded are named as follows:
+*loadorder1201061355.load* (where the number represents the date and
+time the file was created).
+
+By default, FILELIST loads the results to the *STACK6* table, however you can use the '-f' flag to load the results to the *STACK_ERR* table, where it also contains data on file size.
+
+<code>EXECUTE FILELIST :DIR,:STK_ERR,:MSG, '-f';</code>
+
+Data mapping for each table:\
+**STACK6**
+
+| Column | Data |
+|--------|------|
+| NAME | File name |
+| TYPE | Type of record: **F** file; **D** directory; **L** pagination information |
+| NUM | Timestamp (as integer) |
+
+**STACK_ERR**
+
+| Column | Data |
+|--------|------|
+|  MESSAGE | File name |
+| CHARDATA | Type of record: **F** file; **D** directory; **L** pagination information |
+| INTDATA1 | Timestamp (as integer) |
+| INTDATA2 | File size in bytes |
+
+
+**Example:**
+
+
+```sql
+:DIR = '../../tmpDir';
+
+SELECT SQL.TMPFILE INTO :ST6 FROM DUMMY;
+SELECT SQL.TMPFILE INTO :MSG FROM DUMMY;
+
+EXECUTE FILELIST :DIR,:ST6,:MSG;
+
+/* In the linked file of the STACK6 table, you will find all 
+files and folders under the input directory :DIR. */
+LINK STACK6 TO :ST6;
+GOTO 99 WHERE :RETVAL <= 0;
+
+DECLARE NEWFILES CURSOR FOR
+SELECT TOLOWER(NAME) 
+FROM STACK6 
+WHERE TOLOWER(NAME) LIKE ' loadorder*';
+
+OPEN NEWFILES;
+GOTO 90 WHERE :RETVAL <= 0;
+
+:FILENAME = '';
+:TOFILENAME = '../../system/load/Example.load';
+
+LABEL 10;
+
+FETCH NEWFILES INTO :FILENAME;
+GOTO 85 WHERE :RETVAL <= 0;
+
+:PATH = STRCAT(:DIR,'/',:FILENAME); 
+/* now the variable :path holds the filename */
+
+/* there are 2 options to execute the DBLOAD */
+
+/* option 1: */
+EXECUTE COPYFILE :PATH, :TOFILENAME;
+
+/* here you need to make sure you define the load Example.load */
+EXECUTE DBLOAD '-L', 'Example.load';
+
+/* option 2: add two more parameters to the DBLOAD program;
+ these parameters tell the DBLOAD program to load the
+  file that comes after the -i option */
+EXECUTE DBLOAD '-L', 'Example.load', -i, :PATH;
+
+LOOP 10;
+LABEL 85;
+CLOSE NEWFILES;
+LABEL 90;
+UNLINK STACK6;
+LABEL 99;
+```
+
+### FILELIST on the Public Cloud (AWS)
+
+On the public cloud, each FILELIST call is limited to 1000 files. To let you know whether you've reached the last page of results, another special record is retrieved with a type of **L**. When it's value is 1, all results have been retrieved. If the value is 0, there are more results to retrieve. In this case you should <code>UNLINK AND REMOVE</code> the linked table (STACK6 or STACK_ERR), then rerun the FILELIST command. The next 1000 results will be retrieved. Repeat this until you've found the file you need or reached the end of results.
+
+
 ## Misc. Utilities 
 
 **Note:** The SHELLEX command is supported by the Windows client only.
@@ -110,73 +212,6 @@ RANDOM DECIMAL
 ```
 
 
-## Browsing the Contents of a Folder 
-
-The **FILELIST** program browses the contents of a specified folder. It
-is very useful, for example, when you want to create an automatic
-procedure (to be run by the Tabula Task Scheduler) that checks the
-contents of a folder and loads certain files from that folder into
-***Priority*** tables.
-
-The following code is used when you have an external program that
-creates files in one of your system folders, and the files contain data
-of new sales orders that you need to load into ***Priority***. It is
-assumed that the files to be loaded are named as follows:
-*loadorder1201061355.load* (where the number represents the date and
-time the file was created).
-
-```sql
-:DIR = '../../tmpDir';
-
-SELECT SQL.TMPFILE INTO :ST6 FROM DUMMY;
-SELECT SQL.TMPFILE INTO :MSG FROM DUMMY;
-
-EXECUTE FILELIST :DIR,:ST6,:MSG;
-
-/* In the linked file of the STACK6 table, you will find all 
-files and folders under the input directory :DIR. */
-LINK STACK6 TO :ST6;
-GOTO 99 WHERE :RETVAL <= 0;
-
-DECLARE NEWFILES CURSOR FOR
-SELECT TOLOWER(NAME) 
-FROM STACK6 
-WHERE TOLOWER(NAME) LIKE ' loadorder*';
-
-OPEN NEWFILES;
-GOTO 90 WHERE :RETVAL <= 0;
-
-:FILENAME = '';
-:TOFILENAME = '../../system/load/Example.load';
-
-LABEL 10;
-
-FETCH NEWFILES INTO :FILENAME;
-GOTO 85 WHERE :RETVAL <= 0;
-
-:PATH = STRCAT(:DIR,'/',:FILENAME); 
-/* now the variable :path holds the filename */
-
-/* there are 2 options to execute the DBLOAD */
-
-/* option 1: */
-EXECUTE COPYFILE :PATH, :TOFILENAME;
-
-/* here you need to make sure you define the load Example.load */
-EXECUTE DBLOAD '-L', 'Example.load';
-
-/* option 2: add two more parameters to the DBLOAD program;
- these parameters tell the DBLOAD program to load the
-  file that comes after the -i option */
-EXECUTE DBLOAD '-L', 'Example.load', -i, :PATH;
-
-LOOP 10;
-LABEL 85;
-CLOSE NEWFILES;
-LABEL 90;
-UNLINK STACK6;
-LABEL 99;
-```
 
 ## Running an External Application (WINAPP) 
 
