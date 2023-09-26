@@ -4,6 +4,10 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 23.1
+
+- Added a sub-page to release notes listing all entities removed from the system as part of a version upgrade. You can find it [here](Removed-Entities)
+
 ## SDK 23.0
 
 ### July 2023
