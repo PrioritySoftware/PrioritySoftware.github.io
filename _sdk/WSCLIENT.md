@@ -53,9 +53,9 @@ web services. Use the following syntax to work with a web service
 -   *\[, \'-timeout\', :msec\]* -- wait time, in milliseconds, before
     the request times out
 -   *\[, \'-content\', :contentType\'\]* -- the content type of the
-    request (such as **application/json**). The default content type is
-    **text/xml;charset=\\\"utf-8\\\"**.\
+    request (such as **application/json**).  Adds an approriate content-type header to the request.\
     In the case of XML, the content type must match the one encoding specified in the XML file header, e.g.
+    **text/xml;charset=\"utf-8\"** should be matched in the XML with:
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     ```
@@ -69,7 +69,8 @@ web services. Use the following syntax to work with a web service
 -   \[, \'-urlfile\', urlfile\] -- if the URL is greater than 127
     characters, add this option to the WSCLIENT program to transmit the
     endpoint_url within an ASCII file. When using this option, the
-    parameter :endpoint_url must be empty.
+    parameter :endpoint_url must be an empty string:\
+    <code>EXECUTE WSCLIENT '', :INFILE, :OUTFILE</code>
 
 **Notes:**
 
