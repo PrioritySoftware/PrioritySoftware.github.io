@@ -88,8 +88,8 @@ tags: 'Priority_SDK'
 
 ### Feb 2022
 
-- Added base64 encode and decode [filters](Interact-with-External-Systems#special-filters)
-- Added **delnl** [filter](Interact-with-External-Systems#special-filters)
+- Added base64 encode and decode [filters](Filters#base64)
+- Added **delnl** [filter](Filters#file-formatting)
 - Some clarifications on the encoding of the infile used with [WSCLIENT](WSCLIENT)
 
 ### Jan 2022
