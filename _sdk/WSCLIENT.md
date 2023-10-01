@@ -172,18 +172,21 @@ In this form, you need to fill in the following details:
 ### Examples
 
 ```sql
-/* In this example, we upload a file to the sftp server from Priority */
+/* In this example, we upload a file to the sftp server 
+from Priority */
 SELECT SQL.TMPFILE INTO :SOURCE FROM DUMMY;
 SELECT 'THIS IS A TEST' FROM DUMMY
 ASCII :SOURCE;
-/* filepaths on the SFTP server are relative to the path provided 
-in the Defintions for SFTP form */
+/* filepaths on the SFTP server are relative to the path
+ provided in the Defintions for SFTP form */
 :DEST = 'destinationTest.txt';
 
-/* 'ch1' is the code of the SFTP server in the Defintions for SFTP form */
+/* 'ch1' is the code of the SFTP server in the Defintions 
+for SFTP form */
 EXECUTE WSCLIENT '-sftp', 'ch1', '-u', :SOURCE, :DEST;
 
-/* In the second example, we download a file from a folder on the server to Priority */
+/* In the second example, we download a file from a folder 
+on the server to Priority */
 :SRC = 'TestFolder/GrabTest.txt';
 :TRGT = STRCAT(SYSPATH('LOAD', 1), 'GrabTarget.txt');
 
