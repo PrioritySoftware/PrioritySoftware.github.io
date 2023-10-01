@@ -53,7 +53,7 @@ UNLINK STACK;
 
 ## Browsing the Contents of a Folder 
 
-<code>EXECUTE FILELIST :DIR,:ST6,:MSG;</code>
+<code>EXECUTE FILELIST :DIR,:ST6,:MSG ['-f' | '-R'];</code>
 
 
 The **FILELIST** program browses the contents of a specified folder. It
@@ -72,6 +72,10 @@ time the file was created).
 By default, FILELIST loads the results to the *STACK6* table, however you can use the '-f' flag to load the results to the *STACK_ERR* table, where it also contains data on file size.
 
 <code>EXECUTE FILELIST :DIR,:STK_ERR,:MSG, '-f';</code>
+
+The '-R' flag also uses the STACK_ERR table. When used, it will recursively search within sub-folders of the specified folder. It will only list files (no directories), including the sub-folders necessary to reach the file.
+
+<code>EXECUTE FILELIST :DIR,:STK_ERR,:MSG, '-R';</code>
 
 Data mapping for each table:\
 **STACK6**

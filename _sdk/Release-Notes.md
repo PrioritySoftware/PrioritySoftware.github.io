@@ -6,10 +6,11 @@ tags: 'Priority_SDK'
 
 ## SDK 23.1
 
-### September 2023
+### October 2023
 
 - New option to upload and download files from an external SFTP using [WSCLIENT](WSCLIENT)
 - New [section](VSCode-Extension) on installing the new Priority VSCode extension.
+- Documented options for running FILELIST against the STACK_ERR table, as well as on changes to how it works on the public cloud (AWS).
 
 
 ## SDK 23.0
