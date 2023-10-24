@@ -4,7 +4,7 @@ group: Programming Tools
 tags: 'Priority_SDK'
 ---
 
-[23.1]() - baseline, but there are backports available for version 22.1 and 23.0 that add the SFTP Definitions form. These backports are available on [Priority Xpert](https://support.priority-software.com/).
+[23.1]() - Included starting with BIN95 version 9. Backports available for version 22.1 (BIN V. 90) and 23.0 (BIN V. 32) that add the SFTP Definitions form. These backports are available on [Priority Xpert](https://support.priority-software.com/).
 
 The SFTPCLNT utility can be used to access an SFTP server and perform the following actions:
 
