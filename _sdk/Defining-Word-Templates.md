@@ -22,7 +22,7 @@ determine which template is used for each task.
 1.  Add a new column to the **CUSTTOPICS** table: **PRIV_AWORD** --
     **INT**, 8, *Word Template*.
 
-2.  \# Add the following columns to the **CUSTTOPICS** form:
+2.  Add the following columns to the **CUSTTOPICS** form:
 
   
     |     Form Column Name    	|     Column Name    	|     Table Name    	|     Column ID    	|     Join Column    	|     Join Table    	|     Join ID    	|
@@ -72,6 +72,7 @@ determine which template is used for each task.
         :$.PRIV_EXEC = :PRIV_EXEC;
         ```
 6.  Add a hidden column to the **CUSTNOTESA** form:
+
     |     Form   Column Name    	|     Column   Name    	|     Table   Name    	|
     |---------------------------	|----------------------	|---------------------	|
     |     PRIV_AWORD            	|     PRIV_AWORD       	|     CUSTTOPICS      	|

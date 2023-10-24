@@ -22,7 +22,7 @@ types (for an explanation of each, see [Table Columns](Table-Columns )).
 
 Here is a partial list of SQL functions recognized by ***Priority***.
 
--   SQL.ENV: the current ****Priority**** company (**CHAR** type)
+-   SQL.ENV: the current **Priority** company (**CHAR** type)
 -   SQL.USER: the internal number of the current user (**INT** type)
 -   SQL.GROUP: the internal user number of the group representative from
     whom the current user inherits privileges (**INT** type)
