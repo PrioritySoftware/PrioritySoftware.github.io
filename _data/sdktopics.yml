@@ -264,6 +264,8 @@ chapters:
         url: WSCLIENT
       - page: Working with XML/JSON Files
         url: XMLPARSE
+      - page: Access SFTP with SFTPCLNT
+        url: SFTPCLNT
       - page: Defining Word Templates for Specific Form Records
         url: Defining-Word-Templates
       - page: Using Custom Form Columns in the Business Rules Generator

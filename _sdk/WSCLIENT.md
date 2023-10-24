@@ -4,6 +4,9 @@ group: Programming Tools
 tags: 'Priority_SDK'
 ---
 
+{% include info.html content="<p>There was a brief period where WSCLIENT could be used as an SFTP client. This functionality is replaced by the SFTPCLNT program.</p>" %}
+
+
 Using the WSCLIENT program you can make requests to an external web
 service. The WSCLIENT program is generic and can make requests to most
 web services. Use the following syntax to work with a web service
@@ -17,8 +20,6 @@ web services. Use the following syntax to work with a web service
 > \'-content\', :contentType\'\] \[, \'-method\', :method\] ['-headout' headers_response_outfile] \[,
 > \'-authname, :tokenCode\] \[, \'-urlfile\', urlfile\];
 >
-
-WSCLIENT can also be used as an [SFTP Client](#sftp-client) with a more limited set of parameters.
 
 ## WSCLIENT Parameters 
 
@@ -137,58 +138,3 @@ You can now obtain the access token to work with the web service:
     **Refresh Token** from list of actions in the form.
 
 
-## SFTP Client
-
-[23.1]()
-
-```SQL
-EXECUTE WSCLIENT '-sftp', 'CONFIGID', '-u[pload]' || '-d[ownload]', 'SOURCEFILE',
-'DESTINATIONFILE', ['-msg MSGFILE'], [-timeout seconds]
-```
-
-- -sftp - designates that WSCLIENT should work as a SFTP client.
-- CONFIGID - the identifier of the SFTP configuration in the **Definitions for SFTP** form (System Management > System Maintenance > Internet Definitions > Definitions for SFTP).
-- -u *or* -d - determines whether you are uploading a file to the SFTP server or downloading a file from it.
-- SOURCEFILE - The file to upload from Priority, or to download from the SFTP server.
-- DESTINATIONFILE - the name of the file to create on the SFTP server (when uploading) or on the Priority server (when downloading). Note that you cannot create folders on the SFTP server as part of the upload.
-- *\[, \'-msg\', :msgFile\]* -- The file in which error messages will
-    be recorded.
-- *\['-timeout' seconds\] - determines the time in seconds before a connection timeout is reported.
-
-### Defintions for SFTP
-
-Before you can work with SFTP, you must first set up a record in the **Definitions for SFTP** form (System Management > System Maintenance > Internet Definitions > Definitions for SFTP).
-
-In this form, you need to fill in the following details:
-- **Code** - The identifying code of the SFTP server/folder. This will be filled in that CONFIGID when using WSCLIENT.
-- **SFTP Folder Desc** - a short description of this server/folder.
-- **Path** - the URL/IP of the server. This should begin with <code>sftp://</code> and end with a port number (generally, port 22). For example: *sftp://20.0.0.195:22*
-- **User** - the username for accessing the server.
-- **Password**  - the password for accessing the server.
-
-**Note**: SFTP functionality only supports authentication with a username and password.
-
-
-### Examples
-
-```sql
-/* In this example, we upload a file to the sftp server 
-from Priority */
-SELECT SQL.TMPFILE INTO :SOURCE FROM DUMMY;
-SELECT 'THIS IS A TEST' FROM DUMMY
-ASCII :SOURCE;
-/* filepaths on the SFTP server are relative to the path
- provided in the Defintions for SFTP form */
-:DEST = 'destinationTest.txt';
-
-/* 'ch1' is the code of the SFTP server in the Defintions 
-for SFTP form */
-EXECUTE WSCLIENT '-sftp', 'ch1', '-u', :SOURCE, :DEST;
-
-/* In the second example, we download a file from a folder 
-on the server to Priority */
-:SRC = 'TestFolder/GrabTest.txt';
-:TRGT = STRCAT(SYSPATH('LOAD', 1), 'GrabTarget.txt');
-
-EXECUTE WSCLIENT '-sftp', 'ch1', '-d', :SRC, :TRGT;
-```
