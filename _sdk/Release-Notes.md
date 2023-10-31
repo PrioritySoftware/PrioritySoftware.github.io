@@ -9,7 +9,8 @@ tags: 'Priority_SDK'
 
 ### October 2023
 
-- New option to upload and download files from an external SFTP using [WSCLIENT](WSCLIENT)
+- <del>New option to upload and download files from an external SFTP using [WSCLIENT](WSCLIENT) </del>
+- <ins>New option to upload and download files from an external SFTP with the new [SFTPCLNT](SFTPCLNT) </ins>
 - New [section](VSCode-Extension) on installing the new Priority VSCode extension.
 - Documented options for running FILELIST against the STACK_ERR table, as well as on changes to how it works on the public cloud (AWS).
 - Added a sub-page to release notes listing all entities removed from the system as part of a version upgrade. You can find it [here](Removed-Entities)

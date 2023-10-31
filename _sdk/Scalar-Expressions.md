@@ -443,7 +443,7 @@ SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT;
 
 
 
-**SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, IMAGE\], path output type: 1 for relative, or 0 for absolute)
+**SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, SYNC, IMAGE\], path output type: 1 for relative, or 0 for absolute)
 
 returns the the path for a given system folder
 ```sql
@@ -451,7 +451,12 @@ SELECT SYSPATH('MAIL', 1) FROM DUMMY; /*../../system/mail */
 SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:/system/mail/ */
 ```
 
-**Note:** In the Windows environment, the TMP folder location can change between users.
+**Notes:** 
+
+- In the Windows environment, the TMP folder location can change between users.
+- system/Sync is a special folder in the public cloud only. It has [special caveats](Priority-Cloud#systemsync) regarding its use.
+
+
 
 **NEWATTACH**('*filename*', \['*extension*'\])
 
