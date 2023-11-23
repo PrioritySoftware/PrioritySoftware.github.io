@@ -31,7 +31,7 @@ defaults:
       output: web
 
 # Google Analytics
-google_analytics: UA-12315884-16
+# google_analytics: UA-12315884-16
 
 # Algolia
 algolia:
