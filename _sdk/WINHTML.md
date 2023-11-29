@@ -157,7 +157,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s',
 :WORDFORMAT = -3;
 :WORDFILE = '../../tmp/SOMEFILENAME.docx';
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
-'-format', :WORDFILE, '-wo', :WORDFILE;
+'-format', :WORDFORMAT, '-wo', :WORDFILE;
 ```
 
 
