@@ -10,9 +10,9 @@ In the following syntax, optional parameters are specified in square brackets **
 ```sql
 EXECUTE WINHTML '-d' | '-dQ', 'document_name', 'table', 
 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] 
-['-e',]  ['-edoc' | '-signpdf',] ['output_file',] ['-o' |'-pdf' | 
-'-wo' | '-wpdf',] ['-format', format_num,]   ['-lang', lang_num,] 
-['-AMAIL']
+['-e',]  ['-edoc' | '-signpdf',] ['-format', format_num,] 
+['-lang', lang_num,] ['-AMAIL',]
+['-o' |'-pdf' | '-wo' | '-wpdf',] ['output_file',]
 ```
 ## WINHTML Parameters
 - '-d' - create document. 
@@ -62,16 +62,22 @@ AND ENAME = 'WWWSHOWORDER') FORMAT;
 
 ### Setting the Print Format
 At this point you should know the EXEC of the document you want to run and the number of the print format you want to display. 
+While both HTML formats and Word templates are stored as negative values in EXTMSG and TRIGMSG respectively, this could create an overlap of values in the PRINTFORMAT table. To distinguish between the two, Word templates must be recorded as positive values in PRINTFORMAT.
 
 ```sql
 /* this code defines the format that will be used to print the 
 document; in the current example, it is assumed that we want to 
-use print format -5 */
+use HTML format -5 */
 :EXEC = 0;
 SELECT EXEC INTO :EXEC FROM EXEC WHERE TYPE = 'P' 
 AND ENAME = 'WWWSHOWORDER';
 :PRINTFORMAT = -5;
 UPDATE PRINTFORMAT SET VALUE = :PRINTFORMAT
+WHERE EXEC = :EXEC AND USER = SQL.USER;
+/* For a Word Template */
+/* Note the template number is multiplied by -1 */
+:WORDFORMAT = -3;
+UPDATE PRINTFORMAT SET VALUE = (:WORDFORMAT * -1)
 WHERE EXEC = :EXEC AND USER = SQL.USER;
 ```
 
@@ -136,9 +142,24 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS,
 
 **Notes:**
 
-The above code will download the files to your temp folder. 
+The above code will create the files in the temp folder of the Priority installation. 
 
-Both HTML formats and Word templates behave in a similar way, where the value of *'-format'* needs to match that of a HTML format or Word template. Since Word templates are stored as positive values in the PRINTFORMAT table, if you based the format on a negative TRIGMSG, convert it to a positive value first (multiply by -1). 
+### Printing with -format
+
+```sql
+:ORD = 100;
+/* html */
+:HTMLFORMAT = -1;
+:HTMLFILE = '../../tmp/SOMEFILENAME.html';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-format', :HTMLFORMAT, '-o', :HTMLFILE;
+/* Word - docx */
+:WORDFORMAT = -3;
+:WORDFILE = '../../tmp/SOMEFILENAME.docx';
+EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
+'-format', :WORDFILE, '-wo', :WORDFILE;
+```
+
 
 ### Printing the Document using the Default Printer
 
