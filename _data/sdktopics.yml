@@ -8,7 +8,7 @@ chapters:
     group: Release Notes
     topics: 
       - page: Removed Entities
-      - url: Removed-Entities
+        url: Removed-Entities
   - title: Customization Rules
     url: Customization-Rules
     group: CR
