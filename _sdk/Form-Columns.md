@@ -514,6 +514,28 @@ the **USERCLMNPRIV** table, as follows:
         insert a separate line in the **USERCLMNPRIV** table for each
         value in the designated column for which the user is authorized.
 
+## Adding Form Columns to Split Reconciliations Forms
+
+Priority has a number of forms dedicated to financial reconciliations that have a different visual appearance compared to other forms. These forms can only be opened in the Web interface and are unique in that form columns are split into two sections of the screen.
+
+**Adding columns is the only customization allowed for these forms.**
+
+The forms are:
+
+| Form | Form Title |
+|--|--|
+|ACCRECONSP | Account Recon. Work Area (Split) |
+|BANKRECONSP | Bank Recon. Work Area (Split) |
+|CREDITRECONSP | Credit Cd Recon. Wk Area (Split) |
+
+If you want to add columns to this form, follow the following rules:
+
+- All column names must begin with either the FRST or SCND prefix to designate in which side of the form they appear - first and second respectively. This prefix should then be followed by your customization prefix, and only then by the name of the column, e.g. **FRST_EXMP_MYNAME**.
+- All custom columns added must be Read only.
+
+In some cases, you'll want to make the new column accessible in both sides of the work area. In that case you should create two columns with the same settings, one with a FRST prefix and another with the SCND prefix. 
+
+Joins for these forms are the same as normal. Use a single join if you want to bring data from another table.
 
 ## MDM Features
 

@@ -7,6 +7,10 @@ tags: 'Priority_SDK'
 
 ## SDK 23.1
 
+### December 2023
+
+- New subsection in [Form Columns](Form-Columns): Adding columns to a reconciliation (split) form.
+
 ### October 2023
 
 - <del>New option to upload and download files from an external SFTP using [WSCLIENT](WSCLIENT) </del>
