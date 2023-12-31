@@ -40,9 +40,10 @@ The following values must be determined:
     ```
 
 
--   **STATCNAME** -- The name of the column in the **XXXX_MYDOCSTATS**
+-   **STATCNAME** -- The name of the column in the **XXXX_MYDOC**
     form that holds the autounique key of the **XXXX_MYDOCSTATS** table,
-    i.e., **MYDOCSTAT**.
+    i.e., **MYDOCSTAT**.\
+    For example, 
 
 
 -   **DOCCNAME** -- The name of the column in the **XXXX_MYDOC** form
