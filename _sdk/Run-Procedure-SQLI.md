@@ -145,7 +145,7 @@ UNLINK CUSTOMERS;
 EXECUTE ACTIVATF '-x', :F, '-R', 'OPENORDIBYDOER', 'CUSTOMERS', :CST;
 
 LABEL 299;
-MAILMSG 5 TO EMAIL 'demo@demo.com' DATA, :F;
+MAILMSG 5 TO EMAIL 'demo@demo.com' DATA :F;
 ```
 
 You can also redirect the report results to an MS-Excel file. This
