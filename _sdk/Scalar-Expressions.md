@@ -441,6 +441,13 @@ SELECT ENTMESSAGE('ORDERS','F',3) FROM DUMMY FORMAT;
 /* You cannot revise the number of an itemized order. */
 ```
 
+```sql
+/* In practice, it's more useful to directly assign 
+the message to a variable */
+:MSG = ENTMESSAGE('ORDERS','F',3);
+```
+
+
 
 
 **SYSPATH** (folder type [one of BIN, PREP, LOAD, MAIL, SYS, TMP, SYNC, IMAGE\], path output type: 1 for relative, or 0 for absolute)

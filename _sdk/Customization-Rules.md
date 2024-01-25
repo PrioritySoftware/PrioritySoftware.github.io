@@ -52,7 +52,7 @@ The following rules apply to the internal names of all private entities added to
 
 - Never INSERT or UPDATE data in standard tables directly. Use [interfaces](Form-Loads) or other tools that interact with the form to insert data in standard forms.
 - Any [LINK or UNLINK](Link-Unlink) operation should be followed by a test to ensure the operation succeeded. Remember, a failed LINK operation could lead to overwriting data in the original table rather than the linked copy!
-- Do not write non-ASCII characters directly in your code. If you need to reference text that is unicode (e.g. a message in Hebrew), use the [ENTMESSAGE](SQL-Functions-Variables) function to insert it into a variable, instead.
+- Do not write non-ASCII characters directly in your code. If you need to reference text that is unicode (e.g. a message in Hebrew), use the [ENTMESSAGE](Scalar-Expressions#files-and-messages) function to insert it into a variable, instead.
 
 
 ## Tables
