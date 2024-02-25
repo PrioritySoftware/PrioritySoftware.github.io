@@ -235,8 +235,7 @@ table loads.
 > /* where p:> represents the full path to bin.95) */
 > ```
 
-
-The file is created with UTF-16 encoding.
+The file is created with UTF-16 encoding. Only the first sheet in an Excel file will be converted.
 
 {% if site.output == "web" %}
 ## Further Reading 
