@@ -112,7 +112,7 @@ Customized triggers should be given special names (which must be added to the *L
 **Notes:**
 
 -   Key strings need not be consecutive (e.g., they may be separated by additional strings).
--   You can combine key strings to create, for instance, a customized  trigger that operates both as a POST-INSERT and a POST-UPDATE (e.g., ARRH_POST-INSERT-UPDATE).
+-   You can combine key strings to create, for instance, a customized  trigger that operates both as a POST-INSERT and a POST-UPDATE (e.g., ARRH_POST-INSERT-UPDATE). Combined triggers **cannot** contain cursors, directly or via includes. 
 -   SEARCH-FIELD triggers are the exception to the rule. You cannot
     create a customized SEARCH-FIELD, but rather must use the standard trigger. For details, see [Customization Rules](Customization-Rules#forms ).
 
