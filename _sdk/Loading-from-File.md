@@ -169,9 +169,26 @@ is analyzed and transferred to the *Tags for Interface* sub-level form.
 
 2. For parsed properties, the data in the first record appears in the *Value* column. If you want this (or any other value) to be used in all records, regardless of definitions in the file, specify *C* in the *Type of Value* column. Revise the values as necessary.
 
-5.  Return to the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate property. If the property is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
+3.  Return to the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate property. If the property is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
 
 **Note:** Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
+
+### Differences between XML and JSON
+
+Importing data for both XML and JSON is identical. However, JSON exports currently do not support renaming and nesting, and will just follow the structure of the form. So, for example, an export of ORDERS will look like this:
+
+```json
+{  "ORDERS": [
+    { "ORDNAME": "SO2400021",
+      "CUSTNAME": "John Doe"
+      },
+      { "ORDNAME": "SO2400022",
+      "CUSTNAME": "Jane Doe"
+      }
+]}
+```
+
+We are planning to further extend support for JSON exports in future releases.
 
 {% if site.output == "web" %}
 ## More on Form Loads 
