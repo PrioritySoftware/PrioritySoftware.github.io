@@ -67,12 +67,17 @@ SELECT ROUNDR(1.45) FROM DUMMY FORMAT; /* 1.000000 */
 
 **EXP**(*m, n*)
 
-treats *n* as an exponent of *m* 
+treats *n* as an exponent of *m*. Both numbers must be integers (type INT).
 ```sql
 SELECT EXP(3,2) FROM DUMMY FORMAT; /* 9 */
 SELECT EXP(2,3) FROM DUMMY FORMAT; /* 8 */
 ```
 
+**POW**(*m, n*) – treats n as an exponent of m (m and n must be of type REAL). 
+
+```sql
+SELECT POW(3.1,-2.4) FROM DUMMY FORMAT; /* 0.066181 */
+```
 
 
 **SQRT**(*m*)

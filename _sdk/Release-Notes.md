@@ -7,6 +7,13 @@ tags: 'Priority_SDK'
 
 ## SDK 23.1
 
+### April 2024
+
+- Added an undocumented mathmatical function POW(m, n) to [Scalar Expressions](Scalar-Expressions). Use it to calculate exponents with REAL numbers.
+- Added an explanation of current limitations when exporting with JSON interfaces.
+- Added a warning that cursors cannot be used in combined (e.g. POST-UPD-INS) form triggers.
+- Clarified that EXL2TXT only works on the first sheet in an Excel file.
+
 ### December 2023
 
 - New subsection in [Form Columns](Form-Columns): Adding columns to a reconciliation (split) form.
