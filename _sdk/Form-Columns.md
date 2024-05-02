@@ -4,10 +4,11 @@ group: Forms
 tags: 'Priority_SDK'
 ---
 
+
 ## Introduction
 
 To record attributes for form columns, use the appropriate columns in
-the *Form Columns* sub-level form of the [*Form Generator*](Forms ).
+the *Form Columns* sublevel form of the [*Form Generator*](Forms ).
 
 ## Column Names and Titles
 
@@ -132,7 +133,7 @@ Not all displayed form columns should be updatable. Usually, columns
 whose values are determined automatically (generally by a trigger)
 should be read-only. For instance, the **QPRICE** column of the
 **ORDERS** form is determined by the sum of the prices of its order
-items (as designated in the sub-level **ORDERITEMS** form). Another
+items (as designated in the sublevel **ORDERITEMS** form). Another
 example is the **AGENTDES** column. Owing to built-in fill triggers, the
 sales rep name is filled in automatically once the sales rep number is
 specified in the **ORDERS** form. This is because (1) the rep’s name is
@@ -192,7 +193,7 @@ empty (just like the one you use to define Boolean columns).
 ## Attachment Columns
 
 ***Priority*** offers the option of an attachment column — a special
-form column that is used to attach a file to the current record. Such columns are displayed together with a paper clip icon, which can be used to open the Windows Explorer and navigate to the file in question. Alternatively, users can record the file path manually. An example of this type of column is the *File Name* column of the **Customer Documents for Task** form, a sub-level of the *Tasks* form. In order for a form column to be defined as an attachment column, it must be of **CHAR**
+form column that is used to attach a file to the current record. Such columns are displayed together with a paper clip icon, which can be used to open the Windows Explorer and navigate to the file in question. Alternatively, users can record the file path manually. An example of this type of column is the *File Name* column of the **Customer Documents for Task** form, a sublevel of the *Tasks* form. In order for a form column to be defined as an attachment column, it must be of **CHAR**
 type and the form column name must contain the string **EXTFILENAME** (e.g., **PRIV\_ EXTFILENAME**).
 
 When working with attachments, files are uploaded to the **system/mail** folder on the server, and can be interacted with by the user. Only files in **system/mail** can be interacted with; If you specify a path to a different folder on the server, even if it is valid (such as the **system/load** folder), the user will not be able to interact with the file.
@@ -522,11 +523,11 @@ Priority has a number of forms dedicated to financial reconciliations that have 
 
 The forms are:
 
-| Form | Form Title |
-|--|--|
-|ACCRECONSP | Account Recon. Work Area (Split) |
-|BANKRECONSP | Bank Recon. Work Area (Split) |
-|CREDITRECONSP | Credit Cd Recon. Wk Area (Split) |
+| Form          | Form Title                       |
+|---------------|----------------------------------|
+| ACCRECONSP    | Account Recon. Work Area (Split) |
+| BANKRECONSP   | Bank Recon. Work Area (Split)    |
+| CREDITRECONSP | Credit Cd Recon. Wk Area (Split) |
 
 If you want to add columns to this form, follow the following rules:
 
