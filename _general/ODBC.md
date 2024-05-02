@@ -150,6 +150,9 @@ Driver=Priority ODBC Unicode Driver;Server=<odbc_url>;Tabulaini=tabula.ini;Datab
 
 Using the Priority ODBC Driver 3rd party application can retrieve list of databases, tables, primary keys, foreign keys, etc.
 Currently, the ODBC only supports the direct execution method. Prepared execution (SQLPrepareW and SQLExecute), procedures and catalog functions are not yet supported.
+
+For more information on these functions, refer to one of many online ODBC API references, such as [Microsoft](https://learn.microsoft.com/en-us/sql/odbc/reference/syntax/odbc-api-reference?view=sql-server-ver16).
+
 The following is a list of functions supported in v1 of the ODBC driver:
 
 ```
