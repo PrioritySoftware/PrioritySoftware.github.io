@@ -57,8 +57,9 @@ The following rules apply to the internal names of all private entities added to
 
 ## Tables
 
--  When modifying tables, do not change standard table columns or any
-    of the table's unique (or Auto Unique) keys. If you wish to increase the width of certain columns, it is best to consult with Priority Software beforehand.
+-  When modifying tables, do not change standard table columns or any of the table's Unique (or Auto Unique) keys. 
+-  You can increase the width of certain columns. We recommend you consult with Priority Software beforehand.
+-  You can add nonunique table keys to a standard table. We recommend you consult with a DBA beforehand.
 
 ### Rules for Columns 
 

@@ -232,17 +232,19 @@ SELECT ATOR('109012.99') FROM DUMMY FORMAT;/* 109012.990000 */
 **RTOA**(*m, n, USECOMMA*)
 
 outputs *m* (a real number) as a string, displaying *n* decimal places
-    according to the decimal format for the current language
+ according to the decimal format for the current language
     
 
-**Note:** If USECOMMA is not included, the decimal format 1,234.56
-    will be used.
+USECOMMA will add a thousands separator to the output, based on the current language.
+
 ```sql
 SELECT RTOA(150654.665,2,USECOMMA) FROM DUMMY FORMAT; /*
-    \'150.654,67\' assuming decimal format is 1.234,56 */
+    '150.654,67' assuming decimal format is 1.234,56 */
 
+SELECT RTOA(150654.665,2) FROM DUMMY FORMAT; /*
+    '150654.67' assuming decimal format is 1,234.56 */
 
-SELECT RTOA(3.665432,2) FROM DUMMY FORMAT; /* \'3.67\' */
+SELECT RTOA(3.665432,2) FROM DUMMY FORMAT; /* '3.67\' */
 ```
 
 ### String Information 
