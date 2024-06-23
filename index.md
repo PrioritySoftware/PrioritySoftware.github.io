@@ -4,10 +4,9 @@ layout: default
 ---
 # Welcome to Priority's Developer Portal
 
-{% include info.html content="<h3>Version 21.0 API Changes</h3><p> Version 21.0 of Priority contains changes to both the REST API and the Web SDK that might affect your integrations.</p> <p> Please review the release notes for each for more information.</p>" %}
 
 ## Web SDK
-Priority Software is proud to present a javascript based Web SDK that communicates with **Priority** forms, procedures and more.
+A javascript based Web SDK that communicates with **Priority** forms, procedures and more.
 
 In addition to the SDK reference, we've also included a tutorial to help you get started and demonstrate how it all meshes together.
 
@@ -16,6 +15,10 @@ In addition to the SDK reference, we've also included a tutorial to help you get
 Priority Software's REST API leverages the OData protocol to easily enable access to data in **Priority** forms. 
 
 The documentation provides examples of how to request, query, and modify data using the API.
+
+## Priority SDK
+
+The Priority SDK covers how to develop custom forms, procedures and reports for Priority. Use it to extend and adapt Priority to meet your needs.
 
 <a  class="inline-link" href="./general">Before you Begin</a>
 <a  class="inline-link" href="./api">Web SDK</a>
