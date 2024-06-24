@@ -69,6 +69,35 @@ forms and programs.
   | TAKEHELP       | Addition/revision of online help for the designated entity.
 
 
+### Additional Information for Specific Modification Codes
+
+While most modification codes are recorded automatically, some need to be recorded manually.
+
+#### TAKEWORDTMPL
+
+This modification code instructs the system to take a specific word template and add it to the revision. This revision needs to be filled in manually. Fill in the following information:
+
+- Entity (Form or Procedure) for the Word template.
+- Entity Type
+- Message number equal to the identifier of the template in the TRIGMSG table. Note that this will always be a negative number. Query for finding template message numbers:
+```sql
+SELECT * FROM TRIGMSG
+WHERE EXEC = (SELECT EXEC FROM EXEC 
+WHERE ENAME = 'WWWSHOWORDER' AND TYPE = 'P')
+AND NUM < 0
+FORMAT;
+```
+
+#### TAKEHELP
+
+This modification code takes the help for a specific entity or form column and adds it to the revision.
+
+- Entity 
+- Entity Type
+- Forms only - you can specify a specific column to take help for. If omitted, help for the entire form and all its columns will be taken.\
+  TAKEHELP for procedures, menus and reports will always take all help for the entity.
+
+
 ## Tips for Working with Revisions 
 
 -   Do not create a version revision until you have finished
