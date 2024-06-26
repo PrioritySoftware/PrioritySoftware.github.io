@@ -151,8 +151,12 @@ chapters:
         subtopics:
           - page: Loading from/to a Load Table
             url: Form-Interface-Generalload
-          - page: Loading from/to a File
+          - page: Load Data from a File or Export Data to a File
             url: Loading-from-File
+          - page: Loading from/to Plain Text File
+            url: Load-Plain-Text
+          - page: Loading from/to XML/JSON
+            url: Load-XML-JSON
           - page: Executing the Form Load
             url: Execute-FormLoads
           - page: Deleting Records from a Form
