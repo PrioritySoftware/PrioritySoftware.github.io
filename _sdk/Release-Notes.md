@@ -4,6 +4,13 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 24.0
+
+### June 2024
+
+- Documentation: Split file-based interfaces between [plain text](Load-Plain-Text) and [XML/JSON](Load-XML-JSON) files.
+- Additional information added on how XML tags are structured and used.
+- Added information on how to record [revisions codes](Installing-Customizations#additional-information-for-specific-modification-codes) that are not added automatically - TAKEWORDTMPL and TAKEHELP.
 
 ## SDK 23.1
 
