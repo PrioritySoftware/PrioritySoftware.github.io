@@ -6,6 +6,11 @@ tags: 'Priority_SDK'
 
 ## SDK 24.0
 
+### July 2024
+
+- Added documentation for undocumented '-i' option for [interfaces](Execute-Formloads), which lets you run an interface directly on a file.
+Also added additional examples of interfaces.
+
 ### June 2024
 
 - Documentation: Split file-based interfaces between [plain text](Load-Plain-Text) and [XML/JSON](Load-XML-JSON) files.

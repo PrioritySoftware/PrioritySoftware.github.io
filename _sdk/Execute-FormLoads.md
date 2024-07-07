@@ -16,10 +16,11 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     (parameters are explained in the next section):
 
     ```sql
-    EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'], 
-    ['-stackerr', 'stackerr_file'], ['-w'], ['-ns'], ['-nl'], ['-nv'],
+    EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'],
+    ['-i', 'Data_File'], ['-stackerr', 'stackerr_file'],
+     ['-w'], ['-ns'], ['-nl'], ['-nv'],
     ['-noskip'],['-enforcebpm'], ['-t'], ['-W'], ['-m'],
-    ['-o' | '-ou' [, '-f', 'output_file']], ['-debug', 'debug_file'], 
+    ['-o' | '-ou' | '-ou8' [, '-f', 'output_file']], ['-debug', 'debug_file'], 
     ['-repeat'],['-l', 'table_name1', 'link_file1'], '-v';
     ```
 
@@ -50,6 +51,7 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     '-L' tells the load program to use a linked file, and
     *link_filename* is the file that will be used to link the load
     table.
+-   '-i', *'data_file'* - Use this option when you want the **INTERFACE** program to load data from a specified source file (plain text, XML, or JSON). If this option is not specified, the program will look for the source file in the SYSTEM/LOAD folder.
 -   '-stackerr', *'stackerr_file'* -- Use this option if you want to
     have **INTERFACE** program error messages sent to a linked file of
     the **STACK_ERR** table. '-stackerr' tells the program to use a
@@ -133,6 +135,8 @@ The following parameters are only relevant when exporting data.
     Load Designer* using ASCII character encoding. When loading to a table, the program will insert records in the defined load table.\
     **Note:** This option is often used together with '-f'.
 -   '-ou' - This is similar to the '-o' option, except that data will be written to the file using Unicode (UTF-16) character encoding.\
+    **Note:** This option is often used together with '-f'.
+-   '-ou8' - This is similar to the '-o' option, except that data will be written to the file using Unicode (UTF-8) character encoding.\
     **Note:** This option is often used together with '-f'.
 -   '-f', *'output_file'* - When exporting data to a file (using
     the '-o' or '-ou' option), include this parameter to write the
@@ -228,10 +232,18 @@ the form or procedure and will prepare all required privileges.
 
 ## Code Examples
 
--   Execute interface from file specificed in **Form Load Designer**
+-   Execute interface from file specified in **Form Load Designer**
 
 ```sql
 EXECUTE INTERFACE 'interface', SQL.TMPFILE;
+```
+
+-   Execute interface from file specified in code
+
+```sql
+/* In this example, we run the interface on a file that
+was imported in a procedure step to parameter FIL */
+EXECUTE INTERFACE 'interface', '-i', :$.FIL, SQL.TMPFILE;
 ```
 
 - Run interface based on load table
@@ -274,6 +286,27 @@ GOTO 99 WHERE :RETVAL <= 0;
 LABEL 99;
 UNLINK ORDERS;
 UNLINK GNERALLOAD;
+```
+
+- Use interface to export data to an XML file in utf-8 encoding:
+
+```sql
+SELECT SQL.TMPFILE INTO :O1 FROM DUMMY;
+:OUTFILE = STRCAT(SYSPATH('TMP', 0), 'Orders.xml');
+
+LINK ORDERS TO :O1;
+GOTO 99 WHERE :RETVAL <= 0;
+
+INSERT INTO ORDERS
+SELECT * FROM ORDERS ORIG
+WHERE CURDATE = '03/22/23';
+
+/* the interface is defined as using XML files */
+EXECUTE INTERFACE 'DUMPORDXML', SQL.TMPFILE, '-ou8'
+ '-L', :O1, '-f', :OUTFILE;
+
+LABEL 99;
+UNLINK ORDERS;
 ```
 
 {% if site.output == "web" %}
