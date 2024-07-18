@@ -57,14 +57,14 @@ ASCII :SOURCE;
 
 /* 'ch1' is the code of the SFTP server in the Defintions 
 for SFTP form */
-EXECUTE SFTPCLNT 'ch1', '-u', :SOURCE, :DEST;
+EXECUTE SFTPCLNT 'ch1' '-u', :SOURCE, :DEST;
 
 /* In the second example, we download a file from a folder 
 on the server to Priority */
 :SRC = 'TestFolder/GrabTest.txt';
 :TRGT = STRCAT(SYSPATH('LOAD', 1), 'GrabTarget.txt');
 
-EXECUTE SFTPCLNT 'ch1', '-d', :SRC, :TRGT;
+EXECUTE SFTPCLNT 'ch1' '-d', :SRC, :TRGT;
 ```
 
 ## Listing the Contents of a Folder
