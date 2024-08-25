@@ -109,6 +109,38 @@ UNLINK ORDERS;
 LABEL 99;
 ```
 
+## LINK ALL
+
+*LINK ALL* is a special variant of the LINK command. It is shorthand for linking a table to a temporary file, and then inserting all the records from the original table into the newly linked one.
+As in other links, make sure to check the link was successful and unlink when you are done manipulating the records.
+
+For example:
+
+```sql
+SELECT SQL.TMPFILE INTO :TMPFILE;
+LINK ALL ORDERS TO :TMPFILE;
+GOTO 99 WHERE :RETVAL <= 0;
+/*database manipulation on the temporary ORDERS table */
+UNLINK ORDERS;
+LABEL 99;
+```
+
+Is equivalent to:
+
+```sql
+SELECT SQL.TMPFILE INTO :TMPFILE;
+LINK ORDERS TO :TMPFILE;
+GOTO 99 WHERE :RETVAL <= 0;
+INSERT INTO ORDERS
+SELECT * FROM ORDERS ORIG
+WHERE ORIG.ORD <> 0;
+/*database manipulation on the temporary ORDERS table */
+UNLINK ORDERS;
+LABEL 99;
+```
+
+LINK ALL should be used sparingly, if at all. Only in rare cases do you need the entire population of a table, and being more specific about the records you want to work on will improve performance.
+
 {% if site.output == "web" %}
 ## Further Reading 
 
