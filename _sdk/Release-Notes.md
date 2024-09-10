@@ -6,6 +6,12 @@ tags: 'Priority_SDK'
 
 ## SDK 24.0
 
+### September 2024
+
+- Reorganized form columns with functionality dependent on keywords in the column name under [Keyword Columns](Form-Columns#Keyword-Columns). Added the keywords for URL and email columns.
+- Clarified requirements for Priority Talk integration (bell icon). 
+
+
 ### July 2024
 
 - Added documentation for undocumented '-i' option for [interfaces](Execute-Formloads), which lets you run an interface directly on a file.

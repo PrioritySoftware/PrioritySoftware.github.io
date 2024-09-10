@@ -154,18 +154,10 @@ imported from the **AGENTS** table, and (2) the rep’s number
 
 ### Balances: Special Read-only Columns
 
-**Priority** offers the option of a ***balance*** column — a special
-read-only column that displays financial balances. In order to
-distinguish between credit and debit balances, one is displayed within
-parentheses while the other appears in regular format. By default, it is
-the debit balances that are displayed in parentheses, both in forms and
-in reports. If you want credit balances to be displayed that way
-instead, use the CREDITBAL system constant. First add it to the
-**SYSCONST** table using an INSERT statement and then assign it a value
-of 1.
+**Priority** offers the option of a ***balance*** column — a special read-only column that displays financial balances. In order to distinguish between credit and debit balances, one is displayed within parentheses while the other appears in regular format. By default, it is
+the debit balances that are displayed in parentheses, both in forms and in reports. If you want credit balances to be displayed that way instead, use the CREDITBAL system constant. First add it to the **SYSCONST** table using an INSERT statement and then assign it a value of 1.
 
-You can also display a ***cumulative balance*** in a form. To do so, add
-two columns to the form:
+You can also display a ***cumulative balance*** in a form. To do so, add two columns to the form:
 
 -   A balance column — Specify *B* in the *Read/Mandatory/Bal* column.
     This must be a numerical column (**INT** or **REAL**); its value
@@ -190,7 +182,11 @@ the value of that field in the table is *Y*; when it is blank, the value
 in the table is '\\0'. Users see a box which they can flag or leave
 empty (just like the one you use to define Boolean columns).
 
-## Attachment Columns
+## Keyword Columns
+
+You can add additional functionality to columns by using a keyword in the name of the column.
+
+### Attachment Columns
 
 ***Priority*** offers the option of an attachment column — a special
 form column that is used to attach a file to the current record. Such columns are displayed together with a paper clip icon, which can be used to open the Windows Explorer and navigate to the file in question. Alternatively, users can record the file path manually. An example of this type of column is the *File Name* column of the **Customer Documents for Task** form, a sublevel of the *Tasks* form. In order for a form column to be defined as an attachment column, it must be of **CHAR**
@@ -198,44 +194,41 @@ type and the form column name must contain the string **EXTFILENAME** (e.g., **P
 
 When working with attachments, files are uploaded to the **system/mail** folder on the server, and can be interacted with by the user. Only files in **system/mail** can be interacted with; If you specify a path to a different folder on the server, even if it is valid (such as the **system/load** folder), the user will not be able to interact with the file.
 
-## Address Columns
+### URL Columns
+
+You can define form columns as URLs. These columns have a special interaction to open a browser window and navigate to the specified URL (appears as a globe icon next to the column).
+
+To set a column as a URL column, it must contain the string **HOSTNAME** in its name, e.g. **PRIV_HOSTNAME**. For an example, see the HOSTNAME column in the CUSTOMERS form.
+
+### EMail Columns
+
+Form columns can be defined as email columns. These columns have a special interaction to send an email (envelope icon).
+
+To set a column as an email column, it most contain the string **EMAIL** in its name, e.g. **PRIV_EMAIL**. For an example, see the Email column in the CUSTOMERS form.
+
+### Address Columns
 
 Another option is to allow users to open Google Maps from within a form.
-For example, by selecting Map (in the Windows interface, from *Tools* in
-the top menu; in the web interface, from *Run*) from the address column
-in the *Customers* form, the user can open Google Maps to see the
-customer's location. In order for a form to have the option of opening a
-map, it must contain a special column named **ADDRESSMAP**. You can add
-this column to a customized form using your standard prefix
-(**XXXX_ADDRESSMAP**).  
+For example, by selecting Map (in the Windows interface, from *Tools* in the top menu; in the web interface, from *Run*) from the address column in the *Customers* form, the user can open Google Maps to see the customer's location. In order for a form to have the option of opening a
+map, it must contain a special column named **ADDRESSMAP**. You can add this column to a customized form using your standard prefix (**XXXX_ADDRESSMAP**).  
 
- **Note:** It is not possible to add such a column to a standard
+ **Notes:** 
+- It is not possible to add such a column to a standard
 form.
+- Working with Google Maps requires an API key.
 
 
 
-## Special Date Columns
+### Special Date Columns
 
-As mentioned earlier, dates are stored in ***Priority*** as integers,
-which correspond to the number of minutes elapsed since Jan. 1, 1988
-(for example, Dec. 31, 1987 = -1440). Hence, the date 01/01/1988 is
-stored as "0". Since ***Priority*** forms do not generally display zero
-values, this date is not displayed in form columns. If you want the
-value 01/01/1988 to be displayed in a particular column, the form column
-name must contain the string **BIRTHDATE** (e.g., the **BIRTHDATE10**
+As mentioned earlier, dates are stored in ***Priority*** as integers, which correspond to the number of minutes elapsed since Jan. 1, 1988 (for example, Dec. 31, 1987 = -1440). Hence, the date 01/01/1988 is stored as "0". Since ***Priority*** forms do not generally display zero
+values, this date is not displayed in form columns. If you want the value 01/01/1988 to be displayed in a particular column, the form column name must contain the string **BIRTHDATE** (e.g., the **BIRTHDATE10**
 column in the **USERSB_ONE** form).
 
 
-
-**Note:** When a new record is inserted into the database and the date
-column is empty, the system assigns a default value of 0 (i.e.,
-01/01/1988). If you use the above technique to display the date
-01/01/1988, this value will appear in the date column of all such
-records. In this case, you may want to define another trigger, such that
-when a new record is inserted into the database and the date column in
-question is empty, the column receives a different default value (e.g.,
-01/01/1900).
-
+**Note:** When a new record is inserted into the database and the date column is empty, the system assigns a default value of 0 (i.e., 01/01/1988). If you use the above technique to display the date
+01/01/1988, this value will appear in the date column of all such records. In this case, you may want to define another trigger, such that when a new record is inserted into the database and the date column in
+question is empty, the column receives a different default value (e.g., 01/01/1900).
 
 
 ## Sorting Data
