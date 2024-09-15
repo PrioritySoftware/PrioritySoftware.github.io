@@ -24,7 +24,7 @@ must be named PAR. If the procedure is to be activated from the menu, you must d
 
 [23.0]()
 
-In this version, the linked file parameter can also be of type NFILE. This can prevent performance issues, if the main table is one with a very large amount of records.
+In this version, the linked file parameter can also be of type NFILE. This can prevent performance issues, if the main table is one with a very large amount of records. Note that if the user does not provide input, the system will show an error message and return to the input stage, rather than continue the program.
 
 ## Declaring the Cursor 
 
