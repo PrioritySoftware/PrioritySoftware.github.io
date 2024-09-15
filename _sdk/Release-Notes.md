@@ -10,6 +10,7 @@ tags: 'Priority_SDK'
 
 - Reorganized form columns with functionality dependent on keywords in the column name under [Keyword Columns](Form-Columns#Keyword-Columns). Added the keywords for URL and email columns.
 - Clarified requirements for Priority Talk integration (bell icon). 
+- Further expanded on working with files in [Priority Cloud](Priority-Cloud).
 
 
 ### July 2024
