@@ -51,26 +51,34 @@ If you are working on Priority's Cloud, you can use the FilesAPI solution Priori
 
 However, if you are working on a Priority Web installation without access to the server, the following workaround may prove helpful:
 
-1. Open a form that has an Attachments subform, such as Tasks (CUSTNOTESA).
-2. Add a record with an easily remembered name, such as *DEBUG*.
-3. Upload a small text file to the attachments form (you cannot upload an empty file). Give it a name that reflects the file's purpose.
+1. Use NEWATTACH to create a valid attachment file path in WINDBI and save it.
+2. In your code, save the results to a temporary file.
+3. Copy the results to the filepath you created in step 1.
+4. Open a form that has an Attachments subform, such as Tasks (CUSTNOTESA).
+5. Add a record with an easily remembered name, such as *DEBUG*.
+6. Paste the file path you created in step 1.
    
 ![Attachment with file path](https://cdn.priority-software.com/docs/images/SDK_Web_DebugFile.png)   
-1. Copy the file path.
-2. In your code, store the file path as the filename to which you dump the table data:
+
 
 ```sql
 /* This sample can be run in SQL Development (WINDBI)*/
+/* Create a valid filepath */
+:DEBUGFILE = NEWATTACH('MyDebug', '.txt');
+SELECT :DEBUGFILE FROM DUMMY FORMAT;
+/* e.g. '../../system/mail/2023/5/xo3rr23l/dummyfile.txt' */
 SELECT SQL.TMPFILE INTO :DAYSLINK FROM DUMMY;
 LINK DAYS TO :DAYSLINK;
 GOTO 999 WHERE :RETVAL <= 0;
 INSERT INTO DAYS
 SELECT * FROM DAYS ORIG;
-/* use the filepath you copied in step 4 above */
-:FILEPATH = '../../system/mail/2023/5/xo3rr23l/dummyfile.txt';
+/* select into the temporary debug file, then copy 
+to the attachment */
+:FILEPATH = STRCAT(SYSPATH('TMP', 1), 'MyDebug.txt');
 SELECT DAYNUM, DAYNAME FROM DAYS
 TABS :FILEPATH;
 UNLINK DAYS;
+EXECUTE COPYFILE :FILEPATH, :DEBUGFILE;
 LABEL 999;
 ```
 

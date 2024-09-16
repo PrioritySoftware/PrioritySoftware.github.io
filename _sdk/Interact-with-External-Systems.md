@@ -125,7 +125,7 @@ OPEN NEWFILES;
 GOTO 90 WHERE :RETVAL <= 0;
 
 :FILENAME = '';
-:TOFILENAME = '../../system/load/Example.load';
+:TOFILENAME = STRCAT(SYSPATH('LOAD', 1), 'Example.load');
 
 LABEL 10;
 
