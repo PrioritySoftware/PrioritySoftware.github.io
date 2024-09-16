@@ -11,6 +11,7 @@ tags: 'Priority_SDK'
 - Reorganized form columns with functionality dependent on keywords in the column name under [Keyword Columns](Form-Columns#Keyword-Columns). Added the keywords for URL and email columns.
 - Clarified requirements for Priority Talk integration (bell icon). 
 - Further expanded on working with files in [Priority Cloud](Priority-Cloud).
+- To further support work in the cloud, replaced hardcoded file paths to system folders (e.g. '../../system/load) in code examples to using SYSPATH for creating these paths (e.g. <CODE>SYPATH('LOAD', 1)</CODE>).
 
 
 ### July 2024

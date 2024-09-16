@@ -53,7 +53,7 @@ However, if you are working on a Priority Web installation without access to the
 
 1. Use NEWATTACH to create a valid attachment file path in WINDBI and save it.
 2. In your code, save the results to a temporary file.
-3. Copy the results to the filepath you created in step 1.
+3. Copy the results to the file path you created in step 1.
 4. Open a form that has an Attachments subform, such as Tasks (CUSTNOTESA).
 5. Add a record with an easily remembered name, such as *DEBUG*.
 6. Paste the file path you created in step 1.
@@ -63,7 +63,7 @@ However, if you are working on a Priority Web installation without access to the
 
 ```sql
 /* This sample can be run in SQL Development (WINDBI)*/
-/* Create a valid filepath */
+/* Create a valid file path */
 :DEBUGFILE = NEWATTACH('MyDebug', '.txt');
 SELECT :DEBUGFILE FROM DUMMY FORMAT;
 /* e.g. '../../system/mail/2023/5/xo3rr23l/dummyfile.txt' */
