@@ -71,14 +71,16 @@ The **FILTER** program performs various manipulations on the contents of a speci
 
 -   **FILTER** -base64 [*Input* *Output*\] --- encodes a file into base64.
 -   **FILTER** -unbase64 [*Input* *Output*\] --- decodes a file from base64. The input file must be in Unicode format.
-> **Example**
-> ```sql
-> :_PDF = '../../f.pdf';
-> :_PDF_B = '../../f_base64.txt';
-> :_PDF2 = '../../f_new.pdf';
-> EXECUTE FILTER '-base64', :_PDF, :_PDF_B, SQL.TMPFILE;
-> EXECUTE FILTER '-unbase64', :_PDF_B, :_PDF2, SQL.TMPFILE;
-> ```
+-   
+**Example**
+
+```sql
+:_PDF = STRCAT(SYSPATH'TMP', 1), 'f.pdf');
+:_PDF_B = STRCAT(SYSPATH'TMP', 1), 'f_base64.pdf');
+:_PDF2 = STRCAT(SYSPATH'TMP', 1), 'f_new.pdf');
+EXECUTE FILTER '-base64', :_PDF, :_PDF_B, SQL.TMPFILE;
+EXECUTE FILTER '-unbase64', :_PDF_B, :_PDF2, SQL.TMPFILE;
+```
 -  **FILTER** '-replacestrbase64', [*Input*, *Output*\],'*[stringToReplace\]*', *fileToConvert*, SQL.TMPFILE  --- replaces the specified string in the input file with the result of converting another file to base64. Useful for inserting base64 data into JSON based requests.
 
 

@@ -91,53 +91,53 @@ The following examples come in pairs. The first example is for outputting a sing
 ```sql
 /*single document*/
 :ORD = 100;
-:HTMLFILE = '../../tmp/SOMEFILENAME.html';
+:HTMLFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.html');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-o', :HTMLFILE;
 ```
 ```sql
 /*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-o', 
-'../../TMP/O.html';
+STRCAT(SYSPATH('TMP', 1), 'O.html');
 ```
 - 	To output the document as PDF based on a system document (-pdf), use the following code:
 ```sql
 /*single document*/
 :ORD = 100;
-:PDFFILE = '../../tmp/SOMEFILENAME.pdf';
+:PDFFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.pdf');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-pdf', :PDFFILE;
 ```
 ```sql
 /*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, 
-'-pdf', '../../TMP/O.html';
+'-pdf', STRCAT(SYSPATH('TMP', 1), 'O.pdf');
 ```
 - 	To output the document as a Word file (-wo), use the following code:
 ```sql
 /*single document*/
 :ORD = 100;
-:WORDFILE = '../../tmp/SOMEFILENAME.docx';
+:WORDFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.docx');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-wo', :WORDFILE;
 ```
 ```sql
 /*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, '-wo', 
-'../../TMP/O.docx';
+STRCAT(SYSPATH('TMP', 1), 'O.docx');
 ```
 - 	To output the document as a pdf file based on a word file (-wpdf), use the following code:
 ```sql
 /*single document*/
 :ORD = 100;
-:PDFFILE = '../../tmp/SOMEFILENAME.pdf';
+:PDFFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.pdf');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-wpdf', :PDFFILE;
 ```
 ```sql
 /*multiple documents*/
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS, 
-'-wpdf', '../../TMP/O.pdf'; 
+'-wpdf', STRCAT(SYSPATH('TMP', 1), 'O.pdf'); 
 ```
 
 **Notes:**
@@ -150,12 +150,12 @@ The above code will create the files in the temp folder of the Priority installa
 :ORD = 100;
 /* html */
 :HTMLFORMAT = -1;
-:HTMLFILE = '../../tmp/SOMEFILENAME.html';
+:HTMLFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.html');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-format', :HTMLFORMAT, '-o', :HTMLFILE;
 /* Word - docx */
 :WORDFORMAT = -3;
-:WORDFILE = '../../tmp/SOMEFILENAME.docx';
+:WORDFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.docx');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-format', :WORDFORMAT, '-wo', :WORDFILE;
 ```
@@ -176,9 +176,10 @@ EXECUTE WINHTML '-dQ', 'WWWSHOWORDER', :ORD
 Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, a HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the **–signpdf** option to the WINHTML command. Remember that a digital signature is not the same as an e-document!
 
 Example: The following code will create a digitally signed PDF of the sales order in which ORD = 100:
+
 ```sql
 :ORD = 100;
-:PDFFILE = '../../tmp/SOMEFILENAME.pdf';
+:PDFFILE = STRCAT(SYSPATH('TMP', 1), 'SOMEFILENAME.pdf');
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s', 
 '-signpdf', '-pdf', :PDFFILE;
 ```

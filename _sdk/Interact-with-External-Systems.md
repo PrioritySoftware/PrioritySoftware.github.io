@@ -104,7 +104,7 @@ Data mapping for each table:\
 
 
 ```sql
-:DIR = '../../tmpDir';
+:DIR = STRCAT(SYSPATH('SYNC', 1),'tmpDir');
 
 SELECT SQL.TMPFILE INTO :ST6 FROM DUMMY;
 SELECT SQL.TMPFILE INTO :MSG FROM DUMMY;

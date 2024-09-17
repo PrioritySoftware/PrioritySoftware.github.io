@@ -52,9 +52,9 @@ LINK ORDERS TO :TMPFILE;
 GOTO 1 WHERE :RETVAL <= 0;
 INSERT INTO ORDERS
 SELECT * FROM ORDERS ORIG WHERE ORDNAME IN ('SO2000001364','SO2000001365');
-EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', 
+EXECUTE INTERFACE 'ORDERS', STRCAT(SYSPATH('TMP', 1), 'msg.txt'), 
 '-form', '-select', 'ORDNAME', 'CUSTNAME',
- '-ou', '-L', :TMPFILE, '-f', '../../tmp/o2.txt', '-J',
+ '-ou', '-L', :TMPFILE, '-f', STRCAT(SYSPATH('TMP', 1), 'O2.txt'), '-J',
 '-expand', 'ORDERITEMS', '-select', 'PRICE', 'PARTNAME', 
 '-expand', 'ORDERITEMSTEXT';
 UNLINK ORDERS;
@@ -69,8 +69,8 @@ and its sub-level of ORDERITEMSTEXT (as denoted by -expand).
 If you do not uses *-select* to specify fields, all form fields will be exported. The following code  exports all fields of ORDERS and the ORDERITEMS sublevel to an XML file. Only fields with values are exported.
 
 ```sql
-EXECUTE INTERFACE 'ORDERS', '../../tmp/msg.txt', 
-'-form', '-ou', '-L', :TMPFILE, '-f', '../../tmp/testxml.xml',
+EXECUTE INTERFACE 'ORDERS', STRCAT(SYSPATH('TMP', 1), 'msg.txt'), 
+'-form', '-ou', '-L', :TMPFILE, '-f', STRCAT(SYSPATH('TMP', 1), 'testxml.xml'),
  '-expand', 'ORDERITEMS';
 ```
 
@@ -109,12 +109,17 @@ sub-sub-level). Take the following XML file, named in1.txt, for example:
 ```
 
 To load it using a dynamic interface, we would use the command:\
- EXECUTE INTERFACE \'ORDERS\', \'../../tmp/msg.txt\', \'-form\', \'-i\', \'-f\',
-\'../../tmp/in1.txt\', \'-ignorewrn\', \'-noskip\';
+
+```sql
+ EXECUTE INTERFACE 'ORDERS', STRCAT(SYSPATH('TMP', 1), 'msg.txt'), 
+ '-form', '-i', '-f', STRCAT(SYSPATH('TMP', 1), 'in1.txt'), 
+ '-ignorewrn', '-noskip';
+```
 
 In this case we use the **--ignorewrn** and **--noskip** options to ensure that data is loaded regardless of warning messages that crop up.
-We recommend adding these options if data isn\'t being loaded as
+We recommend adding these options if data isn't being loaded as
 expected. As in standard interfaces, warning and error messages are stored in the ERRMSGS table (unless you linked them to a STACKERR table). While developing in WINDBI, you can easily retrieve them by running the following query:
+
 ```sql
 SELECT * FROM ERRMSGS WHERE USER = SQL.USER AND TYPE = 'i' FORMAT;
  ```
