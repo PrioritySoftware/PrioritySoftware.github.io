@@ -202,8 +202,8 @@ Regardless of type, all variables are limited to a size of 120 characters.
 :SQL.NET (**INT** type) --- stores 0 when working in the Windows
     interface and 1 when working in the web interface.
 
-:EXTERNAL.VARNAME -- used in procedures to refer to variables
-    inputted as part of the WINRUN command (see [ Executing Priority Commands from an External Application (WINRUN)](Interact-with-External-Systems#executing-priority-commands-from-an-external-application-winrun )).
+:EXTERNAL.VARNAME (**CHAR** type) -- used in procedures to refer to variables
+    inputted as part of the WINACTIV command (see [Running a Procedure from SQLI Step](Run-Procedure-SQLI)). External variables will always be of type CHAR, even if they contain other types of data. 
 
 :WEBSDK_APP_ID (**CHAR** type) --- when entities are accessed via
     Priority's Web SDK using a per-application license, this variable
