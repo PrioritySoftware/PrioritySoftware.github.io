@@ -93,6 +93,8 @@ Alternatively, you can check whether the driver is installed in the registry.
 
 ## Connecting to the Data Source
 
+{% include alert.html content="<p><strong>Important:</strong> You can only connect to ODBC using a 64bit ODBC client. If you are running into issues, check whether your program is 32bit.</p>" %}
+
 You can either pre-configure the data source, in the **ODBC Data Sources (64-bit)** utility, or add the configuration as part of the connection string in your code.
 
 **To preconfigure your data source:**
@@ -233,13 +235,106 @@ There are a number of tools you can use to debug ODBC calls to the server:
 
 **Client Side**
 
-On the client side, you can enable tracing in **ODBC Data Source Administrator (64-bit)**:
+Enable tracing of interaction between ODBC client application (like ODBCQueryTool or Excel) and Priority ODBC driver  in ‘ODBC Data Sources (64-bit)’ utility in client side:
 
 ![ODBC Tracing](https://cdn.priority-software.com/docs/images/ODBC_data_source_trace.png)
 
+1. Go to **Tracing** tab and set the path for the log file, for example *‘C:\priodbc\log\odbc.log’*.
+2. Click the button **Start Tracing Now** to start tracing.
+3. Reproduce the problematic scenario to generate logs.
+4. Click on the button **Stop Tracing Now** to stop tracing.
+
+**Note:** This tracing option will write to the log for any ODBC activity on the client computer (not limited just to the Priority ODBC driver), so you should stop tracing as soon as you're done, as the log file has a tendency to grow in size extremely fast.
+     
+
+**Driver Side**
+
+**Note:** Driver tracing is available starting with version 1.01.00 of the driver.
+
+To enable tracing of ODBC requests in the ODBC driver do the following:
+
+1. Create a config file named *tabula.ini* and place it in the driver folder (default name *priodbc*). The file should contain the following:
+
+```
+[Log]
+Server Level=5
+Server Path=C:\priodbc\log
+Server Buffered=0
+Server By Name=1
+```
+
+The default log level is 5 (ERROR); it can be changed to 1 (DEBUG) to get more verbose information.
+
+2. Restart the client application (like ODBCQueryTool or Excel) after making the change for the new log level to apply.
+3. Reproduce the problematic scenario to generate logs.
+4. Logs will be written to file *process_name.log* in directory configured in **Server Path**, e.g. *C:\priodbc\log\ODBCQueryTool.exe.log*.
+
+In case of any errors, the ODBC client application will show a short error message, such as:
+
+```
+[HY000][2000][Priority ODBC 1.1(w) Driver][connection error (502) (for details check logs in C:\priodbc\log)
+```
+
+The full details of the error can be seen in the log file itself:
+
+```
+14-03-2024 17:44:44,396[ERROR][ST584][4848]: connection error (502): got response from https://st584.ceshbel.co.il/odbc/ExecDirect with error: 'ChilkatLog:
+  PostJson2:
+    DllDate: Jul 25 2023
+    ChilkatVersion: 9.5.0.95
+    UnlockPrefix: PRTYSF
+    UnlockStatus: 2
+    Architecture: Little Endian; 64-bit
+    Language: Visual C++ 2022 / x64
+    VerboseLogging: 0
+    url: https://st584.ceshbel.co.il/odbc/ExecDirect
+    contentType: application/json
+    jsonUtf8Size: 150
+    fullRequest:
+      a_synchronousRequest:
+        generateRequestHeader:
+          sbHost0: st584.ceshbel.co.il
+          httpRequestGenStartLine:
+            genStartLine:
+              startLine: POST /odbc/ExecDirect HTTP/1.1
+            --genStartLine
+          --httpRequestGenStartLine
+        --generateRequestHeader
+        fullHttpRequest:
+          domain: st584.ceshbel.co.il
+          port: 443
+          ssl: True
+          openHttpConnection:
+            Opening connection directly to HTTP server.
+            httpHostname: st584.ceshbel.co.il
+            httpPort: 443
+            tls: True
+            HTTPS secure channel established.
+          --openHttpConnection
+          connectTime: Elapsed time: 31 millisec
+          sendRequestHeader:
+            sendHeaderElapsedMs: 0
+          --sendRequestHeader
+          sendRequestBody:
+            sendBodyElapsedMs: 0
+          --sendRequestBody
+          statusCode: 502
+          statusText: Bad Gateway
+        --fullHttpRequest
+        success: 1
+      --a_synchronousRequest
+      success: True
+    --fullRequest
+    Success.
+  --PostJson2
+  urlObject_loadUrl:
+  --urlObject_loadUrl
+--ChilkatLog
+```
+
 **Server Side**
 
-ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder.
+ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder (for an on-premise server) or in Datadog (Priority Cloud servers).
 
 
 ## Rules and Constraints
