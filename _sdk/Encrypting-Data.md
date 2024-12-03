@@ -4,9 +4,6 @@ group: Programming Tools
 tags: 'Priority_SDK'
 ---
 
-**Note:** To use the encryption feature, make sure to update your BIN.95
-folder to the latest version.
-
 In certain cases, or due to legal requirements, you might need to
 encrypt sensitive data in your system and only show the decrypted data
 to users for a limited time. To encrypt data, use the CRPTUTIL program:
