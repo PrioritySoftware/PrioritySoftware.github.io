@@ -9,8 +9,7 @@ You can execute a [procedure](Run-Procedure#Running-a-Sub-Procedure ) from an SQ
 The difference between the **WINACTIV** command and the **ACTIVATE** and **ACTIVATF** commands is that **WINACTIV** has a user interface, meaning that you can define a progress bar and/or messages that require a response from the user (using a [ **PRINTF**, **PRINTCONTF** or **CHOOSEF** command](Procedure-Steps#Basic-Commands)) and
 these will be visible to users while the procedure is running, whereas the **ACTIVATE** and **ACTIVATF** commands will not display these elements. As such, the **WINACTIV** command should not be used when working with the ***Priority*** web interface.
 
-The difference between the **ACTIVATE** and **ACTIVATF** commands is that **ACTIVATE** runs an *.exe* file whereas **ACTIVATF** runs a *.dll* file. In other words, a new process is created when the **ACTIVATE**
-command is used, whereas a procedure that is activated by the **ACTIVATF** command is executed in the same process as the form or procedure from which it is run.
+The difference between the **ACTIVATE** and **ACTIVATF** commands is that **ACTIVATE** runs an *.exe* file whereas **ACTIVATF** runs a *.dll* file. In other words, a new process is created when the **ACTIVATE** command is used, whereas a procedure that is activated by the **ACTIVATF** command is executed in the same process as the form or procedure from which it is run.
 
 Reports can be executed using the **WINACTIV** command only.
 
@@ -168,8 +167,7 @@ LABEL 299;
 MAILMSG 5 TO EMAIL 'demo@demo.com' DATA :F;
 ```
 
-You can also redirect the report results to an MS-Excel file. This command takes two parameters -- the Excel file without a suffix and the **TEMPLATE** number from the **EXCELTEMPLATES** table. For example, the
-following code saves the **ORGUNITS** report as an Excel file.
+You can also redirect the report results to an MS-Excel file. For this command, you need to provide the Excel file name without a suffix. For example, the following code saves the **ORGUNITS** report as an Excel file.
 
 ```sql
 EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur'; 
