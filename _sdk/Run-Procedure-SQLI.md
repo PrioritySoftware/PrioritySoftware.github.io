@@ -7,7 +7,7 @@ tags: 'Priority_SDK'
 You can execute a [procedure](Run-Procedure#Running-a-Sub-Procedure ) from an SQLI step of another procedure by executing any of the following commands: **WINACTIV**, **ACTIVATE** or **ACTIVATF**. This is useful, for example, when you want to run a report and [send it to recipients via e-mail](#Running-a-Report-and-Sending-it-by-E-mail ).
 
 The difference between the **WINACTIV** command and the **ACTIVATE** and **ACTIVATF** commands is that **WINACTIV** has a user interface, meaning that you can define a progress bar and/or messages that require a response from the user (using a [ **PRINTF**, **PRINTCONTF** or **CHOOSEF** command](Procedure-Steps#Basic-Commands)) and
-these will be visible to users while the procedure is running, whereas the **ACTIVATE** and **ACTIVATF** commands will not display these elements. As such, the **WINACTIV** command cannot be used when working with the ***Priority*** web interface.
+these will be visible to users while the procedure is running, whereas the **ACTIVATE** and **ACTIVATF** commands will not display these elements. As such, the **WINACTIV** command should not be used when working with the ***Priority*** web interface.
 
 The difference between the **ACTIVATE** and **ACTIVATF** commands is that **ACTIVATE** runs an *.exe* file whereas **ACTIVATF** runs a *.dll* file. In other words, a new process is created when the **ACTIVATE**
 command is used, whereas a procedure that is activated by the **ACTIVATF** command is executed in the same process as the form or procedure from which it is run.
@@ -172,7 +172,7 @@ You can also redirect the report results to an MS-Excel file. This command takes
 following code saves the **ORGUNITS** report as an Excel file.
 
 ```sql
-EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur', 444; 
+EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur'; 
 ```
 
 {% if site.output == "web" %}
@@ -182,5 +182,3 @@ EXECUTE WINACTIV '-P', 'ORGUNITS', '-X', '..\temp\cur', 444;
 additional advanced programming tools.
 {% endif %}
 
-
-WINACTIV '-P' | '-R' | '-L' | '-I', 'ENTITYNAME', ['-var:VARNAME', 'VARVALUE'], ['FTABLENAME', 'TABLEFILE'], ['-x', 'FILENAME'], ['-X', 'TEMPLATENUM', 'FILENAME'], ['-q'], ['-Q', 'COPIES'], ['-d', 'FILENAME'], ['-t', 'FILENAME'], ['-u', 'USERNAME'], ['-g', 'GROUPNAME'], ['-e', 'EMAIL'], ['-f', 'FILETOSEND'], ['-E', 'ENV'], ['-S'], ['-AFAX' |'-AMAIL'], 

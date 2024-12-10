@@ -4,6 +4,13 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 24.1
+
+### Decmeber 2024
+
+- Moved external variables (mistakenly shown with WINRUN) to [WINACTIV/ACTIVATE/ACTIVATF](Run-Procedure-SQLI).
+- Added example of how to use external variables when running a procedure, and restrucutred the page for better readibility.
+
 ## SDK 24.0
 
 ### September 2024
