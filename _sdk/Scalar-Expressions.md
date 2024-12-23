@@ -454,6 +454,14 @@ the message to a variable */
 :MSG = ENTMESSAGE('ORDERS','F',3);
 ```
 
+**Note:** For forms, you must always specify the full name of the form. In procedures, you can use '$' as an alias for the current procedure:
+
+```sql
+/* Using the COPYORDER procedure as an example */
+:MSG = ENTMESSAGE('$','P',3);
+/* is equivalent to: */
+:MSG = ENTMESSAGE('COPYORDER','P',3);
+```
 
 
 
