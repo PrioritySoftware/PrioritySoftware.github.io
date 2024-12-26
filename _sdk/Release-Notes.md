@@ -10,6 +10,8 @@ tags: 'Priority_SDK'
 
 - Moved external variables (mistakenly shown with WINRUN) to [WINACTIV/ACTIVATE/ACTIVATF](Run-Procedure-SQLI).
 - Added example of how to use external variables when running a procedure, and restrucutred the page for better readibility.
+- When reading XML, [XMLPARSE](XMLPARSE) now supports reading up to 45000 characters from a single tag in versions 23.1 and up.  
+- Added an example of how you can convert a Base64 file encoded in text in JSON/XML after reading it using XMLPARSE.
 
 ## SDK 24.0
 

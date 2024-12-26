@@ -11,7 +11,11 @@ tags: 'Priority_SDK'
 In addition to reading data from an XML/JSON file via [a form load](Interfaces), you can also use the XMLPARSE command.
 When the file contains several instances per tab, include the *--all* parameter to parse the entire file. Omit it to limit results to the first instance of each tab.
 
-**Note**: XMLPARSE can read a maximum of 1023 characters in a single XML tag. 
+[23.1]
+
+Starting with version 23.1, XMLPARSE can read up to 45,000 chracters in a single XML tag (make sure you have the latest BIN installed).
+
+In previous versions, XMLPARSE can read a maximum of 1023 characters in a single XML tag. 
 
 **Example:**
 ```sql
@@ -100,3 +104,44 @@ UNLINK INTERFXMLTAGS I2;
 ```
 
 ![](https://cdn.priority-software.com/docs/images/JsonParse.png "JsonParse.png")
+
+
+# Converting Files from Base64
+
+Some APIs may return a response with a file (usually an image/pdf) encoded as text in Base64. The following code demonstrates how you might convert the file back to the original format:
+
+```sql
+SELECT SQL.TMPFILE INTO :JSON1 FROM DUMMY;
+SELECT SQL.TMPFILE INTO :MSG FROM DUMMY; 
+LINK INTERFXMLTAGS I1 TO :JSON1; 
+GOTO 500 WHERE :RETVAL <= 0;
+/*Parse previously received JSON response*/
+EXECUTE XMLPARSE :RESPONSE, :OUTJSONTAB1, 0, :MSG, '', 'Y'; 
+/* Manipulation of the file should be done in the
+temporary file folder */
+SELECT SQL.TMPFILE INTO :PDFBASE64TMP FROM DUMMY;
+SELECT SQL.TMPFILE INTO :PDFFILETMP FROM DUMMY;
+SELECT SQL.TMPFILE INTO :FILTERTMP FROM DUMMY;
+/* Dump the parsed base64 contents into a temporary
+file */
+SELECT VALUE
+FROM INTERFXMLTAGS I1
+WHERE LINE > 0
+AND TAG = 'pdf'
+ASCII UNICODE :PDFBASE64TMP;
+UNLINK INTERFXMLTAGS I1;
+/* Manipulate file to meet requirements for
+converting from base64:
+1. Remove new line at end
+2. Ensure file ends with Line Feed*/
+SELECT '#' FROM DUMMY ASCII UNICODE ADDTO :PDFBASE64TMP;
+EXECUTE FILTER '-delnl' ,:PDFBASE64TMP, :FILTERTMP;
+EXECUTE FILTER '-filter', '#', '#', '010', :FILTERTMP,
+:PDFBASE64TMP;
+/* Convert from base64 */
+EXECUTE FILTER '-unbase64', :PDFBASE64TMP, :PDFFILETMP,
+SQL.TMPFILE;
+
+LABEL 500;
+UNLINK INTERFXMLTAGS I1;
+```
