@@ -343,6 +343,8 @@ ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder (for an
 
 - only one SELECT statement per request is supported
 
+- SELECT statements must specify the selected columns. <code>SELECT * FROM -TABLENAME-</code> is not supported.
+
 - 'database.table' notation is not supported, only table names should be used in SELECT statements
 
 - The following special characters can not be used in the names of objects (database, table, columns, etc.): @, #, $
