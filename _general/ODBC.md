@@ -45,6 +45,8 @@ Attempting to access just the subform (e.g., just **ORDERITEMS**) will generate 
 
 The data available via ODBC is subject to the system privileges of the user making the connection. Forms which you are not authorized to view in the Priority UI are also unavailable via ODBC.
 
+The number of returned records is capped based on the value of the MAXFORMLINES system constant in Priority (default value is 10,000). As increasing this value can negatively impact performance, when dealing with larger result sets we strongly recommend you implement pagination.
+
 ## Setting Up ODBC
 
 ### Update the BIN95 Folder
