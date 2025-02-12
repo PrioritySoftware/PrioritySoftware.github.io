@@ -113,10 +113,8 @@ The following rules apply to the internal names of all private entities added to
     start with a four-letter prefix or end with a four-letter suffix.
     Choose the first letter in the prefix/suffix for sorting purposes;
     the rest of the prefix/suffix should be the one normally used for
-    this customer.
-
-    **Important note:** [SEARCH-FIELD
-    triggers](Creating-your-Triggers#SEARCH-FIELD ) are
+    this customer.\
+    **Important note:** [SEARCH-FIELD triggers](Creating-your-Triggers#SEARCH-FIELD ) are
     the one exception to this rule, as their name cannot be changed.
     Instead, you have to use the standard trigger. This creates the
     slight risk that your trigger will be overwritten by a standard
@@ -127,6 +125,7 @@ The following rules apply to the internal names of all private entities added to
     **Note:** Certain forms, such as those of constants, have standard messages with numbers larger than 500.
 -   Do not add standard forms as sub-level forms of other forms (standard or custom). 
 -   When using LABELs in your code, use numbers with at least 4 digits. This will prevent conflicts with the label numbers used in standard triggers.
+-   To avoid unauthorized changes, any form that has triggers that insert into or update the USERS table is automatically designated as read only for all users except those in the system administrator group (tabula users).
 
 ## Reports
 

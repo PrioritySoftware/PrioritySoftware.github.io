@@ -9,12 +9,10 @@ trigger errors are encountered. The main trigger errors are:
 
 -   SQL syntax errors
 -   illegal or irresolvable variable types
--   syntax errors in [#INCLUDE
-    commands](Include-Triggers )
+-   syntax errors in [#INCLUDE commands](Include-Triggers )
 -   #INCLUDE commands that refer to non-existent forms, form columns or
     triggers
--   [form column
-    variables](SQL-Variables#Form-Column-Variables ) that
+-   [form column variables](SQL-Variables#Form-Column-Variables ) that
     refer to non-existent form/form column combinations (e.g.,
     :ORDERS.CUSTNAME, when there is no **CUSTNAME** column in the
     **ORDERS** form)
