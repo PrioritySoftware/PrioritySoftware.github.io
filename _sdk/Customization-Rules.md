@@ -109,6 +109,8 @@ The following rules apply to the internal names of all private entities added to
 -   You cannot delete a standard column from a standard form.
 -   When creating your own [multiple joins](Form-Columns#Special-Joins), use a join
     ID and column ID greater than 5.
+-   Forms cannot have more than a total of 10 outer joins (denoted with a ? question mark). This total includes both existing standard outer joins and those added by custom development.
+    
 -   Any [trigger](Creating-your-Triggers ) you add must
     start with a four-letter prefix or end with a four-letter suffix.
     Choose the first letter in the prefix/suffix for sorting purposes;
