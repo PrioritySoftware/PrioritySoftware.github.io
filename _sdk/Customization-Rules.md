@@ -110,7 +110,6 @@ The following rules apply to the internal names of all private entities added to
 -   When creating your own [multiple joins](Form-Columns#Special-Joins), use a join
     ID and column ID greater than 5.
 -   Forms cannot have more than a total of 10 outer joins (denoted with a ? question mark). This total includes both existing standard outer joins and those added by custom development.
-    
 -   Any [trigger](Creating-your-Triggers ) you add must
     start with a four-letter prefix or end with a four-letter suffix.
     Choose the first letter in the prefix/suffix for sorting purposes;
@@ -121,7 +120,6 @@ The following rules apply to the internal names of all private entities added to
     Instead, you have to use the standard trigger. This creates the
     slight risk that your trigger will be overwritten by a standard
     SEARCH-FIELD trigger that is changed in future software revisions.
-
 -   Any [form message](Errors-and-Warnings ) that you
     add must be assigned a number greater than 500.\
     **Note:** Certain forms, such as those of constants, have standard messages with numbers larger than 500.
