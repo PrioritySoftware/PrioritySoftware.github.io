@@ -1,6 +1,6 @@
 ---
 title: Working with Webhooks
-layout: default
+layout: onePage
 permalink: /webhooks
 tags: "Webhooks"
 class: nomenu

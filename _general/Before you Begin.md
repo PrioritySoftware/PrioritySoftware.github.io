@@ -1,6 +1,6 @@
 ---
 title: Before you Begin
-layout: default
+layout: onePage
 permalink: /general
 tags: "General"
 ---

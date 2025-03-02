@@ -1,6 +1,6 @@
 ---
 title: ODBC
-layout: default
+layout: onePage
 permalink: /odbc
 class: nomenu
 tags: "ODBC"

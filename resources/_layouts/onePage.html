@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+         <link rel="stylesheet" href="{{'/resources/assets/sideNav/jquery.ma.infinitypush.css' | relative_url}}">
+     <script src="{{'/resources/assets/sideNav/jquery.ma.infinitypush.min.js'| relative_url}}"></script>
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/resources/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="{{ '/resources/assets/js/search.js' | append: site.github.build_revision | relative_url }}"></script>
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+    {% include head.html %}
+
+     </head>
+
+  <body>
+    <!-- HEADER -->
+    {% include header.html %}
+      
+    <!-- MAIN CONTENT -->
+    <div class="flex-container">
+      <div class="padding"></div>
+    <main id="main_content_wrap" class="{{' ' | append : page.class}}">
+      <!-- Content -->
+      <section class="markdown-body default">
+        {{ content }}
+      </section>
+    </main>
+    <div id="search-panel">
+      <div id="search-box">
+        <!-- SearchBox widget will appear here -->
+      </div>
+      
+      <div id="hits">
+        <!-- Hits widget will appear here -->
+      </div>
+      </div>
+    <div class="padding-2"></div>
+    </div>
+    <script>
+    $(document).ready(function()
+    {
+      if(screen.width<=640)
+      {
+        $("body").addClass("mobile");
+      }
+      else
+      {
+        $("body").removeClass("mobile");
+      }
+    });
+    </script>
+  </body>
+    <!-- algolia search -->
+
+<script src="{{ '/resources/assets/js/search.js?v=' | append: site.github.build_revision | relative_url }}""></script>
+
+<!-- end of algolia search --> 
+</html>
