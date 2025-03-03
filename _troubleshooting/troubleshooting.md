@@ -4,19 +4,6 @@ layout: default
 permalink: /troubleshooting
 ---
 
-<style type="text/css">
-    
-    ul {
-        list-style-type: disc;
-    }
-
-    #main_content_wrap {
-        font-size: 120%;
-        width: 60%;
-    }
-
-</style>
-
 This page contains frequent issues that crop up when working with the Web SDK or REST API.
 
 ### Help! I'm trying to use the SDK/REST API but my browser is giving me an error about CORS. What should I do?

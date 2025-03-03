@@ -5,18 +5,6 @@ permalink: /general
 tags: "General"
 ---
 
-<style type="text/css">
-    
-    ul {
-        list-style-type: disc;
-    }
-
-    #main_content_wrap {
-        font-size: 120%;
-        width: 60%;
-    }
-
-</style>
 
 
 # Before you Begin
