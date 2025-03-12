@@ -11,7 +11,7 @@ tags: 'Priority_SDK'
 In addition to reading data from an XML/JSON file via [a form load](Interfaces), you can also use the XMLPARSE command.
 When the file contains several instances per tab, include the *--all* parameter to parse the entire file. Omit it to limit results to the first instance of each tab.
 
-[23.1]
+<span class="version-highlight">23.1</span>
 
 Starting with version 23.1, XMLPARSE can read up to 45,000 chracters in a single XML tag (make sure you have the latest BIN installed).
 

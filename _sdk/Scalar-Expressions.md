@@ -482,7 +482,7 @@ SELECT SYSPATH('MAIL', 0) FROM DUMMY; /* P:/system/mail/ */
 
 **NEWATTACH**('*filename*', \['*extension*'\])
 
-[22.0]()
+<span class="version-highlight">22.0</span>
 
 Creates a valid file location in the *system/mail* folder and returns it. While *extension* is optional, it is recommended that you add it. Note that the extension parameter should contain the dot as part of the string (**'.zip'** and not *'zip'*).
 
@@ -496,7 +496,7 @@ The function can be incorporated into SQL statements and use computed values, bu
 
 Keep in mind that the filename will be changed to lowercase, as can be seen in the example.
 
-[22.1]()
+<span class="version-highlight">22.1</span>
 
 In version 22.1, the function will also create the folder on the server (instead of just providing a valid location).
 

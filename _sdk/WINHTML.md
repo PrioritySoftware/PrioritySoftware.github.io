@@ -216,7 +216,7 @@ These variables are updated during runtime, so that if several documents are bei
 
 ## Displaying the Document 
 
-[22.0]()
+<span class="version-highlight">22.0</span>
 
 If you are executing WINHTML from a procedure, you can combine it with a **URL** step in order to display the document in the browser or download the docx file.
 

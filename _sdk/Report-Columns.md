@@ -372,7 +372,7 @@ distortion.
 
 > **Example:** See column #190 in the **WWWIV_5** report.
 
-[22.0]()
+<span class="version-highlight">22.0</span>
 
 You can now encode the contents of unicode text files as a QR code. To do so, specify a lowercase **q** in the *Picture* field (rather than an uppercase one). The column contents should be the unicode text file you want to encode. The file to encode can be stated explicitly or as a variable from the printing program.
 

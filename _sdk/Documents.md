@@ -22,7 +22,7 @@ The final document can be activated from a form via [Actions](Actions) (retrievi
 The INPUT parameter of the linked file for the procedure's main table
 must be named PAR. If the procedure is to be activated from the menu, you must define this parameter as input (specify *I* in the *Input* column) and specify the *Column Name* and *Table Name* of the table column that will be linked. If the procedure is to be activated only from a form, it is not necessary to specify the PAR parameter as input, but you do have to indicate column and table name.
 
-[23.0]()
+<span class="version-highlight">23.0</span>
 
 In this version, the linked file parameter can also be of type NFILE. This can prevent performance issues, if the main table is one with a very large amount of records. Note that if the user does not provide input, the system will show an error message and return to the input stage, rather than continue the program.
 

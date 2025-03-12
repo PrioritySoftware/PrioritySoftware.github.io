@@ -9,7 +9,7 @@ tags: "ODBC"
 
 ## Introduction
 
-[22.1]()
+<span class="version-highlight">22.1</span>
 
 The Priority ODBC driver allows 3rd party applications to access data on the Priority server using SQL statements.
 

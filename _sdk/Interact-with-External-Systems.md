@@ -9,7 +9,7 @@ tags: 'Priority_SDK'
 Copy a file:\
 <code>EXECUTE COPYFILE :source, :destination;</code>
 
-[22.1] (Requires up to date BIN folder)\
+<span class="version-highlight">22.1</span> (Requires up to date BIN folder)\
 When using copyfile to the MAIL or SYNC system folders, there is no need to create folders ahead of time. The system will automatically create them as necessary. Note that the names of created folders are always in lowercase (even if specified in UPPERCASE).
 
 

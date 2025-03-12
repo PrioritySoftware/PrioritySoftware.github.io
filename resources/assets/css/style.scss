@@ -214,29 +214,46 @@ code{
     {
       font-size:21px;
     }
-    .inline-link
-    {
-
-    padding: 16px;
-    margin: 40px;
-    font-size: 34px;
-    margin-top: 50px;
-   
-    display: inline-block;
-    min-width: 240px;
-    color: white;
-    border-radius: 7px;
-    background-color: #00a9ec;
-    
-
-    &:first-child {
-      background: #47d7c6;
-    }
-    &:last-child {
-      background: #9773ba
-    }
+    .inline-link {
+      padding: 16px;
+      margin: 20px;
+      font-size: 34px;
+      margin-top: 50px;
+      display: inline-block;
+      min-width: 240px;
+      color: white;
+      border-radius: 7px;
+      background-color: #0078D4; /* Default color from favicon.ico */
+      text-align: center;
+  
+      &:nth-child(1) {
+          background-color: #0078D4; /* Color 1 from favicon.ico */
+      }
+      &:nth-child(2) {
+          background-color: #00A9EC; /* Color 2 from favicon.ico */
+      }
+      &:nth-child(3) {
+          background-color: #47D7C6; /* Color 3 from favicon.ico */
+      }
+      &:nth-child(4) {
+          background-color: #9773BA; /* Color 4 from favicon.ico */
+      }
   }
   }
+}
+
+.links-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+
+.version-highlight {
+    background-color: #0078D4; /* Example corporate color from favicon.ico */
+    color: #FFFFFF; /* White text color for better contrast */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 .nav-topic.active {

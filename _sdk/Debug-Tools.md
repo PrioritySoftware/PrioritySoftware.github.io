@@ -11,7 +11,7 @@ forms, procedures and interfaces.
 
 You can also debug simple reports, i.e., reports run from the menu or by Action (as opposed to processed reports, which are executed by a procedure - in which case you debug the procedure). Finally, you need to optimize forms, reports and SQL queries.
 
-[23.0]()
+<span class="version-highlight">23.0</span>
 
 **Important!** Debug commands will not work when the DEBUGRESTRICTED system constant is set to 1. In freshly installed systems, the default is 1, so you will have to change it to 0 to use debugging tools.
 

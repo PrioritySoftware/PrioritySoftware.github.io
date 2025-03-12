@@ -11,7 +11,11 @@ This SDK provides a reference for how to use ***Priority's*** internal developme
 
 Before you begin, it is essential to be completely familiar with the user interface (see the **Priority User Interface Guide**, available from within ***Priority***). It is also important to be well versed in basic SQL concepts and commands.
 
-This SDK is a living document that is updated as time goes on. Features that were introduced in a specific Priority version are tagged with the version number. Features that are not tagged are available at least from version 21.1.
+This SDK is a living document that is updated as time goes on. Features that were introduced in a specific Priority version are tagged with the version number, looking like this:
+
+<span class="version-highlight">22.0</span>
+
+ Features that are not tagged are available at least from version 21.1.
 
 Please note that the SDK is technical in nature and does not go into licensing requirements that may be necessary for working with some features. The customer / partner is responsible for ensuring they have the necessary licensing to work with these features. 
 

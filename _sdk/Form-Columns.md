@@ -535,7 +535,7 @@ Joins for these forms are the same as normal. Use a single join if you want to b
 
 ### Supporting Transformation Interfaces
 
-[21.1]()
+<span class="version-highlight">21.1</span>
 
 MDM transformation interfaces take data from one type of record in the source company, and create a different type of record in the target company. For example, an interface that converts a purchase order in company A into a sales order in company B.
  
@@ -556,7 +556,7 @@ See the standard versions of these columns in the **ORDERS** form as an example.
 
 ### MDM-only Permissions
 
-[22.0]()
+<span class="version-highlight">22.0</span>
 
 You can limit certain forms and columns so that they can only be updated via Master Data Management (MDM, also known as EDI interfaces).
 

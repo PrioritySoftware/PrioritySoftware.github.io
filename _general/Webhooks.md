@@ -8,7 +8,7 @@ class: nomenu
 
 # Webhooks
 
-[20.1]()
+<span class="version-highlight">20.1</span>
 
 Priority now supports webhooks!
 
