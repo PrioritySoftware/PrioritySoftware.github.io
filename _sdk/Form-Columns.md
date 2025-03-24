@@ -239,20 +239,14 @@ one or more columns, and you may designate the type of sort. A given
 form column’s sort priority (an integer) determines how records are
 sorted on screen. The lower the integer assigned to a given column, the
 higher its priority in a sort. In addition to sort priority, you can
-also indicate the type of sort. There are four options:
+also indicate the type of sort. Due to historical reaosons, there are four options available:
 
 -   ascending (the default sort)
 -   descending
 -   alphanumeric ascending
 -   alphanumeric descending.
 
-An alphanumeric sort operates strictly according to the ASCII table.
-Thus, A13 will come before A2 and B200 will precede B39 (in ascending
-order). In contrast, the regular sort treats consecutive digits as a
-number (rather than individual characters). Hence, in ascending order,
-A2 precedes A13 and B39 precedes B200.
-
-
+In practice, the sort type is based on the type of column. String data (CHAR columns) are sorted in alphanumeric fashion (ascending or descending). Numeric values (INT, REAL, DATE, etc.) are sorted by value.
 
 **Note:** The designated sort priority and type constitute the default
 sort. A different sort order may be imposed by the user during data
