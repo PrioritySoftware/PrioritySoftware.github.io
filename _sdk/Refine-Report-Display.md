@@ -192,6 +192,42 @@ CSS classes can be applied to any of the following objects in
 > **Example:** For report definitions, see the **WWWTABS2** report. For
 > report column definitions, see columns #5 and #108 in the same report.
 
+### Priority Cloud - Download / Upload Style File
+
+In Priority Cloud, since you do not have direct access to the system folders, you'll have to use WINDBI to copy your file over.
+
+Although the *system/html* folder is not one of those available via the SYSPATH function, you can still access it using a relative path.
+
+1. Open SQL Development (WINDBI).
+2. Use the following code to copy the existing *style.htm* file.
+
+    ```sql
+    :TMPFILE = STRCAT(SYSPATH('TMP', 1), 'style2.html');
+    :HTMLFILE = '../../system/html/style.htm';
+    :DLFILE = NEWATTACH('style2', 'htm');
+
+    EXECUTE COPYFILE :HTMLFILE, :TMPFILE;
+    EXECUTE COPYFILE :TMPFILE, :DLFILE;
+
+    SELECT :DLFILE FROM DUMMY FORMAT;
+    ```
+
+3. Copy the file path of **DLFILE** to an attachments form (such as Customer Documents for Task, a sublevel of Tasks).
+4. Download the file, and add your desired styles.
+5. Upload the edited file back to Priority as a new attachment.
+6. Copy the file path of the attachment, and execute the following code:
+
+    ```sql
+    :TMPFILE = STRCAT(SYSPATH('TMP', 1), 'style2.html');
+    :HTMLFILE2 = '../../system/html/style2.htm';
+    :ULFILE = '../../system/mail/.../.../style2.htm';
+     /*use the file path of the uploaded file */
+
+    EXECUTE COPYFILE :ULFILE, :TMPFILE;
+    EXECUTE COPYFILE :TMPFILE, :HTMLFILE2;
+    ```
+
+
 ## Tips for Advanced Users 
 
 Setting the column width is particularly useful when you display two
