@@ -22,7 +22,8 @@ table for the upper-level form, with the addition of the characters
 
 To automatically create a text form and link it to its upper-level form,
 run the *Create Text Form* program (*System Management → Generators →
-Forms*).
+Forms*). Note that this program only works for custom forms (with a custom development prefix). 
+You cannot use it to add new text sublevels to standard forms.
 
 The newly created text form will appear in the *Form Generator* form,
 and its linkage to the upper-level form will be displayed through the
