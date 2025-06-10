@@ -49,7 +49,7 @@ The *Util* folder is an add-on folder that contains utilities that enhance the f
 The folder needs to be placed in the *priority/system* folder on the server.
 
 1. On the Priority server, navigate to the *priority/system* folder.
-2. Download the zipped *util* folder from [here](https://cust.priority-software.com/FIX/util/util.zip).
+2. Download the zipped *util* folder from [here](https://cdn.priority-software.com/docs/images/util.zip).
 3. Extract the contents of the archive to the *util* folder. If there is no such folder, create it; if such a folder already exists, back up it contents first, then replace the files inside.
 
 ## Development Permissions for non-tabula User Group
