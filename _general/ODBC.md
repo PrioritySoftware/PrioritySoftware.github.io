@@ -21,6 +21,8 @@ The driver does not provide direct access to the underlying database (MSSQL or O
 - To use ODBC, you must obtain a license for the ODBC module.
 - Ther user accessing ODBC must be assigned an API User license 
 
+**Note:** ODBC does not currently support authentication with SSO.
+
 ## Database Schema
 
 Each Priority company is treated a seperate database, with the database name taken from the internal company name (DNAME). If you want to view data from more than one company, you need to establish multiple connections.
