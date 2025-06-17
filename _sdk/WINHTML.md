@@ -227,7 +227,7 @@ If you are executing WINHTML from a procedure, you can combine it with a **URL**
   :FILENAME = 'document.pdf';
   :PATH = '';
   /* We use the NEWATTACH function to create a path in the system/
-  mail folder*/
+  mail folder. This path is relative and will be changed into a url*/
   SELECT NEWATTACH(:FILENAME) INTO :PATH FROM DUMMY;
   EXECUTE WINHTML '-d', 'WWWSHOWORD', '', '', '-v', :DOC, '-pdf', 
   :PATH;
