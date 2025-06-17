@@ -233,15 +233,7 @@ If you are executing WINHTML from a procedure, you can combine it with a **URL**
   :PATH;
   SELECT SQL.TMPFILE INTO :$.ADD FROM DUMMY; /*This file will 
   contain our URL */
-  /* You can find out the start of the URL by opening an existing 
-  attachment on the server and copying the start of the address up
-   to "primail" */
-  :URLSTART =  'https://exampleserver.com/comp/primail/';
-  /* Cut the previously generated path to only the subfolder and
-   filename */
-  SELECT SUBSTR(:PATH, 19, STRLEN(:PATH)) INTO :PATH FROM DUMMY;
-  /* Combine the url together into the ADD url file */
-  SELECT STRCAT(:URLSTART, :PATH)  FROM DUMMY
+  SELECT :PATH FROM DUMMY
   ASCII :$.ADD;
   ```
 3. Add a URL step to the procedure, with the ADD parameter.
