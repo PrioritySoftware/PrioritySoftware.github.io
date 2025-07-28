@@ -21,7 +21,14 @@ The driver does not provide direct access to the underlying database (MSSQL or O
 - To use ODBC, you must obtain a license for the ODBC module.
 - Ther user accessing ODBC must be assigned an API User license 
 
-**Note:** ODBC does not currently support authentication with SSO.
+## Authentication
+
+You can authenticate with the server in one of two ways:
+
+- With a Priority username and password.
+- Using personal access tokens. PATs can be defined in the **REST Interface Access Tokens** form in Priority. \
+If you access Priority using single sign on (SSO), use PATs for authenticating with ODBC.
+
 
 ## Database Schema
 
@@ -101,8 +108,10 @@ You can either pre-configure the data source, in the **ODBC Data Sources (64-bit
    - Tabula.ini: *tabula.ini* (name of configuration file in Priority server)
    - Language: 1 for Hebrew, 3 for English \
    **Note:** Language codes for other languages can be found in **System Management > Dictionaries > Translation > Languages**.
-   - User: *priority_username*
-   - Password: *priority_password*
+   - User: *priority_username* \
+   If you are using Personal Access Tokens, this should be the token.
+   - Password: *priority_password* \
+   If you are using Personal Access Tokens, this should always be 'PAT'.
    - Database: *internal_company_name*\
    **Note:** You can find the internal company name in Priority under **System Management > System Maintenance > Companies > Companies**.
 
