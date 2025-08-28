@@ -1,4 +1,6 @@
 collections:
+  restapi:
+    output: true
   sdk:
     output: true
 
@@ -15,6 +17,13 @@ defaults:
   -  
     scope:
       path: "_sdk"
+    values:
+      layout: "sdk_pdf"
+      output: pdf
+      type: sdk
+  -
+    scope:
+      path: "_restapi"
     values:
       layout: "sdk_pdf"
       output: pdf

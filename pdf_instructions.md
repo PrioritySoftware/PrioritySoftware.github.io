@@ -18,3 +18,12 @@ C:\"Program Files"\Prince\engine\bin\prince.exe -s .\resources\assets\css\pdfPri
 ```
 
 4. Review the file, particularly recent edits. If the file is ok, replace the existing file in \\ceshbel\Docs network directory.
+
+# REST Instructions
+
+Follow steps 1-2 above.
+
+Use the following prince command to generate the PDF:
+```
+ C:\"Program Files"\Prince\engine\bin\prince.exe -s .\resources\assets\css\pdfPrintStyle.css -j --input-list=./restPrince.txt -o ./PriorityRESTAPI.pdf
+ ```

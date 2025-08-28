@@ -29,6 +29,12 @@ defaults:
     values:
       layout: "sdk_nav"
       output: web
+  -
+    scope:
+      path: "_restapi"
+    values:
+      layout: "docs_nav"
+      output: web
 
 # Google Analytics
 # google_analytics: UA-12315884-16

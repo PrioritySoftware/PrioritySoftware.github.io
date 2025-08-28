@@ -1,0 +1,7 @@
+http://localhost:4000/restapi/
+http://localhost:4000/restapi/releasenotes/
+http://localhost:4000/restapi/authenticate/
+http://localhost:4000/restapi/request/
+http://localhost:4000/restapi/query/
+http://localhost:4000/restapi/modify/
+http://localhost:4000/restapi/removed-forms/
