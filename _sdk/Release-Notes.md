@@ -4,6 +4,12 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 25.0
+
+### September 2025
+
+- Fixed the example in [Dynamic Column Titles](Dynamic-Column-Titles) and added an explanation how to hide columns dynamically.
+
 ## SDK 24.1
 
 ### Decmeber 2024

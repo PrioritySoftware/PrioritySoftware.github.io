@@ -10,15 +10,23 @@ user enters the form. This option is available for forms that do not have a defa
 To change the column title, use a variable made up of the form name, the
 title name and \"TITLE\".
 
-> **Example:** To change the title of the \"TEST\" column in the
-> \"MY_FORM\" form to \"New Title,\" write in the [PRE-FORM
-> trigger](Creating-your-Triggers#PRE-FORM ):
->
-> ```sql
-> MYFORM.TEST.TITLE = 'New Title';
-> ```
->
-> See also the **FRGROUPS_DET** form.
+**Example:** To change the title of the *TEST* column in the
+**MY_FORM** form to *New Title*, write in the [PRE-FORM
+trigger](Creating-your-Triggers#PRE-FORM ):
+
+```sql
+:MYFORM.TEST.TITLE = 'New Title';
+```
+
+See also the **FRGROUPS_DET** form.
+
+In addition, you can set the value of a column to an empty string '' in order to hide the column. This allows you to show or hide columns dynamically. 
+
+```sql
+:MYFORM.TEST.TITLE = '';
+```
+
+For an example, see the **MATRIX** form.
 
 See also [Form Triggers](Form-Triggers ).
 
