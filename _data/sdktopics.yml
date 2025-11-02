@@ -276,7 +276,10 @@ chapters:
         url: Rules-Generator-Custom-Columns
   - title: VSCode Priority Dev Tools Extension
     url: VSCode-Extension
-    group: VSCode-Extension  
+    group: VSCode-Extension 
+  - title: Monitoring Performance - Heavy Queries
+    url: Monitoring-Performance
+    group: Performance 
 
 
 
