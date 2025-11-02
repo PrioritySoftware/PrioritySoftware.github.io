@@ -6,6 +6,10 @@ tags: 'Priority_SDK'
 
 ## SDK 25.0
 
+### November 2025
+
+- [Heavy Query Monitoring](Monitoring-Performance) provides a log of queries of exceptional length (minimum length determined by constant). Use it to monitor performance issues in the system.
+
 ### September 2025
 
 - Fixed the example in [Dynamic Column Titles](Dynamic-Column-Titles) and added an explanation how to hide columns dynamically.
