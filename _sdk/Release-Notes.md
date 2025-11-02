@@ -4,6 +4,12 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 25.1
+
+### November 2025
+
+- [JSON exports](Load-XML-JSON) now follow the structure of parsed files. 
+
 ## SDK 25.0
 
 ### September 2025

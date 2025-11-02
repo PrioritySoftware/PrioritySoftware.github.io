@@ -143,17 +143,25 @@ Go to the *Forms to be Loaded* form and its sub-level *Position of Column in Fil
 
 ### JSON Files
 
+<span class="version-highlight">25.1</span>
+
+Starting with version 25.1, JSON exports will follow the structure of the parsed file, same as in XML exports.
+
  The *Tags for Interface* form shows the results of the file parse. The form should show all properties that are present in the JSON file. You can delete properties that are not necessary. You can also add/revise property names.
 
 1. For parsed properties, the data in the first record appears in the *Value* column. If you want this (or any other value) to be used in all records, regardless of definitions in the file, specify *C* in the *Type of Value* column. Revise the values as necessary.
 
-2. To map JSON properties to a form, move the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate property. If the property is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
+2. A repeating property (indicated as an *R*) will be output as an array []. If your parsed file only contained one instance of the sub-object / properties, you may have to record this manually.
+
+3. While JSON has no attributes, you can use the Attribute column  to override the name of the outputted property. For example, if the parsed property is called *currency*, and you would the output to be *currencyCode*, you could use the Attribute column to rename the output while keeping a record of the originally parsed properties.
+
+3. To map JSON properties to a form, move the *Forms to be Loaded* form and its sub-level *Position of Column in File*. Use the next sub-level, *Tag Definitions*, to link each form column to the appropriate property. If the property is a date, you can also define the *Date Format*, indicating how the date value will be displayed. You can use any of the available [SQL date formats](ATOD-and-DTOA), such as MMDDYY or MM/DD/YY.
 
 **Note:** Decimal data in JSON files loaded into the system must always use a decimal point as the decimal separator, even if the decimal separator configured for the ***Priority*** system locale is a different symbol.
 
-### Differences between XML and JSON
+#### Exports in Versions Prior to 25.1
 
-Importing data for both XML and JSON is identical. However, JSON exports currently do not support renaming and nesting, and will just follow the structure of the form. So, for example, an export of ORDERS will look like this:
+In versions prior to 25.1, JSON exports do not support renaming and nesting, and will just follow the structure of the form. So, for example, an export of ORDERS will look like this:
 
 ```json
 {  "ORDERS": [
@@ -165,8 +173,6 @@ Importing data for both XML and JSON is identical. However, JSON exports current
       }
 ]}
 ```
-
-We are planning to further extend support for JSON exports in future releases.
 
 {% if site.output == "web" %}
 
