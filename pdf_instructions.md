@@ -8,7 +8,7 @@ PDF generation uses Prince PDF.
 2. Run the dev server with the following command:
 
 ```
-jekyll serve --config .\_pdf_config.yaml --destination ../pdf_site
+bundle exec jekyll serve --config .\_pdf_config.yaml --destination ../pdf_site
 ```
 
 3. Then generate the PDF using Prince from the pdf_site folder:
