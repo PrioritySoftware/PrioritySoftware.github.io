@@ -6,6 +6,8 @@ tags: 'Priority_SDK'
 
 {% include info.html content="<p>There was a brief period where WSCLIENT could be used as an SFTP client. This functionality is replaced by the SFTPCLNT program.</p>" %}
 
+<span class="version-highlight">25.1</span> content-type *soap+xml* is now supported.
+
 
 Using the WSCLIENT program you can make requests to an external web
 service. The WSCLIENT program is generic and can make requests to most
@@ -83,6 +85,8 @@ web services. Use the following syntax to work with a web service
 -   Requests sent to the web service and response received will be
     written to the server log when it is set to record
     [DEBUG](Debug-Tools#Logging ) level messages.
+
+
 
 ### Authenticating With OAuth2 
 
