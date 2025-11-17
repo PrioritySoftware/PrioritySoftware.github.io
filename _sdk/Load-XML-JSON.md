@@ -6,7 +6,14 @@ tags: 'Priority_SDK'
 
 ## Parsing a File
 
+Accepted encodings:
+
+JSON files must be in UTF-16 encoding.
+
+XML files can be UTF-8, Unicode, UTF-16. <!--- confirm with dev team --->
+
 ### Parsing File Tags/Fields
+
 If you are loading to or from an XML/JSON file, you must define the tags/properties in the system. The easiest way to do so is to import a file with the tags/properties and let the system parse it:
 
 **In the Web Interface**
