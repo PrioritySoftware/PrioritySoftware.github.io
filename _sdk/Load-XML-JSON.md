@@ -8,9 +8,9 @@ tags: 'Priority_SDK'
 
 Accepted encodings:
 
-JSON files must be in UTF-16 encoding.
+Incoming JSON files must be in UTF-16 encoding.
 
-XML files can be UTF-8, Unicode, UTF-16. <!--- confirm with dev team --->
+XML files can be UTF-8, Unicode, UTF-16. 
 
 ### Parsing File Tags/Fields
 

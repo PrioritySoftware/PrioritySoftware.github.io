@@ -12,7 +12,7 @@ EXECUTE CRPTUTIL \[MODE\] -1 \[TABLE\]
 
 - **MODE** is an integer with value 2 or 3. **2** will encrypt the data,
 while **3** will decrypt it.
-- The -1 is for the encryption method (AES).
+- The -1 is for the encryption method (AES-256).
 The encryption key is unique to each Priority installation; you cannot
 transfer encrypted data from one installation and decrypt it in another.
 
