@@ -6,10 +6,11 @@ tags: 'Priority_SDK'
 
 ## SDK 25.1
 
-### Version Release
+### Version Release (December 2025)
 
 - WSCLIENT can now receive responses in SOAP/xml format.
 - [UPSERT](Additions-to-SQL-Commands) combines an attempt to UPDATE a record with a fallback of INSERTing it if it does not exist.
+- [JSON exports](Load-XML-JSON) now follow the structure of parsed files. 
 
 ## SDK 25.0
 
