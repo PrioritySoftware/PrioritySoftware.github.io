@@ -163,6 +163,61 @@ specify the number of rows to retrieve.
 > 75 rows. We retrieve starting from row 101, as the results are OFFSET
 > by 100.
 
+## UPSERT
+
+<span class="version-highlight">25.1</span>
+
+The UPSERT commands represents the combination of a standard UPDATE command, with a fallback INSERT command. If the UPDATE command fails - usually because there is no matching record to the WHERE clause - then the system will perform the INSERT command.
+
+**Example:**
+
+```sql
+UPSERT LASTS
+SET NAME = 'FOO',
+VALUE = 123
+WHERE NAME = 'FOO'
+;
+```
+
+This example is equivalent to the following logic using UPDATE and INSERT:
+
+```sql
+UPDATE LASTS
+SET VALUE = 123
+WHERE NAME = 'FOO'
+;
+GOTO 1 WHERE :RETVAL > 0
+;
+INSERT INTO LASTS(NAME, VALUE)
+VALUES('FOO', 123)
+;
+LABEL 1
+;
+```
+
+The UPSERT command must include values for both the UPDATE and INSERT commands (<code>NAME = 'FOO'</code> in the above example). So even though we try to update by a value, it must also appear in the SET section of the code.
+
+UPSERT is very useful for dealing with semamphore values, such as values in the LASTS table, or custom constants. In other words, values that are expected to exist, but will need to be generated if this is the first time the code is run.
+
+### Unique Key Concerns
+
+Due to its structure, with an INSERT fallback, the UPSERT command always includes a change to the unique key of the table (to serve as the unique key in case of an INSERT). Depending on the conditions in your WHERE clause, this can cause inconsistent results. If there is a single record in the table and you try to change the unique key, the UPDATE will succeed. However, if there are more records in the table, the UPDATE section will fail (as a successful update would result in identical unique keys), and the INSERT section might succeed.
+
+For example, the following command is problematic:
+
+```sql
+UPSERT LASTS
+SET NAME = 'FOO',
+VALUE = 123;
+```
+
+The command could update the NAME (the unique key) of a single record in LASTS to 'FOO', or it could insert a new 'FOO' record, and it would be difficult for you to know which of the two it was.
+
+This issue can be easily avoided by using the unique key in your WHERE clause.
+
+
+
+
 {% if site.output == "web" %}
 ## Further Reading 
 
