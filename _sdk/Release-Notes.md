@@ -4,6 +4,12 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 25.1
+
+### Version Release
+
+- WSCLIENT can now receive responses in SOAP/xml format.
+
 ## SDK 25.0
 
 ### November 2025
