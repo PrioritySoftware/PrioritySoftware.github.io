@@ -6,9 +6,15 @@ tags: 'Priority_SDK'
 
 ## SDK 25.1
 
+<<<<<<< HEAD
 ### Version Release
 
 - WSCLIENT can now receive responses in SOAP/xml format.
+=======
+### November 2025
+
+- [JSON exports](Load-XML-JSON) now follow the structure of parsed files. 
+>>>>>>> 25_1_JSON_Interfaces
 
 ## SDK 25.0
 
