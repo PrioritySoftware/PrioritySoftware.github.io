@@ -17,20 +17,33 @@ Starting with version 23.1, XMLPARSE can read up to 45,000 chracters in a single
 
 In previous versions, XMLPARSE can read a maximum of 1023 characters in a single XML tag. 
 
+**Syntax**: 
+```sql
+EXECUTE XMLPARSE :XMLFILE, :LINKFILE, 0, :MSGFILE, ['-all'];
+```
+
+- **:XMLFILE** - XML file to parse.
+- **:LINKFILE** -  Link file into which the parsed data is written.
+- **0** - required syntax.
+- **:MSGFILE** - Link file into which errors are written, if there are any.
+- **'-all'** - Optional. Determines whether to read all tags in the file, or only the first instance of each tag.
+
 **Example:**
+This example shows the
+
 ```sql
 SELECT SQL.TMPFILE INTO :OUTXMLTAB1 FROM DUMMY;
- SELECT SQL.TMPFILE INTO :OUTXMLTAB2 FROM DUMMY; 
- SELECT SQL.TMPFILE INTO :MSG FROM DUMMY; 
- LINK INTERFXMLTAGS I1 TO :OUTXMLTAB1;
- GOTO 500 WHERE :RETVAL <= 0; 
- LINK INTERFXMLTAGS I2 TO :OUTXMLTAB2;
- GOTO 500 WHERE :RETVAL <= 0;
+SELECT SQL.TMPFILE INTO :OUTXMLTAB2 FROM DUMMY; 
+SELECT SQL.TMPFILE INTO :MSG FROM DUMMY; 
+LINK INTERFXMLTAGS I1 TO :OUTXMLTAB1;
+GOTO 500 WHERE :RETVAL <= 0; 
+LINK INTERFXMLTAGS I2 TO :OUTXMLTAB2;
+GOTO 500 WHERE :RETVAL <= 0;
 
 :FILE = STRCAT(SYSPATH('LOAD',1), 'example.xml');
 
-EXECUTE XMLPARSE :FILE, :OUTXMLTAB1, 0, :MSG; EXECUTE XMLPARSE :FILE,
-:OUTXMLTAB2, 0, :MSG, '-all';
+EXECUTE XMLPARSE :FILE, :OUTXMLTAB1, 0, :MSG;
+EXECUTE XMLPARSE :FILE, :OUTXMLTAB2, 0, :MSG, '-all';
 SELECT LINE, TAG, VALUE, ATTR 
 FROM INTERFXMLTAGS I1 WHERE LINE <> 0 FORMAT;
 SELECT LINE, TAG, VALUE, ATTR

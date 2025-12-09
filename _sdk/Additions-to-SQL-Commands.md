@@ -187,7 +187,7 @@ SET VALUE = 123
 WHERE NAME = 'FOO'
 ;
 GOTO 1 WHERE :RETVAL > 0
-;
+; /* check if UPDATE was successful, proceeds to INSERT if not */
 INSERT INTO LASTS(NAME, VALUE)
 VALUES('FOO', 123)
 ;
