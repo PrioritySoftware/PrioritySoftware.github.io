@@ -40,6 +40,8 @@ You can also look into the process in question in the **List of Recent Processes
 
 Note that heavy queries can also be generated when users run a search from a form (F11). This might indicate you need an index on a specific table column, or provide an opportunity to coach users on how to better optimize their queries.
 
+Keep in mind that in order to prevent heavy query records from balooning and taking up too much DB space, they are removed after a minimum of a week has elapsed. The exact deletion time depends on when routine maintenance processes are run.
+
 ## Example
 
 ![](https://cdn.priority-software.com/docs/images/HeavyQuery.png)
