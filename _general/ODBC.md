@@ -6,6 +6,7 @@ class: nomenu
 tags: "ODBC"
 ---
 
+{% include info.html content="<p>A new version of the ODBC driver was released on Dec. 22, 2025. You should reinstall the driver and update the BIN version if you are working with an older version.</p>" %}
 
 ## Introduction
 
