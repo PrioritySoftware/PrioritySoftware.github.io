@@ -6,17 +6,22 @@ tags: 'Priority_SDK'
 
 Using the WINHTML program, you can output the document in a variety of formats and control document properties. 
 
-In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**
+WINHTML can be run in two modes, *direct* ('-d') with full syntax options or *quick* ('-dQ' or '-dQe') with shortened syntax.
+
+# Direct ('-d') Syntax
+
+In the following syntax, optional parameters are specified in square brackets **[ ]**, while mutually exclusive parameters (i.e., you need to choose one of them) are separated by a pipe symbol **|**.
+
 ```sql
-EXECUTE WINHTML '-d' | '-dQ', 'document_name', 'table', 
+EXECUTE WINHTML '-d', 'document_name', 'table', 
 'linked_file', '-v', 'record_id', ['-trc', debug_file,] ['-s',] 
 ['-e',]  ['-edoc' | '-signpdf',] ['-format', format_num,] 
 ['-lang', lang_num,] ['-AMAIL',]
 ['-o' |'-pdf' | '-wo' | '-wpdf',] ['output_file',]
 ```
-## WINHTML Parameters
+
+## Direct Mode Parameters
 - '-d' - create document. 
-- '-dQ' - Print document with the default printer. You can only print a single document (i.e., one specified as a record ID) when using this parameter.
 - 'document_name' – the internal name of the document, e.g. WWWSHOWORDER.
 - 'table, linked_file' – specify this if you are outputting a record from a linked table. Leave as empty quotes if you are outputting from a standard table, e.g.:
 EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '',
@@ -38,14 +43,34 @@ The *-format* option can only be used when printing a single document, i.e. the 
 - '-lang lang_num' – Use this parameter to specify the language of the printout. This is useful if you want to output the document a format defined for a language differing from that of the current UI language of the user (e.g. a user working in the system with the UI in German, who wants to  output a document in French for a customer in France). In this case you need to specify both the format and the language in which the format is defined.
 - '-AMAIL' – automatically send the document to the customer/vendor contact, or to the customer/vendor directly (based on whether a contact with an email is defined or not).
 
-### Document Format
+# Quick ('-dQ' or '-dQe') Syntax
+
+```sql
+EXECUTE WINHTML '-dQ' | '-dQe', 'document_name', 'record_id';
+```
+
+- '-dQ' or '-dQe' - create document in quick mode. Use '-dQe' when working in a language other than English, to use the English version of the document (equivalent to using '-e' parameter in direct mode).
+- 'document_name' – the internal name of the document, e.g. WWWSHOWORDER.
+- 'record_id' – the unique id of the record you are outputting (e.g. ORD = 100).
+
+As can be seen, the only option available in direct-quick mode is whether to use the English printout program when working in a language other than English. This brief syntax is achieved by making certain assumptions about the output:
+
+- **The document should be printed out via the default printer.** Only a single copy will be printed.
+- Format will be according to the PRINTFORMAT table (see below).
+- Only a single record will be printed, based on record id (cannot print based on linked table of records).
+- Flags '-v' (single document, skip HTML cursor) and '-s' (silent, supress generation progress bar) are in effect.
+
+Due to limitations of working via the browser, physical printing is currently only available in quick mode.
+
+
+# Document Format
 
 As the printout will be created automatically, there is no user input to determine the print format; rather you have to set it yourself. 
 You can do so in one of two ways:
 - 	By specifying the format as part of the document execution command, using the -format parameter. (see [Executing the Document](#executing-the-document)). This option can only be used when printing a single document, i.e. the **-v** option is also specified.
 - 	By means of the PRINTFORMAT table, which always saves the last print format utilized by a given user for a given document. Thus, when the document runs, the system takes the print format to be displayed from this table. In order to ensure that your procedure always displays the desired print format, you have to update the relevant record in the PRINTFORMAT table prior to execution of the document. 
 
-### Determining Available Print Formats
+## Determining Available Print Formats
 To find out which print formats are available for a given document, run the following SQL commands in WINDBI:
 ```sql
 /* this code will show all system document print formats defined
@@ -60,7 +85,7 @@ SELECT EXEC FROM EXEC WHERE TYPE = 'P'
 AND ENAME = 'WWWSHOWORDER') FORMAT;
 ```
 
-### Setting the Print Format
+## Setting the Print Format
 At this point you should know the EXEC of the document you want to run and the number of the print format you want to display. 
 While both HTML formats and Word templates are stored as negative values in EXTMSG and TRIGMSG respectively, this could create an overlap of values in the PRINTFORMAT table. To distinguish between the two, Word templates must be recorded as positive values in PRINTFORMAT.
 
@@ -81,9 +106,9 @@ UPDATE PRINTFORMAT SET VALUE = (:WORDFORMAT * -1)
 WHERE EXEC = :EXEC AND USER = SQL.USER;
 ```
 
-## WINHTML Examples
+# WINHTML Examples
 
-### Executing the Document
+## Executing the Document
 
 The following examples come in pairs. The first example is for outputting a single document (with '-v'), the second one is for outputting multiple documents:
 
@@ -144,7 +169,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', 'ORDERS', :TMPORDERS,
 
 The above code will create the files in the temp folder of the Priority installation. 
 
-### Printing with -format
+## Printing with -format
 
 ```sql
 :ORD = 100;
@@ -161,7 +186,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s',
 ```
 
 
-### Printing the Document using the Default Printer
+## Printing the Document using the Default Printer
 
 If you want to print the document, use **'-dQ'** instead of '-d'. In this example we assume our order has an id of 100. Remember that you must specify the document as a record ID in this case.
 
@@ -172,7 +197,7 @@ EXECUTE WINHTML '-dQ', 'WWWSHOWORDER', :ORD
 
 
 
-### Creating a Digitally Signed PDF Document using Procedure Code
+## Creating a Digitally Signed PDF Document using Procedure Code
 Assuming that the user running the procedure has been granted the privileges required for digitally signing PDF documents, a HTML document may be converted into a PDF and digitally signed from within the procedure itself. This is done by adding the **–signpdf** option to the WINHTML command. Remember that a digital signature is not the same as an e-document!
 
 Example: The following code will create a digitally signed PDF of the sales order in which ORD = 100:
@@ -184,7 +209,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWORDER', '', '', '-v', :ORD, '-s',
 '-signpdf', '-pdf', :PDFFILE;
 ```
 
-### Creating an E-Document using Procedure Code 
+## Creating an E-Document using Procedure Code 
 If you are required to create a digitally signed E-Document, for instance, when printing financial documents, you can create a digitally signed E-Document from within the procedure itself. This is done by adding the  **-edoc** option to the WINHTML command.
 
 Example: The following code will create a digitally signed E-Document of an Invoice/Credit Memo:
@@ -201,7 +226,7 @@ EXECUTE WINHTML '-d', 'WWWSHOWCIV', '', '', '-v', :IV, '-g',
 
 **Note:** When using the -AMAIL parameter, do not specify a path/filename, as the file will be renamed automatically and saved in the relevant invoice's attachments.
 
-### Saving a Certified Copy when Printing a Document
+## Saving a Certified Copy when Printing a Document
 You can define a procedure so that, when the document is printed or sent by e-mail (:SENDOPTION = 'PRINT' or 'AMAIL'), a certified copy is saved that can be printed later (using the Create Certified Copy program). \
 In order to save a copy:
 - 	Include an HTMLEXTFILES step which goes over the attached files.
