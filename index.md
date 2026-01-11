@@ -28,6 +28,7 @@ The Priority SDK covers how to develop custom forms, procedures and reports for 
 <a  class="inline-link" href="./sdk/Introduction">Priority SDK</a>
 <a  class="inline-link" href="./webhooks">Webhooks</a>
 <a  class="inline-link" href="./odbc">ODBC</a>
+<a  class="inline-link" href="./OIDC_Authentication_Migration">OIDC Authentication</a>
 </div>
 
 

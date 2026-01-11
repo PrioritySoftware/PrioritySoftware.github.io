@@ -1,3 +1,10 @@
+---
+title: Before you Begin
+layout: onePage
+permalink: /OIDC_Authentication_Migration
+tags: "General"
+---
+
 # Migrating to OIDC Authentication
 
 ## Overview
