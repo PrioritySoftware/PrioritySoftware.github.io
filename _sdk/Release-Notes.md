@@ -6,6 +6,10 @@ tags: 'Priority_SDK'
 
 ## SDK 25.1
 
+### January 2026
+
+- Reworked documentation of [WINHTML](WINHTML) syntax: '-d' and '-dQ' are two distinct modes that support different syntax options.
+
 ### Version Release (December 2025)
 
 - WSCLIENT can now receive responses in SOAP/xml format.
