@@ -21,6 +21,8 @@ strings, the encrypted data may be longer than can fit in a single
 field; you may have to allow for overflow into another line. This is
 demonstrated with the INTDATA1 field in the example below.
 
+{% include alert.html content="<p><strong>Important:</strong>  If you run the <strong>Reset Priority Connect Data</strong> program, this will regenerate your encryption key and you will no longer be able to decrypt data that is currently encrypted.</p>" %}
+
 The following example demonstrates encryption and decryption. You can
 run it in WINDBI to better understand the functionality.
 
