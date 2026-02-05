@@ -16,7 +16,7 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     (parameters are explained in the next section):
 
     ```sql
-    EXECUTE INTERFACE 'interface_name', 'msgfile', ['-L', 'link_file'],
+    EXECUTE INTERFACE 'interface_name', ['msgfile'], ['-L', 'link_file'],
     ['-i', 'Data_File'], ['-stackerr', 'stackerr_file'],
      ['-w'], ['-ns'], ['-nl'], ['-nv'],
     ['-noskip'],['-enforcebpm'], ['-t'], ['-W'], ['-m'],
@@ -235,7 +235,7 @@ the form or procedure and will prepare all required privileges.
 -   Execute interface from file specified in **Form Load Designer**
 
 ```sql
-EXECUTE INTERFACE 'interface', SQL.TMPFILE;
+EXECUTE INTERFACE 'interface', '';
 ```
 
 -   Execute interface from file specified in code
@@ -243,7 +243,7 @@ EXECUTE INTERFACE 'interface', SQL.TMPFILE;
 ```sql
 /* In this example, we run the interface on a file that
 was imported in a procedure step to parameter FIL */
-EXECUTE INTERFACE 'interface', '-i', :$.FIL, SQL.TMPFILE;
+EXECUTE INTERFACE 'interface', '-i', :$.FIL, '';
 ```
 
 - Run interface based on load table
@@ -259,7 +259,7 @@ SELECT SQL.LINE, '1', CPROFNUM
 FROM CPROF 
 WHERE PDATE = SQL.DATE8;
 
-EXECUTE INTERFACE 'OPENORDBYCPROF', SQL.TMPFILE, '-L', :G1;
+EXECUTE INTERFACE 'OPENORDBYCPROF', '' , '-L', :G1;
 
 LABEL 99;
 UNLINK GENERALLOAD ORD;
@@ -278,7 +278,7 @@ INSERT INTO ORDERS
 SELECT * FROM ORDERS ORIG
 WHERE CURDATE = '03/22/23';
 
-EXECUTE INTERFACE 'DUMPORD', SQL.TMPFILE, '-o', '-L', :O1,
+EXECUTE INTERFACE 'DUMPORD', '', '-o', '-L', :O1,
 '-l', 'GENERALLOAD', :G1;
 
 LINK GENERALLOAD TO :G1;
@@ -302,7 +302,7 @@ SELECT * FROM ORDERS ORIG
 WHERE CURDATE = '03/22/23';
 
 /* the interface is defined as using XML files */
-EXECUTE INTERFACE 'DUMPORDXML', SQL.TMPFILE, '-ou8'
+EXECUTE INTERFACE 'DUMPORDXML', '', '-ou8'
  '-L', :O1, '-f', :OUTFILE;
 
 LABEL 99;
