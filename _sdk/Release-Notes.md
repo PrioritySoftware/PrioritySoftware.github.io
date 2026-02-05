@@ -6,6 +6,10 @@ tags: 'Priority_SDK'
 
 ## SDK 25.1
 
+### February 2026
+
+- Updated documentation and examples of [interfaces](Execute-FormLoads) to indicate that the message file is optional and can be replaced with an empty string.
+
 ### January 2026
 
 - Reworked documentation of [WINHTML](WINHTML) syntax: '-d' and '-dQ' are two distinct modes that support different syntax options.

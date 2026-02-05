@@ -14,6 +14,8 @@ bundle exec jekyll serve --config .\_pdf_config.yaml --destination ../pdf_site
 3. Then generate the PDF using Prince from the pdf_site folder:
 
 ```
+Set-Location 
+"c:\Users\Chanamel\OneDrive - Priority Software LTD\Developer Portal\pdf_site";
 C:\"Program Files"\Prince\engine\bin\prince.exe -s .\resources\assets\css\pdfPrintStyle.css -j --input-list=./prince-list.txt -o ./PrioritySDK.pdf
 ```
 
