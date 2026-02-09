@@ -16,7 +16,7 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     (parameters are explained in the next section):
 
     ```sql
-    EXECUTE INTERFACE 'interface_name', ['msgfile'], ['-L', 'link_file'],
+    EXECUTE INTERFACE 'interface_name',  '' | 'msgfile', ['-L', 'link_file'],
     ['-i', 'Data_File'], ['-stackerr', 'stackerr_file'],
      ['-w'], ['-ns'], ['-nl'], ['-nv'],
     ['-noskip'],['-enforcebpm'], ['-t'], ['-W'], ['-m'],
@@ -43,9 +43,9 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
 
 -   *'interface_name'* - The *Load Name* used to identify the form
     load in the *Form Load Designer*.
--   *'msgfile'* - The file in which error messages will be recorded.
+-   *'' | 'msgfile'* - The file in which error messages will be recorded.
     This can later be used to display the resulting message to the user
-    (e.g., \"5 out of 6 records were loaded.\").
+    (e.g., \"5 out of 6 records were loaded.\"). This is mostly relevant when you are planning to show the message to the user; if you do not, it is better to leave it as an empty string ''.
 -   '-L', *'link_file'* - Use this option when you want the
     **INTERFACE** program to refer to a linked file of the load table.
     '-L' tells the load program to use a linked file, and
