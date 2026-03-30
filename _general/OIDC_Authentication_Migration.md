@@ -61,7 +61,8 @@ Before registering, gather the following information about your application:
 
 ### Step 2: Submit Registration Request
 
-Open a service ticket with Priority Support and include:
+**For Software Partners:**
+Contact Partner Enablement with the following information:
 
 1. Your application name
 2. Redirect URI(s)
@@ -69,10 +70,8 @@ Open a service ticket with Priority Support and include:
 4. Background image file (attached, if applicable)
 5. Brief description of your integration
 
-**How to Open a Service Ticket:**
-- Contact Priority Support through [**Priority Xpert**](support.priority-software.com)
-- Subject: "OIDC Application Registration Request"
-- Include all required information listed above
+**For Regular Customers:**
+An addon for Priority ERP will be available in the future to streamline the registration process. Please check back for updates or contact your Priority account representative for more information.
 
 ### Step 3: Receive Your Credentials
 
@@ -82,7 +81,7 @@ Once your application is registered, Priority Software will provide you with the
 |------------|-------------|----------------|
 | **Client ID** | Public identifier for your application | Can be stored in client-side code |
 | **Client Secret** | Secret key for authenticating your application | **Must be kept secure** - store server-side only |
-| **Scope** | Permissions your application can request | Use only the scopes provided |
+
 
 **⚠️ Security Warning:**
 - **Never** expose the Client Secret in client-side code or public repositories
@@ -181,20 +180,22 @@ https://auth.priority.example.com/authorize?
   response_type=code&
   client_id=YOUR_CLIENT_ID&
   redirect_uri=YOUR_REDIRECT_URI&
-  scope=YOUR_SCOPE&
-  audience=customer_app&
+  scope=openid%20profile%20wcf_api%20rest_api&
+  audience=["wcf_api","rest_api"]&
   code_challenge=CODE_CHALLENGE&
-  code_challenge_method=S256
+  code_challenge_method=S256&
+  grant_type=authorization_code
 ```
 
 **Parameters:**
 - `response_type`: Always `code` for authorization code flow
 - `client_id`: The Client ID provided by Priority
 - `redirect_uri`: Must match your registered Redirect URI exactly
-- `scope`: The scope(s) provided by Priority
-- 'audience': Always 'customer_app'
+- `scope`: **'openid profile wcf_api rest_api'** (space-separated, URL-encoded)
+- `audience`: **[ "wcf_api", "rest_api"]** (JSON array)
 - `code_challenge`: The generated code challenge from step 1
 - `code_challenge_method`: Always `S256` (SHA-256 hashing)
+- `grant_type`: Always `authorization_code`
 
 #### 3. Handle Callback
 
