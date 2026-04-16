@@ -84,3 +84,5 @@ As previously mentioned, the body will contain a json of field values added to t
 ## Webhook - Error Log
 
 <span class="version-highlight">26.0</span> A webhook error log is now available to help troubleshoot webhook delivery issues. View webhook errors at **System Management > System Maintenance > Periodic Maintenance > BPM Maintenance > Webhook - Error Log**.
+
+Errors are kept for 7 days.
