@@ -8,11 +8,7 @@ class: nomenu
 
 # Webhooks
 
-<span class="version-highlight">20.1</span>
-
-Priority now supports webhooks!
-
-Priority administrators can now fire webhooks from standard business process management (BPM) rules and business rules. Use them to trigger functions in other apps based on events in Priority.
+Priority supports webhooks, which can be fired from standard business process management (BPM) rules and business rules. Webhooks enable integration with other applications by triggering functions based on events in Priority.
 
 Working with Webhooks requires the Webhooks module.
 
