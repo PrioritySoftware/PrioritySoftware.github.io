@@ -26,6 +26,8 @@ Before you can begin working with webhooks, you'll have to define **Webhook Endp
 
 For each webhook, give it a name, and the URL of the hook catcher. You can also create an authentication token to secure the webhook. Note that the authentication token is obscured as soon as you leave the line, so you should copy it immediately after generating it, and configure it in your app's webhook endpoint.
 
+<span class="version-highlight">26.0</span> You can now configure longer URLs by using the **URL - Cont.** and **URL - Cont. (2)** fields in Webhook Definitions to extend the URL beyond the standard field length.
+
 ## Adding a Webhook to a Business Rule
 
 Working with webhooks is identical to creating other business rules in Priority. In this example, we'll use the **Customer Shipments** form, adding a rule that fires a webhook to our app when the delivery is on its way to the customer.
@@ -78,3 +80,7 @@ As previously mentioned, the body will contain a json of field values added to t
       }
     }
 ```
+
+## Webhook - Error Log
+
+<span class="version-highlight">26.0</span> A webhook error log is now available to help troubleshoot webhook delivery issues. View webhook errors at **System Management > System Maintenance > Periodic Maintenance > BPM Maintenance > Webhook - Error Log**.
