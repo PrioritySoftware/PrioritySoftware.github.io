@@ -75,7 +75,7 @@ if the procedure is run as an Action from a form.
 
 The following basic steps are reserved for use by **Priority Software** only.
 
-- **CLIENT**
+- **CLIENT** - passes information from the server to UI client.
 
 
 
