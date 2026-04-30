@@ -12,8 +12,13 @@ can be accompanied by an attachment. Thus, you need to define one or
 more users and/or e-mail addresses to which the message is to be sent,
 as well as the filename (if you are sending an attachment).
 
+By default, the email subject is identical to the message body.
+ Starting with version 26.1, you can also specify a custom subject line for the email message.
+
 **Tip:** Use ***Priority*** groups to define multiple users and/or
 e-mail addresses.
+
+
 
 > **Examples:**
 > ```sql
@@ -27,6 +32,41 @@ e-mail addresses.
 > ```
 
 See also [Form Triggers](Form-Triggers ).
+
+## Setting the Email Subject
+
+<span class="version-highlight">26.1</span> You can now specify a separate subject line by providing a second message number parameter in the MAILMSG command. 
+
+### Syntax
+
+```sql
+MAILMSG <body_message_num>,<subject_message_num> TO USER|EMAIL <recipient> ...;
+```
+
+Where:
+- `<body_message_num>` is the message number for the email body
+- `<subject_message_num>` is the message number for the email subject
+
+If the subject exceeds 250 characters, it will be automatically truncated.
+
+### Example
+
+```sql
+:EMAIL = 'user@example.com';
+MAILMSG 1,2 TO EMAIL :EMAIL;
+```
+
+In this example:
+- Message 1 contains the email body
+- Message 2 contains the email subject
+
+### Previous Behavior (Before Version 26.1)
+
+In versions prior to 26.1, the MAILMSG command did not support specifying a custom subject. The email subject was automatically set to the message body text. If you used the old syntax with only one message number, the same message text was used for both the subject and body:
+
+```sql
+MAILMSG 5 TO USER :USER;  /* Subject and body both use message 5 */
+```
 
 ## Controlling the Appearance of Line Breaks within a Message 
 
