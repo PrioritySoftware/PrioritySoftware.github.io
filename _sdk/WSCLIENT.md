@@ -86,7 +86,147 @@ web services. Use the following syntax to work with a web service
     written to the server log when it is set to record
     [DEBUG](Debug-Tools#Logging ) level messages.
 
+### Examples
 
+1. Simple request to a webservice that includes a plain text body.
+
+```sql
+/* temporary files for body and response */
+SELECT SQL.TMPFILE, SQL.TMPFILE 
+INTO :BODY, :RESPONSE FROM DUMMY;
+:URL = 'www.example.com/APIendpoint';
+SELECT 'example' FROM DUMMY ASCII :BODY;
+
+EXECUTE WSCLIENT :URL, :BODY, :RESPONSE;
+
+/* errors returned in ERRMSGS for current user 
+and type 'w' */
+SELECT * FROM ERRMSGS 
+WHERE USER = SQL.USER
+AND TYPE = 'w'
+;
+```
+
+2. JSON POST request to a REST webservice. In this case we assume the body was generated earlier (e.g., by form interface).
+
+```sql
+SELECT SQL.TMPFILE INTO :RESPONSE FROM DUMMY;
+:URL = 'www.example.com/APIendpoint/ORDERS';
+SELECT 'example' FROM DUMMY ASCII :BODY;
+
+EXECUTE WSCLIENT :URL, :BODY, :RESPONSE, 
+'-method', 'POST', '-content', 'application/json';
+
+/* errors returned in ERRMSGS for current user 
+and type 'w' */
+SELECT * FROM ERRMSGS 
+WHERE USER = SQL.USER
+AND TYPE = 'w'
+;
+```
+
+3. Using *urlfile* and *head* to specify a very long url, and saving error messages to a dedicated file.
+
+```sql
+/* create temporary files for long url,
+header, response, and errors */
+SELECT SQL.TMPFILE, SQL.TMPFILE, SQL.TMPFILE 
+INTO :RESPONSE, :HEAD, :LONGURL
+FROM DUMMY;
+SELECT SQL.TMPFILE INTO :ERRORMSGS
+FROM DUMMY;
+/* concatenate long url in file from a table */
+SELECT STRCAT(URL, URL1, URL2)
+FROM URLTABLE
+WHERE WSNAME = 'EXAMPLE'
+ASCII :LONGURL
+;
+/* create header file */
+SELECT 'Authorization: Bearer eyJhbGc...' FROM DUMMY ASCII :HEAD;
+
+EXECUTE WSCLIENT '', :BODY, :RESPONSE, '-msg', :ERRORMSGS,
+'-urlfile', :LONGURL, '-head', :HEAD;
+```
+
+4. Using multiple headers with the `-head2` parameter for API authentication and custom headers.
+
+```sql
+SELECT SQL.TMPFILE, SQL.TMPFILE INTO :RESPONSE, :ERRORMSGS FROM DUMMY;
+:URL = 'https://api.example.com/v1/orders';
+
+EXECUTE WSCLIENT :URL, :BODY, :RESPONSE, '-msg', :ERRORMSGS,
+'-method', 'POST',
+'-content', 'application/json',
+'-head2', 'Authorization: Bearer abc123def456',
+'-head2', 'X-API-Key: your-api-key-here',
+'-head2', 'X-Request-ID: 12345';
+```
+
+<!--- TODO - test this myself! -->
+
+5. Using `multipart/form-data` with basic key-value fields.
+
+When sending form data to APIs that require `multipart/form-data` content type, build the body file with alternating lines of field names and field values. WSCLIENT automatically generates the boundary.
+
+```sql
+SELECT SQL.TMPFILE INTO :_TMP_BODY FROM DUMMY;
+
+/* Build form data: alternating field names (odd lines) and values (even lines) */
+SELECT 'username' FROM DUMMY ASCII :_TMP_BODY;
+SELECT 'john_doe' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT 'email' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT 'john@example.com' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT 'company' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT 'Acme Inc.' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+
+SELECT SQL.TMPFILE INTO :RESPONSE FROM DUMMY;
+SELECT SQL.TMPFILE INTO :MSGFILE FROM DUMMY;
+
+:CONTENTSTR = 'multipart/form-data;';
+:METHOD = 'POST';
+
+EXECUTE WSCLIENT 'https://api.example.com/users', :_TMP_BODY, :RESPONSE,
+  '-msg', :MSGFILE,
+  '-content', :CONTENTSTR,
+  '-method', :METHOD;
+
+SELECT * FROM ERRMSGS WHERE USER = SQL.USER AND TYPE IN ('w', 'W') FORMAT;
+```
+
+6. Using `multipart/form-data` to upload files.
+
+To include file uploads in a `multipart/form-data` request, prefix the file path with `@`. WSCLIENT handles the file content automatically without requiring Base64 encoding.
+
+```sql
+SELECT SQL.TMPFILE INTO :_TMP_BODY FROM DUMMY;
+SELECT SQL.TMPFILE INTO :file1 FROM DUMMY;
+SELECT SQL.TMPFILE INTO :file2 FROM DUMMY;
+
+/* Write content into the files to upload */
+SELECT 'Invoice content here' FROM DUMMY ASCII :file1;
+SELECT 'Certificate data here' FROM DUMMY ASCII :file2;
+
+/* Build form data with both regular fields and file fields */
+SELECT 'invoice_type' FROM DUMMY ASCII :_TMP_BODY;
+SELECT 'monthly' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT 'invoice_file' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT STRCAT('@', :file1) FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT 'certificate' FROM DUMMY ASCII ADDTO :_TMP_BODY;
+SELECT STRCAT('@', :file2) FROM DUMMY ASCII ADDTO :_TMP_BODY;
+
+SELECT SQL.TMPFILE INTO :RESPONSE FROM DUMMY;
+SELECT SQL.TMPFILE INTO :MSGFILE FROM DUMMY;
+
+:CONTENTSTR = 'multipart/form-data;';
+:METHOD = 'POST';
+
+EXECUTE WSCLIENT 'https://api.example.com/upload', :_TMP_BODY, :RESPONSE,
+  '-msg', :MSGFILE,
+  '-content', :CONTENTSTR,
+  '-method', :METHOD;
+
+SELECT * FROM ERRMSGS WHERE USER = SQL.USER AND TYPE IN ('w', 'W') FORMAT;
+```
 
 ### Authenticating With OAuth2 
 
