@@ -143,3 +143,8 @@ _algolia_api_key
 jekyll-algolia-record-too-big.log
 .vscode/settings.json
 .gitignore
+.github/skills/wsclient-helper/README.md
+.github/skills/wsclient-helper/SKILL.md
+.github/skills/wsclient-helper/references/examples.md
+.github/skills/wsclient-helper/references/parsing.md
+.github/skills/wsclient-helper/templates/basic-template.sql
