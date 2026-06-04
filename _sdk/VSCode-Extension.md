@@ -4,114 +4,162 @@ group: VSCode-Extension
 tags: 'Priority_SDK'
 ---
 
-{% include info.html content="<p> The Priority Dev Tools extension is currently in beta and some features are still in development.</p>" %}
+{% include info.html content="<p>The Priority Dev Tools extension is currently in beta and some features are still in development.</p>" %}
 
 ## Introduction
 
-Priority has a dedicated Dev Tools extension available for Visual Studio Code, currently in beta. This extension will assist you in developing quickly and productively in the Visual Studio Code environment.
+**Priority Dev Tools** is a Visual Studio Code extension that provides an integrated development environment for **Priority** customization work. It enables editing triggers and procedure steps, running SQLI, navigating code, and preparing forms and procedures — all without leaving VS Code.
 
-## Features
+The extension connects to a **Priority** environment via OData and reflects changes back to **Priority** in real time. It complements **Priority**'s own interface for form design, configuration, and testing.
 
--	Edit, create, and delete **Priority** form/field triggers
--	Edit SQLI steps in procedures
--	Syntax check for SQLI
--	Code completion for table names, keywords, form fields, and #INCLUDE statements
--	Code snippets for most built-in **Priority** functions
--	WINDBI (SQL Development program)
--	Navigation between entities using breadcrumbs
--	"Go to definition" for #INCLUDE statements and table definitions
--	Form and Program preparation
--	Code folding
--	Vertical ruler
+## Prerequisites
 
-## Working Assumptions
+### System Requirements
 
-To start working the extension, ensure that:
+Before installing **Priority Dev Tools**, verify you have:
 
--	You have a **Priority** application server.
--	You have an active user in a working **Priority** Web environment.
--	You have a license for the **APPVSCODE** application (check the [Applications for License](priority:priform@LICAPPS::.:tabula.ini:3) form).
--	You know the URL to access the OData service (run the [Send Program Activation Link](priority:priform@MGLINK.P::.:tabula.ini:3) program).
--	Visual Studio Code is installed on your computer.
+- **Priority application server** (version 21.0 or higher recommended)
+- **Personal access token (PAT)** — see [Setting Up a Personal Access Token](#setting-up-a-personal-access-token) below
+- **APPVSCODE** application included in your **Priority** license
 
-## Setups
+### Verifying Your License
 
-1.	In **Priority**, add your username to the **APPVSCODE** application:
+1. Open the [Applications for License](priority:priform@LICAPPS::.:tabula.ini:3) form.
+   - Path: **System Management** > **System Maintenance** > **Software Licenses**
 
-	a.	Open the [Personnel File](priority:priform@USERSB::.:tabula.ini:3) form and retrieve your username. If you do not have an **API User Name**, define one now. The user name must be composed of English characters only.
+2. Locate **APPVSCODE** in the **Application ID** field.
 
-	b.	Open the [Applications for License](priority:priform@LICAPPS::.:tabula.ini:3) form.
+3. If missing, run the [Renew License](priority:priform@GETUPGRADEPWD.P::.:tabula.ini:3) program.
 
-	c.	Locate the **APPVSCODE** application in the **Application ID** field. If **APPVSCODE** does not appear, run the [Renew License](priority:priform@GETUPGRADEPWD.P::.:tabula.ini:3) program.
+4. Open the **Users for Application** subform and verify your user exists. Add the user if necessary.
 
-	d.	Move to the **Users for Application** subform and add your username.
+![](https://cdn.priority-software.com/docs/images/VSCode_1.png)
 
-2.	Create an empty folder on your PC. This folder will be used for intermediate WINDBI files.
+### Getting Your OData URL
 
-## Add an Environment
+1. Run the [Send Program Activation Link](priority:priform@MGLINK.P::.:tabula.ini:3) program and select **API**.
+   - Path: **System Management** > **System Maintenance** > **Users**
 
-1.	Go to [this link](https://marketplace.visualstudio.com/items?itemName=PrioritySoftware.priority-vscode) to install the Priority Dev Tools extension.
+2. Copy the OData service URL — you'll need it during environment setup.
 
-2.	Click the **Install** button and open the installation in Visual Studio Code.
+### Preparing Your Workspace
 
-	![](https://cdn.priority-software.com/docs/images/VS_ins.png)
+Create a dedicated folder on your PC for your customization project files. Inside the backups folder, create a subfolder for each customization project.
 
-3.	In Visual Studio Code, click the **Install** button.
+![](https://cdn.priority-software.com/docs/images/VSCode_2.png)
 
-	![](https://cdn.priority-software.com/docs/images/VS_ins1.png)
+## Installation
 
-4.	Navigate to the **File** menu from the menu bar. Click on **Open Folder** and select the folder you created in the Setups stage.
+### Step 1: Installing VS Code
 
-5.	Press **F1** to show the **Command Palette**.
+1. Download from: https://code.visualstudio.com/download
 
-6.	Find and run the command **Priority: Open Environments Wizard...**.
+2. Run the installer and follow the prompts.
 
-	![](https://cdn.priority-software.com/docs/images/VS_pal.png)
+3. Launch VS Code to verify installation.
 
-7.	Click on **Add environment with OData URL**.
+**Documentation:** https://code.visualstudio.com/docs
 
-	![](https://cdn.priority-software.com/docs/images/VS_add.png)
+### Step 2: Installing the Priority Dev Tools Extension
 
-8.	In the Wizard, enter the following information:
+1. Visit the [Priority Dev Tools](https://marketplace.visualstudio.com/items?itemName=PrioritySoftware.priority-vscode) marketplace page.
 
-	|     **Field**    |                                                   **Explanation**                                                  |
-	|:----------------:|:------------------------------------------------------------------------------------------------------------------:|
-	| Environment name | Assign a name for the environment.                                                                                  |
-	| OData URL        | Full URL for the OData service, for example, https://s.priority-connect.online/odata/Priority/tabula.ini/mycompany/ |
-	| Username         | Your API username                                                                                                  |
-	| Password         | Your password                                                                                                      |
+2. Click **Install** and open the installation in Visual Studio Code.
 
-    Alternatively, you can use personal access tokens instead of Username/Password:
-	-	Open the [REST Interface Access Tokens](priority:priform@PATOKENS::.:tabula.ini:3) form in **Priority**, assign a Personal Access Token to your user, and take note of the token.
+   ![](https://cdn.priority-software.com/docs/images/VSCode_3.png)
 
-	-	Enter the token in the **Username** field and **PAT** as the password.
-	
-	![](https://cdn.priority-software.com/docs/images/VS_details.png)
-	
-9.	Click on **Add**.
-	
-## Using the Extension
+3. Click **Install** in VS Code.
 
--	In the Activity Bar (on the left), click the **Priority** icon ![](https://cdn.priority-software.com/docs/images/VS_logo.png) to see the **Environments Explorer**. All your environments will appear here.
+   ![](https://cdn.priority-software.com/docs/images/VSCode_4.png)
 
--	Expand an environment to view its tables, forms, and programs.
+### Step 3: Adding Your First Environment
 
--	Selecting an object will open it in a new editor window as a file.
+1. Click the **Priority** icon in the Activity Bar (on the left) to open the **Environments Explorer**.
 
--	Saving a file will update **Priority**.
+   ![](https://cdn.priority-software.com/docs/images/VSCode_5.png)
 
--	To prepare a form or procedure, run the relevant **Prepare** operation using the command palette (F1).
+2. Click **Add environment with OData URL**.
 
--	Press **F12** to view the contents of an #INCLUDE statement or a table definition or **Alt+F12** to peek into it.
+   ![](https://cdn.priority-software.com/docs/images/VSCode_6.png)
 
--	Code completion: Press **Ctrl+Space** to trigger code completion for table names, keywords, form fields, and #INCLUDE statements. If you\'re unfamiliar with VS Code, click [here](https://code.visualstudio.com/docs/getstarted/tips-and-tricks) for general tips.
+3. Enter the following information:
 
-## Using WINDBI
+   | Field | Value |
+   |-------|-------|
+   | Environment name | Descriptive name for this environment |
+   | OData URL | Full URL for the OData service |
+   | Username | Your personal access token |
+   | Password | PAT |
 
--	Right-click on an environment in the **Environments Explorer** and select **New SQLI** to open a new WINDBI window for that environment.
+4. Click **Add**.
 
--	In the **Environments Explorer**, select a company in the **Companies** panel.
+   ![](https://cdn.priority-software.com/docs/images/VSCode_12.png)
 
--	To run the SQLI code, click the **Run SQLI** button in the top-right corner or use the default keyboard shortcut **Alt+X**.
+Your environment appears in the Environments Explorer with expandable **FORMS**, **PROCS**, and **TABLES** folders.
 
--	All WINDBI actions are available if you right-click on the environment name in the **Environments Explorer**.
+![](https://cdn.priority-software.com/docs/images/VSCode_8.gif)
+
+### Step 4: Managing Multiple Environments
+
+To add additional environments:
+
+1. Click the **Open Environment Wizard** icon in the Environments Explorer toolbar.
+
+   ![](https://cdn.priority-software.com/docs/images/VSCode_8.png)
+
+2. Follow the same steps as adding your first environment.
+
+To edit or remove an environment:
+
+1. Open the Environment Wizard.
+2. Select the environment from the dropdown.
+3. Click **Edit** or **Delete**.
+
+## Setting Up a Personal Access Token
+
+Personal access tokens (PATs) provide secure authentication between VS Code and **Priority** without requiring a password.
+
+### Step 1: Generate Token
+
+1. Navigate to **System Management** > **System Maintenance** > **Users**.
+
+2. Open **REST Interface Access Tokens**.
+
+3. Click to add a new token.
+
+4. Fill in:
+   - **Token Description:** "VS Code Integration" (or a descriptive name)
+   - **User Name:** Your **Priority** username
+
+5. Mark the **Create Token** checkbox.
+
+6. Click **OK**.
+
+7. **Immediately copy the token** — it is hidden after you leave the line. Save the token securely. You cannot retrieve it again after leaving this screen.
+
+   **Token format example:**
+   ```
+   223942EB774846A6B7DCDE9E073251D2
+   ```
+
+   ![](https://cdn.priority-software.com/docs/images/VSCode_30.png)
+
+   Once you leave the line the record should look like this:
+
+   ![](https://cdn.priority-software.com/docs/images/VSCode_31.png)
+
+### Step 2: Add the User to Your APPVSCODE License
+
+1. Navigate to **System Management** > **System Maintenance** > **Software Licenses**.
+2. Open the [Applications for License](priority:priform@LICAPPS::.:tabula.ini:3) form.
+3. Search for the **APPVSCODE** application.
+4. In the **Users for Application** subform, add your user name.
+
+   ![](https://cdn.priority-software.com/docs/images/VSCode_32.png)
+
+### Step 3: Configure VS Code Authentication
+
+When adding an environment in VS Code:
+
+- **Username:** Paste the token value (e.g., `223942EB774846A6B7DCDE9E073251D2`)
+- **Password:** Enter exactly `PAT` (case-sensitive)

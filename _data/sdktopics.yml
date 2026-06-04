@@ -276,7 +276,16 @@ chapters:
         url: Rules-Generator-Custom-Columns
   - title: VSCode Priority Dev Tools Extension
     url: VSCode-Extension
-    group: VSCode-Extension 
+    group: VSCode-Extension
+    topics:
+      - page: VSCode Features
+        url: VSCode-Features
+      - page: Extension Enhancements to the Editing Environment
+        url: VSCode-Editing
+      - page: Priority Development Features
+        url: VSCode-Development
+      - page: WINDBI
+        url: VSCode-WINDBI
   - title: Monitoring Performance - Heavy Queries
     url: Monitoring-Performance
     group: Performance 
