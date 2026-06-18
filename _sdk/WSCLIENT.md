@@ -203,8 +203,10 @@ SELECT SQL.TMPFILE INTO :file1 FROM DUMMY;
 SELECT SQL.TMPFILE INTO :file2 FROM DUMMY;
 
 /* Write content into the files to upload */
-SELECT 'Invoice content here' FROM DUMMY ASCII :file1;
-SELECT 'Certificate data here' FROM DUMMY ASCII :file2;
+:_att1 = '../../system/mail/26/5/t/9/xmvt56/hello_world.pdf';
+:_att2 = '../../system/mail/26/5/2/6/9myx22/hello_world_2.pdf';
+EXECUTE COPYFILE :_att1, :file1;
+EXECUTE COPYFILE :_att2, :file2;
 
 /* Build form data with both regular fields and file fields */
 SELECT 'invoice_type' FROM DUMMY ASCII :_TMP_BODY;
