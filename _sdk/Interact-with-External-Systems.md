@@ -163,24 +163,27 @@ On the public cloud, each FILELIST call is limited to 1000 files. To let you kno
 
 ## Misc. Utilities 
 
+### SHELLEX
+
 **Note:** The SHELLEX command is supported by the Windows client only.
+
+{% include info.html content="<p>Due to security concerns, starting with version 24.1, the SHELLEX command will only run on files within Priority folders. This also means it will no longer open URLs in the browser. </p>" %}
 
 Open a file using the default application for that file type (SHELLEX):
 ```sql
-:file = 'c:\test.doc'; 
+:file = STRCAT(SYSPATH('TMP', 0),'test.docx'); 
 EXECUTE SHELLEX :file; /* if MS-Word is the
-    default application for files of type *doc*, opens the
-    c:\test.doc* file in Word */
-:file = 'www.google.com';
- EXECUTE SHELLEX :file`/* will open
-    default browser and redirect to the URL specified in :file */
+    default application for files of type *docx*, opens the
+    c:\test.docx* file in Word */
 ```
 
 Open a folder in Windows Explorer (SHELLEX):
 ```sql
-:file = 'c:\temp'; 
-EXECUTE SHELLEX :file;
+:dir = SYSPATH('LOAD',0); 
+EXECUTE SHELLEX :dir;
 ```
+
+### PRANDOM
 
 Return a random value in decimal or hexadecimal format (PRANDOM):
 ```sql
