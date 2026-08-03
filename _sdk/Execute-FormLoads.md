@@ -20,7 +20,7 @@ There are a number of alternate ways to execute a [form interface](Form-Loads).
     ['-i', 'Data_File'], ['-stackerr', 'stackerr_file'],
      ['-w'], ['-ns'], ['-nl'], ['-nv'],
     ['-noskip'],['-enforcebpm'], ['-t'], ['-W'], ['-m'],
-    ['-o' | '-ou' | '-ou8' [, '-f', 'output_file']], ['-debug', 'debug_file'], 
+    ['-o' | '-ou' | '-ou8' [, '-f', 'input/output_file']], ['-debug', 'debug_file'], 
     ['-repeat'],['-l', 'table_name1', 'link_file1'], '-v';
     ```
 
