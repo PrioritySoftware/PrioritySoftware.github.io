@@ -4,6 +4,23 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 26.0
+
+### August 2026
+
+- Clarified that [form interfaces](Interfaces) fire all relevant form triggers, simulating user data entry.
+
+### June 2026
+
+- Significantly expanded the [VSCode Extension](VSCode-Extension) documentation, with dedicated pages for [editing](VSCode-Editing), [development](VSCode-Development), [features](VSCode-Features), and [WINDBI](VSCode-WINDBI).
+- Updated [SHELLEX](Interact-with-External-Systems) documentation to reflect v24.1 security restrictions: SHELLEX now only runs on files within Priority folders and no longer opens URLs in the browser.
+
+### April 2026
+
+- Added [WSCLIENT](WSCLIENT) examples for various HTTP request types, including multipart/form-data.
+- Added a brief explanation of the CLIENT procedure step type in [Procedure Steps](Procedure-Steps).
+- [CRPTUTIL](Encrypting-Data): Added warning that running *Reset Priority Connect Data* regenerates the encryption key, making previously encrypted data unrecoverable.
+
 ## SDK 25.1
 
 ### February 2026
