@@ -226,17 +226,17 @@ code{
       background-color: #0078D4; /* Default color from favicon.ico */
       text-align: center;
   
-      &:nth-child(1) {
-          background-color: #0078D4; /* Color 1 from favicon.ico */
+      &:nth-child(4n+1) {
+          background-color: #0078D4;
       }
-      &:nth-child(2) {
-          background-color: #00A9EC; /* Color 2 from favicon.ico */
+      &:nth-child(4n+2) {
+          background-color: #00A9EC;
       }
-      &:nth-child(3) {
-          background-color: #47D7C6; /* Color 3 from favicon.ico */
+      &:nth-child(4n+3) {
+          background-color: #47D7C6;
       }
-      &:nth-child(4) {
-          background-color: #9773BA; /* Color 4 from favicon.ico */
+      &:nth-child(4n+4) {
+          background-color: #9773BA;
       }
   }
   }
