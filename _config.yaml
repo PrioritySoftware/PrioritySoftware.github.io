@@ -11,6 +11,8 @@ collections:
                 output: true
         sdk:
                 output: true
+        mcp:
+                output: true
 
 theme: jekyll-theme-slate
 title: "Priority Developer Portal"
@@ -32,6 +34,12 @@ defaults:
   -
     scope:
       path: "_restapi"
+    values:
+      layout: "docs_nav"
+      output: web
+  -
+    scope:
+      path: "_mcp"
     values:
       layout: "docs_nav"
       output: web
