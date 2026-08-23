@@ -20,12 +20,17 @@ The documentation provides examples of how to request, query, and modify data us
 
 The Priority SDK covers how to develop custom forms, procedures and reports for Priority. Use it to extend and adapt Priority to meet your needs.
 
+## MCP Server
+
+Connect AI agents to Priority ERP using the Model Context Protocol. Query forms, run procedures, generate reports, and search across your ERP data through a standardized interface.
+
 <div class='links-container'>
 <a  class="inline-link" href="./general">Before you Begin</a>
 <a  class="inline-link" href="./api">Web SDK</a>
 <a  class="inline-link" href="./restapi">REST API</a>
 
 <a  class="inline-link" href="./sdk/Introduction">Priority SDK</a>
+<a  class="inline-link" href="./mcp/">MCP Server</a>
 <a  class="inline-link" href="./webhooks">Webhooks</a>
 <a  class="inline-link" href="./odbc">ODBC</a>
 <a  class="inline-link" href="./OIDC_Authentication_Migration">OIDC Authentication</a>
