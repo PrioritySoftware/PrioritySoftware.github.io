@@ -6,7 +6,7 @@ class: nomenu
 tags: "ODBC"
 ---
 
-{% include info.html content="<p>A new version of the ODBC driver was released on Dec. 22, 2025. You should reinstall the driver and update the BIN version if you are working with an older version.</p>" %}
+{% include info.html content="<p>A new version of the ODBC driver was released for version 26.1. You should <a href='https://cdn.priority-software.com/upgrades/var/odbc/26.1/priodbc.zip'>reinstall the driver</a> if you are working with an older version.</p>" %}
 
 ## Introduction
 
@@ -77,7 +77,7 @@ In order to improve performance, the ODBC driver caches to memory all metadata o
 
 This step should be performed on the machine from which you plan to connect to the system via ODBC.
 
-1. Download the [Priority ODBC Driver Package](https://cdn.priority-software.com/upgrades/var/odbc/22.1/priodbc.zip).
+1. Download the [Priority ODBC Driver Package](https://cdn.priority-software.com/upgrades/var/odbc/26.1/priodbc.zip).
 2. Extract the contents of the zip file to a folder of your choice. For example, if you extracted it in the root C:\ drive, you'd have a new folder *C:\\priodbc*.
 3. Run the installation script *install.bat* as an administrator.
 
@@ -230,6 +230,70 @@ SQLTablePrivilegesW
 SQLTransact
 ```
 
+## SQL Scalar Functions
+
+<span class="version-highlight">26.1</span>
+
+The ODBC driver supports standard ODBC scalar functions using the `{fn function_name()}` escape syntax. In most cases, the equivalent Priority SQL function can also be used directly.
+
+### String Functions
+
+| ODBC Function | Priority SQL Equivalent | Example |
+|---------------|------------------------|---------|
+| `{fn UCASE(col)}` | `TOUPPER(col)` or `UPPER(col)` | `SELECT {fn UCASE(ENAME)}, EXEC FROM FORECASTREP` |
+| `{fn LCASE(col)}` | `TOLOWER(col)` or `LOWER(col)` | `SELECT {fn LCASE(ENAME)}, EXEC FROM FORECASTREP` |
+| `{fn SUBSTRING(col, start, len)}` | `SUBSTR(col, start, len)` | `SELECT {fn SUBSTRING('test', 1, 2)} FROM FORECASTREP` |
+| `{fn CONCAT(col1, col2)}` | `STRCAT(col1, col2)` | `SELECT {fn CONCAT(ENAME, 'right')} FROM FORECASTREP` |
+| `{fn LENGTH(col)}` | `STRLEN(col)` | `SELECT {fn LENGTH(ENAME)} FROM FORECASTREP` |
+
+**Note:** RTRIM and LTRIM are not supported.
+
+### Numeric Functions
+
+| ODBC Function | Priority SQL Equivalent | Example | Notes |
+|---------------|------------------------|---------|-------|
+| `{fn POWER(m, n)}` | `POW(m, n)` | `SELECT {fn POWER(1.5, 2)} FROM FORECASTREP` | Output is always float |
+| `{fn EXP(m)}` | — | `SELECT {fn EXP(1.5)} FROM FORECASTREP` | |
+| `{fn SQRT(m)}` | `SQRTR(m)` | `SELECT {fn SQRT(EXEC)} FROM FORECASTREP` | |
+| `{fn ABS(m)}` | `ABSR(m)` | `SELECT {fn ABS(EXEC)} FROM FORECASTREP` | Output is always float |
+| `{fn MOD(m, n)}` | `m MOD n` | `SELECT {fn MOD(EXEC, 2)} FROM FORECASTREP` | |
+| `ROUND(m)` | `ROUND(m)` | `SELECT ROUND(1.1) FROM FORECASTREP` | The standard ODBC `ROUND(m, n)` with a precision parameter is not supported. Use Priority SQL `ROUND` instead. |
+
+### Date and Time Functions
+
+| ODBC Function | Priority SQL Equivalent | Example |
+|---------------|------------------------|---------|
+| `{fn YEAR(col)}` | `YEAR(col)` | `SELECT {fn YEAR(HDATE)} FROM FORECASTREP` |
+| `{fn MONTH(col)}` | `MONTH(col)` | `SELECT {fn MONTH(HDATE)} FROM FORECASTREP` |
+| `{fn DAYOFMONTH(col)}` | `MDAY(col)` | `SELECT {fn DAYOFMONTH(HDATE)} FROM FORECASTREP` |
+| `{fn DAYOFWEEK(col)}` | `DAY(col)` | `SELECT {fn DAYOFWEEK(HDATE)} FROM FORECASTREP` |
+| `{fn WEEK(col)}` | — | `SELECT {fn WEEK(HDATE)} FROM FORECASTREP` |
+| `{fn QUARTER(col)}` | — | `SELECT {fn QUARTER(HDATE)} FROM FORECASTREP` |
+| `{fn HOUR(col)}` | — | `SELECT {fn HOUR(HDATE)} FROM FORECASTREP` |
+| `{fn MINUTE(col)}` | — | `SELECT {fn MINUTE(HDATE)} FROM FORECASTREP` |
+| `{fn NOW()}` | `SQL.DATE` | `SELECT {fn NOW()} FROM FORECASTREP` |
+| `{fn CURDATE()}` | `SQL.DATE8` | `SELECT {fn CURDATE()} FROM FORECASTREP` |
+| `{fn CURRENT_DATE()}` | `SQL.DATE8` | `SELECT {fn CURRENT_DATE()} FROM FORECASTREP` |
+| `{fn CURTIME()}` | `SQL.TIME` | `SELECT {fn CURTIME()} FROM FORECASTREP` |
+
+Date, time, and timestamp escape sequences are also supported:
+
+```sql
+SELECT * FROM t WHERE col = {d '2026-01-15'}
+SELECT * FROM t WHERE col = {t '14:30:00'}
+SELECT * FROM t WHERE col = {ts '2026-01-15 14:30:00'}
+```
+
+**Note:** The WEEK, QUARTER, HOUR, and MINUTE ODBC functions may return different output than the Priority SQL equivalents (`WEEK`, `QUARTER`, `ATOD`/`DTOA`). SECOND is not supported.
+
+### Aggregate Functions
+
+The MIN aggregate function is supported, in addition to the existing MAX:
+
+```sql
+SELECT MIN(EXEC) FROM FORECASTREP
+```
+
 ## Debugging
 
 There are a number of tools you can use to debug ODBC calls to the server:
@@ -344,7 +408,11 @@ ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder (for an
 
 - only one SELECT statement per request is supported
 
-- SELECT statements must specify the selected columns. <code>SELECT * FROM -TABLENAME-</code> is not supported.
+<span class="version-highlight">26.1</span>
+
+- `SELECT *` is now supported, including `SELECT t.*`, `SELECT a.* FROM t AS a`, and `SELECT COUNT(*)`.
+
+**Versions prior to 26.1:** SELECT statements must specify the selected columns. <code>SELECT * FROM -TABLENAME-</code> is not supported.
 
 - 'database.table' notation is not supported, only table names should be used in SELECT statements
 
@@ -390,3 +458,16 @@ ODBC requests are tracked in *nrest.exe.log* in the Priority logs folder (for an
 - Picture fields are not supported
 
 - Privileges for individual fields in a form, or for records by data authorization, are not yet supported.
+
+<span class="version-highlight">26.1</span>
+
+- Arithmetic expressions are supported in SELECT and WHERE clauses:
+    ```sql
+    SELECT col1 + col2 FROM t WHERE col2 * col3 < 100
+    ```
+
+- WHERE clauses now support expressions and function calls on the right side of operators:
+    ```sql
+    SELECT col1 FROM t WHERE col1 = {fn UCASE(col2)}
+    ```
+    In previous versions, only constant scalar values were allowed (e.g. `WHERE col1 = 5`).
