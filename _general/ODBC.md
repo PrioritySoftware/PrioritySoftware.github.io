@@ -88,6 +88,8 @@ You can check whether the installation was successful by running **ODBC Data Sou
 
 ![ODBC Data Source Administrator](https://cdn.priority-software.com/docs/images/ODBC_data_sources.png)
 
+The latest driver version is **1.02**.
+
 Alternatively, you can check whether the driver is installed in the registry.
 
 ## Connecting to the Data Source
