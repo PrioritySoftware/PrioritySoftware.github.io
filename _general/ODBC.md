@@ -77,7 +77,7 @@ In order to improve performance, the ODBC driver caches to memory all metadata o
 
 This step should be performed on the machine from which you plan to connect to the system via ODBC.
 
-1. Download the [Priority ODBC Driver Package](https://cdn.priority-software.com/upgrades/var/odbc/22.1/priodbc.zip).
+1. Download the [Priority ODBC Driver Package](https://cdn.priority-software.com/upgrades/var/odbc/26.1/priodbc.zip).
 2. Extract the contents of the zip file to a folder of your choice. For example, if you extracted it in the root C:\ drive, you'd have a new folder *C:\\priodbc*.
 3. Run the installation script *install.bat* as an administrator.
 
