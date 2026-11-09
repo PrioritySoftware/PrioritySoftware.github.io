@@ -133,7 +133,7 @@ Would become:
 www.example.com/prirotiy/odbc
 ```
 
-You can also test the ODBC against Priority's sandbox environment, at the url **https://www.eshbelsaas.com/ui/mob/odbc/**.
+You can also test the ODBC against Priority's sandbox environment, at the url **https://t.eu.priority-connect.online/odbc/**.
 
 Use the following information:
 
