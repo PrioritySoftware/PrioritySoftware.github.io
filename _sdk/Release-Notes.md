@@ -4,6 +4,12 @@ group: Release Notes
 tags: 'Priority_SDK'
 ---
 
+## SDK 26.1
+
+### November 2026
+
+- [MAILMSG](Send-Mail) now supports a separate message number for the email subject line, instead of using the message body as the subject.
+
 ## SDK 26.0
 
 ### August 2026

@@ -64,7 +64,7 @@ The syntax of each of these commands is as follows:
 -   **ERRMSG** *msg_number* \[ **WHERE** *condition* \];
 -   **WRNMSG** *msg_number* \[ **WHERE** *condition* \];
 -   **REFRESH** 1;
--   **MAILMSG** *msg_number* **TO** { **USER \| GROUP \| EMAIL** }
+-   **MAILMSG** *msg_number*[**,** *subject_msg_number*] **TO** { **USER \| GROUP \| EMAIL** }
     'recipient' [ **DATA** 'attachment_filename' ]
     [ **WHERE** *condition* ];
 
@@ -76,6 +76,8 @@ command create an e-mail on the basis of an existing HTML document by
 using a *msg_number* argument that indicates an empty message and using
 the [ **DATA** *attachment_filename* ] option to indicate an HTML
 attachment.
+
+As of version 26.1, you can specify a separate message for the subject line. See [Sending an Email from a Program](Send-Mail).
 
 
 **Notes:**
