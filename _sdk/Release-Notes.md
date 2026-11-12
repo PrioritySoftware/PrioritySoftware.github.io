@@ -9,6 +9,7 @@ tags: 'Priority_SDK'
 ### November 2026
 
 - [MAILMSG](Send-Mail) now supports a separate message number for the email subject line, instead of using the message body as the subject.
+- [UPDATE with a subquery](Additions-to-SQL-Commands): the UPDATE command can now take its values from a subquery in the FROM clause, replacing the need for cursors when updating a table based on query results from other tables.
 
 ## SDK 26.0
 

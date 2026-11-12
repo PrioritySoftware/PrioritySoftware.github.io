@@ -8,7 +8,9 @@ tags: 'Priority_SDK'
 
 ***Priority*** offers some additional features to several standard SQL
 commands: SELECT, ORDER BY and LIKE. Furthermore, it entails revisions
-to the standard SQL join.
+to the standard SQL join. This page also describes standard SQL
+capabilities that were added to ***Priority*** in later versions, such
+as OFFSET and FETCH, UPSERT and UPDATE with a subquery.
 
 See also [ **Syntax Conventions** ](SQL-Syntax#Syntax-Conventions ).
 
@@ -214,6 +216,77 @@ VALUE = 123;
 The command could update the NAME (the unique key) of a single record in LASTS to 'FOO', or it could insert a new 'FOO' record, and it would be difficult for you to know which of the two it was.
 
 This issue can be easily avoided by using the unique key in your WHERE clause.
+
+## UPDATE with a Subquery (UPDATE ... FROM SELECT)
+
+<span class="version-highlight">26.1</span>
+
+An UPDATE command can take the new values from a subquery (also known as a derived table) in its FROM clause. This is useful when you need to update one or more columns of a table based on the results of a query on other tables, such as aggregated values. Previously, this could only be done using a cursor.
+
+The syntax is:
+
+:   **UPDATE** *table* **SET** *column* = *expression* \[, *column* = *expression* ...\]
+    **FROM** ( *SELECT query* ) \[ **AS** *alias* \]
+    **WHERE** *condition*;
+
+-   The WHERE clause links the records of the table being updated to the records returned by the subquery.
+-   The *alias* is optional. If you do not define one, refer to the subquery's columns directly by their names.
+-   The same restrictions that apply to the SELECT query in an INSERT SELECT command apply here as well. For example, ORDER BY is not supported.
+
+**Example:**
+
+The following command updates two columns in **STACK4** with the sum and count of the related records in **STACK22**:
+
+```sql
+UPDATE STACK4 SET
+INTDATA = SUBQ.VAL1,
+INTDATA2 = SUBQ.VAL2
+FROM (
+SELECT STACK22.KEY1,
+SUM(STACK22.KEY2) AS 'VAL1',
+COUNT(*) AS 'VAL2'
+FROM STACK22
+GROUP BY KEY1
+) AS SUBQ
+WHERE STACK4.KEY = SUBQ.KEY1
+;
+```
+
+The same example, without defining an alias for the subquery:
+
+```sql
+UPDATE STACK4 SET
+INTDATA = VAL1,
+INTDATA2 = VAL2
+FROM (
+SELECT STACK22.KEY1,
+SUM(STACK22.KEY2) AS 'VAL1',
+COUNT(*) AS 'VAL2'
+FROM STACK22
+GROUP BY KEY1
+)
+WHERE STACK4.KEY = KEY1
+;
+```
+
+The subquery can also join several tables, using the standard ***Priority*** join syntax (comma-separated tables, with the join conditions in the WHERE clause). In the following example, the subquery joins **STACK22** with **STACK2**, and only records whose TYPE in **STACK2** is greater than 0 are used. Records in **STACK4** with no matching record in the subquery are not changed.
+
+```sql
+UPDATE STACK4 SET
+INTDATA3 = SUBQ.TOT
+FROM (
+SELECT STACK22.KEY1,
+SUM(STACK22.INT1 * STACK2.TYPE) AS 'TOT'
+FROM STACK22, STACK2
+WHERE STACK22.KEY1 <> 0
+AND STACK2.ELEMENT = STACK22.KEY1
+AND STACK2.ELEMENT <> 0
+AND STACK2.TYPE > 0
+GROUP BY STACK22.KEY1
+) AS SUBQ
+WHERE STACK4.KEY = SUBQ.KEY1
+;
+```
 
 
 
